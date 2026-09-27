@@ -1,5 +1,5 @@
 import sys, json, datetime, time
-sys.path.insert(0, r"C:/Users/sayoni.n/OneDrive - SOWILO INVESTMENT MANAGERS LLP/Info's files - Research/Research Stocks & Sectors-Prerak/Claude-Backtest")
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 from tv_fetch import fetch
 from concurrent.futures import ThreadPoolExecutor
 P=json.load(open('b1/prices.json')); R=json.load(open('b1/roster.json'))

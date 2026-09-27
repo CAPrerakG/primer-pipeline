@@ -55,10 +55,7 @@ def build(no):
     open(fn,'w',encoding='utf-8').write(page)
     print(fn,len(page),'sections',len(toc))
     import shutil
-    lib=r"C:/Users/sayoni.n/OneDrive - SOWILO INVESTMENT MANAGERS LLP/Info's files - Research/Research Stocks & Sectors-Prerak/Industry Primers"
-    if os.path.isdir(lib):  # only on Prerak's machine; cloud runs skip this
-        shutil.copy(fn, os.path.join(lib, meta['file']))
-    # always keep a named copy in the repo so cloud-built pages reach OneDrive on the next git pull
+    # named copy inside the repo; nothing is written outside it
     os.makedirs('../primers', exist_ok=True)
     shutil.copy(fn, os.path.join('../primers', meta['file']))
 if __name__=='__main__':

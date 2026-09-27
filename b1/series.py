@@ -1,6 +1,6 @@
 # Fetch driver series from TradingView and compute calendar-year averages.
 import sys,json,os,datetime
-sys.path.insert(0, r"C:/Users/sayoni.n/OneDrive - SOWILO INVESTMENT MANAGERS LLP/Info's files - Research/Research Stocks & Sectors-Prerak/Claude-Backtest")
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
 from tv_fetch import fetch
 f='series.json'; S=json.load(open(f)) if os.path.exists(f) else {}
 for sym in sys.argv[1:]:

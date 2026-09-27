@@ -1,7 +1,7 @@
 # Industry primer pipeline
 
-Canonical home of the build pipeline for Prerak's 278-section industry primer series (moved here from a Windows
-temp folder on 26 Sep 2026 so it is backed up by OneDrive).
+Build pipeline for Prerak's 278-section industry primer series. The GitHub repo is the source of truth;
+the local clone is `C:\Users\sayoni.n\Desktop\primer-pipeline`. Nothing is stored on OneDrive.
 
 - `CHECKLIST.md` — what is done, what is next, what is deferred. Generated; do not edit by hand.
 - `FAMILY_NOTES.md` — running theses per family and data traps already found.

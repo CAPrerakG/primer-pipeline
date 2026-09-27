@@ -29,8 +29,8 @@ need no follow-up.
 - Build folder (**run everything else from `b1/`**).
 - Status of record: `CHECKLIST.md` (generated from `b1/sections.json`).
 - Running theses and known data traps: `FAMILY_NOTES.md`.
-- Finished pages: `b1/out/NNN.html`; `build_primer.py` also copies a named copy to `primers/`, which reaches
-  Prerak's OneDrive `Industry Primers` folder when he pulls. (On his machine it copies there directly.)
+- Finished pages: `b1/out/NNN.html`, plus a named copy in `primers/`. **Nothing is ever written to OneDrive.**
+  Prerak's local clone is `C:\Users\sayoni.n\Desktop\primer-pipeline`.
 - Index artifact (republish with `url`): https://claude.ai/artifact/28APxDNsNdKC2zXQmDH6dC
 - The TradingView fetcher is `b1/tv_fetch.py` (needs the `websocket-client` package:
   `pip install websocket-client` if the import fails).
