@@ -8607,6 +8607,15 @@
     "isin": "INE736H01024"
    }
   ],
-  "moved_out": []
+  "moved_out": [],
+  "basket_syms": [
+   "NSE:BHARATFORG",
+   "NSE:RKFORGE",
+   "NSE:MMFL",
+   "NSE:CIEINDIA",
+   "NSE:KALYANIFRG",
+   "NSE:PRADPME",
+   "BSE:HIMTEK"
+  ]
  }
 }
