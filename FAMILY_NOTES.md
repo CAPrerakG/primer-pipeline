@@ -87,5 +87,6 @@ drawing, 9.5%) in the same section. Apply the same test to bearings, pumps, valv
   drop every bar after 18-Sep-2026 on load. Rerunning all sections changed only 049, 056 and 079: 056's difference is
   its hand-removed MPF Systems drawdown row (kept); **049's published 2026 figures (basket −13.8%, per-name YTDs)
   come from an earlier price vintage — the 18-Sep closes give −13.3% and several names differ by 1–5 points
-  (e.g. Lux +2.3% not +7.1%). Not yet corrected — awaiting Prerak's go-ahead.** Never hand-edit a data_NNN.json
+  (e.g. Lux +2.3% not +7.1%). Corrected and republished 27 Sep 2026 with Prerak's approval: basket −13.3%,
+  median −14%, 22 per-name figures re-cut at 18-Sep closes (verified against fresh TradingView pulls).** Never hand-edit a data_NNN.json
   without noting it here, since a rerun of compute_stats will overwrite it.
