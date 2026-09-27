@@ -1,0 +1,603 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steel Pipes & Tubes Primer</title>
+<meta name="description" content="Industry 68 of 278: four different businesses sold as one — line pipe for oil and gas, ductile iron pipe for water, seamless tube for wells and boilers, and structural tubes for construction. Why conversion margins matter more than steel prices, Welspun&#x27;s record US order book, the water-scheme slowdown, and what American tariffs changed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Steel Pipes &amp; Tubes · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#split">Exports versus water</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 68 of 278 · Metals family, part 5</div>
+  <h1>Steel Pipes &amp; Tubes</h1>
+  <p class="lede">A pipe is the cheapest way to move something — oil, gas, water, sewage — and a tube is one of the cheapest ways to hold a building up. India's listed pipe makers are usually discussed as one industry, but they are really four: line pipe for oil and gas projects, ductile iron pipe for municipal water, seamless tube for wells and boilers, and light structural tubes for construction and furniture. Each has its own customers, contract structure and cycle. What they share is an economic model: they buy steel, add shape and coating, and earn a conversion margin per tonne. This primer explains all four, why 2026 has split the sector so sharply, and what to watch in each.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 34 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Steel Wire &amp; Wire Ropes</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹42,100 cr</div><div class="l">Welspun Corp's record order book, much of it American</div></div>
+    <div class="stat"><div class="n">₹5,522/t</div><div class="l">APL Apollo's Q1 FY27 EBITDA per tonne, up 18% on lower volumes</div></div>
+    <div class="stat"><div class="n">₹16,944 cr</div><div class="l">Revised FY26 spending on rural water schemes, against ₹66,770 cr budgeted</div></div>
+    <div class="stat"><div class="n">11 of 15</div><div class="l">Years in which April–July beat the Nifty</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Exports booming, domestic water starved</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Pipes are how everything invisible travels: the water to your tap, the gas to your kitchen, the oil from a well to a refinery. Some pipes are made by rolling a flat sheet of steel into a circle and welding the seam; others are pierced from a solid bar so there is no seam at all, which matters when the pressure is enormous. Factories that make pipes do not decide the price of steel — they buy it, bend it, coat it and sell it for a little more. So they earn money on the work they add, and they need someone building a pipeline or a water scheme to place an order.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>One sector, four businesses, and a wide gap between them this year.</p>
+    <ul>
+      <li><b>Line pipe:</b> Welspun Corp's order book is a record ₹42,100 cr after its largest-ever order — $1.8 bn (about ₹17,200 cr) of American pipe for FY28–FY29. Q1 EBITDA was a record ₹692 cr at a 17% margin.</li>
+      <li><b>Water pipe:</b> the opposite. Central spending on rural water schemes was cut from ₹66,770 cr to ₹16,944 cr in FY26; Jindal Saw's profit fell 75% and Ratnamani's income 16%.</li>
+      <li><b>Structural tubes:</b> APL Apollo's volumes fell 6% but EBITDA per tonne rose 18% to ₹5,522; it still guides to 15–20% volume growth and 8 mt of capacity by FY28.</li>
+      <li><b>Seamless:</b> tied to oil and gas drilling and boiler demand.</li>
+      <li><b>Policy:</b> American Section 232 tariffs of 50% keep Indian pipe exports out, which is why making pipe inside the US has become so valuable.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Four products, four customers</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>How it is made</th><th>Who buys it</th><th>Listed makers</th></tr></thead><tbody>
+    <tr><td>LSAW and HSAW line pipe</td><td>Plate or coil formed into large-diameter pipe and welded along a seam</td><td>Oil, gas and water transmission projects</td><td>Welspun, Man Industries, Jindal Saw</td></tr>
+    <tr><td>Ductile iron (DI) pipe</td><td>Cast from molten iron, spun in moulds</td><td>Municipal water and sewerage</td><td>Electrosteel Castings, Jindal Saw, Srikalahasthi (unlisted here)</td></tr>
+    <tr><td>Seamless tube</td><td>A solid billet pierced and rolled — no weld</td><td>Oil wells, boilers, hydraulics, high-pressure uses</td><td>Maharashtra Seamless, Ratnamani, Jindal Saw</td></tr>
+    <tr><td>Structural and ERW tubes</td><td>Coil rolled and electric-resistance welded</td><td>Construction, sheds, furniture, scaffolding, solar structures</td><td>APL Apollo, Surya Roshni, Hi-Tech, JTL, Hariom</td></tr>
+    <tr><td>Stainless pipes and tubes</td><td>Welded or seamless stainless</td><td>Chemicals, pharma, refineries, dairy</td><td>Ratnamani, Venus Pipes, Suraj</td></tr>
+    <tr><td>Coating and services</td><td>Anti-corrosion coating, bends, connectors</td><td>All pipeline projects</td><td>Welspun, Man, Jindal Saw</td></tr>
+  </tbody></table></div>
+  <p>The distinction that matters for an investor is between project pipe and product pipe. Project pipe — line pipe, DI pipe, large seamless — is ordered in bulk for a specific pipeline or water scheme, priced by tender, and delivered over quarters; revenue is therefore lumpy and the order book is the key disclosure. Product pipe — structural and ERW tubes — is sold through distributors in small lots every day, like cement or paint; there is no order book, and the key disclosures are volumes and margin per tonne.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From coil to a buried pipeline</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Steel input</h4><div class="an">The raw material</div>Hot-rolled coil, plate or billet — typically 60–75% of the selling price.<div class="who">JSW, Tata, AM/NS, SAIL, imports (066)</div><div class="m">Cost, and the source of inventory gains and losses</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Forming and welding</h4><div class="an">Making the pipe</div>Coil is rolled and welded, plate is pressed into pipe, or a billet is pierced to make seamless tube.<div class="who">Welspun, APL Apollo, Man, Maharashtra Seamless</div><div class="m">Conversion margin per tonne</div></div>
+    <div class="stage"><div class="no">03</div><h4>Testing and coating</h4><div class="an">Making it last</div>Hydro-testing, X-ray inspection, three-layer polyethylene or concrete weight coating.<div class="who">Integrated pipe mills</div><div class="m">Qualification for oil and gas buyers</div></div>
+    <div class="stage"><div class="no">04</div><h4>Approvals</h4><div class="an">The gate</div>API and customer approvals take years and are the real barrier to entry in line pipe.<div class="who">Oil majors, transmission companies</div><div class="m">Why the same names win the big orders</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Customers</h4><div class="an">Who orders</div>Oil and gas companies, water boards and municipalities, builders and fabricators.<div class="who">Aramco, US pipeline owners, Jal Jeevan contractors, GAIL, city gas firms (034)</div><div class="m">Government funding decides the water half</div></div>
+    <div class="stage"><div class="no">06</div><h4>Distribution</h4><div class="an">The shelf</div>Structural tubes reach small buyers through thousands of dealers.<div class="who">APL Apollo's distribution network</div><div class="m">Brand and reach</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Steel mills</b> supply coil, plate and billet.</li>
+    <li><b>Pipe mills</b> form, weld or pierce it into pipe.</li>
+    <li><b>Coating lines</b> protect it for decades underground.</li>
+    <li><b>Approvals</b> decide who may bid for the biggest projects.</li>
+    <li><b>Projects and dealers</b> take the pipe to its use.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Because steel is most of the cost, a pipe maker's revenue swings with steel prices while its profit should not. The critical number is EBITDA per tonne: APL Apollo earned ₹5,522 a tonne in Q1 FY27, up 18% even as volumes fell 6%. When a company's revenue rises but EBITDA per tonne falls, it is being squeezed; when volumes fall but margin per tonne rises, as at APL Apollo, it is holding pricing. The second critical number, for project businesses, is the order book and its execution period — Welspun's ₹42,100 cr stretches into FY29.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 34 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Welspun Corp (~₹63,901 cr)</td><td>Large-diameter line pipe, with plants in India, the US and Saudi Arabia, plus a stainless and DI pipe business.</td><td>Q1 FY27 income ₹4,145 cr, record EBITDA ₹692 cr (+31.9%) at a 17% margin; reported profit ₹1,048 cr — larger than EBITDA, so it includes substantial non-operating or exceptional income and should be read with the notes. Order book a record ₹42,100 cr, including a $1.8 bn US order for FY28–FY29 and, in September, a Saudi Aramco contract at its associate. Stock +227% in 2026.</td></tr>
+    <tr><td>APL Apollo Tubes (~₹58,766 cr)</td><td>India's largest structural steel tube maker, selling through a nationwide dealer network.</td><td>Q1 FY27 volumes 744,823 t (−6%), revenue ₹5,607 cr (+8%), EBITDA per tonne ₹5,522 (+18%), profit ₹263 cr (+11%). Guides to 15–20% volume growth and 20–25% EBITDA growth in FY27, with capacity rising from 5 mt to 8 mt by FY28 and 10 mt by 2030. Stock +19% in 2026.</td></tr>
+    <tr><td>Ratnamani Metals &amp; Tubes (~₹18,871 cr)</td><td>Stainless and carbon steel pipes for refineries, chemicals and water; a nuclear-grade joint venture.</td><td>Q1 FY27 income ₹989 cr (−16.3%), EBITDA ₹180 cr (from ₹218 cr), profit ₹107 cr; order book above ₹2,000 cr, then ₹2,700 cr of export orders won in August. Stock +20% in 2026.</td></tr>
+    <tr><td>Jindal Saw (~₹17,999 cr)</td><td>DI pipe, line pipe and seamless tube, with a large Abu Dhabi operation.</td><td>Q1 FY27 revenue ₹4,452 cr (+9%) but EBITDA −41% to ₹396 cr and profit −75% to ₹104 cr; Abu Dhabi DI volumes fell to 34,000 t from 48,000 t on Middle East disruption. Order book $1.171 bn (about ₹10,070 cr). Stock +72% in 2026.</td></tr>
+    <tr><td>Maharashtra Seamless (~₹9,296 cr), Man Industries (~₹5,926 cr), Surya Roshni (~₹4,569 cr), Electrosteel Castings (~₹4,594 cr), Gandhi Special Tubes (~₹1,085 cr)</td><td>Seamless tubes for wells and boilers; LSAW line pipe; ERW tubes and lighting; India's largest DI pipe maker; small-bore precision tubes.</td><td>In the basket. Man +120% in 2026 on export orders; Electrosteel −6% and Surya Roshni −23% on weak domestic water and construction demand.</td></tr>
+    <tr><td>Goodluck India, Venus Pipes, Sambhv Steel Tubes, JTL Industries, Hi-Tech Pipes, Hariom Pipe, Scoda Tubes, Welspun Specialty (₹744–5,088 cr)</td><td>Mid-sized and recently listed makers of ERW, stainless and specialty tubes.</td><td>Venus +97% and Sambhv +54% in 2026; most listed after 2021, so they are outside the fifteen-year basket.</td></tr>
+    <tr><td>The tail (₹0–650 cr)</td><td>About a dozen micro-caps and shells, several trading below ₹10 with long dormant periods.</td><td>Excluded. Rama Steel is −54% this year and one BSE-listed tube maker is −76%.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The audit</span><p>This section mixes four industries and three size classes. The basket uses the nine names with liquidity and fifteen-year histories. Note also that pipe makers appear in other sections: stainless tube makers overlap with 067, and plastic pipe makers — a genuinely different industry that competes for the same water projects — sit in the Construction family. Srikalahasthi Pipes, once separately listed, was merged into Electrosteel Castings and no longer trades on its own.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Conversion margin, order books and inventory</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>How it earns</th><th>Key metric</th><th>Cycle</th></tr></thead><tbody>
+    <tr><td>Line pipe</td><td>Project tenders, often in dollars, with steel usually passed through</td><td>Order book and execution schedule</td><td>Global oil, gas and water capex</td></tr>
+    <tr><td>DI pipe</td><td>Government water tenders</td><td>Volumes and receivables from state bodies</td><td>Budget releases</td></tr>
+    <tr><td>Seamless tube</td><td>Oilfield and boiler orders; import substitution</td><td>Realisation per tonne</td><td>Drilling activity</td></tr>
+    <tr><td>Structural tubes</td><td>Dealer sales, priced daily off coil</td><td>Volumes and EBITDA per tonne</td><td>Construction activity</td></tr>
+  </tbody></table></div>
+  <p>Three things decide profitability across all four. First, the conversion margin — what the market pays above the cost of steel for shaping, welding, coating and certifying. Second, inventory: when hot-rolled coil moves sharply, a pipe maker holding two months of stock books a gain or a loss that has nothing to do with operations. Third, working capital: government water contracts pay slowly, which is why the DI pipe makers' balance sheets swell when state funding is tight.</p>
+  <h3>Why Welspun's profit deserves a second look</h3>
+  <p>Welspun Corp reported Q1 FY27 EBITDA of ₹692 cr and net profit of ₹1,048 cr. A profit larger than operating earnings can only come from outside operations — asset sales, revaluations, associate income or tax effects. That does not make the quarter bad: the EBITDA itself was a record, up 31.9% with a 17% margin. But the headline profit figure is not the run rate, and any valuation built on it will be wrong. This is the same discipline applied to Maithan Alloys in 065: separate what the business earns from what the balance sheet earns.</p>
+</section>
+
+<section id="split" data-toc="Exports versus water">
+  <p class="eyebrow">5b · Exports versus water</p>
+  <h2>The two halves of 2026</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Driver</th><th>Export-facing pipe</th><th>Domestic water pipe</th></tr></thead><tbody>
+    <tr><td>Demand</td><td>American and Gulf pipeline projects; record order books</td><td>Rural water schemes, dependent on central and state funds</td></tr>
+    <tr><td>2026 evidence</td><td>Welspun's $1.8 bn US order; Man Industries +120%; Ratnamani's ₹2,700 cr export orders</td><td>Jindal Saw's profit −75%; Ratnamani's income −16%; Electrosteel −6%</td></tr>
+    <tr><td>Policy</td><td>US Section 232 tariffs of 50% make local American production valuable</td><td>FY26 rural water spending cut from ₹66,770 cr to ₹16,944 cr</td></tr>
+    <tr><td>Outlook</td><td>Execution through FY28–FY29</td><td>Jal Jeevan Mission 2.0 approved in March 2026 with a ₹8.69 lakh cr outlay</td></tr>
+    <tr><td>Risk</td><td>Currency, project delays, tariff changes</td><td>States must fund their share before central money flows</td></tr>
+  </tbody></table></div>
+  <p>The American tariff is the subtlety worth understanding. Section 232 duties of 50% on steel — extended in April 2026 to apply to the full value of many products — effectively close the US market to Indian-made pipe. A company that owns pipe mills inside the United States, as Welspun does, sells into a protected market at protected prices; a company exporting from Gujarat does not. That is why the same policy that hurts Indian steel exports has been so good for one Indian pipe maker.</p>
+  <p>On the water side, the rural drinking-water programme was relaunched as Jal Jeevan Mission 2.0 in March 2026 with an outlay of ₹8.69 lakh cr and central assistance of ₹3.59 lakh cr, after a year in which actual spending collapsed to about a quarter of the budget. Reported coverage reached 15.80 crore rural households, about 81.6%, although survey evidence suggests far fewer taps run reliably. For pipe makers, the sequencing matters: money must reach states, states must award contracts, and contractors must be paid before orders convert into tonnes.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What pipe makers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Hot-rolled coil and plate</td><td>60–75% of the cost of most pipe</td><td>The critical input; safeguard duties (066) raise it for everyone</td></tr>
+    <tr><td>Steel billets</td><td>Feed for seamless tube</td><td>Quality and availability</td></tr>
+    <tr><td>Pig iron and scrap</td><td>Feed for ductile iron pipe</td><td>Coke and iron costs</td></tr>
+    <tr><td>Coating materials</td><td>Polyethylene, epoxy, cement for weight coating</td><td>Specification-driven</td></tr>
+    <tr><td>Zinc</td><td>Galvanising ERW tubes</td><td>Metal price</td></tr>
+    <tr><td>Approvals and certifications</td><td>API and customer qualification</td><td>Years to obtain; the real moat</td></tr>
+    <tr><td>Working capital</td><td>Funding slow government payments</td><td>Decides survival in the water business</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Projects, monsoon and year-end billing</h2>
+  <ul>
+    <li><b>January–March:</b> project billing is pushed to close the fiscal year; new tenders slow; the weakest window for the stocks.</li>
+    <li><b>April–July:</b> new budgets release orders, sites reopen and dealer demand for structural tubes peaks before the rains. The strongest window, with 11 wins in 15 years.</li>
+    <li><b>July–September:</b> the monsoon halts pipe-laying; deliveries slow.</li>
+    <li><b>October–December:</b> post-monsoon execution resumes and construction demand returns; 10 wins in 14 years.</li>
+    <li><b>Throughout:</b> steel price moves create inventory gains and losses; large export orders can be announced at any time.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the nine-stock pipe basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 9 names (Welspun Corp Limited, APL Apollo Tubes Limited, Ratnamani Metals &amp; Tubes Ltd., Jindal Saw Limited, Maharashtra Seamless Limited, Man Industries (India) Limited, Electrosteel Castings Ltd., Surya Roshni Limited, Gandhi Special Tubes Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +5.8 pts (beat in 10 of 15 years); Jun +3.0 pts (beat in 10 of 15 years); Dec +1.7 pts (beat in 11 of 15 years).</li><li><b>Weakest months:</b> Feb -1.3 pts (beat in 6 of 15 years); May -0.2 pts (beat in 5 of 15 years); Jul -0.0 pts (beat in 9 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 7 of 15 years (median -0.8 pts); Apr–Jul beat the Nifty in 11 of 15 years (median +8.7 pts); Aug–Sep beat the Nifty in 6 of 14 years (median -0.5 pts); Oct–Dec beat the Nifty in 10 of 14 years (median +4.5 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +3.3 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -2.0 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +2.8 points.</p><p><b>Reading it:</b> nine liquid pipe makers, equal-weighted — Welspun, APL Apollo, Ratnamani, Jindal Saw, Maharashtra Seamless, Man Industries, Surya Roshni, Electrosteel Castings and Gandhi Special Tubes. April–July has beaten the Nifty in 11 of 15 years (median +8.7 points), April in 10 of 15 and June in 10 of 15; October–December has worked in 10 of 14. February–March is the weakest window. The pattern follows project execution: orders are placed and sites reopen before the monsoon, and pipe-laying peaks again from October, while the first quarter of the calendar year brings year-end billing and a pause.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April has failed only in 2025 (−4.3), 2013 (−4.1) and 2019 (−2.2)</b>, and delivered +16.9 in 2015, +15.7 in 2026 and +12.1 in 2024.</li>
+    <li><b>June has worked in 10 of 15 years</b>, with +16.9 in 2020 and +12.8 in 2017; its worst year was 2018 (−11.2).</li>
+    <li><b>The best full year was 2023 (+161.5)</b>, when domestic and export order books filled at the same time.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The April–July strength here matches the same window in steel (066) and mining (064) and comes from the same physical cause: the pre-monsoon construction and execution push. It is one of the more reliable calendars in this project — but 2026 shows that a single export order can matter more than any season.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Conversion margin per tonne.</b> The core economics of every pipe maker.</li>
+    <li><b>Steel prices.</b> Cost, and the source of inventory gains and losses.</li>
+    <li><b>Order books.</b> For project businesses, the only forward visibility.</li>
+    <li><b>Government water funding.</b> Decides the DI pipe cycle.</li>
+    <li><b>Oil and gas capex.</b> Drives line pipe and seamless tube.</li>
+    <li><b>Construction activity.</b> Drives structural tube volumes.</li>
+    <li><b>Trade policy.</b> American tariffs, Indian safeguards and anti-dumping cases.</li>
+    <li><b>Working capital.</b> Government receivables decide returns in the domestic business.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Welspun Corp, APL Apollo, Ratnamani, Jindal Saw, Maharashtra Seamless, Man Industries, Surya Roshni, Electrosteel Castings and Gandhi Special Tubes, equal-weighted monthly. Recent listings and micro-caps are excluded. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The capex freeze</b> (2012–2013): stalled projects and a currency crisis; the basket fell 30% in 2013.</li>
+    <li><b>Order-book recovery</b> (2014–2017): pipeline and water projects returned; Ratnamani rose 434% in 2014 and the basket 109% in 2017.</li>
+    <li><b>Cost squeeze and crash</b> (2018–2019): steel prices rose faster than pipe prices.</li>
+    <li><b>The water decade</b> (2020–2023): Jal Jeevan Mission and a construction boom lifted every sub-sector; 2023 was the best year on record at +161.5%.</li>
+    <li><b>The split</b> (2024–2026): domestic water funding dried up while export order books hit records.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Government money is the cycle.</b> The water names rise and fall with budget releases, not with steel.</li>
+    <li><b>Order books lead earnings by a year or more.</b> Welspun's American order will be executed in FY28–FY29.</li>
+    <li><b>Margin per tonne is the discipline.</b> APL Apollo's 18% rise on falling volumes shows the difference between a brand and a converter.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Pipelines are being built again</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Market</th><th>What is happening</th><th>Relevance</th></tr></thead><tbody>
+    <tr><td>United States</td><td>Gas pipelines and data-centre-driven energy build-out; Section 232 tariffs of 50% on steel</td><td>Local production wins; Welspun's US mills are the beneficiary</td></tr>
+    <tr><td>Middle East</td><td>Aramco and Gulf water and gas projects</td><td>Large orders, but conflict has disrupted logistics this year</td></tr>
+    <tr><td>Europe</td><td>Energy security and water renewal</td><td>Carbon border rules raise the cost of exporting</td></tr>
+    <tr><td>India</td><td>City gas distribution (034), refinery capex, water schemes</td><td>Domestic demand, currently funding-constrained</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Higher-grade line pipe.</b> X70 and X80 steels allow thinner walls and higher pressures.</li>
+    <li><b>Hydrogen-ready pipelines.</b> Specifications are being written for hydrogen blends.</li>
+    <li><b>Advanced coatings.</b> Longer-life anti-corrosion systems for buried and subsea pipe.</li>
+    <li><b>Large-diameter structural tubes.</b> Replacing concrete and conventional steel sections in buildings.</li>
+    <li><b>Plastic competition.</b> HDPE and PVC pipes compete for water projects where pressure allows.</li>
+    <li><b>Digital dealer networks.</b> The structural tube business is becoming a branded consumer-like distribution model.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>US Section 232 tariffs</td><td>50% duty on steel products, extended to full value in April 2026</td><td>Closes the US to Indian exports; rewards US-based capacity</td></tr>
+    <tr><td>Indian safeguard duty (066)</td><td>Raises the price of the coil pipe makers buy</td><td>Squeezes converters unless passed on</td></tr>
+    <tr><td>Jal Jeevan Mission 2.0</td><td>₹8.69 lakh cr outlay approved in March 2026, ₹3.59 lakh cr of central assistance</td><td>The water-pipe cycle, subject to state matching funds</td></tr>
+    <tr><td>City gas distribution roll-out (034)</td><td>Thousands of kilometres of steel and polyethylene pipe</td><td>Steady domestic demand</td></tr>
+    <tr><td>Quality control orders</td><td>Standards for pipes and tubes</td><td>Limits cheap imports</td></tr>
+    <tr><td>Public procurement preference</td><td>Local-content rules in government tenders</td><td>Favours domestic makers</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: record export books, waiting on water</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Line pipe</td><td>Booming</td><td>Welspun order book ₹42,100 cr; $1.8 bn US order</td></tr>
+    <tr><td>Water pipe</td><td>Weak</td><td>Jindal Saw profit −75%; FY26 rural water spending cut to ₹16,944 cr</td></tr>
+    <tr><td>Structural tubes</td><td>Soft volumes, firm margins</td><td>APL Apollo volumes −6%, EBITDA per tonne +18%</td></tr>
+    <tr><td>Seamless and stainless</td><td>Mixed</td><td>Ratnamani income −16% but ₹2,700 cr of export orders won</td></tr>
+    <tr><td>Stocks</td><td>Split</td><td>Welspun +227%, Man +120%; Surya Roshni −23%</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +42.7% this year vs -10.7% for the Nifty (to 18 Sep 2026). The basket is up 43% against a Nifty down 11%, but the gains are concentrated in export-facing pipe makers. Welspun Corp has tripled, with a record ₹42,100 cr order book, its largest-ever $1.8 bn American order and, in September, a Saudi Aramco contract at its associate. Man Industries is up 120% and Jindal Saw 72%. The domestic water-pipe names are the other side of the trade: Jindal Saw's profit fell 75% and Ratnamani's income 16% as central funding for rural water schemes was cut to a quarter of the original budget, and Electrosteel Castings is down 6%.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>Welspun Corp</td><td class="num">₹2,660</td><td>₹2,777 (10 Sep 2026)</td><td class="num">−4%</td><td class="num">+227%</td></tr>
+    <tr><td>APL Apollo Tubes</td><td class="num">₹2,270</td><td>₹2,281 (11 Feb 2026)</td><td class="num">0%</td><td class="num">+19%</td></tr>
+    <tr><td>Ratnamani Metals</td><td class="num">₹2,859</td><td>₹3,859 (12 Sep 2024)</td><td class="num">−26%</td><td class="num">+20%</td></tr>
+    <tr><td>Jindal Saw</td><td class="num">₹290</td><td>₹374 (24 Sep 2024)</td><td class="num">−23%</td><td class="num">+72%</td></tr>
+    <tr><td>Maharashtra Seamless</td><td class="num">₹718</td><td>₹1,065 (5 Dec 2023)</td><td class="num">−33%</td><td class="num">+28%</td></tr>
+    <tr><td>Electrosteel Castings</td><td class="num">₹73</td><td>₹231 (13 Sep 2024)</td><td class="num">−68%</td><td class="num">−6%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>Welspun's tripling prices in a decade-long American order book; the question is execution and what replaces those orders in FY30. APL Apollo is priced as a branded compounder rather than a converter, which its margin discipline supports but its 6% volume decline tests. The domestic water names — Electrosteel 68% below its 2024 high, Jindal Saw 23% — are priced for continued funding delays, which makes them the leveraged recovery if Jal Jeevan Mission 2.0 money actually reaches contractors.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>Pipes are a better business than steel: less capital, faster payback, and in the branded and approval-heavy niches, genuine pricing power. But the sector's two halves must be judged separately. Export-facing pipe is enjoying a once-in-a-decade order cycle at prices set by American protection. Domestic water pipe is a government-funding story that has disappointed for two years and could turn quickly. Owning both in one basket, as the index does, hides more than it shows.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Order book and execution period</td><td>Forward revenue for project businesses</td><td>Quarterly results</td></tr>
+    <tr><td>EBITDA per tonne</td><td>The conversion margin</td><td>Company disclosures</td></tr>
+    <tr><td>Jal Jeevan Mission fund releases</td><td>The water-pipe cycle</td><td>Ministry and PIB releases</td></tr>
+    <tr><td>US pipeline project awards</td><td>Line pipe demand</td><td>Company announcements; US project news</td></tr>
+    <tr><td>Hot-rolled coil prices</td><td>Cost and inventory effects</td><td>Price agencies</td></tr>
+    <tr><td>Receivable days at water-pipe makers</td><td>Stress in government payments</td><td>Half-yearly balance sheets</td></tr>
+    <tr><td>Construction and real-estate activity</td><td>Structural tube volumes</td><td>Cement volumes, project data</td></tr>
+    <tr><td>Section 232 tariff changes</td><td>Access to the US market</td><td>US government notices</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Steel &amp; iron (066):</b> coil and plate are most of the cost.</li>
+    <li><b>Stainless steel (067):</b> stainless pipe makers straddle both sections.</li>
+    <li><b>City gas distribution (034):</b> a steady buyer of steel and polyethylene pipe.</li>
+    <li><b>Oil &amp; gas (028–035):</b> line pipe and seamless demand.</li>
+    <li><b>Water infrastructure:</b> the municipal and rural water programmes.</li>
+    <li><b>Plastic pipes:</b> the competing material in water distribution.</li>
+    <li><b>Global proxies:</b> Tenaris and Vallourec for seamless; US pipeline operators for line pipe demand.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the order book, and over how many quarters will it be executed?</li>
+    <li>What was EBITDA per tonne, and how much was inventory gain or loss?</li>
+    <li>How is steel priced in your contracts — passed through, fixed, or hedged?</li>
+    <li>What share of revenue is export, and from which plants?</li>
+    <li>How are government receivables trending in the water business?</li>
+    <li>What capacity is being added, and at what capital cost per tonne?</li>
+    <li>What is the utilisation rate by product line?</li>
+    <li>How much of reported profit is operating?</li>
+    <li>What would a change in American tariffs do to your US operations?</li>
+    <li>For structural tubes: what is the dealer count and the value-added share?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Pipe makers benefit from falling steel prices"</td><td>Contracts pass steel through; falling prices cause inventory losses</td><td>Margin per tonne matters, not the steel price</td></tr>
+    <tr><td>"The water opportunity is structural"</td><td>FY26 spending was cut to a quarter of budget; JJM 2.0 was approved in March 2026</td><td>Structural in ambition, cyclical in funding</td></tr>
+    <tr><td>"Record profit means record operations"</td><td>Welspun's profit exceeded its EBITDA</td><td>Read the notes</td></tr>
+    <tr><td>"Tariffs are bad for Indian pipe makers"</td><td>American tariffs made Welspun's US mills far more valuable</td><td>Depends where the mill is</td></tr>
+    <tr><td>"All 34 names are comparable"</td><td>Four distinct businesses plus a dozen micro-caps</td><td>Compare like with like</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. LSAW, ERW" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Products and processes</h3><dl>
+    <dt>LSAW</dt><dd>Longitudinally submerged arc welded pipe, made from plate for large diameters.</dd>
+    <dt>HSAW</dt><dd>Helically (spirally) welded pipe, made from coil.</dd>
+    <dt>ERW</dt><dd>Electric resistance welded tube, made by rolling and welding coil.</dd>
+    <dt>Seamless tube</dt><dd>Tube pierced from a solid billet, with no weld.</dd>
+    <dt>Ductile iron pipe</dt><dd>Spun-cast iron pipe used for water and sewerage.</dd>
+    <dt>Structural tube</dt><dd>Hollow section used in place of beams and columns.</dd>
+    <dt>Line pipe</dt><dd>Pipe for transporting oil, gas or water over long distances.</dd>
+    <dt>OCTG</dt><dd>Oil country tubular goods — casing and tubing used in wells.</dd>
+    <dt>3LPE coating</dt><dd>Three-layer polyethylene anti-corrosion coating.</dd>
+    <dt>Concrete weight coating</dt><dd>Heavy coating that keeps subsea pipe on the seabed.</dd>
+    <dt>Hydro-testing</dt><dd>Pressure-testing each pipe with water before despatch.</dd>
+    <dt>API certification</dt><dd>American Petroleum Institute approval, required for oilfield pipe.</dd>
+    <dt>X70 / X80</dt><dd>High-strength line pipe steel grades.</dd>
+    <dt>Galvanising</dt><dd>Zinc coating that protects tubes from rust.</dd>
+  </dl>
+  <h3>Commercial terms</h3><dl>
+    <dt>Conversion margin</dt><dd>The value added between buying steel and selling pipe.</dd>
+    <dt>EBITDA per tonne</dt><dd>The sector's core profitability measure.</dd>
+    <dt>Order book</dt><dd>Contracted but undelivered work; the key disclosure for project businesses.</dd>
+    <dt>Inventory gain or loss</dt><dd>The effect of steel price moves on stock held.</dd>
+    <dt>Pass-through</dt><dd>A contract term linking price to the steel cost.</dd>
+    <dt>Tender</dt><dd>A competitive bid for a project order.</dd>
+    <dt>Receivable days</dt><dd>How long customers take to pay — critical with government buyers.</dd>
+    <dt>Dealer network</dt><dd>The distribution system through which structural tubes are sold.</dd>
+    <dt>Value-added products</dt><dd>Coated, large-diameter or specialty tubes earning higher margins.</dd>
+  </dl>
+  <h3>Policy and demand</h3><dl>
+    <dt>Section 232</dt><dd>The American law under which 50% steel tariffs are levied.</dd>
+    <dt>Jal Jeevan Mission</dt><dd>India's rural piped-water programme, relaunched as JJM 2.0 in March 2026.</dd>
+    <dt>City gas distribution</dt><dd>Piped gas networks in cities (see 034).</dd>
+    <dt>Safeguard duty</dt><dd>India's tariff on flat steel imports, which raises pipe makers' input costs.</dd>
+    <dt>Quality control order</dt><dd>A standards rule restricting substandard pipe.</dd>
+    <dt>Local content rules</dt><dd>Preference for Indian-made goods in public tenders.</dd>
+    <dt>Pipeline transmission</dt><dd>Moving oil, gas or water long distances under pressure.</dd>
+    <dt>Distribution network</dt><dd>The smaller pipes that carry gas or water to users.</dd>
+    <dt>Coating line</dt><dd>The plant that applies anti-corrosion layers to pipe.</dd>
+    <dt>Bends and fittings</dt><dd>Shaped pieces that connect straight pipe sections.</dd>
+    <dt>Casing and tubing</dt><dd>The pipes that line an oil well and carry its output.</dd>
+    <dt>Hollow section</dt><dd>A square, rectangular or round structural tube.</dd>
+    <dt>Pre-galvanised tube</dt><dd>Tube made from coil that was galvanised before forming.</dd>
+    <dt>Solar structure</dt><dd>The mounting frame for solar panels, a growing tube market.</dd>
+    <dt>Scaffolding tube</dt><dd>Light tube used in temporary construction structures.</dd>
+    <dt>Spiral weld</dt><dd>The helical seam on HSAW pipe.</dd>
+    <dt>Mother coil</dt><dd>The wide hot-rolled coil from which tubes are slit and formed.</dd>
+    <dt>Slitting line</dt><dd>Equipment that cuts coil into the strips a tube mill uses.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What are the four businesses inside this sector?</summary><p>Line pipe for oil and gas, ductile iron pipe for water, seamless tube for wells and boilers, and structural or ERW tubes for construction.</p></details>
+  <details class="q"><summary>2. Why is EBITDA per tonne the key metric?</summary><p>Steel is 60–75% of cost and is largely passed through, so revenue moves with steel while profit depends on the conversion margin.</p></details>
+  <details class="q"><summary>3. What is Welspun's order book, and what is in it?</summary><p>A record ₹42,100 cr, including a $1.8 bn American order to be executed in FY28–FY29.</p></details>
+  <details class="q"><summary>4. Why should Welspun's Q1 profit be read carefully?</summary><p>Net profit of ₹1,048 cr exceeded EBITDA of ₹692 cr, so it includes significant non-operating or exceptional income.</p></details>
+  <details class="q"><summary>5. What happened to water-pipe demand?</summary><p>FY26 rural water spending was cut from ₹66,770 cr budgeted to ₹16,944 cr; Jindal Saw's profit fell 75%.</p></details>
+  <details class="q"><summary>6. How did APL Apollo protect profit on lower volumes?</summary><p>EBITDA per tonne rose 18% to ₹5,522 while volumes fell 6%.</p></details>
+  <details class="q"><summary>7. Why do American tariffs help one Indian pipe maker?</summary><p>Section 232 duties of 50% close the US to imports, so pipe made in Welspun's American mills sells into a protected market.</p></details>
+  <details class="q"><summary>8. Which window has been strongest for these stocks?</summary><p>April–July, with 11 wins in 15 years and a median of +8.7 points.</p></details>
+  <details class="q"><summary>9. What is the difference between project pipe and product pipe?</summary><p>Project pipe is tendered in bulk with an order book; product pipe is sold daily through dealers with no order book.</p></details>
+  <details class="q"><summary>10. What was the sector's best year?</summary><p>2023, when the basket rose 161.5% as domestic and export order books filled together.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, 2011 to 18 September 2026, against NSE:NIFTY.</li>
+    <li>Welspun Corp: <a href="https://www.investing.com/news/company-news/welspun-corp-q1fy27-slides-record-ebitda-strong-order-book-93CH-4813144">Q1 FY27 slides</a>; <a href="https://www.indmoney.com/blog/stocks/welspun-corp-share-price-hits-52-week-high-can-42-100-crore-order-book-sustain-the-rally">₹42,100 cr order book</a>; <a href="https://upstox.com/news/market-news/stocks/welspun-corp-bags-record-17-200-crore-order-its-largest-ever-all-you-need-to-know/article-199012/">the $1.8 bn US order</a>; <a href="https://www.tradingview.com/news/moodys:4f0a8170ff65e:0-welspun-corp-share-price-nearly-186-returns-in-2026-alone-what-s-driving-the-rally/">the rally and the Aramco contract</a>.</li>
+    <li>APL Apollo: <a href="https://www.investing.com/news/company-news/apl-apollo-q1-fy27-slides-margin-strength-offsets-volume-dip-93CH-4829926">Q1 FY27 slides and guidance</a>; <a href="https://scanx.trade/stock-market-news/companies/apl-apollo-tubes-reports-q1fy27-sales-volume-of-744-823-ton/44439465">volumes</a>; <a href="https://www.business-standard.com/amp/markets/capital-market-news/apl-apollo-tubes-surges-after-recording-pat-of-rs-263-1-crore-in-q1-fy27-126080300606_1.html">profit</a>.</li>
+    <li>Ratnamani and Jindal Saw: <a href="https://www.angelone.in/news/stocks/ratnamani-metals-tubes-share-price-falls-over-4-after-q1-fy27-earnings-results-total-income-down-16-3-yoy">Ratnamani Q1 FY27</a>; <a href="https://upstox.com/news/market-news/stocks/nifty-microcap-ratnamani-metals-and-tubes-shares-jump-18-on-securing-export-orders-worth-2-700-crore/article-199134/">₹2,700 cr export orders</a>; <a href="https://tradebrains.in/jindal-saw-q1-results-revenue-up-9-to-4476-cr-as-net-profit-drops-78/">Jindal Saw Q1 FY27</a>; <a href="https://www.sahi.com/news/jindal-saw-foresees-steady-fy27-volumes-as-q1-profit-plunges-78-on-mena-crisis-476688-PE1_C">order book and outlook</a>.</li>
+    <li>Demand and policy: <a href="https://www.downtoearth.org.in/economy/budget-2026-27-restores-big-funding-for-rural-water-and-sanitation-after-steep-cuts-but-delivery-gaps-from-last-year-persist">rural water budget cuts</a>; <a href="https://www.thecore.in/opinion/the-plinth/businessinfrastructurejal-jeevan-mission-2-payment-delays-contractors-state-funding-869745">JJM 2.0 and payment delays</a>; <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2295509&amp;reg=3&amp;lang=1">JJM 2.0 progress</a>; <a href="https://www.congress.gov/crs-product/IN12519">Section 232 tariffs</a>; <a href="https://www.bdo.com/insights/tax/section-232-metals-tariffs-expanded-and-recalibrated-what-importers-need-to-know">2026 tariff changes</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 5.6}, {"y": 2013, "v": -14.2}, {"y": 2014, "v": 11.4}, {"y": 2015, "v": -2.4}, {"y": 2016, "v": -10.8}, {"y": 2017, "v": 8.8}, {"y": 2018, "v": -5.1}, {"y": 2019, "v": 0.5}, {"y": 2020, "v": -11.9}, {"y": 2021, "v": 6.4}, {"y": 2022, "v": -0.8}, {"y": 2023, "v": 2.3}, {"y": 2024, "v": -17.3}, {"y": 2025, "v": -3.2}, {"y": 2026, "v": 12.5}], "AprJul": [{"y": 2012, "v": -9.0}, {"y": 2013, "v": -18.5}, {"y": 2014, "v": 29.7}, {"y": 2015, "v": 32.6}, {"y": 2016, "v": 12.2}, {"y": 2017, "v": 18.4}, {"y": 2018, "v": -19.1}, {"y": 2019, "v": -13.3}, {"y": 2020, "v": 0.8}, {"y": 2021, "v": 35.7}, {"y": 2022, "v": 8.4}, {"y": 2023, "v": 41.8}, {"y": 2024, "v": 6.2}, {"y": 2025, "v": 8.7}, {"y": 2026, "v": 14.5}], "AugSep": [{"y": 2012, "v": -0.1}, {"y": 2013, "v": -3.1}, {"y": 2014, "v": -7.2}, {"y": 2015, "v": -1.0}, {"y": 2016, "v": -0.8}, {"y": 2017, "v": 2.1}, {"y": 2018, "v": -11.3}, {"y": 2019, "v": 2.2}, {"y": 2020, "v": 31.4}, {"y": 2021, "v": -12.3}, {"y": 2022, "v": 9.4}, {"y": 2023, "v": 14.3}, {"y": 2024, "v": 0.0}, {"y": 2025, "v": -5.5}], "OctDec": [{"y": 2012, "v": 1.4}, {"y": 2013, "v": 1.2}, {"y": 2014, "v": 4.9}, {"y": 2015, "v": 8.2}, {"y": 2016, "v": 10.1}, {"y": 2017, "v": 23.4}, {"y": 2018, "v": 7.2}, {"y": 2019, "v": -6.0}, {"y": 2020, "v": 10.5}, {"y": 2021, "v": 4.2}, {"y": 2022, "v": -2.8}, {"y": 2023, "v": 24.8}, {"y": 2024, "v": -1.6}, {"y": 2025, "v": -11.3}], "SepNov": [{"y": 2012, "v": 9.5}, {"y": 2013, "v": -7.9}, {"y": 2014, "v": 2.3}, {"y": 2015, "v": 3.3}, {"y": 2016, "v": 10.2}, {"y": 2017, "v": 14.5}, {"y": 2018, "v": -5.4}, {"y": 2019, "v": -4.9}, {"y": 2020, "v": 14.8}, {"y": 2021, "v": 7.3}, {"y": 2022, "v": 3.2}, {"y": 2023, "v": 33.1}, {"y": 2024, "v": -4.1}, {"y": 2025, "v": -11.2}], "JanMar": [{"y": 2012, "v": 8.5}, {"y": 2013, "v": -17.2}, {"y": 2014, "v": 12.3}, {"y": 2015, "v": -9.7}, {"y": 2016, "v": -15.6}, {"y": 2017, "v": 13.4}, {"y": 2018, "v": -8.6}, {"y": 2019, "v": -5.9}, {"y": 2020, "v": -2.5}, {"y": 2021, "v": 2.5}, {"y": 2022, "v": -2.0}, {"y": 2023, "v": 13.1}, {"y": 2024, "v": -1.9}, {"y": 2025, "v": -11.2}, {"y": 2026, "v": 9.4}]}, "my": {"1": {"2012": 2.1, "2013": -3.4, "2014": 1.1, "2015": -7.6, "2016": -5.8, "2017": 3.6, "2018": -3.7, "2019": -6.0, "2020": 15.4, "2021": -3.3, "2022": -1.2, "2023": 10.8, "2024": 18.0, "2025": -8.3, "2026": -2.8}, "2": {"2012": 8.0, "2013": -9.3, "2014": -1.9, "2015": -0.2, "2016": -11.6, "2017": 3.8, "2018": 3.3, "2019": -1.6, "2020": -1.2, "2021": 2.6, "2022": -5.6, "2023": 0.9, "2024": -10.9, "2025": -7.3, "2026": 11.2}, "3": {"2012": -2.0, "2013": -5.8, "2014": 13.2, "2015": -2.2, "2016": 2.6, "2017": 4.5, "2018": -8.4, "2019": 2.3, "2020": -11.9, "2021": 3.5, "2022": 5.6, "2023": 1.5, "2024": -6.9, "2025": 5.3, "2026": 2.4}, "4": {"2012": -1.5, "2013": -4.1, "2014": 12.1, "2015": 16.9, "2016": 10.4, "2017": 5.0, "2018": 3.7, "2019": -2.2, "2020": -1.9, "2021": 11.8, "2022": 6.9, "2023": 7.1, "2024": 12.1, "2025": -4.3, "2026": 15.7}, "5": {"2012": -3.2, "2013": -0.7, "2014": 15.5, "2015": -5.4, "2016": -6.6, "2017": -3.9, "2018": -7.9, "2019": 1.7, "2020": -5.4, "2021": -1.4, "2022": -1.2, "2023": 12.7, "2024": -8.1, "2025": 10.4, "2026": 1.0}, "6": {"2012": -5.1, "2013": -5.5, "2014": 4.8, "2015": 4.0, "2016": 6.5, "2017": 12.8, "2018": -11.2, "2019": -3.9, "2020": 16.9, "2021": 12.2, "2022": 1.1, "2023": 5.8, "2024": -1.2, "2025": 4.5, "2026": 3.3}, "7": {"2011": 0.0, "2012": 0.4, "2013": -9.0, "2014": -6.3, "2015": 14.6, "2016": 1.1, "2017": 2.4, "2018": -1.9, "2019": -9.4, "2020": -6.9, "2021": 7.8, "2022": 1.7, "2023": 8.1, "2024": 4.0, "2025": -1.7, "2026": -5.3}, "8": {"2011": 1.1, "2012": -3.5, "2013": 1.0, "2014": -6.2, "2015": -1.9, "2016": -1.0, "2017": 0.9, "2018": 0.8, "2019": -1.3, "2020": 18.5, "2021": -15.3, "2022": 3.3, "2023": 10.4, "2024": 0.2, "2025": -5.7, "2026": 20.3}, "9": {"2011": -0.7, "2012": 3.8, "2013": -4.3, "2014": -1.0, "2015": 0.9, "2016": 0.1, "2017": 1.2, "2018": -11.6, "2019": 3.6, "2020": 10.8, "2021": 3.7, "2022": 5.9, "2023": 3.5, "2024": -0.2, "2025": 0.3}, "10": {"2011": -8.3, "2012": 1.5, "2013": -7.3, "2014": -2.4, "2015": -1.3, "2016": 13.7, "2017": 11.0, "2018": 9.1, "2019": -2.1, "2020": -0.4, "2021": -0.5, "2022": -7.0, "2023": 16.3, "2024": -1.4, "2025": -4.0}, "11": {"2011": -3.9, "2012": 3.4, "2013": 3.8, "2014": 5.7, "2015": 3.7, "2016": -2.4, "2017": 2.0, "2018": -1.9, "2019": -5.8, "2020": 2.6, "2021": 4.0, "2022": 4.2, "2023": 9.6, "2024": -2.7, "2025": -7.4}, "12": {"2011": 1.7, "2012": -3.4, "2013": 4.3, "2014": 1.4, "2015": 5.7, "2016": -0.2, "2017": 8.3, "2018": -0.3, "2019": 2.2, "2020": 7.0, "2021": 0.5, "2022": 0.2, "2023": -4.2, "2024": 2.5, "2025": 0.1}}, "basket": ["Welspun Corp Limited", "APL Apollo Tubes Limited", "Ratnamani Metals & Tubes Ltd.", "Jindal Saw Limited", "Maharashtra Seamless Limited", "Man Industries (India) Limited", "Electrosteel Castings Ltd.", "Surya Roshni Limited", "Gandhi Special Tubes Limited"], "nbasket": 9, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.4, "rel": 0.6, "hit": 6, "n": 15}, {"m": 2, "abs": -2.5, "rel": -1.3, "hit": 6, "n": 15}, {"m": 3, "abs": 0.1, "rel": 0.2, "hit": 9, "n": 15}, {"m": 4, "abs": 8.4, "rel": 5.8, "hit": 10, "n": 15}, {"m": 5, "abs": 1.0, "rel": -0.2, "hit": 5, "n": 15}, {"m": 6, "abs": 4.8, "rel": 3.0, "hit": 10, "n": 15}, {"m": 7, "abs": 1.9, "rel": -0.0, "hit": 9, "n": 16}, {"m": 8, "abs": 1.1, "rel": 1.3, "hit": 9, "n": 16}, {"m": 9, "abs": 1.7, "rel": 1.1, "hit": 10, "n": 15}, {"m": 10, "abs": 3.2, "rel": 1.1, "hit": 5, "n": 15}, {"m": 11, "abs": 1.9, "rel": 1.0, "hit": 9, "n": 15}, {"m": 12, "abs": 2.4, "rel": 1.7, "hit": 11, "n": 15}], "cy": [{"y": 2012, "b": 26.3, "n": 27.7, "rel": -1.4, "partial": false}, {"y": 2013, "b": -29.9, "n": 6.8, "rel": -36.6, "partial": false}, {"y": 2014, "b": 79.5, "n": 31.4, "rel": 48.1, "partial": false}, {"y": 2015, "b": 23.1, "n": -4.1, "rel": 27.1, "partial": false}, {"y": 2016, "b": 5.3, "n": 3.0, "rel": 2.3, "partial": false}, {"y": 2017, "b": 109.1, "n": 28.6, "rel": 80.5, "partial": false}, {"y": 2018, "b": -26.2, "n": 3.2, "rel": -29.4, "partial": false}, {"y": 2019, "b": -12.3, "n": 12.0, "rel": -24.3, "partial": false}, {"y": 2020, "b": 58.3, "n": 14.9, "rel": 43.4, "partial": false}, {"y": 2021, "b": 57.2, "n": 24.1, "rel": 33.0, "partial": false}, {"y": 2022, "b": 18.2, "n": 4.3, "rel": 13.9, "partial": false}, {"y": 2023, "b": 161.5, "n": 20.0, "rel": 141.4, "partial": false}, {"y": 2024, "b": 10.7, "n": 8.8, "rel": 1.9, "partial": false}, {"y": 2025, "b": -10.4, "n": 10.5, "rel": -20.9, "partial": false}, {"y": 2026, "b": 42.7, "n": -10.7, "rel": 53.4, "partial": true}], "dd": [{"co": "Welspun Corp", "peak": "Jun 2025", "fp": 175, "y1": 197}, {"co": "APL Apollo Tubes", "peak": "Jun 2025", "fp": 18, "y1": 34}, {"co": "Ratnamani Metals & Tubes", "peak": "Sep 2024", "fp": -26, "y1": 15}, {"co": "Jindal Saw", "peak": "Sep 2024", "fp": -23, "y1": 38}, {"co": "Maharashtra Seamless", "peak": "Dec 2023", "fp": -33, "y1": 14}, {"co": "Man Industries (India)", "peak": "Jul 2024", "fp": 72, "y1": 98}, {"co": "Goodluck India", "peak": "Oct 2025", "fp": 19, "y1": 43}, {"co": "Electrosteel Castings", "peak": "Sep 2024", "fp": -68, "y1": -27}, {"co": "Surya Roshni", "peak": "Jan 2024", "fp": -49, "y1": -27}, {"co": "Venus Pipes & Tubes", "peak": "Aug 2024", "fp": -6, "y1": 68}, {"co": "Sambhv Steel Tubes", "peak": "Jul 2025", "fp": 6, "y1": 19}, {"co": "JTL Industries", "peak": "Feb 2024", "fp": -35, "y1": 12}, {"co": "Hi-Tech Pipes", "peak": "Oct 2024", "fp": -63, "y1": -36}, {"co": "Hariom Pipe Industries", "peak": "Aug 2024", "fp": -58, "y1": -33}, {"co": "Gandhi Special Tubes", "peak": "Sep 2025", "fp": -10, "y1": -3}, {"co": "Scoda Tubes", "peak": "Jul 2025", "fp": -40, "y1": -27}], "win": {"FebMar": {"mean": -1.2, "median": -0.8, "hit": 7, "n": 15}, "AprJul": {"mean": 10.0, "median": 8.7, "hit": 11, "n": 15}, "AugSep": {"mean": 1.3, "median": -0.5, "hit": 6, "n": 14}, "OctDec": {"mean": 5.3, "median": 4.5, "hit": 10, "n": 14}, "SepNov": {"mean": 4.6, "median": 3.3, "hit": 9, "n": 14}, "JanMar": {"mean": -1.0, "median": -2.0, "hit": 6, "n": 15}}, "ytd": {"b": 42.7, "n": -10.7}, "notes": {"2012": "+26.3% against +27.7%. Surya Roshni +77%, Electrosteel +50%, Ratnamani +44%.", "2013": "\u221229.9% against +6.8%. The capex freeze and rupee crisis: Jindal Saw \u221262%, Man Industries \u221255%.", "2014": "+79.5% against +31.4%. Ratnamani +434% and APL Apollo +138% as order books refilled.", "2015": "+23.1% against \u22124.1%. APL Apollo +120%, Welspun +67%, against weak oil-and-gas names.", "2016": "+5.3% against +3.0%. A flat year; Man Industries \u221253%.", "2017": "+109.1% against +28.6%. Pipeline capex returned: Man +190%, Jindal Saw +153%, Surya Roshni +126%.", "2018": "\u221226.2% against +3.2%. The small-cap crash and a sharp rise in steel input costs.", "2019": "\u221212.3% against +12.0%. Weak domestic projects; only APL Apollo (+61%) grew.", "2020": "+58.3% against +14.9%. Post-lockdown construction and water schemes: APL Apollo +135%, Surya Roshni +128%.", "2021": "+57.2% against +24.1%. Structural tubes and water pipes both boomed; APL Apollo +126%.", "2022": "+18.2% against +4.3%. Steel price swings; Ratnamani +51% on oil and gas orders.", "2023": "+161.5% against +20.0%. The best year on record: Jindal Saw +298%, Man Industries +267%, Surya Roshni +217%.", "2024": "+10.7% against +8.8%. Welspun +48% and Jindal Saw +41%, but domestic order flow slowed.", "2025": "\u221210.4% against +10.5%. Water-scheme funding was cut: Electrosteel \u221244%, Jindal Saw \u221242%, Ratnamani \u221225%.", "2026": "+42.7% against a Nifty \u221210.7%. Export orders transformed the leaders: Welspun +227%, Man +120%, Jindal Saw +72%; Surya Roshni \u221223%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

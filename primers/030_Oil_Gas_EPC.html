@@ -1,0 +1,590 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oil and Gas EPC Primer</title>
+<meta name="description" content="Industry 30 of 278: the contractors who build India&#x27;s pipelines, terminals and gas networks. How a pipeline EPC order book converts into revenue, why right-of-way and the monsoon decide margins, the national gas grid build-out, and the one listed pure play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Oil &amp; Gas EPC · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the work is</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stock does</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">How the programme was built</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 30 of 278 · Oil &amp; Gas family, part 3 of 8</div>
+  <h1>Oil &amp; Gas EPC</h1>
+  <p class="lede">Engineering, procurement and construction for hydrocarbons: the companies that survey a route, buy the pipe, weld it into a line hundreds of kilometres long, bury it, test it and hand it over. India is building a national gas grid towards 35,000 km and has authorised city gas networks covering effectively the whole population — and almost none of the contractors doing that work are listed.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 1 listed (Likhitha Infrastructure)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Oil Refining &amp; Marketing</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹1,454 cr</div><div class="l">Likhitha's order book at 30 June 2026, against quarterly revenue of ₹85 cr</div></div>
+    <div class="stat"><div class="n">307</div><div class="l">Geographical areas authorised for city gas distribution, covering effectively the whole country</div></div>
+    <div class="stat"><div class="n">₹510 cr</div><div class="l">The Abu Dhabi pipeline contract won in June 2026 — the first large international award</div></div>
+    <div class="stat"><div class="n">−47%</div><div class="l">The fall in Q1 FY27 profit, in a year the share price is up: order book versus execution</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Building the pipes that the rest of this family fills</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Gas has to travel from where it comes out of the ground to the stove in your kitchen, and it travels through a steel pipe buried in the earth. Somebody has to put that pipe there. First they walk the whole route and decide where it goes, then they have to get permission from every farmer whose field it crosses, then trucks bring steel pipes twelve metres at a time, a machine digs a trench, welders join the pipes end to end, and the whole line is filled with water at high pressure to check it does not leak. Only then is it buried and handed over. The company doing all that is an EPC contractor. It is paid for building the pipe, not for the gas inside it.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is a one-stock section attached to a very large infrastructure programme.</p>
+    <ul>
+      <li><b>The programme is real:</b> a national gas grid heading towards 35,000 km, four new trunk pipelines of about 2,500 km in progress, and 307 authorised city gas areas covering essentially the entire population.</li>
+      <li><b>The listed exposure is one company.</b> Likhitha Infrastructure, about ₹900 cr, builds cross-country pipelines, city gas networks and terminals. The large contractors in this space — L&amp;T's hydrocarbon arm, Megha Engineering — are either unlisted or listed as diversified conglomerates.</li>
+      <li><b>The current picture is a divergence:</b> Q1 FY27 revenue −30.5% and profit −47%, but an order book of ₹1,454 cr and a first large international win, the ₹510 cr Abu Dhabi contract.</li>
+      <li><b>The risk in EPC is never demand; it is execution</b> — right-of-way, monsoon, client clearances and receivables.</li>
+    </ul>
+    <p>Treat the section as a single-stock bet on conversion, not as sector exposure to the gas build-out.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the work is">
+  <p class="eyebrow">2 · What the work is</p>
+  <h2>Four kinds of contract</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Work</th><th>What it involves</th><th>Typical tenure</th><th>Who awards it</th></tr></thead><tbody>
+    <tr><td>Cross-country pipelines</td><td>Trunk lines carrying gas or petroleum products over hundreds of kilometres</td><td>18–36 months</td><td>GAIL, IOC, HPCL, BPCL, Oil India (see 031, 033)</td></tr>
+    <tr><td>City gas distribution networks</td><td>Steel and polyethylene mains, service lines, CNG stations within a city</td><td>Rolling, multi-year</td><td>City gas licensees (see 034)</td></tr>
+    <tr><td>Terminals and facilities</td><td>Tank farms, pumping and compressor stations, metering skids</td><td>12–24 months</td><td>Refiners and pipeline owners</td></tr>
+    <tr><td>Rehabilitation and maintenance</td><td>Re-coating, integrity work and repairs on ageing lines</td><td>Short, repeatable</td><td>Pipeline owners — Likhitha won ₹121 cr of this from Oil India in Assam</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A pipeline contractor is a tailor who is given the cloth, the measurements and a deadline, and is paid a fixed price for the finished suit. If the cloth arrives late, or the customer changes the measurements halfway, or it rains for six weeks so the workshop cannot open, the price does not change — only the cost does. That asymmetry is the whole risk profile of EPC.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a route map to a commissioned line</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Survey and design</h4><div class="an">Where the pipe goes</div>Route selection, soil and crossing studies, hydraulic design.<div class="who">The client's consultants and the contractor</div><div class="m">Cheap, and it determines everything after</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Right of use</h4><div class="an">Permission to cross</div>Acquiring the corridor across farmland, roads, rivers and railways.<div class="who">Government and the client</div><div class="m">The single most common cause of delay</div></div>
+    <div class="stage"><div class="no">03</div><h4>Procurement</h4><div class="an">Buying the steel</div>Line pipe, coating, valves, fittings — often supplied free-issue by the client.<div class="who">Pipe mills; the client</div><div class="m">Free-issue pipe lowers the contractor's working capital sharply</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Construction</h4><div class="an">Trench, weld, lower, bury</div>Stringing, welding, radiographic testing, coating joints, lowering and backfilling.<div class="who">The contractor's spreads and crews</div><div class="m">Stops in the monsoon; measured in kilometres per day</div></div>
+    <div class="stage"><div class="no">05</div><h4>Testing and commissioning</h4><div class="an">Proving it holds</div>Hydrostatic testing, pigging, drying, tie-ins and handover.<div class="who">Contractor with the client</div><div class="m">Where the final payment milestones sit</div></div>
+    <div class="stage"><div class="no">06</div><h4>Operations and maintenance</h4><div class="an">Keeping it alive</div>Integrity surveys, re-coating, repairs, cathodic protection.<div class="who">Specialist contractors</div><div class="m">Annuity revenue, smoother than construction</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Survey:</b> engineers walk and map the route, deciding how to get under rivers and roads.</li>
+    <li><b>Right of use:</b> every landowner along the way has to be compensated and persuaded. This takes longer than the building does.</li>
+    <li><b>Procurement:</b> the steel pipe arrives in lengths, often bought by the customer rather than the builder.</li>
+    <li><b>Construction:</b> a trench is dug, pipes are welded into a long string, x-rayed to check the welds, then lowered in and covered.</li>
+    <li><b>Testing:</b> the line is filled with water at high pressure. If it holds, it is dried and connected.</li>
+    <li><b>Maintenance:</b> for decades afterwards someone has to check the coating and repair corrosion.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>In EPC, revenue is a function of what can be executed, not of what has been won — and the two diverge routinely. Likhitha's June quarter is the textbook illustration: an order book of ₹1,454 cr, roughly four times annual revenue, and yet revenue down 30.5% because sites were not moving. The three questions that matter are <b>how much of the order book is executable today</b> (right-of-way cleared, drawings approved), <b>who supplies the pipe</b> (free-issue materially reduces working capital and risk), and <b>what the receivable cycle looks like</b> on public-sector clients. A large order book with slow conversion is a liability dressed as an asset.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>One listed company, and the market around it</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>Status</th></tr></thead><tbody>
+    <tr><td><b>Likhitha Infrastructure</b> (~₹900 cr)</td><td>Hyderabad-based pipeline EPC: cross-country oil and gas pipelines, city gas distribution networks, terminals and pipeline rehabilitation. Listed October 2020.</td><td>Q1 FY27 revenue ₹85.06 cr (−30.5%), standalone profit ₹7.34 cr (−47%), EBITDA margin 14.27% against 16.60% in the prior quarter. Order book ₹1,454 cr at 30 June 2026. FY26 profit ₹38.55 cr. Stock +16% in 2026 but −54% from its June 2024 peak.</td></tr>
+    <tr><td>L&amp;T Energy Hydrocarbon</td><td>India's largest hydrocarbon EPC: offshore platforms, refineries, cross-country pipelines and terminals.</td><td>Part of Larsen &amp; Toubro, a diversified conglomerate rather than a pure play</td></tr>
+    <tr><td>Megha Engineering &amp; Infrastructures (MEIL)</td><td>Large private infrastructure group; won the bid to build and operate India's first private strategic petroleum reserve, of 2.5 million tonnes.</td><td>Unlisted</td></tr>
+    <tr><td>International contractors</td><td>Global pipeline builders, often the prime contractor on export projects — Likhitha's ₹510 cr order came from CPECC Abu Dhabi as the main contractor.</td><td>Not Indian-listed</td></tr>
+    <tr><td>Pipe manufacturers</td><td>The line-pipe suppliers feeding every project</td><td>A separate listed industry, covered under steel pipes and tubes</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Read this before using the section</span><p>This is the third one-company section in the series, after 021 and 026, and the caution is the same: there is no peer group, no basket, and any "sector" statistic is one company's share price. It is also the most misleading of the three, because the underlying industry is genuinely large and growing — the gas grid, the city gas roll-out, refinery expansions — while the listed exposure is a ₹900 cr contractor. If the thesis is the gas build-out, the better expressions are elsewhere in this family: the pipeline owners in 033, the city gas licensees in 034, and the pipe makers in the steel pipes section.</p></div>
+  <h3>The 2026 order flow, in detail</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Award</th><th>Client</th><th>Value</th><th>Note</th></tr></thead><tbody>
+    <tr><td>Pipeline Package-1 (ASAB)</td><td>CPECC Abu Dhabi</td><td>~₹510 cr</td><td>Announced 26 June 2026; 21-month execution; the first large international contract</td></tr>
+    <tr><td>Pipeline Rehabilitation Project Phase-II, Spreads 1 and 2</td><td>Oil India, Assam</td><td>₹121.04 cr including GST</td><td>Coating refurbishment — the maintenance annuity</td></tr>
+    <tr><td>Pipeline work</td><td>HPCL</td><td>₹72.15 cr excluding GST</td><td>Domestic products pipeline work</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>A fixed price against a variable cost</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Element</th><th>How it works</th><th>Where it goes wrong</th></tr></thead><tbody>
+    <tr><td>Order book</td><td>Contracted work not yet executed; ₹1,454 cr for Likhitha</td><td>Means nothing if sites are not available</td></tr>
+    <tr><td>Execution rate</td><td>Revenue recognised as work is completed</td><td>Monsoon, right-of-way disputes and client delays; revenue fell 30.5% on a full book</td></tr>
+    <tr><td>Margin</td><td>Bid margin less cost overruns; 14–17% EBITDA is the recent range</td><td>Idle crews and equipment during delays destroy it — the margin fell from 16.6% to 14.27% in a quarter</td></tr>
+    <tr><td>Free-issue material</td><td>Client supplies the pipe</td><td>Lowers working capital, but also lowers headline revenue per kilometre</td></tr>
+    <tr><td>Retention and receivables</td><td>A portion held back until commissioning</td><td>Public-sector payment cycles stretch working capital</td></tr>
+    <tr><td>Mobilisation</td><td>Spreads, welding rigs and crews moved to site</td><td>Spent before revenue; wasted if the site is not ready</td></tr>
+  </tbody></table></div>
+  <h3>Why the stock rose while the profit halved</h3>
+  <p>Because in contracting, the market pays for the forward book and treats a weak quarter as a timing problem — provided it believes the work is still there. Likhitha's book at 30 June was ₹1,454 cr against annual revenue of a few hundred crore, and the June award from CPECC Abu Dhabi did something the domestic order flow could not: it proved the company can qualify for international work as a subcontractor to a global prime. That is a re-rating argument. The risk is the mirror image: if the same book is still unconverted a year from now, the multiple compresses and the 2025 experience (−45%) repeats.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>An EPC order book is a restaurant's reservation list. A long list is good news only if the kitchen can cook. When the kitchen is blocked — no gas, no ingredients, the road outside dug up — the list keeps growing while the tills stay quiet, and eventually the diners leave.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Right of use over land</td><td>No corridor, no construction; the commonest source of delay in Indian pipelines</td><td>The binding constraint on execution across the industry</td></tr>
+    <tr><td>Line pipe and coating</td><td>The main material; often supplied free-issue by the client</td><td>Steel-price linked when the contractor procures it</td></tr>
+    <tr><td>Skilled welders and radiographers</td><td>Weld quality is tested on every joint; certified crews are scarce</td><td>A limit on how many spreads a contractor can run at once</td></tr>
+    <tr><td>Construction spreads and equipment</td><td>Side-booms, trenchers, bending machines, horizontal drilling rigs</td><td>Capital that idles when sites stall</td></tr>
+    <tr><td>Client clearances and drawings</td><td>Approvals gate each stage of billing</td><td>Directly visible in the 30.5% revenue fall</td></tr>
+    <tr><td>Working capital</td><td>Retention money and stretched public-sector receivables</td><td>Why debt-light balance sheets survive in this business</td></tr>
+    <tr><td>Weather windows</td><td>Trenching and welding stop in heavy rain</td><td>Structural: the monsoon quarter is always weak</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Built around the rain</h2>
+  <ul>
+    <li><b>April–June:</b> the strongest construction window — dry ground, new budgets, fresh awards.</li>
+    <li><b>July–September:</b> the monsoon halts trenching and lowering across most of the country; revenue recognition slows and crews idle.</li>
+    <li><b>October–December:</b> the post-monsoon push, when the year's execution has to be recovered.</li>
+    <li><b>January–March:</b> year-end billing, milestone certification and collections; the quarter that decides the reported year.</li>
+    <li><b>Award cycle:</b> public-sector tenders cluster around budget approvals, so order intake is lumpy and unpredictable.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stock does">
+  <p class="eyebrow">8 · What the stock does</p>
+  <h2>Six years of one company</h2>
+  <div><p><b>Basket:</b> the single listed company (Likhitha Infrastructure Ltd), monthly from Nov 2020, compared with the Nifty 50. With one stock, these statistics describe that company, not an industry.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +18.4 pts (beat in 5 of 6 years); Jun +10.2 pts (beat in 4 of 6 years); Mar +2.2 pts (beat in 4 of 6 years).</li><li><b>Weakest months:</b> Nov -4.3 pts (beat in 1 of 6 years); Jul -4.0 pts (beat in 1 of 6 years); Oct -4.0 pts (beat in 1 of 5 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 6 years (median -4.1 pts); Apr–Jul beat the Nifty in 4 of 6 years (median +13.3 pts); Aug–Sep beat the Nifty in 2 of 5 years (median -16.5 pts); Oct–Dec beat the Nifty in 1 of 5 years (median -6.9 pts); Sep–Nov beat the Nifty in 1 of 5 years (median -13.8 pts); Jan–Mar beat the Nifty in 2 of 6 years (median -10.1 pts).</li></ul><p><b>Reading it:</b> this section contains one listed company with six years of history, so what follows describes Likhitha Infrastructure, not an industry — the sample is far too small for inference. For what it is worth, the pattern matches the contracting calendar: April is strong (5 of 6 years) and April–July works 4 of 6 with a median of +13.3, while the monsoon-and-after window is poor — August–September 2 of 5, October–December 1 of 5, September–November 1 of 5. That is consistent with a business that cannot lay pipe in the rain, but six observations prove nothing. Use the order book and the execution rate instead.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return minus the Nifty, in percentage points (2026 to 18 September). One company, six years.</figcaption></figure>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Stock</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <div class="box pm"><span class="tag">How to use this</span><p>Not as a seasonal signal. With six observations and one company, the only defensible reading is the mechanism: pipeline construction cannot proceed in the monsoon, so the June and September quarters are structurally weak and the December and March quarters carry the year. What is worth tracking instead is the ratio of order book to trailing revenue, and whether the gap between them is narrowing. The 2025 fall of 45% happened while the order book was healthy — which is precisely the point.</p></div>
+  <h3>Drawdown from the peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>The national gas grid programme:</b> a network heading towards 35,000 km, with four new trunk pipelines of about 2,500 km under development.</li>
+    <li><b>City gas roll-out:</b> 307 authorised geographical areas, each requiring steel mains, polyethylene networks and CNG stations (see 034).</li>
+    <li><b>Refinery and terminal capital expenditure:</b> expansions such as Numaligarh's 3-to-9 MMTPA programme create facility work (see 028, 031).</li>
+    <li><b>Right-of-way clearance:</b> the practical determinant of how fast an order book converts.</li>
+    <li><b>Order intake and ticket size:</b> lumpy, and a single ₹510 cr award can change the book by a third.</li>
+    <li><b>Competitive intensity in bidding:</b> pipeline EPC has low entry barriers at small ticket sizes, which caps margins.</li>
+    <li><b>Working capital and receivables:</b> public-sector payment behaviour.</li>
+    <li><b>International expansion:</b> Middle East contracts as a subcontractor to global primes — new, and unproven at scale.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="How the programme was built">
+  <p class="eyebrow">10 · How the programme was built</p>
+  <h2>India's gas infrastructure, and why the contractors exist</h2>
+  <p>With one listed company and six years of price history, the useful history here is the programme rather than the stock. India's gas network has been built in waves, each created by a policy decision.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Wave</th><th>What happened</th><th>Effect on contractors</th></tr></thead><tbody>
+    <tr><td>The HBJ line and the first trunk network</td><td>The Hazira–Bijaipur–Jagdishpur pipeline anchored India's first gas corridor, feeding fertiliser and power plants</td><td>Created a domestic pipeline construction capability</td></tr>
+    <tr><td>PNGRB and regulated authorisation (2006 onwards)</td><td>An independent regulator began authorising pipelines and city gas areas through competitive bidding</td><td>Turned ad-hoc projects into a rolling tender pipeline</td></tr>
+    <tr><td>City gas bidding rounds</td><td>Successive rounds expanded authorised areas to 307, covering effectively the whole population</td><td>The single largest source of repeat, small-ticket work</td></tr>
+    <tr><td>National Gas Grid and viability support</td><td>Trunk lines to the east and north-east, with government support for uneconomic sections; four grassroot pipelines of about 2,500 km are in progress, including Cherlapally–Nagpur, Shikrapur–Hubli–Goa, Paradip–Raipur and Jhansi–Sitarganj</td><td>Multi-year visibility for trunk-line builders</td></tr>
+    <tr><td>Third-party access reform</td><td>PNGRB is opening city gas networks to third-party capital once infrastructure exclusivity expires</td><td>More owners commissioning more network extensions</td></tr>
+    <tr><td>Strategic reserves and storage</td><td>India's first private strategic petroleum reserve, of 2.5 million tonnes, awarded to Megha Engineering</td><td>A new category of large facility work</td></tr>
+  </tbody></table></div>
+  <h3>What the record shows about the stock</h3>
+  <ul>
+    <li><b>The re-rating came first, the execution later.</b> The share rose 109% in 2021 and 31% in 2022 on order intake, then gave back 45% in 2025 when conversion disappointed.</li>
+    <li><b>Order books do not protect a share price.</b> 2025's fall happened with a healthy book, and 2026's rise happened with falling revenue. What changes is belief in conversion.</li>
+    <li><b>Scarcity cuts both ways.</b> Being the only listed pure play attracts a premium in a theme-led market and offers no support when the theme fades.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A commoditised craft with regional champions</h2>
+  <p>Pipeline construction is a global industry with no technological moat and significant execution skill: the winners are those who can mobilise certified crews at scale and absorb weather and land risk. The Middle East is the most active market, with national oil companies running continuous programmes, and Chinese state contractors such as CPECC frequently taking prime-contractor roles there — which is how an Indian mid-cap ends up with an Abu Dhabi package. For Indian contractors, international work is attractive because payment terms are usually better than domestic public-sector cycles, and dangerous because a bad overseas project can consume years of domestic profit.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Market</th><th>Character</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>Middle East</td><td>Continuous national programmes, large packages, prime contractors often Chinese, Korean or European</td><td>Where Indian contractors win subcontract packages — Likhitha's ASAB package</td></tr>
+    <tr><td>United States</td><td>Private pipeline development, heavy regulatory and permitting risk</td><td>Not accessible to Indian mid-caps</td></tr>
+    <tr><td>Africa and South-East Asia</td><td>Growing gas infrastructure, mixed payment risk</td><td>Occasional Indian participation</td></tr>
+    <tr><td>India</td><td>Regulated, tender-driven, land-constrained</td><td>The core market: gas grid plus 307 city gas areas</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From owner-built to contracted:</b> state gas utilities once built their own lines; competitive tendering created a contractor industry.</li>
+    <li><b>From steel-only to polyethylene networks:</b> city gas distribution uses plastic mains at low pressure, a different and more repetitive skill than trunk-line welding.</li>
+    <li><b>From domestic to export services:</b> Indian contractors following global primes into the Gulf, initially as subcontractors.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Horizontal directional drilling:</b> crossing rivers, roads and railways without trenching — the difference between a three-week crossing and a three-month one.</li>
+    <li><b>Automated welding and inspection:</b> mechanised welding with automated ultrasonic testing raises kilometres per day and cuts rework.</li>
+    <li><b>Smart pigging and integrity management:</b> instrumented devices run through a line to find corrosion, creating recurring inspection work.</li>
+    <li><b>Digital project controls:</b> drone survey, GIS-based route management and progress tracking, which matter most where right-of-way is fragmented.</li>
+    <li><b>Composite and polyethylene networks:</b> faster to lay in cities, and central to the city gas roll-out.</li>
+    <li><b>Hydrogen readiness:</b> specifications for blending hydrogen into gas networks, which will eventually drive re-qualification work on existing lines.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>National Gas Grid</td><td>Network heading towards 35,000 km; four grassroot pipelines of ~2,500 km in progress</td><td>The core demand pipeline for trunk-line contractors</td></tr>
+    <tr><td>PNGRB city gas authorisations</td><td>307 geographical areas authorised, covering effectively the whole population</td><td>Rolling small-ticket network construction for a decade</td></tr>
+    <tr><td>Third-party access to city gas networks</td><td>PNGRB to allow third-party capital after exclusivity expires</td><td>More parties commissioning network work</td></tr>
+    <tr><td>National PNG Drive</td><td>Extended to 30 June; 367,000 connections gasified since March with about 400,000 more registered</td><td>Direct demand for last-mile service lines</td></tr>
+    <tr><td>Petroleum and Minerals Pipelines Act, right-of-use process</td><td>Statutory acquisition of the corridor with compensation</td><td>The legal mechanism whose slowness defines execution risk</td></tr>
+    <tr><td>PM Gati Shakti</td><td>Coordinated infrastructure planning across ministries</td><td>Intended to reduce clearance delays</td></tr>
+    <tr><td>Strategic petroleum reserves</td><td>First private reserve of 2.5 million tonnes awarded to Megha Engineering</td><td>A new class of large storage and facility work</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: full book, slow sites</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Demand</td><td>Structurally strong</td><td>Gas grid towards 35,000 km; 307 authorised city gas areas; four trunk pipelines in progress</td></tr>
+    <tr><td>Order book</td><td>Full</td><td>₹1,454 cr at 30 June 2026, several times annual revenue</td></tr>
+    <tr><td>Order intake</td><td>Diversifying</td><td>₹510 cr from CPECC Abu Dhabi, ₹121 cr from Oil India, ₹72 cr from HPCL</td></tr>
+    <tr><td>Execution</td><td>The problem</td><td>Q1 FY27 revenue −30.5%, profit −47%</td></tr>
+    <tr><td>Margin</td><td>Compressing</td><td>EBITDA margin 14.27% against 16.60% in the prior quarter</td></tr>
+    <tr><td>The stock</td><td>Recovering on the book</td><td>+16% in 2026, but still −54% from its June 2024 peak</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The industry behind this section is one of the more certain infrastructure programmes in India: the gas grid and the city gas roll-out are authorised, funded and under construction, and they generate work for a decade. The listed expression of it is a ₹900 cr contractor whose revenue fell 30% last quarter. Those two sentences are both true, and the gap between them is the entire investment problem. The single number that resolves it is the conversion rate — order book turning into revenue — and it should be checked every quarter, because the 2025 experience showed how fast a scarcity premium unwinds when the book stops moving. For exposure to the programme rather than to one contractor's site problems, 033 and 034 are the better vehicles.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Order book and quarterly intake</td><td>Company disclosures</td><td>Forward revenue, and the market's basis for the multiple</td></tr>
+    <tr><td>Order book to trailing revenue</td><td>Quarterly</td><td>Conversion speed — the whole issue in 2026</td></tr>
+    <tr><td>EBITDA margin against the 14–17% band</td><td>Quarterly</td><td>Idle-cost leakage during delays</td></tr>
+    <tr><td>Receivable and retention days</td><td>Quarterly</td><td>Public-sector payment behaviour</td></tr>
+    <tr><td>PNGRB pipeline and city gas authorisations</td><td>Regulator announcements</td><td>The forward tender pipeline</td></tr>
+    <tr><td>GAIL and refiner capital expenditure plans</td><td>Quarterly (see 031, 033)</td><td>Who is about to tender</td></tr>
+    <tr><td>Progress on the ASAB package</td><td>Company updates</td><td>Whether international work is repeatable or a one-off</td></tr>
+    <tr><td>Monsoon severity</td><td>Seasonal</td><td>Directly determines the September quarter</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Better ways to own the same theme</h2>
+  <ul>
+    <li><b>Gas transmission &amp; LNG</b> (033): the owners of the trunk network, who earn tariffs on what this industry builds.</li>
+    <li><b>City gas distribution</b> (034): the licensees rolling out the 307 authorised areas.</li>
+    <li><b>Oilfield &amp; drilling services</b> (029): the other contracting play on upstream capital expenditure.</li>
+    <li><b>Oil refining &amp; marketing</b> (031): refinery expansions that create facility work.</li>
+    <li><b>Steel pipes and tubes:</b> the line-pipe makers, who benefit from the same kilometres without taking execution risk.</li>
+    <li><b>Diversified infrastructure contractors:</b> where most of India's pipeline EPC capability actually sits, inside larger listed groups.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>Of the ₹1,454 cr order book, how much is executable today with right-of-way cleared and drawings approved?</li>
+    <li>What caused the 30.5% revenue decline, project by project, and when does each site restart?</li>
+    <li>What proportion of contracts are on free-issue pipe versus contractor-procured material?</li>
+    <li>What is the expected execution schedule and margin profile of the ASAB package, and what currency and payment terms apply?</li>
+    <li>What are receivable and retention days, and how much is outstanding beyond 180 days?</li>
+    <li>What is the bid pipeline, and what is the win rate on it?</li>
+    <li>How many construction spreads are active, and what is the cost of an idle spread per month?</li>
+    <li>What margin is being bid on new domestic work, given competitive intensity?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>An order book growing faster than revenue for several consecutive quarters.</li>
+    <li>Margin falling while revenue falls — idle cost, not mix.</li>
+    <li>A first overseas contract that expands in scope before the first one is finished.</li>
+    <li>Receivables concentrated in one public-sector client.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"This is the way to play India's gas build-out."</td><td>It is one ₹900 cr contractor. The programme is real, but the pipeline owners (033) and city gas licensees (034) capture the annuity; the contractor captures a one-time construction margin with execution risk attached.</td></tr>
+    <tr><td>"A record order book means record revenue is coming."</td><td>Not on its own. The book was ₹1,454 cr while revenue fell 30.5%. Conversion depends on land and clearances, not on the contract.</td></tr>
+    <tr><td>"The international contract transforms the company."</td><td>It is a genuine qualification milestone — a ₹510 cr package for a global prime — but it is a 21-month subcontract, and overseas execution risk is precisely how mid-cap contractors have historically hurt themselves.</td></tr>
+    <tr><td>"EPC margins expand with scale."</td><td>In pipeline work they usually do not: entry barriers are low at small ticket sizes and public tenders are price-competitive. The 14–17% band has been remarkably stable.</td></tr>
+    <tr><td>"The 45% fall in 2025 was an overreaction."</td><td>It was a de-rating of a scarcity premium on slow conversion. Whether it was wrong is answerable only by the execution rate over the next four quarters.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. right of use, pigging" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Construction</h3><dl>
+    <dt>EPC</dt><dd>Engineering, procurement and construction: a contract to design, buy materials for and build a facility, usually at a fixed price.</dd>
+    <dt>Spread</dt><dd>A complete pipeline construction crew with its equipment, working along a section of route. Contractors measure capacity in spreads.</dd>
+    <dt>Stringing</dt><dd>Laying individual pipe lengths end to end along the trench before welding.</dd>
+    <dt>Trenching</dt><dd>Digging the channel the pipe is laid in.</dd>
+    <dt>Lowering-in and backfill</dt><dd>Placing the welded string into the trench and covering it.</dd>
+    <dt>Radiographic testing</dt><dd>X-raying each weld to confirm it is sound; every joint is inspected.</dd>
+    <dt>Hydrostatic testing</dt><dd>Filling the completed line with water at high pressure to prove it does not leak before commissioning.</dd>
+    <dt>Pigging</dt><dd>Running a device through a pipeline to clean it or, when instrumented, to inspect it for corrosion.</dd>
+    <dt>Cathodic protection</dt><dd>An electrical technique that stops buried steel corroding.</dd>
+    <dt>Coating</dt><dd>The protective layer on line pipe; re-coating ageing lines is a recurring maintenance contract, as in Likhitha's Oil India award.</dd>
+    <dt>Horizontal directional drilling (HDD)</dt><dd>Boring beneath a river, road or railway instead of trenching across it.</dd>
+    <dt>Tie-in</dt><dd>Connecting a new section to an existing live network.</dd>
+    <dt>Commissioning</dt><dd>Handing over a tested, filled and operating line to the owner.</dd>
+    <dt>Line pipe</dt><dd>The large-diameter steel pipe used for trunk pipelines.</dd>
+    <dt>Polyethylene mains</dt><dd>Plastic piping used at low pressure in city gas networks.</dd>
+    <dt>CNG station</dt><dd>A compressed natural gas refuelling outlet, built as part of city gas networks (see 034).</dd>
+  </dl>
+  <h3>Contracting and commercial</h3><dl>
+    <dt>Order book</dt><dd>Contracted work not yet executed (see 029).</dd>
+    <dt>Order intake</dt><dd>New contracts won in a period; lumpy in this industry.</dd>
+    <dt>Conversion / execution rate</dt><dd>How quickly the order book becomes revenue — the decisive metric here.</dd>
+    <dt>Free-issue material</dt><dd>Material supplied by the client, which the contractor installs but does not buy. It lowers working capital and headline revenue together.</dd>
+    <dt>Right of use (RoU)</dt><dd>The statutory right to lay and maintain a pipeline across land, acquired with compensation. The commonest cause of delay.</dd>
+    <dt>Retention money</dt><dd>A share of each bill held back until commissioning or the end of a defect liability period.</dd>
+    <dt>Defect liability period</dt><dd>The window after handover during which the contractor must fix faults.</dd>
+    <dt>Mobilisation advance</dt><dd>An upfront payment to move crews and equipment to site, usually recovered from later bills.</dd>
+    <dt>Percentage of completion</dt><dd>The accounting basis on which EPC revenue is recognised as work progresses.</dd>
+    <dt>Prime contractor and subcontractor</dt><dd>The party holding the client contract, and those it engages beneath it. Likhitha's Abu Dhabi work sits under CPECC as prime.</dd>
+    <dt>Bid pipeline</dt><dd>Tenders submitted and awaiting award.</dd>
+    <dt>L1 bidder</dt><dd>The lowest bidder in a public tender, usually the winner — which is why margins stay compressed.</dd>
+    <dt>Escalation clause</dt><dd>A contract provision adjusting price for input-cost inflation; its absence turns cost rises into losses.</dd>
+    <dt>Defect-free kilometre rate</dt><dd>Kilometres completed per day per spread, the operational productivity measure.</dd>
+  </dl>
+  <h3>Sector and policy</h3><dl>
+    <dt>PNGRB</dt><dd>The Petroleum and Natural Gas Regulatory Board, which authorises pipelines and city gas areas.</dd>
+    <dt>Geographical area (GA)</dt><dd>A city gas licence territory; 307 have been authorised.</dd>
+    <dt>National Gas Grid</dt><dd>The programme to connect the country with a network heading towards 35,000 km.</dd>
+    <dt>Infrastructure exclusivity</dt><dd>The protected period during which a city gas licensee alone may build network in its area; PNGRB is opening networks to third-party capital afterwards.</dd>
+    <dt>Strategic petroleum reserve</dt><dd>Emergency crude storage; India's first private reserve, of 2.5 million tonnes, was awarded to Megha Engineering.</dd>
+    <dt>PM Gati Shakti</dt><dd>The coordinated infrastructure planning platform intended to speed clearances.</dd>
+    <dt>PNG and the National PNG Drive</dt><dd>Piped natural gas to homes, and the campaign to accelerate connections — 367,000 gasified since March, with about 400,000 more registered.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Operating leverage</dt><dd>See 019.</dd>
+    <dt>Customer concentration</dt><dd>See 029.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why did the share rise 16% in a year when profit fell 47%?</summary><p>The market is paying for the ₹1,454 cr order book and the ₹510 cr Abu Dhabi award, treating the weak quarter as a timing problem rather than a demand problem.</p></details>
+  <details class="q"><summary>2. What is the commonest cause of delay in Indian pipeline construction?</summary><p>Right of use — acquiring the corridor across land. It gates everything after the survey.</p></details>
+  <details class="q"><summary>3. Why does free-issue material matter?</summary><p>When the client supplies the pipe, the contractor's working capital and price risk fall sharply — and so does headline revenue per kilometre.</p></details>
+  <details class="q"><summary>4. How large is the programme behind this industry?</summary><p>A national gas grid heading towards 35,000 km, four trunk pipelines of about 2,500 km in progress, and 307 authorised city gas geographical areas.</p></details>
+  <details class="q"><summary>5. What was the significance of the June 2026 order?</summary><p>₹510 cr from CPECC Abu Dhabi for Pipeline Package-1 (ASAB), executable in 21 months — the first large international contract, won as subcontractor to a global prime.</p></details>
+  <details class="q"><summary>6. Why are the September and June quarters structurally weak?</summary><p>The monsoon halts trenching, welding and lowering across most of the country.</p></details>
+  <details class="q"><summary>7. What is the single metric that resolves the investment question?</summary><p>The conversion rate: order book turning into revenue. The book was full through 2025 and the stock still fell 45%.</p></details>
+  <details class="q"><summary>8. Why are EPC margins in this business stuck in a band?</summary><p>Low entry barriers at small ticket sizes and lowest-bidder public tendering keep the 14–17% EBITDA range stable regardless of scale.</p></details>
+  <details class="q"><summary>9. If the thesis is India's gas build-out, what are the better vehicles?</summary><p>The pipeline owners in 033 and the city gas licensees in 034, who earn tariffs and margins for decades, plus the line-pipe makers who take no execution risk.</p></details>
+  <details class="q"><summary>10. What does HDD do, and why does it matter commercially?</summary><p>Horizontal directional drilling bores under rivers, roads and railways instead of trenching across them, turning a multi-month crossing into a matter of weeks.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes for NSE:LIKHITHA versus NSE:NIFTY, from its October 2020 listing to 18 September 2026. One company; the statistics describe it, not an industry.</li>
+    <li>Company: <a href="https://scanx.trade/stock-market-news/earnings/likhitha-infrastructure-reports-q1-results-revenue-dips-margins-compress-amid-robust-order-book/17155814">Q1 FY27 revenue, profit, margin and the ₹1,454 cr order book</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Likhitha-Infrastructure-FY26-Profit-Declines-to-Rs-3855-Crore-Secures-New-Order/6aae7156f2017017ae6e03cd">FY26 profit</a>; <a href="https://www.screener.in/company/LIKHITHA/consolidated/">financial history</a>; <a href="https://www.likhitha.co.in/stock_exchange.html">company disclosures</a>.</li>
+    <li>Order flow: <a href="https://www.business-standard.com/markets/capital-market-news/likhitha-infrastructure-secures-rs-510-crore-pipeline-contract-126062700575_1.html">the ₹510 cr CPECC Abu Dhabi award</a>; <a href="https://www.sahi.com/news/likhitha-infrastructure-secures-510-crore-international-pipeline-project-expanding-middle-east-footprint-4961-PE1_COR">its scope and 21-month schedule</a>; <a href="https://newsonprojects.com/news/likhitha-infrastructure-expands-order-pipeline-with-12104-crore-contract">the ₹121.04 cr Oil India rehabilitation order</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Likhitha-Infra-Wins-indian-rupee72Cr-HPCL-Pipeline-Contract/69fb0c03d27867b982d3720a">the ₹72.15 cr HPCL order</a>.</li>
+    <li>Industry and policy: <a href="https://www.industrialinfo.com/iirenergy/industry-news/article/connecting-the-country-indias-push-to-expand-natural-gas-pipelines--358903">the 35,000 km target and the four grassroot pipelines</a>; <a href="https://pngrb.gov.in/data-bank/20250331_NGPL.pdf">PNGRB's pipeline network data</a>; <a href="https://pngrb.gov.in/pdf/press-note/20250407_NG_Projections2030_40.pdf">PNGRB's gas demand projections</a>; <a href="https://www.whalesbook.com/news/English/energy/PNGRB-Opens-City-Gas-Networks-to-Third-Party-Investment/6a6a68f70d19e3b4a57996c2">third-party access to city gas networks</a>; <a href="https://www.outlookbusiness.com/corporate/megha-engineering-to-build-indias-first-private-strategic-oil-reserve-all-about-the-project">the first private strategic petroleum reserve</a>; <a href="https://www.lnthydrocarbon.com/products-services/onshore-epc/cross-country-pipeline-and-terminals/">L&amp;T's cross-country pipeline capability</a>; <a href="https://pngrb.gov.in/">the regulator itself</a>, for current authorisations and tariff orders; <a href="https://www.business-standard.com/markets/capital-market-news/likhitha-infrastructure-hits-the-roof-after-securing-rs-510-crore-pipeline-contract-126062900296_1.html">the market reaction to the Abu Dhabi award</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2021, "v": 57.7}, {"y": 2022, "v": -17.9}, {"y": 2023, "v": 4.8}, {"y": 2024, "v": -13.0}, {"y": 2025, "v": -15.6}, {"y": 2026, "v": 8.7}], "AprJul": [{"y": 2021, "v": 16.6}, {"y": 2022, "v": -0.1}, {"y": 2023, "v": 10.1}, {"y": 2024, "v": 78.7}, {"y": 2025, "v": -2.1}, {"y": 2026, "v": 31.7}], "AugSep": [{"y": 2021, "v": -16.5}, {"y": 2022, "v": 32.9}, {"y": 2023, "v": 16.3}, {"y": 2024, "v": -16.5}, {"y": 2025, "v": -17.0}], "OctDec": [{"y": 2021, "v": -6.9}, {"y": 2022, "v": 14.2}, {"y": 2023, "v": -27.8}, {"y": 2024, "v": -1.2}, {"y": 2025, "v": -22.7}], "SepNov": [{"y": 2021, "v": -14.3}, {"y": 2022, "v": 34.5}, {"y": 2023, "v": -11.0}, {"y": 2024, "v": -13.8}, {"y": 2025, "v": -29.0}], "JanMar": [{"y": 2021, "v": 88.1}, {"y": 2022, "v": -16.7}, {"y": 2023, "v": 8.3}, {"y": 2024, "v": -19.7}, {"y": 2025, "v": -22.5}, {"y": 2026, "v": -3.4}]}, "my": {"1": {"2021": 19.2, "2022": 1.4, "2023": 3.5, "2024": -7.4, "2025": -8.3, "2026": -12.3}, "2": {"2021": 36.0, "2022": -10.6, "2023": 2.0, "2024": 0.4, "2025": -15.0, "2026": -6.8}, "3": {"2021": 15.0, "2022": -8.0, "2023": 2.8, "2024": -13.2, "2025": 0.4, "2026": 15.9}, "4": {"2021": 17.7, "2022": 6.9, "2023": 17.2, "2024": 48.8, "2025": -8.6, "2026": 28.8}, "5": {"2021": -1.3, "2022": -3.5, "2023": -8.4, "2024": -2.6, "2025": 10.5, "2026": -10.0}, "6": {"2021": 2.4, "2022": 0.9, "2023": -6.9, "2024": 27.5, "2025": -2.6, "2026": 39.9}, "7": {"2021": -3.1, "2022": -4.5, "2023": 9.4, "2024": -6.4, "2025": -0.6, "2026": -19.1}, "8": {"2021": -13.2, "2022": 14.6, "2023": 6.9, "2024": -2.2, "2025": -9.8, "2026": -4.8}, "9": {"2021": -3.0, "2022": 16.0, "2023": 8.9, "2024": -14.4, "2025": -8.0}, "10": {"2021": -5.6, "2022": -4.5, "2023": -8.3, "2024": 0.8, "2025": -2.2}, "11": {"2020": -8.1, "2021": -6.4, "2022": 19.6, "2023": -10.6, "2024": -1.2, "2025": -19.4}, "12": {"2020": -0.6, "2021": 5.7, "2022": -0.3, "2023": -9.7, "2024": -1.0, "2025": -0.9}}, "basket": ["Likhitha Infrastructure Ltd"], "nbasket": 1, "start": "Nov 2020", "monthly": [{"m": 1, "abs": -2.1, "rel": -0.7, "hit": 3, "n": 6}, {"m": 2, "abs": 0.4, "rel": 1.0, "hit": 3, "n": 6}, {"m": 3, "abs": 2.5, "rel": 2.2, "hit": 4, "n": 6}, {"m": 4, "abs": 20.7, "rel": 18.4, "hit": 5, "n": 6}, {"m": 5, "abs": -1.6, "rel": -2.6, "hit": 1, "n": 6}, {"m": 6, "abs": 12.0, "rel": 10.2, "hit": 4, "n": 6}, {"m": 7, "abs": -1.5, "rel": -4.0, "hit": 1, "n": 6}, {"m": 8, "abs": -0.1, "rel": -1.4, "hit": 2, "n": 6}, {"m": 9, "abs": 0.7, "rel": -0.1, "hit": 2, "n": 5}, {"m": 10, "abs": -3.7, "rel": -4.0, "hit": 1, "n": 5}, {"m": 11, "abs": -1.2, "rel": -4.3, "hit": 1, "n": 6}, {"m": 12, "abs": 0.9, "rel": -1.1, "hit": 1, "n": 6}], "cy": [{"y": 2021, "b": 109.0, "n": 24.1, "rel": 84.8, "partial": false}, {"y": 2022, "b": 31.0, "n": 4.3, "rel": 26.7, "partial": false}, {"y": 2023, "b": 23.7, "n": 20.0, "rel": 3.7, "partial": false}, {"y": 2024, "b": 24.3, "n": 8.8, "rel": 15.5, "partial": false}, {"y": 2025, "b": -45.4, "n": 10.5, "rel": -56.0, "partial": false}, {"y": 2026, "b": 15.5, "n": -10.7, "rel": 26.2, "partial": true}], "dd": [{"co": "Likhitha Infrastructure", "peak": "Jun 2024", "fp": -54, "y1": -11}], "win": {"FebMar": {"mean": 4.1, "median": -4.1, "hit": 3, "n": 6}, "AprJul": {"mean": 22.5, "median": 13.3, "hit": 4, "n": 6}, "AugSep": {"mean": -0.2, "median": -16.5, "hit": 2, "n": 5}, "OctDec": {"mean": -8.9, "median": -6.9, "hit": 1, "n": 5}, "SepNov": {"mean": -6.7, "median": -13.8, "hit": 1, "n": 5}, "JanMar": {"mean": 5.7, "median": -10.1, "hit": 2, "n": 6}}, "ytd": {"b": 15.5, "n": -10.7}, "notes": {"2021": "+109% against the Nifty's +24%. The first full year after the October 2020 listing: a small, profitable, debt-light pipeline contractor re-rated hard in a market that was paying up for infrastructure order books.", "2022": "+31% versus +4%. Order wins kept coming \u2014 \u20b9457 cr in a single quarter \u2014 and the city gas build-out was accelerating across newly authorised geographical areas.", "2023": "+24% versus +20%. In line with the market; execution and margins were steady rather than exciting.", "2024": "+24% versus +9%, with the share price peaking in June. The national gas grid story was at its most fashionable, and a single-company section carried a scarcity premium.", "2025": "\u221245% versus +10%, the year the premium disappeared. Execution slowed and the market stopped paying for an order book that was not converting fast enough into revenue.", "2026": "+16% against a Nifty \u221211%, despite Q1 FY27 revenue falling 30.5% and profit 47%. The re-rating is about the order book \u2014 \u20b91,454 cr at 30 June \u2014 and the \u20b9510 cr Abu Dhabi pipeline contract won in June, the company's first large international award."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

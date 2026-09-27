@@ -1,0 +1,639 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fertilizers Primer</title>
+<meta name="description" content="Industry 14 of 278: urea, DAP, NPK, SSP and potash; how India&#x27;s subsidy rulebook decides profits; import dependence on gas, rock, sulphur and potash; the 2026 Hormuz shock. 23 companies (each described) and a year-by-year record against the monsoon from 2012.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Fertilizers · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical raw materials</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 14 of 278 · Chemicals family</div>
+  <h1>Fertilizers</h1>
+  <p class="lede">Food for crops: nitrogen, phosphorus and potassium. In India it's also one of the most regulated industries there is. The government fixes what farmers pay, pays the difference as subsidy, and so decides who earns what.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 23 after the audit (3 moved in, none out)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Salt</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹41,534 cr</div><div class="l">Subsidy for phosphatic and potassic fertilisers for kharif 2026 alone (April–September), up ~11–12%</div></div>
+    <div class="stat"><div class="n">₹1,350</div><div class="l">DAP retail price per 50 kg bag, held steady while import prices rose from ~$580 to ~$770/t</div></div>
+    <div class="stat"><div class="n">$400 → $850</div><div class="l">Global urea price swing in April 2026 after the Hormuz closure (back to ~$453 by June)</div></div>
+    <div class="stat"><div class="n">~1/3</div><div class="l">Share of world seaborne fertiliser trade put at risk by the Strait of Hormuz closure</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Feeding the plants that feed us</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Plants need three main foods: nitrogen (to grow green leaves), phosphorus (for strong roots and seeds) and potassium (to stay healthy). Soil runs out of them after many harvests, so farmers add fertiliser. Nitrogen fertiliser (urea) is made from natural gas and air. Phosphorus fertiliser (DAP) is made from a rock dug up in Morocco and Jordan, plus sulphur and ammonia. Potassium (potash) is a salt mined in Canada and Russia. India has little gas, rock or potash, so it imports a lot. To keep food cheap, the government tells companies what price to charge farmers and pays them the difference. So a fertiliser company's profit depends partly on the government's rulebook.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian fertilisers work under two regimes.</p>
+    <ul>
+      <li><b>Urea:</b> the farm price is fixed (₹242 per 45 kg bag) and producers are paid cost-plus under the New Urea Policy, with gas pooled at a common price. Profits come from beating energy norms and producing extra, so they are steady but capped.</li>
+      <li><b>Phosphatic and potassic fertilisers (DAP, NPK, SSP, MOP):</b> these get a fixed nutrient-based subsidy per kg, but retail prices are informally held down (DAP at ₹1,350 per bag). Margins get squeezed when global prices spike.</li>
+    </ul>
+    <p>India imports most of its gas, rock phosphate, phosphoric acid, sulphur and ammonia, and all its potash, much of it through the Gulf. The 2026 Hormuz closure shut some Indian urea plants for lack of LNG, sent global urea above $850/t and DAP to ~$770/t, and forced a bigger subsidy. Q1 FY27 showed the split. Integrated makers and chemical-heavy companies earned more (Paradeep +24%, Deepak +101%, GNFC 4x), while import-heavy Coromandel's profit fell 25%. The winners are integration, manufacturing rather than trading, and unsubsidised businesses (chemicals, crop protection, specialty nutrients).</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>The fertiliser menu</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>Nutrients (N-P-K)</th><th>Made from</th><th>Pricing regime</th></tr></thead><tbody>
+    <tr><td>Urea</td><td>46-0-0</td><td>Ammonia + CO₂ (ammonia from natural gas)</td><td>Fixed MRP; cost-plus subsidy</td></tr>
+    <tr><td>DAP (diammonium phosphate)</td><td>18-46-0</td><td>Phosphoric acid (rock + sulphuric acid) + ammonia</td><td>NBS; MRP informally capped (₹1,350/bag)</td></tr>
+    <tr><td>NPK complexes</td><td>e.g. 10-26-26, 20-20-0-13</td><td>Phosphoric acid, ammonia, potash</td><td>NBS</td></tr>
+    <tr><td>SSP (single super phosphate)</td><td>0-16-0 + sulphur</td><td>Rock phosphate + sulphuric acid; simple plants</td><td>NBS; small regional makers</td></tr>
+    <tr><td>MOP (muriate of potash)</td><td>0-0-60</td><td>Mined potash, 100% imported</td><td>NBS</td></tr>
+    <tr><td>Ammonium sulphate, CAN, ammonium nitrate</td><td>Various</td><td>Ammonia plus acids</td><td>Partly subsidised; industrial grades free</td></tr>
+    <tr><td>Water-soluble, micronutrients, bio-stimulants</td><td>Specialty</td><td>Various</td><td>Unsubsidised, higher margin</td></tr>
+    <tr><td>Nano urea / nano DAP</td><td>Liquid</td><td>IFFCO-led technology</td><td>Promoted by government; efficacy debated</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Fertiliser is a multivitamin for soil. Nitrogen is the protein for growth, phosphorus is the calcium for roots and grain, and potassium is the immune booster. Indian farmers tend to overdose on the cheapest vitamin (urea, because its price is fixed and low) and underuse the others. That is why the government keeps pushing "balanced fertilisation".</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The white granules a Punjab wheat farmer broadcasts in December are urea. The grey-black granules drilled with soybean seed in Madhya Pradesh in June are DAP. The powder a small farmer in Rajasthan buys cheaply is SSP from a regional maker like Rama or Khaitan. The "Gromor" sign in an Andhra village is Coromandel's retail store.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From gas fields and phosphate mines to a farmer's field</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Raw materials</h4><div class="an">The pantry</div>Natural gas/LNG, rock phosphate, phosphoric acid, sulphur, ammonia, potash.<div class="who">Qatar, UAE, US (LNG); Morocco's OCP, Jordan, Togo (rock, acid); Gulf (sulphur, ammonia); Canada, Russia, Belarus (potash)</div><div class="m">Largely imported; the swing factor</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Intermediates</h4><div class="an">The dough</div>Ammonia (from gas), sulphuric acid (from sulphur), phosphoric acid (from rock).<div class="who">Integrated plants: Coromandel, Paradeep, FACT, GSFC, Deepak</div><div class="m">Integration decides cost</div></div>
+    <div class="stage"><div class="no">03</div><h4>Fertiliser plants</h4><div class="an">The bakery</div>Urea, DAP/NPK granulation, SSP.<div class="who">IFFCO, NFL, RCF, Chambal, Coromandel, Paradeep, the Ostwal group, SSP makers</div><div class="m">Returns set by policy</div></div>
+    <div class="stage"><div class="no">04</div><h4>Imports and trading</h4><div class="an">Bought-in bread</div>Imported urea (via state agencies), DAP and MOP resold by companies.<div class="who">IPL, NFL, Chambal, Coromandel, Paradeep</div><div class="m">Thin, sometimes negative margins</div></div>
+    <div class="stage"><div class="no">05</div><h4>Distribution</h4><div class="an">The shops</div>Dealers, co-operatives and company retail (Coromandel's Gromor stores); point-of-sale DBT machines.<div class="who">2.5 lakh+ retailers; co-operatives</div><div class="m">Subsidy paid after sale</div></div>
+    <div class="stage"><div class="no">06</div><h4>Farmers</h4><div class="an">The diners</div>Kharif (monsoon) and rabi (winter) crops.<div class="who">About 14 crore farm holdings</div><div class="m">Monsoon-driven</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Raw materials:</b> gas comes by ship as a super-cold liquid (LNG); phosphate rock is dug from mines in Morocco; sulphur comes from oil refineries in the Gulf; potash is mined from old dried-up seas in Canada.</li>
+    <li><b>Intermediates:</b> gas plus air, squeezed and heated, makes ammonia. Sulphur burned makes sulphuric acid (see 004). That acid poured on crushed rock makes phosphoric acid.</li>
+    <li><b>Fertiliser plants:</b> ammonia plus CO₂ makes urea; phosphoric acid plus ammonia makes DAP. The mix is rolled into granules and bagged.</li>
+    <li><b>Imports:</b> when Indian plants can't make enough, companies buy ready-made DAP or urea abroad and sell it here.</li>
+    <li><b>Distribution:</b> the farmer buys at a shop with an Aadhaar-linked machine; only then does the company earn its subsidy from the government.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>In this industry the "price" is set in Delhi, not in the market. Earnings quality depends on three things. How integrated are you (rock → acid → DAP)? How much of your profit comes from unsubsidised products (chemicals, crop protection, specialty nutrients)? And how fast does the government pay (subsidy receivables drive working capital and debt)?</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 23 companies, by business</h2>
+  <h3>A. Phosphatic/NPK leaders</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Coromandel International (~₹57,000 cr)</td><td>Murugappa group. India's largest private phosphatic player, plus crop protection (now including NACL), specialty nutrients and ~750+ Gromor retail stores.</td><td>Revenue ₹8,165 cr (+16%) but profit ₹381 cr (−25%): nutrient EBIT −24% and imported volumes −44% as import costs spiked. 2026 −12%.</td></tr>
+    <tr><td>Paradeep Phosphates (~₹15,300 cr)</td><td>Adventz group with Morocco's OCP. DAP/NPK plants at Paradeep, Goa (bought from Zuari in 2022) and Mangalore (Mangalore Chemicals merged in).</td><td>Revenue ₹6,124 cr (+36%), EBITDA ₹764 cr (+24%), profit ₹393 cr (+24%). Approved a ₹250 cr aluminium fluoride plant, using by-product fluorine (see 004). 2026 −6%.</td></tr>
+  </tbody></table></div>
+  <h3>B. Urea producers</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Chambal Fertilisers (~₹16,400 cr)</td><td>K.K. Birla group. Gas-based urea at Gadepan (Rajasthan), plus DAP trading and crop protection.</td><td>Profit ₹524 cr; EBITDA +12% on better margins despite lower urea volumes (gas curtailment). 2026 −14%; −43% from its May 2025 peak.</td></tr>
+    <tr><td>National Fertilizers (~₹3,250 cr)</td><td>PSU; urea at Nangal, Bathinda, Panipat, Vijaipur; trading.</td><td>Profit ₹113 cr (vs a ₹39 cr loss); revenue +27%; EBITDA margin 5.9%. 2026 −27%.</td></tr>
+    <tr><td>RCF (~₹6,000 cr)</td><td>PSU; urea and complex fertilisers at Trombay and Thal, plus industrial chemicals.</td><td>Profit ₹74 cr (+35%), revenue ₹3,586 cr (+6%). 2026 −25%.</td></tr>
+    <tr><td>SPIC (~₹1,360 cr)</td><td>Urea at Tuticorin (AM International group).</td><td>2026 −18%.</td></tr>
+    <tr><td>Madras Fertilizers (~₹970 cr)</td><td>PSU; urea and NPK at Chennai.</td><td>2026 −23%.</td></tr>
+  </tbody></table></div>
+  <h3>C. Fertilisers plus chemicals</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>FACT (~₹48,500 cr)</td><td>Kerala PSU; complex fertilisers (Factamfos), ammonium sulphate, caprolactam.</td><td>Revenue ₹1,253 cr, but a loss of ₹62 cr (vs a ₹4 cr profit). Its market cap still exceeds most private peers: a PSU re-rating legacy. 2026 −16%.</td></tr>
+    <tr><td>GSFC (~₹5,950 cr)</td><td>Gujarat PSU; DAP/NPK plus caprolactam, nylon-6 and melamine.</td><td>Revenue ₹3,583 cr (+64%), fertiliser volumes +17% (record sales), profit ₹159 cr (+14%); industrial products EBIT 4x to ₹116 cr; EBITDA margin 6.8%. 2026 −17%.</td></tr>
+    <tr><td>GNFC (~₹7,900 cr)</td><td>Gujarat; urea plus chemicals (TDI, acetic acid, formic acid, ammonium nitrate, aniline). Chemicals drive profits.</td><td>Standalone profit ₹310 cr (vs ₹78 cr), revenue ₹2,238 cr (+40%); fertiliser segment profit ₹85 cr. An MoU with GMDC on coal gasification. 2026 +19%.</td></tr>
+    <tr><td>Deepak Fertilisers (~₹16,600 cr)</td><td>Pune; ammonia at Taloja, technical ammonium nitrate (TAN) for mining explosives, nitric acid, IPA; fertilisers are now the smaller part.</td><td>Revenue ₹3,256 cr (+22%), EBITDA ₹845 cr (+65%), profit ₹490 cr (+101%). Mining chemicals ₹904 cr (+36%). The Gopalpur TAN and Dahej nitric acid projects are 96% and 93% complete. 2026 +4%.</td></tr>
+  </tbody></table></div>
+  <h3>D. The Ostwal group: SSP to DAP/NPK</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Madhya Bharat Agro Products (~₹7,000 cr)</td><td>SSP maker adding sulphuric acid, DAP and NPK capacity. Moved in from Agrochemicals.</td><td>Revenue ₹416 cr (+2%), profit ₹33 cr (+17%); utilisation 79% (SSP) and 66% (NPK/DAP). Next expansion phases in October 2026 and October 2027; expects turnover to rise by more than 50%. 2026 +89%.</td></tr>
+    <tr><td>Krishana Phoschem (~₹5,560 cr)</td><td>SSP, DAP, NPK in Madhya Pradesh; the group's sister company.</td><td>Revenue ₹532 cr (+35%), EBITDA ₹89 cr (+36%), profit ₹47 cr (+54%); SSP utilisation 121%, NPK/DAP 43%; guides 30–35% revenue growth. 2026 +69%.</td></tr>
+  </tbody></table></div>
+  <h3>E. SSP makers and specialty nutrients</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Status</th></tr></thead><tbody>
+    <tr><td>Aries Agro (~₹630 cr)</td><td>Micronutrients, chelates and water-soluble fertilisers (unsubsidised).</td><td>2026 +44%.</td></tr>
+    <tr><td>Khaitan Chemicals (~₹490 cr)</td><td>SSP and sulphuric acid; moved in from Agrochemicals.</td><td>2026 −36%; −67% from its 2022 peak.</td></tr>
+    <tr><td>Rama Phosphates (~₹410 cr)</td><td>SSP plus soya oil and meal.</td><td>2026 −25%.</td></tr>
+    <tr><td>Zuari Agro Chemicals (~₹880 cr)</td><td>Adventz; its main fertiliser assets passed to Paradeep; now a much smaller holding and trading company.</td><td>2026 −33%.</td></tr>
+    <tr><td>Basant Agro Tech (~₹100 cr), Teesta Agro (~₹65 cr), Agro Phos (~₹47 cr), Shiva Global Agro (~₹38 cr; moved in from Commodity Trading), Bohra Industries (~₹19 cr), Phosphate Co.</td><td>Regional SSP and mixed-fertiliser makers.</td><td>2026: Basant −2%, Teesta +1%, Agro Phos −45%, Shiva +12%, Bohra −24%, Phosphate Co. −7%.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Classification flags for the next audit</span><p><b>Deepak Fertilisers</b> and <b>GNFC</b> now earn most of their profit from chemicals (ammonium nitrate, TDI, acids), so they are chemical companies with fertiliser plants. <b>FACT</b>'s valuation reflects PSU sentiment more than its losses. <b>Zuari</b> is largely a holding company now. Keep them here for continuity, but tag them.</p></div>
+  <h3>Big unlisted players</h3>
+  <ul>
+    <li><b>IFFCO and KRIBHCO:</b> co-operatives. IFFCO is India's largest fertiliser maker and the force behind nano urea.</li>
+    <li><b>HURL:</b> new state-backed urea plants at Gorakhpur, Sindri and Barauni.</li>
+    <li><b>Indian Potash Ltd:</b> the main importer.</li>
+    <li><b>Yara India</b>, and <b>Matix</b> (a private urea plant in West Bengal).</li>
+  </ul>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Two rulebooks</h2>
+  <div class="two">
+    <div>
+      <h3>Urea: cost-plus</h3>
+      <ul>
+        <li>The government reimburses a normative cost (energy per tonne at a set norm, plus fixed costs) minus the fixed farm price.</li>
+        <li>Gas is "pooled": all plants pay the same average gas price, so no one wins or loses on location.</li>
+        <li>Profit comes from using less energy than the norm, producing above reassessed capacity, and recovering fixed costs. ROE is steady but capped (roughly 12–18% for efficient plants).</li>
+        <li>Risk: gas supply cuts (2026), delayed payments, norm tightening.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>DAP/NPK/SSP/MOP: nutrient-based subsidy</h3>
+      <ul>
+        <li>A fixed subsidy per kg of N, P, K and S, set each season (kharif, rabi). For rabi 2025–26, P was ₹47.96/kg and the DAP subsidy ₹29,805/t.</li>
+        <li>MRPs are "decontrolled" in theory but guided in practice (DAP ₹1,350 per bag), so companies absorb global price rises until the next revision or a special package.</li>
+        <li>Integrated manufacturers do better than traders importing finished DAP (Paradeep vs Coromandel's import business in Q1 FY27).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Urea is like a government canteen contractor paid cost plus a fixed fee: safe, but you only earn more by cooking more efficiently. DAP is like a shop told to sell a product at a fixed price while its supplier's price changes every month, with a government top-up that's revised only twice a year.</p></div>
+  <h3>Working capital: the hidden driver</h3>
+  <p>Subsidy is paid after the fertiliser is sold to the farmer, through point-of-sale machines. When budgets run short, arrears pile up and companies borrow. In 2013 and 2018–19, arrears were a major drag on earnings and stocks. Budget allocations, supplementary grants and "special banking arrangements" matter as much to earnings as plant efficiency.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical raw materials">
+  <p class="eyebrow">6 · Critical raw materials</p>
+  <h2>India's import dependence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Natural gas / LNG (for ammonia and urea)</td><td>Qatar, UAE, US; domestic gas</td><td>All urea makers (pooled price), Deepak, GNFC</td><td>The Hormuz closure cut LNG flows and some urea plants shut in March; the government later raised gas supply to urea plants by 23%</td></tr>
+    <tr><td>Rock phosphate and phosphoric acid</td><td>Morocco (OCP), Jordan, Togo, Senegal; ~90% imported</td><td>Paradeep, Coromandel, GSFC, FACT, SSP makers</td><td>Costs up with freight and sulphur</td></tr>
+    <tr><td>Sulphur (for sulphuric acid)</td><td>Gulf refineries (see 004)</td><td>DAP, NPK and SSP makers</td><td>Record prices in 2025–26</td></tr>
+    <tr><td>Ammonia</td><td>Gulf, Indonesia; domestic</td><td>DAP/NPK makers without ammonia plants</td><td>Disrupted by Hormuz</td></tr>
+    <tr><td>Potash (MOP)</td><td>Canada, Russia, Belarus, Israel, Jordan; 100% imported</td><td>NPK makers; IPL</td><td>Less exposed to the Gulf</td></tr>
+    <tr><td>Finished DAP and urea imports</td><td>Saudi Arabia (Ma'aden), China, Morocco, Russia, Oman, Qatar</td><td>Traders (Coromandel, Chambal, IPL)</td><td>Ma'aden rerouted DAP through Oman's Duqm port; China restricts exports; cargoes routed round the Cape</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The Q1 FY27 split is the clearest lesson in the library. Paradeep (integrated, Moroccan partner) grew profit 24%, while Coromandel's imported volumes fell 44% and profit fell 25%. When imports get expensive, the company that makes its own acid and ammonia wins, and the trader absorbs the gap between import cost and the capped retail price.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Two crop seasons</h2>
+  <ul>
+    <li><b>Kharif</b> (June–October sowing; monsoon crops such as rice, cotton, soybean): fertiliser offtake peaks June–August, with stocking in April–June.</li>
+    <li><b>Rabi</b> (October–December sowing; wheat, mustard, pulses): the biggest DAP season is October–November, and urea peaks December–January.</li>
+    <li><b>NBS rates</b> are announced before each season, around March–April and September–October.</li>
+    <li><b>The budget</b> (February) sets the subsidy allocation; supplementary grants follow mid-year if prices rise.</li>
+    <li><b>Monsoon forecasts</b> (April and June from IMD) set kharif expectations. Reservoir levels in October set rabi's.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 17 names (Coromandel International Limited, Fertilizers &amp; Chemicals Travancore Ltd., Deepak Fertilisers and Petrochemicals Corporation Ltd., Chambal Fertilisers &amp; Chemicals Ltd., Paradeep Phosphates Ltd., Gujarat Narmada Valley Fertilizers &amp; Chemicals Ltd., Madhya Bharat Agro Products Ltd., Rashtriya Chemicals &amp; Fertilizers Ltd., Gujarat State Fertilizers &amp; Chemicals Limited, Krishana Phoschem Ltd., National Fertilizers Ltd., Southern Petrochemical Industries Corporation Limited, Madras Fertilizers Ltd, Zuari Agro Chemicals Ltd., Aries Agro Ltd., Khaitan Chemicals &amp; Fertilizers Ltd., Rama Phosphates Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.8 pts (beat in 13 of 15 years); Dec +3.2 pts (beat in 12 of 15 years); Oct +2.4 pts (beat in 8 of 15 years).</li><li><b>Weakest months:</b> Feb -4.5 pts (beat in 4 of 15 years); Mar -1.3 pts (beat in 5 of 15 years); Aug -1.2 pts (beat in 8 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -8.0 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +7.1 pts); Aug–Sep beat the Nifty in 7 of 14 years (median -0.1 pts); Oct–Dec beat the Nifty in 9 of 14 years (median +6.2 pts); Sep–Nov beat the Nifty in 7 of 14 years (median -0.0 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -8.6 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.8 points.</p><p><b>Reading it:</b> April is the standout (13 of 15 years) and December is reliable too (12 of 15), while February–March beat the Nifty in only 3 of 15 years. The October–December window (rabi sowing, subsidy releases, Q3 results) beat the Nifty in 9 of 14 years with a median of +6 points. About 3 points of April is the general small-cap effect. Many members are state-owned, so their stocks also move with PSU re-ratings (2017, 2021–23) rather than fertiliser fundamentals.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April misses: 2019 (−4.7) and 2013 (−0.8).</b> Both were subsidy-arrears years. The best Aprils were 2016 (+16.6, a monsoon recovery forecast), 2026 (+14.8, subsidy increase after the Hormuz shock) and 2022 (+12.6, the Ukraine price spike).</li>
+    <li><b>April–July failures: 2012 (−9.5), 2013 (−22.2), 2018 (−21.4), 2019 (−17.0), 2022 (−0.1).</b> Rupee crashes (2013, 2018), arrears (2019) and a weak 2012 monsoon start. The biggest runs were 2021 (+59.1) and 2025 (+45.3).</li>
+    <li><b>February–March</b> beat the Nifty only in 2022 (+19.9, the war), 2021 (+8.3) and 2017. The worst was 2024 (−22.5).</li>
+    <li><b>October–December misses: 2012 (−7.7), 2019 (−5.6), 2025 (−8.8).</b> The best were 2017 (+27.6) and 2015 (+20.8).</li>
+    <li><b>December</b> beat the Nifty in 12 of 15 years, in line with rabi demand and subsidy releases.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>April and October–December are the favourable windows; February–March is poor. The annual result is set by policy (subsidy rates and payments), the rupee and gas, and by PSU sentiment for half the basket. In 2026 the median stock is down 16% even though most companies grew profit.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Monsoon:</b> a good monsoon lifts volumes and fills reservoirs for rabi. 2026's forecast was cut to 90% of LPA (El Niño), and June sales dipped slightly (urea −2.6%, DAP −1.2%).</li>
+    <li><b>Global prices vs subsidy rates:</b> when import prices rise faster than NBS rates, phosphatic margins shrink.</li>
+    <li><b>Gas and LNG supply:</b> decides urea output; the 2026 shock forced shutdowns.</li>
+    <li><b>Subsidy budget and payments:</b> arrears drive debt and interest.</li>
+    <li><b>The rupee:</b> most inputs are dollar-priced; a weaker rupee (~₹96/$) raises costs until subsidies adjust.</li>
+    <li><b>Policy changes:</b> urea energy norms, NBS revisions, nano-urea promotion, the balanced-fertilisation push, 100% neem coating (2015), DBT (national from 2018).</li>
+    <li><b>Non-fertiliser businesses:</b> chemicals (GNFC, GSFC, Deepak, FACT), crop protection (Coromandel, Chambal), ammonium nitrate for mining (Deepak).</li>
+    <li><b>PSU sentiment:</b> about half the basket is state-owned, and PSU re-ratings (2017, 2021–23) and de-ratings (2024–26) swamp fundamentals.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">Monsoon % of LPA</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of up to 17 names with ₹300 cr+ market cap (13 in 2012, 17 by 2023; monthly returns capped at ±50%), price only; 2026 is to 18 September. Monsoon: IMD June–September all-India rainfall as a % of the long-period average (the same series as 001); 2026 is IMD's forecast. Named stock moves are that stock's calendar-year return.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a fertiliser cycle</h3>
+  <ol>
+    <li><b>Global prices spike</b> (2021–22, 2026): import costs jump, and margins get squeezed until the government raises subsidy.</li>
+    <li><b>The government raises subsidy:</b> a special package (DAP subsidy +140% in May 2021; kharif 2026 +11–12%). Margins recover, and the stocks re-rate on "policy support".</li>
+    <li><b>Prices normalise</b> and subsidy is trimmed; profits settle. Stocks drift unless there is another theme (PSUs, capacity growth).</li>
+    <li><b>Payment delays</b> (2013, 2018–19) are the real bear market: working capital balloons and interest eats profit.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The monsoon matters less than policy.</b> 2013 had a good monsoon (106%) but the basket fell 27% on arrears and the rupee; 2014 had a drought (88%) but rose 53% on reform hopes.</li>
+    <li><b>PSUs move as a group:</b> FACT, NFL, RCF and Madras Fertilizers doubled or tripled in 2021–23 and fell 50%+ from 2024 peaks.</li>
+    <li><b>Chemical-heavy names diverge:</b> Deepak and GNFC track ammonium nitrate and TDI more than fertiliser policy.</li>
+    <li><b>Capacity growth gets the premium:</b> the Ostwal group (Madhya Bharat, Krishana) led 2025–26 on DAP/NPK expansions.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak (top 18 by market cap)</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Resource owners set the price</h2>
+  <p>Fertiliser power sits with whoever owns cheap gas (for nitrogen), phosphate rock (for phosphorus) or potash mines. India owns little of any, so it is the world's largest importer of urea and DAP in many years. Its policy aim is to lock in supply through joint ventures abroad (Paradeep with OCP; IFFCO and others in Oman, Jordan, Senegal) and new domestic urea plants.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Country / company</th><th>Strength</th><th>2026 position</th></tr></thead><tbody>
+    <tr><td>Morocco (OCP)</td><td>About 70% of the world's phosphate rock reserves; the largest phosphate exporter</td><td>Partner in Paradeep; supplying India via alternative routes</td></tr>
+    <tr><td>China</td><td>The largest producer of urea and phosphates</td><td>Restricts exports to protect domestic prices</td></tr>
+    <tr><td>Russia, Belarus</td><td>Major urea, ammonia and potash exporters</td><td>Supplying India via the Cape of Good Hope</td></tr>
+    <tr><td>Gulf (Qatar, Saudi Ma'aden, Oman, UAE)</td><td>Cheap gas and sulphur; urea, ammonia, DAP</td><td>Disrupted by the Hormuz closure</td></tr>
+    <tr><td>Canada (Nutrien)</td><td>The largest potash producer</td><td>Unaffected by Hormuz</td></tr>
+    <tr><td>India</td><td>The largest importer; a big producer of urea and DAP under subsidy</td><td>Raising domestic urea capacity (HURL, Talcher coal gasification)</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Europe → gas-rich regions (2000s–2022):</b> European ammonia plants closed as gas became expensive, especially after 2022.</li>
+    <li><b>China became a swing exporter,</b> then restricted exports (2021 onwards) to keep domestic food prices down.</li>
+    <li><b>India's self-sufficiency push:</b> new urea plants (Gorakhpur, Sindri, Barauni, Ramagundam) cut urea imports; coal gasification (Talcher) is the next attempt.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Five shifts</h2>
+  <ol>
+    <li><b>Nano urea and nano DAP:</b> liquid sprays promoted as replacing part of granular fertiliser. Their efficacy is debated in field trials; if adoption is real, volumes of granular urea fall.</li>
+    <li><b>Green ammonia:</b> made with renewable hydrogen instead of gas. India's hydrogen mission tenders include green-ammonia supply to fertiliser plants.</li>
+    <li><b>Coal gasification:</b> Talcher Fertilizers (coal to urea) and GNFC's MoU with GMDC aim to cut LNG dependence.</li>
+    <li><b>Specialty and water-soluble fertilisers,</b> fortified and customised fertilisers, and drip fertigation: unsubsidised and higher margin (Aries, Coromandel).</li>
+    <li><b>Soil health and precision:</b> soil-health cards, drones spraying nutrients, and data-led dosing.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Nutrient-based subsidy (NBS)</td><td>Since 2010; kharif 2026 outlay ₹41,534 cr; rabi 2025–26 DAP ₹29,805/t</td><td>Sets phosphatic and potassic margins</td></tr>
+    <tr><td>New Urea Policy 2015 and gas pooling</td><td>Energy norms; pooled gas price</td><td>Caps and stabilises urea profits</td></tr>
+    <tr><td>Neem-coated urea</td><td>100% since 2015</td><td>Cut diversion to industry</td></tr>
+    <tr><td>DBT (direct benefit transfer) in fertilisers</td><td>National since 2018; subsidy paid after point-of-sale</td><td>Transparency; payment timing</td></tr>
+    <tr><td>Informal MRP guidance</td><td>DAP ₹1,350 per bag</td><td>Absorbs price spikes at companies</td></tr>
+    <tr><td>Nano-fertiliser promotion</td><td>Government push; field debate</td><td>A possible volume shift</td></tr>
+    <tr><td>Fertiliser subsidy budget</td><td>Over ₹1.5 lakh cr a year recently</td><td>Payment speed and arrears</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: shock absorbed, monsoon below normal</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Global prices</td><td>Off the April peak, still high</td><td>Urea ~$450 (June) after $850; DAP ~$770; urea +45% and DAP +21% year on year (June)</td></tr>
+    <tr><td>Subsidy</td><td>Raised</td><td>Kharif outlay +11–12%; rabi 2026–27 rates due around October</td></tr>
+    <tr><td>Supply</td><td>Adequate</td><td>DAP stocks 2.21 mt (vs 1.30 mt); urea 6.73 mt; gas to urea plants +23%</td></tr>
+    <tr><td>Demand</td><td>Soft</td><td>Monsoon forecast 90% of LPA; kharif requirement cut to 38.39 mt</td></tr>
+    <tr><td>Profits</td><td>Split</td><td>Integrated and chemical-heavy up (Paradeep, Deepak, GNFC, GSFC); import-heavy down (Coromandel); FACT a loss</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The shock has passed through, and the government paid for most of it. Watch the rabi 2026–27 NBS rates and whether the DAP retail cap holds as import prices stay high. A below-normal monsoon cuts rabi reservoir levels. The stock story is split between capacity growers (the Ostwal group), chemical earners (Deepak, GNFC) and de-rating PSUs.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>NBS rates for rabi 2026–27</td><td>Cabinet, around September–October</td><td>Phosphatic margins for H2</td></tr>
+    <tr><td>Import prices (urea, DAP, ammonia, sulphur, phosphoric acid)</td><td>Weekly; the World Bank monthly</td><td>Cost vs subsidy</td></tr>
+    <tr><td>Monthly fertiliser sales and stocks</td><td>Fertiliser ministry, FAI</td><td>Volumes</td></tr>
+    <tr><td>Monsoon and reservoir levels</td><td>IMD, CWC weekly</td><td>Kharif and rabi demand</td></tr>
+    <tr><td>Subsidy receivables</td><td>Company balance sheets</td><td>Working capital and debt</td></tr>
+    <tr><td>LNG supply and pooled gas price</td><td>Monthly</td><td>Urea output and cost</td></tr>
+    <tr><td>Ammonium nitrate and TDI prices</td><td>Trade data</td><td>Deepak and GNFC profits</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the farm cycle shows up</h2>
+  <ul>
+    <li><b>Agrochemicals</b> (001): the same farmers and dealers; Coromandel and Chambal are in both.</li>
+    <li><b>Sulphuric acid, aluminium fluoride and phosphates</b> (004): shared chemistry.</li>
+    <li><b>Industrial gases and ammonia</b> (006): the ammonia chain.</li>
+    <li><b>Mining explosives:</b> Deepak's technical ammonium nitrate.</li>
+    <li><b>Seeds, tractors and farm equipment:</b> farm-income plays.</li>
+    <li><b>LNG importers and gas utilities:</b> the gas supply.</li>
+    <li><b>Rural consumption:</b> farm incomes feed FMCG, two-wheelers.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of volume is manufactured vs imported? What is the margin on each?</li>
+    <li>How integrated are you (ammonia, sulphuric acid, phosphoric acid), and what is your cost vs import parity?</li>
+    <li>What are subsidy receivables and days outstanding? Any special banking arrangement?</li>
+    <li>What share of EBIT is unsubsidised (chemicals, crop protection, specialty nutrients)?</li>
+    <li>(Urea) What is your energy consumption vs norm, and output vs reassessed capacity? How much gas was curtailed in 2026?</li>
+    <li>(Ostwal group) What are the commissioning dates and utilisation targets for new DAP/NPK capacity?</li>
+    <li>What would a DAP retail price increase, or a lower subsidy, do to your volumes?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Rising receivables with flat sales.</li>
+    <li>Growth driven by trading imports at thin margins.</li>
+    <li>PSU valuations disconnected from losses (FACT).</li>
+    <li>Capacity plans dependent on imported acid in a tight market.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"A good monsoon means good fertiliser stocks."</td><td>2013 (106%) fell 27%; 2014 (88%) rose 53%. Policy, the rupee and payments matter more.</td></tr>
+    <tr><td>"Subsidy protects margins."</td><td>Only with a lag. In Q1 FY27, Coromandel's profit fell 25% as import costs outran the subsidy.</td></tr>
+    <tr><td>"Nano urea will replace granular urea."</td><td>Field evidence is mixed. Government promotion is strong, but granular volumes have not collapsed.</td></tr>
+    <tr><td>"PSU fertiliser stocks are cheap."</td><td>They re-rated 3–5x in 2021–23 on sentiment and have since fallen 50%+; several earn thin or negative margins.</td></tr>
+    <tr><td>"Global price spikes help Indian producers."</td><td>They help integrated domestic makers (Paradeep) and hurt importers (Coromandel's import business).</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. NBS, DAP" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Products and chemistry</h3><dl>
+    <dt>N-P-K</dt><dd>Nitrogen, phosphorus (as P₂O₅) and potassium (as K₂O), the three main nutrients.</dd>
+    <dt>Urea</dt><dd>46% nitrogen; made from ammonia and CO₂.</dd>
+    <dt>DAP</dt><dd>Diammonium phosphate (18-46-0).</dd>
+    <dt>MAP</dt><dd>Monoammonium phosphate (11-52-0).</dd>
+    <dt>NPK complex</dt><dd>A granule containing two or three nutrients in set ratios.</dd>
+    <dt>SSP</dt><dd>Single super phosphate (16% P₂O₅ plus sulphur).</dd>
+    <dt>TSP</dt><dd>Triple super phosphate (46% P₂O₅).</dd>
+    <dt>MOP</dt><dd>Muriate of potash (potassium chloride, 60% K₂O).</dd>
+    <dt>SOP</dt><dd>Sulphate of potash; see 004.</dd>
+    <dt>Ammonium sulphate / CAN</dt><dd>Nitrogen fertilisers with sulphur or calcium.</dd>
+    <dt>TAN</dt><dd>Technical ammonium nitrate, for mining explosives (Deepak).</dd>
+    <dt>Phosphoric acid</dt><dd>Made from rock phosphate and sulphuric acid; the DAP building block.</dd>
+    <dt>Rock phosphate</dt><dd>Mined phosphate ore.</dd>
+    <dt>Phosphogypsum</dt><dd>The by-product of phosphoric acid making.</dd>
+    <dt>Neem-coated urea</dt><dd>Urea coated with neem oil to slow release and stop industrial diversion.</dd>
+    <dt>Nano urea</dt><dd>A liquid nanoparticle nitrogen spray (IFFCO).</dd>
+    <dt>Water-soluble fertiliser</dt><dd>A fully soluble fertiliser for drip and spray.</dd>
+    <dt>Micronutrients / chelates</dt><dd>Zinc, boron, iron and others, often bound for uptake.</dd>
+    <dt>Fertigation</dt><dd>Applying fertiliser through drip irrigation.</dd>
+    <dt>Green ammonia</dt><dd>Ammonia made with renewable hydrogen.</dd>
+    <dt>Coal gasification</dt><dd>Making syngas (and so ammonia) from coal.</dd>
+  </dl>
+  <h3>Policy and business</h3><dl>
+    <dt>MRP</dt><dd>Maximum retail price, the price farmers pay.</dd>
+    <dt>NBS</dt><dd>Nutrient-based subsidy: fixed per kg of nutrient for P&amp;K fertilisers.</dd>
+    <dt>New Urea Policy (NUP) 2015</dt><dd>Sets energy norms and cost-plus reimbursement for urea.</dd>
+    <dt>Gas pooling</dt><dd>A single average gas price for all urea plants.</dd>
+    <dt>Energy norm</dt><dd>The Gcal per tonne of urea the government reimburses.</dd>
+    <dt>Reassessed capacity</dt><dd>The official capacity above which urea output earns extra.</dd>
+    <dt>DBT</dt><dd>Direct benefit transfer; subsidy released after point-of-sale.</dd>
+    <dt>PoS machine</dt><dd>The Aadhaar-linked device that records each farmer sale.</dd>
+    <dt>Subsidy arrears / receivables</dt><dd>Money owed by the government to companies.</dd>
+    <dt>Special banking arrangement</dt><dd>Government-arranged loans to clear arrears.</dd>
+    <dt>Kharif / rabi</dt><dd>The monsoon crop season / the winter crop season.</dd>
+    <dt>LPA</dt><dd>Long-period average rainfall; "normal" is 96–104%.</dd>
+    <dt>Balanced fertilisation</dt><dd>Using N, P and K in the right ratio (India overuses N).</dd>
+    <dt>Import parity</dt><dd>See 002.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Sulphuric acid, sulphur</dt><dd>See 004.</dd>
+    <dt>Aluminium fluoride</dt><dd>See 004.</dd>
+    <dt>Ammonia, SMR</dt><dd>See 006.</dd>
+    <dt>Caprolactam, nylon-6</dt><dd>See 002.</dd>
+    <dt>LNG</dt><dd>See 006.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. How does a urea maker earn money under the New Urea Policy?</summary><p>Cost-plus reimbursement at energy norms; profits come from beating the norms, extra output above reassessed capacity, and fixed-cost recovery.</p></details>
+  <details class="q"><summary>2. Why can DAP margins shrink even with a subsidy?</summary><p>The subsidy is fixed per season while import costs move monthly, and the retail price is informally capped at ₹1,350 per bag.</p></details>
+  <details class="q"><summary>3. Why did Paradeep's profit rise 24% while Coromandel's fell 25% in Q1 FY27?</summary><p>Paradeep is integrated with a Moroccan partner; Coromandel's import-heavy business absorbed the gap between spiking import costs and capped retail prices.</p></details>
+  <details class="q"><summary>4. What did the Hormuz closure do to Indian fertilisers?</summary><p>Cut LNG flows (some urea plants shut), sent urea from ~$400 to ~$850/t and forced a larger kharif subsidy.</p></details>
+  <details class="q"><summary>5. Why are subsidy arrears so important?</summary><p>Subsidy is paid after sale; delays force borrowing, raising interest and hurting profits (2013, 2018–19).</p></details>
+  <details class="q"><summary>6. Which companies are really chemical businesses?</summary><p>Deepak Fertilisers (ammonium nitrate, nitric acid, IPA) and GNFC (TDI, acids, aniline).</p></details>
+  <details class="q"><summary>7. Why did the basket fall 27% in 2013 despite a 106% monsoon?</summary><p>The rupee crash and ballooning subsidy arrears outweighed the monsoon.</p></details>
+  <details class="q"><summary>8. What is the Ostwal group's growth story?</summary><p>SSP makers (Madhya Bharat, Krishana) adding sulphuric acid, DAP and NPK capacity; they led the basket in 2025–26.</p></details>
+  <details class="q"><summary>9. What is gas pooling?</summary><p>All urea plants pay the same average gas price, removing location advantages.</p></details>
+  <details class="q"><summary>10. Which months are strongest for these stocks?</summary><p>April (13 of 15 years) and December (12 of 15); February–March is the weakest.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members with at least ₹300 cr market cap vs NSE:NIFTY. Monsoon: IMD (same series as 001).</li>
+    <li>Policy: <a href="https://www.pmindia.gov.in/en/news_updates/cabinet-approves-nutrient-based-subsidy-nbs-rates-for-kharif-season-2026-from-01-04-2026-to-30-09-2026-on-phosphatic-and-potassic-pk-fertilizers/">kharif 2026 NBS rates</a>; <a href="https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=156820&amp;ModuleId=3&amp;reg=1&amp;lang=1">rabi 2025–26 NBS rates</a>; <a href="https://www.pw.live/upsc/exams/nutrient-based-subsidy-nbs-2026">NBS explainer</a>.</li>
+    <li>Global and supply: <a href="https://blogs.worldbank.org/en/opendata/fertilizer-prices-surge-as-strait-of-hormuz-disruptions-tighten-">World Bank on Hormuz and fertiliser prices</a>; <a href="https://www.wto.org/english/blogs_e/data_blog_e/blog_dta_10jul26_451_e.htm">WTO data blog</a>; <a href="https://www.energyconnects.com/news/gas-lng/2026/march/indian-urea-producers-shut-plants-as-iran-war-cuts-lng-flows/">Indian urea plants shut</a>; <a href="https://discoveryalert.com/dap-export-crisis-saudi-arabia-duqm-oman-hormuz-2026/">DAP rerouting via Duqm</a>.</li>
+    <li>Demand: <a href="https://www.business-standard.com/industry/agriculture/urea-dap-sales-show-marginal-dip-in-june-despite-patchy-monsoon-126072001409_1.html">June 2026 sales</a>; <a href="https://upstox.com/news/business-news/latest-updates/can-india-avoid-a-fertiliser-shortage-this-kharif-govt-says-stocks-strong-urea-output-up-23/article-191003/">stocks and gas supply</a>; <a href="https://www.business-standard.com/industry/agriculture/india-scales-down-kharif-2026-fertiliser-requirement-to-38-39-mn-tonnes-126060101860_1.html">kharif requirement cut</a>.</li>
+    <li>Companies: <a href="https://www.investing.com/news/company-news/coromandel-q1-fy27-slides-revenue-rises-16-as-profit-falls-24-93CH-4811335">Coromandel Q1 FY27</a>; <a href="https://www.indianchemicalnews.com/fertilizer/paradeep-phosphates-delivers-strong-q1-fy27-as-revenue-surges-36-to-rs-6124-cr-31281">Paradeep Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/chambal-fertilisers-q1fy27-slides-margins-expand-despite-revenue-dip-93CH-4826846">Chambal Q1 FY27</a>; <a href="https://www.indianchemicalnews.com/fertilizer/deepak-fertilisers-q1-profit-doubles-to-rs-490-crore-31315">Deepak Q1 FY27</a>; <a href="https://www.indianchemicalnews.com/fertilizer/gnfc-q1-profit-jumps-nearly-fourfold-year-on-year-31399">GNFC Q1 FY27</a>; <a href="https://www.indianchemicalnews.com/fertilizer/record-fertilizer-sales-lift-gsfc-q1-fy27-profit-by-15-31481">GSFC Q1 FY27</a>; <a href="https://www.business-standard.com/markets/capital-market-news/rcf-q1-pat-jumps-35-yoy-to-rs-74-crore-126081400822_1.html">RCF Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/national-fertilizers-q1-results-net-profit-rises-113-38-crore/48099103">NFL Q1 FY27</a>; <a href="https://www.tipranks.com/news/company-announcements/fact-board-clears-q1-fy27-unaudited-results-after-clean-auditor-review">FACT Q1 FY27</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/madhya-bharat-agro-products-ltd-010043857.html">Madhya Bharat Q1 FY27 call</a>; <a href="https://www.sahi.com/news/krishana-phoschem-q1-net-profit-jumps-54-to-47-1-cr-as-revenue-hits-530-cr-3862-PE1_COR">Krishana Q1 FY27</a>.</li>
+    <li>History (NBS 2010, NUP and gas pooling 2015, neem coating, DBT, the 2021 DAP subsidy increase): government notifications, known before this session.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -2.2}, {"y": 2013, "v": -15.8}, {"y": 2014, "v": -4.4}, {"y": 2015, "v": -10.3}, {"y": 2016, "v": -5.7}, {"y": 2017, "v": 8.2}, {"y": 2018, "v": -11.4}, {"y": 2019, "v": -10.6}, {"y": 2020, "v": -8.0}, {"y": 2021, "v": 8.3}, {"y": 2022, "v": 19.9}, {"y": 2023, "v": -10.8}, {"y": 2024, "v": -22.5}, {"y": 2025, "v": -9.8}, {"y": 2026, "v": -6.3}], "AprJul": [{"y": 2012, "v": -9.5}, {"y": 2013, "v": -22.2}, {"y": 2014, "v": 28.0}, {"y": 2015, "v": 3.3}, {"y": 2016, "v": 19.3}, {"y": 2017, "v": 3.3}, {"y": 2018, "v": -21.4}, {"y": 2019, "v": -17.0}, {"y": 2020, "v": 31.9}, {"y": 2021, "v": 59.1}, {"y": 2022, "v": -0.1}, {"y": 2023, "v": 7.1}, {"y": 2024, "v": 27.6}, {"y": 2025, "v": 45.3}, {"y": 2026, "v": 19.3}], "AugSep": [{"y": 2012, "v": -0.7}, {"y": 2013, "v": 1.7}, {"y": 2014, "v": 2.6}, {"y": 2015, "v": -9.4}, {"y": 2016, "v": 0.6}, {"y": 2017, "v": 3.1}, {"y": 2018, "v": -13.3}, {"y": 2019, "v": -3.4}, {"y": 2020, "v": 2.8}, {"y": 2021, "v": -13.1}, {"y": 2022, "v": 7.1}, {"y": 2023, "v": 6.4}, {"y": 2024, "v": -9.9}, {"y": 2025, "v": -6.7}], "OctDec": [{"y": 2012, "v": -7.7}, {"y": 2013, "v": 11.6}, {"y": 2014, "v": -1.3}, {"y": 2015, "v": 20.8}, {"y": 2016, "v": 18.2}, {"y": 2017, "v": 27.6}, {"y": 2018, "v": 6.0}, {"y": 2019, "v": -5.6}, {"y": 2020, "v": 0.7}, {"y": 2021, "v": -1.1}, {"y": 2022, "v": 14.0}, {"y": 2023, "v": 6.4}, {"y": 2024, "v": 7.2}, {"y": 2025, "v": -8.8}], "SepNov": [{"y": 2012, "v": -1.4}, {"y": 2013, "v": 7.5}, {"y": 2014, "v": 6.2}, {"y": 2015, "v": 14.3}, {"y": 2016, "v": 12.6}, {"y": 2017, "v": 20.4}, {"y": 2018, "v": -9.4}, {"y": 2019, "v": -2.1}, {"y": 2020, "v": -6.1}, {"y": 2021, "v": -2.5}, {"y": 2022, "v": -7.0}, {"y": 2023, "v": 1.3}, {"y": 2024, "v": 5.9}, {"y": 2025, "v": -16.8}], "JanMar": [{"y": 2012, "v": 7.6}, {"y": 2013, "v": -21.2}, {"y": 2014, "v": -8.0}, {"y": 2015, "v": -17.7}, {"y": 2016, "v": -7.3}, {"y": 2017, "v": 27.6}, {"y": 2018, "v": -17.0}, {"y": 2019, "v": -14.5}, {"y": 2020, "v": 0.6}, {"y": 2021, "v": 17.4}, {"y": 2022, "v": 36.4}, {"y": 2023, "v": -14.1}, {"y": 2024, "v": -14.0}, {"y": 2025, "v": -8.6}, {"y": 2026, "v": -10.2}]}, "my": {"1": {"2012": 10.1, "2013": -6.4, "2014": -3.5, "2015": -7.8, "2016": -1.9, "2017": 16.5, "2018": -6.3, "2019": -4.0, "2020": 13.2, "2021": 8.0, "2022": 13.6, "2023": -4.1, "2024": 10.5, "2025": 1.4, "2026": -5.1}, "2": {"2012": 0.8, "2013": -6.8, "2014": -1.0, "2015": -3.3, "2016": -2.5, "2017": 2.4, "2018": -6.0, "2019": -11.0, "2020": -13.2, "2021": 6.0, "2022": 0.3, "2023": -7.4, "2024": -11.6, "2025": -9.3, "2026": -5.4}, "3": {"2012": -2.9, "2013": -10.4, "2014": -3.3, "2015": -7.3, "2016": -3.3, "2017": 5.4, "2018": -6.3, "2019": 1.4, "2020": 2.7, "2021": 2.0, "2022": 20.2, "2023": -3.7, "2024": -11.9, "2025": -0.0, "2026": -1.6}, "4": {"2012": 3.1, "2013": -0.8, "2014": 7.4, "2015": 4.3, "2016": 16.6, "2017": 11.6, "2018": 5.4, "2019": -4.7, "2020": 10.6, "2021": 2.9, "2022": 12.6, "2023": 11.3, "2024": 12.2, "2025": 9.9, "2026": 14.8}, "5": {"2012": -0.6, "2013": -8.5, "2014": 15.1, "2015": -6.8, "2016": -1.1, "2017": -4.2, "2018": -11.6, "2019": 4.9, "2020": 2.4, "2021": 13.3, "2022": -5.7, "2023": -7.3, "2024": -5.4, "2025": 10.1, "2026": 1.0}, "6": {"2012": -6.3, "2013": -8.1, "2014": 10.7, "2015": -1.5, "2016": 13.7, "2017": -4.5, "2018": -11.0, "2019": -9.5, "2020": 14.1, "2021": 18.2, "2022": -7.5, "2023": 3.6, "2024": 13.5, "2025": 6.3, "2026": 1.6}, "7": {"2011": 6.2, "2012": -6.2, "2013": -6.1, "2014": -8.0, "2015": 7.6, "2016": -10.7, "2017": 0.9, "2018": -2.2, "2019": -8.5, "2020": -1.6, "2021": 13.5, "2022": 2.3, "2023": -0.3, "2024": 4.6, "2025": 11.5, "2026": 0.8}, "8": {"2011": 2.8, "2012": -5.3, "2013": 1.8, "2014": -6.3, "2015": -8.4, "2016": 1.1, "2017": 3.5, "2018": -2.6, "2019": -6.8, "2020": 4.6, "2021": -16.7, "2022": 8.6, "2023": 5.7, "2024": -4.5, "2025": -0.6, "2026": 3.7}, "9": {"2011": -3.2, "2012": 5.2, "2013": -0.1, "2014": 9.2, "2015": -1.2, "2016": -0.5, "2017": -0.4, "2018": -10.8, "2019": 4.0, "2020": -1.6, "2021": 4.4, "2022": -1.0, "2023": 0.6, "2024": -5.4, "2025": -6.2}, "10": {"2011": -2.4, "2012": 0.7, "2013": -6.3, "2014": -2.9, "2015": 5.8, "2016": 19.2, "2017": 19.9, "2018": 6.8, "2019": 2.0, "2020": -1.6, "2021": -4.9, "2022": -4.3, "2023": 4.4, "2024": 3.7, "2025": -4.6}, "11": {"2011": -7.1, "2012": -6.7, "2013": 13.0, "2014": -0.5, "2015": 9.4, "2016": -4.1, "2017": 1.2, "2018": -5.4, "2019": -7.4, "2020": -2.6, "2021": -1.7, "2022": -1.7, "2023": -3.8, "2024": 7.9, "2025": -6.2}, "12": {"2011": -8.3, "2012": -1.8, "2013": 3.6, "2014": 1.9, "2015": 4.4, "2016": 4.5, "2017": 4.6, "2018": 4.3, "2019": 0.2, "2020": 4.9, "2021": 5.9, "2022": 19.3, "2023": 5.5, "2024": -3.7, "2025": 2.1}}, "basket": ["Coromandel International Limited", "Fertilizers & Chemicals Travancore Ltd.", "Deepak Fertilisers and Petrochemicals Corporation Ltd.", "Chambal Fertilisers & Chemicals Ltd.", "Paradeep Phosphates Ltd.", "Gujarat Narmada Valley Fertilizers & Chemicals Ltd.", "Madhya Bharat Agro Products Ltd.", "Rashtriya Chemicals & Fertilizers Ltd.", "Gujarat State Fertilizers & Chemicals Limited", "Krishana Phoschem Ltd.", "National Fertilizers Ltd.", "Southern Petrochemical Industries Corporation Limited", "Madras Fertilizers Ltd", "Zuari Agro Chemicals Ltd.", "Aries Agro Ltd.", "Khaitan Chemicals & Fertilizers Ltd.", "Rama Phosphates Limited"], "nbasket": 17, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 3.0, "rel": 2.3, "hit": 7, "n": 15}, {"m": 2, "abs": -5.7, "rel": -4.5, "hit": 4, "n": 15}, {"m": 3, "abs": -1.4, "rel": -1.3, "hit": 5, "n": 15}, {"m": 4, "abs": 10.4, "rel": 7.8, "hit": 13, "n": 15}, {"m": 5, "abs": 0.9, "rel": -0.3, "hit": 6, "n": 15}, {"m": 6, "abs": 4.0, "rel": 2.2, "hit": 8, "n": 15}, {"m": 7, "abs": 2.2, "rel": 0.2, "hit": 8, "n": 16}, {"m": 8, "abs": -1.4, "rel": -1.2, "hit": 8, "n": 16}, {"m": 9, "abs": 0.1, "rel": -0.5, "hit": 5, "n": 15}, {"m": 10, "abs": 4.4, "rel": 2.4, "hit": 8, "n": 15}, {"m": 11, "abs": -0.1, "rel": -1.0, "hit": 4, "n": 15}, {"m": 12, "abs": 3.8, "rel": 3.2, "hit": 12, "n": 15}], "cy": [{"y": 2012, "b": 13.1, "n": 27.7, "rel": -14.6, "partial": false}, {"y": 2013, "b": -27.0, "n": 6.8, "rel": -33.7, "partial": false}, {"y": 2014, "b": 53.0, "n": 31.4, "rel": 21.6, "partial": false}, {"y": 2015, "b": -10.9, "n": -4.1, "rel": -6.9, "partial": false}, {"y": 2016, "b": 33.9, "n": 3.0, "rel": 30.9, "partial": false}, {"y": 2017, "b": 114.0, "n": 28.6, "rel": 85.4, "partial": false}, {"y": 2018, "b": -37.2, "n": 3.2, "rel": -40.4, "partial": false}, {"y": 2019, "b": -27.1, "n": 12.0, "rel": -39.1, "partial": false}, {"y": 2020, "b": 49.4, "n": 14.9, "rel": 34.5, "partial": false}, {"y": 2021, "b": 95.8, "n": 24.1, "rel": 71.7, "partial": false}, {"y": 2022, "b": 72.2, "n": 4.3, "rel": 67.9, "partial": false}, {"y": 2023, "b": 22.4, "n": 20.0, "rel": 2.4, "partial": false}, {"y": 2024, "b": 14.4, "n": 8.8, "rel": 5.5, "partial": false}, {"y": 2025, "b": 23.6, "n": 10.5, "rel": 13.1, "partial": false}, {"y": 2026, "b": -3.7, "n": -10.7, "rel": 6.9, "partial": true}], "dd": [{"co": "Coromandel International", "peak": "Jul 2025", "fp": -26, "y1": -13}, {"co": "Fertilizers & Chemicals Travancore", "peak": "Jun 2024", "fp": -33, "y1": -23}, {"co": "Deepak Fertilisers and Petrochemicals Corporation", "peak": "Jul 2025", "fp": -23, "y1": -7}, {"co": "Chambal Fertilisers & Chemicals", "peak": "May 2025", "fp": -43, "y1": -24}, {"co": "Paradeep Phosphates", "peak": "Aug 2025", "fp": -33, "y1": -8}, {"co": "Gujarat Narmada Valley Fertilizers & Chemicals", "peak": "Apr 2022", "fp": -35, "y1": 14}, {"co": "Madhya Bharat Agro Products", "peak": "Oct 2025", "fp": 74, "y1": 86}, {"co": "Rashtriya Chemicals & Fertilizers", "peak": "Jul 2024", "fp": -54, "y1": -29}, {"co": "Gujarat State Fertilizers & Chemicals", "peak": "Jan 2024", "fp": -52, "y1": -28}, {"co": "Krishana Phoschem", "peak": "Aug 2025", "fp": 49, "y1": 60}, {"co": "National Fertilizers", "peak": "Jul 2024", "fp": -58, "y1": -32}, {"co": "Southern Petrochemical Industries Corporation", "peak": "Sep 2025", "fp": -44, "y1": -32}, {"co": "Madras Fertilizers", "peak": "Jul 2024", "fp": -53, "y1": -33}, {"co": "Zuari Agro Chemicals", "peak": "Aug 2025", "fp": -42, "y1": -19}, {"co": "Aries Agro", "peak": "Sep 2025", "fp": 8, "y1": 15}, {"co": "Khaitan Chemicals & Fertilizers", "peak": "Apr 2022", "fp": -67, "y1": -61}, {"co": "Rama Phosphates", "peak": "Apr 2022", "fp": -51, "y1": -13}, {"co": "Basant Agro Tech (India)", "peak": "Apr 2022", "fp": -60, "y1": -24}], "win": {"FebMar": {"mean": -5.4, "median": -8.0, "hit": 3, "n": 15}, "AprJul": {"mean": 11.6, "median": 7.1, "hit": 10, "n": 15}, "AugSep": {"mean": -2.3, "median": -0.1, "hit": 7, "n": 14}, "OctDec": {"mean": 6.3, "median": 6.2, "hit": 9, "n": 14}, "SepNov": {"mean": 1.6, "median": -0.0, "hit": 7, "n": 14}, "JanMar": {"mean": -2.9, "median": -8.6, "hit": 5, "n": 15}}, "ytd": {"b": -3.7, "n": -10.7}, "hx": {"label": "Monsoon % of LPA", "v": {"2012": "93", "2013": "106", "2014": "88", "2015": "86", "2016": "97", "2017": "95", "2018": "91", "2019": "110", "2020": "109", "2021": "99", "2022": "106", "2023": "94", "2024": "108", "2025": "108", "2026": "~90 (IMD forecast)"}}, "notes": {"2012": "Two years into the nutrient-based subsidy (NBS), a falling rupee pushed decontrolled DAP prices up sharply; farmers cut phosphate use and subsidy arrears grew. Rama +80%, NFL +42%; Coromandel \u22125%, Chambal \u221211%.", "2013": "The rupee crash raised import costs while subsidy arrears ballooned and companies borrowed to wait: NFL \u221268%, Zuari \u221248%, Rama \u221246%, despite a good monsoon.", "2014": "Reform hopes after the election, and expectations of gas pooling and a new urea policy: Aries +129%, GSFC +94%, RCF +92%.", "2015": "The New Urea Policy, gas pooling and 100% neem-coated urea arrived, but a second drought year cut demand: Coromandel \u221239%, Zuari \u221239%, GSFC \u221230%.", "2016": "A normal monsoon after two droughts; GNFC +164% as its chemicals (TDI) boomed; Aries +63%, Coromandel +55%.", "2017": "The PSU and small-cap rally, plus revival plans for closed urea plants: Madras Fertilizers +218%, SPIC +160%, Zuari +142%. The basket more than doubled.", "2018": "The rupee fell and gas and ammonia costs rose, subsidy arrears climbed again, and small caps crashed: Deepak \u221265%, Aries \u221259%, Zuari \u221257%.", "2019": "Subsidy arrears peaked and GNFC's chemical prices collapsed: GNFC \u221252%, Zuari \u221262%, Rama \u221249%. Coromandel (+18%) held up on quality.", "2020": "Agriculture was the one bright spot in COVID, with a strong monsoon and extra subsidy to clear arrears: Khaitan +259%, Rama +96%, Deepak +67%.", "2021": "Global fertiliser prices surged (Chinese export curbs, Europe's gas crisis). The DAP subsidy was raised about 140% in May, and PSUs re-rated: Rama +252%, Madhya Bharat +151%, Deepak +137%.", "2022": "The Ukraine war sent urea and ammonia to records and the subsidy bill to a record. PSU re-rating: Madhya Bharat +526%, FACT +183%, Madras Fertilizers +170%.", "2023": "Prices normalised and PSU stocks kept rallying: FACT +116%, GSFC +73%, Madras Fertilizers +43%.", "2024": "Deepak +76% on ammonium nitrate and chemicals; Paradeep +62% (Mangalore Chemicals merger); Coromandel +50% (agreed to buy NACL).", "2025": "China restricted phosphate exports and DAP prices rose; the Ostwal group's expansions ran: Krishana +166%, Madhya Bharat +84%, Rama +68%. PSUs de-rated: NFL \u221221%, RCF \u221216%.", "2026": "The Hormuz closure cut LNG, shut some urea plants and sent urea from ~$400 to ~$850/t in April. The kharif subsidy rose 11\u201312% and the monsoon forecast was cut to 90%. Madhya Bharat +89%, Krishana +69%; NFL \u221227%, Zuari \u221233%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

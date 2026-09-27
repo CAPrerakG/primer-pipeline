@@ -1,0 +1,710 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dyes and Pigments Primer</title>
+<meta name="description" content="Industry 9 of 278: the chemistry of colour, from naphthalene and benzene to H-acid, reactive dyes, pigments and food colours. The 25 companies (each described), Gujarat&#x27;s clusters, China&#x27;s pollution cycles, Sudarshan–Heubach, Kiri–DyStar, and a year-by-year record from 2012 to the 2026 H-acid spike.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Dyes &amp; Pigments · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">Dyes vs pigments</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical raw materials</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 9 of 278 · Chemicals family</div>
+  <h1>Dyes &amp; Pigments</h1>
+  <p class="lede">The chemistry of colour. Dyes soak into fabric, leather and paper; pigments sit on top as tiny coloured particles in paint, ink and plastic; food colours tint sweets and drinks. India is one of the world's two big colour factories, concentrated in a handful of Gujarat industrial estates, and it swings between boom and bust with China's pollution rules.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 25 after the audit (6 moved out, 2 moved in)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Aroma &amp; Flavour Chemicals</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">40k → 60–70k</div><div class="l">H-acid price in China, yuan per tonne, start of 2026 to mid-2026: the spike behind Bodal's record quarter</div></div>
+    <div class="stat"><div class="n">~75%</div><div class="l">Share of India's dye and intermediate output made in Gujarat (Vapi, Ankleshwar, Vatva, Sachin)</div></div>
+    <div class="stat"><div class="n">$689 m</div><div class="l">What Kiri received on 30 Dec 2025 for its 37.57% DyStar stake, ending a dispute that began in 2015</div></div>
+    <div class="stat"><div class="n">#2</div><div class="l">Sudarshan's global rank in pigments after buying Germany's Heubach (completed 3 Mar 2025)</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Making colour stick</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Think of a white T-shirt, a red wall and an orange sweet. The T-shirt got its colour from a <b>dye</b>: a coloured molecule that dissolves in water and grabs the cotton threads so tightly it doesn't wash out. The wall got its colour from a <b>pigment</b>: a coloured powder so fine it is mixed into paint and sits on the surface like glitter in glue. The sweet got its colour from a <b>food colour</b>, a dye clean enough to eat. All three usually start as black, smelly chemicals from coal tar and oil (naphthalene and benzene). Factories in Gujarat turn them, step by step, into bright colours. Every step makes dirty, acidic water, so whenever a government cracks down on pollution, factories shut, colour runs short, and the factories still running make a lot of money.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is three businesses under one name. <b>Dyes and dye intermediates</b> are textile-linked and cyclical: India leads reactive dyes for cotton, China leads disperse dyes for polyester, and profits swing with pollution enforcement. China's closures in 2014–17 made Indian makers rich; India's own green-tribunal curbs in 2019 hurt them; the 2026 H-acid spike (about 40,000 to 60,000–70,000 yuan/t) has brought the boom back, and Bodal's profit nearly tripled. <b>Pigments</b> are steadier and more global. Sudarshan became the world's number two by buying Heubach, and profit doubled in Q1 FY27, but its margin is still only about 10%. <b>Food colours</b> (Vidhi, Dynemic, Deepak Chemtex) face a US push away from petroleum-based dyes. Two special situations dominate the headlines. Kiri got $689 m for DyStar and is spending it on a ₹12,000 cr copper complex, which the market punishes. Several micro caps have tripled with no news, which is a warning sign rather than a thesis.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="Dyes vs pigments">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Dyes, pigments and food colours</h2>
+  <div class="tbl-wrap"><table><thead><tr><th></th><th>Dyes</th><th>Pigments</th><th>Food colours</th></tr></thead><tbody>
+    <tr><td>How it colours</td><td>Dissolves, then bonds with or soaks into the fibre</td><td>Insoluble particles held on the surface by a binder</td><td>Soluble dyes (or "lakes" fixed on alumina) approved for eating</td></tr>
+    <tr><td>Main users</td><td>Textile processors, leather tanneries, paper mills</td><td>Paint, printing ink, plastics, coatings, cosmetics</td><td>Confectionery, drinks, snacks, pharma tablets</td></tr>
+    <tr><td>What the buyer pays for</td><td>Shade, fastness, price; bought by the kilo through dealers</td><td>Consistency, weather resistance, approvals</td><td>Purity and regulatory certification</td></tr>
+    <tr><td>India's position</td><td>World leader in reactive dyes; strong in acid and direct dyes; weaker in disperse</td><td>Strong in phthalocyanine blues and greens; now owns a global leader (Sudarshan–Heubach)</td><td>A leading exporter of synthetic food colours</td></tr>
+    <tr><td>Main risk</td><td>Chinese pricing, pollution closures, textile demand</td><td>Raw-material swings, auto and construction cycles</td><td>Regulation (US FDA, EU labels), shift to natural colours</td></tr>
+  </tbody></table></div>
+  <h3>The dye families, matched to the fibre they colour</h3>
+  <ul>
+    <li><b>Reactive dyes:</b> form a chemical bond with cotton and viscose, so they don't wash out. They are India's biggest dye family and the reason H-acid and vinyl sulphone matter.</li>
+    <li><b>Disperse dyes:</b> tiny particles that dissolve into polyester at high temperature. China dominates, supplying about 47% of world disperse-dye exports in 2024.</li>
+    <li><b>Acid dyes:</b> for nylon, wool, silk and leather; metal-complex versions give deep, fast shades.</li>
+    <li><b>Direct, sulphur and vat dyes:</b> cheaper cotton dyes. Sulphur black colours cheap black cottons; indigo, a vat dye, colours denim.</li>
+    <li><b>Basic (cationic) dyes:</b> for acrylic fibres and paper.</li>
+    <li><b>Optical brighteners:</b> not colours, but molecules that absorb invisible ultraviolet light and give off blue light, which makes whites look whiter. They are in detergents and paper.</li>
+  </ul>
+  <h3>The pigment families</h3>
+  <ul>
+    <li><b>Organic azo pigments:</b> the yellows, oranges and reds of printing inks and plastics. They are cheap and made in volume.</li>
+    <li><b>Phthalocyanines:</b> the blues (Pigment Blue 15) and greens (Pigment Green 7) in almost every ink and paint. They start from CPC blue (Asahi Songwon, AksharChem, Ishan, Kesar).</li>
+    <li><b>High-performance pigments:</b> quinacridones, DPP reds and perylenes for car paints and outdoor plastics. They survive years of sun and heat and earn the best margins.</li>
+    <li><b>Inorganic pigments:</b> ultramarine blue (Ultramarine &amp; Pigments), iron oxides, chrome yellows, and titanium dioxide, the white (see 004).</li>
+    <li><b>Effect pigments:</b> pearlescent and metallic flakes for cosmetics and car finishes (Sudarshan).</li>
+  </ul>
+  <div class="box ana"><span class="tag">Analogy</span><p>A dye is like tea staining a cup: the colour goes <i>into</i> the material. A pigment is like paint on a fence: the colour sits <i>on top</i> and needs a binder to stay there. A food colour is a tea you are allowed to drink.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The blue printed on many soft-drink cans and the cyan cartridge in an office printer are phthalocyanine blue. The red of a new car is often a DPP or quinacridone pigment. A maroon cotton kurta was almost certainly dyed with a reactive dye whose backbone started as H-acid. Your jeans are indigo. Traditional laundry blue (neel) is ultramarine. The orange of a jelly sweet in the US may be Yellow 6, one of the six colours the FDA wants out of the food supply by end-2026.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From coal tar to a coloured shirt</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Aromatic feedstocks</h4><div class="an">Flour and sugar</div>Naphthalene (from coal tar), benzene, aniline, toluene, phthalic anhydride; sulphuric acid, oleum, nitric acid, caustic.<div class="who">Himadri (naphthalene), refiners, acid makers (see 004)</div><div class="m">Crude-, coal- and sulphur-linked</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Dye intermediates</h4><div class="an">Dough and base sauces</div>H-acid, gamma acid, J-acid, K-acid, vinyl sulphone ester, para-base, beta-naphthol, CPC blue.<div class="who">Bodal, Bhageria, Shree Pushkar, AksharChem, Kiri, Ishan, Shreyas, Asahi Songwon</div><div class="m">Dirtiest step; prices spike when plants close</div></div>
+    <div class="stage"><div class="no">03</div><h4>Dyes</h4><div class="an">Cooked dishes</div>Reactive, acid, direct, disperse dyes in powder or liquid; optical brighteners.<div class="who">Bodal, Kiri, Indokem, Vipul, Ushanti, Mahickra, Hindprakash, Dynamic, Daikaffil</div><div class="m">Commodity-like; sold through dealers</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Pigments</h4><div class="an">A different kitchen</div>Organic, phthalocyanine, high-performance, inorganic and effect pigments.<div class="who">Sudarshan, Sudarshan Colorants, Asahi Songwon, Ultramarine, Vipul, Jaysynth</div><div class="m">Approval-led; steadier</div></div>
+    <div class="stage"><div class="no">05</div><h4>Food and cosmetic colours</h4><div class="an">Dishes you can eat</div>Synthetic food colours, aluminium lakes, D&amp;C colours, natural extracts.<div class="who">Vidhi, Dynemic, Deepak Chemtex, Mahickra</div><div class="m">Regulated; purity is the product</div></div>
+    <div class="stage"><div class="no">06</div><h4>Users</h4><div class="an">The diners</div>Textile processors (Surat, Tiruppur, Ludhiana, Bangladesh), tanneries, paint and ink makers, plastics, food brands.<div class="who">Processors, Asian Paints, ink majors, food companies</div><div class="m">Consumer demand</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Feedstocks:</b> the flour and sugar. Naphthalene is the white stuff in old-fashioned mothballs; it comes from tar left over when coal is baked into coke for steel mills.</li>
+    <li><b>Intermediates:</b> the dough. Naphthalene is soaked in strong acid (sulphonation), treated with nitric acid (nitration, see 008), then reduced and cooked again until it becomes H-acid. Every step leaves acidic, coloured water that must be cleaned before it can be released. That is why this step closes first when inspectors arrive.</li>
+    <li><b>Dyes:</b> the dough becomes a dish. Two intermediates are joined in an ice-cold reaction (diazotisation and coupling, see 008) to make an azo dye. A "hook" (vinyl sulphone) is then attached so the dye can grab cotton.</li>
+    <li><b>Pigments:</b> a separate kitchen that makes colours which never dissolve. The skill is grinding and finishing the particles to exactly the right size, because size decides the shade and the strength.</li>
+    <li><b>Food colours:</b> the same kind of chemistry, but cleaned to pharmaceutical purity and certified batch by batch.</li>
+    <li><b>Users:</b> a dyeing house in Surat buys a 25 kg drum of reactive red, dissolves it in hot water with salt and soda ash (see 003), and pushes cotton cloth through it.</li>
+  </ul>
+  <div class="box ana"><span class="tag">Analogy</span><p>Think of a bakery chain. Most of the flour mess is made at the dough stage. When the city inspector shuts down messy dough-makers, bread makers across town have to pay whatever the surviving dough-makers ask. That is dye intermediates in 2016–17 and again in 2026.</p></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Profit pools at the intermediate step when supply is disrupted, because it is the dirtiest and most regulated step. It also pools in pigments when a company has approvals with global paint, ink and plastics makers. Pure dye makers sit in the middle, squeezed between intermediate costs and thousands of fragmented, credit-hungry textile processors. The best position is <b>integration</b>, making both the intermediate and the dye (Bodal, Kiri), because it captures whichever margin is fat at the time.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 25 companies, grouped by business</h2>
+  <p>2026 returns are to 18 September. Market caps are approximate.</p>
+  <h3>A. Global pigments</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Sudarshan Chemical (~₹9,500 cr)</td><td>Organic, inorganic and effect pigments. It bought Germany's Heubach Group, which had absorbed Clariant's pigments in 2022, and completed the deal on 3 March 2025. Now 19 international sites and the world's #2 pigment maker.</td><td>Revenue ₹2,642 cr (+5%); profit about doubled to ~₹97 cr. EBITDA margin ~10%, with Heubach's EBITDA nearly doubled to ₹128 cr and ₹36 cr of restructuring costs. It sold a German unit to Celanese (€76.5 m), bought a Swiss aluminium-dye plant (CHF 7 m) and plans a 70.26% direct stake in Sudarshan Colorants. 2026 +33%.</td></tr>
+    <tr><td>Sudarshan Colorants India (~₹870 cr)</td><td>Pigments and dyes for paints, inks and plastics. Formerly Clariant Chemicals (India), then Heubach Colorants India.</td><td>Revenue ₹222 cr (+5.5%), profit ₹20.4 cr (+19%). 2026 −19%; −44% from its October 2024 peak, as the stake restructuring overhangs the stock.</td></tr>
+  </tbody></table></div>
+  <h3>B. Integrated intermediates and dyes</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Bodal Chemicals (~₹2,200 cr)</td><td>India's largest domestic dye-intermediate maker (H-acid, vinyl sulphone and others), reactive dyes, sulphuric acid, and a new benzene-derivatives unit at Saykha. It shut older Vatva units.</td><td>Record revenue ₹704 cr (+57%), EBITDA ₹74 cr (+43%), profit ₹28.8 cr (+178%), on volumes, price rises and full pass-through of raw-material costs; the Saykha benzene unit started contributing. 2026 +257%.</td></tr>
+    <tr><td>Kiri Industries (~₹3,300 cr)</td><td>Reactive dyes and intermediates. Owned 37.57% of DyStar until 30 Dec 2025, when Longsheng paid $689.03 m under a Singapore court order.</td><td>Revenue ₹312 cr (+55%, on pricing). Profit ₹270 cr, but ₹286 cr of it was other income (interest on inter-corporate loans, treasury gains). Plans a ~₹12,000 cr copper complex: tube and rod plants in FY28, a refinery in FY29, a 40,000 t copper-foil ambition, and a fertiliser tie-in. No dividend. 2026 −27%.</td></tr>
+  </tbody></table></div>
+  <h3>C. Intermediates and pigment bases</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Bhageria Industries (~₹1,350 cr)</td><td>Dye intermediates sold mainly to reactive-dye makers, plus solar power generation.</td><td>Revenue ₹286 cr (+82%), profit ₹34 cr (+203%), but analysts flag thinner margins. 2026 +85%.</td></tr>
+    <tr><td>Shree Pushkar Chemicals &amp; Fertilisers (~₹1,640 cr)</td><td>Dye intermediates and reactive dyes. Its spent acid is routed into single super phosphate fertiliser (SSP) and soil conditioners, a "zero-waste" loop (see 014 for SSP). It also makes cattle feed.</td><td>Revenue ₹280 cr (+10%), profit ₹22.9 cr (+9%). Chemical volumes fell to 9,113 t (from 14,837 t) and fertiliser volumes to 66,527 t (from 76,288 t). Commissioned Unit 5, taking dye capacity to 6,000 tpa, and a 10 MW solar plant. 2026 +30%.</td></tr>
+    <tr><td>AksharChem (~₹310 cr)</td><td>Vinyl sulphone ester, CPC blue and pigment green.</td><td>Revenue +45% and a swing back to profit (per a scanx report; its reported absolute figures look mislabelled, so check the filing). 2026 +63%.</td></tr>
+    <tr><td>Ishan Dyes &amp; Chemicals (~₹130 cr)</td><td>Phthalocyanine blue and green pigments.</td><td>2026 −22%; −70% from its April 2022 peak.</td></tr>
+    <tr><td>Shreyas Intermediates (~₹50 cr)</td><td>Pigment and dye intermediates. Moved in from Pharma APIs; the classification is correct.</td><td>2026 −32%. Tiny and illiquid.</td></tr>
+  </tbody></table></div>
+  <h3>D. Pigment specialists</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Ultramarine &amp; Pigments (~₹1,220 cr)</td><td>Ultramarine blue; surfactants made by sulphonation (the bigger revenue line); a small IT-enabled services arm.</td><td>Revenue ₹240 cr, consolidated profit ₹31.6 cr (vs ₹20.2 cr, +56%). 2026 flat; −30% from its July 2025 peak.</td></tr>
+    <tr><td>Asahi Songwon Colors (~₹410 cr)</td><td>CPC blue and beta-blue pigments; a pharma API unit.</td><td>Revenue ₹189 cr (+26%), profit ₹19.2 cr (vs ₹3.2 cr), EBITDA margin 17.2%; the API unit turned profitable. 2026 +40%.</td></tr>
+    <tr><td>Vipul Organics (~₹490 cr)</td><td>Organic pigments and dyes.</td><td>Revenue ₹52 cr (+38%), profit ₹2.5 cr (doubled). Began production at a new Saykha (Gujarat) pigment plant, shifting pigment work out of Tarapur. 2026 +14%.</td></tr>
+    <tr><td>Jaysynth Orgochem (~₹230 cr)</td><td>Specialty dyes, digital textile-printing inks, pigment dispersions.</td><td>Revenue ₹58 cr (−1.5%), profit ₹5.5 cr (about 3x); new statutory auditor. 2026 +11%.</td></tr>
+  </tbody></table></div>
+  <h3>E. Food colours</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Vidhi Specialty Food Ingredients (~₹1,700 cr)</td><td>Synthetic food colours, lakes and natural colours; a leading global exporter. CoatIcon, a tablet-coating range, is its new platform.</td><td>Revenue ₹146 cr (+66%), profit ₹17.1 cr (+35%); EBITDA margin fell to 17.8% from 23.4% as it scaled up. It targets raising value-added products from ~5% to 10–12% of sales. 2026 −1%, 2025 −34% after the FDA plan.</td></tr>
+    <tr><td>Dynemic Products (~₹290 cr)</td><td>Food colours, lakes, D&amp;C colours. Moved in from Packaged Foods, where it did not belong.</td><td>2026 −13%; −68% from its 2021 peak.</td></tr>
+    <tr><td>Deepak Chemtex (~₹90 cr)</td><td>Synthetic food colours. Not related to Deepak Nitrite.</td><td>2026 −22%.</td></tr>
+  </tbody></table></div>
+  <h3>F. Small dye makers and traders</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Indokem (~₹1,700 cr)</td><td>Textile dyes and chemicals, plus electrical capacitors (Khatau group).</td><td>Revenue ~₹158 cr and profit ~₹3 cr against a ~₹1,700 cr market cap. It rose 537% in 2025 with no matching earnings, the classic speculative profile. 2026 flat.</td></tr>
+    <tr><td>Mahickra Chemicals (~₹300 cr)</td><td>Reactive and acid dyes, pigments, food colours, excipients.</td><td>FY26 revenue ₹107.5 cr (+18%), operating profit ₹6.9 cr (vs ₹3.5 cr). 2026 +112%.</td></tr>
+    <tr><td>Ushanti Colour Chem (~₹330 cr)</td><td>Reactive dyes (Ahmedabad).</td><td>From ₹69.9 on 13 Feb to about ₹260 in August, with no fundamental news found. 2026 +331%. Treat as speculative.</td></tr>
+    <tr><td>Hindprakash Industries (~₹140 cr)</td><td>Dyes and intermediates, manufacturing and trading.</td><td>2026 −10%.</td></tr>
+    <tr><td>Dynamic Industries (~₹36 cr)</td><td>Reactive dyes and intermediates.</td><td>2026 +9%.</td></tr>
+    <tr><td>Daikaffil Chemicals (~₹28 cr)</td><td>A small dye maker.</td><td>2026 −39%.</td></tr>
+    <tr><td>Vivid Global Industries (~₹18 cr)</td><td>Dyes and intermediates.</td><td>2026 +21%.</td></tr>
+    <tr><td>Bhatia Colour Chem (~₹39 cr)</td><td>Dyes and textile chemicals (SME listing).</td><td><b>Red flag:</b> down 92% in 2026, from a 52-week high of ₹430 to about ₹27, through steady daily falls with no single-day break and no explanation found in filings or news. Down 84% year on year by May.</td></tr>
+    <tr><td>Vellora Impact (~₹6 cr)</td><td>Listed as a dye company; tiny, with thin disclosure.</td><td>2026 −40%. Too small to analyse.</td></tr>
+  </tbody></table></div>
+  <p><b>Moved out (6):</b> Binayak Tex and Weizmann to Textile Processing; Jattashankar to Commodity Trading; Krypton to Auto Components; Natura Hue Chem to Business Services; Sikko to Agrochemicals. <b>Moved in (2):</b> Dynemic Products (from Packaged Foods) and Shreyas Intermediates (from Pharma APIs).</p>
+  <div class="box warn"><span class="tag">Classification flags for the next audit</span><p><b>Kesar Petroproducts</b> makes CPC blue and phthalocyanine pigments but sits in 002 Petrochemicals; it belongs here. <b>Shree Hari Chemicals Export</b> makes dye intermediates and sits in 008 Specialty; it belongs here too. <b>Kiri</b> will need reclassifying once copper revenue starts in FY28. <b>Shree Pushkar</b> earns a large share from fertilisers; it stays here while dyes and intermediates lead its profit.</p></div>
+  <h3>Related names in other primers</h3>
+  <ul>
+    <li><b>Atul</b> (008): has a colours division with polyester and cotton dyes.</li>
+    <li><b>Meghmani Organics</b> (001): one of India's larger CPC blue and pigment green makers, alongside its agrochemicals.</li>
+    <li><b>Himadri Speciality</b>: India's largest coal-tar distiller and the naphthalene source.</li>
+    <li><b>Paint makers</b> (013): pigment buyers.</li>
+    <li><b>Textile processors</b> (the Textile Processing primer): dye buyers.</li>
+    <li><b>Epsilon Carbon</b> (unlisted): coal tar.</li>
+    <li><b>Colourtex</b> (unlisted): a large Surat reactive-dye maker.</li>
+  </ul>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Spreads, closures and approvals</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th class="num">EBITDA margin*</th><th>What drives it</th><th>Examples</th></tr></thead><tbody>
+    <tr><td>Dye intermediates</td><td class="num">5–25%</td><td>The spread over naphthalene, acids and energy; Chinese closures; effluent capacity</td><td>Bodal, Bhageria, Shree Pushkar</td></tr>
+    <tr><td>Commodity dyes</td><td class="num">8–15%</td><td>Volume, dealer reach, credit terms, captive intermediates</td><td>Kiri, Vipul, small makers</td></tr>
+    <tr><td>Commodity pigments (CPC, azo)</td><td class="num">8–17%</td><td>Phthalic anhydride and copper costs; Chinese exports</td><td>Asahi Songwon, AksharChem, Ishan</td></tr>
+    <tr><td>High-performance and effect pigments</td><td class="num">15–25%</td><td>Approvals with car, coil-coating and ink makers; technology</td><td>Sudarshan (still restructuring at ~10%)</td></tr>
+    <tr><td>Food colours</td><td class="num">15–25%</td><td>Purity, certification, customer audits, regulation</td><td>Vidhi (17.8% in Q1 FY27)</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges across the cycle from company filings; one year can sit well outside them.</p>
+  <h3>Three things that make or break a year</h3>
+  <ol>
+    <li><b>Who else is allowed to run.</b> The industry's supply is not set by capacity on paper. It is set by capacity that the pollution board lets operate. A single closure order in Zhejiang or Vapi changes the price more than a year of demand growth.</li>
+    <li><b>Working capital.</b> Dye makers sell to thousands of small processors through dealers, on long credit. Receivables of three months or more are common, so a textile slowdown shows up as unpaid bills before it shows up as lower sales.</li>
+    <li><b>Effluent capacity.</b> A plant's output is capped by how much waste water its treatment plant and the cluster's common plant (CETP) can take. A company that has built zero-liquid-discharge (ZLD, see 008) and handles its own spent acid can run while neighbours are shut.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>Intermediates are like a toll bridge. When a rival bridge closes (a pollution shutdown in China or Gujarat), everyone has to use yours and you can raise the toll. When the other bridge reopens, the toll falls back, but you still have to maintain your bridge. Bodal's profit tripling in Q1 FY27 is a toll-raising quarter; the question is always when the other bridge reopens.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical raw materials">
+  <p class="eyebrow">6 · Critical raw materials</p>
+  <h2>What to watch on the input side</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Naphthalene</td><td>Coal-tar distillation, a by-product of steel-plant coke ovens (Himadri, imports)</td><td>H-acid, gamma acid, J-acid and beta-naphthol makers: Bodal, Bhageria, Shree Pushkar</td><td>Supply tied to steel output; costlier with coal and freight after the Gulf disruption</td></tr>
+    <tr><td>Benzene, aniline, acetanilide</td><td>Refineries (Reliance, IOC), imports; crude-linked</td><td>Vinyl sulphone and para-base makers (AksharChem, Bodal), azo dyes</td><td>Brent $103 on 18 September (see 002)</td></tr>
+    <tr><td>Sulphuric acid, oleum</td><td>Sulphur burners, smelter acid (see 004)</td><td>Everyone: sulphonation is the core reaction for H-acid and many dyes</td><td>Near-record sulphur and acid prices in 2026 (see 004)</td></tr>
+    <tr><td>Nitric acid</td><td>Ammonia-based plants (Deepak, GNFC, RCF)</td><td>Nitration steps in intermediates</td><td>Follows ammonia and gas costs</td></tr>
+    <tr><td>Caustic soda, soda ash, salt</td><td>Chlor-alkali and soda-ash makers (see 003)</td><td>Dye makers (neutralising) and dye users (salt and soda ash in the dye bath)</td><td>Caustic firm, soda ash soft</td></tr>
+    <tr><td>Phthalic anhydride, urea, copper salt</td><td>Domestic (IG Petrochemicals, Thirumalai; see 008), imports</td><td>CPC blue: Asahi Songwon, AksharChem, Ishan, Kesar</td><td>Anhydride margins weak; copper high</td></tr>
+    <tr><td>Chinese intermediates</td><td>Zhejiang and Jiangsu</td><td>Dye makers without captive intermediates</td><td>Disperse intermediates jumped ~50% in early 2026; Longsheng raised prices from 8 February</td></tr>
+    <tr><td>Energy (coal, gas, power)</td><td>Imported coal, LNG, grid</td><td>Everyone, especially spray drying and effluent evaporation</td><td>Higher after the Hormuz disruption (see 002)</td></tr>
+    <tr><td>Effluent capacity</td><td>Own ETP, cluster CETPs, pollution-board consent</td><td>Every Gujarat plant</td><td>The binding constraint: no consent, no production</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>In 2026 input costs rose almost everywhere, yet the intermediate makers made record profits because they could pass costs on. When a company says "full pass-through with strong demand" (Bodal's words), the spread is widening. When it says "we absorbed costs", the spread is narrowing. Listen for which one you hear.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Textile seasons drive dyes</h2>
+  <ul>
+    <li><b>July–October:</b> processors dye fabric for Indian festive (Diwali) and wedding demand, and for Western autumn–winter orders. This is the dye makers' busiest shipping stretch.</li>
+    <li><b>January–March:</b> spring–summer export orders and summer cottons.</li>
+    <li><b>Chinese New Year (January–February):</b> Chinese plants shut for two to four weeks, so dye and intermediate prices often firm. Longsheng's February 2026 price rise is a typical example.</li>
+    <li><b>Monsoon (June–September):</b> Gujarat's effluent systems are under most strain, and discharge checks and temporary closures cluster in these months.</li>
+    <li><b>Pigments</b> follow paint seasons (pre-Diwali repainting, see 013), global packaging and ink demand, and car production.</li>
+    <li><b>Food colours</b> follow confectionery and beverage seasons (summer drinks, festive sweets) and US and EU regulatory calendars.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 13 names (Sudarshan Chemical Industries Limited, Kiri Industries Limited, Bodal Chemicals Limited, Indokem Limited, Vidhi Specialty Food Ingredients Ltd, Shree Pushkar Chemicals &amp; Fertilisers Ltd., Bhageria Industries Ltd., Ultramarine &amp; Pigments Limited, Sudarshan Colorants India Ltd, Vipul Organics Limited, Asahi Songwon Colors Ltd., Ushanti Colour Chem Ltd., AksharChem India Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.1 pts (beat in 11 of 15 years); Jun +3.7 pts (beat in 9 of 15 years); Dec +3.7 pts (beat in 12 of 15 years).</li><li><b>Weakest months:</b> Feb -3.2 pts (beat in 3 of 15 years); May -3.0 pts (beat in 3 of 15 years); Nov -2.6 pts (beat in 4 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 2 of 15 years (median -4.4 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +13.9 pts); Aug–Sep beat the Nifty in 7 of 14 years (median +0.5 pts); Oct–Dec beat the Nifty in 6 of 14 years (median -0.6 pts); Sep–Nov beat the Nifty in 5 of 14 years (median -4.2 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -6.3 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.1 points.</p><p><b>Reading it:</b> April (11 of 15), July (12 of 16) and December (12 of 15) are the good months. February (3 of 15) and May (3 of 15) are the worst, and February–March together beat the Nifty in only 2 of 15 years. The basket is almost all small caps, so about 3 points of April's 7-point edge is the general small-cap April effect; the rest, and the weak February, belong to this industry. February is weak even though Chinese New Year usually firms dye prices, so a firm price alone is no reason to buy these stocks in February.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April misses (4 of 15).</b> Each had a market-wide cause:
+      <ul>
+        <li>2012 (−3.8): Kiri's collapse.</li>
+        <li>2013 (−6.0): the run-up to the rupee crisis.</li>
+        <li>2019 (−4.1): a small-cap bear market plus pollution curbs in Gujarat's clusters.</li>
+        <li>2025 (−6.4): the US "reciprocal" tariffs announced on 2 April hit textile-linked stocks.</li>
+      </ul>
+      The best Aprils were 2026 (+19.9), 2016 (+19.3) and 2014 (+17.9), all years when Chinese or Indian supply was tight.</li>
+    <li><b>April–July failures: 2012 (−19.9), 2013 (−15.1), 2018 (−11.7), 2019 (−22.8), 2022 (−0.4).</b> Each was a balance-sheet shock (Kiri 2012), a rupee or small-cap shock (2013, 2018), a regulatory shock (the NGT order of July 2019) or a demand slump (2022). The biggest April–July runs were 2016 (+58.0) and 2014 (+46.6), both during China's pollution war.</li>
+    <li><b>May is the weakest month</b> (3 of 15). The one big exception, 2025 (+13.8), was a rebound from the April tariff shock.</li>
+    <li><b>February–March</b> beat the Nifty only in 2014 (+16.1) and 2021 (+5.0). The worst were 2023 (−12.3) and 2024 (−11.7).</li>
+    <li><b>October–December</b> is a coin toss (6 of 14), but its outliers are large: 2015 (+40.3) and 2013 (+22.6), each ahead of a big following year. The big misses were 2020 (−9.6) and 2022 (−9.9).</li>
+    <li><b>December</b> beat the Nifty in 12 of 15 years.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The edge is April–July: a median of +13.9 points in 10 of 15 years. The weak stretch is February–May outside April. But the annual result is set by who is allowed to run plants (China's and Gujarat's regulators) and by dispersion: in 2026 the best stock rose 331% and the worst of the basket fell 27%. Use the calendar for timing, and intermediate prices and company results for selection. Micro caps that triple without news are not part of the seasonal case.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Pollution enforcement in China:</b> the 2014 Environmental Protection Law, the 2016–18 central inspections, the 2019 Xiangshui explosion (which closed a Jiangsu chemical park) and the 2021 energy curbs each cut dye and intermediate supply. This is the single biggest swing factor.</li>
+    <li><b>Pollution enforcement in India:</b> Gujarat's pollution board and the National Green Tribunal (NGT). The July 2019 NGT order froze expansion in critically polluted areas, including Vapi, Ankleshwar and Vatva. Closure notices hit whole clusters at once.</li>
+    <li><b>Intermediate prices:</b> H-acid, vinyl sulphone and CPC blue. In 2026 H-acid rose from ~40,000 to 60,000–70,000 yuan/t in China. Reactive dyes take over 80% of H-acid demand, so reactive-dye prices follow.</li>
+    <li><b>Textile demand:</b> Indian, Bangladeshi and Vietnamese processing volumes; Western retailer inventory cycles (the 2022–23 destocking); festive demand at home.</li>
+    <li><b>US trade policy:</b> 50% tariffs on Indian goods from 27 August 2025 hit textile exporters and so dye demand. They were cut to 18% in February 2026 and to about 10% after the Supreme Court ruling (see 008).</li>
+    <li><b>Input and energy costs:</b> naphthalene, benzene, sulphuric acid and coal. The 2026 Hormuz disruption lifted all of them (see 002, 004).</li>
+    <li><b>Paint, ink, plastics and auto demand</b> for pigments; restructuring of the global pigment industry (Clariant → Heubach → Sudarshan; BASF → DIC).</li>
+    <li><b>Regulation of food colours:</b> the US FDA's April 2025 plan, EU warning labels and state bans shift demand from synthetic to natural colours.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of up to 13 names with ₹300 cr+ market cap (8 in 2012, 13 from 2019; monthly returns capped at ±50%), price only; 2026 is to 18 September. There is no free daily price series for H-acid or dyes, so the notes carry the price story. Named stock moves are that stock's calendar-year return. Indokem's 1,103% (2014) and 537% (2025), and Kiri's −78% (2012) and +363% (2013), were checked against daily prices: they were gradual moves, not data errors.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a colour cycle</h3>
+  <ol>
+    <li><b>A regulator shuts capacity</b> (China 2014–17, 2021; Gujarat 2019). Intermediate prices jump first, then dyes.</li>
+    <li><b>Survivors re-price.</b> Integrated makers with their own effluent systems earn scarcity margins. Stocks double in a year (2014, 2016, 2026).</li>
+    <li><b>Capacity comes back.</b> Chinese plants relocate to compliant chemical parks and restart; Indian makers add capacity. Prices fall faster than costs, and stocks give back 25–40% (2018–19, 2022).</li>
+    <li><b>A long, quiet middle.</b> Commodity pricing, with rallies led by special situations (Kiri's DyStar case, Sudarshan's Heubach deal) rather than by the industry.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Price spikes are short; closures are the signal.</b> The best years started with a regulatory action, not with demand.</li>
+    <li><b>The average lies.</b> In 2025 the basket's average was +12% but the median stock fell 14%, because one micro cap (Indokem) rose 537%. Always check the median.</li>
+    <li><b>Special situations dominate large caps.</b> Kiri (DyStar, then copper) and Sudarshan (Heubach) moved on corporate events far more than on dye prices.</li>
+    <li><b>Food colours move on regulation,</b> not on the textile cycle: Vidhi rose on packaged-food demand in 2020–21 and fell on the FDA plan in 2025.</li>
+    <li><b>Unexplained micro-cap rallies end badly</b> often enough to matter: Bhatia Colour Chem went from ₹430 to about ₹27.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak (top 18 by market cap)</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Germany invented it, China and India make it</h2>
+  <p>The synthetic dye industry began in 1856, when 18-year-old William Perkin made mauveine by accident while trying to make quinine. Germany's BASF, Bayer and Hoechst and Switzerland's Ciba, Geigy and Sandoz dominated for over a century. From the 1990s, environmental costs pushed the dirty steps to Asia, first the intermediates, then the dyes. Today Europe keeps brands, patents and high-performance pigments; Asia does the chemistry.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Strength</th><th>2026 position</th></tr></thead><tbody>
+    <tr><td>China</td><td>Largest producer. Zhejiang Longsheng (~300,000 t of dye capacity, 100% owner of DyStar since December 2025) and Runtu (~120,000 t of disperse dyes). Leads disperse dyes (~47% of world exports) and most intermediates.</td><td>Raising prices in 2026 on cost push; plants concentrated in compliant chemical parks after 2016–19</td></tr>
+    <tr><td>India</td><td>World leader in reactive dyes; big in H-acid, vinyl sulphone and phthalocyanines; ~$7 bn dye and dyestuff market; about 75% of output from Gujarat</td><td>Intermediate makers repricing; Sudarshan now a global pigment consolidator</td></tr>
+    <tr><td>Europe</td><td>Brands and specialties: Archroma (Swiss; bought Huntsman Textile Effects in 2023), DyStar's European heritage, Heubach sites (now Sudarshan's)</td><td>High energy costs; plants closing or being sold to Asian owners</td></tr>
+    <tr><td>Japan</td><td>DIC and its Sun Chemical unit (bought BASF's pigments in 2021), Toyocolor; high-performance and ink pigments</td><td>Steady; technology leaders in pigments</td></tr>
+    <tr><td>Bangladesh, Vietnam, Turkey</td><td>Big dye consumers (garment exporters)</td><td>Demand depends on Western orders and US tariffs</td></tr>
+    <tr><td>United States</td><td>A consumer and regulator; food-colour policy is set here</td><td>Pushing out petroleum-based food dyes</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Europe → China (1990s–2000s):</b> cost and pollution rules. Many developed countries stopped making H-acid and vinyl sulphone because the effluent is toxic and hard to break down.</li>
+    <li><b>China → India, partly (2014–21):</b> China's crackdowns, then China+1 buying. Estimates from the 2010s put world vinyl sulphone output at about 10,000 t a month, with China making about 6,000 t and India, mainly Gujarat, most of the rest. Chinese dye makers even imported Indian intermediates.</li>
+    <li><b>Ownership moves east (2010–25):</b> DyStar went to Longsheng and Kiri in 2010 after its insolvency. BASF's pigments went to DIC in 2021, Clariant's pigments to Heubach in 2022, and Heubach to Sudarshan in 2025. Europe's colour heritage now largely belongs to Asian companies.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Digital textile printing:</b> inkjet printers put dye inks straight onto fabric, replacing screens and long dye runs. This favours ink makers (Jaysynth) over bulk dye sellers, and it uses less water.</li>
+    <li><b>Low-water and waterless dyeing:</b> supercritical CO₂ dyeing of polyester and dope dyeing (colouring the polymer before spinning, with pigments rather than dyes) cut effluent. This is a slow threat to disperse-dye volumes.</li>
+    <li><b>Cleaner intermediates:</b> recovering and reusing spent acid, and joining vinyl sulphone and H-acid production to recycle by-products. Research shows large waste cuts; this is the licence to operate in Gujarat.</li>
+    <li><b>Liquid dyes and brand chemical lists:</b> ZDHC and brand restricted-substance lists favour documented, tested suppliers over the anonymous small maker.</li>
+    <li><b>High-performance pigments for cars and electronics:</b> heat- and weather-resistant colours, and near-infrared-reflective blacks that let car sensors "see" dark vehicles.</li>
+    <li><b>Natural and bio-based colours:</b> plant extracts (anthocyanins, curcumin, annatto, spirulina) and fermentation-made colours replacing synthetic food dyes. This is a risk for pure synthetic sellers and an opportunity for those with natural ranges (Vidhi).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Gujarat pollution board: consent to operate, closure notices</td><td>Continuous, with periodic cluster-wide drives</td><td>Supply shocks; favours large compliant players</td></tr>
+    <tr><td>NGT and CPCB's CEPI scores</td><td>2019 expansion freeze in critically polluted areas, later eased case by case</td><td>Caps new capacity in Vapi, Ankleshwar, Vatva</td></tr>
+    <tr><td>Chinese environmental inspections</td><td>Less intense than 2016–18; plants now in chemical parks</td><td>Global supply swings</td></tr>
+    <tr><td>EU REACH (azo-amine restriction) and ZDHC</td><td>Azo dyes that release any of 22 listed aromatic amines are banned in EU textiles and leather</td><td>Testing and certification; favours documented suppliers</td></tr>
+    <tr><td>US FDA food-dye plan (22 April 2025)</td><td>Voluntary phase-out of six petroleum-based dyes (Red 40, Yellow 5 and 6, Blue 1 and 2, Green 3) by end-2026; Citrus Red 2 and Orange B to be revoked; Red 3 already revoked in January 2025</td><td>Volume risk for synthetic food-colour exporters; demand for natural colours</td></tr>
+    <tr><td>US tariffs on India (see 008)</td><td>50% (Aug 2025) → 18% (Feb 2026) → ~10%</td><td>Textile export demand, hence dye demand</td></tr>
+    <tr><td>Anti-dumping duties (see 008)</td><td>Product-specific cases on Chinese dyes and intermediates</td><td>Protects some domestic intermediates</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: an intermediate boom, and froth</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Intermediates</td><td>Boom</td><td>H-acid 60,000–70,000 yuan/t (from ~40,000); Bodal's record quarter; Bhageria's profit +203%</td></tr>
+    <tr><td>Dyes</td><td>Pricing up, volumes mixed</td><td>Kiri's revenue +55% "mainly on pricing"; Shree Pushkar's chemical volumes −39%</td></tr>
+    <tr><td>Textile demand</td><td>Recovering</td><td>US tariff cut to ~10%; festive season ahead</td></tr>
+    <tr><td>Input costs</td><td>High</td><td>Sulphuric acid and energy near records after the Hormuz disruption</td></tr>
+    <tr><td>Pigments</td><td>Improving</td><td>Sudarshan's Heubach EBITDA nearly doubled; Asahi margin 17%; Ultramarine's profit +56%</td></tr>
+    <tr><td>Food colours</td><td>Growing, margin pressure</td><td>Vidhi's revenue +66% but EBITDA margin 17.8% (from 23.4%)</td></tr>
+    <tr><td>Stock prices</td><td>Speculative at the small end</td><td>Ushanti +331%, Mahickra +112% with little news; Bhatia −92%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is phase 2 of the cycle (survivors re-price). History says phase 2 lasts as long as Chinese supply stays tight, and ends when Chinese prices stop rising, not when Indian results peak. Bodal's valuation, still only about ₹2,200 cr on a quarterly EBITDA of ₹74 cr, looks reasonable if H-acid holds and expensive if it halves. The micro-cap moves are not evidence of anything.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>H-acid, vinyl sulphone, disperse-dye prices in China</td><td>Chinese trade press, SunSirs, ChemAnalyst; weekly</td><td>The first sign the cycle has turned</td></tr>
+    <tr><td>Longsheng and Runtu price announcements</td><td>Company notices</td><td>China's price leaders</td></tr>
+    <tr><td>Chinese environmental actions and chemical-park accidents</td><td>News flow</td><td>Supply shocks (like 2019's Xiangshui)</td></tr>
+    <tr><td>Gujarat pollution board and NGT orders</td><td>News flow, exchange filings</td><td>Indian supply shocks</td></tr>
+    <tr><td>Indian textile and apparel exports</td><td>Commerce ministry, monthly</td><td>Dye demand</td></tr>
+    <tr><td>Bodal's and Kiri's realisations and volumes</td><td>Quarterly results</td><td>Spread vs volume split</td></tr>
+    <tr><td>Heubach margins inside Sudarshan</td><td>Quarterly results</td><td>Whether the deal earns its cost</td></tr>
+    <tr><td>Kiri's copper spending and inter-corporate loans</td><td>Quarterly results, annual report</td><td>Capital allocation risk</td></tr>
+    <tr><td>US food-colour rules and customer reformulations</td><td>FDA, state laws, company announcements</td><td>Food-colour volumes</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the colour cycle shows up</h2>
+  <ul>
+    <li><b>Textile processing and garments:</b> the biggest dye customers. A dye price spike squeezes processors, and weak processing hurts dye volumes.</li>
+    <li><b>Paints and inks</b> (013): pigment customers. Pigment costs are a meaningful slice of a paint's raw-material bill.</li>
+    <li><b>Coal-tar chemicals</b> (Himadri): the naphthalene supply.</li>
+    <li><b>Sulphuric acid and bromine</b> (004): shared inputs.</li>
+    <li><b>Chlor-alkali and soda ash</b> (003): used in the dye bath.</li>
+    <li><b>Fertilisers</b> (014): Shree Pushkar's spent acid becomes SSP; Kiri's planned refinery has a fertiliser tie-in.</li>
+    <li><b>Specialty chemicals</b> (008): the same unit processes, and Atul's colours division.</li>
+    <li><b>Copper</b> (non-ferrous metals primer): Kiri's future.</li>
+    <li><b>Water treatment and effluent engineering:</b> compliance spending rises with each crackdown.</li>
+    <li><b>Food and beverage brands:</b> reformulation away from synthetic colours.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of your intermediates is captive? What are today's H-acid and vinyl sulphone spreads versus the five-year average?</li>
+    <li>How much of this quarter's growth is price and how much is volume?</li>
+    <li>What is your effluent treatment capacity, is it ZLD, and when was your consent to operate last renewed? Any closure notices in five years?</li>
+    <li>What happens to your spent acid and gypsum?</li>
+    <li>What is the export share, and to which countries? How much depends on US-bound textiles?</li>
+    <li>What are debtor days with processors and dealers, and how did they move this year?</li>
+    <li>(Sudarshan) When do Heubach margins reach group targets, and what restructuring costs remain?</li>
+    <li>(Kiri) How will the copper complex be funded beyond the DyStar cash? Why no dividend? Who are the inter-corporate loans to?</li>
+    <li>(Vidhi, Dynemic) What share of sales is to US food customers, and how fast is the switch to natural colours?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Closure notices or pollution-board penalties.</li>
+    <li>Profit driven by other income rather than operations (Kiri's Q1 FY27).</li>
+    <li>Large diversification away from the core business.</li>
+    <li>A stock that triples with no results, orders or filings to explain it.</li>
+    <li>Steady daily falls with no disclosure (Bhatia Colour Chem).</li>
+    <li>Auditor changes at small companies. These are sometimes routine, but check why.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Kiri is cheap because of its cash."</td><td>The cash is real ($689 m received), but the market marks it down because management is spending it on an unrelated ₹12,000 cr copper project and pays no dividend. Q1 FY27 profit was mostly other income. It is cheap only if copper earns its cost of capital.</td></tr>
+    <tr><td>"Sudarshan is now a global specialty pigment play."</td><td>It has the scale (#2 globally) and profit doubled, but a ~10% EBITDA margin is still well below specialty levels, and restructuring costs continue.</td></tr>
+    <tr><td>"Dyes are a structural China+1 winner."</td><td>Only when China tightens supply. Between shocks (2018–19, 2022–25) Chinese pricing dominated and the basket lagged.</td></tr>
+    <tr><td>"The 2026 rally means the industry has turned."</td><td>The intermediate makers' results support it (Bodal, Bhageria), but much of the stock-price gain is in micro caps with no news. The median stock is up 30%, not 48%.</td></tr>
+    <tr><td>"The FDA plan will kill synthetic food colours."</td><td>It is voluntary, covers the US only, and runs to end-2026. Vidhi's revenue still grew 66% in Q1 FY27. The real risk is slow erosion of volumes and mix, not a cliff.</td></tr>
+    <tr><td>"Pollution rules are bad for Indian dye makers."</td><td>Bad for small, non-compliant ones; good for large integrated players, whose rivals shut. The 2014–17 boom was built on rules, not demand.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. H-acid, reactive" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Colour chemistry</h3><dl>
+    <dt>Dye</dt><dd>A soluble colourant that bonds with or soaks into the material.</dd>
+    <dt>Pigment</dt><dd>An insoluble coloured particle held on a surface by a binder.</dd>
+    <dt>Colourant</dt><dd>The umbrella term for dyes and pigments.</dd>
+    <dt>Chromophore</dt><dd>The part of a molecule that absorbs light and gives colour (for example, the azo group).</dd>
+    <dt>Azo</dt><dd>A nitrogen–nitrogen double bond; the most common family of dyes and organic pigments.</dd>
+    <dt>Coupling</dt><dd>The step after diazotisation (see 008) that joins two intermediates into an azo dye.</dd>
+    <dt>Sulphonation</dt><dd>Treating a molecule with sulphuric acid or oleum (see 004) to add sulphonic groups, which make dyes water-soluble; the main source of spent acid.</dd>
+    <dt>Reactive dye</dt><dd>Forms a chemical bond with cotton; India's main dye family.</dd>
+    <dt>Disperse dye</dt><dd>Dissolves into polyester at high temperature; China dominates.</dd>
+    <dt>Acid dye</dt><dd>For nylon, wool, silk and leather.</dd>
+    <dt>Direct dye</dt><dd>A simple, cheaper cotton dye with lower wash fastness.</dd>
+    <dt>Vat dye</dt><dd>Insoluble dye made temporarily soluble for dyeing; indigo for denim.</dd>
+    <dt>Sulphur dye</dt><dd>A cheap dye mainly for black and dark cotton.</dd>
+    <dt>Basic (cationic) dye</dt><dd>For acrylic fibres and paper.</dd>
+    <dt>Metal-complex dye</dt><dd>An acid dye with a metal atom for deeper, faster shades.</dd>
+    <dt>Optical brightener</dt><dd>A molecule that turns ultraviolet into blue light so whites look whiter.</dd>
+    <dt>Fastness</dt><dd>How well a colour survives washing, light, rubbing or sweat.</dd>
+    <dt>Fixation rate</dt><dd>The share of dye that ends up on the fibre; the rest goes to effluent.</dd>
+    <dt>Colour Index (C.I.) name</dt><dd>The standard code for a colourant, such as Pigment Blue 15 or Reactive Red 195.</dd>
+  </dl>
+  <h3>Intermediates and pigments</h3><dl>
+    <dt>Naphthalene</dt><dd>A coal-tar aromatic; the starting point for H-acid and other naphthalene acids.</dd>
+    <dt>H-acid</dt><dd>1-amino-8-naphthol-3,6-disulphonic acid; the key intermediate for reactive and direct dyes, and one of the most polluting to make. Reactive dyes take over 80% of demand.</dd>
+    <dt>Gamma acid, J-acid, K-acid</dt><dd>Other naphthalene-based dye intermediates.</dd>
+    <dt>Vinyl sulphone (VS) ester</dt><dd>Para-base ester; the "hook" that lets a reactive dye bond with cotton.</dd>
+    <dt>Beta-naphthol</dt><dd>An intermediate for azo pigments and dyes.</dd>
+    <dt>CPC blue</dt><dd>Crude copper phthalocyanine, made from phthalic anhydride, urea and a copper salt; the base for blue and green pigments.</dd>
+    <dt>Phthalocyanine blue / green</dt><dd>Pigment Blue 15 and Pigment Green 7; the most used blues and greens in inks and paints.</dd>
+    <dt>High-performance pigment (HPP)</dt><dd>Pigments with superior heat, light and weather resistance (quinacridones, DPP, perylenes).</dd>
+    <dt>Quinacridone / DPP</dt><dd>High-performance reds and violets; DPP is the "Ferrari red" family.</dd>
+    <dt>Effect pigment</dt><dd>Pearlescent or metallic flakes.</dd>
+    <dt>Ultramarine</dt><dd>A blue inorganic pigment made from clay, soda ash, sulphur and carbon.</dd>
+    <dt>Lake</dt><dd>A food colour fixed on aluminium hydroxide so it does not bleed; used in tablets and coated sweets.</dd>
+    <dt>FD&amp;C / E-number colours</dt><dd>US and EU codes for approved food colours (for example, FD&amp;C Red 40 = E129).</dd>
+    <dt>Natural colours</dt><dd>Plant- or microbe-derived colours: anthocyanins, curcumin, annatto, spirulina.</dd>
+    <dt>Dope dyeing</dt><dd>Colouring synthetic fibre before it is spun.</dd>
+    <dt>Digital textile printing</dt><dd>Inkjet printing of dye inks directly onto fabric.</dd>
+  </dl>
+  <h3>Regulation and business terms</h3><dl>
+    <dt>ETP / CETP</dt><dd>Effluent treatment plant; common effluent treatment plant serving a whole industrial cluster.</dd>
+    <dt>Spent acid</dt><dd>Dilute, contaminated acid left after sulphonation; must be reused, neutralised or sold (for example, into SSP fertiliser).</dd>
+    <dt>Gypsum sludge</dt><dd>The solid waste made when spent acid is neutralised with lime.</dd>
+    <dt>Consent to operate (CTO)</dt><dd>The pollution board's permission to run a plant; withdrawal means closure.</dd>
+    <dt>CEPI</dt><dd>Comprehensive Environmental Pollution Index; CPCB's score for industrial clusters. "Critically polluted" areas face expansion curbs.</dd>
+    <dt>NGT</dt><dd>National Green Tribunal, India's environmental court.</dd>
+    <dt>ZDHC / MRSL</dt><dd>Zero Discharge of Hazardous Chemicals, a brand-led programme, and its Manufacturing Restricted Substances List.</dd>
+    <dt>REACH azo-amine restriction</dt><dd>EU ban on textiles and leather dyed with azo dyes that release any of 22 listed aromatic amines.</dd>
+    <dt>Central environmental inspection</dt><dd>China's 2016–18 national pollution campaign that shut thousands of chemical plants.</dd>
+    <dt>Scarcity margin</dt><dd>Extra profit earned while rivals are shut (see 002).</dd>
+    <dt>Other income</dt><dd>Income from outside operations (interest, treasury gains); Kiri's Q1 FY27 profit was mostly this.</dd>
+    <dt>Inter-corporate loan (ICD)</dt><dd>A loan from one company to another; a governance question when large.</dd>
+    <dt>Minority oppression</dt><dd>The legal claim that controlling shareholders treated a minority unfairly; the basis of Kiri's DyStar case.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Sulphuric acid / oleum</dt><dd>See 004 Inorganic &amp; Commodity Chemicals.</dd>
+    <dt>Titanium dioxide</dt><dd>The white pigment; see 004.</dd>
+    <dt>Soda ash / caustic soda</dt><dd>See 003 Chlor-Alkali &amp; Soda Ash.</dd>
+    <dt>Nitration / diazotisation</dt><dd>See 008 Specialty Chemicals.</dd>
+    <dt>ZLD</dt><dd>Zero liquid discharge; see 008.</dd>
+    <dt>China+1 / destocking</dt><dd>See 008.</dd>
+    <dt>Anti-dumping duty (ADD)</dt><dd>See 008 and 002.</dd>
+    <dt>Masterbatch</dt><dd>Concentrated pigment in plastic pellets; see 002.</dd>
+    <dt>Benzene / aromatics (BTX)</dt><dd>See 002 Petrochemicals.</dd>
+    <dt>Phthalic anhydride</dt><dd>See 008.</dd>
+    <dt>SME platform / upper circuit</dt><dd>See 008 and 004.</dd>
+    <dt>QIP</dt><dd>Qualified institutional placement; see 007.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What's the difference between a dye and a pigment?</summary><p>A dye dissolves and bonds with or soaks into the material; a pigment is an insoluble particle held on the surface by a binder.</p></details>
+  <details class="q"><summary>2. Why do dye intermediates earn the biggest profits in a boom?</summary><p>They are the dirtiest, most regulated step, so closures hit them first; survivors with their own effluent systems can raise prices (the toll-bridge effect).</p></details>
+  <details class="q"><summary>3. What set off the 2014–17 boom in Indian dye stocks?</summary><p>China's pollution war: the 2014 Environmental Protection Law and the 2016–18 central inspections shut thousands of Chinese dye and intermediate plants.</p></details>
+  <details class="q"><summary>4. Why did the basket fall 25% in 2019 even though China's Xiangshui explosion tightened supply?</summary><p>India's own NGT order froze expansion in critically polluted areas like Vapi and Ankleshwar, demand slowed, and small caps were in a bear market.</p></details>
+  <details class="q"><summary>5. What drove Bodal's record Q1 FY27?</summary><p>Higher volumes and realisations, with rising raw-material costs fully passed on as H-acid prices in China rose from ~40,000 to 60,000–70,000 yuan/t; its new Saykha benzene unit also contributed.</p></details>
+  <details class="q"><summary>6. Why did Kiri's stock fall after it received $689 m?</summary><p>It is spending the cash on an unrelated ~₹12,000 cr copper complex, pays no dividend, and its Q1 FY27 profit was mostly other income.</p></details>
+  <details class="q"><summary>7. What did Sudarshan buy, and what is the remaining question?</summary><p>Germany's Heubach Group (which included Clariant's pigments), making it the world's #2 pigment maker; the question is whether a ~10% EBITDA margin can reach specialty levels.</p></details>
+  <details class="q"><summary>8. Why was the 2025 basket average (+12%) misleading?</summary><p>One micro cap, Indokem, rose 537%; the median stock fell 14%.</p></details>
+  <details class="q"><summary>9. What does the FDA's April 2025 plan ask for, and who is exposed?</summary><p>A voluntary phase-out of six petroleum-based food dyes by end-2026 (plus revoking two others); synthetic food-colour exporters like Vidhi, Dynemic and Deepak Chemtex.</p></details>
+  <details class="q"><summary>10. Which window has been reliable for these stocks, and which has not?</summary><p>April–July (10 of 15 years, median +13.9 points); February–March beat the Nifty in only 2 of 15 years.</p></details>
+  <details class="q"><summary>11. Why does Shree Pushkar also sell fertiliser?</summary><p>It routes spent sulphuric acid from dye-intermediate making into single super phosphate, turning a waste problem into a product.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members with at least ₹300 cr market cap vs NSE:NIFTY; BSE history joined for names that recently moved to NSE; individual stock returns for the year notes; extreme moves checked day by day.</li>
+    <li>Industry: <a href="https://www.indianchemicalnews.com/opinion/colors-of-opportunity-indias-expanding-dye-and-dyestuff-industry-27154">India's dye and dyestuff industry</a>; <a href="https://www.sinobtd.com/news/8794.html">China dye exports</a>; <a href="https://in.thedollarbusiness.com/news/gujarat-exports-raw-material-for-dyes-to-china/47451">Gujarat vinyl sulphone exports to China</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0959652622036514">H-acid and vinyl sulphone cleaner production</a>.</li>
+    <li>Intermediate prices: <a href="https://www.imarcgroup.com/h-acid-pricing-report">H-acid prices 2026</a>; <a href="https://news.futunn.com/en/post/71511344/surge-in-dye-prices-h-acid-nears-70000-yuan-mark">H-acid nears 70,000 yuan</a>; <a href="https://www.sunsirs.com/uk/detail_news-30644.html">SunSirs disperse dyes</a>; <a href="https://www.colorcominternational.com/news/detail/5.html">Colorcom on intermediate-driven price rises</a>.</li>
+    <li>Kiri: <a href="https://www.marketscreener.com/news/zhejiang-longsheng-group-co-ltd-completed-the-acquisition-of-remaining-37-57-stake-in-dystar-globa-ce7e58dadd88fe26">Longsheng completes DyStar purchase</a>; <a href="https://scanx.trade/stock-market-news/orders-deals/kiri-industries-completes-689-million-exit-from-dystar-global-holdings/28715789">Kiri's $689 m exit</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/kiri-industries-ltd-bom-532967-130033232.html">Q1 FY27 call</a>; <a href="https://businessupturn.com/business/kiri-industries-maps-rs12-000-crore-copper-transformation-first-revenue-in-fy28-rs2-000-crore-dyes-potential-and-40-000-tonne-copper-foil-ambition-emerge-from-q1-call/">₹12,000 cr copper plan</a>; <a href="https://jayadeepbhat.substack.com/p/kiri-industries-special-situation">special-situation history</a>.</li>
+    <li>Sudarshan: <a href="https://www.sudarshan.com/newsroom/sudarshan-chemical-completes-acquisition-of-heubach-group/">Heubach completion</a>; <a href="https://cen.acs.org/business/mergers-&amp;-acquisitions/Sudarshan-bags-bankrupt-pigment-firm/102/i33">C&amp;EN on the deal</a>; <a href="https://www.sahi.com/news/sudarshan-chemical-reports-97-3-crore-q1-net-profit-approves-70-26-stake-in-subsidiary-387-PE1_CORP">Q1 FY27</a>; <a href="https://www.investorstack.in/earnings-calls/sudarschem">earnings call</a>; <a href="https://scanx.trade/stock-market-news/companies/sudarshan-colorants-q1-results-net-profit-rises-19-yoy-to-20-36-crore/47493504">Sudarshan Colorants Q1</a>.</li>
+    <li>Intermediates: <a href="https://www.indianchemicalnews.com/chemical/lite/bodal-chemicals-posts-q1-fy27-pat-178-higher-at-rs-29-cr-31409">Bodal Q1 FY27</a>; <a href="https://www.business-standard.com/amp/markets/capital-market-news/bhageria-industries-soars-after-q1-pat-jumps-203-yoy-126072300370_1.html">Bhageria Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/shree-pushkar-chemicals-q1-results-net-profit-rises-9-yoy-229-million/48103476">Shree Pushkar Q1 FY27</a>; <a href="https://tradebrains.in/indian-markets/shree-pushkar-commissions-unit-5-dyes-plant-dyes-capacity-scaled-to-6000-mtpa-12518867">Shree Pushkar Unit 5</a>; <a href="https://scanx.trade/stock-market-news/companies/aksharchem-q1-results-net-profit-up-2-036-yoy-15-21-lakh/48096516">AksharChem Q1</a>.</li>
+    <li>Pigments and dyes: <a href="https://www.sahi.com/news/ultramarine-pigments-reports-q1-consolidated-net-profit-of-316m-rupees-vs-202m-yoy-294-PE1_CORP">Ultramarine Q1 FY27</a>; <a href="https://indiantextilejournal.com/vipul-organics-q1-fy27-pat-rises-99-75-as-revenue-grows-38-44/">Vipul Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/jaysynth-orgochem-q1-results-net-profit-jumps-188-yoy-to-5-35-cr/47544679">Jaysynth Q1</a>; <a href="https://www.screener.in/company/MAHICKRA/">Mahickra</a>; <a href="https://www.screener.in/company/504092/">Indokem</a>; <a href="https://www.screener.in/company/UCL/">Ushanti</a>; <a href="https://www.valueresearchonline.com/stocks/302608/bhatia-colour-chem-ltd/">Bhatia Colour Chem</a>.</li>
+    <li>Food colours: <a href="https://www.haynesboone.com/news/alerts/fda-announces-plan-to-phase-out-petroleum-based-food-dyes">FDA phase-out plan</a>; <a href="https://cen.acs.org/food/food-ingredients/FDA-eyes-phaseout-petroleum-based/103/web/2025/04">C&amp;EN on the FDA plan</a>; <a href="https://www.screener.in/company/VIDHIING/">Vidhi</a>.</li>
+    <li>Company descriptions for small caps: Screener.in and company filings. Asahi Songwon's and Vidhi's Q1 FY27 figures come from exchange-filing summaries.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -3.0}, {"y": 2013, "v": -9.1}, {"y": 2014, "v": 16.1}, {"y": 2015, "v": -5.4}, {"y": 2016, "v": -5.4}, {"y": 2017, "v": -5.9}, {"y": 2018, "v": -9.6}, {"y": 2019, "v": -0.2}, {"y": 2020, "v": -4.4}, {"y": 2021, "v": 5.0}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": -12.3}, {"y": 2024, "v": -11.7}, {"y": 2025, "v": -1.5}, {"y": 2026, "v": -2.2}], "AprJul": [{"y": 2012, "v": -19.9}, {"y": 2013, "v": -15.1}, {"y": 2014, "v": 46.6}, {"y": 2015, "v": 13.9}, {"y": 2016, "v": 58.0}, {"y": 2017, "v": 9.4}, {"y": 2018, "v": -11.7}, {"y": 2019, "v": -22.8}, {"y": 2020, "v": 36.0}, {"y": 2021, "v": 39.5}, {"y": 2022, "v": -0.4}, {"y": 2023, "v": 5.5}, {"y": 2024, "v": 16.2}, {"y": 2025, "v": 16.9}, {"y": 2026, "v": 39.7}], "AugSep": [{"y": 2012, "v": -8.0}, {"y": 2013, "v": 10.2}, {"y": 2014, "v": 9.4}, {"y": 2015, "v": -5.5}, {"y": 2016, "v": 20.4}, {"y": 2017, "v": -1.2}, {"y": 2018, "v": -3.9}, {"y": 2019, "v": -0.4}, {"y": 2020, "v": 6.9}, {"y": 2021, "v": -12.2}, {"y": 2022, "v": 1.7}, {"y": 2023, "v": 10.2}, {"y": 2024, "v": 1.4}, {"y": 2025, "v": -2.1}], "OctDec": [{"y": 2012, "v": -8.7}, {"y": 2013, "v": 22.6}, {"y": 2014, "v": -7.9}, {"y": 2015, "v": 40.3}, {"y": 2016, "v": 13.4}, {"y": 2017, "v": 12.6}, {"y": 2018, "v": -0.4}, {"y": 2019, "v": -0.8}, {"y": 2020, "v": -9.6}, {"y": 2021, "v": -2.0}, {"y": 2022, "v": -9.9}, {"y": 2023, "v": 1.0}, {"y": 2024, "v": 12.6}, {"y": 2025, "v": -4.9}], "SepNov": [{"y": 2012, "v": -13.6}, {"y": 2013, "v": 12.9}, {"y": 2014, "v": -5.1}, {"y": 2015, "v": 21.2}, {"y": 2016, "v": 35.7}, {"y": 2017, "v": 9.8}, {"y": 2018, "v": -5.1}, {"y": 2019, "v": -5.2}, {"y": 2020, "v": -12.4}, {"y": 2021, "v": -2.5}, {"y": 2022, "v": -5.9}, {"y": 2023, "v": -3.4}, {"y": 2024, "v": 4.5}, {"y": 2025, "v": -5.1}], "JanMar": [{"y": 2012, "v": 4.9}, {"y": 2013, "v": -20.4}, {"y": 2014, "v": 23.0}, {"y": 2015, "v": -6.0}, {"y": 2016, "v": -6.3}, {"y": 2017, "v": -4.1}, {"y": 2018, "v": -11.9}, {"y": 2019, "v": -12.3}, {"y": 2020, "v": 0.2}, {"y": 2021, "v": 8.0}, {"y": 2022, "v": 0.9}, {"y": 2023, "v": -14.7}, {"y": 2024, "v": -12.7}, {"y": 2025, "v": -6.6}, {"y": 2026, "v": -7.2}]}, "my": {"1": {"2012": 8.4, "2013": -13.1, "2014": 5.9, "2015": -0.3, "2016": -1.2, "2017": 2.1, "2018": -2.2, "2019": -11.3, "2020": 6.7, "2021": 2.8, "2022": 5.2, "2023": -3.1, "2024": -1.1, "2025": -5.1, "2026": -6.0}, "2": {"2012": -5.2, "2013": -6.4, "2014": 10.2, "2015": -12.4, "2016": -8.8, "2017": -7.2, "2018": -3.3, "2019": -7.8, "2020": 5.1, "2021": -0.6, "2022": -4.2, "2023": -7.4, "2024": 1.2, "2025": -1.5, "2026": -0.5}, "3": {"2012": 2.2, "2013": -3.1, "2014": 4.6, "2015": 7.3, "2016": 5.1, "2017": 1.6, "2018": -7.0, "2019": 8.9, "2020": -8.4, "2021": 5.3, "2022": 0.3, "2023": -5.4, "2024": -12.7, "2025": 0.1, "2026": -1.8}, "4": {"2012": -3.8, "2013": -6.0, "2014": 17.9, "2015": 10.4, "2016": 19.3, "2017": 4.5, "2018": 4.8, "2019": -4.1, "2020": 9.0, "2021": 11.3, "2022": 10.0, "2023": 10.1, "2024": 9.4, "2025": -6.4, "2026": 19.9}, "5": {"2012": -11.0, "2013": -7.6, "2014": -4.7, "2015": -7.4, "2016": -0.8, "2017": -3.7, "2018": -4.0, "2019": -4.8, "2020": -3.3, "2021": 2.0, "2022": -4.7, "2023": -5.9, "2024": -6.4, "2025": 13.8, "2026": 3.1}, "6": {"2012": -2.8, "2013": -2.5, "2014": 13.8, "2015": -1.7, "2016": 22.3, "2017": 3.1, "2018": -11.3, "2019": -6.8, "2020": 13.0, "2021": 9.9, "2022": -0.8, "2023": 2.5, "2024": 6.8, "2025": 5.5, "2026": 4.5}, "7": {"2011": 2.8, "2012": -3.3, "2013": 0.2, "2014": 10.3, "2015": 13.0, "2016": 5.7, "2017": 4.8, "2018": 0.7, "2019": -9.9, "2020": 10.3, "2021": 9.9, "2022": -4.6, "2023": -1.1, "2024": 5.5, "2025": 3.4, "2026": 6.9}, "8": {"2011": -2.5, "2012": -7.8, "2013": 11.4, "2014": 4.0, "2015": -3.9, "2016": 1.6, "2017": -4.0, "2018": 0.9, "2019": -3.8, "2020": 4.5, "2021": -15.2, "2022": -4.6, "2023": 11.3, "2024": 4.1, "2025": -1.5, "2026": 20.6}, "9": {"2011": 4.1, "2012": 0.5, "2013": -1.7, "2014": 5.1, "2015": -1.8, "2016": 18.3, "2017": 2.9, "2018": -4.6, "2019": 3.8, "2020": 2.4, "2021": 3.7, "2022": 6.2, "2023": -1.2, "2024": -2.6, "2025": -0.6}, "10": {"2011": -5.3, "2012": 0.8, "2013": 1.3, "2014": -8.0, "2015": 17.1, "2016": 17.4, "2017": 6.6, "2018": 8.5, "2019": -1.5, "2020": -9.5, "2021": -0.6, "2022": -6.1, "2023": -1.8, "2024": 3.0, "2025": -3.6}, "11": {"2011": -11.4, "2012": -13.9, "2013": 11.7, "2014": -1.9, "2015": 5.6, "2016": -0.8, "2017": 0.1, "2018": -9.1, "2019": -6.8, "2020": -4.6, "2021": -5.2, "2022": -6.0, "2023": -0.2, "2024": 4.2, "2025": -0.9}, "12": {"2011": -3.9, "2012": 4.7, "2013": 6.6, "2014": 1.8, "2015": 13.6, "2016": -2.0, "2017": 5.2, "2018": 0.1, "2019": 8.0, "2020": 6.5, "2021": 4.3, "2022": 2.1, "2023": 3.2, "2024": 5.7, "2025": -0.4}}, "basket": ["Sudarshan Chemical Industries Limited", "Kiri Industries Limited", "Bodal Chemicals Limited", "Indokem Limited", "Vidhi Specialty Food Ingredients Ltd", "Shree Pushkar Chemicals & Fertilisers Ltd.", "Bhageria Industries Ltd.", "Ultramarine & Pigments Limited", "Sudarshan Colorants India Ltd", "Vipul Organics Limited", "Asahi Songwon Colors Ltd.", "Ushanti Colour Chem Ltd.", "AksharChem India Ltd."], "nbasket": 13, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -0.1, "rel": -0.8, "hit": 6, "n": 15}, {"m": 2, "abs": -4.4, "rel": -3.2, "hit": 3, "n": 15}, {"m": 3, "abs": -0.4, "rel": -0.2, "hit": 9, "n": 15}, {"m": 4, "abs": 9.6, "rel": 7.1, "hit": 11, "n": 15}, {"m": 5, "abs": -1.9, "rel": -3.0, "hit": 3, "n": 15}, {"m": 6, "abs": 5.5, "rel": 3.7, "hit": 9, "n": 15}, {"m": 7, "abs": 5.3, "rel": 3.4, "hit": 12, "n": 16}, {"m": 8, "abs": 0.7, "rel": 0.9, "hit": 8, "n": 16}, {"m": 9, "abs": 2.9, "rel": 2.3, "hit": 9, "n": 15}, {"m": 10, "abs": 3.3, "rel": 1.2, "hit": 7, "n": 15}, {"m": 11, "abs": -1.7, "rel": -2.6, "hit": 4, "n": 15}, {"m": 12, "abs": 4.4, "rel": 3.7, "hit": 12, "n": 15}], "cy": [{"y": 2012, "b": -9.7, "n": 27.7, "rel": -37.4, "partial": false}, {"y": 2013, "b": -5.0, "n": 6.8, "rel": -11.7, "partial": false}, {"y": 2014, "b": 126.3, "n": 31.4, "rel": 94.9, "partial": false}, {"y": 2015, "b": 35.7, "n": -4.1, "rel": 39.8, "partial": false}, {"y": 2016, "b": 101.3, "n": 3.0, "rel": 98.2, "partial": false}, {"y": 2017, "b": 48.4, "n": 28.6, "rel": 19.8, "partial": false}, {"y": 2018, "b": -22.7, "n": 3.2, "rel": -25.8, "partial": false}, {"y": 2019, "b": -25.4, "n": 12.0, "rel": -37.4, "partial": false}, {"y": 2020, "b": 45.3, "n": 14.9, "rel": 30.4, "partial": false}, {"y": 2021, "b": 59.7, "n": 24.1, "rel": 35.6, "partial": false}, {"y": 2022, "b": -3.4, "n": 4.3, "rel": -7.7, "partial": false}, {"y": 2023, "b": 18.5, "n": 20.0, "rel": -1.5, "partial": false}, {"y": 2024, "b": 25.8, "n": 8.8, "rel": 17.0, "partial": false}, {"y": 2025, "b": 11.9, "n": 10.5, "rel": 1.4, "partial": false}, {"y": 2026, "b": 47.5, "n": -10.7, "rel": 58.2, "partial": true}], "dd": [{"co": "Sudarshan Chemical Industries", "peak": "Sep 2025", "fp": -17, "y1": -12}, {"co": "Kiri Industries", "peak": "May 2025", "fp": -27, "y1": -13}, {"co": "Bodal Chemicals", "peak": "Oct 2021", "fp": 30, "y1": 186}, {"co": "Indokem", "peak": "Nov 2025", "fp": -32, "y1": 14}, {"co": "Vidhi Specialty Food Ingredients", "peak": "Dec 2024", "fp": -39, "y1": -8}, {"co": "Shree Pushkar Chemicals & Fertilisers", "peak": "Sep 2025", "fp": 13, "y1": 36}, {"co": "Bhageria Industries", "peak": "Oct 2021", "fp": 6, "y1": 76}, {"co": "Ultramarine & Pigments", "peak": "Jul 2025", "fp": -30, "y1": -11}, {"co": "Sudarshan Colorants India", "peak": "Oct 2024", "fp": -44, "y1": -36}, {"co": "Vipul Organics", "peak": "Oct 2024", "fp": 1, "y1": 27}, {"co": "Asahi Songwon Colors", "peak": "Jul 2024", "fp": -35, "y1": 32}, {"co": "Ushanti Colour Chem", "peak": "Jun 2022", "fp": 185, "y1": 477}, {"co": "AksharChem India", "peak": "Oct 2021", "fp": -30, "y1": 46}, {"co": "Mahickra Chemicals", "peak": "Oct 2025", "fp": 93, "y1": 99}, {"co": "Dynemic Products", "peak": "Oct 2021", "fp": -68, "y1": -34}, {"co": "Jaysynth Orgochem", "peak": "Dec 2024", "fp": -42, "y1": -13}, {"co": "Hindprakash Industries", "peak": "Jan 2024", "fp": -40, "y1": -11}, {"co": "Ishan Dyes and Chemicals", "peak": "Apr 2022", "fp": -70, "y1": -15}], "win": {"FebMar": {"mean": -3.6, "median": -4.4, "hit": 2, "n": 15}, "AprJul": {"mean": 14.1, "median": 13.9, "hit": 10, "n": 15}, "AugSep": {"mean": 1.9, "median": 0.5, "hit": 7, "n": 14}, "OctDec": {"mean": 4.2, "median": -0.6, "hit": 6, "n": 14}, "SepNov": {"mean": 1.8, "median": -4.2, "hit": 5, "n": 14}, "JanMar": {"mean": -4.3, "median": -6.3, "hit": 5, "n": 15}}, "ytd": {"b": 47.5, "n": -10.7}, "notes": {"2012": "Kiri collapsed 78% as debt from its expansion and its 2010 DyStar investment strained the balance sheet; Bodal fell 30% and Sudarshan 17%. Only Ultramarine (+51%) rose meaningfully. Eight names qualified for the basket that year.", "2013": "The rupee crash helped exporters but small caps sold off. Kiri rebounded 363% as DyStar turned strongly profitable, and Bodal doubled (+99%) on export realisations, but Indokem (\u221280%) and Vipul (\u221228%) dragged the basket down.", "2014": "China's war on pollution began. A new Environmental Protection Law was passed in April (in force January 2015), Chinese dye prices rose sharply as small plants closed, and India's election rally lifted small caps. Indokem, then a penny stock, rose 1,103%; Sudarshan +190%, Asahi Songwon +105%.", "2015": "The Chinese law took effect and closures continued. Vipul +89%, Bodal +72% and Ultramarine +70%; the basket beat a falling Nifty by 40 points.", "2016": "China's central environmental inspections started in July and shut dye and intermediate plants across Zhejiang and Jiangsu; H-acid prices rose. Sudarshan, Vipul and Indokem each rose about 180%.", "2017": "Inspections intensified and the small-cap boom peaked. Ultramarine +139%, food-colour exporter Vidhi +101% and Kiri +76% (DyStar profits plus its minority-oppression case in Singapore).", "2018": "Chinese supply partly returned and Indian small caps sold off (the February LTCG tax, fund reclassification, IL&amp;FS in September). The median stock fell 29%: Indokem \u221251%, AksharChem \u221242%, Asahi \u221241%.", "2019": "A double hit. India's National Green Tribunal (July) froze expansion in critically polluted areas, including Vapi, Ankleshwar and Vatva, and demand slowed. China's Xiangshui explosion (March) tightened intermediates but did not help Indian stocks. Indokem \u221258%, AksharChem \u221247%, Shree Pushkar \u221238%.", "2020": "COVID and China+1: buyers looked for non-Chinese dye and intermediate suppliers. Indokem +243%, Vidhi +101% (packaged-food demand for colours), Asahi +64%.", "2021": "China's energy curbs (September) cut dye output and lifted prices; the small-cap boom peaked. Vidhi +210%, Indokem +84%, AksharChem +78%; the basket rose 60%.", "2022": "Western retailers destocked, textile orders fell, coal and energy costs spiked, and Chinese supply normalised. Sudarshan \u221230%, Bhageria \u221234%, AksharChem \u221241%; Indokem (+239%) was the odd one out.", "2023": "Input costs eased from 2022 peaks and pigment makers recovered: Heubach Colorants India (now Sudarshan Colorants) +63%, Sudarshan +41%, Vipul +33%. Dye makers stayed weak on Chinese oversupply (Kiri \u221216%, Indokem \u221224%).", "2024": "Sudarshan doubled (+108%) after agreeing to buy bankrupt Heubach (October), making it the world's second-largest pigment maker. Kiri +55% as the court-ordered sale of its DyStar stake moved towards payment. Bodal fell 19% on weak H-acid prices.", "2025": "The average (+12%) hides a median of \u221214%: Indokem's 537% run carried the basket. The US FDA's April plan to phase out petroleum-based food dyes hit Vidhi (\u221234%); US tariffs of 50% from August hit textile chains (Asahi \u221229%, Ultramarine \u221222%). Kiri received $689 m for its DyStar stake on 30 December.", "2026": "H-acid in China rose from about 40,000 to 60,000\u201370,000 yuan/t on costlier inputs and tighter supply, and Indian intermediate makers repriced. Bodal posted a record quarter (+257% YTD), Ushanti +331% with no news, Bhageria +85%. US tariffs fell to ~10%. Kiri \u221227% on its \u20b912,000 cr copper plan."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

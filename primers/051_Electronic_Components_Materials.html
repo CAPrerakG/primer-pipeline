@@ -1,0 +1,606 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electronic Components and Materials Primer</title>
+<meta name="description" content="Industry 51 of 278: the small, precise parts that sit around chips — shunt resistors, bimetals, magnets, ferrite cores — and the materials behind them. China&#x27;s grip on rare-earth magnets, India&#x27;s ₹40,000 cr component scheme, a smart-meter and EV demand wave, and the 8 listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Electronic Components &amp; Materials · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 51 of 278 · Electronics &amp; EMS family, part 2</div>
+  <h1>Electronic Components &amp; Materials</h1>
+  <p class="lede">Every circuit board carries dozens of small parts besides the chips: resistors that measure current, magnets that make motors and relays work, ferrite cores that tame high-frequency noise, strips of bimetal that switch off an iron when it overheats. This section holds India's listed makers of such precision components and materials — a tiny group, but one sitting on two of the biggest shifts in electronics: smart meters and electric vehicles at home, and China's control of rare-earth magnets abroad.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 8 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Electronics Manufacturing Services</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~94%</div><div class="l">China's share of world sintered permanent-magnet production</div></div>
+    <div class="stat"><div class="n">₹40,000 cr</div><div class="l">India's electronics component scheme after the 2026–27 budget increase</div></div>
+    <div class="stat"><div class="n">106</div><div class="l">Component projects approved under that scheme, with ₹69,548 cr of expected investment</div></div>
+    <div class="stat"><div class="n">+155%</div><div class="l">Shivalik Bimetal in 2026, on shunt resistors for smart meters and EVs</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Small parts, specialised materials, sticky customers</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Open any gadget and you will see a green board covered with little parts. The big black square is the chip — the brain. Around it are tiny helpers. Some measure how much electricity flows, like a water meter. Some are magnets that make a motor spin or a switch click. Some are little rings of special ceramic that stop electrical "noise". Others are two metals stuck together that bend when they get hot, turning something off before it burns. These parts are cheap one by one, but they must be perfect, and customers keep buying from the same supplier for years once a part is approved.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian component makers are few and small, but the best of them sit on structural demand and a supply-chain shift away from China.</p>
+    <ul>
+      <li><b>Demand:</b> smart meters (a shunt resistor in every one), EV battery systems, appliances and industrial controls.</li>
+      <li><b>Supply shift:</b> China makes about 94% of sintered permanent magnets and restricted exports of heavy rare earths and magnets from April 2025; buyers want second sources.</li>
+      <li><b>Policy:</b> the component scheme (ECMS) is now ₹40,000 cr with 106 projects approved; a ₹7,280 cr rare-earth magnet scheme received 20 bids in August.</li>
+      <li><b>Results diverge:</b> Shivalik Bimetal revenue +33%, profit +45%, stock +155%; Permanent Magnets profit −14% on a delayed relay project.</li>
+      <li><b>Watch the tail:</b> the section's second-largest name by value is a granite trader whose share rose from ₹17 to ₹5,500 in 20 months.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>The main families of components</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Component</th><th>What it does</th><th>Where it goes</th><th>Listed makers</th></tr></thead><tbody>
+    <tr><td>Shunt resistors</td><td>A precise, low-value resistor that lets electronics measure current</td><td>Electricity meters, EV battery management, chargers, inverters</td><td>Shivalik Bimetal, Permanent Magnets</td></tr>
+    <tr><td>Thermostatic bimetals</td><td>Two bonded metals that bend with heat, used as automatic switches</td><td>Circuit breakers, irons, kettles, motor protectors</td><td>Shivalik Bimetal</td></tr>
+    <tr><td>Permanent magnets</td><td>Materials that stay magnetic: ferrite, alnico, rare-earth (NdFeB, SmCo)</td><td>Motors, speakers, relays, sensors, EV traction motors</td><td>Permanent Magnets (magnetic components); rare-earth magnets mostly imported</td></tr>
+    <tr><td>Soft ferrite cores</td><td>Ceramic magnetic cores that handle high-frequency power</td><td>Chargers, power supplies, transformers, EV and solar electronics</td><td>Cosmo Ferrites, Delta Manufacturing</td></tr>
+    <tr><td>Relays and current sensors</td><td>Switches and measuring parts built from magnetic components</td><td>Meters, automotive, industrial controls</td><td>Permanent Magnets (relay project under way)</td></tr>
+    <tr><td>Passive components (capacitors, resistors, inductors)</td><td>Store, limit and filter current</td><td>Every board</td><td>Mostly imported; small makers in 050</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>If a circuit board is a kitchen, the chip is the chef. The components are the knives, scales, thermometers and fuse boxes — cheap compared with the chef, but the kitchen does not work without them, and a restaurant that has approved a particular thermometer does not change it lightly. That is why component makers with qualified parts often keep customers for decades.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From ore to a qualified part</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Raw materials</h4><div class="an">The ingredients</div>Copper and manganese alloys, nickel, iron oxide, rare-earth oxides (neodymium, dysprosium).<div class="who">Global miners; China for rare earths; IREL in India</div><div class="m">Rare earths are the choke point</div></div>
+    <div class="stage"><div class="no">02</div><h4>Materials processing</h4><div class="an">Making the special material</div>Alloy strips, bonded bimetals, ferrite powders, magnet alloys.<div class="who">Shivalik (bonding), Cosmo (ferrite powders)</div><div class="m">Metallurgy know-how is the moat</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Component manufacture</h4><div class="an">Making the part</div>Electron-beam welding, stamping, pressing, sintering, magnetising.<div class="who">Shivalik, Permanent Magnets, Cosmo Ferrites, Delta</div><div class="m">Precision and consistency</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Qualification</h4><div class="an">Getting approved</div>Customer testing, often over one to three years for automotive parts.<div class="who">Meter makers, auto suppliers, global electrical firms</div><div class="m">Once approved, switching is costly</div></div>
+    <div class="stage"><div class="no">05</div><h4>Sub-assembly and EMS</h4><div class="an">Putting parts on boards</div>Components soldered onto boards and modules.<div class="who">Dixon, Kaynes, Syrma, meter makers (052, 055)</div><div class="m">Where volume demand comes from</div></div>
+    <div class="stage"><div class="no">06</div><h4>End products</h4><div class="an">The device</div>Meters, EVs, appliances, breakers, chargers.<div class="who">Genus, HPL (055, 043), carmakers</div><div class="m">Policy-driven demand</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Ingredients:</b> metals and special earths dug from the ground — many of the special ones come from China.</li>
+    <li><b>Special materials:</b> factories turn them into thin strips, powders and alloys.</li>
+    <li><b>Parts:</b> machines weld, press and bake them into tiny precise parts.</li>
+    <li><b>Approval:</b> customers test the parts for a long time before trusting them.</li>
+    <li><b>Boards:</b> the parts are soldered onto circuit boards.</li>
+    <li><b>Devices:</b> the boards go into meters, cars and appliances.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical asset of a component maker is a qualified part in a growing application. Shivalik Bimetal's re-rating in 2026 rests on exactly that: its electron-beam-welded shunts are approved at meter makers and increasingly at automotive customers, and smart meters and EV battery systems each need them. By contrast, a maker of commodity magnets or ferrites competes with Chinese suppliers on price. When valuing these companies, ask what share of revenue comes from parts that took years to qualify, and how much from parts any competitor could supply next quarter.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 8 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Shivalik Bimetal Controls (~₹6,087 cr)</td><td>Thermostatic bimetals, electron-beam-welded shunt resistors and precision components, with large exports; a new Pune facility for automotive electrification.</td><td>Revenue ₹182 cr (+33%), profit ₹33 cr (+45%). Shunt resistors ₹68 cr (+19%), 37% of revenue, driven by domestic smart meters and EVs; record programme wins with automotive and industrial customers; environmental clearance for Pune Phase I. FY27 growth guidance of 20–30%. Stock +155% in 2026 and 53% above its 2024 peak.</td></tr>
+    <tr><td>Midwest Energy (~₹4,525 cr)</td><td>Granite and natural-stone processing and trading; formerly Midwest Gold, renamed in May 2026. Misclassified here.</td><td>Share rose from about ₹17 in May 2024 to over ₹5,500 in January 2026 on very thin early trading; a preferential allotment at ₹2,000 in March 2026. Excluded from the basket.</td></tr>
+    <tr><td>Permanent Magnets (~₹717 cr)</td><td>Magnetic and metering components — current sensors and shunts for electricity meters — plus alloys and a relay business in development.</td><td>Standalone revenue ₹63 cr (+19%), profit ₹6.3 cr (−14%) as the high-margin relay project was delayed to the second half. Guides FY27 growth of 20–30% at 15–18% margins. Stock −2%, −49% from its August 2023 peak.</td></tr>
+    <tr><td>Bimetal Bearings (~₹252 cr)</td><td>Engine bearings and bushes for vehicles — an auto component maker, misclassified here.</td><td>Series too short in this dataset.</td></tr>
+    <tr><td>Cosmo Ferrites (~₹220 cr)</td><td>Soft ferrite cores for power electronics, from Himachal Pradesh.</td><td>+13%, but −73% from its April 2022 peak after +2,203% in 2021.</td></tr>
+    <tr><td>Avio Smart Market Stack (~₹210 cr)</td><td>SME listing of 2023, classified as semiconductors.</td><td>−44% in 2026, −77% from its peak. Review.</td></tr>
+    <tr><td>Delta Manufacturing (~₹59 cr)</td><td>Formerly Delta Magnets: ferrites and magnetic components.</td><td>−19%.</td></tr>
+    <tr><td>Olympic Cards</td><td>Wedding and greeting cards — misclassified.</td><td>Not investable.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Read the section carefully</span><p>Of eight names, only four make electronic components, and only Shivalik Bimetal is of meaningful size. Midwest Energy, the second-largest by market value, is a stone trader whose price history looks nothing like an operating business; it is excluded from the statistics. Larger Indian component makers — Amber's and Dixon's component subsidiaries, Syrma, Kaynes's PCB plans, and the multinationals' Indian plants — sit in other sections or are unlisted.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Qualification premium versus commodity pricing</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product type</th><th>Margin character</th><th>What protects it</th></tr></thead><tbody>
+    <tr><td>Precision shunts and bimetals</td><td>High for the category (Shivalik: profit about 18% of revenue this quarter)</td><td>Metallurgy, welding process, multi-year customer qualification</td></tr>
+    <tr><td>Metering components</td><td>Mid-teens (Permanent Magnets guides 15–18%)</td><td>Approvals with meter makers; volumes tied to tenders</td></tr>
+    <tr><td>Ferrite cores</td><td>Thin to moderate</td><td>Cost and consistency; Chinese competition</td></tr>
+    <tr><td>Rare-earth magnets</td><td>High for non-Chinese suppliers in shortages</td><td>Access to rare-earth oxides — the scarce input</td></tr>
+  </tbody></table></div>
+  <h3>The economics in plain terms</h3>
+  <p>A component is cheap to the buyer — a shunt might cost a few tens of rupees inside a meter costing a few thousand — so buyers care far more about reliability than price. Once a component is designed into a product and qualified, it tends to stay for the life of that product. That gives established suppliers pricing stability and long runs, but it also means new suppliers wait years for revenue. Exports matter: global electrical and automotive companies buy from Indian component makers when their quality is proven, and "China plus one" sourcing has made that easier since 2020.</p>
+  <h3>Where the components sit: two worked examples</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Device</th><th>Components from this section</th><th>What each does</th><th>Why it matters for demand</th></tr></thead><tbody>
+    <tr><td>Smart electricity meter</td><td>Shunt resistor (or current transformer), magnetic latching relay, ferrite chokes, passive components</td><td>The shunt measures current; the relay lets a prepaid meter disconnect supply remotely; ferrites filter noise</td><td>India's prepaid smart-meter programme targets hundreds of millions of meters; each needs at least one shunt and one relay</td></tr>
+    <tr><td>EV battery pack</td><td>Precision shunts in the battery management system, ferrite cores in the on-board charger and DC–DC converter, NdFeB magnets in the traction motor</td><td>The shunt tells the battery system how much current flows; ferrites handle high-frequency power; magnets turn the motor</td><td>Every EV multiplies the component content of a conventional car</td></tr>
+    <tr><td>Circuit breaker and appliance</td><td>Thermostatic bimetal</td><td>Bends when overheated and trips the breaker or switches off the iron</td><td>Steady replacement demand from housing and appliances</td></tr>
+  </tbody></table></div>
+  <p>The relay line is why Permanent Magnets' delayed relay project matters: prepaid meters need a latching relay to cut and restore supply remotely, and a domestic source for it is a natural extension of a shunt and metering-component business. Shivalik's move into automotive modules at Pune is the same logic in EVs — using a qualified component to sell a larger sub-assembly.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Being a qualified component supplier is like being the approved caterer for a large office: getting the contract takes a long trial, but once you have it you serve lunch every day for years — as long as nobody falls ill.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>Materials that decide who can compete</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Rare-earth oxides (neodymium, praseodymium, dysprosium, terbium)</td><td>Needed for high-strength magnets in EV motors and electronics</td><td>China introduced export controls on seven heavy rare earths and related magnets on 4 April 2025; exports remain below earlier levels</td></tr>
+    <tr><td>Manganin and copper alloys</td><td>Shunt resistor material</td><td>Copper at a record (see 044)</td></tr>
+    <tr><td>Nickel and specialty steels</td><td>Bimetal strips</td><td>Imported; price-volatile</td></tr>
+    <tr><td>Iron oxide and manganese-zinc powders</td><td>Ferrite cores</td><td>Widely available; Chinese price competition</td></tr>
+    <tr><td>Process equipment</td><td>Electron-beam welding, sintering furnaces</td><td>Imported; a barrier to entry</td></tr>
+    <tr><td>Customer qualification time</td><td>Automotive approval can take years</td><td>The hidden input that new entrants lack</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Driven by customers' programmes and tenders</h2>
+  <ul>
+    <li><b>April–June:</b> new fiscal-year orders from meter makers and appliance companies.</li>
+    <li><b>July–September:</b> festive-season appliance build; smart-meter tender awards through the year.</li>
+    <li><b>October–December:</b> European customers' year-end ordering for exporters.</li>
+    <li><b>January–March:</b> year-end dispatches; automotive model-year programme decisions.</li>
+    <li><b>Policy dates:</b> scheme tranches and approvals (ECMS, rare-earth magnets), the February budget.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket (Shivalik, Permanent Magnets, Cosmo Ferrites) minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 3 names (Shivalik Bimetal Controls Ltd, Permanent Magnets Limited, Cosmo Ferrites Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +9.7 pts (beat in 12 of 15 years); Sep +6.5 pts (beat in 10 of 15 years); Jun +5.8 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Mar -1.9 pts (beat in 5 of 15 years); May -0.2 pts (beat in 5 of 15 years); Jul -0.2 pts (beat in 8 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 7 of 15 years (median -5.6 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +17.9 pts); Aug–Sep beat the Nifty in 9 of 14 years (median +12.2 pts); Oct–Dec beat the Nifty in 9 of 14 years (median +5.2 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +12.7 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -5.9 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +6.7 points.</p><p><b>Reading it:</b> a three-stock basket, so read loosely. April has beaten the Nifty in 12 of 15 years (+9.7 points on average), and April–July in 9 of 15 with a median of +17.9. September–November has worked in 9 of 14 (median +12.7). January–March is the weak stretch — 6 of 15 years, median −5.9. The pattern follows the fiscal-year order cycle of meter and appliance makers, which place large annual orders in April and ahead of the festive season.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>How to read it</h3>
+  <ul>
+    <li><b>April is the strongest single month</b> (12 of 15 years), consistent with fiscal-year ordering.</li>
+    <li><b>January–March is the weakest window</b> (6 of 15, median −5.9).</li>
+    <li><b>2021 dominates the averages:</b> the basket rose 536% that year, with Cosmo Ferrites alone up 2,203%.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Three thinly traded small caps cannot support a reliable seasonal rule. The pattern is consistent with the business calendar, but the section's returns are dominated by company-specific events — qualification wins, capacity additions, and occasional speculative runs. Use company milestones, not the calendar.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Smart-meter roll-out:</b> every meter needs a shunt and metering components (see 055).</li>
+    <li><b>EV adoption:</b> battery management systems, chargers and motors (see 017, 046).</li>
+    <li><b>Appliance and breaker demand:</b> bimetals in irons, kettles and circuit breakers.</li>
+    <li><b>Exports and "China plus one":</b> global customers adding Indian suppliers.</li>
+    <li><b>Rare-earth supply:</b> China's export controls and India's magnet scheme.</li>
+    <li><b>Component incentives:</b> ECMS capital and turnover support.</li>
+    <li><b>Metal prices:</b> copper, nickel and alloy costs.</li>
+    <li><b>Qualification wins:</b> new automotive and industrial programmes.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of Shivalik Bimetal, Permanent Magnets and Cosmo Ferrites (BSE history spliced onto NSE for Shivalik and Permanent Magnets). Midwest Energy is excluded as misclassified and illiquid. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Obscure small caps</b> (2012–2016): sporadic rallies with little research coverage.</li>
+    <li><b>First re-rating</b> (2017–2018): meter and automotive demand; Shivalik +317% in 2017.</li>
+    <li><b>Bust</b> (2019): −54% with the small-cap bear market.</li>
+    <li><b>The electronics theme</b> (2020–2023): PLI schemes and "China plus one" re-rated anything in electronics; +536% in 2021.</li>
+    <li><b>Separation</b> (2024–2026): the company with qualified growth products (Shivalik) pulled away from those without.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Theme rallies lift everyone; results then separate them.</b></li>
+    <li><b>Thin trading produces extreme single-year moves</b> (Cosmo Ferrites +2,203%, then −73% from peak).</li>
+    <li><b>Misclassified names attach themselves to hot themes</b> — a recurring feature of electronics sections.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>China dominates, and the world is paying to diversify</h2>
+  <p>China is the world's largest producer of almost every electronic component and dominates the materials behind them. Its share of sintered permanent magnets has risen from about half two decades ago to about 94% today. In April 2025 Beijing introduced export controls on seven heavy rare-earth elements and the magnets made from them; shipments fell sharply, and carmakers in several countries struggled to obtain magnets. Japan (TDK, Murata, Shin-Etsu), Korea (Samsung Electro-Mechanics), Germany and the US remain leaders in high-end passive components and materials. India is a small producer but has become a qualified supplier in niches — bimetals and shunts among them — and is using incentives to widen its base.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Area</th><th>Global leaders</th><th>India's position</th></tr></thead><tbody>
+    <tr><td>Rare-earth mining and processing</td><td>China (mining, separation and refining), with Australia and the US building alternatives</td><td>IREL mines beach sands; rare-earth corridors announced in 2026</td></tr>
+    <tr><td>Sintered rare-earth magnets</td><td>Chinese producers dominate; Japan's Shin-Etsu and TDK and Germany's VAC are the main alternatives</td><td>Almost nothing yet; the ₹7,280 cr scheme is meant to change that</td></tr>
+    <tr><td>Passive components</td><td>Murata, TDK, Samsung Electro-Mechanics, Yageo, Vishay</td><td>Small; ECMS approvals target capacitors and resistors</td></tr>
+    <tr><td>Precision shunts and bimetals</td><td>A handful of European, US and Asian specialists</td><td>Shivalik is a globally qualified supplier</td></tr>
+    <tr><td>Ferrites</td><td>Chinese producers, TDK</td><td>Cosmo Ferrites and Delta, small in scale</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From Japan and Europe to China</b> (1990s–2010s): scale, cost and control of rare-earth processing.</li>
+    <li><b>From efficiency to security</b> (2020–2026): the pandemic and export controls made supply diversity a priority.</li>
+    <li><b>Toward magnet-light designs:</b> carmakers developing motors that use fewer or no rare earths.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>High-precision shunts for EV battery management:</b> higher currents, tighter tolerances.</li>
+    <li><b>Smart-meter components:</b> shunts replacing current transformers in many designs.</li>
+    <li><b>Wide-bandgap power electronics:</b> silicon carbide and gallium nitride raise demand for high-frequency ferrites (see 050).</li>
+    <li><b>Rare-earth-free and reduced-dysprosium magnets.</b></li>
+    <li><b>Magnet recycling:</b> recovering rare earths from end-of-life motors.</li>
+    <li><b>Integrated sub-assemblies:</b> component makers moving up to modules (Shivalik's Pune plan).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Electronics Component Manufacturing Scheme (ECMS)</td><td>Outlay raised to ₹40,000 cr in the 2026–27 budget; 106 applications approved covering 30 products in 15 states, ₹69,548 cr of investment; 31 projects worth ₹7,877 cr approved on 17 August 2026</td><td>Moves Indian manufacturing upstream into components and materials</td></tr>
+    <tr><td>Rare-earth permanent magnet scheme</td><td>₹7,280 cr, approved November 2025, for 6,000 tonnes a year across five beneficiaries of up to 1,200 tonnes each; 20 bids received in August 2026</td><td>Creates a domestic magnet industry</td></tr>
+    <tr><td>Rare-earth corridors</td><td>Announced in the 2026–27 budget for Odisha, Kerala, Andhra Pradesh and Tamil Nadu</td><td>Mining and processing of rare-earth minerals</td></tr>
+    <tr><td>Smart-meter programme</td><td>Central funding for prepaid meters (see 039, 055)</td><td>Demand for shunts and metering components</td></tr>
+    <tr><td>China's export controls</td><td>Since April 2025</td><td>Supply risk and an opening for non-Chinese suppliers</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: one clear winner, many small names</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Smart-meter and EV demand</td><td>Strong</td><td>Shivalik's domestic shunts growing; automotive programme wins</td></tr>
+    <tr><td>Policy</td><td>Expanding</td><td>ECMS at ₹40,000 cr; magnet scheme bids in</td></tr>
+    <tr><td>Rare-earth supply</td><td>Constrained</td><td>Chinese export controls continue</td></tr>
+    <tr><td>Execution</td><td>Mixed</td><td>Permanent Magnets' relay project delayed</td></tr>
+    <tr><td>Stocks</td><td>Concentrated</td><td>Shivalik +155%; others flat or down; a misclassified stone trader worth ₹4,500 cr</td></tr>
+  </tbody></table></div>
+  <h3>What each company has to prove next</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>The bull case rests on</th><th>What would confirm it</th><th>What would break it</th></tr></thead><tbody>
+    <tr><td>Shivalik Bimetal</td><td>Shunts moving from meters into EV battery systems, and a Pune plant for automotive modules</td><td>Revenue growth in the 20–30% guided range, with automotive programmes entering production</td><td>A slowdown in smart-meter tenders or a lost automotive programme; margins falling as it moves into lower-margin assemblies</td></tr>
+    <tr><td>Permanent Magnets</td><td>Relays for prepaid meters and EV-related parts on top of its metering components</td><td>The relay line ramping in the second half of FY27 at 15–18% margins</td><td>Further delays, or relay prices set by Chinese competition</td></tr>
+    <tr><td>Cosmo Ferrites and Delta</td><td>Higher ferrite demand from chargers, solar inverters and EV electronics</td><td>Sustained volume growth and qualification with power-electronics makers</td><td>Chinese price competition keeping margins thin</td></tr>
+    <tr><td>New entrants under ECMS</td><td>Incentive-backed capacity in capacitors, resistors, PCBs and magnets</td><td>Listings of ECMS beneficiaries, which would broaden this section</td><td>Projects stalling after approval</td></tr>
+  </tbody></table></div>
+  <p>The practical point for a portfolio is that this section offers one liquid, profitable growth story and several small, thinly traded names. Position sizes and exits have to reflect that liquidity: in 2019 the basket fell 54% in a single year, and Cosmo Ferrites is still 73% below its 2022 peak.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>The structural case for Indian component makers is better than at any time in the past decade: domestic demand from smart meters and EVs, global customers seeking non-Chinese suppliers, and incentives aimed squarely at components and materials. But the listed opportunity is tiny and concentrated. Shivalik Bimetal has earned its re-rating with results, and its valuation now assumes the growth continues. For the rest, the investable question is whether ECMS projects and the magnet scheme create new listed companies — which is where the section may grow over the next few years.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Smart-meter installations and tenders</td><td>Ministry of Power, discoms</td><td>Shunt demand</td></tr>
+    <tr><td>EV sales and battery-system localisation</td><td>Vahan, company data</td><td>Automotive component demand</td></tr>
+    <tr><td>ECMS approvals and disbursements</td><td>Ministry of Electronics and IT</td><td>New capacity and competitors</td></tr>
+    <tr><td>Rare-earth magnet scheme awards</td><td>Ministry of Heavy Industries</td><td>Domestic magnet supply</td></tr>
+    <tr><td>Chinese rare-earth export data</td><td>Chinese customs, monthly</td><td>Supply risk</td></tr>
+    <tr><td>Copper and nickel prices</td><td>Daily</td><td>Input costs</td></tr>
+    <tr><td>Customer programme wins</td><td>Company disclosures</td><td>Revenue visibility</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Semiconductors</b> (050): the chips these components sit beside.</li>
+    <li><b>Electronics manufacturing services</b> (052): the board assemblers that buy components.</li>
+    <li><b>Electric meters</b> (055): the largest domestic user of shunts.</li>
+    <li><b>Auto components</b> (023) and <b>electric mobility</b> (022): EV demand.</li>
+    <li><b>Switchgear</b> (043): bimetals in breakers.</li>
+    <li><b>Mining and critical minerals:</b> rare-earth supply.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of revenue comes from parts qualified for more than three years?</li>
+    <li>How concentrated is revenue by customer and by end market?</li>
+    <li>What is the pipeline of automotive programmes, and when do they start production?</li>
+    <li>How exposed are you to rare-earth supply, and from where do you source?</li>
+    <li>Do you expect ECMS support, and for what capacity?</li>
+    <li>How are metal price changes passed through?</li>
+    <li>What is export versus domestic growth?</li>
+    <li>What new competitors are entering under the component scheme?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Share-price runs without matching revenue.</li>
+    <li>Business descriptions that change with the theme.</li>
+    <li>Heavy customer concentration without long-term contracts.</li>
+    <li>Preferential allotments at prices far above traded history.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Components are commodities."</td><td>Qualified precision parts earn stable margins; Shivalik's profit grew 45% on 33% revenue growth.</td></tr>
+    <tr><td>"India can replace China in magnets quickly."</td><td>The magnet scheme targets 6,000 tonnes a year across five plants still to be selected; China makes about 94% of world supply.</td></tr>
+    <tr><td>"Every stock in an electronics section is an electronics company."</td><td>Two of this section's eight are a stone trader and a wedding-card maker.</td></tr>
+    <tr><td>"Smart meters are a short-term boom."</td><td>Meter replacement and new connections create recurring demand, but tender timing makes it lumpy — 2025 was a pause.</td></tr>
+    <tr><td>"Incentives guarantee profits."</td><td>They reduce capital cost; qualification and customers still decide returns.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. shunt, ferrite" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Components and materials</h3><dl>
+    <dt>Shunt resistor</dt><dd>A precise, very low-value resistor across which a small voltage shows how much current flows.</dd>
+    <dt>Manganin</dt><dd>A copper-manganese-nickel alloy whose resistance barely changes with temperature — used in shunts.</dd>
+    <dt>Electron-beam welding</dt><dd>Joining metals with a focused electron beam in a vacuum; used to make shunts.</dd>
+    <dt>Thermostatic bimetal</dt><dd>Two metals with different expansion rates bonded together, which bend when heated.</dd>
+    <dt>Thermal protector</dt><dd>A bimetal switch that cuts power when a device overheats.</dd>
+    <dt>Permanent magnet</dt><dd>A material that stays magnetised.</dd>
+    <dt>Ferrite magnet</dt><dd>A cheap ceramic permanent magnet used in motors and speakers.</dd>
+    <dt>Alnico</dt><dd>An aluminium-nickel-cobalt magnet alloy, stable at high temperatures.</dd>
+    <dt>NdFeB magnet</dt><dd>Neodymium-iron-boron, the strongest common magnet, used in EV motors.</dd>
+    <dt>SmCo magnet</dt><dd>Samarium-cobalt, a heat-resistant rare-earth magnet used in defence and aerospace.</dd>
+    <dt>Sintering</dt><dd>Pressing powder and heating it below melting to form a solid part.</dd>
+    <dt>Coercivity</dt><dd>How strongly a magnet resists being demagnetised — heavy rare earths raise it.</dd>
+    <dt>Remanence</dt><dd>How strong a magnet stays after magnetisation.</dd>
+    <dt>Latching relay</dt><dd>A relay that stays in position without power; used in prepaid meters to disconnect supply.</dd>
+    <dt>Rare earths</dt><dd>Seventeen elements including neodymium and dysprosium, essential for strong magnets.</dd>
+    <dt>Heavy rare earths</dt><dd>Dysprosium, terbium and others that keep magnets strong at high temperature — subject to China's controls.</dd>
+    <dt>Soft ferrite</dt><dd>A ceramic that is easily magnetised and demagnetised, used as cores in transformers and chokes.</dd>
+    <dt>Ferrite core</dt><dd>A shaped soft-ferrite part around which wire is wound.</dd>
+    <dt>Inductor and choke</dt><dd>Components that resist changes in current, used for filtering.</dd>
+    <dt>Relay</dt><dd>An electrically operated switch, often magnetic.</dd>
+    <dt>Current transformer (CT)</dt><dd>A small transformer that measures current; an alternative to a shunt.</dd>
+    <dt>Passive component</dt><dd>A component that does not amplify: resistors, capacitors, inductors.</dd>
+    <dt>Active component</dt><dd>A component that controls current, such as a transistor or chip.</dd>
+    <dt>Battery management system (BMS)</dt><dd>Electronics that monitor a battery pack — a key shunt application.</dd>
+    <dt>Precision stamping</dt><dd>Pressing metal strip into small accurate parts.</dd>
+    <dt>Tolerance</dt><dd>How far a component's value may vary from its target.</dd>
+    <dt>Temperature coefficient of resistance</dt><dd>How much a resistor's value changes with temperature — near zero for good shunts.</dd>
+  </dl>
+  <h3>Industry and policy</h3><dl>
+    <dt>Qualification</dt><dd>A customer's testing and approval of a supplier's part.</dd>
+    <dt>Design-in</dt><dd>A component being specified in a customer's product design.</dd>
+    <dt>PPAP</dt><dd>Production part approval process — the automotive industry's formal qualification.</dd>
+    <dt>China plus one</dt><dd>Customers adding a non-Chinese supplier.</dd>
+    <dt>ECMS</dt><dd>Electronics Component Manufacturing Scheme — India's incentive for components and materials.</dd>
+    <dt>REPM scheme</dt><dd>India's ₹7,280 cr scheme for sintered rare-earth permanent magnets.</dd>
+    <dt>MTPA</dt><dd>Metric tonnes per annum — magnet capacity units.</dd>
+    <dt>IREL</dt><dd>IREL (India) Limited, the state rare-earths company.</dd>
+    <dt>Export controls</dt><dd>A government's licensing of exports of sensitive goods.</dd>
+    <dt>Preferential allotment</dt><dd>Issuing shares to selected investors at a set price.</dd>
+    <dt>Upper circuit</dt><dd>The maximum daily price rise allowed by the exchange.</dd>
+    <dt>Thinly traded</dt><dd>A share with few trades, whose price can move sharply on small orders.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Smart meter, AT&amp;C losses</dt><dd>See 039.</dd>
+    <dt>OSAT, silicon carbide, capacitor</dt><dd>See 050.</dd>
+    <dt>Drawdown from peak</dt><dd>See 029.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What does a shunt resistor do?</summary><p>Lets electronics measure current by producing a small, precise voltage — every electricity meter and EV battery system needs one.</p></details>
+  <details class="q"><summary>2. Why did Shivalik Bimetal rise 155%?</summary><p>Revenue +33% and profit +45%, driven by shunts for smart meters and EVs and new automotive programme wins.</p></details>
+  <details class="q"><summary>3. What share of sintered magnets does China make?</summary><p>About 94%.</p></details>
+  <details class="q"><summary>4. What did China do in April 2025?</summary><p>Imposed export controls on seven heavy rare earths and the magnets made from them.</p></details>
+  <details class="q"><summary>5. How large is India's rare-earth magnet scheme?</summary><p>₹7,280 cr for 6,000 tonnes a year across five plants; 20 bids were received.</p></details>
+  <details class="q"><summary>6. What is ECMS, and how big is it now?</summary><p>The component incentive scheme, raised to ₹40,000 cr, with 106 projects approved.</p></details>
+  <details class="q"><summary>7. Why is Midwest Energy excluded from the basket?</summary><p>It is a stone trader, misclassified, and its thinly traded share rose from ₹17 to ₹5,500 in 20 months.</p></details>
+  <details class="q"><summary>8. Why do qualified components earn stable margins?</summary><p>Buyers value reliability over price and rarely change an approved part.</p></details>
+  <details class="q"><summary>9. What held back Permanent Magnets' profit?</summary><p>A delayed high-margin relay project, pushed to the second half of FY27.</p></details>
+  <details class="q"><summary>10. What is a soft ferrite core used for?</summary><p>Handling high-frequency power in chargers, power supplies and EV and solar electronics.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes (BSE history spliced for Shivalik and Permanent Magnets); basket versus NSE:NIFTY, 2012 to 18 September 2026.</li>
+    <li>Companies: <a href="https://www.investing.com/news/company-news/shivalik-bimetal-q1-fy27-slides-33-revenue-growth-new-facility-online-93CH-4845853">Shivalik Q1 FY27</a>; <a href="https://www.gurufocus.com/news/9039194/shivalik-bimetal-controls-ltd-bom513097-q1-2027-earnings-call-highlights-strong-revenue-growth-and-strategic-shift-to-highvalue-components">Shivalik earnings call</a>; <a href="https://scanx.trade/stock-market-news/companies/permanent-magnets-q1-results-profit-drops-14-yoy-on-higher-costs/47392986">Permanent Magnets Q1 FY27</a>; <a href="https://www.sahi.com/news/permanent-magnets-reports-q1-revenue-of-632m-rupees-standalone-net-profit-falls-to-63m-228-PE1_CORP">Permanent Magnets revenue</a>; <a href="https://www.screener.in/company/526570/consolidated/">Midwest Energy</a>; <a href="https://www.business-standard.com/markets/midwest-energy-ltd-share-price-4041.html">Midwest Energy share price</a>.</li>
+    <li>Rare earths: <a href="https://www.pmindia.gov.in/en/news_updates/cabinet-approves-rs-7280-crore-scheme-to-promote-manufacturing-of-sintered-rare-earth-permanent-magnets-repm/">REPM scheme approval</a>; <a href="https://ddindia.co.in/2026/08/government-receives-20-bids-for-rare-earth-permanent-magnet-manufacturing-scheme/">20 bids received</a>; <a href="https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=157165&amp;ModuleId=3&amp;reg=3&amp;lang=1">India's rare-earth strategy</a>; <a href="https://www.iea.org/commentaries/with-new-export-controls-on-critical-minerals-supply-concentration-risks-become-reality">IEA on export controls</a>; <a href="https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later">CSIS, one year later</a>; <a href="https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026">S&amp;P on 2026 bottlenecks</a>; <a href="https://www.spglobal.com/automotive-insights/en/blogs/2026/03/india-ups-the-ante-on-the-rare-earth-value-chain">India's rare-earth value chain</a>.</li>
+    <li>ECMS: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2247040&amp;reg=3&amp;lang=1">29 more proposals approved</a>; <a href="https://www.impriindia.com/insights/policy-update/electronics-component-manufacturing-scheme/">August 2026 approvals</a>; <a href="https://organiser.org/2026/09/21/381758/bharat/electronics-component-manufacturing-scheme-explained-how-indias-rs-40000-crore-plan-is-strengthening-supply-chain/">₹40,000 cr outlay</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -16.5}, {"y": 2013, "v": -22.8}, {"y": 2014, "v": 3.6}, {"y": 2015, "v": 8.6}, {"y": 2016, "v": -20.8}, {"y": 2017, "v": 8.2}, {"y": 2018, "v": 13.6}, {"y": 2019, "v": -5.6}, {"y": 2020, "v": -10.7}, {"y": 2021, "v": 33.0}, {"y": 2022, "v": 18.2}, {"y": 2023, "v": 8.2}, {"y": 2024, "v": -17.3}, {"y": 2025, "v": -17.7}, {"y": 2026, "v": -10.5}], "AprJul": [{"y": 2012, "v": -7.4}, {"y": 2013, "v": -19.2}, {"y": 2014, "v": 48.7}, {"y": 2015, "v": 5.2}, {"y": 2016, "v": 17.9}, {"y": 2017, "v": 30.8}, {"y": 2018, "v": -13.5}, {"y": 2019, "v": -29.3}, {"y": 2020, "v": 52.6}, {"y": 2021, "v": 113.2}, {"y": 2022, "v": -20.5}, {"y": 2023, "v": 29.8}, {"y": 2024, "v": -5.2}, {"y": 2025, "v": 18.4}, {"y": 2026, "v": 68.7}], "AugSep": [{"y": 2012, "v": -17.4}, {"y": 2013, "v": 7.7}, {"y": 2014, "v": 26.2}, {"y": 2015, "v": -14.8}, {"y": 2016, "v": 21.2}, {"y": 2017, "v": 30.4}, {"y": 2018, "v": 27.8}, {"y": 2019, "v": -22.4}, {"y": 2020, "v": 16.7}, {"y": 2021, "v": 31.7}, {"y": 2022, "v": 30.5}, {"y": 2023, "v": -2.8}, {"y": 2024, "v": 4.5}, {"y": 2025, "v": -4.7}], "OctDec": [{"y": 2012, "v": 6.9}, {"y": 2013, "v": 3.5}, {"y": 2014, "v": -0.5}, {"y": 2015, "v": 45.0}, {"y": 2016, "v": 23.5}, {"y": 2017, "v": 29.5}, {"y": 2018, "v": 2.9}, {"y": 2019, "v": -21.9}, {"y": 2020, "v": 23.0}, {"y": 2021, "v": 50.0}, {"y": 2022, "v": -2.9}, {"y": 2023, "v": -14.1}, {"y": 2024, "v": 12.1}, {"y": 2025, "v": -24.5}], "SepNov": [{"y": 2012, "v": -15.0}, {"y": 2013, "v": -6.4}, {"y": 2014, "v": 33.2}, {"y": 2015, "v": 22.4}, {"y": 2016, "v": 43.8}, {"y": 2017, "v": 21.1}, {"y": 2018, "v": 15.3}, {"y": 2019, "v": -25.2}, {"y": 2020, "v": 30.0}, {"y": 2021, "v": 62.7}, {"y": 2022, "v": 1.4}, {"y": 2023, "v": -1.0}, {"y": 2024, "v": 10.1}, {"y": 2025, "v": -27.1}], "JanMar": [{"y": 2012, "v": -22.3}, {"y": 2013, "v": -25.4}, {"y": 2014, "v": 3.5}, {"y": 2015, "v": 16.4}, {"y": 2016, "v": -17.0}, {"y": 2017, "v": 9.8}, {"y": 2018, "v": -0.9}, {"y": 2019, "v": -5.9}, {"y": 2020, "v": -11.6}, {"y": 2021, "v": 30.5}, {"y": 2022, "v": 41.7}, {"y": 2023, "v": 9.4}, {"y": 2024, "v": -15.0}, {"y": 2025, "v": -25.5}, {"y": 2026, "v": -12.1}]}, "my": {"1": {"2012": -4.5, "2013": -3.1, "2014": 0.0, "2015": 6.9, "2016": 3.5, "2017": 1.0, "2018": -14.4, "2019": -0.3, "2020": -1.8, "2021": -1.3, "2022": 19.8, "2023": 1.3, "2024": 2.7, "2025": -9.6, "2026": -2.5}, "2": {"2012": -5.9, "2013": -17.0, "2014": 9.9, "2015": 2.4, "2016": 2.0, "2017": 15.3, "2018": 26.6, "2019": -8.0, "2020": -4.2, "2021": 17.2, "2022": -4.4, "2023": -3.8, "2024": -13.7, "2025": -12.0, "2026": -6.2}, "3": {"2012": -10.9, "2013": -7.4, "2014": -6.2, "2015": 6.2, "2016": -24.4, "2017": -6.4, "2018": -9.9, "2019": 3.4, "2020": -8.3, "2021": 12.7, "2022": 24.7, "2023": 12.8, "2024": -4.0, "2025": -6.0, "2026": -5.4}, "4": {"2012": 1.4, "2013": 1.0, "2014": 14.0, "2015": 0.5, "2016": 20.0, "2017": 12.7, "2018": -0.5, "2019": -0.8, "2020": 11.3, "2021": 35.0, "2022": 1.5, "2023": 3.8, "2024": 5.9, "2025": -0.5, "2026": 40.3}, "5": {"2012": -0.3, "2013": -8.2, "2014": 39.3, "2015": 3.2, "2016": -8.6, "2017": -9.5, "2018": -2.6, "2019": -8.1, "2020": 0.9, "2021": -2.6, "2022": -10.8, "2023": -3.5, "2024": -13.0, "2025": 2.4, "2026": 17.7}, "6": {"2012": -8.0, "2013": -2.1, "2014": 3.8, "2015": -5.0, "2016": 4.6, "2017": 21.5, "2018": -6.3, "2019": -5.3, "2020": 20.1, "2021": 22.8, "2022": -1.4, "2023": 14.8, "2024": 1.8, "2025": 20.2, "2026": 5.3}, "7": {"2011": 3.4, "2012": -1.1, "2013": -10.6, "2014": -11.9, "2015": 6.9, "2016": 1.1, "2017": 3.2, "2018": -3.4, "2019": -18.6, "2020": 7.6, "2021": 27.2, "2022": -12.0, "2023": 10.5, "2024": 2.0, "2025": -3.4, "2026": -4.7}, "8": {"2011": 1.5, "2012": -7.4, "2013": 13.4, "2014": 0.2, "2015": -9.1, "2016": 16.3, "2017": 15.0, "2018": 8.1, "2019": -17.0, "2020": 2.0, "2021": 0.0, "2022": 15.8, "2023": -2.9, "2024": -4.1, "2025": 4.4, "2026": 16.1}, "9": {"2011": 8.8, "2012": -10.1, "2013": -5.9, "2014": 25.2, "2015": -6.9, "2016": 4.4, "2017": 13.8, "2018": 18.2, "2019": -5.7, "2020": 14.1, "2021": 29.1, "2022": 12.8, "2023": 0.2, "2024": 9.0, "2025": -8.9}, "10": {"2011": -5.8, "2012": 9.0, "2013": 9.9, "2014": -6.4, "2015": 14.6, "2016": 18.4, "2017": 8.0, "2018": -5.2, "2019": -14.9, "2020": 8.0, "2021": 15.9, "2022": -2.6, "2023": -3.7, "2024": 6.4, "2025": -7.9}, "11": {"2011": -6.6, "2012": -13.1, "2013": -8.2, "2014": 11.6, "2015": 14.8, "2016": 17.8, "2017": -1.7, "2018": 3.3, "2019": -4.9, "2020": 2.9, "2021": 9.5, "2022": -8.6, "2023": 2.8, "2024": -4.8, "2025": -11.6}, "12": {"2011": -7.4, "2012": 11.7, "2013": 3.4, "2014": -4.6, "2015": 10.2, "2016": -11.2, "2017": 21.2, "2018": 5.6, "2019": -2.6, "2020": 7.8, "2021": 18.9, "2022": 8.4, "2023": -12.6, "2024": 11.2, "2025": -6.1}}, "basket": ["Shivalik Bimetal Controls Ltd", "Permanent Magnets Limited", "Cosmo Ferrites Limited"], "nbasket": 3, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 0.6, "rel": -0.1, "hit": 7, "n": 15}, {"m": 2, "abs": -1.3, "rel": -0.1, "hit": 6, "n": 15}, {"m": 3, "abs": -2.1, "rel": -1.9, "hit": 5, "n": 15}, {"m": 4, "abs": 12.3, "rel": 9.7, "hit": 12, "n": 15}, {"m": 5, "abs": 0.9, "rel": -0.2, "hit": 5, "n": 15}, {"m": 6, "abs": 7.6, "rel": 5.8, "hit": 9, "n": 15}, {"m": 7, "abs": 1.7, "rel": -0.2, "hit": 8, "n": 16}, {"m": 8, "abs": 3.1, "rel": 3.3, "hit": 11, "n": 16}, {"m": 9, "abs": 7.2, "rel": 6.5, "hit": 10, "n": 15}, {"m": 10, "abs": 5.0, "rel": 2.9, "hit": 8, "n": 15}, {"m": 11, "abs": 1.2, "rel": 0.2, "hit": 7, "n": 15}, {"m": 12, "abs": 4.3, "rel": 3.6, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": -14.8, "n": 27.7, "rel": -42.5, "partial": false}, {"y": 2013, "b": -29.3, "n": 6.8, "rel": -36.1, "partial": false}, {"y": 2014, "b": 140.9, "n": 31.4, "rel": 109.5, "partial": false}, {"y": 2015, "b": 42.7, "n": -4.1, "rel": 46.8, "partial": false}, {"y": 2016, "b": 49.3, "n": 3.0, "rel": 46.3, "partial": false}, {"y": 2017, "b": 199.6, "n": 28.6, "rel": 170.9, "partial": false}, {"y": 2018, "b": 19.2, "n": 3.2, "rel": 16.0, "partial": false}, {"y": 2019, "b": -54.4, "n": 12.0, "rel": -66.4, "partial": false}, {"y": 2020, "b": 86.8, "n": 14.9, "rel": 71.9, "partial": false}, {"y": 2021, "b": 536.5, "n": 24.1, "rel": 512.4, "partial": false}, {"y": 2022, "b": 48.3, "n": 4.3, "rel": 43.9, "partial": false}, {"y": 2023, "b": 41.0, "n": 20.0, "rel": 21.0, "partial": false}, {"y": 2024, "b": 4.6, "n": 8.8, "rel": -4.2, "partial": false}, {"y": 2025, "b": -29.2, "n": 10.5, "rel": -39.7, "partial": false}, {"y": 2026, "b": 43.7, "n": -10.7, "rel": 54.4, "partial": true}], "dd": [{"co": "Shivalik Bimetal Controls", "peak": "Oct 2024", "fp": 53, "y1": 98}, {"co": "Midwest Energy", "peak": "Dec 2025", "fp": -27, "y1": 54}, {"co": "Permanent Magnets", "peak": "Aug 2023", "fp": -49, "y1": -18}, {"co": "Cosmo Ferrites", "peak": "Apr 2022", "fp": -73, "y1": -25}, {"co": "Avio Smart Market Stack", "peak": "Feb 2024", "fp": -77, "y1": -56}, {"co": "Delta Manufacturing", "peak": "Dec 2024", "fp": -56, "y1": -39}, {"co": "Olympic Cards", "peak": "Jan 2020", "fp": -59, "y1": -8}], "win": {"FebMar": {"mean": -1.9, "median": -5.6, "hit": 7, "n": 15}, "AprJul": {"mean": 19.3, "median": 17.9, "hit": 9, "n": 15}, "AugSep": {"mean": 9.6, "median": 12.2, "hit": 9, "n": 14}, "OctDec": {"mean": 9.5, "median": 5.2, "hit": 9, "n": 14}, "SepNov": {"mean": 11.8, "median": 12.7, "hit": 9, "n": 14}, "JanMar": {"mean": -1.6, "median": -5.9, "hit": 6, "n": 15}}, "ytd": {"b": 43.7, "n": -10.7}, "notes": {"2012": "\u221214.8% against +27.7%. Shivalik \u221210%, Cosmo Ferrites \u221213%, Permanent Magnets \u221225%.", "2013": "\u221229.3% against +6.8%. All three fell 28\u201335% in the small-cap sell-off.", "2014": "+140.9% against +31.4%. Shivalik +412%, Cosmo Ferrites +134% in the small-cap rally; Permanent Magnets \u221216%.", "2015": "+42.7% against \u22124.1%. Permanent Magnets +192%; Shivalik \u221216%.", "2016": "+49.3% against +3.0%. Permanent Magnets +68%, Shivalik +50%.", "2017": "+199.6% against +28.6%. Shivalik +317%, Permanent Magnets +276%, Cosmo Ferrites +97% as smart-meter and automotive demand grew.", "2018": "+19.2% against +3.2%. Permanent Magnets +61%, Shivalik +15%; Cosmo Ferrites \u221234%.", "2019": "\u221254.4% against +12.0%. Cosmo Ferrites \u221273%, Shivalik \u221249%, Permanent Magnets \u221247% in the small-cap bear market.", "2020": "+86.8% against +14.9%. Cosmo Ferrites +142%, Permanent Magnets +58%, Shivalik +25%.", "2021": "+536.5% against +24.1%. Cosmo Ferrites +2,203% on a thinly traded share, Shivalik +494%, Permanent Magnets +158% \u2014 the electronics-manufacturing theme at its most exuberant.", "2022": "+48.3% against +4.3%. Permanent Magnets +71%, Shivalik +62%; Cosmo Ferrites \u22124%.", "2023": "+41.0% against +20.0%. Permanent Magnets +116%, Shivalik +35%; Cosmo Ferrites \u221219%.", "2024": "+4.6% against +8.8%. Cosmo Ferrites +48%, Shivalik +5%; Permanent Magnets \u221232%.", "2025": "\u221229.2% against +10.5%. Cosmo Ferrites \u221252%, Shivalik \u221225%, Permanent Magnets \u221210% as smart-meter ordering paused and China's magnet controls disrupted supply chains.", "2026": "+43.7% against a Nifty \u221210.7%, median +13%. Shivalik +155% on record results and new automotive wins; Cosmo Ferrites +13%; Permanent Magnets \u22122%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

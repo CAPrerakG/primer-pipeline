@@ -1,0 +1,622 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drones & Space Technology Primer</title>
+<meta name="description" content="Industry 61 of 278: military and civil drones, satellite communications and India&#x27;s newly opened space industry. Why the most talked-about technologies have the thinnest listed universe, how ideaForge and Avantel make money, the ban on imported drones and the push against Chinese parts, Skyroot&#x27;s first private orbital launch, and why the listed drone stocks have mostly disappointed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Drones &amp; Space · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#orders">Military drone demand</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 61 of 278 · Defence family, part 5</div>
+  <h1>Drones &amp; Space Technology</h1>
+  <p class="lede">Drones have changed how wars are fought and how farms, mines and power lines are inspected; private rockets and satellites are changing who can reach space. India has policies to support both — a ban on imported drones, production incentives, fast-track military procurement, and a space sector opened to private companies. Yet the listed universe is tiny: one real drone maker, one satellite-communications company and a handful of micro-caps. This primer explains the technology and the value chain, where the money is made, why the listed drone stocks have mostly disappointed, and where the space story sits today.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 6 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Defence Services</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">5.4×</div><div class="l">ideaForge's Q1 FY27 revenue against a year earlier (₹68.6 cr, +437%)</div></div>
+    <div class="stat"><div class="n">~₹20,000 cr</div><div class="l">Military drone and counter-drone purchases reported in the fast-track pipeline</div></div>
+    <div class="stat"><div class="n">18 Jul 2026</div><div class="l">Skyroot's Vikram-1 becomes India's first private rocket to reach orbit</div></div>
+    <div class="stat"><div class="n">$8.4 bn</div><div class="l">India's space economy today; the target is $44 bn by 2033</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Big themes, a small listed universe</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A drone is a small flying robot with a camera. A soldier can fly one over a hill to see what is on the other side without being seen; a farmer can fly one to spray crops; an engineer can fly one along a power line to find damaged wires. A satellite is like a very tall lighthouse in the sky that can see or talk to the whole country at once, and a rocket is the lift that carries it up. India used to buy many drones from other countries and only the government could launch rockets. Now Indian companies make drones, and private companies have started launching rockets too.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Drones and space are among India's fastest-growing defence and technology themes, but there are few ways to own them in the listed market.</p>
+    <ul>
+      <li><b>Drones:</b> ideaForge is the only listed drone maker of scale — Q1 FY27 revenue ₹68.6 cr (+437%), EBITDA positive, order book over ₹300 cr at the start of the year, 60% defence. The stock is still 44% below its July 2023 listing-day close.</li>
+      <li><b>Pipeline:</b> about ₹20,000 cr of military drone and counter-drone purchases are reported to be moving through fast-track procurement after Operation Sindoor.</li>
+      <li><b>Space communications:</b> Avantel makes satellite and defence communication systems — Q1 FY27 revenue +36%, profit +67%, order book about ₹1,000 cr — at a very high multiple.</li>
+      <li><b>Space:</b> the real action is unlisted — Skyroot reached orbit in July 2026; more than 440 space start-ups are registered.</li>
+      <li><b>Caution:</b> the listed drone SMEs have fallen 50–90% from their highs; Space Incubatrics is an IT company in insolvency, not a space company.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From a quadcopter to a satellite terminal</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it does</th><th>Who buys it</th><th>Listed Indian makers</th></tr></thead><tbody>
+    <tr><td>Small tactical drones</td><td>Surveillance for soldiers and police over a few kilometres</td><td>Army, paramilitary, police</td><td>ideaForge</td></tr>
+    <tr><td>Medium and long-endurance drones</td><td>Hours-long surveillance over borders and sea</td><td>Army, Navy, Air Force</td><td>Mostly imported or unlisted Indian makers</td></tr>
+    <tr><td>Loitering munitions</td><td>Drones that strike a target</td><td>Army</td><td>Solar Industries (060)</td></tr>
+    <tr><td>Counter-drone systems</td><td>Detect, jam or shoot down hostile drones</td><td>All services, airports, prisons</td><td>BEL (058), Zen (062), Paras, others</td></tr>
+    <tr><td>Agricultural and industrial drones</td><td>Crop spraying, mapping, inspection</td><td>Farmers, mines, utilities</td><td>ideaForge, Niks, Drone Destination (services)</td></tr>
+    <tr><td>Drone training and services</td><td>Pilot training, drone rentals, survey services</td><td>Individuals, government schemes</td><td>Drone Destination, Droneacharya</td></tr>
+    <tr><td>Satellite communication systems</td><td>Terminals and ground systems that talk to satellites</td><td>Navy, Army, disaster agencies</td><td>Avantel</td></tr>
+    <tr><td>Space hardware</td><td>Satellite subsystems, rocket parts, launch services</td><td>ISRO, start-ups, foreign customers</td><td>Avantel; also Astra and Paras (058), MTAR, HAL and L&amp;T in other sections</td></tr>
+  </tbody></table></div>
+  <p>A drone is mostly electronics and software: flight controller, motors, batteries, cameras, radio link and the software that makes it fly and see. That is why drone economics resemble electronics more than aviation — the hardware becomes cheaper every year, and value moves to sensors, secure communications, autonomy and service. In space, the same logic applies to small satellites, while rockets remain capital-intensive, high-risk engineering projects.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a flight controller to a mission</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Components</h4><div class="an">The parts</div>Motors, batteries, flight controllers, cameras and thermal sensors, radio modules, GPS/NavIC receivers.<div class="who">Largely imported, much of it historically from China; Indian makers growing under incentives</div><div class="m">The critical dependence</div></div>
+    <div class="stage"><div class="no">02</div><h4>Software and autonomy</h4><div class="an">The brain</div>Flight control, navigation without GPS, secure data links, image analysis.<div class="who">ideaForge, start-ups; DRDO labs</div><div class="m">Where differentiation lies</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Drone makers</h4><div class="an">The aircraft</div>Design, assembly, testing and certification.<div class="who">ideaForge (listed); many unlisted makers; Solar for loitering munitions</div><div class="m">Order flow from the forces</div></div>
+    <div class="stage"><div class="no">04</div><h4>Services and training</h4><div class="an">The operators</div>Pilot training, survey and spraying services, maintenance.<div class="who">Drone Destination, Droneacharya, Niks</div><div class="m">Low barriers; scheme-dependent</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Space communications</h4><div class="an">The link to orbit</div>Satellite terminals, ground stations, communication payloads.<div class="who">Avantel; BEL and others</div><div class="m">Defence and ISRO orders</div></div>
+    <div class="stage"><div class="no">06</div><h4>Launch and satellites</h4><div class="an">The ride up</div>Rockets, satellite buses and payloads.<div class="who">ISRO, Skyroot, Agnikul, Pixxel and other start-ups (unlisted); HAL, L&amp;T</div><div class="m">Mostly outside the listed market</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Parts makers</b> — many abroad — supply motors, batteries, sensors and chips.</li>
+    <li><b>Software</b> makes the drone fly, see and stay secure.</li>
+    <li><b>Drone makers</b> assemble and certify the aircraft for the forces and industry.</li>
+    <li><b>Service firms</b> train pilots and fly missions.</li>
+    <li><b>Space firms</b> build the links and rockets that reach orbit — mostly unlisted.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical weakness in the drone chain is stage 1. The forces now insist on drones without Chinese-origin parts in critical systems, and Indian component supply is still thin, so makers face higher costs and delays. The critical strength is stage 2: software, secure links and navigation without GPS are what the forces pay for, and what separate a defence supplier from an assembler. ideaForge's investment case rests on its software and its long record with the Army; the SME service companies have neither.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 6 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Avantel (~₹3,774 cr)</td><td>Visakhapatnam; wireless and satellite communication systems, radar subsystems and network software for the Navy, Army, DRDO and ISRO.</td><td>Q1 FY27 revenue ₹70.4 cr (+36%), profit ₹5.4 cr (+67%); a ₹118 cr DRDO order in August; order book about ₹1,000 cr. Material costs tripled year on year. About 175 times Q1 profit annualised. Stock −7% in 2026, 30% below its October 2025 high.</td></tr>
+    <tr><td>ideaForge Technology (~₹3,491 cr)</td><td>Mumbai; India's leading maker of small military and civil drones; IPO at ₹672 in July 2023, listed 93% higher.</td><td>Q1 FY27 revenue ₹68.6 cr (+437%), EBITDA ₹4.3 cr against a ₹15.1 cr loss; defence 60% of revenue; executed over 20% of its ₹300 cr+ opening order book; gross margin fell and the stock dropped 5% on the day. +56% in 2026, 44% below its listing-day close and 9% above its IPO price.</td></tr>
+    <tr><td>Drone Destination (~₹81 cr)</td><td>An NSE SME company: drone manufacturing, pilot training and drone rentals through eight hubs.</td><td>Stock −51% in 2026, 93% below its July 2024 high. Excluded: micro-cap with thin trading.</td></tr>
+    <tr><td>Droneacharya Aerial Innovations (~₹78 cr)</td><td>A BSE SME company: drone training, services and defence demonstrations.</td><td>FY26 revenue fell 57% to ₹14 cr; small profit. Stock −27% in 2026, 86% below its January 2023 high. Excluded.</td></tr>
+    <tr><td>Niks Technology (no market cap reported)</td><td>A Patna SME company: drone manufacturing, repair and rental, plus IT training.</td><td>Thinly traded; stock −33% in 2026. Excluded.</td></tr>
+    <tr><td>Space Incubatrics Technologies (~₹6 cr)</td><td>Despite its name, an IT-services and training company now moving into textiles and trading; admitted to insolvency proceedings over a ₹1.19 cr loan default.</td><td>A ₹0.18 penny stock; its data show a −90% and +926% swing in December 2025. <b>Excluded; recommend removal from the watchlist.</b></td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The rest of the industry</span><p>Much of India's drone and space capability sits in other sections or is unlisted. Solar Industries (060) makes loitering munitions; Zen Technologies (062), BEL and Paras (058) make counter-drone systems; Astra Microwave, Data Patterns and Paras (058), MTAR, HAL and L&amp;T supply the space programme. Unlisted leaders include Raphe mPhibr and Garuda Aerospace in drones, and Skyroot, Agnikul and Pixxel in space. The basket uses Avantel and ideaForge — the only two members with meaningful trading and relevant businesses.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Lumpy government orders on a thin base</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>How it is sold</th><th>Margin shape</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Military drones</td><td>Emergency and fast-track purchases, then larger contracts</td><td>Good when volumes come; hurt by imported parts</td><td>Orders are lumpy and can pause for a year</td></tr>
+    <tr><td>Civil drones</td><td>Government schemes, enterprises, farmers</td><td>Thin; price competition</td><td>Depends on subsidies and schemes</td></tr>
+    <tr><td>Training and services</td><td>Fees per pilot, per acre or per survey</td><td>Low barriers, low margins</td><td>Crowded; demand fell after early subsidies</td></tr>
+    <tr><td>Satellite and defence communications</td><td>DRDO, Navy and ISRO contracts</td><td>Moderate, rising with scale</td><td>Concentrated customers</td></tr>
+  </tbody></table></div>
+  <p>ideaForge's history shows how lumpy the military drone business is. Revenue rose sharply after the Army's emergency purchases in 2021–2022, then fell in FY25 as those purchases ended and newer orders took time — the stock fell 29% in 2024 and 21% in 2025. In Q1 FY27, revenue jumped more than fivefold from that low base and EBITDA turned positive, but gross margin fell as a higher-cost mix shipped. Management expects the Army's higher procurement limits for field commanders and about ₹20,000 cr of fast-track purchases to lift orders in the second half.</p>
+  <p>Avantel's economics are steadier but concentrated: a few defence and space customers, contracts measured in tens or low hundreds of crores, and margins that vary with the mix of development and production work. Its profit of ₹5.4 cr in Q1 FY27 against a market value of about ₹3,774 cr shows how much growth is already priced in.</p>
+  <h3>Why the service SMEs struggled</h3>
+  <p>A wave of drone-training and services companies listed on the SME platforms in 2022–2023, riding government schemes to train pilots and put drones on farms. Training demand fell once the first wave of certifications was done, and services proved price-competitive. Droneacharya's revenue halved in FY26; Drone Destination's stock is 93% below its high. The lesson is the same as in other themes in this project: a fashionable theme does not guarantee a profitable business model.</p>
+</section>
+
+<section id="orders" data-toc="Military drone demand">
+  <p class="eyebrow">5b · Military drone demand</p>
+  <h2>From emergency buys to a standing requirement</h2>
+  <p>The war in Ukraine and India's own Operation Sindoor in May 2025 showed that cheap drones — for surveillance, strike and as decoys — are now part of every battle, and that air defences must be able to stop them. The Indian forces responded in three ways: emergency and fast-track purchases, raising the financial powers of field commanders so units can buy drones directly, and the iDEX programme, which by February 2026 had cleared 58 prototypes worth ₹3,853 cr for procurement.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Demand stream</th><th>What it buys</th><th>Status</th></tr></thead><tbody>
+    <tr><td>Fast-track procurement</td><td>Surveillance drones, loitering munitions, counter-drone systems</td><td>About ₹20,000 cr reported in the pipeline; one opportunity at RFP stage</td></tr>
+    <tr><td>Field commanders' powers</td><td>Small drones bought directly by units</td><td>Higher limits from 2026</td></tr>
+    <tr><td>iDEX start-up contracts</td><td>Prototype-to-production buys</td><td>58 prototypes worth ₹3,853 cr cleared</td></tr>
+    <tr><td>Long-endurance drones</td><td>MALE and HALE systems</td><td>Mix of imports (such as US-made drones) and Indian development</td></tr>
+  </tbody></table></div>
+  <p>For listed investors, the key point is that this demand will be spread across many suppliers — ideaForge, Solar, BEL, Zen, Paras and dozens of unlisted start-ups — and that the forces increasingly insist on Indian software and non-Chinese components. Market share will go to companies that can pass those tests at scale.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What drone and space makers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Source</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Brushless motors and magnets</td><td>Propulsion</td><td>China dominant; rare-earth magnets under Chinese export controls since April 2025 (see 051)</td><td>The critical supply risk</td></tr>
+    <tr><td>Lithium batteries</td><td>Endurance</td><td>Imported cells (see 046)</td><td>Cost and supply</td></tr>
+    <tr><td>Cameras and thermal sensors</td><td>What the drone sees</td><td>Imported sensors; germanium for thermal lenses restricted by China (see 058)</td><td>Supply and security</td></tr>
+    <tr><td>Flight controllers and chips</td><td>Control and navigation</td><td>Imported chips; Indian designs emerging</td><td>Security certification</td></tr>
+    <tr><td>Radio and satellite links</td><td>Command and data</td><td>Mix; secure military links required</td><td>Jamming resistance</td></tr>
+    <tr><td>Space-grade components</td><td>Satellites and rockets</td><td>Imported radiation-hardened parts; ISRO-qualified suppliers</td><td>Long qualification</td></tr>
+  </tbody></table></div>
+  <p>The shift away from Chinese parts is the defining supply issue. For years, most small drones worldwide were built with Chinese motors, batteries, cameras and flight controllers. India's forces now screen military drones for Chinese-origin components, which raises costs and forces makers to requalify suppliers. That is both a burden and a moat: a company that has built a clean supply chain has an advantage over new entrants that have not.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Year-end defence buying and scheme cycles</h2>
+  <ul>
+    <li><b>January–March:</b> the forces spend remaining budgets; deliveries and billing peak.</li>
+    <li><b>April–May:</b> fourth-quarter results; new-year contracts and emergency-procurement windows.</li>
+    <li><b>July–September:</b> monsoon limits agricultural spraying and outdoor surveys; defence demonstrations and trials continue.</li>
+    <li><b>October–March:</b> the rabi crop season supports agricultural drone use; defence orders accumulate for year-end.</li>
+    <li><b>Event-driven:</b> border incidents and conflicts trigger emergency purchases, as in 2020–2021 and after May 2025.</li>
+  </ul>
+  <p>Management commentary from ideaForge points to the third and fourth quarters of FY27 for the next wave of orders. As elsewhere in defence, quarterly results swing with delivery timing, so trailing twelve-month numbers are more useful than single quarters.</p>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of Avantel and ideaForge minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 2 names (Avantel Limited, Ideaforge Technology Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +10.0 pts (beat in 13 of 15 years); Nov +6.5 pts (beat in 7 of 15 years); Jun +5.3 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Feb -3.9 pts (beat in 6 of 15 years); Aug -2.7 pts (beat in 5 of 16 years); Jan -0.2 pts (beat in 7 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 6 of 15 years (median -2.7 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +17.9 pts); Aug–Sep beat the Nifty in 6 of 14 years (median -6.8 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +5.1 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +4.2 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -4.6 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +7.0 points.</p><p><b>Reading it:</b> until July 2023 the basket is Avantel alone — a satellite and defence-communications company, not a drone maker — and after that Avantel plus ideaForge. April has beaten the Nifty in 13 of 15 years (average +10.0 points), the strongest April in the Defence family, and April–July in 10 of 15 (median +17.9). January–March has worked in only 6 of 15 (median −4.6) and August–September in 6 of 14 (median −6.8). December has been unusually firm (12 of 15). The April strength matches the rest of the family — fourth-quarter results and new-year defence orders — but rests largely on one company.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed in 2018 (−51.2), 2015 (−13.4), 2012 (−7.8), 2016 (−7.4) and 2019 (−6.8)</b>; the best runs were 2021 (+103.1) and 2023 (+88.8).</li>
+    <li><b>April itself failed only twice, and narrowly:</b> 2019 (−0.6) and 2018 (−0.0).</li>
+    <li><b>January–March failed in 2025 (−33.4), 2015 (−22.9) and 2024 (−16.5)</b>, among nine losing years.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is mostly Avantel's record, a thinly traded stock that tripled twice (2014, 2017) and quadrupled once (2023). The April pattern matches the Defence family and has a business reason, but with one or two stocks the sample is small. Use it as context alongside 057–060, where the same April–July strength appears across more companies.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Defence orders.</b> Emergency and fast-track purchases drive volume.</li>
+    <li><b>Component sourcing.</b> Non-Chinese parts cost more.</li>
+    <li><b>Product mix.</b> Military systems earn more than civil drones and services.</li>
+    <li><b>Software content.</b> Autonomy and secure links command a premium.</li>
+    <li><b>Scale.</b> Fixed engineering costs are large relative to revenue at today's size.</li>
+    <li><b>Government schemes.</b> PLI, Drone Shakti and agricultural subsidies support civil demand.</li>
+    <li><b>Competition.</b> Many unlisted start-ups compete for the same orders.</li>
+    <li><b>Space programme budgets.</b> ISRO and defence space spending drive Avantel-type suppliers.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Avantel alone until ideaForge listed in July 2023, then both, equal-weighted monthly. Drone Destination, Droneacharya, Niks and Space Incubatrics are excluded (see section 4). Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>A global mirror: AeroVironment</h3>
+  <p>The US company AeroVironment (NASDAQ:AVAV), a leading maker of small military drones and loitering munitions, shows the long cycle of a listed drone business. Calendar-year returns in dollars, price only, from TradingView.</p>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">AeroVironment</th><th>What happened</th></tr></thead><tbody>
+    <tr><td class="num">2012</td><td class="num">−30.9</td><td>US defence budget cuts</td></tr>
+    <tr><td class="num">2013</td><td class="num">+34.0</td><td>Recovery</td></tr>
+    <tr><td class="num">2014–2016</td><td class="num">−6.5, +8.1, −9.0</td><td>Flat years as Afghanistan drew down</td></tr>
+    <tr><td class="num">2017</td><td class="num">+109.3</td><td>Loitering munitions win orders</td></tr>
+    <tr><td class="num">2018–2020</td><td class="num">+21.0, −9.1, +40.8</td><td>Steady growth</td></tr>
+    <tr><td class="num">2021</td><td class="num">−28.6</td><td>Weaker results and a de-rating</td></tr>
+    <tr><td class="num">2022–2025</td><td class="num">+38.1, +47.1, +22.1, +57.2</td><td>Ukraine: small drones and Switchblade loitering munitions in demand</td></tr>
+    <tr><td class="num">2026*</td><td class="num">−33.9</td><td>61% below its October 2025 peak</td></tr>
+  </tbody></table></div>
+  <p class="note">*2026 to 18 September. AeroVironment is up about fivefold since the end of 2011 despite frequent 30% drawdowns.</p>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Communications era</b> (2012–2020): the listed record is Avantel, a small communications supplier with violent swings — +227% in 2014, +242% in 2017, −49% in 2018.</li>
+    <li><b>The drone moment</b> (2021–2023): emergency Army purchases after Galwan, the 2022 import ban and drone PLI; ideaForge's IPO was heavily oversubscribed and listed 93% higher.</li>
+    <li><b>Disappointment</b> (2024–2025): emergency orders ended, ideaForge's revenue fell, and the SME drone companies collapsed.</li>
+    <li><b>Operation Sindoor and fast-track buying</b> (2025–2026): new demand, a revenue recovery at ideaForge, and a private rocket in orbit.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>IPO excitement fades.</b> ideaForge's listing day remains its high; the drone SMEs peaked soon after listing.</li>
+    <li><b>Emergency orders are not a run-rate.</b> Revenue built on one-off purchases falls when they end.</li>
+    <li><b>Drone businesses re-rate fast and de-rate fast,</b> in India and the US alike.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Drones everywhere, and a new space race</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Area</th><th>Leaders</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>Consumer and commercial drones</td><td>China's DJI dominates</td><td>India banned imports of foreign drones in 2022</td></tr>
+    <tr><td>Military small drones and loitering munitions</td><td>US (AeroVironment), Israel, Turkey, Ukraine's mass producers</td><td>Benchmarks and partners; Indian makers compete for domestic orders</td></tr>
+    <tr><td>Large military drones</td><td>US (General Atomics), Israel, Turkey (Baykar), China</td><td>India buys some abroad while developing its own</td></tr>
+    <tr><td>Launch</td><td>SpaceX, China; Rocket Lab</td><td>Skyroot and Agnikul enter; India the third country with a private orbital launch after the US and China</td></tr>
+    <tr><td>Satellites and communications</td><td>Starlink and others</td><td>Opportunities for Indian component and ground-system makers</td></tr>
+  </tbody></table></div>
+  <p>The war in Ukraine turned drones from a niche into a mass-produced weapon: both sides use millions a year, and cheap drones now destroy expensive equipment. That has pushed every military to buy drones and counter-drone systems quickly and to secure supply chains outside China. In space, reusable rockets have cut launch costs sharply and made small satellite constellations viable; India's opening of the sector in 2020 aims to capture a share of that market, from about $8.4 bn today toward a $44 bn target by 2033.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Autonomy.</b> Drones that navigate and choose targets with less human control.</li>
+    <li><b>GPS-denied navigation.</b> Jamming is common; drones must navigate by vision and inertial sensors.</li>
+    <li><b>Swarms.</b> Many cheap drones coordinated together.</li>
+    <li><b>Counter-drone lasers and electronic warfare.</b> Cheap defences against cheap drones.</li>
+    <li><b>Small satellites and constellations.</b> Earth observation and communications from many small satellites.</li>
+    <li><b>Private launch.</b> Skyroot's Vikram-1 and others make Indian launch capacity commercial.</li>
+  </ol>
+  <p>Each shift increases the software and electronics content of the product and shortens product cycles. That favours companies with strong engineering teams and makes last year's hardware obsolete quickly — a risk for companies whose advantage rests on a single product.</p>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Drone Rules 2021</td><td>Liberalised rules for flying and certifying drones</td><td>Opened civil demand</td></tr>
+    <tr><td>Import ban (February 2022)</td><td>Bars imports of foreign drones except for defence, R&amp;D and security</td><td>Protects Indian makers from DJI</td></tr>
+    <tr><td>PLI for drones</td><td>₹120 cr; incentives up to 20% of value added</td><td>Small but symbolic support for manufacturing</td></tr>
+    <tr><td>GST cut to 5% (September 2025)</td><td>One lower rate for drones</td><td>Cheaper civil drones</td></tr>
+    <tr><td>Further drone incentives (reported)</td><td>About ₹2,000 cr over three years from 2025; a larger five-year scheme discussed in Budget 2026</td><td>Could support component making</td></tr>
+    <tr><td>iDEX and fast-track procurement</td><td>Start-up prototypes to production; faster military buying</td><td>Military demand for Indian drones</td></tr>
+    <tr><td>Indian Space Policy 2023 and IN-SPACe</td><td>Private companies may build and launch rockets and satellites; ISRO facilities opened</td><td>Created the private space sector</td></tr>
+    <tr><td>FDI in space (2024)</td><td>Higher foreign ownership allowed in satellites, launch vehicles and components</td><td>Easier funding for start-ups</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: demand returning, listed options still few</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Military drone demand</td><td>Rising</td><td>Fast-track pipeline ~₹20,000 cr; field commanders' powers raised</td></tr>
+    <tr><td>ideaForge</td><td>Recovering</td><td>Revenue ×5.4 in Q1; EBITDA positive; margin pressure</td></tr>
+    <tr><td>Avantel</td><td>Growing, richly valued</td><td>Profit +67%; about 175 times annualised Q1 profit</td></tr>
+    <tr><td>Drone SMEs</td><td>Broken</td><td>Down 86–93% from highs</td></tr>
+    <tr><td>Space</td><td>Booming, mostly unlisted</td><td>Skyroot reached orbit; 440+ start-ups</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +17.1% this year vs -10.7% for the Nifty (to 18 Sep 2026). The two-stock basket is up 17% against a Nifty down 11%, but the members have moved in opposite directions: ideaForge +56% as drone revenue jumped fivefold in Q1 FY27 and the Army's fast-track procurement began, Avantel −7% despite profit up 67%. The listed drone SMEs have collapsed — Drone Destination −51% and Droneacharya −27% this year — and ideaForge is still 44% below its July 2023 listing-day close. Space is booming outside the market: Skyroot, now a unicorn, put India's first private rocket into orbit on 18 July 2026, but it is unlisted.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th><th class="num">1 year</th></tr></thead><tbody>
+    <tr><td>Avantel</td><td class="num">₹147</td><td>₹212 (6 Oct 2025)</td><td class="num">−30%</td><td class="num">−7%</td><td class="num">−17%</td></tr>
+    <tr><td>ideaForge</td><td class="num">₹730</td><td>₹1,295 (7 Jul 2023)</td><td class="num">−44%</td><td class="num">+56%</td><td class="num">+37%</td></tr>
+    <tr><td>Drone Destination</td><td class="num">₹33</td><td>₹452 (5 Jul 2024)</td><td class="num">−93%</td><td class="num">−51%</td><td class="num">−61%</td></tr>
+    <tr><td>Droneacharya</td><td class="num">₹31</td><td>₹232 (11 Jan 2023)</td><td class="num">−86%</td><td class="num">−27%</td><td class="num">−52%</td></tr>
+    <tr><td>Niks Technology</td><td class="num">₹305</td><td>₹601 (30 Jul 2024)</td><td class="num">−49%</td><td class="num">−33%</td><td class="num">−35%</td></tr>
+    <tr><td>Space Incubatrics</td><td class="num">₹0.18</td><td>₹0.63 (10 Jan 2022)</td><td class="num">−71%</td><td class="num">−50%</td><td class="num">−19%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>ideaForge, at about ₹3,491 cr, is priced for its order book to grow several times over as fast-track purchases turn into contracts; its recovery from a low base is real, but its margins have not yet proved themselves. Avantel's multiple assumes that defence and space communications keep compounding. Both are small companies in a sector where orders are lumpy and competition from unlisted start-ups is intense. The most exciting parts of the theme — private rockets, satellite constellations, large military drones — are not available on the Indian market at all.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>Drones and space are real, durable growth areas for India, and demand is rising. But the listed universe is thin, and history — ideaForge's post-IPO decline, the collapse of the drone SMEs — shows that theme enthusiasm runs ahead of profits. The better-established ways to own the theme may be indirect: Solar (loitering munitions), BEL and Zen (counter-drone), and the space suppliers in defence electronics.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Fast-track drone contracts</td><td>Converts the pipeline into orders</td><td>Ministry releases; company filings</td></tr>
+    <tr><td>ideaForge order book and gross margin</td><td>Shows whether recovery is profitable</td><td>Quarterly results</td></tr>
+    <tr><td>Rules on Chinese components</td><td>Sets costs and who qualifies</td><td>Army and Ministry guidelines</td></tr>
+    <tr><td>Drone incentive schemes</td><td>Component-making support</td><td>Ministry of Civil Aviation</td></tr>
+    <tr><td>Avantel orders from DRDO, Navy and ISRO</td><td>Communications demand</td><td>Company announcements</td></tr>
+    <tr><td>Private launch cadence</td><td>Progress of the space sector</td><td>IN-SPACe, company releases</td></tr>
+    <tr><td>Space start-up IPOs</td><td>Future listed options</td><td>DRHP filings</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Explosives (060):</b> Solar's loitering munitions and counter-drone systems.</li>
+    <li><b>Defence electronics (058):</b> BEL, Paras and others in counter-drone systems and space electronics.</li>
+    <li><b>Defence services (062):</b> Zen's anti-drone systems and simulators.</li>
+    <li><b>Aerospace &amp; defence manufacturing (057):</b> HAL and suppliers in the space programme.</li>
+    <li><b>Components and batteries (051, 046):</b> magnets, motors and cells.</li>
+    <li><b>Security and surveillance (056):</b> drone cameras and gimbals.</li>
+    <li><b>Global proxies:</b> AeroVironment for military drones; Rocket Lab for small launch.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>How much of the order book is signed, and when will it be delivered?</li>
+    <li>What share of revenue is defence, and how much comes from one-off emergency purchases?</li>
+    <li>What share of components is still imported, and how much from China?</li>
+    <li>How has the move to non-Chinese parts affected cost and margin?</li>
+    <li>What is the gross margin by product, and what explains this quarter's change?</li>
+    <li>Which fast-track opportunities are you bidding for, and against whom?</li>
+    <li>How much do you spend on R&amp;D, and what share of your product is your own software?</li>
+    <li>What is your export pipeline?</li>
+    <li>How are receivables from government customers trending?</li>
+    <li>For Avantel: what share of revenue comes from space, and how large is the ISRO pipeline?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Drones are the next big listed theme"</td><td>ideaForge 44% below listing day; SMEs down 86–93%</td><td>The theme is big; listed winners are few</td></tr>
+    <tr><td>"The import ban guarantees Indian makers' profits"</td><td>Competition among Indian makers is intense; margins are thin</td><td>Protection is not profitability</td></tr>
+    <tr><td>"Any company with 'space' in its name is a space play"</td><td>Space Incubatrics is an IT company in insolvency</td><td>Read the business</td></tr>
+    <tr><td>"Emergency orders prove a steady market"</td><td>ideaForge's revenue fell after 2021–22 emergency buys ended</td><td>Watch for repeat orders</td></tr>
+    <tr><td>"India's space boom is investable"</td><td>Skyroot, Agnikul and Pixxel are unlisted</td><td>Mostly not yet</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. UAV, MALE" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Drones</h3><dl>
+    <dt>UAV</dt><dd>Unmanned aerial vehicle — a drone.</dd>
+    <dt>UAS</dt><dd>Unmanned aircraft system — the drone plus its ground station and links.</dd>
+    <dt>Multirotor</dt><dd>A drone with several rotors, such as a quadcopter.</dd>
+    <dt>Fixed-wing drone</dt><dd>A drone with wings like an aeroplane, for longer range.</dd>
+    <dt>VTOL</dt><dd>Vertical take-off and landing.</dd>
+    <dt>MALE</dt><dd>Medium-altitude long-endurance drone.</dd>
+    <dt>HALE</dt><dd>High-altitude long-endurance drone.</dd>
+    <dt>Loitering munition</dt><dd>A drone that waits over a target area and then strikes.</dd>
+    <dt>Counter-drone (C-UAS)</dt><dd>Systems that detect and defeat hostile drones.</dd>
+    <dt>Swarm</dt><dd>Many drones coordinated to act together.</dd>
+    <dt>Payload</dt><dd>The camera, sensor or weapon a drone carries.</dd>
+    <dt>Gimbal</dt><dd>A stabilised mount that keeps a camera steady.</dd>
+    <dt>Flight controller</dt><dd>The drone's onboard computer.</dd>
+    <dt>GPS-denied navigation</dt><dd>Navigating without satellite positioning, using cameras and inertial sensors.</dd>
+    <dt>NavIC</dt><dd>India's regional satellite navigation system.</dd>
+    <dt>Remote pilot certificate</dt><dd>The licence needed to fly drones commercially in India.</dd>
+    <dt>Digital Sky</dt><dd>India's online platform for drone registration and permissions.</dd>
+  </dl>
+  <h3>Space</h3><dl>
+    <dt>Orbital launch</dt><dd>A launch that places a payload in orbit around the Earth.</dd>
+    <dt>Suborbital launch</dt><dd>A flight that reaches space but falls back without orbiting.</dd>
+    <dt>LEO</dt><dd>Low Earth orbit, a few hundred to 2,000 km up.</dd>
+    <dt>GEO</dt><dd>Geostationary orbit, about 36,000 km up, where satellites stay over one spot.</dd>
+    <dt>Constellation</dt><dd>A group of satellites working together.</dd>
+    <dt>SATCOM</dt><dd>Satellite communications.</dd>
+    <dt>Ground station</dt><dd>The facility that talks to satellites.</dd>
+    <dt>Earth observation</dt><dd>Imaging the Earth from space.</dd>
+    <dt>SSLV / PSLV</dt><dd>ISRO's small and polar satellite launch vehicles.</dd>
+    <dt>IN-SPACe</dt><dd>The agency that authorises and supports private space companies.</dd>
+    <dt>NSIL</dt><dd>NewSpace India Limited, ISRO's commercial arm.</dd>
+    <dt>Vikram-1</dt><dd>Skyroot's rocket, the first Indian private rocket to reach orbit (July 2026).</dd>
+    <dt>Launch vehicle</dt><dd>A rocket that carries satellites to orbit.</dd>
+    <dt>Reusable rocket</dt><dd>A rocket whose stages land and fly again, cutting launch costs.</dd>
+    <dt>Radiation-hardened component</dt><dd>An electronic part built to survive radiation in space.</dd>
+    <dt>MQ-9B</dt><dd>A US-made long-endurance armed drone that India ordered in 2024.</dd>
+  </dl>
+  <h3>Procurement and business</h3><dl>
+    <dt>Emergency procurement</dt><dd>Fast purchases by the services after a security crisis.</dd>
+    <dt>Fast-track procurement</dt><dd>A shortened procurement route for urgent needs.</dd>
+    <dt>iDEX</dt><dd>Innovations for Defence Excellence — a programme for start-ups.</dd>
+    <dt>Drone Shakti</dt><dd>A government programme to promote drones and drone start-ups.</dd>
+    <dt>PLI</dt><dd>Production-linked incentive.</dd>
+    <dt>SME platform</dt><dd>The exchange segment for small companies.</dd>
+    <dt>CIRP</dt><dd>Corporate insolvency resolution process under the Insolvency Code.</dd>
+    <dt>Listing-day close</dt><dd>A stock's closing price on its first trading day.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What is a loitering munition?</summary><p>A drone that waits over a target area and then strikes.</p></details>
+  <details class="q"><summary>2. What did ideaForge report in Q1 FY27?</summary><p>Revenue ₹68.6 cr (+437%), EBITDA ₹4.3 cr against a ₹15.1 cr loss; defence 60% of revenue.</p></details>
+  <details class="q"><summary>3. Why did ideaForge's revenue fall in FY25?</summary><p>The Army's emergency purchases of 2021–22 ended and new orders took time.</p></details>
+  <details class="q"><summary>4. What does Avantel make?</summary><p>Wireless and satellite communication systems, radar subsystems and network software for defence and space customers.</p></details>
+  <details class="q"><summary>5. What happened on 18 July 2026?</summary><p>Skyroot's Vikram-1 became the first Indian private rocket to reach orbit.</p></details>
+  <details class="q"><summary>6. What did India ban in February 2022?</summary><p>Imports of foreign drones, except for defence, R&amp;D and security uses.</p></details>
+  <details class="q"><summary>7. Why is Space Incubatrics excluded?</summary><p>It is an IT-services company in insolvency, not a space company, and its price data are unreliable.</p></details>
+  <details class="q"><summary>8. What is the key supply-chain issue for Indian drone makers?</summary><p>Replacing Chinese-origin motors, batteries, cameras and electronics in military drones.</p></details>
+  <details class="q"><summary>9. In how many of 15 years did April beat the Nifty for this basket?</summary><p>13.</p></details>
+  <details class="q"><summary>10. How far is ideaForge from its listing-day close?</summary><p>About 44% below, and 9% above its ₹672 IPO price.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, 2011 to 18 September 2026, against NSE:NIFTY; NASDAQ:AVAV for the global mirror.</li>
+    <li>ideaForge: <a href="https://raksha-anirveda.com/ideaforge-reports-%E2%82%B968-6-cr-q1-fy27-revenue-with-positive-ebitda-targets-execution-of-fy27-opening-order-book-by-q3/">Q1 FY27 results and outlook</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/ideaforge-technology-ltd-nse-ideaforge-150052280.html">earnings call highlights</a>; <a href="https://ground.news/article/ideaforge-reports-inr-686-cr-q1-fy27-revenue-with-positive-ebitda-targets-execution-of-fy27-opening-order-book-by-q3-business-news-week">margin and share reaction</a>.</li>
+    <li>Avantel: <a href="https://www.business-standard.com/markets/capital-market-news/avantel-gains-as-q1-pat-jumps-67-yoy-to-rs-5-cr-126071300209_1.html">Q1 FY27</a>; <a href="https://www.ciol.com/news/avantels-q1-revenue-grows-35-as-defence-space-demand-boost-earnings-12163507">defence and space demand</a>; <a href="https://www.business-standard.com/amp/markets/capital-market-news/avantel-gains-after-bagging-rs-118-crore-order-from-drdo-126083100349_1.html">DRDO order</a>.</li>
+    <li>Policy: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2228954&amp;reg=3&amp;lang=1">India's drone ecosystem (PIB)</a>; <a href="https://plidrone.ifciltd.com/">drone PLI scheme</a>; <a href="https://www.unmannedairspace.info/uncategorized/india-briefing-examines-policy-measures-to-support-the-countrys-indigenous-drone-industry/">policy measures</a>.</li>
+    <li>Space: <a href="https://www.cnbc.com/2026/07/18/indias-skyroot-launches-first-private-orbital-rocket-mission.html">Skyroot's orbital launch</a>; <a href="https://www.space.com/space-exploration/launches-spacecraft/skyroot-aerospace-india-first-private-orbital-launch-vikram-1">Vikram-1 debut</a>; <a href="https://techcrunch.com/2026/05/07/indias-first-space-tech-unicorn-emerges-as-skyroot-gears-up-for-orbital-launch/">Skyroot unicorn</a>; <a href="https://www.whalesbook.com/news/English/technology/India-Space-Sector-Eyes-dollar45-Billion-Goal-After-Key-Private-Launch/6a89d24084d2dd5c12e11564">space-economy target</a>.</li>
+    <li>SMEs: <a href="https://harro.com/2026/05/30/droneacharya-reports-fy26-profit-of-rs-37-lakh-despite-57-revenue-slump/">Droneacharya FY26</a>; <a href="https://www.screener.in/company/DRONE/">Drone Destination</a>; <a href="https://www.screener.in/company/543282/">Niks Technology</a>; <a href="https://www.screener.in/company/541890/">Space Incubatrics</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 4.4}, {"y": 2013, "v": 12.2}, {"y": 2014, "v": -14.4}, {"y": 2015, "v": 6.8}, {"y": 2016, "v": -17.8}, {"y": 2017, "v": 36.2}, {"y": 2018, "v": 2.9}, {"y": 2019, "v": -2.7}, {"y": 2020, "v": -12.4}, {"y": 2021, "v": -17.8}, {"y": 2022, "v": 24.4}, {"y": 2023, "v": -0.2}, {"y": 2024, "v": -13.5}, {"y": 2025, "v": -21.5}, {"y": 2026, "v": -7.2}], "AprJul": [{"y": 2012, "v": -7.8}, {"y": 2013, "v": 3.3}, {"y": 2014, "v": 57.8}, {"y": 2015, "v": -13.4}, {"y": 2016, "v": -7.4}, {"y": 2017, "v": 17.9}, {"y": 2018, "v": -51.2}, {"y": 2019, "v": -6.8}, {"y": 2020, "v": 73.3}, {"y": 2021, "v": 103.1}, {"y": 2022, "v": 9.8}, {"y": 2023, "v": 88.8}, {"y": 2024, "v": 39.8}, {"y": 2025, "v": 18.6}, {"y": 2026, "v": 59.2}], "AugSep": [{"y": 2012, "v": -17.2}, {"y": 2013, "v": -11.0}, {"y": 2014, "v": 31.8}, {"y": 2015, "v": -16.0}, {"y": 2016, "v": -13.5}, {"y": 2017, "v": 0.5}, {"y": 2018, "v": -14.1}, {"y": 2019, "v": -2.8}, {"y": 2020, "v": 18.6}, {"y": 2021, "v": -11.2}, {"y": 2022, "v": 7.8}, {"y": 2023, "v": 14.6}, {"y": 2024, "v": -10.8}, {"y": 2025, "v": 25.2}], "OctDec": [{"y": 2012, "v": 7.1}, {"y": 2013, "v": -28.8}, {"y": 2014, "v": 33.5}, {"y": 2015, "v": 78.3}, {"y": 2016, "v": 23.5}, {"y": 2017, "v": 85.5}, {"y": 2018, "v": -9.5}, {"y": 2019, "v": 41.5}, {"y": 2020, "v": -38.8}, {"y": 2021, "v": -14.5}, {"y": 2022, "v": 22.4}, {"y": 2023, "v": 3.2}, {"y": 2024, "v": -7.8}, {"y": 2025, "v": -14.4}], "SepNov": [{"y": 2012, "v": -7.9}, {"y": 2013, "v": -27.9}, {"y": 2014, "v": 77.5}, {"y": 2015, "v": 68.1}, {"y": 2016, "v": 5.5}, {"y": 2017, "v": 24.8}, {"y": 2018, "v": -20.0}, {"y": 2019, "v": 24.2}, {"y": 2020, "v": -24.6}, {"y": 2021, "v": 2.9}, {"y": 2022, "v": 49.6}, {"y": 2023, "v": 6.4}, {"y": 2024, "v": -11.5}, {"y": 2025, "v": -7.7}], "JanMar": [{"y": 2012, "v": -2.7}, {"y": 2013, "v": 2.1}, {"y": 2014, "v": -4.6}, {"y": 2015, "v": -22.9}, {"y": 2016, "v": -15.5}, {"y": 2017, "v": 30.0}, {"y": 2018, "v": 16.0}, {"y": 2019, "v": -9.1}, {"y": 2020, "v": -15.0}, {"y": 2021, "v": 5.3}, {"y": 2022, "v": 44.5}, {"y": 2023, "v": 9.6}, {"y": 2024, "v": -16.5}, {"y": 2025, "v": -33.4}, {"y": 2026, "v": -5.7}]}, "my": {"1": {"2012": -7.2, "2013": -9.7, "2014": 9.8, "2015": -29.2, "2016": 1.7, "2017": -5.5, "2018": 13.7, "2019": -6.1, "2020": -4.6, "2021": 25.3, "2022": 16.0, "2023": 10.1, "2024": -3.3, "2025": -15.4, "2026": 1.6}, "2": {"2012": 5.6, "2013": 1.2, "2014": -7.9, "2015": 10.6, "2016": -22.0, "2017": -2.0, "2018": 3.9, "2019": 4.2, "2020": -1.8, "2021": -11.9, "2022": -12.7, "2023": -3.6, "2024": 1.5, "2025": -14.7, "2026": -8.6}, "3": {"2012": -1.0, "2013": 11.5, "2014": -6.3, "2015": -3.0, "2016": 9.4, "2017": 37.7, "2018": -0.9, "2019": -7.0, "2020": -12.0, "2021": -6.1, "2022": 44.6, "2023": 3.6, "2024": -14.7, "2025": -7.3, "2026": 0.4}, "4": {"2012": 4.8, "2013": 0.4, "2014": 15.4, "2015": 1.4, "2016": 10.8, "2017": 7.0, "2018": -0.0, "2019": -0.6, "2020": 14.2, "2021": 14.9, "2022": 33.9, "2023": 14.4, "2024": 6.7, "2025": 1.1, "2026": 26.3}, "5": {"2012": -9.8, "2013": -6.5, "2014": 38.0, "2015": -11.9, "2016": -15.8, "2017": 14.9, "2018": -21.9, "2019": 19.7, "2020": -2.3, "2021": 13.7, "2022": -13.3, "2023": 1.2, "2024": 2.6, "2025": 34.3, "2026": 30.9}, "6": {"2012": -1.6, "2013": 10.7, "2014": -13.6, "2015": -3.3, "2016": 2.0, "2017": 21.1, "2018": -19.8, "2019": -12.9, "2020": 22.0, "2021": 1.0, "2022": 0.6, "2023": 45.9, "2024": 22.0, "2025": 8.6, "2026": -2.6}, "7": {"2011": 6.5, "2012": -0.4, "2013": -0.9, "2014": 10.8, "2015": -0.1, "2016": -2.6, "2017": -22.9, "2018": -13.9, "2019": -9.4, "2020": 20.2, "2021": 49.7, "2022": -6.5, "2023": 7.3, "2024": 2.8, "2025": -19.1, "2026": -3.3}, "8": {"2011": -10.9, "2012": -4.0, "2013": -12.4, "2014": -1.0, "2015": -12.6, "2016": -18.8, "2017": 17.9, "2018": -12.9, "2019": 3.2, "2020": 17.5, "2021": -28.6, "2022": -3.2, "2023": 20.9, "2024": -9.2, "2025": 14.7, "2026": -3.9}, "9": {"2011": -2.2, "2012": -13.3, "2013": 2.5, "2014": 32.1, "2015": -4.3, "2016": 5.9, "2017": -14.7, "2018": -2.3, "2019": -5.9, "2020": 1.0, "2021": 22.7, "2022": 10.9, "2023": -5.7, "2024": -1.6, "2025": 9.2}, "10": {"2011": 6.4, "2012": -1.5, "2013": -25.0, "2014": -2.0, "2015": 15.7, "2016": 4.1, "2017": 14.1, "2018": -12.3, "2019": 9.4, "2020": -13.5, "2021": -3.8, "2022": 38.5, "2023": 9.7, "2024": -6.3, "2025": -7.5}, "11": {"2011": 11.1, "2012": 8.0, "2013": -4.7, "2014": 33.6, "2015": 51.6, "2016": -3.9, "2017": 28.3, "2018": -7.9, "2019": 19.0, "2020": -12.0, "2021": -12.0, "2022": -3.5, "2023": 2.3, "2024": -4.3, "2025": -8.5}, "12": {"2011": 8.6, "2012": 0.8, "2013": 0.4, "2014": 1.6, "2015": 1.3, "2016": 24.9, "2017": 23.8, "2018": 12.4, "2019": 7.5, "2020": -12.1, "2021": 1.2, "2022": -7.9, "2023": -9.2, "2024": 2.5, "2025": 1.6}}, "basket": ["Avantel Limited", "Ideaforge Technology Limited"], "nbasket": 2, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 0.6, "rel": -0.2, "hit": 7, "n": 15}, {"m": 2, "abs": -5.0, "rel": -3.9, "hit": 6, "n": 15}, {"m": 3, "abs": 3.1, "rel": 3.3, "hit": 6, "n": 15}, {"m": 4, "abs": 12.6, "rel": 10.0, "hit": 13, "n": 15}, {"m": 5, "abs": 6.1, "rel": 4.9, "hit": 8, "n": 15}, {"m": 6, "abs": 7.1, "rel": 5.3, "hit": 9, "n": 15}, {"m": 7, "abs": 3.1, "rel": 1.1, "hit": 6, "n": 16}, {"m": 8, "abs": -2.9, "rel": -2.7, "hit": 5, "n": 16}, {"m": 9, "abs": 2.9, "rel": 2.3, "hit": 7, "n": 15}, {"m": 10, "abs": 3.8, "rel": 1.7, "hit": 7, "n": 15}, {"m": 11, "abs": 7.4, "rel": 6.5, "hit": 7, "n": 15}, {"m": 12, "abs": 4.5, "rel": 3.8, "hit": 12, "n": 15}], "cy": [{"y": 2012, "b": 3.3, "n": 27.7, "rel": -24.4, "partial": false}, {"y": 2013, "b": -26.0, "n": 6.8, "rel": -32.7, "partial": false}, {"y": 2014, "b": 226.7, "n": 31.4, "rel": 195.3, "partial": false}, {"y": 2015, "b": -4.7, "n": -4.1, "rel": -0.6, "partial": false}, {"y": 2016, "b": -12.8, "n": 3.0, "rel": -15.8, "partial": false}, {"y": 2017, "b": 242.3, "n": 28.6, "rel": 213.7, "partial": false}, {"y": 2018, "b": -49.4, "n": 3.2, "rel": -52.6, "partial": false}, {"y": 2019, "b": 28.8, "n": 12.0, "rel": 16.8, "partial": false}, {"y": 2020, "b": 15.7, "n": 14.9, "rel": 0.8, "partial": false}, {"y": 2021, "b": 96.3, "n": 24.1, "rel": 72.2, "partial": false}, {"y": 2022, "b": 116.2, "n": 4.3, "rel": 111.9, "partial": false}, {"y": 2023, "b": 177.3, "n": 20.0, "rel": 157.2, "partial": false}, {"y": 2024, "b": 1.5, "n": 8.8, "rel": -7.3, "partial": false}, {"y": 2025, "b": -6.5, "n": 10.5, "rel": -17.0, "partial": false}, {"y": 2026, "b": 17.1, "n": -10.7, "rel": 27.8, "partial": true}], "dd": [{"co": "Avantel", "peak": "Oct 2025", "fp": -30, "y1": -17}, {"co": "Ideaforge Technology", "peak": "Jul 2023", "fp": -44, "y1": 37}, {"co": "Drone Destination", "peak": "Jul 2024", "fp": -93, "y1": -61}, {"co": "Droneacharya Aerial Innovations", "peak": "Jan 2023", "fp": -86, "y1": -52}, {"co": "Space Incubatrics Technologies", "peak": "Jan 2022", "fp": -71, "y1": -19}, {"co": "Niks Technology", "peak": "Jul 2024", "fp": -49, "y1": -35}], "win": {"FebMar": {"mean": -1.4, "median": -2.7, "hit": 6, "n": 15}, "AprJul": {"mean": 25.7, "median": 17.9, "hit": 10, "n": 15}, "AugSep": {"mean": 0.1, "median": -6.8, "hit": 6, "n": 14}, "OctDec": {"mean": 13.0, "median": 5.1, "hit": 8, "n": 14}, "SepNov": {"mean": 11.4, "median": 4.2, "hit": 8, "n": 14}, "JanMar": {"mean": -1.2, "median": -4.6, "hit": 6, "n": 15}}, "ytd": {"b": 17.1, "n": -10.7}, "notes": {"2012": "+3.3% against +27.7%. Avantel alone; a small, thinly traded communications-equipment maker.", "2013": "\u221226.0% against +6.8%. Avantel \u221226% with small-cap defence suppliers.", "2014": "+226.7% against +31.4%. Avantel more than tripled in the post-election defence rally.", "2015": "\u22124.7% against \u22124.1%. Avantel roughly flat.", "2016": "\u221212.8% against +3.0%. Avantel \u221213%.", "2017": "+242.3% against +28.6%. Avantel more than tripled again in the small-cap boom.", "2018": "\u221249.4% against +3.2%. The small-cap crash halved Avantel.", "2019": "+28.8% against +12.0%. Avantel recovered 29%.", "2020": "+15.7% against +14.9%. Avantel +16%, in line with the market, in the year of the Galwan clash.", "2021": "+96.3% against +24.1%. Avantel +107% in the defence re-rating.", "2022": "+116.2% against +4.3%. Avantel +116% as defence stocks re-rated.", "2023": "+177.3% against +20.0%. Avantel +341%; ideaForge listed in July at 93% above its IPO price and then fell, dragging the basket.", "2024": "+1.5% against +8.8%. Avantel +36%, ideaForge \u221229% as Army orders slowed and revenue fell.", "2025": "\u22126.5% against +10.5%. Avantel +8%, ideaForge \u221221%; Operation Sindoor lifted drone stocks briefly in May.", "2026": "+17.1% against a Nifty \u221210.7%. ideaForge +56% on a revenue recovery and fast-track defence procurement; Avantel \u22127%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

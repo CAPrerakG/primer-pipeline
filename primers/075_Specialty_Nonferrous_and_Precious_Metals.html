@@ -1,0 +1,600 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Specialty, Non-ferrous &amp; Precious Metals Primer</title>
+<meta name="description" content="Industry 75 of 278: four small watchlist sections that share one idea — metals that are not commodities. Superalloys you cannot buy on an exchange, titanium for fighter engines, India&#x27;s only listed gold explorer at ₹4,435 cr with no production yet, and the residual Vedanta left behind by its own demerger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Specialty &amp;amp; Precious · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#paradox">India&#x27;s gold paradox</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 75 of 278 · Metals family, part 12</div>
+  <h1>Specialty, Non-ferrous &amp; Precious Metals</h1>
+  <p class="lede">This primer covers four small watchlist sections at once — specialty alloys, non-ferrous metals, precious metals and diversified metals — because they share one organising idea that none of them states. Everything in the previous eleven primers was a commodity: a tonne of steel, aluminium or copper is interchangeable with any other tonne and sells at a world price. Nothing here is. A superalloy for a fighter-engine turbine is certified to a specific engine; a gold deposit has to be found before it can be mined; and the residual Vedanta is whatever was left after a conglomerate broke itself into pieces. These are metals businesses where the asset is knowledge, a licence or an orebody — not tonnage.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 11 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Metal recycling</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹2,300 cr</div><div class="l">Midhani's order book — 66% defence, 21% space and aero</div></div>
+    <div class="stat"><div class="n">$4,425</div><div class="l">Gold per ounce on 18 September, from $1,060 in 2015</div></div>
+    <div class="stat"><div class="n">₹4,435 cr</div><div class="l">Deccan Gold's market value — with no commercial production yet</div></div>
+    <div class="stat"><div class="n">12 of 15</div><div class="l">Years the basket beat the Nifty in April</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Metals where the tonnage is beside the point</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Most metal is sold by weight, like potatoes — a kilo is a kilo. But some metal is more like medicine. The inside of a jet engine gets so hot that ordinary metal would melt, so a few factories in the world make special mixtures that do not. You cannot buy that at a market price; you buy it from whoever is allowed to make it. And gold is different again: before anyone can sell it, somebody has to walk over rocks for twenty years and find it.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Three unrelated businesses filed under one heading.</p>
+    <ul>
+      <li><b>Superalloys:</b> Mishra Dhatu Nigam, the state-owned specialty alloy plant. Q1 FY27 revenue up 40% to ₹239.5 cr and profit up 27% to ₹16.3 cr, but EBITDA margin down to 15.3% on raw materials and a near-doubling of LPG cost. Order book ₹2,300 cr, two-thirds defence.</li>
+      <li><b>Gold exploration:</b> Deccan Gold Mines, India's only listed gold explorer, now valued at ₹4,435 cr with commercial production still ahead of it.</li>
+      <li><b>The residual conglomerate:</b> Vedanta Ltd, the entity left after four businesses were demerged out of it in 2026, still holding copper, zinc international, ferro chrome, nickel and its stake in Hindustan Zinc.</li>
+      <li><b>The calendar:</b> April has worked in 12 of 15 years, the strongest month in the project; February–March in 4 of 15.</li>
+      <li><b>The warning:</b> seven of the eleven names in these sections are micro-caps or recent listings, several 84–96% below old highs.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Four sections, one theme</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Section</th><th>What it contains</th><th>Why it is not a commodity</th></tr></thead><tbody>
+    <tr><td>Specialty alloys</td><td>Nickel superalloys, titanium alloys, maraging steel, special steels</td><td>Certified to a specific engine, airframe or reactor; qualification takes years</td></tr>
+    <tr><td>Precious metals</td><td>Gold exploration and trading</td><td>The asset is a deposit, not a plant</td></tr>
+    <tr><td>Non-ferrous metals</td><td>Assorted small fabricators and traders</td><td>Mostly a residual category — see the audit</td></tr>
+    <tr><td>Diversified metals</td><td>Vedanta Ltd after its demerger</td><td>A holding structure, not an operating metal</td></tr>
+  </tbody></table></div>
+  <h3>What a superalloy actually is</h3>
+  <p>Inside a jet engine, turbine blades sit in gas hotter than the melting point of the metal they are made from, spinning at enormous speed. They survive because of nickel-based superalloys: mixtures engineered so that microscopic particles inside the metal hold its structure together at temperature, combined with internal cooling channels and ceramic coatings. Titanium alloys do a different job — half the density of steel at similar strength — which is why they dominate airframes and rocket structures.</p>
+  <p>The commercial point is that you cannot buy these at a price. Each alloy is qualified for a specific application by the customer over years of testing, and once qualified, the supplier is effectively locked in for the life of the programme. Mishra Dhatu Nigam's announcement this quarter that it has isothermally forged a nickel superalloy for a fighter engine, rolled a 7000-series aluminium alloy, and obtained S400 certification from GE in the United States for testing services is exactly the kind of milestone that matters here — each one is a door that opens and does not easily close again.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>Two chains that never meet</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Alloy design</h4><div class="an">The recipe</div>Composition engineered for temperature, strength, fatigue or corrosion.<div class="who">Midhani, DRDO and global alloy houses</div><div class="m">Metallurgical knowledge</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Vacuum melting</h4><div class="an">Purity</div>Vacuum induction and arc remelting remove the impurities that would crack a turbine blade.<div class="who">A handful of plants worldwide</div><div class="m">Capital and process control</div></div>
+    <div class="stage"><div class="no">03</div><h4>Forging and rolling</h4><div class="an">Shaping</div>Isothermal forging, ring rolling and plate rolling to near-net shapes.<div class="who">Midhani; global forgers</div><div class="m">Yield and tooling</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Qualification</h4><div class="an">The real moat</div>Years of testing to be approved for a specific engine or airframe.<div class="who">Customer-led</div><div class="m">Time, not money</div></div>
+    <div class="stage"><div class="no">05</div><h4>Exploration</h4><div class="an">The other chain</div>Geology, geochemistry, drilling, resource estimation.<div class="who">Deccan Gold Mines</div><div class="m">Decades, and mostly failure</div></div>
+    <div class="stage"><div class="no">06</div><h4>Mine development</h4><div class="an">Turning a deposit into a mine</div>Leases, feasibility, financing, construction.<div class="who">The same company, if it gets that far</div><div class="m">Permitting is the bottleneck</div></div>
+  </div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>These two chains fail in opposite ways. A specialty alloy business fails slowly and visibly — margins erode on input costs, as Midhani's did this quarter when LPG nearly doubled, and you can see it in the numbers quarter by quarter. An exploration business fails suddenly and invisibly: nothing happens for years, and then either a lease is granted or it is not. Position sizing should reflect that difference. The first is an industrial you can model; the second is an option with an unknown expiry.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 11 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Vedanta (~₹1,00,106 cr)</td><td>The residual company after the 2026 demerger — copper, Zinc International, ferro chrome, nickel, new ventures, and roughly 63.4% of Hindustan Zinc.</td><td>Stock ₹268, +18% in 2026 and 25% below its May 2026 high. <b>Excluded from the basket — see the audit.</b></td></tr>
+    <tr><td>Mishra Dhatu Nigam (~₹7,483 cr)</td><td>India's state-owned specialty alloy plant at Hyderabad: nickel superalloys, titanium, special steels for defence, space and energy.</td><td>Q1 FY27 turnover ₹239.5 cr (+40.5%), value of production ₹260.4 cr (+7.9%), EBITDA ₹46.6 cr (+12.9%), profit ₹16.3 cr (+27.4%). <b>EBITDA margin fell to 15.3%</b> — adverse raw-material price variance cost about 13% and LPG nearly doubled on Middle East disruption; management expects normalisation by Q3 FY27. Order book about ₹2,300 cr at 1 July 2026: defence 66%, space and aero 21%, energy 9%. Isothermally forged a nickel superalloy for a fighter engine, rolled 7000-series aluminium, and won S400 certification from GE USA for testing services. Stock +22% in 2026.</td></tr>
+    <tr><td>Deccan Gold Mines (~₹4,435 cr)</td><td>India's first and only listed gold exploration company, working the Archaean greenstone belts of Karnataka's Dharwar Craton since 2003, with a JORC feasibility study at Ganajur and interests at Jonnagiri and Altyn Tor.</td><td>Listed on the NSE from 20 April 2026, having traded on the BSE for two decades. +139% in 2026. <b>The Ganajur mining lease from Karnataka is still awaited</b>, and commercial production has not begun.</td></tr>
+    <tr><td>Krishna Defence &amp; Allied Industries (~₹1,498 cr)</td><td>Defence and allied engineering products.</td><td>+29% in 2026, 25% below its June 2026 high. <b>Excluded: listed April 2022, and it is a defence engineering company — see 057–062.</b></td></tr>
+    <tr><td>JTL Defence (~₹901 cr)</td><td>Classified under non-ferrous metals.</td><td>+306% in 2026 — and <b>89% below a February 2017 high of ₹7,600</b>. <b>Excluded: the price history spans what is evidently a different business; verify the corporate history before using any long-run chart.</b></td></tr>
+    <tr><td>Hisar Metal Industries (~₹86 cr)</td><td>Cold-rolled steel strip from Haryana.</td><td>−4% in 2026. In the basket from 2017 for history, though the data provider classifies it as steel — arguably it belongs with 066.</td></tr>
+    <tr><td>Padmanabh Alloys, Bothra Metals, Shree Metalloys, Panth Infinity, Naksh Precious Metals</td><td>Micro-caps and trading shells.</td><td>Panth is 96% below a 2016 high, Naksh 94% below a 2021 high, Bothra 84% below 2015. <b>All excluded: no usable price discovery.</b></td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The audit</span>
+    <p><b>Vedanta is excluded, and the reason is a data trap worth knowing.</b> Four businesses — aluminium, iron and steel, oil and gas, and power — were demerged out of Vedanta Ltd during 2026, with a record date of 1 May and listing on 15 June. Logically the parent's share price should show a sharp step down when it went ex-demerger. <b>It does not.</b> The series runs ₹271.6 on 30 April to ₹294.6 on 4 May and on up to ₹352.6 by late May, with no discontinuity anywhere. Either the series has been back-adjusted for the demerger or the adjustment is handled some other way — but in either case, <b>a long-run Vedanta chart is not a like-for-like record of today's company</b>, and we will not build a fifteen-year basket on it. Anyone making a level claim about Vedanta's history should verify the adjustment first. This is the same caution we applied to NMDC in 064 and to HEG in 071.</p>
+    <p><b>Four of these eleven names are not metals businesses on any sensible reading.</b> Krishna Defence belongs with defence engineering; JTL Defence's price history plainly belongs to a predecessor business; Panth Infinity and Naksh Precious Metals are trading entities whose charts have lost 94–96% from old highs. The basket is therefore Deccan Gold Mines, Mishra Dhatu Nigam and Hisar Metal — and before 2018 it is essentially Deccan Gold alone, which we flag rather than hide.</p>
+  </div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Certification, or discovery</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th>Revenue logic</th><th>What can go wrong</th></tr></thead><tbody>
+    <tr><td>Specialty alloys</td><td>Negotiated prices on qualified products against a long order book</td><td>Input costs, because contracts reprice slowly</td></tr>
+    <tr><td>Testing and certification services</td><td>Fee income from accredited laboratories</td><td>Small, but high-margin and sticky</td></tr>
+    <tr><td>Gold exploration</td><td>No revenue; value is the discounted value of a deposit</td><td>Permitting, financing, and the gold price when you finally produce</td></tr>
+    <tr><td>Holding company</td><td>Dividends from subsidiaries</td><td>Holding-company discount and parent-level debt</td></tr>
+  </tbody></table></div>
+  <h3>Why Midhani's quarter is more interesting than it looks</h3>
+  <p>Turnover rose 40.5% but value of production rose only 7.9%. That gap is the whole story: the company shipped a great deal of inventory it had already made, which flatters revenue growth without telling you much about underlying activity. Meanwhile EBITDA rose 12.9% against a 40.5% revenue rise, so margin fell to 15.3% — management attributes about 13 percentage points of pressure to adverse raw-material price variance, plus an LPG cost that nearly doubled on Middle East supply disruption.</p>
+  <p>For a business selling qualified products under long contracts, input inflation is a genuine problem, because prices cannot be reset quickly without reopening a qualification. The useful number to hold onto is the order book: <b>₹2,300 crore at 1 July 2026, with 66% defence and 21% space and aero.</b> That is roughly two and a half years of revenue at the current run rate, and it is the reason to look through a bad margin quarter — provided the margin does normalise by the third quarter as management expects.</p>
+  <h3>How to think about an explorer</h3>
+  <p>Deccan Gold has been listed for over two decades and has never produced gold commercially. That is not a criticism — it is what exploration is. The correct way to value it is as a portfolio of options: each project is worth the probability of a mining lease, times the probability of financing, times the value of the deposit at a long-run gold price, discounted for the years until first production. At a ₹4,435 crore market value with the Ganajur lease still awaited, the market is assigning a high probability to a sequence of events that has not happened yet, in a year when gold has more than quadrupled from its 2015 low. Own it if you want that option and can size it as one; do not own it as a way to be long gold, for which there are far cleaner instruments.</p>
+</section>
+
+<section id="paradox" data-toc="India's gold paradox">
+  <p class="eyebrow">5b · India's gold paradox</p>
+  <h2>The world's biggest buyer, and almost no mines</h2>
+  <p>India buys more gold than almost any country on earth and digs up almost none of it. That gap — hundreds of tonnes imported each year against a domestic output measured in a couple of tonnes — is one of the more striking facts in Indian resources, and it is the entire reason a single pre-production explorer can be worth ₹4,435 crore.</p>
+  <p>The explanation is not geology. India sits on Archaean greenstone belts of exactly the kind that host major goldfields in Australia, Canada and West Africa, and the Kolar fields produced gold for a century before closing. The explanation is process: until the exploration rules were opened up, private companies could not economically search, and even now the step from a proven deposit to an operating mine runs through a state mining lease that can take years. <a href="https://deccangoldmines.com/about-us/">Deccan Gold has been listed since 2003</a> and is still waiting on Ganajur.</p>
+  <ul>
+    <li><b>What an investor is actually buying</b> is a position in that bureaucratic queue, not an ounce of gold. The correct comparison set is junior explorers on the Toronto or Sydney venture boards, which trade on resource ounces, drill results and permitting milestones — not Indian metals companies.</li>
+    <li><b>The gold price matters less than it seems.</b> A deposit's value scales with the gold price, but the probability of ever mining it does not, and in 2025 that distinction cost holders dearly: gold rose 64% and this basket fell.</li>
+    <li><b>The optionality is real, though.</b> If leases are granted and financing follows, a domestic producer would sell into the world's deepest physical gold market with no freight or import duty disadvantage — which is a genuinely good place to end up. The question is only ever <em>when</em>.</li>
+  </ul>
+  <p>The same logic, incidentally, explains why <a href="https://deccangoldmines.com/press-media/">every announcement from a company like this moves the price sharply</a>: with no revenue to anchor a valuation, news about leases, drilling and financing <em>is</em> the fundamental.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What these businesses depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Nickel, cobalt, titanium sponge</td><td>Superalloy raw materials</td><td>The critical input; priced globally and volatile</td></tr>
+    <tr><td>LPG and industrial gases</td><td>Furnace fuel and atmospheres</td><td>Nearly doubled this quarter on Middle East disruption</td></tr>
+    <tr><td>Vacuum melting capacity</td><td>Purity for aerospace grades</td><td>Few plants; long lead times to add</td></tr>
+    <tr><td>Customer qualification</td><td>Permission to supply</td><td>Years to obtain, and the real moat</td></tr>
+    <tr><td>Mining leases</td><td>Permission to extract</td><td>The binding constraint for an explorer</td></tr>
+    <tr><td>Exploration capital</td><td>Funding years of drilling</td><td>Dilution risk for shareholders</td></tr>
+    <tr><td>Geological data</td><td>Where to look</td><td>Access to survey and historical records</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Two calendars in one basket</h2>
+  <ul>
+    <li><b>January–March:</b> defence and government customers push deliveries to close the fiscal year, but the market has treated this window badly — 4 wins in 15 years.</li>
+    <li><b>April:</b> new budgets, fresh order announcements and annual results; <b>12 wins in 15 years, averaging +11.4 points</b>.</li>
+    <li><b>April–July:</b> order intake season for defence suppliers; 10 wins in 15.</li>
+    <li><b>August–September:</b> mixed; exploration news flows irregularly and has no season.</li>
+    <li><b>October–December:</b> the weakest of the second-half windows at 7 of 14, with a median of exactly zero.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the three-stock basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 3 names (Hisar Metal Industries Limited, Mishra Dhatu Nigam Ltd., Deccan Gold Mines Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +11.4 pts (beat in 12 of 15 years); Jul +5.3 pts (beat in 6 of 16 years); Jun +4.3 pts (beat in 8 of 15 years).</li><li><b>Weakest months:</b> Mar -6.4 pts (beat in 2 of 15 years); Feb -3.1 pts (beat in 4 of 15 years); May -0.5 pts (beat in 5 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -8.6 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +11.6 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +1.4 pts); Oct–Dec beat the Nifty in 7 of 14 years (median 0.0 pts); Sep–Nov beat the Nifty in 7 of 14 years (median +0.6 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -9.6 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +8.4 points.</p><p><b>Reading it:</b> three companies with usable histories — Deccan Gold Mines (spliced to its BSE record back to 2006), Mishra Dhatu Nigam (from 2018) and Hisar Metal (from 2017). Before 2018 the basket is effectively one gold explorer, so read the early years accordingly. <b>April has beaten the Nifty in 12 of 15 years</b>, averaging +11.4 points — the strongest single month anywhere in this project. April–July has worked in 10 of 15 with a median of +11.6. Against that, <b>February–March has worked 4 times in 15 (median −8.6)</b>, January–March 4 of 15 (median −9.6), and March alone twice in fifteen.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="FebMar" viewBox="0 0 720 280" role="img" aria-label="February to March return minus Nifty by year"></svg><figcaption>February–March return minus the Nifty, by year, in percentage points — negative in eleven of fifteen years.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April's only losses were 2019 (−3.7), 2012 (−3.4) and 2017 (−1.1)</b> — all small. Its best were 2026 (+30.7), 2015 (+28.1) and 2018 (+23.8).</li>
+    <li><b>April–July's mean of +21.8 is twice its median of +11.6</b>, because 2015 (+95.9) and 2016 (+74.4) dominate. Use the median.</li>
+    <li><b>February–March has been negative in eleven of fifteen years</b>, and its two best years barely cleared zero (+1.7 and +0.6).</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this — carefully</span><p>April's 12-of-15 record is the strongest monthly number in this project, but the basket is three small companies and, before 2018, one of them. The mechanism is plausible for the defence side — new budgets and order announcements land in April — and non-existent for the gold explorer. What this table is really telling you is that small Indian industrial and speculative stocks are sold into the fiscal year end and bought into the new one. That pattern shows up across the whole Metals family; here it is simply at its most extreme because the companies are at their smallest.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Defence and space order flow.</b> Two-thirds of Midhani's book.</li>
+    <li><b>Nickel, cobalt and titanium prices.</b> The input costs that cannot be passed on quickly.</li>
+    <li><b>Energy and gas costs.</b> LPG nearly doubling cost a full margin point cluster this quarter.</li>
+    <li><b>Qualification milestones.</b> Each new approved alloy is permanent revenue.</li>
+    <li><b>Execution and delivery.</b> The gap between value of production and turnover.</li>
+    <li><b>The gold price.</b> For the explorer, it sets the value of anything found.</li>
+    <li><b>Mining lease decisions.</b> The binary event in exploration.</li>
+    <li><b>Import substitution policy.</b> The reason a domestic superalloy plant exists at all.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">Gold $/oz</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Deccan Gold Mines (spliced to its BSE history from 2006), Mishra Dhatu Nigam (from its 2018 listing) and Hisar Metal (from 2017), equal-weighted monthly. <b>Before 2018 the basket is effectively Deccan Gold alone</b>, so the early years measure one speculative explorer rather than an industry. Vedanta is excluded because its price series shows no clean adjustment for the 2026 demerger; Krishna Defence, JTL Defence and five micro-caps are excluded as explained in the audit. The gold column is the COMEX front-month settlement on the last trading day of each year, in dollars per ounce; 2026 is the level on 18 September. Monthly returns capped at ±50%, price only.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The gold bear market</b> (2012–2015): gold fell from $1,676 to $1,060 and exploration became almost unfundable; the one exception was a speculative drilling re-rating in 2014.</li>
+    <li><b>The defence listings</b> (2017–2019): Midhani listed in 2018 and Hisar began trading on the NSE, turning a one-stock basket into three; the first full year was poor.</li>
+    <li><b>The order-book years</b> (2020–2023): defence indigenisation lifted Midhani, and the small-cap boom lifted everything; 2023 returned 126%.</li>
+    <li><b>Divergence</b> (2024–2026): two poor years on execution and margins, then a 45% year driven almost entirely by gold.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>These are not gold proxies.</b> In 2025 gold rose from $2,641 to $4,341 and the basket fell 9.4%.</li>
+    <li><b>Margin, not revenue, decides Midhani's year</b> — 2024 fell 19% on a rising order book.</li>
+    <li><b>The exploration name moves on news, not on price</b>, which is why its best year (2023, +224%) came with gold almost flat.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A very small club</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>ATI, Carpenter Technology, Haynes</td><td>The US specialty alloy houses</td><td>The benchmark Midhani is substituting for</td></tr>
+    <tr><td>VSMPO-AVISMA (Russia)</td><td>The world's largest titanium producer</td><td>Sanctions have reshaped titanium supply</td></tr>
+    <tr><td>Aubert &amp; Duval, Aperam</td><td>European specialty alloy and stainless producers</td><td>Competitors for aerospace qualification</td></tr>
+    <tr><td>Barrick, Newmont, Agnico</td><td>The major gold miners</td><td>What a producing gold company looks like</td></tr>
+    <tr><td>Junior explorers on TSX-V and ASX</td><td>Hundreds of listed exploration options</td><td>The peer set Deccan Gold should be valued against</td></tr>
+  </tbody></table></div>
+  <p>Worth noting how unusual India's position is. For specialty alloys, a country that builds fighter aircraft and launch vehicles essentially cannot buy the critical inputs on an open market, because the suppliers are concentrated in a few allied jurisdictions and subject to export control — which is the entire strategic rationale for a state-owned plant. For gold, India is the world's largest consumer and among its smallest producers, which is a structural oddity that has persisted for decades and explains why a single listed explorer can command ₹4,435 crore.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Additive manufacturing.</b> Printing turbine parts from superalloy powder, which changes what a mill sells — powder rather than billet.</li>
+    <li><b>Single-crystal blades.</b> Casting a blade as one crystal to resist creep; a capability gap India is still closing.</li>
+    <li><b>Titanium for space.</b> Launch-vehicle demand growing faster than aerospace generally.</li>
+    <li><b>Ceramic matrix composites.</b> A long-run substitute for nickel superalloys in the hottest sections.</li>
+    <li><b>Exploration technology.</b> Airborne geophysics and machine learning applied to old survey data; the cheapest way to find deposits under cover.</li>
+    <li><b>Domestic testing accreditation.</b> Midhani's S400 certification from GE turns a cost centre into a service business.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Defence indigenisation lists</td><td>Mandate domestic sourcing of specified items</td><td>The foundation of Midhani's order book</td></tr>
+    <tr><td>Export controls on aerospace alloys</td><td>Restrict what India can import</td><td>The strategic case for domestic capacity</td></tr>
+    <tr><td>Mining lease grants</td><td>Permission to mine a discovered deposit</td><td>The binary event for an explorer</td></tr>
+    <tr><td>National Mineral Exploration Policy</td><td>Opens exploration to private companies</td><td>The reason a listed explorer exists</td></tr>
+    <tr><td>Gold import duty and monetisation schemes</td><td>Shape India's enormous gold demand</td><td>Indirect, but sets the domestic price</td></tr>
+    <tr><td>Disinvestment policy</td><td>Government stakes in Midhani and others</td><td>A potential overhang or catalyst</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: an order book and an option</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Specialty alloy demand</td><td>Strong</td><td>₹2,300 cr order book, 66% defence</td></tr>
+    <tr><td>Specialty alloy margins</td><td>Under pressure</td><td>EBITDA margin 15.3%; LPG nearly doubled</td></tr>
+    <tr><td>Execution</td><td>Mixed</td><td>Turnover +40.5% but value of production only +7.9%</td></tr>
+    <tr><td>Gold</td><td>At an extreme</td><td>About $4,425/oz, from $1,060 in 2015</td></tr>
+    <tr><td>Gold exploration in India</td><td>Still pre-production</td><td>The Ganajur lease is awaited</td></tr>
+    <tr><td>The rest of the sections</td><td>Uninvestable</td><td>Five names 84–96% below old highs</td></tr>
+  </tbody></table></div>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>Mishra Dhatu Nigam</td><td class="num">₹417</td><td>₹531 (11 Jul 2024)</td><td class="num">−21%</td><td class="num">+22%</td></tr>
+    <tr><td>Deccan Gold Mines</td><td class="num">₹217</td><td>₹248 (24 Aug 2026)</td><td class="num">−12%</td><td class="num">+139%</td></tr>
+    <tr><td>Vedanta</td><td class="num">₹268</td><td>₹355 (27 May 2026)</td><td class="num">−25%</td><td class="num">+18%</td></tr>
+    <tr><td>Krishna Defence</td><td class="num">₹1,030</td><td>₹1,370 (22 Jun 2026)</td><td class="num">−25%</td><td class="num">+29%</td></tr>
+    <tr><td>Hisar Metal</td><td class="num">₹155</td><td>₹225 (17 Nov 2023)</td><td class="num">−31%</td><td class="num">−4%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>For Midhani, a recovery that management has explicitly guided to: margins normalising by the third quarter as raw-material and gas costs subside. The stock is 21% below its July 2024 high and up 22% this year, which looks like the market extending partial credit — buying the order book while discounting the margin. If the ₹2,300 crore book converts at a normalised margin, the current price is undemanding; if input costs stay where they are, it is not. The single number to watch is value of production, not turnover, because that is what strips out inventory movement.</p>
+  <p>For Deccan Gold, a great deal. ₹4,435 crore for a company that has not produced gold commercially in twenty-three years of listing, in the same year that gold reached about $4,425 an ounce, is the market paying for a sequence of approvals rather than for cash flows. That can be entirely rational as an option — but it should be sized as an option, and the two things that would change its value are the Ganajur mining lease and a financing decision, neither of which follows a schedule.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>These four watchlist sections should not be traded as a group; they are a filing convenience, not an industry. Midhani is a defence industrial with a genuine moat in qualification and a real, current cost problem — judge it against the defence names in 057–062, not against metals. Deccan Gold is a single-asset exploration option in a country that consumes enormous quantities of gold and produces almost none. And the remaining nine names are either misclassified or uninvestable. The useful output of this primer is knowing which of the three to look at, and on what terms.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Order book and order intake</td><td>The forward revenue base</td><td>Midhani quarterly disclosure</td></tr>
+    <tr><td>Value of production</td><td>Real activity, stripped of inventory movement</td><td>The same disclosure</td></tr>
+    <tr><td>EBITDA margin trajectory</td><td>Whether the guided normalisation arrives by Q3 FY27</td><td>Quarterly results</td></tr>
+    <tr><td>Nickel, cobalt and titanium prices</td><td>The input squeeze</td><td>LME and specialty price services</td></tr>
+    <tr><td>New alloy qualifications</td><td>Permanent additions to the addressable market</td><td>Company announcements</td></tr>
+    <tr><td>The Ganajur mining lease</td><td>The binary event for Deccan Gold</td><td>Karnataka government notifications</td></tr>
+    <tr><td>Gold price</td><td>Sets the value of any deposit</td><td>Exchange data</td></tr>
+    <tr><td>Any Vedanta corporate action</td><td>The demerger's accounting is still settling</td><td>Exchange filings</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Defence and aerospace (057–062):</b> where Midhani genuinely belongs.</li>
+    <li><b>Stainless steel (067):</b> the nearest commodity cousin to specialty alloys.</li>
+    <li><b>Zinc, lead and silver (074):</b> precious metals as a by-product rather than a target.</li>
+    <li><b>Aluminium (072) and copper (073):</b> the Vedanta group's other businesses.</li>
+    <li><b>Iron ore and manganese mining (064):</b> the Indian mining-lease process, in detail.</li>
+    <li><b>Metal recycling (077):</b> where precious-metal recovery actually happens at scale.</li>
+    <li><b>Global proxies:</b> ATI and Carpenter for superalloys; junior explorers on the TSX-V for how an exploration option is normally valued.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the order book, its sectoral split, and its expected execution period?</li>
+    <li>What was value of production, and why does it differ from turnover?</li>
+    <li>What drove the margin change, and what is the path back to normal?</li>
+    <li>How are raw-material and energy costs passed through in long contracts?</li>
+    <li>Which new alloys or grades were qualified this year, and for whom?</li>
+    <li>What is capacity utilisation, and what is being added?</li>
+    <li>What revenue does the testing and certification business generate?</li>
+    <li>For an explorer: what is the resource estimate, to what standard, and at what gold price?</li>
+    <li>What is the status of each lease application, and the expected timeline?</li>
+    <li>How will development capital be raised, and what dilution should shareholders expect?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"This is a way to own gold"</td><td>In 2025 gold rose 64% and the basket fell 9.4%</td><td>No — these move on news and leases, not on price</td></tr>
+    <tr><td>"Midhani's revenue grew 40%"</td><td>Value of production grew 7.9%</td><td>Much of it was inventory shipped, not new activity</td></tr>
+    <tr><td>"Specialty alloys are a commodity business"</td><td>Products are qualified to a specific engine over years</td><td>The opposite — qualification is the moat</td></tr>
+    <tr><td>"Vedanta's long-run chart shows the company's record"</td><td>Four businesses were demerged in 2026 with no visible price step</td><td>Not comparable; verify the adjustment</td></tr>
+    <tr><td>"These sections give diversified metals exposure"</td><td>Eight of eleven names are misclassified, micro-cap or pre-revenue</td><td>A filing convenience, not an industry</td></tr>
+    <tr><td>"April's 12-of-15 record is a tradeable signal"</td><td>Three small companies, one of them alone before 2018</td><td>A real pattern in small-cap fiscal-year behaviour, not in this industry</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. superalloy, JORC" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Specialty alloys</h3><dl>
+    <dt>Superalloy</dt><dd>A nickel- or cobalt-based alloy that keeps its strength near its melting point.</dd>
+    <dt>Titanium alloy</dt><dd>Half the density of steel at similar strength; the airframe and rocket metal.</dd>
+    <dt>Titanium sponge</dt><dd>The porous raw form of titanium metal before melting.</dd>
+    <dt>Maraging steel</dt><dd>An ultra-high-strength steel used in rocket motor cases and centrifuges.</dd>
+    <dt>Vacuum induction melting</dt><dd>Melting under vacuum to exclude oxygen and impurities.</dd>
+    <dt>Vacuum arc remelting</dt><dd>A second remelt to refine structure for aerospace grades.</dd>
+    <dt>Isothermal forging</dt><dd>Forging at a constant high temperature to shape difficult alloys.</dd>
+    <dt>Near-net shape</dt><dd>Forming a part close to its final dimensions to save costly machining.</dd>
+    <dt>Single-crystal casting</dt><dd>Growing a turbine blade as one crystal to resist creep.</dd>
+    <dt>Creep</dt><dd>Slow deformation of metal under stress at high temperature.</dd>
+    <dt>7000-series aluminium</dt><dd>High-strength zinc-bearing aluminium alloys used in aerospace.</dd>
+    <dt>Qualification</dt><dd>The multi-year customer approval that makes a supplier hard to replace.</dd>
+    <dt>Value of production</dt><dd>Output made in the period, whether or not it was sold — the real activity measure.</dd>
+    <dt>Order book</dt><dd>Contracted future revenue; ₹2,300 cr here at 1 July 2026.</dd>
+    <dt>Price variance</dt><dd>The profit effect of input prices differing from those assumed in a contract.</dd>
+  </dl>
+  <h3>Exploration and precious metals</h3><dl>
+    <dt>Exploration</dt><dd>Searching for an economic mineral deposit — mostly unsuccessful, by design.</dd>
+    <dt>Greenstone belt</dt><dd>An ancient volcanic-sedimentary belt that often hosts gold.</dd>
+    <dt>Dharwar Craton</dt><dd>The ancient crustal block in Karnataka that hosts India's gold belts.</dd>
+    <dt>Open-pittable</dt><dd>A deposit shallow enough to mine from the surface.</dd>
+    <dt>JORC code</dt><dd>The Australasian standard for reporting resources and reserves.</dd>
+    <dt>Feasibility study</dt><dd>The detailed engineering and economic case for building a mine.</dd>
+    <dt>Resource / reserve</dt><dd>Mineralisation that may be economic, and the part proven to be so.</dd>
+    <dt>Diamond core drilling</dt><dd>Drilling that recovers a solid cylinder of rock for assay.</dd>
+    <dt>Assay</dt><dd>The laboratory measurement of metal content in a sample.</dd>
+    <dt>Mining lease</dt><dd>The state grant permitting extraction — the binary event for an explorer.</dd>
+    <dt>Pilot plant</dt><dd>A small processing plant used to prove the flowsheet works.</dd>
+    <dt>Troy ounce</dt><dd>The unit gold is priced in — about 31.1 grams.</dd>
+    <dt>Option value</dt><dd>What a pre-production explorer is actually worth: probability times outcome, discounted.</dd>
+  </dl>
+  <h3>Corporate and market terms</h3><dl>
+    <dt>Residual entity</dt><dd>The company left after businesses are demerged out of it.</dd>
+    <dt>Back-adjustment</dt><dd>Restating a historical price series for a corporate action.</dd>
+    <dt>Holding-company discount</dt><dd>The gap between a holding company's value and the sum of its stakes.</dd>
+    <dt>Indigenisation list</dt><dd>Items the government requires to be sourced domestically.</dd>
+    <dt>Export control</dt><dd>Restrictions on selling strategic materials across borders.</dd>
+    <dt>Accreditation</dt><dd>Formal recognition that a laboratory's test results are acceptable.</dd>
+    <dt>Disinvestment</dt><dd>Government sale of a stake in a state-owned company.</dd>
+    <dt>Dilution</dt><dd>Issuing shares to fund development, reducing existing holders' share.</dd>
+    <dt>Price discovery</dt><dd>Whether a stock trades enough for its price to mean anything.</dd>
+    <dt>Junior explorer</dt><dd>A listed company whose only asset is exploration ground; the global peer set here.</dd>
+    <dt>Permitting queue</dt><dd>The sequence of state approvals between a deposit and a mine.</dd>
+    <dt>Pre-revenue</dt><dd>A listed company with no sales, valued entirely on future outcomes.</dd>
+    <dt>Greenstone gold</dt><dd>Gold hosted in ancient volcanic belts — the style India has and rarely mines.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What unites these four watchlist sections?</summary><p>None of them is a commodity: value comes from qualification, a licence or an orebody rather than tonnage.</p></details>
+  <details class="q"><summary>2. What is a superalloy?</summary><p>A nickel- or cobalt-based alloy engineered to keep its strength at temperatures near its own melting point — the material of turbine blades.</p></details>
+  <details class="q"><summary>3. Why is qualification the moat?</summary><p>Each alloy is approved for a specific engine or airframe over years of testing, after which the supplier is effectively locked in for the programme's life.</p></details>
+  <details class="q"><summary>4. Why look at value of production rather than turnover?</summary><p>Midhani's turnover rose 40.5% but value of production only 7.9% — much of the revenue was inventory shipped rather than new activity.</p></details>
+  <details class="q"><summary>5. Why did Midhani's margin fall?</summary><p>Adverse raw-material price variance of about 13% plus LPG costs that nearly doubled on Middle East disruption.</p></details>
+  <details class="q"><summary>6. What is Deccan Gold Mines?</summary><p>India's only listed gold exploration company, working Karnataka's Dharwar Craton since 2003, still awaiting the Ganajur mining lease.</p></details>
+  <details class="q"><summary>7. How should an explorer be valued?</summary><p>As an option: the probability of a lease, times the probability of financing, times the deposit's value, discounted for the years to first production.</p></details>
+  <details class="q"><summary>8. Are these stocks gold proxies?</summary><p>No. In 2025 gold rose from $2,641 to $4,341 and the basket fell 9.4%.</p></details>
+  <details class="q"><summary>9. Why is Vedanta excluded from the basket?</summary><p>Four businesses were demerged in 2026, yet the price series shows no clean step at the record date, so the long-run chart is not like-for-like.</p></details>
+  <details class="q"><summary>10. What does April's 12-of-15 record really measure?</summary><p>Small-cap behaviour around the Indian fiscal year end — selling into March, buying into April — rather than anything specific to these industries.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes to 18 September 2026 against NSE:NIFTY; Deccan Gold spliced to its BSE history back to 2006, since its NSE series begins only on 20 April 2026. The gold column is COMEX front-month settlement in dollars per ounce.</li>
+    <li>Mishra Dhatu Nigam: <a href="https://indianmasterminds.com/news/midhani-q1-fy27-results-revenue-pat-order-book-224307/">Q1 FY27 revenue, profit and order book</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/mishra-dhatu-nigam-ltd-nse-150027087.html">the earnings call, including the LPG and raw-material impact and the GE S400 certification</a>; <a href="https://www.whalesbook.com/news/English/industrial-goodsservices/Mishra-Dhatu-Nigam-Q1-Profit-Rises-27percent-Amid-Margin-Headwinds/6a83e610041a929216056211">margin headwinds</a>; <a href="https://scanx.trade/stock-market-news/companies/mishra-dhatu-nigam-q1-results-net-profit-rises-27-yoy-to-16-31-crore/48069608">profit and revenue detail</a>; <a href="https://trendlyne.com/latest-news/only-news/80900/MIDHANI/mishra-dhatu-nigam-ltd/">company news flow</a>.</li>
+    <li>Deccan Gold Mines: <a href="https://deccangoldmines.com/about-us/">the company on its own history as India's first listed gold explorer</a>; <a href="https://deccangoldmines.com/our-projects/">the Ganajur, Jonnagiri and Altyn Tor projects</a>; <a href="https://www.thehansindia.com/karnataka/gold-mining-prospects-in-haveris-ganajur-spark-excitement-and-concern-among-farmers-1088086">the Ganajur mining area and local reaction</a>; <a href="https://www.business-standard.com/article/news-cm/deccan-gold-mines-hits-the-roof-on-commissioning-pilot-process-plant-in-jonnagiri-gold-project-121123100755_1.html">the Jonnagiri pilot plant</a>; <a href="https://www.business-standard.com/article/markets/deccan-gold-rights-issue-oversubscribed-115110600343_1.html">funding through rights issues</a>.</li>
+    <li>Vedanta: <a href="https://www.vedantaresources.com/investor-relation-vedanta-demerger-information.php">the demerger documentation</a>; <a href="https://www.icicidirect.com/research/equity/finace/all-about-vedanta-demerger">what the residual entity retains</a>. Further Midhani coverage: <a href="https://ca.investing.com/news/company-news/mishra-dhatu-nigam-ltd-nsemidhani-q1-2027-earnings-call-highlights-record-40-revenue--4804049">the Q1 FY27 earnings-call highlights</a> and <a href="https://scanx.trade/stock-market-news/companies/mishra-dhatu-nigam-q1-results-earnings-call-scheduled-august-17/48089246">the call schedule and results summary</a>. The price-series caution in the audit is our own observation from the daily data, not a company statement.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -15.0}, {"y": 2013, "v": -6.4}, {"y": 2014, "v": -27.2}, {"y": 2015, "v": -8.6}, {"y": 2016, "v": -11.7}, {"y": 2017, "v": 1.7}, {"y": 2018, "v": -16.7}, {"y": 2019, "v": 0.4}, {"y": 2020, "v": 0.6}, {"y": 2021, "v": -6.1}, {"y": 2022, "v": 0.4}, {"y": 2023, "v": -6.7}, {"y": 2024, "v": -23.7}, {"y": 2025, "v": -8.7}, {"y": 2026, "v": -16.8}], "AprJul": [{"y": 2012, "v": -11.4}, {"y": 2013, "v": -8.5}, {"y": 2014, "v": 11.6}, {"y": 2015, "v": 95.9}, {"y": 2016, "v": 74.4}, {"y": 2017, "v": 4.9}, {"y": 2018, "v": -2.2}, {"y": 2019, "v": -7.2}, {"y": 2020, "v": 0.5}, {"y": 2021, "v": 18.6}, {"y": 2022, "v": -3.9}, {"y": 2023, "v": 49.1}, {"y": 2024, "v": 25.9}, {"y": 2025, "v": 26.2}, {"y": 2026, "v": 52.9}], "AugSep": [{"y": 2012, "v": 7.4}, {"y": 2013, "v": 51.6}, {"y": 2014, "v": 1.3}, {"y": 2015, "v": -26.0}, {"y": 2016, "v": -15.4}, {"y": 2017, "v": 17.5}, {"y": 2018, "v": -9.9}, {"y": 2019, "v": 1.5}, {"y": 2020, "v": 2.3}, {"y": 2021, "v": -12.9}, {"y": 2022, "v": 6.1}, {"y": 2023, "v": 14.3}, {"y": 2024, "v": -15.0}, {"y": 2025, "v": -3.5}], "OctDec": [{"y": 2012, "v": -7.0}, {"y": 2013, "v": -21.6}, {"y": 2014, "v": 91.7}, {"y": 2015, "v": 1.2}, {"y": 2016, "v": -13.2}, {"y": 2017, "v": 10.4}, {"y": 2018, "v": -3.1}, {"y": 2019, "v": 17.0}, {"y": 2020, "v": -11.9}, {"y": 2021, "v": 3.3}, {"y": 2022, "v": 15.2}, {"y": 2023, "v": 12.3}, {"y": 2024, "v": -1.1}, {"y": 2025, "v": -24.3}], "SepNov": [{"y": 2012, "v": 25.6}, {"y": 2013, "v": 4.4}, {"y": 2014, "v": 48.5}, {"y": 2015, "v": -38.0}, {"y": 2016, "v": -16.9}, {"y": 2017, "v": 29.0}, {"y": 2018, "v": -12.7}, {"y": 2019, "v": -1.0}, {"y": 2020, "v": -10.6}, {"y": 2021, "v": 2.2}, {"y": 2022, "v": 19.7}, {"y": 2023, "v": 13.8}, {"y": 2024, "v": -7.8}, {"y": 2025, "v": -13.1}], "JanMar": [{"y": 2012, "v": -11.7}, {"y": 2013, "v": -9.9}, {"y": 2014, "v": -24.6}, {"y": 2015, "v": -38.9}, {"y": 2016, "v": 2.0}, {"y": 2017, "v": -7.7}, {"y": 2018, "v": -25.5}, {"y": 2019, "v": -9.6}, {"y": 2020, "v": 9.8}, {"y": 2021, "v": -2.5}, {"y": 2022, "v": 7.9}, {"y": 2023, "v": 3.2}, {"y": 2024, "v": -16.5}, {"y": 2025, "v": -11.6}, {"y": 2026, "v": -1.5}]}, "my": {"1": {"2012": 6.0, "2013": -3.7, "2014": 2.0, "2015": -33.9, "2016": 14.5, "2017": -8.7, "2018": -10.6, "2019": -9.3, "2020": 12.6, "2021": 3.4, "2022": 7.4, "2023": 10.6, "2024": 9.2, "2025": -3.3, "2026": 20.7}, "2": {"2012": -6.9, "2013": -4.5, "2014": -10.6, "2015": -2.8, "2016": -8.1, "2017": 16.8, "2018": 0.3, "2019": 0.6, "2020": 8.2, "2021": -4.0, "2022": -4.9, "2023": -4.0, "2024": -14.5, "2025": -9.8, "2026": -2.9}, "3": {"2012": -8.5, "2013": -2.1, "2014": -17.1, "2015": -6.0, "2016": -3.2, "2017": -13.0, "2018": -17.9, "2019": -0.2, "2020": -5.6, "2021": -2.0, "2022": 5.9, "2023": -2.8, "2024": -10.4, "2025": 2.1, "2026": -14.7}, "4": {"2012": -3.4, "2013": 3.1, "2014": 8.4, "2015": 28.1, "2016": 12.4, "2017": -1.1, "2018": 23.8, "2019": -3.7, "2020": 19.1, "2021": 14.9, "2022": 5.8, "2023": 3.4, "2024": 19.7, "2025": 9.2, "2026": 30.7}, "5": {"2012": -0.7, "2013": -13.4, "2014": 13.0, "2015": -5.5, "2016": -6.0, "2017": -5.8, "2018": -5.4, "2019": 8.6, "2020": -6.7, "2021": 0.9, "2022": -7.8, "2023": -0.8, "2024": -7.9, "2025": 17.0, "2026": 13.6}, "6": {"2012": -2.1, "2013": 7.5, "2014": -1.9, "2015": 8.5, "2016": 25.5, "2017": -0.8, "2018": -8.7, "2019": -6.4, "2020": 3.1, "2021": 16.2, "2022": 0.4, "2023": 19.1, "2024": -2.9, "2025": -0.7, "2026": 7.3}, "7": {"2011": 25.8, "2012": -5.8, "2013": -4.6, "2014": -7.7, "2015": 48.0, "2016": 27.0, "2017": 13.5, "2018": -7.7, "2019": -5.1, "2020": -10.9, "2021": -12.7, "2022": -2.0, "2023": 18.4, "2024": 15.7, "2025": -1.1, "2026": -5.5}, "8": {"2011": 9.2, "2012": -4.0, "2013": 33.3, "2014": -11.6, "2015": -8.4, "2016": -12.8, "2017": 0.2, "2018": -3.9, "2019": 3.1, "2020": 1.4, "2021": -16.3, "2022": 8.3, "2023": 18.0, "2024": -13.6, "2025": -9.1, "2026": 9.4}, "9": {"2011": -14.6, "2012": 12.2, "2013": 12.9, "2014": 14.1, "2015": -20.7, "2016": -3.3, "2017": 17.5, "2018": -6.3, "2019": -1.7, "2020": 0.8, "2021": 4.3, "2022": -1.7, "2023": -3.6, "2024": -1.3, "2025": 6.3}, "10": {"2011": 2.2, "2012": 11.4, "2013": -14.7, "2014": -13.2, "2015": -9.1, "2016": -4.1, "2017": 19.5, "2018": 3.9, "2019": 0.4, "2020": -6.9, "2021": -4.7, "2022": 8.3, "2023": 20.5, "2024": -4.7, "2025": -6.3}, "11": {"2011": -3.2, "2012": -1.0, "2013": 6.6, "2014": 46.8, "2015": -14.1, "2016": -11.0, "2017": -8.1, "2018": -11.6, "2019": 0.4, "2020": -4.0, "2021": 2.9, "2022": 12.5, "2023": -3.4, "2024": -2.0, "2025": -12.2}, "12": {"2011": -0.9, "2012": -15.7, "2013": -13.4, "2014": 46.4, "2015": 29.8, "2016": 1.5, "2017": 0.8, "2018": 4.6, "2019": 15.3, "2020": 0.6, "2021": 5.4, "2022": -5.2, "2023": -5.7, "2024": 6.0, "2025": -6.8}}, "basket": ["Hisar Metal Industries Limited", "Mishra Dhatu Nigam Ltd.", "Deccan Gold Mines Limited"], "nbasket": 3, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.9, "rel": 1.1, "hit": 9, "n": 15}, {"m": 2, "abs": -4.3, "rel": -3.1, "hit": 4, "n": 15}, {"m": 3, "abs": -6.6, "rel": -6.4, "hit": 2, "n": 15}, {"m": 4, "abs": 13.9, "rel": 11.4, "hit": 12, "n": 15}, {"m": 5, "abs": 0.7, "rel": -0.5, "hit": 5, "n": 15}, {"m": 6, "abs": 6.1, "rel": 4.3, "hit": 8, "n": 15}, {"m": 7, "abs": 7.3, "rel": 5.3, "hit": 6, "n": 16}, {"m": 8, "abs": 0.0, "rel": 0.2, "hit": 8, "n": 16}, {"m": 9, "abs": 1.6, "rel": 1.0, "hit": 7, "n": 15}, {"m": 10, "abs": 2.2, "rel": 0.2, "hit": 7, "n": 15}, {"m": 11, "abs": 0.9, "rel": -0.1, "hit": 5, "n": 15}, {"m": 12, "abs": 4.9, "rel": 4.2, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": 1.0, "n": 27.7, "rel": -26.7, "partial": false}, {"y": 2013, "b": 6.9, "n": 6.8, "rel": 0.2, "partial": false}, {"y": 2014, "b": 111.7, "n": 31.4, "rel": 80.3, "partial": false}, {"y": 2015, "b": -15.1, "n": -4.1, "rel": -11.0, "partial": false}, {"y": 2016, "b": 27.5, "n": 3.0, "rel": 24.5, "partial": false}, {"y": 2017, "b": 62.0, "n": 28.6, "rel": 33.3, "partial": false}, {"y": 2018, "b": -35.4, "n": 3.2, "rel": -38.6, "partial": false}, {"y": 2019, "b": 11.1, "n": 12.0, "rel": -0.9, "partial": false}, {"y": 2020, "b": 21.5, "n": 14.9, "rel": 6.6, "partial": false}, {"y": 2021, "b": 29.9, "n": 24.1, "rel": 5.8, "partial": false}, {"y": 2022, "b": 31.1, "n": 4.3, "rel": 26.8, "partial": false}, {"y": 2023, "b": 125.6, "n": 20.0, "rel": 105.6, "partial": false}, {"y": 2024, "b": -5.0, "n": 8.8, "rel": -13.8, "partial": false}, {"y": 2025, "b": -9.4, "n": 10.5, "rel": -19.9, "partial": false}, {"y": 2026, "b": 45.4, "n": -10.7, "rel": 56.0, "partial": true}], "dd": [{"co": "Vedanta", "peak": "Dec 2025", "fp": 18, "y1": 56}, {"co": "Mishra Dhatu Nigam", "peak": "Jul 2024", "fp": -21, "y1": 3}, {"co": "Deccan Gold Mines", "peak": "Jul 2024", "fp": 35, "y1": 68}, {"co": "Krishna Defence and Allied Industries", "peak": "Jun 2024", "fp": -6, "y1": 28}, {"co": "JTL Defence", "peak": "Jan 2020", "fp": 76, "y1": 324}, {"co": "Hisar Metal Industries", "peak": "Nov 2023", "fp": -31, "y1": -18}, {"co": "Panth Infinity", "peak": "Jan 2020", "fp": -90, "y1": 32}, {"co": "Padmanabh Alloys & Polymers", "peak": "Jan 2023", "fp": -74, "y1": 15}, {"co": "Naksh Precious Metals", "peak": "Oct 2021", "fp": -94, "y1": -43}, {"co": "Bothra Metals & Alloys", "peak": "Dec 2023", "fp": -62, "y1": -45}, {"co": "Shree Metalloys", "peak": "Dec 2025", "fp": -39, "y1": 11}], "win": {"FebMar": {"mean": -9.6, "median": -8.6, "hit": 4, "n": 15}, "AprJul": {"mean": 21.8, "median": 11.6, "hit": 10, "n": 15}, "AugSep": {"mean": 1.4, "median": 1.4, "hit": 8, "n": 14}, "OctDec": {"mean": 4.9, "median": 0.0, "hit": 7, "n": 14}, "SepNov": {"mean": 3.1, "median": 0.6, "hit": 7, "n": 14}, "JanMar": {"mean": -9.1, "median": -9.6, "hit": 4, "n": 15}}, "ytd": {"b": 45.4, "n": -10.7}, "hx": {"label": "Gold $/oz", "v": {"2012": 1676, "2013": 1202, "2014": 1184, "2015": 1060, "2016": 1152, "2017": 1309, "2018": 1281, "2019": 1523, "2020": 1895, "2021": 1829, "2022": 1826, "2023": 2072, "2024": 2641, "2025": 4341, "2026": 4425}}, "notes": {"2012": "+1.0% against +27.7%. Gold's last strong year at $1,676; the explorer went nowhere.", "2013": "+6.9% against +6.8%. Gold fell 28% to $1,202 and exploration funding dried up.", "2014": "+111.7% against +31.4%. A speculative re-rating in the explorer on drilling news, with gold still falling.", "2015": "\u221215.1% against \u22124.1%. Gold bottomed at $1,060; the worst environment for exploration.", "2016": "+27.5% against +3.0%. Gold turned and so did the stock.", "2017": "+62.0% against +28.6%. Gold to $1,309; the year Midhani listed and Hisar Metal began trading on the NSE.", "2018": "\u221235.4% against +3.2%. The first full year with three names: Hisar Metal \u221262% and Midhani weak after listing.", "2019": "+11.1% against +12.0%. Gold to $1,523; Hisar +61% but the explorer fell 39%.", "2020": "+21.5% against +14.9%. Gold at $1,895; Midhani +28% on defence orders.", "2021": "+29.9% against +24.1%. A pilot plant commissioning lifted the explorer 41%.", "2022": "+31.1% against +4.3%. Deccan Gold +52% as the war pushed gold bid.", "2023": "+125.6% against +20.0%. The best year: Deccan Gold +224%, Midhani +93%, Hisar +55%.", "2024": "\u22125.0% against +8.8%. Midhani \u221219% on execution and margin problems despite gold at $2,641.", "2025": "\u22129.4% against +10.5%. Gold went from $2,641 to $4,341 and the basket still fell \u2014 a reminder that these are not gold proxies.", "2026": "+45.4% against a Nifty \u221210.7%. Deccan Gold +139% and Midhani +22%; gold at about $4,425."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

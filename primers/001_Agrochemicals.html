@@ -1,0 +1,838 @@
+<meta charset="utf-8">
+<title>Agrochemicals Primer</title>
+<meta name="description" content="Industry 1 of 278: how Indian agrochemicals work, who does what, how the cycle behaves and what to track.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <details open>
+    <summary>Contents</summary>
+    <p class="toc-h">Agrochemicals · reading order</p>
+    <ol>
+      <li><a href="#brief">The industry in 60 seconds</a></li>
+      <li><a href="#problem">What farmers are fighting</a></li>
+      <li><a href="#chain">The value chain</a></li>
+      <li><a href="#players">Who sits where</a></li>
+      <li><a href="#money">How money is made</a></li>
+      <li><a href="#calendar">The farming calendar</a></li>
+      <li><a href="#season">What the stocks do each year</a></li>
+      <li><a href="#drivers">What moves demand and margins</a></li>
+      <li><a href="#history">Twelve years of cycles</a></li>
+      <li><a href="#world">The global picture</a></li>
+      <li><a href="#tech">Where technology is going</a></li>
+      <li><a href="#policy">Policy and regulation</a></li>
+      <li><a href="#now">Where the cycle stands now</a></li>
+      <li><a href="#watch">What to track</a></li>
+      <li><a href="#proxies">Adjacent industries and proxies</a></li>
+      <li><a href="#ask">Questions for management</a></li>
+      <li><a href="#debates">Myths and live debates</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#test">Test yourself</a></li>
+      <li><a href="#sources">Sources and method</a></li>
+    </ol>
+  </details>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="series">
+    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><g transform="rotate(45 11 11)"><rect x="4" y="4" width="14" height="7" fill="var(--line)"/><rect x="4" y="11" width="14" height="7" fill="var(--tox-green)"/></g></svg>
+    Industry primer · 1 of 278
+  </div>
+  <h1>Agrochemicals</h1>
+  <p class="lede">Crop-protection chemicals: insecticides, herbicides, fungicides and the newer biologicals. It is pharma for plants, sold through village dealers, timed by the monsoon and priced by China.</p>
+  <div class="meta">
+    <span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span>
+    <span><b>Companies</b> 31 after the classification audit (39 in the watchlist)</span>
+    <span><b>Data to</b> 18 Sep 2026</span>
+    <span><b>Next</b> Alcohol &amp; Solvent Chemicals</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="n">$68.8bn</div><div class="l">Global crop-protection market, 2025 (AgbioInvestor, nominal)</div></div>
+    <div class="stat"><div class="n">$3.3bn</div><div class="l">India's agrochemical exports, FY25 — 3rd largest after China and the US</div></div>
+    <div class="stat"><div class="n">~0.3–0.5 kg</div><div class="l">Pesticide use per hectare in India, vs ~13 in China and ~12 in Japan</div></div>
+    <div class="stat"><div class="n">14 of 15</div><div class="l">Years the agrochem basket beat the Nifty in April (our TradingView test)</div></div>
+  </div>
+</header>
+
+<!-- 1 -->
+<section id="brief">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Medicine for crops, sold like medicine for people</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Farmers grow food. Bugs eat it, weeds steal its water and sunlight, and fungus makes it sick. Agrochemical companies make medicines for plants. A handful of very rich companies invent brand-new medicines, which takes more than ten years and roughly ₹2,500 crore each. After about 20 years the recipe becomes free, and many companies can make cheaper copies. India makes a lot of these copies, for its own farmers and for the world. Most of the medicine is sold when the rains come (June to September), because that is when crops grow and pests multiply.</p>
+  </div>
+  <p>If you know pharma, you already understand most of this industry. The words change but the structure is the same:</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Pharma</th><th>Agrochemicals</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td>API (active ingredient)</td><td>Technical (TC), 90–98% pure</td><td>The molecule that does the work; never sold to the end user as is</td></tr>
+      <tr><td>Tablet, syrup, injection</td><td>Formulation: EC, SC, WG, GR…</td><td>The usable product that the farmer mixes with water and sprays</td></tr>
+      <tr><td>Innovator (Pfizer, Novartis)</td><td>Innovator (Syngenta, Bayer, Corteva, BASF)</td><td>Discovers, patents and registers new molecules</td></tr>
+      <tr><td>Patent cliff</td><td>Off-patent molecule</td><td>Generics rush in and prices fall 30–70%</td></tr>
+      <tr><td>Generic (Sun, Cipla)</td><td>Post-patent generic (UPL, Dhanuka, Best Agrolife)</td><td>Registers a copy and competes on price, reach and speed</td></tr>
+      <tr><td>CDMO (Divi's)</td><td>CSM (PI Industries)</td><td>Makes a patented molecule for one innovator, under contract</td></tr>
+      <tr><td>DCGI / USFDA approval</td><td>CIB&amp;RC registration; EPA, EU and Brazil abroad</td><td>No registration, no sale. Registrations are the moat for exporters</td></tr>
+      <tr><td>Chemist and doctor</td><td>Agri-input dealer</td><td>The village dealer both sells and advises. He is the farmer's doctor</td></tr>
+      <tr><td>Antibiotic resistance</td><td>Pest resistance</td><td>Pests stop dying, so new modes of action command a premium</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian agrochem is two businesses glued together. One is a domestic, monsoon-driven branded business, where the moat is distribution and new product launches. The other is an export and B2B business in technicals and contract manufacturing, where China sets the price. Rain moves domestic volumes; Chinese technical prices move margins; and margins move the stocks more than rain does. 2021–22 was a China-driven price boom. 2023–24 was a global destocking bust. 2025 brought volume recovery at low prices. 2026 has a weak El Niño monsoon, but Chinese prices are firming after Beijing removed export tax rebates. Historically these stocks run from April to July on monsoon hopes and fade once the season is known.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="problem">
+  <p class="eyebrow">2 · What farmers are fighting</p>
+  <h2>Three enemies, three product families</h2>
+  <div class="two">
+    <div>
+      <h3>Insecticides — the thieves</h3>
+      <p>Insects that chew leaves, bore into stems (rice stem borer), eat bolls (cotton bollworm) or suck sap (whitefly, aphids, jassids, thrips). Examples: chlorpyrifos and acephate (old organophosphates), cypermethrin (pyrethroid), imidacloprid (neonicotinoid), chlorantraniliprole (diamide).</p>
+      <h3>Herbicides — the freeloaders</h3>
+      <p>Weeds compete with the crop for water, nutrients and light. <em>Selective</em> herbicides kill weeds but spare the crop (2,4-D in wheat, pretilachlor in rice). <em>Non-selective</em> ones kill everything green (glyphosate, glufosinate, paraquat).</p>
+    </div>
+    <div>
+      <h3>Fungicides — the infections</h3>
+      <p>Fungal diseases spread in humid, wet weather: rice blast and sheath blight, potato late blight, grape mildew, wheat rust. Examples: mancozeb (the volume workhorse), hexaconazole and tebuconazole (triazoles), azoxystrobin (strobilurin).</p>
+      <h3>Everything else</h3>
+      <p>Plant growth regulators (paclobutrazol to induce mango flowering), seed treatments, biopesticides (Bt, Trichoderma, neem) and biostimulants (seaweed extracts, amino acids) that improve plant vigour rather than kill anything.</p>
+    </div>
+  </div>
+  <h3>Why India's mix looks different from the world's</h3>
+  <p>Globally, herbicides are the largest category. India has historically been insecticide-heavy: one recent industry estimate puts insecticides at ~41% of the market, herbicides ~22%, fungicides ~21%, and biostimulants and plant growth regulators most of the rest. Three reasons:</p>
+  <ul>
+    <li><b>Tropical climate.</b> Heat and humidity mean more insect generations per season.</li>
+    <li><b>Cheap labour.</b> Weeding was done by hand. As rural wages rise and workers migrate, herbicides gain every year. This is the most dependable structural shift in the Indian market.</li>
+    <li><b>Crop mix.</b> Rice is the single largest consumer of crop protection, followed by cotton, then fruits and vegetables, soybean, chilli and wheat. Cotton used to be dominant, until Bt cotton (2002) cut bollworm spraying sharply.</li>
+  </ul>
+  <p>India uses only about 0.3–0.5 kg of pesticide per hectare, against ~13 kg in China, ~12 in Japan and ~3.6 in the US. Read that number carefully (see <a href="#debates">debates</a>): modern molecules are dosed in grams, not kilograms, so kg per hectare understates value.</p>
+</section>
+
+<!-- 3 -->
+<section id="chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From benzene to a 250 ml bottle in a village shop</h2>
+  <p>Analogy: making orange-juice concentrate and selling it as a ready-to-drink bottle. The concentrate (technical) is too strong to use directly. Formulation dilutes it, stabilises it and makes it spread and stick on a leaf. The brand and the dealer get it to the farmer on credit, with advice.</p>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Basic chemicals</h4><div class="an">Raw vegetables</div>Benzene, toluene, chlorine, phosphorus, ammonia, methanol.<div class="who">Refiners, chlor-alkali and commodity chemical makers, mostly Chinese at the margin</div><div class="m">Margin: commodity</div></div>
+    <div class="stage"><div class="no">02</div><h4>Intermediates (KSMs)</h4><div class="an">Chopped, marinated ingredients</div>Pyridines, triazoles, acid chlorides, glycine, fluorinated building blocks.<div class="who">China dominant; India: SRF, Navin, Aarti, Jubilant Ingrevia, Anupam, Excel</div><div class="m">Margin: moderate, cyclical</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Technical (AI)</h4><div class="an">The concentrate</div>The active molecule at 90–98% purity, sold B2B.<div class="who">UPL, Bharat Rasayan, India Pesticides, Heranba, Meghmani, Bhagiradha, Astec, NACL</div><div class="m">Margin: 10–20%, set by China</div></div>
+    <div class="stage"><div class="no">04</div><h4>Formulation</h4><div class="an">The ready-to-drink bottle</div>AI plus solvent, emulsifier and carriers → EC, SC, WG, granules.<div class="who">Every branded player, plus B2B formulators (Advance, Aristo, Dharmaj)</div><div class="m">Margin: thin for B2B, good if branded</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Brand &amp; distribution</h4><div class="an">The chemist and the doctor</div>Company → distributor → retailer, on credit, with agronomy advice.<div class="who">Dhanuka, Rallis, Bayer, Sumitomo, Insecticides India, Best, Coromandel</div><div class="m">Margin: 12–20%; working-capital heavy</div></div>
+    <div class="stage"><div class="no">06</div><h4>Farmer</h4><div class="an">The patient</div>Buys per acre per spray; trusts the dealer; pays after harvest.<div class="who">~140 million farm holdings; rice, cotton, soybean, vegetables</div><div class="m">Decides: whether to spray this season</div></div>
+  </div>
+  <div class="lanes">
+    <div class="lane"><b>Side lane A — innovators and contract makers</b>Innovators discover, patent and register molecules, then often outsource manufacturing to CSM partners they trust with the IP. PI Industries is India's leader; Punjab Chemicals and Astec also do this, and so do SRF, Navin Fluorine, Anupam, Aarti and Hikal in other watchlists.</div>
+    <div class="lane"><b>Side lane B — registration owners</b>Some companies' main asset is the dossier, not the plant. Sharda Cropchem owns thousands of product registrations in Europe, the Americas and elsewhere, buys technicals mainly from China and India, and sells formulations under them. UPL does the same at scale, with its own plants as well.</div>
+  </div>
+  <h3>Critical inputs worth knowing by name</h3>
+  <p>These play the role that needle coke plays for graphite electrodes: whoever controls them controls cost and supply.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Input</th><th>Feeds</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td>Glycine, yellow phosphorus</td><td>Glyphosate, the world's largest-volume herbicide</td><td>China controls both. A 2026 rise in their prices pushed glyphosate above RMB 30,000/t</td></tr>
+      <tr><td>Pyridine derivatives</td><td>Neonicotinoids (imidacloprid), paraquat, chlorpyrifos</td><td>A few global producers; Jubilant Ingrevia is India's pyridine major</td></tr>
+      <tr><td>1,2,4-triazole</td><td>Triazole fungicides (tebuconazole, hexaconazole, propiconazole)</td><td>Astec's franchise rests on triazole chemistry</td></tr>
+      <tr><td>DV acid chloride, 3-phenoxybenzaldehyde</td><td>Synthetic pyrethroids (cypermethrin and family)</td><td>Heranba's backward integration is built around these</td></tr>
+      <tr><td>Phosphorus chemistry (PCl₃, P₂S₅)</td><td>Organophosphates (acephate, profenofos)</td><td>Excel Industries and UPL both grew out of phosphorus chemistry</td></tr>
+      <tr><td>Fluorinated building blocks</td><td>Most new-generation molecules (diamides, SDHIs, many herbicides)</td><td>Roughly half or more of recent launches contain fluorine, which pulls in SRF and Navin Fluorine</td></tr>
+      <tr><td>Aromatic solvents (C9, xylene)</td><td>EC formulations</td><td>Crude-linked. The 2026 oil shock lifted formulation costs</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Profit pools sit at the two ends: invention and patents (innovators and their CSM partners), and the relationship with the dealer (branded domestic formulators and registration owners). The middle, off-patent technicals, is a spread business where China decides your margin. Backward integration only helps if it takes you out of a molecule China floods.</p></div>
+</section>
+
+<!-- 4 -->
+<section id="players">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>Your 31 agrochem companies, placed on the chain</h2>
+  <p>This roster uses the corrected list from the classification audit. Eleven names in your watchlist aren't agrochem businesses, and three agrochem companies sit in other watchlists.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Lane</th><th>Companies (TradingView symbol)</th><th>What to know</th></tr></thead>
+    <tbody>
+      <tr><td><b>Innovators' Indian arms</b></td><td>Bayer CropScience <span class="tk">BAYERCROP</span>, Sumitomo Chemical India <span class="tk">SUMICHEM</span></td><td>Get the parent's new molecules; premium brands; Bayer also sells corn seed. Sumitomo absorbed Excel Crop Care and makes technicals too.</td></tr>
+      <tr><td><b>Global generic majors</b></td><td>UPL <span class="tk">UPL</span>, Sharda Cropchem <span class="tk">SHARDACROP</span></td><td>UPL is one of the world's five largest crop-protection companies (Advanta seeds too). Sharda is asset-light: registrations plus sourcing.</td></tr>
+      <tr><td><b>Contract manufacturers (CSM/CDMO)</b></td><td>PI Industries <span class="tk">PIIND</span>, Punjab Chemicals <span class="tk">PUNJABCHEM</span>, Astec LifeSciences <span class="tk">ASTEC</span></td><td>Make patented molecules for innovators; PI also has domestic brands and a pharma CDMO. Astec (Godrej Agrovet) is triazole fungicides plus CDMO.</td></tr>
+      <tr><td><b>Technical makers (B2B, export)</b></td><td>Bharat Rasayan <span class="tk">BHARATRAS</span>, India Pesticides <span class="tk">IPL</span>, Heranba <span class="tk">HERANBA</span>, Bhagiradha <span class="tk">BHAGCHEM</span>, Meghmani Organics <span class="tk">MOL</span>, Excel Industries <span class="tk">EXCELINDUS</span>, AIMCO <span class="tk">AIMCOPEST</span>, NACL <span class="tk">NACLIND</span></td><td>Spread businesses where China sets the price. Heranba: pyrethroids. IPL: niche off-patent herbicides and fungicides. NACL has been 53.7% owned by Coromandel since 2025. Meghmani also makes pigments.</td></tr>
+      <tr><td><b>Domestic branded formulators</b></td><td>Dhanuka <span class="tk">DHANUKA</span>, Rallis <span class="tk">RALLIS</span>, Insecticides India <span class="tk">INSECTICID</span>, Best Agrolife <span class="tk">BESTAGRO</span>, Dharmaj <span class="tk">DHARMAJ</span>, GSP Crop Science <span class="tk">GSPCROP</span>, Indogulf <span class="tk">IGCL</span>, Crop Life Science <span class="tk">CLSL</span></td><td>The moat is dealers, credit and new launches. Dhanuka in-licenses Japanese and US molecules and added a technical plant. Rallis is Tata Chemicals' subsidiary. GSP listed March 2026; Indogulf in July 2025.</td></tr>
+      <tr><td><b>B2B / toll and small formulators</b></td><td>Advance Agrolife <span class="tk">ADVANCE</span>, Aristo Bio-Tech <span class="tk">ARISTO</span>, Adarsh Plant Protect <span class="tk">ADARSHPL</span>, Bhaskar Agrochemicals <span class="tk">BHASKAGR</span>, Super Crop Safe <span class="tk">SUCROSA</span> — plus, from other watchlists, Sikko <span class="tk">SIKKO</span>, Phyto Chem <span class="tk">PHYTO</span>, Mahamaya Lifesciences <span class="tk">MAHALIFE</span></td><td>Formulate for other brands or sell regionally; thin margins. Advance Agrolife listed October 2025.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box warn"><span class="tag">Not agrochem — remove from this watchlist</span>
+    <p>Nitiraj (weighing scales) · Accel (IT services) · AuSom (jewellery) · Khaitan India (electrical goods) · Crestchem (specialty ingredients) · Parker Agrochem (rents storage tanks) · MB Agro and Khaitan Chemicals (fertilizers) · ShreeOswal Seeds and Dhanlaxmi Crop Science (seeds) · Continental Seeds (grain and seed trading). Shivalik Rasayan (in Pharma APIs) is roughly half agrochem technicals.</p>
+  </div>
+  <h3>Unlisted players you will hear about</h3>
+  <p>Syngenta India, Corteva, FMC India (being sold to Crystal Crop Protection for $252 million; closing expected by end-2026), Crystal Crop Protection itself (IPO-bound), Gharda Chemicals, Safex Chemicals, Willowood, IFFCO-MC Crop Science and ADAMA India. Listed elsewhere: Coromandel (Fertilizers watchlist; owns NACL), Godrej Agrovet (owns Astec), BASF India (Specialty Chemicals; has an agri-solutions arm) and Tata Chemicals (owns Rallis).</p>
+</section>
+
+<!-- 5 -->
+<section id="money">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Six business models, very different economics</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Model</th><th>Sells</th><th class="num">Typical EBITDA*</th><th>Capital need</th><th>Working capital</th><th>What protects it</th></tr></thead>
+    <tbody>
+      <tr><td>Innovator</td><td>Patented molecules and brands</td><td class="num">20–30%</td><td>R&amp;D ~8–10% of sales</td><td>Moderate</td><td>Patents, data, brands; ~$300m and 12+ years per molecule keep rivals out</td></tr>
+      <tr><td>CSM / CDMO</td><td>One patented molecule to one innovator</td><td class="num">20–28%</td><td>High (dedicated plants)</td><td>Low</td><td>Trust with IP, process chemistry, multi-year qualification</td></tr>
+      <tr><td>Global generic / registrations</td><td>Formulations under owned registrations worldwide</td><td class="num">10–22%</td><td>UPL heavy; Sharda light</td><td>High (Brazil credit)</td><td>Registrations in EU/US/Brazil take years and crores to obtain</td></tr>
+      <tr><td>Branded domestic formulator</td><td>Branded packs through dealers</td><td class="num">12–20%</td><td>Low–moderate</td><td>High: dealer credit, pre-season stock, returns</td><td>Dealer reach, credit, launches, in-licensed molecules</td></tr>
+      <tr><td>Technical maker (off-patent)</td><td>Active ingredients to formulators</td><td class="num">10–20%</td><td>High</td><td>Moderate</td><td>Backward integration, cost, niche molecules China ignores</td></tr>
+      <tr><td>B2B / toll formulator</td><td>Formulating for other brands</td><td class="num">5–12%</td><td>Low</td><td>Moderate</td><td>Speed and compliance; little else</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">*Indicative through-cycle ranges drawn from Indian and global company filings; individual years can sit well outside them (for example, 2023–24 margins collapsed for technical makers).</p>
+  <h3>How the domestic channel really works</h3>
+  <ol>
+    <li><b>Placement (sell-in), March–June.</b> Companies push stock into distributors ahead of Kharif, often with credit and early-booking discounts. Revenue is booked here.</li>
+    <li><b>Liquidation (sell-through), July–September.</b> Farmers actually buy when pests appear. Good liquidation means the channel is clean; poor liquidation means stock sits with dealers.</li>
+    <li><b>Returns and credit notes.</b> Unsold or expiring stock comes back, or is discounted, after the season. This hits the weakest quarter, January–March.</li>
+    <li><b>Collections.</b> Dealers pay after farmers pay, after harvest. Receivables can run 100+ days at peak, so working capital is the silent risk in domestic agrochem.</li>
+  </ol>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>For a domestic formulator, watch three things together: <b>revenue growth, receivable days and next quarter's returns</b>. Revenue up with receivables up faster is channel stuffing. Reported growth that reverses as credit notes in Q4 was never real.</p></div>
+</section>
+
+<!-- 6 -->
+<section id="calendar">
+  <p class="eyebrow">6 · The farming calendar</p>
+  <h2>One year on one page</h2>
+  <p>Kharif (monsoon-sown) crops account for the bigger half of domestic demand. Domestic players typically book well over half their annual sales in April–September.</p>
+  <div class="cal-wrap"><div class="cal" role="img" aria-label="Crop, company and stock calendar by month">
+    <div class="mh"></div><div class="mh">JAN</div><div class="mh">FEB</div><div class="mh">MAR</div><div class="mh">APR</div><div class="mh">MAY</div><div class="mh">JUN</div><div class="mh">JUL</div><div class="mh">AUG</div><div class="mh">SEP</div><div class="mh">OCT</div><div class="mh">NOV</div><div class="mh">DEC</div>
+    <div class="rh" style="grid-row:2">Rain</div>
+    <div class="bar b-rain" style="grid-row:2;grid-column:7/11">Southwest monsoon (onset ~1 Jun in Kerala)</div>
+    <div class="bar b-sunk" style="grid-row:2;grid-column:11/14">NE monsoon (south)</div>
+    <div class="rh" style="grid-row:3">Kharif</div>
+    <div class="bar b-leaf" style="grid-row:3;grid-column:7/9">Sowing</div>
+    <div class="bar b-leaf" style="grid-row:3;grid-column:9/11">Spraying peak</div>
+    <div class="bar b-sunk" style="grid-row:3;grid-column:11/13">Harvest</div>
+    <div class="rh" style="grid-row:4">Rabi</div>
+    <div class="bar b-leaf" style="grid-row:4;grid-column:2/4">Spraying</div>
+    <div class="bar b-sunk" style="grid-row:4;grid-column:4/6">Harvest</div>
+    <div class="bar b-leaf" style="grid-row:4;grid-column:11/14">Sowing (wheat, mustard, chana)</div>
+    <div class="rh" style="grid-row:5">Companies</div>
+    <div class="bar b-neg" style="grid-row:5;grid-column:2/5">Returns, collections</div>
+    <div class="bar b-amb" style="grid-row:5;grid-column:5/8">Kharif placement</div>
+    <div class="bar b-leaf" style="grid-row:5;grid-column:8/11">Liquidation</div>
+    <div class="bar b-amb" style="grid-row:5;grid-column:11/13">Rabi placement</div>
+    <div class="rh" style="grid-row:6">Newsflow</div>
+    <div class="bar b-sunk" style="grid-row:6;grid-column:5/6">IMD 1st forecast</div>
+    <div class="bar b-sunk" style="grid-row:6;grid-column:6/7">Q4 results; IMD update</div>
+    <div class="bar b-sunk" style="grid-row:6;grid-column:8/10">Q1 results; sowing data</div>
+    <div class="bar b-sunk" style="grid-row:6;grid-column:11/12">Q2 results</div>
+    <div class="rh" style="grid-row:7">Stocks (15-yr)</div>
+    <div class="bar b-neg" style="grid-row:7;grid-column:3/5">Weak</div>
+    <div class="bar b-leaf" style="grid-row:7;grid-column:5/9">Strong run</div>
+    <div class="bar b-sunk" style="grid-row:7;grid-column:9/11">Flat, coin-flip</div>
+  </div></div>
+</section>
+
+<!-- 7 -->
+<section id="season">
+  <p class="eyebrow">7 · What the stocks do each year</p>
+  <h2>The April–September rally is really April–July</h2>
+  <p>You mentioned that agrochem stocks rally from April to September. I tested that on 15 years of TradingView prices, using an equal-weighted basket of 10–19 listed agrochem names (more as they listed) against the Nifty 50, from July 2011 to September 2026.</p>
+  <figure>
+    <svg id="ch-month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return of the agrochem basket minus the Nifty, by calendar month"></svg>
+    <figcaption>Average monthly return of the basket minus the Nifty, in percentage points. The label under each month is how many years the basket beat the Nifty in that month. The shaded band is April–July.</figcaption>
+  </figure>
+  <ul>
+    <li><b>April is the strongest month.</b> The basket beat the Nifty in 14 of 15 years, by a median 7.3 points. April is when IMD issues its first monsoon forecast and companies start Kharif placement.</li>
+    <li><b>April–July is the window.</b> The basket beat the Nifty in 13 of 15 years, by a median 13.7 points. Even excluding the two giant years (2014, 2020) the average edge is about 14.5 points.</li>
+    <li><b>August–September is a coin flip</b> (8 of 15 years, average roughly zero). By then the monsoon outcome is known: buy the forecast, sell the rain.</li>
+    <li><b>February–March is reliably weak.</b> The basket lagged in 12 of 15 years, by a median 3.5 points. That's the dead season: returns, collections, and the weakest quarter's results ahead.</li>
+  </ul>
+  <figure>
+    <svg id="ch-aprjul" viewBox="0 0 720 300" role="img" aria-label="April to July outperformance of the agrochem basket versus Nifty by year"></svg>
+    <figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption>
+  </figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>2019 (−9.3 points).</b> The monsoon arrived late (Kerala onset on 8 June) and June rain was about a third below normal, during a broad small-cap bear market. The season eventually ended 10% above normal, but the stocks had already de-rated.</li>
+    <li><b>2023 (−6.5 points).</b> An El Niño year that coincided with the global destocking bust. Chinese overcapacity collapsed generic prices, so margins fell even where volumes held.</li>
+    <li><b>Late-season sell-offs</b> (August–September). 2015: drought became visible and the yuan devaluation crash hit. 2018: the IL&amp;FS small-cap sell-off. 2021: after a +36-point run the basket topped out while the Nifty rallied. 2025: US tariffs rose to 50% and floods hit Punjab.</li>
+    <li><b>2026 so far.</b> March fell 16% on the Iran-war oil shock, and April rebounded 25%, the textbook April move. From May the basket faded as the El Niño deficit built.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Control test: is this just small caps?</span><p>Most of the basket is small- and mid-cap, and small caps as a group also tend to do well in April: the Nifty Smallcap 100 beat the Nifty in 11 of 15 Aprils, by 3.0 points on average. So the test was re-run against the small-cap index instead of the Nifty. <b>April</b> still wins in 11 of 15 years, by an average 4.6 points (median 5.1), against 14 of 15 and 7.5 points versus the Nifty. Roughly 40% of the April edge is therefore the general small-cap April effect, and the rest is specific to agrochem. <b>April–July</b> holds up better: the basket beat the small-cap index in 13 of 15 years by a median 17.0 points (the misses were 2023 and 2026), while small caps’ own median edge over the Nifty in the same window was 6.3 points. The four-month monsoon trade is an industry effect, not just a size effect.</p></div>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is a tendency, not a rule. The average hides wide ranges, the basket carries survivorship bias (it holds only names still listed), and 15 observations is a small sample. Used well, it tells you when a cheap agrochem idea is <em>likely</em> to be re-rated (April–July) and when patience is cheap (February–March). It isn't an investment recommendation.</p></div>
+</section>
+
+<!-- 8 -->
+<section id="drivers">
+  <p class="eyebrow">8 · What moves demand and margins</p>
+  <h2>Rain moves volumes; China moves margins</h2>
+  <div class="two">
+    <div>
+      <h3>Demand (volumes)</h3>
+      <ul>
+        <li><b>Monsoon timing and spread</b> matter more than the season total. June rain decides sowing; July–August rain decides pest pressure; the share of districts in deficit tells you how widespread the damage is.</li>
+        <li><b>Pest and disease pressure.</b> Humid spells bring fungus and sucking pests; dry spells favour whitefly and mites. Too much rain washes sprays off and leaves fewer days to spray.</li>
+        <li><b>Acreage and crop mix.</b> Cotton is insecticide-intensive, rice uses everything, maize and wheat lean to herbicides. Ethanol-driven maize expansion shifts demand.</li>
+        <li><b>Farm income.</b> MSPs, mandi prices and PM-KISAN transfers decide whether a farmer sprays once or three times.</li>
+        <li><b>Labour.</b> Rising rural wages keep pushing herbicide adoption (and direct-seeded rice).</li>
+        <li><b>Export markets.</b> Brazil's soybean season (September–December), US planting, EU approvals, currency.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Margins (price minus cost)</h3>
+      <ul>
+        <li><b>Chinese technical prices.</b> The single biggest swing factor: 2017–18 environmental closures, 2021 energy "dual control", the 2023–24 capacity glut, 2025–26 "anti-involution" and the removal of export rebates.</li>
+        <li><b>Raw materials and energy.</b> Crude-linked solvents and intermediates; the 2026 oil shock lifted costs, and price hikes taken in March–May were later rolled back.</li>
+        <li><b>Patent expiries.</b> Year one after expiry is a bonanza for the first generics; year three is a price war (chlorantraniliprole is the live example).</li>
+        <li><b>Product mix.</b> New molecules, in-licensed products and mixtures carry higher margins than old generics.</li>
+        <li><b>Rupee.</b> A weak rupee helps exporters and hurts importers of technicals. The dollar was about 12% stronger against the rupee year on year by mid-2026.</li>
+        <li><b>Channel inventory.</b> High stocks mean discounts and returns; lean stocks give pricing power.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="history">
+  <p class="eyebrow">9 · Twelve years of cycles</p>
+  <h2>2014 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Year</th><th class="num">Monsoon (% of LPA)</th><th>What happened</th><th class="num">Agro basket</th><th class="num">Nifty</th></tr></thead>
+    <tbody id="hist-body"></tbody>
+  </table></div>
+  <p class="note">Monsoon: IMD June–September all-India rainfall as a share of the long-period average; 2026 is season-to-date (~15% deficit in September). Returns: calendar-year, price only; 2026 runs to 18 September.</p>
+  <h3>The anatomy of an agrochem cycle</h3>
+  <ol>
+    <li><b>China tightens</b> (environmental shutdowns, energy curbs) → technical prices rise.</li>
+    <li><b>The world panic-buys</b> → distributors overstock and Indian technical makers post record margins; IPOs cluster here (2021: Heranba, India Pesticides).</li>
+    <li><b>China adds capacity and inventory piles up</b> → prices collapse and everyone destocks; it took two seasons (2023–24) to clear.</li>
+    <li><b>Trough and normalisation</b> → volumes recover before prices do (2025), then prices firm (2026).</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Rain alone is a poor guide to annual returns.</b> The stocks rose in the 2014 and 2015 droughts, and fell in 2019 despite 110% rain. The margin cycle and starting valuation dominate.</li>
+    <li><b>IPO clusters mark peaks.</b> From their 2021–23 highs, Heranba is down ~80%, India Pesticides ~63% and Best Agrolife ~84%.</li>
+    <li><b>Exporters and domestic players take turns.</b> In FY24 exports fell ~20% while domestic held up; in Q1 FY27 exporters did better while domestic stalled on a weak monsoon.</li>
+    <li><b>Destocking takes about two seasons</b>, because inventory built over one hot year has to be sold through two normal ones.</li>
+  </ul>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Company</th><th>2020–23 peak</th><th class="num">Price now vs peak</th><th class="num">1-year change</th></tr></thead>
+    <tbody id="dd-body"></tbody>
+  </table></div>
+  <p class="note">Price only, split-adjusted TradingView data to 18 Sep 2026. This shows where the cycle has left prices; it isn't a valuation signal.</p>
+</section>
+
+<!-- 10 -->
+<section id="world">
+  <p class="eyebrow">10 · The global picture</p>
+  <h2>Who invents, who manufactures, who buys</h2>
+  <p>The global crop-protection market was about <b>$74.8bn in 2023, $70.1bn in 2024 and $68.8bn in 2025</b> in nominal dollars (2025 was +2.0% in constant currency), per AgbioInvestor. Latin America is the largest region ($21.5bn, Brazil above all), followed by Asia-Pacific ($19.3bn), Europe ($13.6bn) and North America ($11.8bn). The eight majors (BASF, Bayer, Corteva, FMC, Sumitomo Chemical, Syngenta, ADAMA, UPL) sold $58.2bn in 2025. Off-patent products make up most of the volume.</p>
+  <h3>How leadership moved</h3>
+  <ul>
+    <li><b>US and Europe</b> invented and made most molecules until the 1990s. They still invent: Syngenta (now Chinese-owned), Bayer, Corteva and BASF.</li>
+    <li><b>Japan</b> became the quiet innovation hub (Sumitomo, Nissan Chemical, Mitsui, Nihon Nohyaku, ISK, Kumiai). Japanese innovators license molecules to Indian partners such as Dhanuka and Insecticides India.</li>
+    <li><b>China</b> became the world's factory for technicals and intermediates in the 2000s, with integrated chlor-alkali, phosphorus and glycine chains. It also owns Syngenta and ADAMA.</li>
+    <li><b>India</b> rose as the trusted second source ("China+1"): chemistry talent, respect for IP (which the CSM model needs), and the registrations built by UPL and Sharda. India is now the third-largest exporter; exports nearly trebled from $1.3bn in FY15 to $3.3bn in FY25.</li>
+  </ul>
+  <p>India's edge over China is <b>trust and reliability, not cost</b>. China still makes most key intermediates more cheaply. When China floods the market, as in 2023–24, Indian generic technicals lose, and only CSM, niche molecules and domestic brands hold up.</p>
+</section>
+
+<!-- 11 -->
+<section id="tech">
+  <p class="eyebrow">11 · Where technology is going</p>
+  <h2>Six shifts to follow</h2>
+  <ul>
+    <li><b>New modes of action.</b> Resistance keeps old molecules dying. Recent launches include diamides, mesoionics and new SDHIs; BASF launched fenmezoditiaz (for rice) and dimpropyridaz in India. New molecules mean in-licensing deals for Indian formulators and CSM contracts for PI.</li>
+    <li><b>Mixtures.</b> Two or three actives in one pack slow resistance and let Indian companies differentiate generics; each mixture needs its own registration.</li>
+    <li><b>Herbicide tolerance.</b> ICAR released non-GM herbicide-tolerant basmati varieties in 2024, and direct-seeded rice is spreading. Herbicide-tolerant cotton remains unapproved; if it is ever cleared, glyphosate demand jumps.</li>
+    <li><b>Biologicals.</b> Biopesticides and biostimulants are growing from a small base. Regulation just got strict: 9,352 provisional biostimulant registrations lapsed in June 2025, leaving 146 fully approved products by September 2025. That's a shakeout that favours serious players.</li>
+    <li><b>Drones and precision spraying.</b> Government SOPs allow drone application of registered products, and the Namo Drone Didi scheme is putting drones with women's self-help groups. Long term, precision spraying uses less product per acre.</li>
+    <li><b>Seed treatment and gene technology.</b> New GM traits can reduce spraying (Bt cotton did), a structural negative for insecticide volumes.</li>
+  </ul>
+</section>
+
+<!-- 12 -->
+<section id="policy">
+  <p class="eyebrow">12 · Policy and regulation</p>
+  <h2>The rulebook, in dated order</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Rule or event</th><th>What it does</th><th>Who it touches</th></tr></thead>
+    <tbody>
+      <tr><td>Insecticides Act, 1968 and Rules, 1971</td><td>Every product needs CIB&amp;RC registration; labels carry the toxicity colour triangle</td><td>Everyone</td></tr>
+      <tr><td>Section 9(3) vs 9(4) registration</td><td>9(3): a new molecule, 3–5 years and crores of data. 9(4) "me-too": a copy of a registered molecule, 6–12 months</td><td>9(3) launches = margin; 9(4) = price competition</td></tr>
+      <tr><td>GST (July 2017)</td><td>Chemical pesticides at 18%. Twelve biopesticides cut to 5% from 22 Sep 2025</td><td>Farmers' cost; helps biologicals</td></tr>
+      <tr><td>Glyphosate Restriction Order, Oct 2022</td><td>Use only through licensed pest-control operators</td><td>Glyphosate volumes in India</td></tr>
+      <tr><td>Insecticides (Prohibition) Order, 6 Oct 2023</td><td>Banned dicofol, dinocap and methomyl; monocrotophos with a transition period. The 2020 draft had proposed 27 bans</td><td>Old organophosphate sellers</td></tr>
+      <tr><td>Trade remedies (DGTR)</td><td>Countervailing duty on Chinese atrazine extended in Sep 2024; anti-dumping duty recommended on Chinese pretilachlor and PEDA (March 2025, on India Pesticides' petition)</td><td>Domestic technical makers</td></tr>
+      <tr><td>Biostimulants under FCO, June 2025</td><td>Provisional registrations ended; only fully tested products allowed</td><td>Biologicals sellers</td></tr>
+      <tr><td>Pesticides Management Bill 2025 (draft, 7 Jan 2026)</td><td>Would replace the 1968 Act: traceability, tougher penalties. Public comments closed 2 Feb 2026; not yet law as far as public records show</td><td>Everyone; watch Parliament</td></tr>
+      <tr><td>US tariffs, 2025–26</td><td>50% on Indian goods from 27 Aug 2025 → 18% under the Feb 2026 deal → a 10% Section 122 surcharge after the Supreme Court struck down IEEPA tariffs (20 Feb 2026) → a 10% Section 301 duty from 24 Jul 2026 on covered goods</td><td>Exporters (UPL, Sharda, IPL, Bharat Rasayan)</td></tr>
+      <tr><td>China: VAT export rebate removed, 1 Apr 2026</td><td>Ends rebates on glufosinate, acephate, malathion, profenofos, ethephon, fosetyl-Al, trichlorfon; lifts Chinese FOB prices by ~9% (technicals only, not formulations)</td><td>Helps Indian makers of those molecules</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 13 -->
+<section id="now">
+  <p class="eyebrow">13 · Where the cycle stands now</p>
+  <h2>September 2026: weak rain, firming prices</h2>
+  <div class="sig">
+    <div class="sg"><div class="t">Domestic demand <span class="chip ch-bad">Weak</span></div>El Niño. The season was forecast at 90% of normal (IMD, 29 May) and ran ~15% short into September. Rice sowing was 34.5 mha vs 36.1 a year earlier (21 Aug). Price hikes taken in March–May were rolled back.</div>
+    <div class="sg"><div class="t">Q1 FY27 results <span class="chip ch-bad">Soft</span></div>The sector preview expected revenue +3% and EBITDA −3%. Reported: Insecticides India −12%, India Pesticides −9%, Indogulf −11%, Sumitomo +1%. Exporters did better on the weak rupee.</div>
+    <div class="sg"><div class="t">Chinese pricing <span class="chip ch-good">Firming</span></div>Glyphosate went above RMB 30,000/t in March on raw-material costs; export rebates on eight actives ended on 1 April; Beijing's "anti-involution" push discourages below-cost selling. There's no September price print yet — check before acting.</div>
+    <div class="sg"><div class="t">Global inventory <span class="chip ch-mid">Normalising</span></div>Most regions are back to normal, but South Asia and China were still rated high (4 on a 1–5 scale) in January 2026. USDA sees US crop-protection spend +2.6% in 2026.</div>
+    <div class="sg"><div class="t">Trade and currency <span class="chip ch-good">Better than 2025</span></div>US duty on covered Indian goods is ~10% vs 50% a year ago; the dollar is ~12% stronger against the rupee. Both help exporters.</div>
+    <div class="sg"><div class="t">Industry structure <span class="chip ch-mid">Consolidating</span></div>FMC exits India (selling to Crystal); Coromandel took control of NACL; new IPOs (Indogulf, Advance, GSP). Multinationals are retreating and Indian consolidators are rising.</div>
+  </div>
+  <p>Stocks: the basket is −12.5% this year vs −10.9% for the Nifty (to 18 Sep 2026), and many 2021 leaders are 40–80% below their peaks. Historically, August–September is flat and February–March weak, so the next seasonal window is the run-up to the April 2027 monsoon forecast. That is an industry-cycle reading, not a stock call.</p>
+  <div class="box pm"><span class="tag">Using this with your inflection skill</span><p>Before calling any agrochem company an "inflection", subtract the cycle. Margin expansion in 2026 when Chinese prices firm is cycle; volume growth in a good monsoon is cycle. <b>Company-level inflection</b> looks like: market-share gains in a bad monsoon, margins rising while Chinese prices fall, new 9(3) launches and in-licensing deals, a CSM molecule win, or receivable days falling while revenue grows. This baseline is the antidote to the skill's habit of finding inflections everywhere.</p></div>
+</section>
+
+<!-- 14 -->
+<section id="watch">
+  <p class="eyebrow">14 · What to track</p>
+  <h2>Leading indicators, where to find them, what good looks like</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Indicator</th><th>Where / when</th><th>Why it leads</th><th>Good sign</th></tr></thead>
+    <tbody>
+      <tr><td>IMD long-range forecast</td><td>mausam.imd.gov.in · mid-April, update end-May</td><td>Sets the season's mood; stocks react in April</td><td>≥100% of LPA, neutral or La Niña ENSO</td></tr>
+      <tr><td>Weekly rainfall departure and spread</td><td>IMD · every Thursday</td><td>June decides sowing; the spread decides breadth</td><td>Few subdivisions in deficit</td></tr>
+      <tr><td>Kharif / Rabi sowing progress</td><td>Agriculture ministry · weekly</td><td>Acreage by crop = spray demand</td><td>Rice, cotton, soybean at or above last year</td></tr>
+      <tr><td>Reservoir storage</td><td>Central Water Commission · weekly</td><td>Drives Rabi prospects</td><td>Above the 10-year average</td></tr>
+      <tr><td>Chinese technical prices</td><td>CCM / China pesticide price trackers · weekly</td><td>Margin direction 1–2 quarters ahead</td><td>Stable to rising, without a raw-material spike</td></tr>
+      <tr><td>China export volumes</td><td>Chinese customs · monthly</td><td>Dumping pressure on world prices</td><td>Flat or falling</td></tr>
+      <tr><td>Brazil season and farm credit</td><td>News, company calls · Sep–Dec</td><td>Exporters' biggest market</td><td>Higher soybean area, fewer farm bankruptcies</td></tr>
+      <tr><td>Company commentary on channel inventory</td><td>Q1 (Aug) and Q2 (Nov) calls</td><td>Clean channel = pricing power next season</td><td>"Liquidation ahead of placement"</td></tr>
+      <tr><td>Pest outbreaks</td><td>State agriculture departments, FAO locust watch</td><td>Sudden demand spikes</td><td>Localised pressure, early spraying</td></tr>
+      <tr><td>CIB&amp;RC approvals, bans, DGTR cases</td><td>Monthly registration-committee minutes; DGTR notices</td><td>New 9(3) launches; protection from dumping</td><td>Your company named in 9(3) approvals</td></tr>
+      <tr><td>USD/INR, EUR/INR</td><td>Daily</td><td>Export realisations</td><td>A weaker rupee helps exporters</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 15 -->
+<section id="proxies">
+  <p class="eyebrow">15 · Adjacent industries and proxies</p>
+  <h2>Other ways to play, or hedge, the same cycle</h2>
+  <div class="two">
+    <div>
+      <h3>Upstream (sell to agrochem)</h3>
+      <ul>
+        <li><b>Fluorochemicals:</b> SRF, Navin Fluorine — agro intermediates and CDMO.</li>
+        <li><b>Specialty chemicals:</b> Anupam Rasayan (agro CSM), Aarti Industries (intermediates), Jubilant Ingrevia (pyridines), Paushak (phosgene), Atul (2,4-D herbicide), BASF India (agri solutions).</li>
+        <li><b>Pharma CRAMS:</b> Hikal has a crop-protection CDMO segment.</li>
+        <li><b>Chlor-alkali:</b> Tata Chemicals (Rallis' parent) — chlorine feeds chlorinated intermediates.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Sister agri inputs and rural demand</h3>
+      <ul>
+        <li><b>Fertilizers:</b> Coromandel (crop protection plus NACL), Chambal, Paradeep — same farmer, same monsoon, but government-controlled prices.</li>
+        <li><b>Seeds:</b> Kaveri Seed; UPL's Advanta.</li>
+        <li><b>Tractors and rural consumption:</b> Escorts Kubota, VST Tillers, M&amp;M — monsoon-sensitive demand.</li>
+        <li><b>Drones:</b> agri spraying is a small, policy-backed use case.</li>
+        <li><b>Sugar and ethanol:</b> crop-mix shifts (cane and maize) change spray demand.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Global read-throughs: quarterly results and price commentary from Bayer, Corteva, FMC, Nufarm and ADAMA, and price announcements from Chinese producers (Wynca, Xingfa, Yangnong).</p>
+</section>
+
+<!-- 16 -->
+<section id="ask">
+  <p class="eyebrow">16 · Questions for management</p>
+  <h2>A concall checklist that works for any agrochem company</h2>
+  <div class="two">
+    <div>
+      <h3>Ask</h3>
+      <ol>
+        <li>How much of this quarter's growth was volume, and how much price?</li>
+        <li>Was liquidation ahead of placement? How many weeks of channel inventory do you see against normal?</li>
+        <li>What share of sales comes from products launched in the last three and five years? How many 9(3) registrations are pending?</li>
+        <li>What share do your top five molecules make up, and which face generic entry in the next 24 months?</li>
+        <li>What share of raw materials comes from China, and which key materials are single-sourced?</li>
+        <li>Receivable days and credit notes this season versus last?</li>
+        <li>For CSM: how many molecules are commercial versus in development, what is the top customer's share, and is any molecule near patent expiry?</li>
+        <li>For exporters: registrations owned by region, US tariff exposure by product, Brazil credit exposure?</li>
+        <li>At what Chinese price does your new plant earn its cost of capital?</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Red flags</h3>
+      <ul>
+        <li>Receivables growing faster than sales, especially in Q4.</li>
+        <li>"One-off" returns or credit notes every year.</li>
+        <li>Inventory built ahead of a weak monsoon.</li>
+        <li>Margin gains that are entirely lower raw-material costs.</li>
+        <li>Capex on molecules China makes at scale.</li>
+        <li>Revenue booked through related-party distributors.</li>
+        <li>A company calling itself "specialty" with no new registrations or CSM contracts to show for it.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section id="debates">
+  <p class="eyebrow">17 · Myths and live debates</p>
+  <h2>What people say, and what the evidence says</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>What you'll hear</th><th>What the evidence says</th></tr></thead>
+    <tbody>
+      <tr><td>"India uses 0.5 kg/ha against China's 13, so the runway is huge."</td><td>Partly misleading: modern molecules are dosed in grams (a diamide at ~30 g of active per hectare vs hundreds of grams for old organophosphates). Growth comes from mix (herbicides, fungicides, new modes of action), not kilograms.</td></tr>
+      <tr><td>"Good monsoon means a good agrochem year."</td><td>Distribution and pest pressure matter more, and too much rain cuts spray days. For the stocks, China-driven margins mattered more than rain: they rose in the 2014–15 droughts and fell in 2019's excess year.</td></tr>
+      <tr><td>"China+1 is permanent."</td><td>India wins on trust, not cost. 2023–24 proved China can flood the market. The 2026 rebate removal and anti-involution push help, but they are policies, and policies change.</td></tr>
+      <tr><td>"CSM is an annuity."</td><td>It is lumpy: innovator destocking and patent expiries hit CSM volumes in 2024–26, and customer and molecule concentration is high.</td></tr>
+      <tr><td>"A patent expiry is a bonanza."</td><td>For about a year. Then dozens of 9(4) registrations arrive and prices fall; FMC cited Rynaxypyr (chlorantraniliprole) price declines.</td></tr>
+      <tr><td>"Biologicals will replace chemicals."</td><td>They are growing from a small base, and regulation just removed thousands of products. They will complement chemicals rather than replace them.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 18 -->
+<section id="glossary" class="gl">
+  <p class="eyebrow">18 · Glossary</p>
+  <h2>Every term you'll meet in this industry</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. 9(4), EC, liquidation" autocomplete="off"><span id="gcount"></span></div>
+
+  <h3>Product and chemistry</h3>
+  <dl>
+    <dt>Active ingredient (AI, a.i.)</dt><dd>The molecule that actually controls the pest; everything else in the bottle is a carrier.</dd>
+    <dt>Technical (TC)</dt><dd>The active ingredient manufactured at high purity (typically 90–98%). The agrochem equivalent of an API; sold B2B, never to farmers.</dd>
+    <dt>Formulation</dt><dd>Technical plus solvents, surfactants and fillers, turned into a usable product; "5% EC" means 5% active by weight.</dd>
+    <dt>EC</dt><dd>Emulsifiable concentrate: an oil-based liquid that turns milky in water. Solvent-heavy, so crude-linked.</dd>
+    <dt>SC</dt><dd>Suspension concentrate: fine solid particles suspended in water. Safer and more modern than EC.</dd>
+    <dt>WP / WG (WDG)</dt><dd>Wettable powder / water-dispersible granules. WG is dust-free and premium.</dd>
+    <dt>GR / G</dt><dd>Granules broadcast into paddy water or soil.</dd>
+    <dt>SL, CS, OD, FS</dt><dd>Soluble liquid; capsule suspension (micro-encapsulated, slow release); oil dispersion; flowable concentrate for seed treatment.</dd>
+    <dt>Adjuvant / surfactant</dt><dd>A helper chemical that makes the spray spread and stick on the leaf.</dd>
+    <dt>Dose (g a.i./ha)</dt><dd>Grams of active ingredient per hectare. Old organophosphates need hundreds of grams; diamides need tens.</dd>
+    <dt>Mixture / premix</dt><dd>Two or more actives in one pack, for resistance management and differentiation. Needs its own registration.</dd>
+    <dt>Tank mix</dt><dd>The farmer mixes separate products in the sprayer.</dd>
+    <dt>Systemic vs contact</dt><dd>Systemic moves inside the plant; contact kills on touch.</dd>
+    <dt>Translaminar</dt><dd>Moves through the leaf to reach pests on the underside.</dd>
+    <dt>Selective vs non-selective</dt><dd>Selective herbicides spare the crop (2,4-D in wheat); non-selective ones kill all green (glyphosate, paraquat, glufosinate).</dd>
+    <dt>Pre- vs post-emergence</dt><dd>Applied before weeds sprout vs after they appear.</dd>
+    <dt>Residual activity</dt><dd>How long a product keeps working after spraying.</dd>
+    <dt>Mode of action (MoA)</dt><dd>The biological target a molecule hits. Numbered groups are set by IRAC (insecticides), FRAC (fungicides) and HRAC (herbicides); rotating groups slows resistance.</dd>
+    <dt>Resistance</dt><dd>Pests surviving a molecule that used to kill them. The reason new MoAs command premiums.</dd>
+    <dt>Seed treatment</dt><dd>Chemical or biological coating on seed before sowing.</dd>
+    <dt>PGR</dt><dd>Plant growth regulator, e.g. paclobutrazol (mango flowering), ethephon (ripening).</dd>
+    <dt>Biopesticide</dt><dd>Living organisms or natural products that control pests: Bt, Trichoderma, Beauveria, neem, NPV viruses.</dd>
+    <dt>Biostimulant</dt><dd>Improves vigour or stress tolerance without being a nutrient or pesticide (seaweed, humic acids, amino acids). Regulated under FCO Schedule VI.</dd>
+    <dt>Organophosphates (OP)</dt><dd>Old, cheap, broad-spectrum insecticides (chlorpyrifos, acephate, profenofos); being phased out for toxicity.</dd>
+    <dt>Synthetic pyrethroids (SP)</dt><dd>Fast knock-down insecticides (cypermethrin, lambda-cyhalothrin). Heranba's core.</dd>
+    <dt>Neonicotinoids</dt><dd>Systemic insecticides for sucking pests (imidacloprid, thiamethoxam); restricted in the EU over bee safety.</dd>
+    <dt>Diamides</dt><dd>Modern chewing-pest insecticides (chlorantraniliprole/Rynaxypyr, flubendiamide, cyantraniliprole). The blockbuster class that went generic.</dd>
+    <dt>Triazoles</dt><dd>Systemic fungicides (tebuconazole, hexaconazole, propiconazole). Astec's core.</dd>
+    <dt>Strobilurins (QoI)</dt><dd>Broad-spectrum fungicides (azoxystrobin, pyraclostrobin).</dd>
+    <dt>SDHI</dt><dd>Newer fungicide class (fluxapyroxad, fluindapyr).</dd>
+    <dt>Mancozeb</dt><dd>A dithiocarbamate contact fungicide and the volume workhorse.</dd>
+    <dt>Glyphosate / glufosinate / paraquat</dt><dd>Non-selective herbicides. Glyphosate is the world's largest by volume; glufosinate is its fast-growing alternative.</dd>
+    <dt>Pretilachlor, pendimethalin, atrazine, 2,4-D, metribuzin</dt><dd>Key selective herbicides: rice pre-emergent; pre-emergent in many crops; maize; wheat broadleaf; soybean and potato.</dd>
+    <dt>HPPD / PPO inhibitors</dt><dd>Newer herbicide modes (mesotrione, tembotrione for maize; PPO for broadleaf weeds).</dd>
+    <dt>Toxicity label triangle <span class="tox" aria-hidden="true"><i style="background:var(--tox-red)"></i><i style="background:var(--tox-yellow)"></i><i style="background:var(--tox-blue)"></i><i style="background:var(--tox-green)"></i></span></dt><dd>The coloured half-diamond on every Indian pesticide label: red = extremely toxic, yellow = highly toxic, blue = moderately toxic, green = slightly toxic.</dd>
+    <dt>LD50</dt><dd>The dose that kills half of test animals; the basis for the toxicity colour.</dd>
+    <dt>PHI</dt><dd>Pre-harvest interval: minimum days between the last spray and harvest.</dd>
+    <dt>MRL</dt><dd>Maximum residue limit allowed on food; export markets (EU) are strict.</dd>
+  </dl>
+
+  <h3>Agronomy and weather</h3>
+  <dl>
+    <dt>Kharif / Rabi / Zaid</dt><dd>Monsoon-sown (June–July), winter-sown (October–December) and summer crop seasons.</dd>
+    <dt>LPA</dt><dd>Long-period average rainfall: 87 cm for June–September (1971–2020 base). Normal = 96–104% of LPA; deficient = below 90%; excess = above 110%.</dd>
+    <dt>El Niño / La Niña / IOD</dt><dd>Pacific warming usually weakens the Indian monsoon; La Niña usually strengthens it. The Indian Ocean Dipole can offset either.</dd>
+    <dt>Monsoon onset / withdrawal</dt><dd>Arrival over Kerala (normal ~1 June) and retreat from north-west India (September–October).</dd>
+    <dt>Spray window</dt><dd>Dry days when spraying works; excess rain shrinks it.</dd>
+    <dt>Pest pressure</dt><dd>How severe infestations are this season; the real demand driver.</dd>
+    <dt>ETL</dt><dd>Economic threshold level: pest density at which spraying pays.</dd>
+    <dt>IPM</dt><dd>Integrated pest management: combining biological, cultural and chemical control.</dd>
+    <dt>Sucking vs chewing pests</dt><dd>Aphids, jassids, whitefly, thrips vs bollworms, stem borers, fall armyworm.</dd>
+    <dt>BPH</dt><dd>Brown plant hopper, a major rice pest.</dd>
+    <dt>Pink bollworm</dt><dd>Cotton pest that developed resistance to Bt cotton.</dd>
+    <dt>Fall armyworm</dt><dd>Invasive maize pest; reached India in 2018.</dd>
+    <dt>Blast / sheath blight / late blight / rust / mildew</dt><dd>Major fungal diseases of rice, rice, potato and tomato, wheat, and grapes and vegetables.</dd>
+    <dt>DSR</dt><dd>Direct-seeded rice: sown instead of transplanted; saves water and labour, needs herbicides.</dd>
+    <dt>Bt cotton / HTBt cotton</dt><dd>Insect-resistant GM cotton (approved 2002) / herbicide-tolerant version (not approved; grown illegally).</dd>
+    <dt>MSP</dt><dd>Minimum support price the government announces for crops; anchors farm income.</dd>
+  </dl>
+
+  <h3>Regulation</h3>
+  <dl>
+    <dt>CIB&amp;RC</dt><dd>Central Insecticides Board &amp; Registration Committee, under the agriculture ministry's plant-protection directorate; registers every product.</dd>
+    <dt>Section 9(3)</dt><dd>Registration of a molecule new to India; full data package, typically 3–5 years.</dd>
+    <dt>Section 9(3B)</dt><dd>Provisional registration, usually for two years.</dd>
+    <dt>Section 9(4) / me-too</dt><dd>Registration of a copy of an already-registered molecule; mainly documentation, typically 6–12 months.</dd>
+    <dt>Label claim</dt><dd>The specific crop–pest pairs a product is approved for.</dd>
+    <dt>Ban / restricted use</dt><dd>Prohibited outright, or allowed only through licensed operators (glyphosate since 2022).</dd>
+    <dt>PCO</dt><dd>Pest control operator, a licensed applicator.</dd>
+    <dt>FCO</dt><dd>Fertiliser Control Order, which also governs biostimulants.</dd>
+    <dt>DGTR / ADD / CVD</dt><dd>Trade-remedies directorate; anti-dumping duty; countervailing (anti-subsidy) duty.</dd>
+    <dt>Pesticides Management Bill</dt><dd>Proposed replacement for the 1968 Act (2020 draft, revised 2025 draft).</dd>
+    <dt>EPA / EU approval / Brazil MAPA</dt><dd>Registration regimes abroad; slow and data-heavy, hence valuable once held.</dd>
+    <dt>Data protection</dt><dd>Exclusive use of the data an innovator submitted; a long-running industry demand in India.</dd>
+  </dl>
+
+  <h3>Business and channel</h3>
+  <dl>
+    <dt>Innovator / R&amp;D company</dt><dd>Discovers and patents molecules (Syngenta Group, Bayer, Corteva, BASF — the "Big 4").</dd>
+    <dt>Off-patent / generic / post-patent</dt><dd>Molecules free to copy after patent expiry; the majority of global volume.</dd>
+    <dt>Differentiated generic</dt><dd>A generic made special by a mixture, new formulation or registration others lack.</dd>
+    <dt>CSM / CRAMS / CDMO</dt><dd>Custom synthesis manufacturing for an innovator, under contract and confidentiality.</dd>
+    <dt>Toll / job-work manufacturing</dt><dd>Making product for a brand owner who supplies the specification.</dd>
+    <dt>In-licensing</dt><dd>An Indian company selling an innovator's molecule in India under agreement (common with Japanese innovators).</dd>
+    <dt>Registration dossier</dt><dd>The data package behind a registration; for asset-light players, it is the asset itself.</dd>
+    <dt>Backward integration</dt><dd>Making your own technicals or intermediates instead of buying them.</dd>
+    <dt>KSM / intermediate</dt><dd>Key starting material: the chemical building block before the technical.</dd>
+    <dt>China+1</dt><dd>Buyers adding a non-Chinese second source; India's main export tailwind since 2017.</dd>
+    <dt>Anti-involution</dt><dd>China's 2025–26 campaign against below-cost price wars in overbuilt industries, including pesticides.</dd>
+    <dt>Export VAT rebate</dt><dd>Chinese tax refunded on exports; removing it raises China's export price.</dd>
+    <dt>Placement (sell-in)</dt><dd>Stock pushed into distributors ahead of a season; where revenue is booked.</dd>
+    <dt>Liquidation (sell-through)</dt><dd>Stock actually bought by farmers.</dd>
+    <dt>Channel inventory</dt><dd>Stock sitting with distributors and retailers.</dd>
+    <dt>Destocking / restocking</dt><dd>The channel running inventory down (sales fall) or building it up (sales rise faster than use).</dd>
+    <dt>Sales returns / credit notes</dt><dd>Unsold stock sent back, or discounts given after the season.</dd>
+    <dt>Early-booking / pre-season scheme</dt><dd>Discounts for dealers who order early.</dd>
+    <dt>Cash discount</dt><dd>A reduction for paying early; a way to pull in collections.</dd>
+    <dt>Spurious / counterfeit</dt><dd>Fake or sub-standard products; official sampling finds ~2.5% misbranded, while industry claims higher illegal share.</dd>
+  </dl>
+
+  <h3>Financial KPIs</h3>
+  <dl>
+    <dt>Volume vs price growth</dt><dd>The split of revenue growth; price-led growth in a falling-cost year is fragile.</dd>
+    <dt>Realisation</dt><dd>Average price received per kg or litre.</dd>
+    <dt>Spread</dt><dd>Selling price minus raw-material cost per kg; the core of technical economics.</dd>
+    <dt>Gross margin</dt><dd>Revenue minus materials; shows pricing power and mix.</dd>
+    <dt>Working-capital days</dt><dd>Receivables + inventory − payables, in days; domestic players often run 100+.</dd>
+    <dt>Receivable days</dt><dd>How long dealers take to pay; rises before trouble.</dd>
+    <dt>Asset turnover</dt><dd>Revenue ÷ fixed assets; technical plants typically turn 1–1.5× at full use.</dd>
+    <dt>Capacity utilisation</dt><dd>Plant output vs capacity; drives fixed-cost absorption.</dd>
+    <dt>Product vintage</dt><dd>Share of revenue from products launched recently; a proxy for innovation.</dd>
+    <dt>Molecule concentration</dt><dd>Share of revenue from the top few molecules; a patent-expiry and CSM risk.</dd>
+  </dl>
+  <p class="note" id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<!-- 19 -->
+<section id="test">
+  <p class="eyebrow">19 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why can't a farmer use a technical directly?</summary><p>It is too concentrated, often not water-mixable, and wouldn't spread or stick. Formulation (EC, SC, WG) makes it dilutable, stable and effective on a leaf.</p></details>
+  <details class="q"><summary>2. 9(3) vs 9(4): why does it matter for margins?</summary><p>9(3) brings a new molecule to India (3–5 years, heavy data), which gives pricing power. 9(4) copies an existing registration in months, so many players pile in and prices fall.</p></details>
+  <details class="q"><summary>3. Why did agrochem stocks rise in 2014–15 despite two droughts?</summary><p>Rain drives volumes, but returns were driven by a re-rating and margins. Annual stock returns track the margin cycle and valuation more than rainfall.</p></details>
+  <details class="q"><summary>4. Which months have historically been best and worst against the Nifty, and why?</summary><p>April (14 of 15 years) and the April–July window (13 of 15) are the best, on the IMD forecast and pre-season placement. February–March is the worst (12 of 15 lagged): returns, collections and the weakest quarter.</p></details>
+  <details class="q"><summary>5. Explain the 2021–24 boom and bust in three steps.</summary><p>China's energy curbs raised technical prices and the world panic-stocked (2021–22). China added capacity while inventories sat high, so prices collapsed and the channel destocked (2023–24). Volumes recovered at low prices (2025).</p></details>
+  <details class="q"><summary>6. Why is India's 0.5 kg/ha figure misleading as a measure of headroom?</summary><p>Modern molecules are dosed in grams per hectare, so value per hectare and the adoption of newer chemistry are better measures than kilograms.</p></details>
+  <details class="q"><summary>7. Name two China-controlled inputs and what they feed.</summary><p>Glycine and yellow phosphorus feed glyphosate. Triazole feeds tebuconazole and hexaconazole. Pyridines feed imidacloprid and paraquat.</p></details>
+  <details class="q"><summary>8. How would you tell a formulator's margin gain is company-specific?</summary><p>If it holds while Chinese prices fall, in a weak monsoon, and comes with new 9(3) launches, in-licensed molecules or better mix, rather than just cheaper raw materials.</p></details>
+  <details class="q"><summary>9. What does China's April 2026 rebate removal do to Indian players?</summary><p>Chinese export prices of those technicals rise ~9%, giving Indian makers of the same molecules pricing room. It raises costs for Indian formulators who import them, and Chinese formulations (not covered) gain an edge abroad.</p></details>
+  <details class="q"><summary>10. How can too much rain hurt sales?</summary><p>It leaves fewer spray days, washes sprays off and can damage crops, so farmers skip or delay applications.</p></details>
+</section>
+
+<!-- 20 -->
+<section id="sources">
+  <p class="eyebrow">20 · Sources and method</p>
+  <h2>Where every number comes from</h2>
+  <ul class="src">
+    <li>Seasonality, cycle returns and drawdowns: TradingView daily prices, equal-weighted basket of UPL, PI, Rallis, Dhanuka, Bayer CropScience, Insecticides India, Bharat Rasayan, Excel, Punjab Chemicals, Astec, Sharda, NACL, Sumitomo, Heranba, India Pesticides, Bhagiradha, Dharmaj, Best Agrolife and Meghmani (each included once listed), vs NSE:NIFTY; July 2011 to 18 Sep 2026. Small-cap control: NSE:CNXSMALLCAP (Nifty Smallcap 100) over the same months.</li>
+    <li>Global market, regions, inventories, new launches, 2026 outlook: <a href="https://www.global-agriculture.com/wp-content/uploads/2026/02/AgbioInvestor-Crop-Protection-Market-Overview_compressed.pdf">AgbioInvestor, Crop Protection Market Overview (PMFAI, Jan 2026)</a>.</li>
+    <li>Exports: <a href="https://www.business-standard.com/economy/news/india-third-largest-agrochemical-exporter-fy25-125091201090_1.html">Business Standard, Sep 2025</a>; <a href="https://www.businessworld.in/article/indian-agrochemical-exports-decline-203-in-fy24-526266">BW Businessworld, FY24 decline</a>. Margins outlook: <a href="https://www.icra.in/Rating/DownloadResearchSummaryReport/6270">ICRA, April 2025</a>.</li>
+    <li>Monsoon 2026: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2266479&amp;reg=3&amp;lang=1">IMD updated forecast (PIB)</a>; <a href="https://india.mongabay.com/short-article/2026/09/kharif-sowing-deficit-narrows-but-el-nino-remains-a-risk/">Mongabay, Sep 2026</a>; <a href="https://vajiramandravi.com/current-affairs/indias-monsoon-deficit-2026/">season-to-date deficit</a>.</li>
+    <li>Q1 FY27: <a href="https://www.newkerala.com/news/a/agrochemical-exporters-outperform-domestic-peers-amid-muted-q1fy27-336.htm">Anand Rathi preview</a>; <a href="https://www.equitybulls.com/category.php?id=374050">Insecticides India</a>; <a href="https://www.whalesbook.com/corporate-news/English/agriculture/India-Pesticides-Q1-FY27-Revenue-Drops-92percent-On-Weak-Demand/6a8444c26817e697e7d0ddb2">India Pesticides</a>; <a href="https://www.whalesbook.com/corporate-news/English/agriculture/Indogulf-Cropsciences-Q1-FY27-Revenue-Declines-11percent-Amid-Monsoon-Woes/6a87f0a86817e697e7d47572">Indogulf</a>; <a href="https://www.multibagg.ai/market-pulse/articles/sumichem-q1fy27-96632">Sumitomo</a>.</li>
+    <li>China: <a href="https://www.global-agriculture.com/crop-protection/glyphosate-price-exceeds-30000-yuan-per-ton-herbicide-market-sentiment-rebounds/">glyphosate prices (Mar 2026)</a>; <a href="https://www.fertilizerdaily.com/20260113-china-cancels-export-tax-rebates-for-pesticides-including-glufosinate/">export VAT rebate removal</a>.</li>
+    <li>Policy: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2212144&amp;reg=3&amp;lang=1">Pesticides Management Bill 2025 (PIB)</a>; <a href="https://food.chemlinked.com/news/food-news/india-bans-four-pesticides-including-controversial-pesticide-monocrotophos">2023 bans</a>; <a href="https://www.global-agriculture.com/india-region/india-slashes-gst-on-12-key-bio-pesticides-to-5/">GST on biopesticides</a>; <a href="https://www.global-agriculture.com/india-region/india-ends-provisional-registration-of-biostimulants-only-146-products-now-approved-under-fco-9352-products-cancelled/">biostimulants</a>; <a href="https://news.agropages.com/news/NewsDetail---53460.htm">pretilachlor duty</a>; <a href="https://www.global-agriculture.com/crop-protection/india-extends-anti-subsidy-duty-on-chinese-origin-pesticide-chemical-for-five-more-years/">atrazine duty</a>; <a href="https://cibconsulting.in/types-of-pesticide-registrations-under-indian-law/">registration types</a>.</li>
+    <li>Trade: <a href="https://www.whitehouse.gov/briefings-statements/2026/02/united-states-india-joint-statement/">US–India joint statement (Feb 2026)</a>; <a href="https://globaltradealert.org/blog/from-ieepa-to-section-122">IEEPA to Section 122</a>; <a href="https://www.theweek.in/news/biz-tech/2026/07/24/us-tariffs-section-301-india.html">Section 301 (Jul 2026)</a>.</li>
+    <li>Deals: <a href="https://www.prnewswire.com/news-releases/fmc-corporation-announces-agreement-to-divest-india-commercial-business-to-crystal-crop-protection-limited-302765506.html">FMC India to Crystal Crop</a>; <a href="https://www.coromandel.biz/press-release/coromandel-international-completes-acquisition-of-53-controlling-stake-in-nacl-industries-ltd/">Coromandel–NACL</a>; <a href="https://www.chittorgarh.com/ipo/gsp-crop-ipo/2031/">GSP Crop Science IPO</a>.</li>
+    <li>Per-hectare use and crop shares: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11615616/">PMC review</a>; <a href="https://prsindia.org/policy/report-summaries/insecticides-and-pesticides-promotion-and-development">PRS India</a>.</li>
+    <li>Company roster: your TradingView watchlist, corrected by the 18 Sep 2026 classification audit (Desktop workbook).</li>
+  </ul>
+  <p class="note">Monsoon percentages for 2014–2018 are IMD end-of-season figures as widely reported; 2019–2025 were cross-checked against IMD-derived sources. Margin ranges in section 5 are indicative, not measured benchmarks.</p>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+  var monthly=[{m:"J",rel:-1.2,hit:"4/15"},{m:"F",rel:-2.4,hit:"5/15"},{m:"M",rel:-0.9,hit:"6/15"},{m:"A",rel:7.5,hit:"14/15"},{m:"M",rel:2.6,hit:"9/15"},{m:"J",rel:4.1,hit:"11/15"},{m:"J",rel:2.7,hit:"8/16"},{m:"A",rel:1.5,hit:"10/16"},{m:"S",rel:-1.0,hit:"8/15"},{m:"O",rel:-1.0,hit:"6/15"},{m:"N",rel:0.4,hit:"8/15"},{m:"D",rel:1.7,hit:"9/15"}];
+  var aprjul=[[2012,3.8],[2013,0.8],[2014,50.8],[2015,22.2],[2016,28.2],[2017,3.4],[2018,4.7],[2019,-9.3],[2020,51.9],[2021,36.1],[2022,6.6],[2023,-6.5],[2024,30.8],[2025,53.9],[2026,13.7]];
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function chart(svg,opt){
+    var W=720,H=+svg.getAttribute("viewBox").split(" ")[3],L=46,R=10,T=18,B=opt.bottom||48;
+    var n=opt.data.length,cw=(W-L-R)/n,y=function(v){return T+(opt.max-v)/(opt.max-opt.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    opt.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    opt.data.forEach(function(d,i){
+      var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      var ly=v>=0?yv-5:yv+14;
+      svg.appendChild(el("text",{x:x+w/2,y:ly,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));
+    });
+  }
+  chart(document.getElementById("ch-month"),{data:monthly.map(function(d){return{v:d.rel,label:d.m,sub:d.hit};}),min:-4,max:10,ticks:[-4,0,4,8],band:[3,6],bottom:52});
+  chart(document.getElementById("ch-aprjul"),{data:aprjul.map(function(d){return{v:d[1],label:"'"+String(d[0]).slice(2)};}),min:-20,max:60,ticks:[-20,0,20,40,60],bottom:34});
+
+  var hist=[
+   ["2014","88","Deficient monsoon; the market re-rated quality mid-caps and agrochem led",164.1,31.4],
+   ["2015","86","Second straight drought (El Niño); whitefly attack on Punjab cotton",16.1,-4.1],
+   ["2016","97","Normal rains; demonetisation in November disrupted Rabi cash sales",53.8,3.0],
+   ["2017","95","China's environmental crackdown shut plants; technical prices rose; China+1 began; GST at 18%",46.4,28.6],
+   ["2018","91","Fall armyworm arrived; the September IL&FS sell-off hit small caps",-3.1,3.2],
+   ["2019","110","Late onset and June −33%; UPL closed the $4.2bn Arysta deal; China's Xiangshui blast closed a chemical park",-5.5,12.0],
+   ["2020","109","COVID: agri exempt from lockdown; locust swarms; draft ban on 27 molecules",54.5,14.9],
+   ["2021","99","China's energy 'dual control' pushed prices to records; panic stocking; IPOs (Heranba, India Pesticides)",42.2,24.1],
+   ["2022","106","Peak prices; glyphosate restricted to PCOs; Dharmaj IPO",13.1,4.3],
+   ["2023","94","El Niño; global destocking and Chinese overcapacity collapsed prices; four molecules banned",-1.1,20.0],
+   ["2024","108","Volumes recovered but prices stayed low; global market −6.3%",13.3,8.8],
+   ["2025","108","US tariffs at 50%; biostimulant shakeout; GST cut on biopesticides; Coromandel took NACL; FMC decided to exit India",1.3,10.5],
+   ["2026*","~85","Iran-war oil shock; China ended export rebates; El Niño deficit; FMC India to Crystal; GSP IPO",-12.5,-10.9]];
+  var hb=document.getElementById("hist-body");
+  hist.forEach(function(h){var tr=document.createElement("tr");
+    tr.innerHTML='<td class="num">'+h[0]+'</td><td class="num">'+h[1]+'</td><td>'+h[2]+'</td><td class="num '+(h[3]>=0?'pos':'negc')+'">'+(h[3]>0?'+':'')+h[3].toFixed(1)+'%</td><td class="num">'+(h[4]>0?'+':'')+h[4].toFixed(1)+'%</td>';hb.appendChild(tr);});
+  var dd=[["UPL","Jun 2021",-32,-20],["PI Industries","Jun 2023",-42,-38],["Rallis","Jun 2021",-43,-40],["Dhanuka","Dec 2023",-9,-37],["Bayer CropScience","Sep 2020",-39,-26],["Insecticides India","Dec 2022",-21,-22],["Bharat Rasayan","Jun 2021",-67,-53],["Excel Industries","Mar 2022",-44,-18],["Punjab Chemicals","Aug 2021",-44,-17],["Astec","Oct 2022",-68,-13],["Sharda Cropchem","May 2022",-1,-17],["NACL","Jan 2023",49,-32],["Sumitomo Chemical","Oct 2022",-14,-19],["Heranba","Aug 2021",-80,-48],["India Pesticides","Dec 2023",-63,-42],["Bhagiradha","Jun 2023",52,-2],["Dharmaj","Dec 2023",3,-15],["Best Agrolife","Dec 2022",-84,-23],["Meghmani Organics","Jul 2022",-57,-30]];
+  var db=document.getElementById("dd-body");
+  dd.forEach(function(d){var tr=document.createElement("tr");
+    tr.innerHTML='<td>'+d[0]+'</td><td>'+d[1]+'</td><td class="num '+(d[2]>=0?'pos':'negc')+'">'+(d[2]>0?'+':'')+d[2]+'%</td><td class="num '+(d[3]>=0?'pos':'negc')+'">'+(d[3]>0?'+':'')+d[3]+'%</td>';db.appendChild(tr);});
+
+  var q=document.getElementById("gq"),cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+  var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+  function run(){var s=q.value.trim().toLowerCase(),shown=0;
+    pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+    document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;dl.previousElementSibling.hidden=!any;});
+    cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";none.hidden=shown>0;}
+  q.addEventListener("input",run);run();
+})();
+</script>

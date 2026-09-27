@@ -1,0 +1,618 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two and Three Wheelers Primer</title>
+<meta name="description" content="Industry 18 of 278: motorcycles, scooters, mopeds and auto-rickshaws. India&#x27;s biggest vehicle market and its biggest export success; the incumbents (Hero, Bajaj, TVS, Eicher) and EV challengers (Ather, Ola); GST 2.0, ABS rules, electrification; 11 companies and a year-by-year record from 2012.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Two &amp; Three Wheelers · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 18 of 278 · Auto family</div>
+  <h1>Two &amp; Three Wheelers</h1>
+  <p class="lede">India's vehicle of the masses. The country buys about 22 million two-wheelers a year, more than any other except China, and exports millions more to Africa, Latin America and Asia. Three-wheelers (auto-rickshaws and e-rickshaws) carry the last mile. The industry is now split between four profitable incumbents and a wave of electric challengers.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 11 (no changes in the audit)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Commercial Vehicles</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~22 mn</div><div class="l">Domestic two-wheeler sales in FY26, a record (+~11%), boosted by the GST cut on bikes up to 350 cc</div></div>
+    <div class="stat"><div class="n">732k</div><div class="l">Bajaj Auto's Q1 FY27 exports (+54%), more than its domestic sales for the first time</div></div>
+    <div class="stat"><div class="n">~6% → 9%</div><div class="l">Electric share of two-wheeler sales: about 6% for FY26 (our estimate from volumes), ~9% in March 2026</div></div>
+    <div class="stat"><div class="n">800k+</div><div class="l">Electric three-wheelers sold in FY26, the first time above 800,000 (Mahindra, Bajaj, TVS lead)</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The vehicle of the masses</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Most Indian families can't afford a car, but they can afford a motorcycle or scooter: it costs about as much as a good fridge and runs 50–60 km on a litre of petrol. A farmer rides one to the market, a delivery person to your door, a student to college. Three-wheelers, the auto-rickshaws, are small taxis. Companies like Hero, Bajaj, TVS and Royal Enfield make millions of these every year, and send many abroad. Now new companies like Ather and Ola make electric scooters that charge from a plug instead of using petrol.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Two-wheelers are India's mass-mobility market, with ~22 mn domestic sales in FY26 plus a large export business.</p>
+    <ul>
+      <li><b>Hero MotoCorp</b> leads commuter motorcycles.</li>
+      <li><b>Honda</b> (unlisted in India) leads scooters.</li>
+      <li><b>Bajaj Auto</b> is the export champion (exports now exceed domestic sales) and owns KTM.</li>
+      <li><b>TVS</b> is the all-rounder with the strongest EV incumbent (iQube).</li>
+      <li><b>Eicher's Royal Enfield</b> dominates 250–750 cc motorcycles.</li>
+    </ul>
+    <p>GST 2.0 (September 2025) cut tax on bikes up to 350 cc to 18%, and FY27 Q1 was a record quarter for everyone: Bajaj's profit +42%, TVS +51%, Royal Enfield volumes +27%. EV challengers are maturing. Ather turned EBITDA-positive and its stock is up 117% this year, while Ola Electric's share collapsed and is only now recovering. The group is 2026's best auto segment (+20% vs a −11% Nifty). The risks are a weak monsoon (El Niño) hitting rural demand in FY27, the ABS mandate's cost, and the EV price war.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>The two- and three-wheeler menu</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>What it is</th><th>Trend</th><th>Leaders</th></tr></thead><tbody>
+    <tr><td>Entry commuter motorcycles (100–110 cc)</td><td>Splendor, HF Deluxe, Platina, Radeon</td><td>Rural-driven; revived by GST 2.0</td><td>Hero, Bajaj, TVS, Honda</td></tr>
+    <tr><td>Executive and premium motorcycles (125–200 cc)</td><td>Pulsar, Apache, Shine, Xtreme</td><td>Growing with premiumisation</td><td>Bajaj, TVS, Honda, Hero</td></tr>
+    <tr><td>Mid-size (250–750 cc)</td><td>Classic, Bullet, Hunter, Himalayan, KTM, Triumph 400s, Harley X440</td><td>Fast growth; the 350 cc sweet spot gained from GST 2.0</td><td>Royal Enfield (dominant), Bajaj (KTM, Triumph), Hero (Harley)</td></tr>
+    <tr><td>Scooters (ICE)</td><td>Activa, Jupiter, Access, Ntorq</td><td>Urban; about a third of the market</td><td>Honda, TVS, Suzuki</td></tr>
+    <tr><td>Electric scooters and motorcycles</td><td>iQube, Chetak, Ather Rizta and 450, Ola S1, Vida</td><td>~6% of sales and rising</td><td>TVS, Bajaj, Ather, Ola, Hero (Vida)</td></tr>
+    <tr><td>Mopeds</td><td>TVS XL100</td><td>A rural workhorse</td><td>TVS</td></tr>
+    <tr><td>Three-wheelers (passenger and cargo)</td><td>Auto-rickshaws (CNG, LPG, diesel, electric), e-rickshaws, cargo loaders</td><td>Shifting fast to electric</td><td>Bajaj (ICE), Mahindra (EV), TVS, Piaggio, Atul</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>The two-wheeler market is like the shoe market. Commuter bikes are sturdy school shoes (cheap, durable, bought by the millions). Premium bikes are sports shoes (people pay for style and performance). Royal Enfield is the leather boot everyone wants for weekends. EV scooters are the new smart shoes: exciting, but still finding their fit and price.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The Splendor your milkman rides is Hero's. The Pulsar a college student saves for is Bajaj's. The Jupiter scooter a family uses for school runs is TVS's. The Classic 350 at a weekend ride-out is Royal Enfield. The Swiggy rider's electric scooter may be an Ather or Ola. The auto-rickshaw at the station is most likely a Bajaj RE, increasingly electric.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From steel and cells to a rural buyer</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Materials</h4><div class="an">The raw pieces</div>Steel, aluminium, rubber, plastics, copper, chips; lithium cells and rare-earth magnets for EVs.<div class="who">Steel and aluminium makers; Chinese cell and magnet suppliers</div><div class="m">Commodity-linked</div></div>
+    <div class="stage"><div class="no">02</div><h4>Components</h4><div class="an">Sub-assemblies</div>Engines' parts, carburettors and fuel injection, ABS units, wheels, tyres, lights, batteries, motors, controllers.<div class="who">Auto-component makers (023, 024), tyre makers (025)</div><div class="m">60–70% of cost bought in</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Design and assembly</h4><div class="an">Building the bike</div>Engines are often made in-house; high-volume assembly lines.<div class="who">Hero, Bajaj, TVS, Eicher, Honda, Suzuki, Ather, Ola</div><div class="m">Scale and brand</div></div>
+    <div class="stage"><div class="no">04</div><h4>Dealers and finance</h4><div class="an">The shop</div>Thousands of dealers and rural sub-dealers; loans from NBFCs.<div class="who">Dealers (027), Bajaj Finance, Hero FinCorp, TVS Credit</div><div class="m">Credit drives rural sales</div></div>
+    <div class="stage"><div class="no">05</div><h4>Exports</h4><div class="an">Selling abroad</div>Africa, Latin America, Southeast Asia, the Middle East; premium bikes to Europe.<div class="who">Bajaj, TVS, Honda, Royal Enfield</div><div class="m">Currency and geopolitics</div></div>
+    <div class="stage"><div class="no">06</div><h4>Customers</h4><div class="an">The rider</div>Rural and urban commuters, gig workers, enthusiasts, rickshaw drivers.<div class="who">About 22 mn buyers a year</div><div class="m">Monsoon and incomes</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Materials:</b> a bike is mostly steel and aluminium; an electric scooter's most expensive part is its battery, made from cells mostly bought from China.</li>
+    <li><b>Components:</b> other companies make the tyres, lights, brakes and wiring; the bike maker usually makes the engine itself.</li>
+    <li><b>Assembly:</b> a big plant can roll out a motorcycle every few seconds.</li>
+    <li><b>Dealers and finance:</b> most buyers take a loan; in villages, a small sub-dealer sells the bike and a finance company collects monthly instalments.</li>
+    <li><b>Exports:</b> Indian bikes are cheap and tough, so they sell well in Nigeria, Colombia, the Philippines and Egypt.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Two-wheeler makers have better economics than car makers: lower capital per unit, strong brands in each niche, and big export optionality. The profit pools are premium motorcycles (Royal Enfield and Bajaj's KTM earn the highest margins) and exports. The commuter segment is a volume business sensitive to rural incomes. EVs are the disruption, and incumbents who adapted (TVS, Bajaj) kept their share. Most of the risk has sat with the EV start-ups, not the incumbents.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 11 companies</h2>
+  <h3>A. The incumbents</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Position</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Bajaj Auto (~₹3.2 lakh cr)</td><td>Pulsar, Platina, Chetak EV, the Freedom CNG bike; three-wheeler leader in ICE; the export champion; KTM and Triumph partnerships (Bajaj took control of KTM's Austrian parent after its 2024–25 insolvency).</td><td>Record revenue ₹17,244 cr (+37%), profit ₹2,983 cr (+42%), EBITDA margin 20.9% (+110 bp); domestic 706k (+11%), exports 732k (+54%); KTM and Triumph domestic revenue +60%. 2026 +22%; −10% from its September 2024 peak.</td></tr>
+    <tr><td>Eicher Motors (~₹2.1 lakh cr)</td><td>Royal Enfield (dominant in 250–750 cc: Classic, Bullet, Hunter, Himalayan, 650s); VE Commercial Vehicles, a truck and bus JV with Volvo (see 019).</td><td>Revenue ₹6,632 cr (+31.5%), profit ₹1,463 cr (+21%); Royal Enfield record 332,940 units (+27%); VECV revenue ₹6,610 cr (+17%). Approved a ₹1,225 cr greenfield plant in Andhra Pradesh. 2026 +3%.</td></tr>
+    <tr><td>TVS Motor (~₹1.9 lakh cr)</td><td>Jupiter, Ntorq, Apache, Raider, XL100, iQube EV; three-wheelers; Norton (UK); a strong international business.</td><td>Revenue ₹13,896 cr (+38%), profit ₹1,174 cr (+51%), EBITDA ₹1,779 cr (12.8%); volumes 1.63 mn (+28%); international 468k (+33%); EV two-wheelers +86%. 2026 +12%, above its December 2025 peak.</td></tr>
+    <tr><td>Hero MotoCorp (~₹1.05 lakh cr)</td><td>The commuter-motorcycle leader (Splendor, HF Deluxe, Glamour), Vida EVs, Harley-Davidson X440 (a partnership); Ather's largest shareholder.</td><td>Revenue ₹12,999 cr (+36%), volumes +23%, EBITDA ₹1,727 cr (+25%), standalone profit ₹1,454 cr (+29%); consolidated profit ₹1,418 cr (−17%) as items outside the core business weighed. EV business +151%; EV capacity doubled to 30,000 a month. 2026 −8%.</td></tr>
+    <tr><td>Atul Auto (~₹120 cr)</td><td>Rajkot-based three-wheeler maker (diesel, CNG, electric) moving to EVs.</td><td>August 2026 sales 2,810 (+33%); share 2.3%. 2026 +2%; −44% from its July 2024 peak.</td></tr>
+  </tbody></table></div>
+  <h3>B. The EV challengers</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Position</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Ather Energy (~₹61,500 cr)</td><td>Bengaluru EV maker (450 series, Rizta family scooter); in-house software and charging network (Ather Grid). Listed May 2025; Hero is its largest shareholder.</td><td>Income ₹1,260 cr (+87%); deliveries 83,173 (+80%); EBITDA positive for the first time (₹9 cr, from −₹106 cr); net loss ₹51 cr (from ₹178 cr). Hit ₹1,500 on 4 August. 2026 +117%.</td></tr>
+    <tr><td>Ola Electric (~₹17,200 cr)</td><td>EV scooters and motorcycles; its own cell plant (Gigafactory) in Tamil Nadu. Listed August 2024.</td><td>Revenue ₹455 cr (−45% year on year); deliveries 39,192; share recovered to 8.4% (from 5.1%); loss ₹336 cr; gross margin 30.5%; a ₹780 cr QIP. 2026 flat; −75% from its August 2024 peak after service complaints and share losses.</td></tr>
+    <tr><td>Zelio E-Mobility (~₹1,760 cr)</td><td>Low-speed electric scooters (SME listing).</td><td>2026 +98%.</td></tr>
+    <tr><td>Keto Motors (~₹1,790 cr)</td><td>Recently listed; no price history in our data.</td><td>Check filings before use.</td></tr>
+    <tr><td>Wardwizard Innovations (~₹170 cr)</td><td>Joy e-bike scooters (Vadodara).</td><td>−94% from its January 2022 peak; 2026 −23%.</td></tr>
+    <tr><td>Tunwal E-Motors (~₹140 cr)</td><td>Low-speed e-scooters (SME).</td><td>−54% from its August 2024 peak; 2026 −30%.</td></tr>
+  </tbody></table></div>
+  <h3>Big unlisted or elsewhere-listed players</h3>
+  <ul>
+    <li><b>Honda Motorcycle &amp; Scooter India:</b> the scooter leader (Activa), #1 or #2 overall.</li>
+    <li><b>Suzuki Motorcycle India:</b> scooters (Access).</li>
+    <li><b>Yamaha:</b> premium 150 cc bikes and scooters.</li>
+    <li><b>Mahindra Last Mile Mobility</b> (inside M&amp;M, see 017): the electric three-wheeler leader.</li>
+    <li><b>Piaggio:</b> three-wheelers (Ape).</li>
+  </ul>
+  <div class="box warn"><span class="tag">Classification notes</span><p><b>Eicher</b> includes VECV trucks and buses (a Volvo JV) and could also be tagged to 019. <b>Atul Auto</b> and <b>Keto Motors</b> are three-wheeler and commercial makers classified here by the audit, which is fine. Several small EV names (Wardwizard, Tunwal, Zelio) are SME listings with thin disclosure and volatile prices.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Brands, scale and exports</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th class="num">EBITDA margin*</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>Premium motorcycles (Royal Enfield)</td><td class="num">24–27%</td><td>Brand, pricing power, a dominant niche</td></tr>
+    <tr><td>Bajaj (domestic + exports + three-wheelers)</td><td class="num">19–21%</td><td>Exports, premium mix (KTM, Triumph), three-wheelers</td></tr>
+    <tr><td>Hero (commuters)</td><td class="num">13–15%</td><td>Scale, rural reach, low cost</td></tr>
+    <tr><td>TVS (all-rounder)</td><td class="num">11–13%</td><td>Scooters, premium Apache, EVs, exports</td></tr>
+    <tr><td>EV start-ups</td><td class="num">Negative to ~0%</td><td>Battery costs, scale, subsidies</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges from company filings; Q1 FY27: Bajaj 20.9%, TVS 12.8%.</p>
+  <h3>Why exports matter so much</h3>
+  <p>Indian two-wheelers are among the world's cheapest to make and are tough enough for bad roads, so they sell across Africa, Latin America and Asia. Exports now exceed domestic sales at Bajaj, and TVS's international business is growing 30%+. Exports are priced in dollars, so a weaker rupee helps, while currency crises in customer countries (Nigeria, Egypt, Argentina) hurt. Bajaj's Q1 FY27 exports rose 54% as those markets recovered.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A two-wheeler maker is like a popular shoe brand with factories in India. At home it sells school shoes by the million (commuters) and fashion shoes at a premium (Royal Enfield, KTM); abroad it sells the same sturdy shoes to countries with similar roads and budgets. The premium line and the export shops make the most money.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the makers buy</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Steel and aluminium</td><td>Domestic mills; Hindalco</td><td>All</td><td>Rising; price increases passed on</td></tr>
+    <tr><td>Lithium-ion cells</td><td>China, Korea; Ola's own cell plant</td><td>EV makers</td><td>Imported; cell costs falling over time</td></tr>
+    <tr><td>Rare-earth magnets</td><td>China</td><td>EV motors</td><td>China's April 2025 export curbs disrupted EV output (Bajaj warned of Chetak production cuts)</td></tr>
+    <tr><td>ABS units</td><td>Bosch, Continental, Endurance and others</td><td>All, after the ABS mandate</td><td>A new cost per bike from January 2026</td></tr>
+    <tr><td>Rubber and tyres</td><td>Tyre makers (025)</td><td>All</td><td>Natural rubber at records (see 012)</td></tr>
+    <tr><td>Precious metals</td><td>Imports</td><td>Catalytic converters (BS-VI)</td><td>Firm</td></tr>
+    <tr><td>Semiconductors</td><td>Global</td><td>Fuel injection, EVs, ABS</td><td>Adequate</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Harvests, weddings and festivals</h2>
+  <ul>
+    <li><b>April–May:</b> the rabi harvest and the wedding season lift rural buying.</li>
+    <li><b>June–August:</b> the monsoon slows retail; dealers stock up in August for festivals.</li>
+    <li><b>September–November:</b> Navratri, Dussehra and Diwali, the biggest retail stretch; kharif harvest cash arrives.</li>
+    <li><b>January–March:</b> quieter; the financial year-end push in March.</li>
+    <li><b>The 1st of every month:</b> dispatch numbers; Vahan registrations daily.</li>
+    <li><b>Exports</b> follow customer countries' currencies and seasons, not India's.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 7 names (Bajaj Auto Limited, Eicher Motors Limited, TVS Motor Company Limited, Hero Motocorp Limited, Ather Energy Limited, Ola Electric Mobility Limited, Atul Auto Ltd), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Aug +4.4 pts (beat in 12 of 16 years); Sep +4.0 pts (beat in 13 of 15 years); Apr +3.2 pts (beat in 11 of 15 years).</li><li><b>Weakest months:</b> Mar -1.3 pts (beat in 7 of 15 years); Feb -1.1 pts (beat in 6 of 15 years); Jan -1.0 pts (beat in 8 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 6 of 15 years (median -2.2 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +3.2 pts); Aug–Sep beat the Nifty in 11 of 14 years (median +7.7 pts); Oct–Dec beat the Nifty in 7 of 14 years (median +1.3 pts); Sep–Nov beat the Nifty in 10 of 14 years (median +4.8 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -3.7 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +0.2 points.</p><p><b>Reading it:</b> the pre-festive run-up is the pattern. August (12 of 16) and September (13 of 15) are the strongest months, and August–September beat the Nifty in 11 of 14 years with a median of +7.7 points: dealers stock up and investors buy ahead of Navratri and Diwali. February–March (6 of 15) and January–March (6 of 15) are weak. Unlike passenger vehicles, two-wheeler stocks tend to hold up into September; October–December is a coin toss (7 of 14).</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AugSep" viewBox="0 0 720 280" role="img" aria-label="August to September return minus Nifty by year"></svg><figcaption>August–September (the pre-festive run-up) return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>August–September misses: 2018 (−3.4), 2021 (−10.3), 2024 (−0.4).</b> 2018 had rising insurance and fuel costs; 2021 had commodity inflation and a weak rural economy. The biggest runs were 2025 (+28.1, the GST cut) and 2014 (+22.9).</li>
+    <li><b>April–July failures: 2016 (−7.7), 2018 (−19.1), 2019 (−15.1), 2021 (−3.8).</b> These were the slowdown years; the best were 2026 (+26.8) and 2022 (+23.0).</li>
+    <li><b>October–December</b> beat the Nifty in 7 of 14 years. The big miss was 2020 (−15.2, after the post-lockdown rally); the best were 2013 (+28.8) and 2014 (+23.3).</li>
+    <li><b>January–March</b> beat the Nifty in 6 of 15 years; the misses clustered in slowdown years (2013, 2015, 2019, 2025).</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The two-wheeler calendar is "buy in July, hold through September". The run-up to the festive season is the most consistent window, and it works for large caps. It fails in years of cost shocks or weak rural incomes, so check the monsoon and commodity prices before relying on it. A weak 2026 monsoon (El Niño) is the risk to FY27 rural demand.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Nine drivers</h2>
+  <ol>
+    <li><b>Rural incomes and the monsoon:</b> about half of commuter motorcycles are bought in rural India; El Niño weakens FY27's outlook.</li>
+    <li><b>Taxes:</b> GST 2.0 cut bikes up to 350 cc to 18% (from 28%) and raised those above 350 cc to 40%, which helps Royal Enfield's 350s and Hero's commuters and hurts KTM and larger bikes.</li>
+    <li><b>Regulation costs:</b> BS-VI (2020), ABS/CBS (2019) and ABS for all (January 2026), plus two helmets, each raising prices.</li>
+    <li><b>Credit:</b> NBFC lending to rural and gig-economy buyers.</li>
+    <li><b>Fuel prices:</b> petrol up ~8% in May 2026; an LPG shortage pushed three-wheeler drivers to EVs.</li>
+    <li><b>Exports:</b> currency stability in Nigeria, Egypt and Latin America; Bajaj and TVS.</li>
+    <li><b>EV subsidies and costs:</b> FAME-II (to 2024), then EMPS and PM E-DRIVE; battery cell prices.</li>
+    <li><b>Premiumisation:</b> buyers trading up to 125 cc+ and 350 cc bikes.</li>
+    <li><b>Commodity costs:</b> steel, aluminium and rubber, passed on with a lag.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of the listed makers with ₹300 cr+ market cap and enough history (4 in 2012–13, 5 from 2014, 6 in 2025 with Ola, 7 in 2026 with Ather), monthly returns capped at ±50%, price only; 2026 is to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a two-wheeler cycle</h3>
+  <ol>
+    <li><b>Rural upturn:</b> good monsoons and farm incomes lift commuter volumes (2013–14, 2022–23).</li>
+    <li><b>Cost steps:</b> new regulations (BS-VI, ABS, insurance) raise prices 5–15% and dent entry-level demand (2018–21).</li>
+    <li><b>Tax or income shock:</b> GST 2.0 (2025) or a drought (2014–15) moves volumes sharply.</li>
+    <li><b>Premium and export legs</b> run on their own cycles (Royal Enfield 2012–17; exports 2023–26).</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Rural distress years are bad years:</b> 2015, 2016, 2019 and 2021.</li>
+    <li><b>Regulation-driven price rises</b> hurt the entry segment most (Hero's worst years were 2019 and 2021).</li>
+    <li><b>Premium niches re-rate their owners:</b> Royal Enfield made Eicher a multibagger in 2012–14.</li>
+    <li><b>EV start-ups swing wildly:</b> Ola −75% from its peak; Ather +117% in 2026.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Asia rides; India builds</h2>
+  <p>Two-wheelers are mainly an Asian and African product. China, India, Indonesia and Vietnam are the biggest markets. Japan's makers (Honda, Yamaha, Suzuki) led globally for decades and still do. India's makers have become the main challengers in emerging markets, and Indian companies now own or partner with European premium brands (Bajaj–KTM and Triumph, TVS–Norton, Hero–Harley-Davidson).</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Country / company</th><th>Strength</th><th>India angle</th></tr></thead><tbody>
+    <tr><td>Japan (Honda, Yamaha, Suzuki)</td><td>Global leaders; scooters and commuters</td><td>Honda is India's scooter leader</td></tr>
+    <tr><td>China</td><td>The largest market; e-bikes and electric scooters</td><td>The main source of EV cells and magnets</td></tr>
+    <tr><td>Indonesia, Vietnam, the Philippines</td><td>Big Asian markets</td><td>Export destinations; Honda and Yamaha dominate</td></tr>
+    <tr><td>Africa, Latin America</td><td>Growing motorcycle-taxi markets</td><td>Bajaj and TVS lead exports</td></tr>
+    <tr><td>Europe (KTM, Triumph, Ducati, BMW, Norton)</td><td>Premium brands</td><td>Bajaj controls KTM and makes Triumph 400s; TVS owns Norton</td></tr>
+    <tr><td>US (Harley-Davidson)</td><td>Heavy cruisers</td><td>Hero makes the X440 under licence</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Scooters → motorcycles (1990s–2000s):</b> Bajaj's Chetak era gave way to Hero Honda's fuel-efficient motorcycles.</li>
+    <li><b>Hero Honda split (2011):</b> Honda went alone in India and became the scooter leader; Hero built its own technology.</li>
+    <li><b>Royal Enfield's revival (2010s):</b> an old brand became the mid-size leader and a global export.</li>
+    <li><b>Indian makers buying European brands (2010s–2025):</b> KTM, Triumph partnership, Norton.</li>
+    <li><b>EVs (2019 onwards):</b> start-ups (Ather, Ola) led early; incumbents (TVS, Bajaj) caught up, and together hold large shares of electric scooters.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Electric scooters and motorcycles:</b> ~6% of sales, rising towards double digits; cheaper LFP batteries and local cells.</li>
+    <li><b>Battery swapping:</b> for three-wheelers and delivery fleets (swapping networks with standard packs).</li>
+    <li><b>Electric three-wheelers:</b> more than 800,000 sold in FY26, a record, as operating costs beat CNG and LPG autos.</li>
+    <li><b>CNG two-wheelers:</b> Bajaj's Freedom 125 (2024), billed as the world's first CNG motorcycle.</li>
+    <li><b>Safety electronics:</b> ABS on all bikes from January 2026, plus connected features.</li>
+    <li><b>Flex-fuel:</b> E20 is standard; flex-fuel (E85+) motorcycles are showcased (see 005).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>GST 2.0</td><td>From 22 September 2025: bikes up to 350 cc at 18% (from 28%); above 350 cc at 40%; EVs at 5%</td><td>A mass-market boost; a premium-bike squeeze</td></tr>
+    <tr><td>ABS for all new two-wheelers, plus two helmets</td><td>From January 2026 (previously ABS only above 125 cc)</td><td>Higher prices at the entry level; a component opportunity</td></tr>
+    <tr><td>Emission norms</td><td>BS-VI (2020), OBD-2 (2023–25)</td><td>Cost steps</td></tr>
+    <tr><td>EV subsidies</td><td>FAME-II ended in 2024; EMPS, then PM E-DRIVE for two- and three-wheelers with tapering support</td><td>EV prices and demand</td></tr>
+    <tr><td>PLI (auto and battery cells)</td><td>Incentives for advanced technology and local cells</td><td>Supports EV makers</td></tr>
+    <tr><td>Third-party insurance</td><td>Five years upfront for new two-wheelers (since 2018)</td><td>Adds to on-road price</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: record volumes, rural risk ahead</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Domestic demand</td><td>Strong</td><td>FY26 a record ~22 mn; Q1 FY27 volumes +23–28% at Hero, TVS and Royal Enfield</td></tr>
+    <tr><td>Exports</td><td>Booming</td><td>Bajaj +54%, TVS international +33%</td></tr>
+    <tr><td>Margins</td><td>Healthy</td><td>Bajaj 20.9%, TVS 12.8%</td></tr>
+    <tr><td>EVs</td><td>Accelerating, consolidating</td><td>Ather EBITDA-positive; Ola's share recovering to 8.4%; Hero's Vida +151%</td></tr>
+    <tr><td>FY27 outlook</td><td>Slower</td><td>Forecasts of 3–9% growth: a high base and El Niño</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is the strongest auto sub-sector right now, and priced like it (Eicher, TVS and Ather near highs). The next test is FY27's rural demand after a below-normal monsoon, and whether exports hold. Bajaj and TVS have the most diversified growth (exports, premium, EVs); Hero is the rural and commuter play; Ather is a high-momentum EV bet whose valuation assumes continued share gains.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Monthly dispatches and exports</td><td>Company releases on the 1st</td><td>Volumes</td></tr>
+    <tr><td>Vahan registrations (including EV share)</td><td>Daily</td><td>Retail demand; EV share</td></tr>
+    <tr><td>Monsoon, rural wages, tractor sales</td><td>IMD; monthly data</td><td>Rural demand</td></tr>
+    <tr><td>Dealer inventory</td><td>FADA</td><td>Channel health before festivals</td></tr>
+    <tr><td>Nigerian naira, Egyptian pound, LatAm currencies</td><td>Daily</td><td>Export demand</td></tr>
+    <tr><td>Steel, aluminium, cell prices</td><td>Monthly</td><td>Margins</td></tr>
+    <tr><td>EV subsidy changes</td><td>Heavy industries ministry</td><td>EV pricing</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the two-wheeler cycle shows up</h2>
+  <ul>
+    <li><b>Auto components</b> (023): Endurance (brakes, ABS), Minda, Sundram, Bosch India.</li>
+    <li><b>Tyres</b> (025): TVS Srichakra, MRF, CEAT (two-wheeler tyres).</li>
+    <li><b>Batteries and EV charging</b> (022): cell and pack makers, swapping networks.</li>
+    <li><b>Helmets</b> (026): Studds and others benefit from the two-helmet rule.</li>
+    <li><b>Dealerships</b> (027).</li>
+    <li><b>Two-wheeler finance:</b> Bajaj Finance, Hero FinCorp, TVS Credit, Shriram.</li>
+    <li><b>Tractors and rural consumption</b> (020): the same rural income cycle.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What are rural vs urban growth rates, and what is the monsoon's effect on bookings?</li>
+    <li>How much have prices risen with ABS, and what is the impact on entry-level volumes?</li>
+    <li>What are export growth and the outlook by region; any currency stress?</li>
+    <li>What are the EV share, EV margin and battery sourcing plan?</li>
+    <li>(Bajaj) How is KTM's restructuring going, and what is the effect of the 40% GST above 350 cc?</li>
+    <li>(Eicher) What is Royal Enfield's capacity plan and 650 cc demand after the GST change?</li>
+    <li>(Ather, Ola) What is the path to positive free cash flow, and what does service quality look like?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Dispatches outrunning Vahan registrations.</li>
+    <li>EV makers' market share bought with discounts.</li>
+    <li>Rising customer complaints and service backlogs (Ola in 2024–25).</li>
+    <li>Heavy dependence on one export market.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"EV start-ups will destroy the incumbents."</td><td>TVS and Bajaj adapted and are among the EV leaders; Ola lost most of its share in 2025. Incumbents' Q1 FY27 profits hit records.</td></tr>
+    <tr><td>"Two-wheelers are a rural-only story."</td><td>Exports (Bajaj's now exceed domestic sales), premium bikes and urban EVs are big and growing.</td></tr>
+    <tr><td>"GST 2.0 is permanent growth."</td><td>It was a one-time price cut; FY27 forecasts fall to 3–9% on a high base.</td></tr>
+    <tr><td>"Royal Enfield's growth is over."</td><td>Q1 FY27 volumes hit a record (+27%) and a new plant was approved; the GST cut helped its 350s.</td></tr>
+    <tr><td>"Ather is too expensive."</td><td>It turned EBITDA-positive with deliveries up 80%; the valuation assumes sustained share gains and margins that aren't proven yet.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. ABS, E2W" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Products and technology</h3><dl>
+    <dt>2W / 3W</dt><dd>Two-wheeler / three-wheeler.</dd>
+    <dt>E2W / E3W</dt><dd>Electric two-wheeler / electric three-wheeler.</dd>
+    <dt>Commuter motorcycle</dt><dd>A 100–125 cc bike built for economy.</dd>
+    <dt>Premium / mid-size motorcycle</dt><dd>150 cc+ / 250–750 cc bikes.</dd>
+    <dt>cc</dt><dd>Engine displacement in cubic centimetres; the tax threshold is 350 cc.</dd>
+    <dt>Moped</dt><dd>A small, light two-wheeler (TVS XL100).</dd>
+    <dt>E-rickshaw</dt><dd>A low-speed battery three-wheeler.</dd>
+    <dt>L5 / L3</dt><dd>Regulatory categories: full-speed three-wheelers / low-speed e-rickshaws.</dd>
+    <dt>ABS</dt><dd>Anti-lock braking system; compulsory for all new two-wheelers from January 2026.</dd>
+    <dt>CBS</dt><dd>Combi-braking system (both wheels from one lever); the earlier rule for bikes up to 125 cc.</dd>
+    <dt>Fuel injection</dt><dd>Electronic fuel delivery, required with BS-VI.</dd>
+    <dt>OBD</dt><dd>On-board diagnostics for emissions monitoring.</dd>
+    <dt>Battery swapping</dt><dd>Exchanging a depleted battery for a charged one.</dd>
+    <dt>LFP cell</dt><dd>A cheaper, long-life lithium battery chemistry.</dd>
+    <dt>Gigafactory</dt><dd>A large battery cell plant (Ola's in Tamil Nadu).</dd>
+    <dt>Rare-earth magnet</dt><dd>A powerful magnet used in EV motors; mostly from China.</dd>
+    <dt>Executive segment</dt><dd>125–150 cc motorcycles between commuters and premium bikes (Shine, Pulsar 125).</dd>
+    <dt>Scooterisation</dt><dd>The shift of buyers, especially women and urban families, from motorcycles to scooters.</dd>
+    <dt>Hub motor / mid-drive motor</dt><dd>An EV motor inside the wheel hub (cheaper) vs one mounted centrally and driving the wheel by belt or chain (more efficient).</dd>
+    <dt>BMS</dt><dd>Battery management system: the electronics that protect and balance an EV battery; key to safety after the 2022 scooter fires.</dd>
+    <dt>Certified (IDC) range</dt><dd>The official km-per-charge figure from standard tests; real-world range is usually lower.</dd>
+    <dt>Homologation</dt><dd>Government testing and approval of a vehicle model before sale (by ARAI or ICAT).</dd>
+    <dt>CNG motorcycle</dt><dd>A bike that runs on compressed natural gas (Bajaj Freedom).</dd>
+  </dl>
+  <h3>Business and policy</h3><dl>
+    <dt>Dispatches vs registrations</dt><dd>Factory shipments vs retail sales (see 017).</dd>
+    <dt>Vahan</dt><dd>The vehicle-registration database (see 017).</dd>
+    <dt>Sub-dealer</dt><dd>A small rural outlet linked to a main dealer, extending reach into villages.</dd>
+    <dt>Waiting period</dt><dd>How long a buyer waits for delivery (see 017); Royal Enfield's long waits in 2012–17 signalled pricing power.</dd>
+    <dt>Rural demand</dt><dd>Sales in villages and small towns, tied to farm incomes.</dd>
+    <dt>Gig economy</dt><dd>Delivery and ride-hailing workers, a growing two-wheeler buyer group.</dd>
+    <dt>Premiumisation</dt><dd>Buyers trading up to costlier models.</dd>
+    <dt>Export markets</dt><dd>Africa, Latin America, Asia, the Middle East.</dd>
+    <dt>FAME-II / EMPS / PM E-DRIVE</dt><dd>Successive EV subsidy schemes.</dd>
+    <dt>GST 2.0</dt><dd>The September 2025 GST reform (see 017).</dd>
+    <dt>Third-party insurance</dt><dd>Insurance covering others; five years upfront for new two-wheelers.</dd>
+    <dt>QIP</dt><dd>Qualified institutional placement (see 007).</dd>
+    <dt>EBITDA-positive</dt><dd>Operating profit above zero; Ather's Q1 FY27 milestone.</dd>
+    <dt>Market share (Vahan-based)</dt><dd>Share of registrations; used for EV makers.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Ethanol / E20</dt><dd>See 005 and 017.</dd>
+    <dt>BS-VI</dt><dd>See 017.</dd>
+    <dt>Natural rubber</dt><dd>See 012.</dd>
+    <dt>PLI</dt><dd>See 017.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What did GST 2.0 do to two-wheelers?</summary><p>Cut tax on bikes up to 350 cc from 28% to 18% and raised it to 40% above 350 cc (EVs stay at 5%).</p></details>
+  <details class="q"><summary>2. Why is Bajaj Auto different from Hero?</summary><p>Bajaj earns heavily from exports (now above domestic sales), premium bikes (KTM, Triumph) and three-wheelers; Hero is the domestic commuter leader.</p></details>
+  <details class="q"><summary>3. What is the most reliable seasonal window?</summary><p>August–September, the pre-festive run-up (11 of 14 years, median +7.7 points).</p></details>
+  <details class="q"><summary>4. What made Ather's stock double in 2026?</summary><p>Deliveries +80% and its first positive EBITDA in Q1 FY27; it hit ₹1,500 on 4 August.</p></details>
+  <details class="q"><summary>5. Why did Ola Electric fall 75% from its peak?</summary><p>Market-share losses, service complaints and continuing losses after its 2024 IPO; its share has started recovering (8.4%).</p></details>
+  <details class="q"><summary>6. What new safety rule applies from January 2026?</summary><p>ABS on all new two-wheelers (previously only above 125 cc), and dealers must supply two BIS helmets.</p></details>
+  <details class="q"><summary>7. Why were 2019 and 2021 bad years?</summary><p>Regulation-driven price rises (ABS/CBS, BS-VI), rising costs and weak rural incomes hit entry-level demand.</p></details>
+  <details class="q"><summary>8. Which segment earns the highest margins?</summary><p>Premium motorcycles (Royal Enfield, ~24–27% EBITDA).</p></details>
+  <details class="q"><summary>9. How fast are three-wheelers going electric?</summary><p>More than 800,000 electric three-wheelers sold in FY26, with Mahindra, Bajaj and TVS leading; the LPG shortage in 2026 accelerated the shift.</p></details>
+  <details class="q"><summary>10. What is the main risk to FY27 demand?</summary><p>A below-normal monsoon (El Niño) hitting rural incomes, on top of a high base after GST 2.0.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket vs NSE:NIFTY.</li>
+    <li>Incumbents: <a href="https://www.equitybulls.com/category.php?id=373247">Bajaj Q1 FY27</a>; <a href="https://www.business-standard.com/companies/quarterly-results/bajaj-auto-q1fy27-profit-revenue-results-126072100560_1.html">Bajaj profit and exports</a>; <a href="https://www.sahi.com/blogs/tvs-motor-q1-results-fy-27-revenue-rises-38-percent-shares-jump-over-5">TVS Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/eicher-motors-q1-fy27-slides-record-volumes-international-milestone-93CH-4821022">Eicher Q1 FY27</a>; <a href="https://www.autocarpro.in/news/eicher-motors-reports-32-percent-revenue-growth-q1-fy27-approves-rs-1225-crore-greenfield-facility-in-andhra-pradesh-133794">Eicher's new plant</a>; <a href="https://www.investing.com/news/company-news/hero-motocorp-q1-fy27-slides-36-revenue-growth-ev-surge-93CH-4845177">Hero Q1 FY27</a>; <a href="https://www.freepressjournal.in/business/hero-motocorp-consolidated-net-profit-dips-17-to-1418-crore-in-q1-fy27">Hero consolidated</a>.</li>
+    <li>EVs: <a href="https://www.angelone.in/news/stocks/ather-energy-share-price-hits-1-500-for-the-first-time-surges-nearly-18-after-q1-fy27-results">Ather Q1 FY27</a>; <a href="https://www.sahi.com/blogs/ather-energy-q1-results-fy27">Ather results</a>; <a href="https://emobilityplus.com/2026/08/07/ola-electric-reports-inr-455-crore-revenue-in-q1-fy27-as-deliveries-nearly-double-and-market-share-rebounds/amp/">Ola Electric Q1 FY27</a>; <a href="https://www.business-standard.com/amp/companies/quarterly-results/ola-electric-s-q1fy27-loss-narrows-to-rs-336-crore-as-revenue-falls-45-126080701866_1.html">Ola loss and revenue</a>.</li>
+    <li>Industry and policy: <a href="https://www.thehawk.in/news/economy-and-business/indias-two-wheeler-sales-volume-touch-record-high-of-22-mn-in-fy26-report">FY26 record sales</a>; <a href="https://upstox.com/news/business-news/latest-updates/india-s-two-wheeler-volumes-to-cross-29-mn-in-fy-27-on-7-9-growth-crisil-ratings/article-189558/">FY27 outlook</a>; <a href="https://www.whalesbook.com/news/Hinglish/auto/India-Two-Wheeler-Sales-Hit-Record-FY27-Growth-Seen-Slowing-Sharply/69e61a4dbca97ee10694437d">slowing FY27 growth</a>; <a href="https://upstox.com/news/market-news/stocks/abs-mandate-for-all-two-wheelers-from-2026-safety-upgrade-or-margin-headwind/article-177201/">ABS mandate</a>; <a href="https://www.autocarpro.in/analysis-sales/mahindra-bajaj-and-tvs-power-electric-3w-sales-past-800000-for-the-first-time-in-fy2026-131960">electric three-wheelers FY26</a>; <a href="https://www.autopunditz.com/post/three-wheeler-sales-august-2026">three-wheeler sales August 2026</a>.</li>
+    <li>History (the Hero–Honda split, the BS-III ban, the insurance rule, KTM's insolvency, the Freedom CNG launch): contemporaneous reporting, known before this session.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 1.0}, {"y": 2013, "v": -10.0}, {"y": 2014, "v": 11.0}, {"y": 2015, "v": -6.3}, {"y": 2016, "v": 7.7}, {"y": 2017, "v": -0.3}, {"y": 2018, "v": 4.0}, {"y": 2019, "v": -2.2}, {"y": 2020, "v": -9.5}, {"y": 2021, "v": -11.4}, {"y": 2022, "v": -8.4}, {"y": 2023, "v": -2.5}, {"y": 2024, "v": 0.5}, {"y": 2025, "v": -11.5}, {"y": 2026, "v": 5.5}], "AprJul": [{"y": 2012, "v": -1.6}, {"y": 2013, "v": 12.6}, {"y": 2014, "v": 20.5}, {"y": 2015, "v": 3.2}, {"y": 2016, "v": -7.7}, {"y": 2017, "v": 1.5}, {"y": 2018, "v": -19.1}, {"y": 2019, "v": -15.1}, {"y": 2020, "v": 13.9}, {"y": 2021, "v": -3.8}, {"y": 2022, "v": 23.0}, {"y": 2023, "v": 11.1}, {"y": 2024, "v": 11.4}, {"y": 2025, "v": -0.9}, {"y": 2026, "v": 26.8}], "AugSep": [{"y": 2012, "v": 0.3}, {"y": 2013, "v": 7.6}, {"y": 2014, "v": 22.9}, {"y": 2015, "v": 1.1}, {"y": 2016, "v": 10.3}, {"y": 2017, "v": 10.8}, {"y": 2018, "v": -3.4}, {"y": 2019, "v": 7.8}, {"y": 2020, "v": 8.4}, {"y": 2021, "v": -10.3}, {"y": 2022, "v": 4.7}, {"y": 2023, "v": 13.7}, {"y": 2024, "v": -0.4}, {"y": 2025, "v": 28.1}], "OctDec": [{"y": 2012, "v": 6.9}, {"y": 2013, "v": 28.8}, {"y": 2014, "v": 23.3}, {"y": 2015, "v": 12.4}, {"y": 2016, "v": -4.2}, {"y": 2017, "v": -3.6}, {"y": 2018, "v": -0.9}, {"y": 2019, "v": 3.5}, {"y": 2020, "v": -15.2}, {"y": 2021, "v": -4.6}, {"y": 2022, "v": 4.1}, {"y": 2023, "v": 12.5}, {"y": 2024, "v": -8.3}, {"y": 2025, "v": -5.1}], "SepNov": [{"y": 2012, "v": 1.0}, {"y": 2013, "v": 31.1}, {"y": 2014, "v": 24.2}, {"y": 2015, "v": 14.8}, {"y": 2016, "v": 4.3}, {"y": 2017, "v": -0.6}, {"y": 2018, "v": -1.2}, {"y": 2019, "v": 10.6}, {"y": 2020, "v": -5.3}, {"y": 2021, "v": 0.6}, {"y": 2022, "v": 6.6}, {"y": 2023, "v": 18.3}, {"y": 2024, "v": -8.9}, {"y": 2025, "v": 5.4}], "JanMar": [{"y": 2012, "v": -8.7}, {"y": 2013, "v": -13.5}, {"y": 2014, "v": 12.3}, {"y": 2015, "v": -11.7}, {"y": 2016, "v": 7.8}, {"y": 2017, "v": 0.8}, {"y": 2018, "v": -6.7}, {"y": 2019, "v": -11.8}, {"y": 2020, "v": -9.2}, {"y": 2021, "v": -0.7}, {"y": 2022, "v": -3.7}, {"y": 2023, "v": 3.3}, {"y": 2024, "v": 3.7}, {"y": 2025, "v": -12.0}, {"y": 2026, "v": 2.5}]}, "my": {"1": {"2012": -9.5, "2013": -4.0, "2014": 1.4, "2015": -5.6, "2016": 0.5, "2017": 1.0, "2018": -11.4, "2019": -9.2, "2020": 0.1, "2021": 10.8, "2022": 5.1, "2023": 5.9, "2024": 3.1, "2025": -0.6, "2026": -3.0}, "2": {"2012": -0.8, "2013": -0.8, "2014": 1.3, "2015": -7.7, "2016": 4.0, "2017": -1.6, "2018": 3.1, "2019": 2.6, "2020": -6.2, "2021": -6.9, "2022": -0.9, "2023": 0.0, "2024": -1.3, "2025": -7.8, "2026": 6.4}, "3": {"2012": 1.7, "2013": -9.8, "2014": 9.2, "2015": 1.1, "2016": 3.3, "2017": 1.3, "2018": 1.1, "2019": -4.9, "2020": -5.4, "2021": -4.4, "2022": -7.8, "2023": -2.6, "2024": 1.8, "2025": -3.8, "2026": -0.2}, "4": {"2012": 6.0, "2013": 7.9, "2014": -0.6, "2015": -4.9, "2016": 0.1, "2017": 1.4, "2018": 0.1, "2019": -1.0, "2020": 7.2, "2021": 1.3, "2022": 9.7, "2023": 8.5, "2024": 1.6, "2025": -0.8, "2026": 10.8}, "5": {"2012": -4.3, "2013": 3.2, "2014": 2.4, "2015": 7.8, "2016": -6.7, "2017": 2.1, "2018": -5.7, "2019": -2.2, "2020": 8.1, "2021": -0.5, "2022": 8.2, "2023": 3.5, "2024": 4.4, "2025": 3.0, "2026": 3.7}, "6": {"2012": -3.2, "2013": -1.4, "2014": 17.6, "2015": 3.8, "2016": 2.1, "2017": -1.3, "2018": -4.1, "2019": -6.1, "2020": -0.2, "2021": -2.4, "2022": 6.2, "2023": -2.6, "2024": 2.1, "2025": -4.2, "2026": 1.0}, "7": {"2011": 1.2, "2012": 0.2, "2013": 2.7, "2014": -0.7, "2015": -2.7, "2016": -2.7, "2017": -0.7, "2018": -8.8, "2019": -7.0, "2020": -3.8, "2021": -2.0, "2022": -3.0, "2023": 0.8, "2024": 1.9, "2025": 1.0, "2026": 8.1}, "8": {"2011": 17.7, "2012": -0.4, "2013": 0.7, "2014": 9.3, "2015": -1.3, "2016": 4.1, "2017": 6.5, "2018": -1.7, "2019": 2.5, "2020": 4.8, "2021": -11.6, "2022": 3.6, "2023": 9.9, "2024": 1.0, "2025": 17.2, "2026": 7.8}, "9": {"2011": 6.7, "2012": 0.7, "2013": 7.2, "2014": 12.1, "2015": 2.6, "2016": 6.0, "2017": 4.2, "2018": -1.8, "2019": 5.2, "2020": 3.4, "2021": 1.7, "2022": 1.1, "2023": 3.4, "2024": -1.4, "2025": 9.3}, "10": {"2011": 3.0, "2012": -0.8, "2013": 9.1, "2014": 5.1, "2015": 6.3, "2016": 1.3, "2017": -2.0, "2018": 1.0, "2019": 7.5, "2020": -8.8, "2021": 2.1, "2022": 9.6, "2023": 4.4, "2024": -5.7, "2025": -1.9}, "11": {"2011": 1.8, "2012": 1.1, "2013": 10.0, "2014": 4.3, "2015": 5.3, "2016": -2.5, "2017": -2.7, "2018": -0.5, "2019": -2.6, "2020": 0.8, "2021": -3.0, "2022": -4.0, "2023": 9.3, "2024": -2.2, "2025": -2.1}, "12": {"2011": -3.0, "2012": 6.4, "2013": 5.9, "2014": 11.6, "2015": 0.4, "2016": -3.1, "2017": 1.3, "2018": -1.5, "2019": -1.2, "2020": -5.1, "2021": -3.7, "2022": -1.0, "2023": -2.3, "2024": -1.0, "2025": -0.9}}, "basket": ["Bajaj Auto Limited", "Eicher Motors Limited", "TVS Motor Company Limited", "Hero Motocorp Limited", "Ather Energy Limited", "Ola Electric Mobility Limited", "Atul Auto Ltd"], "nbasket": 7, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -0.3, "rel": -1.0, "hit": 8, "n": 15}, {"m": 2, "abs": -2.3, "rel": -1.1, "hit": 6, "n": 15}, {"m": 3, "abs": -1.5, "rel": -1.3, "hit": 7, "n": 15}, {"m": 4, "abs": 5.7, "rel": 3.2, "hit": 11, "n": 15}, {"m": 5, "abs": 3.0, "rel": 1.8, "hit": 10, "n": 15}, {"m": 6, "abs": 2.3, "rel": 0.5, "hit": 6, "n": 15}, {"m": 7, "abs": 1.0, "rel": -1.0, "hit": 7, "n": 16}, {"m": 8, "abs": 4.2, "rel": 4.4, "hit": 12, "n": 16}, {"m": 9, "abs": 4.6, "rel": 4.0, "hit": 13, "n": 15}, {"m": 10, "abs": 4.1, "rel": 2.0, "hit": 10, "n": 15}, {"m": 11, "abs": 1.8, "rel": 0.9, "hit": 7, "n": 15}, {"m": 12, "abs": 0.9, "rel": 0.2, "hit": 5, "n": 15}], "cy": [{"y": 2012, "b": 24.1, "n": 27.7, "rel": -3.6, "partial": false}, {"y": 2013, "b": 40.2, "n": 6.8, "rel": 33.4, "partial": false}, {"y": 2014, "b": 158.4, "n": 31.4, "rel": 127.0, "partial": false}, {"y": 2015, "b": -0.4, "n": -4.1, "rel": 3.7, "partial": false}, {"y": 2016, "b": 9.2, "n": 3.0, "rel": 6.2, "partial": false}, {"y": 2017, "b": 41.0, "n": 28.6, "rel": 12.4, "partial": false}, {"y": 2018, "b": -23.8, "n": 3.2, "rel": -27.0, "partial": false}, {"y": 2019, "b": -6.9, "n": 12.0, "rel": -18.9, "partial": false}, {"y": 2020, "b": 5.2, "n": 14.9, "rel": -9.7, "partial": false}, {"y": 2021, "b": 2.9, "n": 24.1, "rel": -21.2, "partial": false}, {"y": 2022, "b": 34.9, "n": 4.3, "rel": 30.6, "partial": false}, {"y": 2023, "b": 72.6, "n": 20.0, "rel": 52.6, "partial": false}, {"y": 2024, "b": 12.6, "n": 8.8, "rel": 3.8, "partial": false}, {"y": 2025, "b": 17.7, "n": 10.5, "rel": 7.2, "partial": false}, {"y": 2026, "b": 19.7, "n": -10.7, "rel": 30.3, "partial": true}], "dd": [{"co": "Bajaj Auto", "peak": "Sep 2024", "fp": -10, "y1": 26}, {"co": "Eicher Motors", "peak": "Dec 2025", "fp": 3, "y1": 9}, {"co": "TVS Motor Company", "peak": "Dec 2025", "fp": 12, "y1": 18}, {"co": "Hero Motocorp", "peak": "Dec 2025", "fp": -17, "y1": -2}, {"co": "Ather Energy", "peak": "Oct 2025", "fp": 114, "y1": 192}, {"co": "Ola Electric Mobility", "peak": "Aug 2024", "fp": -75, "y1": -37}, {"co": "Zelio E-Mobility", "peak": "Dec 2025", "fp": 45, "y1": 0}, {"co": "Atul Auto", "peak": "Jul 2024", "fp": -44, "y1": -15}, {"co": "Wardwizard Innovations & Mobility", "peak": "Jan 2022", "fp": -94, "y1": -56}, {"co": "Tunwal E-Motors", "peak": "Aug 2024", "fp": -54, "y1": -16}], "win": {"FebMar": {"mean": -2.2, "median": -2.2, "hit": 6, "n": 15}, "AprJul": {"mean": 5.1, "median": 3.2, "hit": 9, "n": 15}, "AugSep": {"mean": 7.3, "median": 7.7, "hit": 11, "n": 14}, "OctDec": {"mean": 3.5, "median": 1.3, "hit": 7, "n": 14}, "SepNov": {"mean": 7.2, "median": 4.8, "hit": 10, "n": 14}, "JanMar": {"mean": -3.2, "median": -3.7, "hit": 6, "n": 15}}, "ytd": {"b": 19.7, "n": -10.7}, "notes": {"2012": "Royal Enfield's waiting lists made Eicher +95%; Bajaj +34%. Hero (0%) adjusted to life without Honda after their 2011 split; TVS \u221220%.", "2013": "TVS +81% on its scooter turnaround (Jupiter launched in September); Eicher +71% as Royal Enfield kept booming; Hero +9%, Bajaj \u221211%.", "2014": "The mid-cap rally: Atul Auto +356%, TVS +254%, Eicher +203%, Hero +50%, Bajaj +28%. The basket rose 158%.", "2015": "Two drought years hit rural demand: Hero \u221213%, Atul \u221219%; Eicher +12%, TVS +8%, Bajaj +4%.", "2016": "Demonetisation froze cash-based rural two-wheeler buying in November\u2013December: Atul \u221226%; Eicher +29%, TVS +24%, Hero +13%.", "2017": "The BS-III sales ban (April) forced a fire sale, then demand recovered: TVS +114%, Eicher +39%, Bajaj +27%, Hero +24%.", "2018": "Costs rose (five-year third-party insurance from September, fuel prices) and the NBFC crisis cut loans; Royal Enfield's waiting periods ended. Atul \u221236%, TVS \u221226%, Eicher \u221224%.", "2019": "The slowdown deepened and ABS/CBS rules (April) added cost: Hero \u221221%, TVS \u221218%; Bajaj +17% on exports.", "2020": "BS-VI (April) raised prices 10\u201315% just as COVID locked India down; rural buyers came back first. Hero +27%, Eicher +12%; Atul \u221227% (three-wheelers idle).", "2021": "Commodity inflation, the second COVID wave and weak rural incomes: Hero \u221221%, Bajaj \u22126%; TVS +29% on the iQube EV. The basket lagged by 21 points.", "2022": "Recovery and EV subsidies: TVS +73%, Atul +47%, Eicher +25% (Hunter 350), Bajaj and Hero +11%.", "2023": "Premiumisation and exports: Atul +104%, Bajaj +88% (Triumph 400s), TVS +87%, Hero +51% (Harley X440), Eicher +28%. The basket rose 73%.", "2024": "Bajaj +29% to a September peak (Freedom CNG bike); TVS +17%, Eicher +16%. Ola Electric listed in August and peaked within days.", "2025": "GST 2.0 (September) cut tax on bikes up to 350 cc from 28% to 18%: TVS +57%, Eicher +52%, Hero +39%. Bajaj +6% (KTM's insolvency; 40% GST on bikes above 350 cc). Ola \u221258% as its share collapsed; Ather listed in May.", "2026": "Record exports, fuel price rises and an LPG shortage pushed buyers to EVs: Ather +117% (first positive EBITDA), Bajaj +22% (exports +54%), TVS +12%. Hero \u22128%. ABS became compulsory on all new two-wheelers from January."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

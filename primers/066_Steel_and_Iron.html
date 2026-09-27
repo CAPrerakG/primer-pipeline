@@ -1,0 +1,617 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steel & Iron Primer</title>
+<meta name="description" content="Industry 66 of 278: India&#x27;s largest industrial sector by capital employed. The two routes to making steel, why the spread between steel and raw materials decides everything, the safeguard duty that shut out Chinese imports, the 300 mt capacity ambition, green steel rules, and how the 87 listed names sort into four very different groups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Steel &amp; Iron · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#protection">The safeguard duty</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 66 of 278 · Metals family, part 3</div>
+  <h1>Steel &amp; Iron</h1>
+  <p class="lede">Steel is the physical form of economic growth: every building, bridge, car, pipe and appliance is mostly steel. India is the world's second-largest producer and, unlike China, still a growing one — 168 million tonnes of crude steel in FY26 and a national target of 300 million tonnes of capacity by 2030-31. It is also India's most capital-intensive industry, where a single plant costs tens of thousands of crores and takes years to build, and where profits are decided not by volume but by the gap between the price of steel and the cost of ore and coal. This primer explains the two ways steel is made, where the money is made and lost, how the 87 listed companies sort into four different businesses, and what the safeguard duty has changed.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 87 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Stainless Steel</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">168.4 mt</div><div class="l">India's FY26 crude steel production; consumption 164 mt, growing 7–8%</div></div>
+    <div class="stat"><div class="n">11.5%</div><div class="l">Safeguard duty on flat steel imports from April 2026, after 12% in the first year</div></div>
+    <div class="stat"><div class="n">₹52,860/t</div><div class="l">Average hot-rolled coil price in Q4 FY26, up 12% on the quarter</div></div>
+    <div class="stat"><div class="n">300 mt</div><div class="l">The national capacity target for 2030-31, from about 200 mt today</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Protected prices, record volumes, rising costs</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Steel is made in two ways. The first is like baking from scratch: you melt iron ore with coal in a furnace as tall as a building and pour out liquid iron, then blow oxygen through it to turn it into steel. The second is like reheating leftovers: you melt old scrap steel in an electric furnace and make new steel from it. India mostly bakes from scratch, because it has ore but not much scrap. The tricky part is that the steel maker cannot set the price — if steel from China is cheap, everyone wants that instead. So the government has put a tax on imported steel to keep Indian factories busy.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>The domestic story is strong; the cost and capacity story is the risk.</p>
+    <ul>
+      <li><b>Demand:</b> finished steel consumption of 164 mt in FY26, growing 7–8% — the fastest of any large economy.</li>
+      <li><b>Protection:</b> safeguard duties of 12%, then 11.5% and 11% over three years, cut rolled-steel imports 38.7% in the first half of FY26 and lifted hot-rolled coil to about ₹52,860 a tonne.</li>
+      <li><b>Volumes:</b> Tata's India crude steel +11%, Jindal Steel +15%, JSW +3% (about +15% excluding a furnace under upgrade).</li>
+      <li><b>Costs:</b> coking coal is forecast around $190 a tonne, and India's imports are heading toward 86 mt by 2027.</li>
+      <li><b>Capacity:</b> the 300 mt target means years of capital spending; JSW alone has begun a ₹16,350 cr plant in Andhra Pradesh.</li>
+      <li><b>Europe:</b> Tata's UK business still lost ₹340 cr in the quarter, and its Dutch plans are being reassessed.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Flat, long and everything in between</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Where it goes</th><th>Main Indian makers</th></tr></thead><tbody>
+    <tr><td>Hot-rolled coil (HRC)</td><td>The basic flat product, rolled hot into coils</td><td>Pipes, tubes, auto parts, general engineering</td><td>JSW, Tata, AM/NS, Jindal Steel</td></tr>
+    <tr><td>Cold-rolled and coated</td><td>HRC rolled again cold, then galvanised or colour-coated</td><td>Cars, appliances, roofing</td><td>JSW, Tata, Jindal Steel</td></tr>
+    <tr><td>TMT bars and rebar</td><td>Ribbed long products for concrete</td><td>Construction, infrastructure</td><td>SAIL, Jindal Steel, Rhetan, hundreds of small mills</td></tr>
+    <tr><td>Structurals</td><td>Beams, channels and angles</td><td>Buildings, bridges, industrial sheds</td><td>SAIL, Jindal Steel</td></tr>
+    <tr><td>Special and alloy steel</td><td>Bars and forgings with tight chemistry</td><td>Autos, bearings, defence, engineering</td><td>Sunflag, Kalyani Steels, Vardhman Special Steels, Mukand</td></tr>
+    <tr><td>Sponge iron (DRI)</td><td>Iron made without melting, using coal or gas</td><td>Feed for induction furnaces</td><td>Godawari, Jai Balaji, Lloyds, hundreds of small units</td></tr>
+    <tr><td>Pellets</td><td>Iron ore fines rolled and hardened</td><td>Blast furnaces and DRI plants</td><td>KIOCL, Godawari, JSW, Lloyds</td></tr>
+  </tbody></table></div>
+  <p>The split that matters commercially is flat versus long. Flat steel — coils and sheets — is made by large integrated mills, is the product that competes with imports, and is what the safeguard duty protects. Long steel — bars and rods for construction — is made by hundreds of smaller mills using induction furnaces and sponge iron, is priced locally, and is far less exposed to imports. That is why the listed universe behaves like two industries.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>Two routes from ore to a rolled coil</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Raw materials</h4><div class="an">The inputs</div>Iron ore (064), coking coal — mostly imported — limestone, scrap and ferro alloys (065).<div class="who">NMDC, captive mines, Australian and US coal suppliers</div><div class="m">Roughly 60–70% of cost</div></div>
+    <div class="stage"><div class="no">02</div><h4>Preparation</h4><div class="an">Getting ready</div>Ore becomes sinter or pellets; coal becomes coke in coke ovens.<div class="who">Integrated mills; merchant pellet plants</div><div class="m">Efficiency and emissions</div></div>
+    <div class="stage hot"><div class="no">03a</div><h4>Blast furnace route</h4><div class="an">Bake from scratch</div>Ore and coke make hot metal; oxygen converts it to crude steel. High capital, low cost per tonne at scale.<div class="who">Tata, JSW, SAIL, Jindal Steel, AM/NS</div><div class="m">About two-thirds of Indian output</div></div>
+    <div class="stage hot"><div class="no">03b</div><h4>DRI and electric route</h4><div class="an">Reheat</div>Sponge iron or scrap melted in induction or electric arc furnaces. Lower capital, more flexible, more power-hungry.<div class="who">Hundreds of secondary producers; Lloyds, Godawari, Jai Balaji</div><div class="m">The rest of Indian output</div></div>
+    <div class="stage"><div class="no">04</div><h4>Casting and rolling</h4><div class="an">Shaping</div>Liquid steel is cast into slabs, blooms or billets, then rolled into coils, bars or sections.<div class="who">All producers; standalone re-rollers</div><div class="m">Where value is added</div></div>
+    <div class="stage"><div class="no">05</div><h4>Customers</h4><div class="an">The users</div>Construction and infrastructure take the bulk; autos, appliances, pipes and packaging the rest.<div class="who">Builders, EPC firms, carmakers, pipe makers (068)</div><div class="m">Construction is the cycle</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Miners</b> supply ore; <b>coal</b> comes mostly from Australia.</li>
+    <li><b>Coke ovens and sinter plants</b> prepare the feed.</li>
+    <li><b>Blast furnaces</b> or <b>electric furnaces</b> make the steel.</li>
+    <li><b>Casters and rolling mills</b> turn it into coils and bars.</li>
+    <li><b>Construction</b> buys most of it, and decides the cycle.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical number in steel is the spread: the steel price minus the cost of the ore and coal needed to make a tonne. Volumes barely move it — a mill running at 94% cannot run at 130% — but a ₹5,000 a tonne move in the spread changes profit per tonne by the same amount, which on 20 million tonnes is ₹10,000 cr. In 2026 the spread has widened at home because the safeguard duty lifted prices while ore fell, and narrowed abroad because coking coal is rising. Every other detail in this industry is secondary to that arithmetic.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 87 companies sort into four groups</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>JSW Steel (~₹3,05,388 cr)</td><td>India's largest steel maker by capacity: Vijayanagar, Dolvi, Salem and overseas plants; flat products, coated steel and a growing long-products business.</td><td>Q1 FY27 crude steel 6.59 mt (+3%; about +15% excluding a blast furnace under upgrade); India utilisation about 94%. Began a ₹16,350 cr integrated plant in Andhra Pradesh in July 2026; its Q1 presentation set a long-term capacity target of 62 mt. Stock +10% in 2026.</td></tr>
+    <tr><td>Tata Steel (~₹2,28,261 cr)</td><td>India's oldest steel maker, with large Indian operations and loss-making European businesses in the Netherlands and the UK.</td><td>Q1 FY27 consolidated revenue ₹60,794 cr, adjusted EBITDA ₹9,370 cr at a 15.2% margin. India crude steel 5.82 mt (+11%), deliveries 5.17 mt (+11%), India EBITDA up 32% to about ₹9,900 cr. UK still lost ₹340 cr; the Dutch business earned ₹40 cr after an emissions-related shutdown, and its green-steel project there is being reassessed. Stock +3% in 2026.</td></tr>
+    <tr><td>Jindal Steel (~₹1,12,659 cr)</td><td>Angul and Raigarh; increasingly value-added, with captive coal and a new slurry pipeline.</td><td>Q1 FY27 revenue ₹15,482 cr (+26%), adjusted EBITDA ₹2,667 cr, profit ₹844 cr (−44% on maintenance shutdowns and finance costs); production 2.40 mt (+15%); value-added products 66% of the mix. The Angul furnace is ramping to 13,000 tonnes a day by December 2026; FY27 sales guidance 10.5–11 mt. Stock +6% in 2026.</td></tr>
+    <tr><td>SAIL (~₹71,479 cr)</td><td>The state-owned integrated producer: five plants, mostly long and plate products, with large captive iron ore.</td><td>Q1 FY27 profit more than doubled (+138%) even as volumes were held back by advanced maintenance. Stock +21% in 2026 but still 38% below its 2007 high.</td></tr>
+    <tr><td>Lloyds Metals &amp; Energy (~₹1,01,773 cr)</td><td>An iron ore miner in Maharashtra turning itself into a steel maker: a slurry pipeline, a 4 mtpa pellet plant and a 1.2 mt steel plant due by March 2027.</td><td>FY26 revenue ₹17,113 cr, EBITDA ₹6,140 cr at a 35.9% margin, profit ₹3,829 cr; iron ore output more than doubled to 21.96 mt and sponge iron rose 57%. Stock +38% in 2026. <b>Excluded from the basket: today it is a miner, and it listed only in 2023.</b></td></tr>
+    <tr><td>Mid-cap producers: Godawari Power, Kalyani Steels, Sunflag, Vardhman Special Steels, Jai Balaji, Prakash Industries, Gallantt, Jayaswal Neco, Mukand</td><td>Pellets, sponge iron, billets, TMT and special steels — some integrated with captive ore or power.</td><td>In the basket where liquid and long-listed. Vardhman +42%, Sunflag +27% and Kalyani +24% in 2026; Jai Balaji −11% after falling 60% in 2025.</td></tr>
+    <tr><td>KIOCL (~₹19,849 cr), NMDC Steel (~₹12,080 cr), Vedanta Iron &amp; Steel (~₹12,189 cr)</td><td>A state-owned pellet maker, the 3 mt Nagarnar plant spun out of NMDC, and the steel business demerged from Vedanta in June 2026.</td><td>Excluded: KIOCL is a pellet and mining company, NMDC Steel listed in 2023, and Vedanta Iron &amp; Steel has traded for three months.</td></tr>
+    <tr><td>Pitti Engineering (~₹4,158 cr), Pennar Industries (~₹2,252 cr)</td><td>Electrical steel laminations and engineered steel products — customers of steel, not makers of it.</td><td><b>Misclassified: both should sit in engineering, not steel.</b></td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The audit</span><p>This is the largest section in the watchlist and the most mixed. Of 87 names, four are large integrated producers, perhaps fifteen are genuine mid-sized steel makers, a handful are miners or pellet makers that belong in 064, two are engineering companies, and the rest are small re-rollers, sponge-iron units and shells — many trading below ₹10 a share with data artefacts. The basket therefore uses ten liquid, genuinely steel-making companies with long histories. Unlisted producer AM/NS India (ArcelorMittal Nippon Steel) is India's third-largest producer and appears in none of these numbers.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Spread per tonne, times tonnes</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>What it does</th><th>Who has it</th></tr></thead><tbody>
+    <tr><td>Captive iron ore</td><td>Removes the biggest input price risk</td><td>Tata, SAIL, Godawari, Lloyds; JSW buys most of its ore</td></tr>
+    <tr><td>Captive coking coal</td><td>Rare in India; most coal is imported</td><td>Jindal Steel and Tata have some; the rest import</td></tr>
+    <tr><td>Scale and utilisation</td><td>Spreads fixed costs; blast furnaces must run flat out</td><td>All the large mills; JSW at about 94%</td></tr>
+    <tr><td>Product mix</td><td>Value-added steel earns more per tonne</td><td>Jindal Steel at 66% value-added; Tata's automotive grades</td></tr>
+    <tr><td>Logistics</td><td>Slurry pipelines and captive jetties cut cost per tonne</td><td>Jindal Steel expects ₹750–850 a tonne from its pipeline</td></tr>
+    <tr><td>Captive power</td><td>Uses waste gas and heat; vital for DRI-based producers</td><td>Godawari, Jai Balaji, Lloyds</td></tr>
+    <tr><td>Debt</td><td>Steel is built with borrowed money; leverage amplifies the cycle</td><td>Jindal Steel's net debt is ₹15,927 cr after steady reduction</td></tr>
+  </tbody></table></div>
+  <p>Steel's economics are brutally simple and brutally cyclical. A tonne of steel made through the blast furnace route needs roughly 1.6 tonnes of iron ore and 0.7–0.8 tonnes of coking coal; at $97 ore and $190 coal, the raw material bill alone is close to ₹28,000–30,000 a tonne before conversion costs. With hot-rolled coil at about ₹52,860, the spread is comfortable today. In 2015, when Chinese steel was dumped into India below cost, it was not, and the industry's debts nearly took several banks down with it.</p>
+  <h3>Why Europe is a separate problem</h3>
+  <p>Tata Steel's Indian business earned about ₹9,900 cr of EBITDA in Q1 FY27, up 32%, while its UK business lost ₹340 cr and its Dutch business earned ₹40 cr, down 94%, after an emissions-related shutdown of its direct sheet plant. European steel faces high energy costs, carbon rules and weak demand at once. The transition plans — an electric arc furnace in the UK, a hydrogen-ready project in the Netherlands now under reassessment — are expensive and slow. For investors, Tata Steel is therefore two companies: a strong Indian producer and a European restructuring.</p>
+</section>
+
+<section id="protection" data-toc="The safeguard duty">
+  <p class="eyebrow">5b · The safeguard duty</p>
+  <h2>How a tariff changed the domestic market</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Date</th><th>Measure</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Dec 2024</td><td>Safeguard investigation begins after a surge in imports</td><td>Domestic prices had fallen to multi-year lows</td></tr>
+    <tr><td>21 Apr 2025</td><td>Provisional 12% safeguard duty on flat steel</td><td>Imports slow immediately</td></tr>
+    <tr><td>H1 FY26</td><td>Rolled-steel imports fall 38.7% year on year to 3.04 mt</td><td>Domestic mills regain share</td></tr>
+    <tr><td>Dec 2025 – Jan 2026</td><td>Duty extended for three years: 11.5% from April 2026 and 11% from April 2027</td><td>Visibility for capacity plans</td></tr>
+    <tr><td>Threshold</td><td>Imports above $675 a tonne CIF are exempt</td><td>Targets cheap, not premium, imports</td></tr>
+    <tr><td>Q4 FY26</td><td>Hot-rolled coil averages ₹52,860 a tonne, up 12% on the quarter</td><td>Margins recover</td></tr>
+  </tbody></table></div>
+  <p>Safeguards are a blunt instrument, and they cut both ways. Indian mills get a protected price and the confidence to invest; Indian steel users — pipe makers, auto component firms, engineering companies — pay more than their global competitors, which matters for exports. The duty is also temporary by design and faces trade challenges. The investment question is therefore whether the capacity being built under this protection will still be profitable when it expires: the industry is adding tonnes toward a 300 mt target while China, with far more capacity than it needs, keeps exporting.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What steel makers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Source</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Iron ore</td><td>The metal</td><td>Domestic — NMDC, captive mines, merchant miners (064)</td><td>India is self-sufficient; price follows import parity</td></tr>
+    <tr><td>Coking coal</td><td>Fuel and reductant in the blast furnace</td><td>Imported, mainly from Australia; forecast about $190/t for 2026</td><td>The critical import: about 82 mt in 2026, rising to 86 mt by 2027</td></tr>
+    <tr><td>Scrap</td><td>Feed for electric furnaces</td><td>Domestic collection and imports</td><td>India lacks scrap; a constraint on the greener route</td></tr>
+    <tr><td>Ferro alloys</td><td>Set the steel's properties</td><td>Domestic (065)</td><td>Small share of cost</td></tr>
+    <tr><td>Power</td><td>Rolling, DRI and electric furnaces</td><td>Captive and grid</td><td>Decisive for secondary producers</td></tr>
+    <tr><td>Refractories and electrodes</td><td>Furnace linings and arcs</td><td>Domestic and imported</td><td>Consumable cost</td></tr>
+    <tr><td>Logistics</td><td>Moving ore in and steel out</td><td>Railways, ports, slurry pipelines</td><td>A large controllable cost</td></tr>
+  </tbody></table></div>
+  <p>Coking coal is the industry's structural weakness. India has almost no good coking coal of its own, so every tonne of blast-furnace steel carries an imported input priced in dollars, shipped from Queensland, and subject to cyclones and strikes. It is the main reason Indian mills' costs rise when the rupee falls, and the main argument for the electric route — which India cannot yet take at scale because it has too little scrap.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Construction sets the rhythm</h2>
+  <ul>
+    <li><b>January–March:</b> the peak construction and dispatch quarter; mills push volumes before the fiscal year ends.</li>
+    <li><b>April–May:</b> new-year contracts, but also the pre-monsoon slowdown in building; May has been the weakest month for the stocks.</li>
+    <li><b>June–September:</b> the monsoon stalls construction; prices usually soften and mills take maintenance shutdowns, as SAIL and Jindal Steel did this year.</li>
+    <li><b>October–December:</b> post-monsoon restocking and the festival-to-year-end construction push; December has beaten the Nifty in 12 of 15 years.</li>
+    <li><b>Throughout:</b> monthly price announcements by the large mills, and quarterly import data, move sentiment.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the ten-stock steel basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 10 names (JSW Steel Limited, Tata Steel Limited, Jindal Steel Limited, Steel Authority of India Limited, Godawari Power &amp; Ispat Ltd., Sunflag Iron &amp; Steel Co. Ltd., Jai Balaji Industries Limited, Kalyani Steels Ltd, Vardhman Special Steels Limited, Prakash Industries Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +8.1 pts (beat in 12 of 15 years); Dec +5.4 pts (beat in 12 of 15 years); Oct +1.8 pts (beat in 7 of 15 years).</li><li><b>Weakest months:</b> May -2.5 pts (beat in 5 of 15 years); Nov -1.6 pts (beat in 6 of 15 years); Mar -0.7 pts (beat in 8 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 8 of 15 years (median +0.9 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +7.6 pts); Aug–Sep beat the Nifty in 7 of 14 years (median +0.1 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +6.4 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +1.3 pts); Jan–Mar beat the Nifty in 8 of 15 years (median +0.3 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +5.1 points.</p><p><b>Reading it:</b> the basket is ten liquid steel makers — JSW, Tata, Jindal Steel and SAIL plus Godawari, Sunflag, Kalyani Steels, Vardhman Special Steels, Jai Balaji and Prakash Industries — equal-weighted, so mid-caps carry as much weight as the giants. April has beaten the Nifty in 12 of 15 years (average +8.1 points) and December in 12 of 15 (+5.4). May is the weakest month (5 of 15). April–July has worked in 9 of 15 (median +7.6) and October–December in 8 of 14 (median +6.4). The pattern follows construction: mills restock before the monsoon and again after it, while May brings the pre-monsoon slowdown and the year's first price cuts.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April has failed only in 2013 (−5.7), 2025 (−4.3) and 2019 (−1.7)</b> — and delivered +33.9 in 2021, +19.4 in 2026 and +12.9 in 2014.</li>
+    <li><b>December has failed only in 2011, 2016 and 2014</b>, and produced +16.6 in 2015, +16.1 in 2017 and +15.6 in 2022.</li>
+    <li><b>May is the weakest month</b>, beating the Nifty in 5 of 15 years, with −16.0 in 2022 when the export duty was announced.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Steel's calendar is the most usable in the Metals family because the underlying driver — construction activity and the monsoon — is physical and repeats. But policy overrides it: May 2022's export duty and April 2025's safeguard duty both moved the stocks more than any season. Use the calendar for timing, and watch Delhi for direction.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Domestic steel prices.</b> Set by import parity, now with a safeguard duty on top.</li>
+    <li><b>Coking coal.</b> The biggest imported cost; forecast around $190 a tonne for 2026.</li>
+    <li><b>Iron ore.</b> Domestic, but priced off import parity (064).</li>
+    <li><b>Chinese exports.</b> The global swing factor and the reason for protection.</li>
+    <li><b>Capacity ramp-ups.</b> New furnaces at JSW, Jindal Steel and Lloyds add volume and debt.</li>
+    <li><b>Product mix.</b> Value-added and special steels earn more per tonne.</li>
+    <li><b>Leverage.</b> Net debt decides who survives the down years.</li>
+    <li><b>Carbon rules.</b> The green steel taxonomy at home and carbon border charges in Europe.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: JSW Steel, Tata Steel, Jindal Steel, SAIL, Godawari Power, Sunflag, Kalyani Steels, Vardhman Special Steels, Jai Balaji and Prakash Industries, equal-weighted monthly. Miners, pellet makers, recent listings and misclassified names are excluded. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Over-expansion and dumping</b> (2012–2015): capacity built on debt met Chinese exports; the basket lost 23% in 2013 and 19% in 2015, and several producers ended up in insolvency.</li>
+    <li><b>Protection and recovery</b> (2016–2017): a minimum import price and anti-dumping duties turned prices, and the basket rose 155% in 2017.</li>
+    <li><b>The squeeze</b> (2018–2019): prices peaked, costs rose, credit tightened.</li>
+    <li><b>The stimulus boom</b> (2020–2021): Chinese stimulus and post-lockdown demand produced record spreads.</li>
+    <li><b>Policy whiplash</b> (2022–2025): an export duty in 2022, an import surge in 2024, a safeguard duty in 2025.</li>
+    <li><b>Protected growth</b> (2026): record domestic volumes and prices, with cost and capacity risk ahead.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Policy, not demand, marks the turns.</b> The minimum import price in 2016, the export duty in 2022 and the safeguard duty in 2025 each reset the stocks.</li>
+    <li><b>Small caps overshoot.</b> Jai Balaji rose 1,293% in 2023 and fell 60% in 2025; the majors moved a fraction of that.</li>
+    <li><b>Balance sheets decide the survivors.</b> The 2012–2016 debt cycle ended with Essar, Bhushan and Monnet in insolvency and their assets in stronger hands.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>China's shadow, India's growth</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Position</th><th>Effect on India</th></tr></thead><tbody>
+    <tr><td>China</td><td>Over half of world output, with weak domestic demand and heavy exports</td><td>The reason for safeguard duties everywhere</td></tr>
+    <tr><td>India</td><td>Second largest producer; consumption growing 7–8%</td><td>The world's growth market</td></tr>
+    <tr><td>Europe</td><td>High energy costs, carbon rules, shrinking output</td><td>Tata's UK and Dutch problems; CBAM from 2026</td></tr>
+    <tr><td>Japan and Korea</td><td>Efficient exporters of high-grade steel</td><td>Competition in value-added grades</td></tr>
+    <tr><td>Middle East</td><td>Gas-based direct reduction, low-carbon and low-cost</td><td>A future competitor in green steel</td></tr>
+  </tbody></table></div>
+  <p>India is the only large steel market still growing quickly, which is why global producers want access to it and why its government keeps raising barriers. The national ambition is to double capacity to 300 mt by 2030-31 and to reach 500 mt by 2047; the Green Steel Taxonomy published in December 2024 sets star ratings by carbon intensity — five stars below 1.6 tonnes of CO₂ per tonne of steel — and by March 2026, 89 units covering 12.34 mt of production had been certified. Those two goals pull against each other: blast furnaces are the cheapest way to add tonnes and the hardest to decarbonise.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Electric arc furnaces.</b> Tata's ₹3,000 cr, 0.85 mt Ludhiana plant emits about 0.3 tonnes of CO₂ per tonne against 2.2 at Jamshedpur.</li>
+    <li><b>Scrap collection.</b> A formal scrap industry is the precondition for electric steel at scale.</li>
+    <li><b>Hydrogen and direct reduction.</b> Promising but expensive; Tata's Dutch project is being reassessed.</li>
+    <li><b>Slurry pipelines and conveyors.</b> Cheaper ore logistics, as at Jindal Steel and Lloyds.</li>
+    <li><b>Value-added mixes.</b> Coated, automotive and special steels to escape commodity pricing.</li>
+    <li><b>Carbon accounting.</b> Star ratings at home and border charges in Europe make emissions a commercial number.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Safeguard duty on flat steel</td><td>12%, then 11.5% and 11% over three years, with a $675/t exemption threshold</td><td>The single biggest driver of 2026 profits</td></tr>
+    <tr><td>Anti-dumping duties</td><td>Product-specific duties on several import lines</td><td>Additional protection</td></tr>
+    <tr><td>Export duty (2022)</td><td>15% for six months in 2022</td><td>Showed policy can cut both ways</td></tr>
+    <tr><td>National Steel Policy</td><td>Targets 300 mt of capacity and 255 mt of production by 2030-31</td><td>Frames the capital-spending cycle</td></tr>
+    <tr><td>Green Steel Taxonomy (Dec 2024)</td><td>Star ratings by carbon intensity; 89 units certified by March 2026</td><td>Prepares for carbon-linked procurement</td></tr>
+    <tr><td>Quality control orders</td><td>Standards on imported and domestic steel</td><td>Limits substandard imports</td></tr>
+    <tr><td>Mining and coal policy</td><td>Captive mines, auctions and coal imports (036, 064)</td><td>Decides input costs</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: protected at home, building for 2030</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Domestic prices</td><td>Firm</td><td>HRC about ₹52,860/t, +12% on the quarter</td></tr>
+    <tr><td>Imports</td><td>Down sharply</td><td>Rolled-steel imports −38.7% in H1 FY26</td></tr>
+    <tr><td>Volumes</td><td>Growing</td><td>Tata India +11%, Jindal Steel +15%</td></tr>
+    <tr><td>Costs</td><td>Rising</td><td>Coking coal forecast about $190/t</td></tr>
+    <tr><td>Capacity</td><td>Being added</td><td>JSW's ₹16,350 cr Andhra plant; Angul ramping; Lloyds' 1.2 mt plant by March 2027</td></tr>
+    <tr><td>Europe</td><td>Still loss-making</td><td>Tata UK −₹340 cr in the quarter</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +10.6% this year vs -10.7% for the Nifty (to 18 Sep 2026). The basket is up 11% against a Nifty down 11%, and for once the reason is domestic policy rather than the global cycle. Safeguard duties — 12% from April 2025, extended for three years at 11.5% and then 11% — have cut rolled-steel imports sharply and pushed domestic hot-rolled coil to about ₹52,860 a tonne, 12% above the previous quarter. Volumes are growing everywhere: Tata's India crude steel rose 11%, Jindal Steel's 15%, JSW's 3% with a furnace down for upgrade. The risk is on the cost side, with coking coal forecast around $190 a tonne, and in the capacity being built toward the 300 mt national target.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>JSW Steel</td><td class="num">₹1,276</td><td>₹1,341 (26 Aug 2026)</td><td class="num">−5%</td><td class="num">+10%</td></tr>
+    <tr><td>Tata Steel</td><td class="num">₹186</td><td>₹221 (14 May 2026)</td><td class="num">−16%</td><td class="num">+3%</td></tr>
+    <tr><td>Jindal Steel</td><td class="num">₹1,120</td><td>₹1,289 (21 Apr 2026)</td><td class="num">−13%</td><td class="num">+6%</td></tr>
+    <tr><td>SAIL</td><td class="num">₹177</td><td>₹288 (12 Dec 2007)</td><td class="num">−38%</td><td class="num">+21%</td></tr>
+    <tr><td>Lloyds Metals</td><td class="num">₹1,827</td><td>₹2,101 (7 Aug 2026)</td><td class="num">−13%</td><td class="num">+38%</td></tr>
+    <tr><td>Godawari Power</td><td class="num">₹233</td><td>₹306 (20 May 2026)</td><td class="num">−24%</td><td class="num">−12%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>The market is paying for protected domestic volumes but not for a new upcycle. The large producers have risen modestly — JSW +10%, Jindal Steel +6%, Tata +3% — while the mid-caps closest to the domestic construction market have done better. That looks right: the safeguard duty supports prices for three years, but coking coal is rising, Chinese exports have not stopped, and the industry is committing enormous capital to reach 300 mt. The best outcomes will come from producers that add tonnes without adding debt and that can hold a value-added mix.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>Steel is the sector where balance sheets, not forecasts, decide returns. The last capacity cycle ended in insolvency courts. This one starts from a healthier place — lower debt, protected prices, real domestic demand — but the same test applies: what happens to the new furnaces when the duty lapses in 2028 and China is still exporting. Own the low-cost, low-debt producers; treat the small sponge-iron names as leveraged bets on the spread, not as businesses.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Domestic HRC and rebar prices</td><td>The revenue line</td><td>Price agencies; company disclosures</td></tr>
+    <tr><td>Coking coal prices</td><td>The biggest cost</td><td>Australian PLV assessments</td></tr>
+    <tr><td>Monthly steel imports and exports</td><td>Shows whether protection is working</td><td>Steel ministry and JPC data</td></tr>
+    <tr><td>Chinese steel exports</td><td>The global pressure gauge</td><td>Chinese customs data</td></tr>
+    <tr><td>Capacity commissioning</td><td>Volume growth and future supply</td><td>Company updates</td></tr>
+    <tr><td>Net debt and capex guidance</td><td>Who is overextending</td><td>Quarterly results</td></tr>
+    <tr><td>Safeguard duty reviews</td><td>The policy that sets prices</td><td>DGTR notifications</td></tr>
+    <tr><td>Construction and infrastructure spending</td><td>Demand</td><td>Government capex data, cement volumes</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Iron ore &amp; manganese (064):</b> the main input, and the captive mines that decide cost.</li>
+    <li><b>Ferro alloys (065):</b> the additives that set steel's properties.</li>
+    <li><b>Stainless steel (067):</b> a separate market with its own economics.</li>
+    <li><b>Steel pipes &amp; tubes (068) and wire (069):</b> the biggest customers of flat and long steel.</li>
+    <li><b>Coal (036):</b> coking coal imports and captive coal.</li>
+    <li><b>Construction and cement:</b> the demand cycle.</li>
+    <li><b>Global proxies:</b> Chinese rebar and hot-rolled coil futures; ArcelorMittal, Nippon Steel and POSCO.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What was EBITDA per tonne, and how much came from price versus cost?</li>
+    <li>What is the landed cost of coking coal, and how many months of inventory are held?</li>
+    <li>What share of iron ore is captive, and at what cost?</li>
+    <li>How much of the volume growth is new capacity and how much is utilisation?</li>
+    <li>What is the value-added share of the mix, and where is it going?</li>
+    <li>What is net debt, and what is the peak capex year?</li>
+    <li>What happens to pricing if the safeguard duty is diluted or challenged?</li>
+    <li>What is the export share and the effect of Europe's carbon border charges?</li>
+    <li>What is the carbon intensity per tonne and the plan to reduce it?</li>
+    <li>For Tata Steel: what is the cash requirement of the UK and Dutch operations over the next three years?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Indian steel demand growth guarantees profits"</td><td>Demand grew through 2015 too, while the industry lost money</td><td>Spread decides, not demand</td></tr>
+    <tr><td>"Safeguard duties are permanent"</td><td>They run to 2028 and step down each year</td><td>A three-year window, not a moat</td></tr>
+    <tr><td>"Volume growth is the metric"</td><td>Jindal Steel's volumes rose 15% and profit fell 44%</td><td>Watch EBITDA per tonne</td></tr>
+    <tr><td>"Green steel is years away from mattering"</td><td>89 units certified under the taxonomy; Europe's carbon border charges start in 2026</td><td>It is already a pricing factor for exports</td></tr>
+    <tr><td>"All 87 names here are steel companies"</td><td>Several are miners, pellet makers or engineering firms</td><td>Check the product mix first</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. HRC, DRI" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Making steel</h3><dl>
+    <dt>Blast furnace</dt><dd>A tall furnace that turns iron ore and coke into liquid hot metal.</dd>
+    <dt>Basic oxygen furnace</dt><dd>Blows oxygen through hot metal to burn off carbon and make steel.</dd>
+    <dt>Electric arc furnace (EAF)</dt><dd>Melts scrap or sponge iron with electric arcs.</dd>
+    <dt>Induction furnace</dt><dd>A smaller electric melting unit used by secondary producers.</dd>
+    <dt>DRI / sponge iron</dt><dd>Iron reduced from ore without melting, using coal or gas.</dd>
+    <dt>Coke</dt><dd>Baked coking coal, the fuel and reductant of the blast furnace.</dd>
+    <dt>Sinter</dt><dd>Iron ore fines fused into lumps for the blast furnace.</dd>
+    <dt>Pellet</dt><dd>Ore fines rolled into balls and hardened.</dd>
+    <dt>Hot metal</dt><dd>Liquid iron tapped from a blast furnace.</dd>
+    <dt>Continuous casting</dt><dd>Solidifying liquid steel directly into slabs, blooms or billets.</dd>
+    <dt>Slab, bloom, billet</dt><dd>Semi-finished shapes that are rolled into products.</dd>
+    <dt>Rolling mill</dt><dd>The mill that shapes semi-finished steel into coils, bars or sections.</dd>
+  </dl>
+  <h3>Products and markets</h3><dl>
+    <dt>HRC</dt><dd>Hot-rolled coil, the benchmark flat product.</dd>
+    <dt>CRC</dt><dd>Cold-rolled coil, thinner and smoother than HRC.</dd>
+    <dt>Galvanised steel</dt><dd>Steel coated with zinc to resist rust.</dd>
+    <dt>TMT bar</dt><dd>Thermo-mechanically treated rebar used in concrete.</dd>
+    <dt>Long products</dt><dd>Bars, rods and sections, mostly for construction.</dd>
+    <dt>Flat products</dt><dd>Coils, sheets and plates, used in manufacturing.</dd>
+    <dt>Value-added steel</dt><dd>Grades that earn a premium over commodity steel.</dd>
+    <dt>Crude steel</dt><dd>Steel as first cast, before rolling.</dd>
+    <dt>Finished steel</dt><dd>Rolled products ready for use.</dd>
+    <dt>Import parity price</dt><dd>The landed cost of imported steel, which caps domestic prices.</dd>
+  </dl>
+  <h3>Economics and policy</h3><dl>
+    <dt>Spread</dt><dd>Steel price minus raw-material cost per tonne.</dd>
+    <dt>EBITDA per tonne</dt><dd>The industry's core profitability measure.</dd>
+    <dt>Utilisation</dt><dd>Output as a share of capacity; blast furnaces must run near full.</dd>
+    <dt>Captive mine</dt><dd>A mine owned by the steel maker.</dd>
+    <dt>Safeguard duty</dt><dd>A temporary tariff imposed when imports surge.</dd>
+    <dt>Anti-dumping duty</dt><dd>A duty on imports sold below fair value.</dd>
+    <dt>Minimum import price</dt><dd>A price floor for imports, used in India in 2016.</dd>
+    <dt>DGTR</dt><dd>The Directorate General of Trade Remedies, which investigates import surges.</dd>
+    <dt>National Steel Policy</dt><dd>The plan targeting 300 mt of capacity by 2030-31.</dd>
+    <dt>Green Steel Taxonomy</dt><dd>India's 2024 star-rating system for steel by carbon intensity.</dd>
+    <dt>CBAM</dt><dd>Europe's carbon border charge on imported steel from 2026.</dd>
+    <dt>Insolvency resolution</dt><dd>The process that transferred Essar, Bhushan and Monnet to new owners.</dd>
+    <dt>Integrated producer</dt><dd>A mill that runs the whole chain from ore to rolled steel.</dd>
+    <dt>Secondary producer</dt><dd>A smaller maker that melts sponge iron or scrap.</dd>
+    <dt>Re-roller</dt><dd>A mill that buys semi-finished steel and rolls it into products.</dd>
+    <dt>Merchant pellet plant</dt><dd>A pellet maker that sells to others rather than to its own furnaces.</dd>
+    <dt>Conversion cost</dt><dd>Everything besides raw materials needed to turn ore into steel.</dd>
+    <dt>Blast furnace relining</dt><dd>Periodic rebuilding of a furnace's lining, which halts output for months.</dd>
+    <dt>Scrap</dt><dd>Recycled steel, the main feed for electric furnaces.</dd>
+    <dt>Captive jetty</dt><dd>A port berth owned by a plant to land coal and ship steel.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What are the two routes to making steel?</summary><p>The blast furnace route from ore and coke, and the electric route melting scrap or sponge iron.</p></details>
+  <details class="q"><summary>2. What is the spread, and why does it matter more than volume?</summary><p>Steel price minus raw-material cost per tonne; mills already run near full capacity, so profit moves with the spread.</p></details>
+  <details class="q"><summary>3. What is the safeguard duty schedule?</summary><p>12% from April 2025, 11.5% from April 2026 and 11% from April 2027, with imports above $675/t CIF exempt.</p></details>
+  <details class="q"><summary>4. What happened to imports after it was imposed?</summary><p>Rolled-steel imports fell 38.7% year on year in the first half of FY26 to 3.04 mt.</p></details>
+  <details class="q"><summary>5. Why did Jindal Steel's profit fall 44% while volumes rose 15%?</summary><p>Maintenance shutdowns, margin pressure and higher finance costs.</p></details>
+  <details class="q"><summary>6. What is India's biggest imported input?</summary><p>Coking coal — about 82 mt in 2026, forecast near $190 a tonne.</p></details>
+  <details class="q"><summary>7. What is the national capacity target?</summary><p>300 mt of capacity and 255 mt of production by 2030-31.</p></details>
+  <details class="q"><summary>8. Which months have worked best for these stocks?</summary><p>April and December, each beating the Nifty in 12 of 15 years; May is the weakest.</p></details>
+  <details class="q"><summary>9. What is Tata Steel's European problem?</summary><p>The UK lost ₹340 cr in Q1 FY27 and the Dutch green-steel project is being reassessed amid high energy costs and emissions rules.</p></details>
+  <details class="q"><summary>10. What does the Green Steel Taxonomy measure?</summary><p>Carbon intensity per tonne: five stars below 1.6 t CO₂e, four stars 1.6–2.0, three stars 2.0–2.2.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, 2011 to 18 September 2026, against NSE:NIFTY.</li>
+    <li>JSW Steel: <a href="https://www.business-standard.com/markets/capital-market-news/jsw-steel-s-q1-fy27-crude-steel-production-rises-3-yoy-to-6-59-mnt-126070900438_1.html">Q1 FY27 production</a>; <a href="https://ng.investing.com/news/company-news/jsw-steel-q1-fy27-slides-deleveraging-accelerates-capacity-targets-62mt-93CH-2605346">Q1 FY27 slides and capacity target</a>; <a href="https://businessupturn.com/business/corporates/jsw-steel-q1-fy27-crude-steel-production-rises-3-yoy-to-6-59-million-tonnes-india-operations-hit-6-35-mt/">India operations</a>.</li>
+    <li>Tata Steel: <a href="https://scanx.trade/stock-market-news/companies/tata-steel-q1-results-net-profit-rises-29-yoy-to-4-536-crore/46974154">Q1 FY27 results</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Tata-Steel-Q1FY27-India-Operations-Shine-Amidst-European-Setbacks/6a703f9e10bce1fd20396bb7">India and Europe split</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/tata-steel-ltd-fra-hwhg-010255378.html">earnings call highlights</a>.</li>
+    <li>Jindal Steel and SAIL: <a href="https://www.equitybulls.com/category.php?id=373512">Jindal Steel Q1 FY27</a>; <a href="https://www.sahi.com/blogs/jindal-steel-q1-fy27-results">revenue and profit</a>; <a href="https://www.sahi.com/news/jindal-steel-targets-15-6-million-tonnes-production-with-fy27-sales-forecast-of-10-5-11-million-tonnes-3200-PE1_COR">guidance and Angul ramp</a>; <a href="https://www.sail.co.in/en/sail-news/sail-declares-financial-results-q1-fy27-posts-strong-profit">SAIL Q1 FY27</a>.</li>
+    <li>Policy and prices: <a href="https://www.business-standard.com/economy/news/govt-imposes-up-to-12-safeguard-duty-on-steel-flat-product-imports-125123100448_1.html">safeguard duty</a>; <a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2770881-india-extends-import-duties-on-flat-steel-to-3-years">three-year extension and thresholds</a>; <a href="https://www.whalesbook.com/news/English/industrial-goodsservices/India-Steel-Rides-Safeguard-Duties-to-Strong-Domestic-Growth/69afb8215b1fc118c08d8a12">import decline and HRC prices</a>; <a href="https://www.steelorbis.com/steel-news/latest-news/bmi-raises-2026-coking-coal-price-forecast-to-190mt-on-strong-india-and-china-import-demand-1428237.htm">coking coal forecast</a>; <a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2778953-india-s-steel-expansion-to-drive-coking-coal-demand">coking coal demand</a>; <a href="https://www.impriindia.com/insights/policy-update/green-steel-low-carbon-industrial/">Green Steel Taxonomy</a>.</li>
+    <li>Others: <a href="https://www.tipranks.com/news/company-announcements/lloyds-metals-energy-posts-fy26-results-plans-rs-700-crore-ncd-issue-and-png-mining-push">Lloyds Metals FY26</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Lloyds-Metals-Reports-Record-FY26-Output-DRI-Production-Jumps-57percent/69ccbaf73f30946a723dc3d1">Lloyds output</a>; <a href="https://www.ibef.org/industry/steel">India steel production and consumption</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -1.3}, {"y": 2013, "v": -14.1}, {"y": 2014, "v": 8.9}, {"y": 2015, "v": -9.7}, {"y": 2016, "v": 0.9}, {"y": 2017, "v": 9.4}, {"y": 2018, "v": -6.6}, {"y": 2019, "v": 6.2}, {"y": 2020, "v": -17.2}, {"y": 2021, "v": 26.3}, {"y": 2022, "v": 6.8}, {"y": 2023, "v": -5.1}, {"y": 2024, "v": -0.4}, {"y": 2025, "v": 2.2}, {"y": 2026, "v": 2.7}], "AprJul": [{"y": 2012, "v": -3.5}, {"y": 2013, "v": -25.6}, {"y": 2014, "v": 42.6}, {"y": 2015, "v": -14.3}, {"y": 2016, "v": 25.6}, {"y": 2017, "v": 11.0}, {"y": 2018, "v": -19.2}, {"y": 2019, "v": -20.0}, {"y": 2020, "v": 27.7}, {"y": 2021, "v": 56.0}, {"y": 2022, "v": -9.8}, {"y": 2023, "v": 30.9}, {"y": 2024, "v": 7.6}, {"y": 2025, "v": 4.4}, {"y": 2026, "v": 11.3}], "AugSep": [{"y": 2012, "v": -5.3}, {"y": 2013, "v": 13.5}, {"y": 2014, "v": -17.8}, {"y": 2015, "v": -2.5}, {"y": 2016, "v": 4.2}, {"y": 2017, "v": 1.2}, {"y": 2018, "v": 5.7}, {"y": 2019, "v": -12.1}, {"y": 2020, "v": 11.2}, {"y": 2021, "v": -25.9}, {"y": 2022, "v": -1.1}, {"y": 2023, "v": 20.3}, {"y": 2024, "v": -1.0}, {"y": 2025, "v": 2.9}], "OctDec": [{"y": 2012, "v": -3.5}, {"y": 2013, "v": 8.7}, {"y": 2014, "v": -6.8}, {"y": 2015, "v": 24.5}, {"y": 2016, "v": 6.3}, {"y": 2017, "v": 41.0}, {"y": 2018, "v": -12.1}, {"y": 2019, "v": 25.4}, {"y": 2020, "v": 27.6}, {"y": 2021, "v": -6.2}, {"y": 2022, "v": 17.8}, {"y": 2023, "v": 6.5}, {"y": 2024, "v": -0.8}, {"y": 2025, "v": -6.8}], "SepNov": [{"y": 2012, "v": -7.1}, {"y": 2013, "v": 6.4}, {"y": 2014, "v": -13.1}, {"y": 2015, "v": 2.1}, {"y": 2016, "v": 11.8}, {"y": 2017, "v": 18.5}, {"y": 2018, "v": -13.5}, {"y": 2019, "v": 14.5}, {"y": 2020, "v": 10.6}, {"y": 2021, "v": -13.3}, {"y": 2022, "v": -1.9}, {"y": 2023, "v": 9.2}, {"y": 2024, "v": 0.5}, {"y": 2025, "v": -7.2}], "JanMar": [{"y": 2012, "v": 17.0}, {"y": 2013, "v": -20.1}, {"y": 2014, "v": 0.3}, {"y": 2015, "v": -19.7}, {"y": 2016, "v": -5.0}, {"y": 2017, "v": 32.3}, {"y": 2018, "v": -7.9}, {"y": 2019, "v": -6.7}, {"y": 2020, "v": -17.4}, {"y": 2021, "v": 24.2}, {"y": 2022, "v": 7.5}, {"y": 2023, "v": 2.7}, {"y": 2024, "v": 9.7}, {"y": 2025, "v": -5.1}, {"y": 2026, "v": 2.3}]}, "my": {"1": {"2012": 18.4, "2013": -7.0, "2014": -7.0, "2015": -10.7, "2016": -5.7, "2017": 19.3, "2018": -1.1, "2019": -11.4, "2020": -0.9, "2021": -1.1, "2022": 0.7, "2023": 8.3, "2024": 9.9, "2025": -7.1, "2026": -0.4}, "2": {"2012": 3.5, "2013": -10.5, "2014": 1.6, "2015": 0.3, "2016": -4.0, "2017": 5.1, "2018": 3.6, "2019": 4.1, "2020": -6.5, "2021": 13.2, "2022": 2.8, "2023": -6.5, "2024": 1.4, "2025": -0.2, "2026": 6.1}, "3": {"2012": -4.5, "2013": -4.4, "2014": 6.9, "2015": -9.8, "2016": 6.0, "2017": 3.8, "2018": -10.2, "2019": 1.7, "2020": -14.0, "2021": 10.8, "2022": 3.8, "2023": 1.6, "2024": -1.8, "2025": 2.6, "2026": -2.5}, "4": {"2012": 4.0, "2013": -5.7, "2014": 12.9, "2015": 9.3, "2016": 12.6, "2017": 0.9, "2018": 7.1, "2019": -1.7, "2020": 7.3, "2021": 33.9, "2022": 11.6, "2023": 2.1, "2024": 12.3, "2025": -4.3, "2026": 19.4}, "5": {"2012": -2.5, "2013": -5.9, "2014": 20.1, "2015": -10.3, "2016": -8.1, "2017": -5.4, "2018": -10.5, "2019": -4.2, "2020": 1.4, "2021": -6.4, "2022": -16.0, "2023": 2.3, "2024": -1.2, "2025": 4.7, "2026": 4.3}, "6": {"2012": -3.7, "2013": -5.1, "2014": 8.3, "2015": -10.3, "2016": 6.3, "2017": 4.3, "2018": -7.1, "2019": -7.0, "2020": 18.4, "2021": 5.3, "2022": -6.2, "2023": 6.8, "2024": -1.6, "2025": 2.4, "2026": -7.7}, "7": {"2011": 0.2, "2012": -1.4, "2013": -11.3, "2014": -5.3, "2015": -3.1, "2016": 12.3, "2017": 10.7, "2018": -6.8, "2019": -9.2, "2020": -4.1, "2021": 14.8, "2022": 3.4, "2023": 14.8, "2024": -2.3, "2025": 1.5, "2026": -3.1}, "8": {"2011": -8.0, "2012": -7.4, "2013": 9.0, "2014": -11.4, "2015": 1.7, "2016": 3.3, "2017": 2.6, "2018": 8.4, "2019": -13.5, "2020": 16.5, "2021": -20.3, "2022": 1.4, "2023": 12.3, "2024": -6.4, "2025": -1.7, "2026": 7.9}, "9": {"2011": -6.5, "2012": 2.9, "2013": 3.9, "2014": -7.0, "2015": -4.4, "2016": 0.9, "2017": -1.3, "2018": -2.0, "2019": 2.2, "2020": -4.3, "2021": -5.7, "2022": -2.3, "2023": 7.0, "2024": 5.8, "2025": 4.8}, "10": {"2011": -5.9, "2012": -4.6, "2013": -0.8, "2014": 1.8, "2015": 7.9, "2016": 16.1, "2017": 18.9, "2018": -0.2, "2019": -1.7, "2020": 0.8, "2021": 1.7, "2022": -3.0, "2023": 0.9, "2024": -4.0, "2025": -0.1}, "11": {"2011": -9.5, "2012": -4.5, "2013": 2.6, "2014": -7.4, "2015": -0.9, "2016": -3.6, "2017": 1.3, "2018": -13.0, "2019": 12.9, "2020": 14.9, "2021": -9.5, "2022": 3.7, "2023": 0.8, "2024": -0.6, "2025": -11.1}, "12": {"2011": -10.1, "2012": 6.0, "2013": 6.0, "2014": -1.0, "2015": 16.6, "2016": -4.5, "2017": 16.1, "2018": 0.5, "2019": 11.9, "2020": 7.5, "2021": 2.3, "2022": 15.6, "2023": 4.3, "2024": 4.1, "2025": 5.2}}, "basket": ["JSW Steel Limited", "Tata Steel Limited", "Jindal Steel Limited", "Steel Authority of India Limited", "Godawari Power & Ispat Ltd.", "Sunflag Iron & Steel Co. Ltd.", "Jai Balaji Industries Limited", "Kalyani Steels Ltd", "Vardhman Special Steels Limited", "Prakash Industries Limited"], "nbasket": 10, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.0, "rel": 0.3, "hit": 5, "n": 15}, {"m": 2, "abs": -0.2, "rel": 0.9, "hit": 10, "n": 15}, {"m": 3, "abs": -0.9, "rel": -0.7, "hit": 8, "n": 15}, {"m": 4, "abs": 10.7, "rel": 8.1, "hit": 12, "n": 15}, {"m": 5, "abs": -1.4, "rel": -2.5, "hit": 5, "n": 15}, {"m": 6, "abs": 2.0, "rel": 0.2, "hit": 7, "n": 15}, {"m": 7, "abs": 2.6, "rel": 0.7, "hit": 7, "n": 16}, {"m": 8, "abs": -0.6, "rel": -0.4, "hit": 9, "n": 16}, {"m": 9, "abs": 0.2, "rel": -0.4, "hit": 7, "n": 15}, {"m": 10, "abs": 3.9, "rel": 1.8, "hit": 7, "n": 15}, {"m": 11, "abs": -0.7, "rel": -1.6, "hit": 6, "n": 15}, {"m": 12, "abs": 6.1, "rel": 5.4, "hit": 12, "n": 15}], "cy": [{"y": 2012, "b": 30.0, "n": 27.7, "rel": 2.3, "partial": false}, {"y": 2013, "b": -22.7, "n": 6.8, "rel": -29.5, "partial": false}, {"y": 2014, "b": 39.5, "n": 31.4, "rel": 8.2, "partial": false}, {"y": 2015, "b": -19.4, "n": -4.1, "rel": -15.3, "partial": false}, {"y": 2016, "b": 33.4, "n": 3.0, "rel": 30.4, "partial": false}, {"y": 2017, "b": 155.0, "n": 28.6, "rel": 126.3, "partial": false}, {"y": 2018, "b": -27.0, "n": 3.2, "rel": -30.2, "partial": false}, {"y": 2019, "b": -9.1, "n": 12.0, "rel": -21.2, "partial": false}, {"y": 2020, "b": 42.8, "n": 14.9, "rel": 27.9, "partial": false}, {"y": 2021, "b": 67.3, "n": 24.1, "rel": 43.2, "partial": false}, {"y": 2022, "b": 16.6, "n": 4.3, "rel": 12.3, "partial": false}, {"y": 2023, "b": 100.2, "n": 20.0, "rel": 80.1, "partial": false}, {"y": 2024, "b": 24.7, "n": 8.8, "rel": 15.9, "partial": false}, {"y": 2025, "b": 5.2, "n": 10.5, "rel": -5.3, "partial": false}, {"y": 2026, "b": 10.6, "n": -10.7, "rel": 21.3, "partial": true}], "dd": [{"co": "JSW Steel", "peak": "Oct 2025", "fp": 5, "y1": 14}, {"co": "Tata Steel", "peak": "Oct 2025", "fp": 0, "y1": 8}, {"co": "Jindal Steel", "peak": "Nov 2025", "fp": 3, "y1": 7}, {"co": "Lloyds Metals & Energy", "peak": "Jun 2025", "fp": 15, "y1": 37}, {"co": "Steel Authority of India", "peak": "May 2024", "fp": 2, "y1": 33}, {"co": "KIOCL", "peak": "Oct 2025", "fp": -46, "y1": -22}, {"co": "Godawari Power & Ispat", "peak": "Oct 2025", "fp": -18, "y1": -10}, {"co": "Gallantt Ispat", "peak": "Aug 2025", "fp": -30, "y1": -18}, {"co": "NMDC Steel", "peak": "Feb 2024", "fp": -40, "y1": -6}, {"co": "Jayaswal Neco Industries", "peak": "Dec 2025", "fp": -4, "y1": 21}, {"co": "Kirloskar Ferrous Industries", "peak": "Aug 2023", "fp": -9, "y1": 6}, {"co": "Sunflag Iron & Steel Co.", "peak": "Jun 2025", "fp": 9, "y1": 31}, {"co": "Jai Balaji Industries", "peak": "Feb 2024", "fp": -75, "y1": -36}, {"co": "Pitti Engineering", "peak": "Dec 2024", "fp": -21, "y1": 19}, {"co": "Kalyani Steels", "peak": "Dec 2024", "fp": -24, "y1": 17}, {"co": "Vardhman Special Steels", "peak": "May 2024", "fp": 21, "y1": 51}, {"co": "Pennar Industries", "peak": "Nov 2025", "fp": -38, "y1": -30}], "win": {"FebMar": {"mean": 0.6, "median": 0.9, "hit": 8, "n": 15}, "AprJul": {"mean": 8.3, "median": 7.6, "hit": 9, "n": 15}, "AugSep": {"mean": -0.5, "median": 0.1, "hit": 7, "n": 14}, "OctDec": {"mean": 8.7, "median": 6.4, "hit": 8, "n": 14}, "SepNov": {"mean": 1.2, "median": 1.3, "hit": 8, "n": 14}, "JanMar": {"mean": 0.9, "median": 0.3, "hit": 8, "n": 15}}, "ytd": {"b": 10.6, "n": -10.7}, "notes": {"2012": "+30.0% against +27.7%. Godawari +64%, Prakash +63%, Kalyani Steels +62%; Jindal Steel flat.", "2013": "\u221222.7% against +6.8%. The rupee crisis and the coal-block scandal: Jai Balaji \u221259%, Vardhman Special \u221253%, Jindal Steel \u221242%.", "2014": "+39.5% against +31.4%. Kalyani Steels +175% and Vardhman +148%, but Jindal Steel fell 42% after the Supreme Court cancelled coal blocks.", "2015": "\u221219.4% against \u22124.1%. Chinese dumping at its worst: SAIL \u221241%, Godawari \u221246%, Jai Balaji \u221249%.", "2016": "+33.4% against +3.0%. A minimum import price and anti-dumping duties turned the market: Kalyani +66%, JSW +58%.", "2017": "+155.0% against +28.6%. The great upcycle: Godawari +483%, Prakash +334%, Jindal Steel +196%.", "2018": "\u221227.0% against +3.2%. Steel prices peaked and the small-cap crash took the rest; only JSW rose.", "2019": "\u22129.1% against +12.0%. A global slowdown and weak spreads; insolvency resolutions reshuffled ownership.", "2020": "+42.8% against +14.9%. Post-lockdown Chinese stimulus lifted prices: Godawari +105%, SAIL +73%.", "2021": "+67.3% against +24.1%. Record spreads and export demand: Jai Balaji +189%, Godawari +134%.", "2022": "+16.6% against +4.3%. A 15% export duty from May to November cut domestic prices before a year-end recovery.", "2023": "+100.2% against +20.0%. Small-cap steel mania: Jai Balaji +1,293%, Prakash +206%; the majors rose 15\u201329%.", "2024": "+24.7% against +8.8%. Chinese imports surged and a safeguard investigation began; Kalyani Steels +141%.", "2025": "+5.2% against +10.5%. The 12% safeguard duty arrived in April; Jai Balaji gave back 60% of its run.", "2026": "+10.6% against a Nifty \u221210.7%. Protected domestic prices and record volumes: Vardhman +42%, Sunflag +27%, Kalyani +24%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

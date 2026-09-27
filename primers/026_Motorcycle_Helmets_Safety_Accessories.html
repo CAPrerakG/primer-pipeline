@@ -1,0 +1,605 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motorcycle Helmets and Safety Accessories Primer</title>
+<meta name="description" content="Industry 26 of 278: helmets and rider safety gear. The January 2026 rule putting two BIS-certified helmets on every new two-wheeler, the shift from a roadside trade to a certified industry, one listed pure play (Studds) and why its first listed year was a margin squeeze rather than a windfall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Motorcycle Helmets &amp; Safety Accessories · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">How the rules were built</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 26 of 278 · Auto family</div>
+  <h1>Motorcycle Helmets &amp; Safety Accessories</h1>
+  <p class="lede">A ₹1,000 product that decides whether someone survives a fall at 40 km/h. India puts more than two crore two-wheelers on the road every year, two-wheeler riders account for roughly 44% of all road deaths, and from January 2026 every new two-wheeler must be sold with two certified helmets. This is a small industry sitting on top of an enormous, newly-compulsory demand pool — with exactly one listed pure play to express it.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 1 listed (Studds Accessories)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Auto Dealerships</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">2 helmets</div><div class="l">Required with every new two-wheeler sold from January 2026, both BIS-certified — rider and pillion</div></div>
+    <div class="stat"><div class="n">~44%</div><div class="l">Share of India's road deaths that are two-wheeler users; pillion riders are about 30% of two-wheeler deaths</div></div>
+    <div class="stat"><div class="n">11.5%</div><div class="l">Studds' Q1 FY27 EBITDA margin, down 880 basis points, as styrene costs outran price increases</div></div>
+    <div class="stat"><div class="n">&lt;10%</div><div class="l">Share of India's 200-plus helmet makers estimated to comply with safety standards, on a 2021 count</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A regulated consumer product with one listed owner</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A helmet is a hard plastic shell with a thick layer of special foam inside. If your head hits the road, the shell spreads the blow over a wide area and the foam squashes slowly so your brain does not get shaken. The squashing is the whole trick: a helmet is designed to be destroyed once, so that you are not. India has a government test that a helmet must pass before it can be sold, and helmets that pass get an ISI mark. Many helmets sold at traffic lights never took the test — they look like helmets and are really just plastic hats. From January 2026 every new motorbike or scooter has to come with two real, tested helmets: one for the rider and one for the person sitting behind.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is a regulatory-transition story, not a growth story you can buy cheaply today.</p>
+    <ul>
+      <li><b>The rule:</b> from January 2026, every new two-wheeler must be supplied with two BIS-certified helmets, alongside mandatory ABS (see 018). That converts a discretionary purchase into a compulsory one at the point of sale.</li>
+      <li><b>The prize:</b> more than 30% of the domestic market has been unorganised and largely uncertified. Rules that are actually enforced move that volume to certified makers.</li>
+      <li><b>The only listed pure play</b> is Studds Accessories — India's largest helmet maker by revenue and, by volume, the world's largest — which listed in November 2025.</li>
+      <li><b>The catch:</b> its first listed year has been a squeeze, not a windfall. Q1 FY27 revenue rose 13.7% but profit fell 39% and EBITDA margin dropped 880 basis points to 11.5%, because styrene-based raw materials rose faster than prices could be passed on. The stock is down 24% this year.</li>
+    </ul>
+    <p>The interesting question is not whether demand arrives — the rule guarantees it — but whether a plastics processor selling a ₹1,000 product can hold a consumer-brand margin while it does.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Helmets, and everything else a rider wears</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Typical price</th><th>Who buys it</th></tr></thead><tbody>
+    <tr><td>Half helmet</td><td>Covers the top of the head only; the cheapest certified option</td><td>₹500–900</td><td>Price-driven buyers, fleet and delivery riders</td></tr>
+    <tr><td>Open-face helmet</td><td>Covers the head and ears with a visor, leaves the chin exposed</td><td>₹900–1,800</td><td>Commuters, scooter riders</td></tr>
+    <tr><td>Full-face helmet</td><td>Adds a fixed chin bar; the safest mainstream design</td><td>₹1,500–5,000</td><td>Motorcycle commuters and enthusiasts</td></tr>
+    <tr><td>Modular (flip-up) helmet</td><td>Full face with a chin bar that lifts</td><td>₹3,000–8,000</td><td>Tourers</td></tr>
+    <tr><td>Off-road / motocross</td><td>Peak, extended chin bar, goggle-compatible</td><td>₹3,000–15,000</td><td>Adventure and off-road riders</td></tr>
+    <tr><td>Premium and composite</td><td>Carbon or fibreglass shells, ECE 22.06-rated, comms-ready</td><td>₹10,000–60,000</td><td>Enthusiasts; largely imported brands</td></tr>
+    <tr><td>Riding gear and accessories</td><td>Gloves, jackets, knee and elbow guards, rain suits, locks, luggage</td><td>₹500–20,000</td><td>Enthusiasts and tourers; a small but higher-margin adjacency</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A helmet is a crumple zone for the head. A car protects you by destroying its own bonnet slowly over a metre; a helmet has about two centimetres of foam to do the same job, which is why the foam density and the shell's stiffness matter far more than how the helmet looks. And like a crumple zone, it works once — a helmet that has taken a real impact should be replaced even if it looks fine.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The ₹600 helmet sold at a traffic signal is usually a thin shell with almost no energy-absorbing liner — a fine-avoidance device rather than safety equipment. The helmet that now comes in the box with a new Splendor is a certified one, because the dealer must supply it. The ₹35,000 carbon helmet on a weekend rider's head is an imported product this industry does not yet compete for.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a barrel of oil to a certified shell</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Polymers</h4><div class="an">The raw plastic</div>ABS and polystyrene from styrene; polycarbonate for visors; EPS beads for the liner.<div class="who">Petrochemical producers, largely imported grades</div><div class="m">Crude-linked; the cost that broke 2026</div></div>
+    <div class="stage"><div class="no">02</div><h4>Shell moulding</h4><div class="an">The hard hat</div>Injection moulding for thermoplastic shells; hand lay-up for composite shells.<div class="who">Studds, Steelbird, Vega and the unorganised trade</div><div class="m">Tooling-heavy; scale matters</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Liner and assembly</h4><div class="an">The part that saves you</div>Expanded polystyrene liner moulded to density, comfort padding, retention strap, visor, vents.<div class="who">Same makers, in-house</div><div class="m">Where a real helmet differs from a plastic hat</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Certification</h4><div class="an">The test</div>Impact absorption, penetration, strap strength and visor tests to IS 4151; BIS licence and ISI mark.<div class="who">BIS-recognised labs</div><div class="m">The barrier that converts a trade into an industry</div></div>
+    <div class="stage"><div class="no">05</div><h4>Channels</h4><div class="an">Getting sold</div>Dealer fitment with new vehicles, standalone retail, accessory shops, e-commerce, exports.<div class="who">Two-wheeler dealers (see 027), retailers, marketplaces</div><div class="m">The January 2026 rule shifts volume to the dealer channel</div></div>
+    <div class="stage"><div class="no">06</div><h4>Enforcement</h4><div class="an">The demand switch</div>Traffic policing, automated challans, state drives.<div class="who">State police and transport departments</div><div class="m">Replacement demand is a policing function</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Polymers:</b> the hard plastic starts as a chemical made from oil, so when oil-based chemicals get expensive, helmets get expensive to make.</li>
+    <li><b>Shell:</b> hot plastic is squirted into a mould shaped like half a head and cooled.</li>
+    <li><b>Liner:</b> a thick layer of foam — the same family as the white foam in a packing box, but much denser — is glued inside. That foam does the actual saving.</li>
+    <li><b>Certification:</b> sample helmets are dropped on anvils and hit with a spike in a laboratory. If they pass, the maker gets a licence to print the ISI mark.</li>
+    <li><b>Channels:</b> helmets reach riders through bike showrooms, shops and the internet. The new rule means the showroom now hands you two.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Two structural facts define this industry. First, it is a <b>polymer converter wearing a consumer badge</b>: roughly the cost structure of a plastics processor with the distribution of a branded good, which is why a styrene spike can take 880 basis points of margin out in a single quarter. Second, its demand is <b>manufactured by regulation and sustained by enforcement</b>. A rule that is passed but not policed moves nothing; a rule embedded at the point of sale — as the two-helmet rule is — moves volume the day it starts. Judge this sector by the enforcement mechanism, not by the announcement.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>One listed company, three real competitors, and a very large informal trade</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>Status</th></tr></thead><tbody>
+    <tr><td><b>Studds Accessories</b> (~₹1,590 cr, listed)</td><td>India's largest two-wheeler helmet maker by revenue and, by volume, the world's largest. Brands: Studds (mass) and SMK (premium). Roughly 74 lakh helmets sold in FY25 against installed capacity of about 9.04 million units, with over 240 designs and more than 19,000 stock-keeping units as of August 2025.</td><td>Listed 7 November 2025 at ₹565 against a ₹585 issue price, after a ₹455.5 cr IPO subscribed 73.25 times. Down about 24% in 2026 and 29% from its listing-month peak.</td></tr>
+    <tr><td>Steelbird Hi-Tech</td><td>A long-established competitor across mass and mid-market helmets, vocal in the policy debate.</td><td>Unlisted</td></tr>
+    <tr><td>Vega Auto Accessories</td><td>Strong distribution in India and exports to markets including Thailand and the UAE.</td><td>Unlisted</td></tr>
+    <tr><td>Global premium brands</td><td>Imported enthusiast helmets at ₹10,000 and above.</td><td>Imports; not an Indian listed exposure</td></tr>
+    <tr><td>The unorganised trade</td><td>More than 200 helmet makers were counted in 2021, of which fewer than 10% were estimated to meet safety standards; the unorganised segment has been put at more than 30% of the domestic market.</td><td>Informal; the volume pool the rules are aimed at</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Read this before using the section</span><p>This is a one-company section, the second in the Auto family after 021. The consequences are practical: there is no peer group to compare multiples against, no basket to test seasonality on, and no way to separate company-specific news from industry news in the price. Anything described here as "the industry" comes from regulation, market studies and competitors' public statements — not from a set of listed comparables. If a screen ever shows this section's "sector return", it is showing one stock's return.</p></div>
+  <h3>How the market size is quoted, and why the numbers disagree</h3>
+  <p>Published estimates of the Indian helmet market vary by an order of magnitude. One widely-quoted study puts the two-wheeler helmet market at about US$2.25 bn in 2025, growing to US$3.82 bn by 2034 at roughly 6% a year. An industry article describing the unorganised sector's share puts the domestic market at about ₹2,500 cr. Both cannot be describing the same thing. A sanity check helps: Studds, the largest maker by revenue, reported Q1 FY27 revenue of ₹169.7 cr — an annual run-rate of roughly ₹650–700 cr. A market in which the leader holds a large share and the whole organised trade is a few thousand crore is consistent with the ₹2,500 cr figure for branded, certified helmets; the dollar figure must be counting the entire roadside trade, accessories and replacement at retail prices. Use the smaller number when sizing a listed company's opportunity, and the larger one only when discussing the total volume pool that regulation might formalise.</p>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Volume, mix and the pass-through lag</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>How it works</th><th>Evidence from 2026</th></tr></thead><tbody>
+    <tr><td>Volume</td><td>Units sold; about 74 lakh helmets for Studds in FY25 against 9.04 million units of capacity</td><td>Another 1.5 million units a year of capacity is due to start in October 2026</td></tr>
+    <tr><td>Mix</td><td>Mass Studds-branded helmets versus premium SMK; accessories on top</td><td>Premiumisation is the margin story; the two-helmet rule pushes volume toward the entry end</td></tr>
+    <tr><td>Raw material</td><td>Styrene-based polymers, polycarbonate, EPS — all crude-linked</td><td>The direct cause of the Q1 FY27 margin fall</td></tr>
+    <tr><td>Pricing</td><td>List-price increases through a fragmented retail channel</td><td>A roughly 9% increase was taken; about 5% was realised in Q1 FY27, the rest expected from Q2</td></tr>
+    <tr><td>Operating leverage</td><td>Tooling and moulding are fixed; each extra unit carries little incremental cost</td><td>Management guides 14–15% EBITDA margin in Q2 FY27 and 18–20% on a Q4 FY27 run-rate, if commodities stay stable</td></tr>
+  </tbody></table></div>
+  <h3>The arithmetic of the quarter</h3>
+  <p>Q1 FY27 is worth walking through, because it is the clearest lesson this industry has offered a public investor. Revenue rose 13.7% to ₹169.7 cr. EBITDA fell 35.3% to ₹19.6 cr and the margin fell 880 basis points to 11.5%. Consolidated net profit fell 39.3% to ₹12.3 cr. Nothing went wrong with demand: the cause was styrene-linked input costs, incremental wage costs, and the lag between announcing a price increase and collecting it. A 9% increase that realises 5% in the quarter leaves the balance to arrive later — but the cost arrived immediately. That gap is the entire result.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>It is the tyre problem (025) in miniature, with one difference: a tyre maker sells to fleet buyers who accept indexed prices, while a helmet maker sells through thousands of small shops where the printed price on the box is sticky. The smaller and more fragmented the channel, the longer the lag — and the lag is the loss.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Use</th><th>Exposure</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>ABS and polystyrene</td><td>The outer shell</td><td>The largest single cost</td><td>Styrene-based prices elevated; the stated cause of the margin fall</td></tr>
+    <tr><td>Expanded polystyrene (EPS)</td><td>The energy-absorbing liner</td><td>Density and moulding quality decide certification</td><td>Crude-linked</td></tr>
+    <tr><td>Polycarbonate</td><td>Visors</td><td>Mostly imported grades</td><td>Currency and import-price sensitive</td></tr>
+    <tr><td>Textiles and foam</td><td>Comfort padding, straps</td><td>Modest</td><td>Stable</td></tr>
+    <tr><td>Labour</td><td>Assembly and finishing</td><td>Meaningful; helmet assembly is hand-intensive</td><td>Wage increases cited in Q1 FY27</td></tr>
+    <tr><td>Tooling</td><td>Moulds for each design</td><td>Fixed cost per SKU; 19,000-plus SKUs is a real working-capital commitment</td><td>Capacity expansion under way</td></tr>
+    <tr><td>Certification capacity</td><td>BIS testing throughput</td><td>A bottleneck if a rule creates a sudden surge in demand for licences</td><td>Watch as the two-helmet rule scales</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Three demand triggers, none of them evenly spread</h2>
+  <ul>
+    <li><b>The festive quarter (roughly September–November):</b> two-wheeler sales peak, and with them the original-equipment helmet channel — now doubled by the two-helmet rule.</li>
+    <li><b>Pre-monsoon (April–June):</b> riders replace worn visors and buy rain gear; the accessories adjacency is at its most seasonal.</li>
+    <li><b>Enforcement drives:</b> state-level campaigns and automated challan systems create sharp, geographically uneven spikes in replacement demand. This is the least predictable and most powerful trigger.</li>
+    <li><b>Rule commencement dates:</b> January 2026 is the clearest example — a single date that changes the attach rate on every new vehicle sold thereafter.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Why this page has no seasonality table</h2>
+  <div><p>There is not enough listed price history for a seasonality test in this industry.</p><p><b>Why there is no table here:</b> this section contains exactly one listed company, and it has been listed since 7 November 2025 — about eleven months. Eleven months cannot produce a seasonal pattern, a cycle or a drawdown history, and any number computed from them would be an artefact. The demand proxy to use instead is the two-wheeler basket in 018: helmet volumes follow two-wheeler volumes with a short lag through the original-equipment channel, and follow enforcement drives in the replacement channel. Revisit this page when there are three or more listed years.</p></div>
+  <h3>The whole listed record, month by month</h3>
+  <p>Studds Accessories has traded since 7 November 2025. This is every month of it — month-end closing price, in rupees:</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Month</th><th class="num">Close (₹)</th><th>What was happening</th></tr></thead><tbody>
+    <tr><td>Nov 2025</td><td class="num">548</td><td>Listed 7 November at ₹565 against a ₹585 issue price, after a 73.25-times subscribed ₹455.5 cr IPO</td></tr>
+    <tr><td>Dec 2025</td><td class="num">539</td><td>Drifting below issue price</td></tr>
+    <tr><td>Jan 2026</td><td class="num">503</td><td>The two-helmet and ABS rules take effect</td></tr>
+    <tr><td>Feb 2026</td><td class="num">520</td><td>A brief recovery</td></tr>
+    <tr><td>Mar 2026</td><td class="num">449</td><td>Broad small-cap weakness</td></tr>
+    <tr><td>Apr 2026</td><td class="num">490</td><td>Rebound</td></tr>
+    <tr><td>May 2026</td><td class="num">458</td><td>—</td></tr>
+    <tr><td>Jun 2026</td><td class="num">469</td><td>Quarter ends with the styrene cost squeeze building</td></tr>
+    <tr><td>Jul 2026</td><td class="num">440</td><td>—</td></tr>
+    <tr><td>Aug 2026</td><td class="num">445</td><td>Q1 FY27 results: profit −39%, margin 11.5%; the stock falls on the print</td></tr>
+    <tr><td>Sep 2026</td><td class="num">407</td><td>To 18 September; −24% for the calendar year, −29% from the listing-month peak</td></tr>
+  </tbody></table></div>
+  <p class="note">Source: TradingView daily closes, month-ends. Eleven observations. No seasonality, cycle or drawdown statistic computed from this series would mean anything, and none is presented here.</p>
+  <div class="box pm"><span class="tag">How to use this</span><p>Until there are several listed years, treat the two-wheeler basket in 018 as the demand proxy and read this industry through three things you can observe directly: monthly two-wheeler sales, the enforcement news flow, and the styrene price. The single most useful thing in the record above is the August result, because it establishes that a regulatory windfall and a margin windfall are different events, and that this business feels its cost line before it feels its rule book.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Two-wheeler sales:</b> the original-equipment channel, now at two helmets per vehicle instead of an informal one (see 018).</li>
+    <li><b>Enforcement intensity:</b> the replacement channel is effectively a policing function; automated challans and state drives move volume.</li>
+    <li><b>The certified-versus-uncertified shift:</b> quality control orders and BIS licensing squeeze the roadside trade, transferring volume to organised makers.</li>
+    <li><b>Styrene and polymer prices:</b> the cost line that decides the quarter.</li>
+    <li><b>Price-increase realisation:</b> how much of an announced increase actually reaches the invoice, and when.</li>
+    <li><b>Premiumisation:</b> the mix shift toward full-face, composite and comms-ready helmets, where value per unit is several times the mass segment.</li>
+    <li><b>Exports:</b> Indian makers ship to Asian, African and Middle Eastern markets; standards conformity (ECE, DOT) decides which markets are open.</li>
+    <li><b>Capacity and utilisation:</b> moulding is fixed-cost heavy, so utilisation swings margin hard in both directions.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="How the rules were built">
+  <p class="eyebrow">10 · How the rules were built</p>
+  <h2>Four decades of regulation, and one decisive year</h2>
+  <p>With no price history to trace, the honest history of this industry is the history of the rules that created it. Each step below expanded the market or raised the barrier to entry.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Step</th><th>What changed</th><th>Effect on the industry</th></tr></thead><tbody>
+    <tr><td>Motor Vehicles Act helmet requirement</td><td>Wearing a helmet made compulsory for riders, with state-level variation in enforcement and exemptions</td><td>Created a mass market, but one served largely by uncertified product</td></tr>
+    <tr><td>IS 4151, the BIS helmet standard</td><td>Defined impact absorption, penetration resistance, strap strength and material thickness tests; revised as IS 4151:2015</td><td>Gave a technical definition of a real helmet</td></tr>
+    <tr><td>2019 amendment to the Motor Vehicles Act</td><td>Raised penalties; a helmetless pillion attracts a ₹1,000 fine</td><td>Made non-compliance expensive enough to change behaviour in policed cities</td></tr>
+    <tr><td>Quality control order on helmets</td><td>BIS certification made mandatory for manufacture and sale</td><td>Marginalised substandard product in the organised channel; the unorganised trade persisted at the roadside</td></tr>
+    <tr><td>January 2026: two certified helmets with every two-wheeler</td><td>Dealers must supply two BIS-certified helmets — rider and pillion — with every new two-wheeler, of any engine size, alongside mandatory ABS</td><td>The single largest demand event in the industry's history: it converts an optional purchase into part of the vehicle's price</td></tr>
+  </tbody></table></div>
+  <h3>Why the pillion helmet is the point</h3>
+  <p>The safety case for the rule is specific rather than general. Two-wheeler users are roughly 44% of India's road deaths, and pillion riders account for close to 30% of two-wheeler fatalities — yet a study in Bengaluru found pillion riders about 2.3 times less likely to be wearing a helmet than the rider in front of them, despite facing the same collision. The rule attacks exactly that gap by putting the second helmet in the box, where the buyer has already paid for it. Industry voices have put the potential reduction in two-wheeler fatalities as high as a quarter; that figure is an industry estimate rather than a measured outcome, and the honest position in September 2026 is that the compliance data needed to test it does not yet exist.</p>
+  <h3>What the record does not yet tell us</h3>
+  <ul>
+    <li><b>Whether the second helmet is worn</b> or simply left at home — the difference between a volume event and a safety outcome.</li>
+    <li><b>Whether dealers bundle quality or minimum-price certified product</b>, which decides whether the rule lifts revenue or only units.</li>
+    <li><b>Whether the roadside trade shrinks</b> or finds a way to supply the dealer channel at the entry price point.</li>
+    <li><b>Whether the demand pull-forward matters:</b> a rider given two helmets in January 2026 will not buy a replacement for several years.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>India makes the volume; Europe and Japan set the standard</h2>
+  <p>The global helmet business splits between a premium tier — Shoei, Arai, AGV, Shark, HJC and similar brands, sold on certification level, weight and comfort — and a very large volume tier serving Asian commuter markets, where India, China and South-East Asia dominate production. India is estimated at roughly 24% of the Asia-Pacific helmet market and among its fastest-growing shares. The competitive question for an Indian maker is which standard it can certify to, because that determines which export markets are open.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Standard</th><th>Where it applies</th><th>Why it matters</th></tr></thead><tbody>
+    <tr><td>IS 4151</td><td>India (ISI mark)</td><td>Mandatory for sale on Indian roads</td></tr>
+    <tr><td>ECE 22.06</td><td>Europe and many markets that adopt it</td><td>The current benchmark; adds rotational-acceleration and multi-impact testing, raising the engineering bar</td></tr>
+    <tr><td>DOT (FMVSS 218)</td><td>United States</td><td>Self-certified by the maker, with audit testing</td></tr>
+    <tr><td>SNELL</td><td>Voluntary, global</td><td>A stricter private standard used by racing and enthusiast buyers</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From leather and cork to thermoplastics (20th century):</b> injection moulding made a certified helmet affordable for a commuter market.</li>
+    <li><b>From impact-only to rotational protection (2020s):</b> ECE 22.06 and slip-plane liner technologies moved the definition of safety beyond the straight-line drop test.</li>
+    <li><b>From imports to Indian volume manufacture:</b> India became a global volume base — Studds is the largest helmet maker in the world by volume — while premium value remained with European and Japanese brands.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Rotational-impact protection:</b> low-friction slip layers between liner and head that reduce twisting forces on the brain; standard on premium helmets and moving down-market.</li>
+    <li><b>Composite shells:</b> fibreglass, aramid and carbon shells that are lighter for the same strength — lighter helmets get worn more.</li>
+    <li><b>Multi-density liners:</b> layered EPS tuned to handle both low and high-energy impacts, an ECE 22.06 requirement in practice.</li>
+    <li><b>Communication and electronics:</b> integrated Bluetooth intercoms and camera mounts, which link this industry to the electronics supply chain in 024.</li>
+    <li><b>Visor technology:</b> anti-fog, photochromic and sun-visor systems, the most common reason a commuter upgrades.</li>
+    <li><b>Traceability and anti-counterfeiting:</b> QR-coded BIS licences and hologram marking, to make a counterfeit ISI mark harder — the single most useful technology for this industry's formalisation.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Two BIS-certified helmets with every new two-wheeler</td><td>In force from January 2026</td><td>Doubles the attach rate at the point of sale; the industry's largest demand event</td></tr>
+    <tr><td>Mandatory ABS on all two-wheelers</td><td>In force from January 2026 (see 018)</td><td>Raises vehicle prices alongside the helmet requirement; the two rules share a commencement date</td></tr>
+    <tr><td>BIS quality control order and IS 4151</td><td>In force</td><td>Makes certification compulsory to manufacture or sell; the main barrier against the unorganised trade</td></tr>
+    <tr><td>Penalties under the Motor Vehicles Act</td><td>₹1,000 for a helmetless pillion since the 2019 amendment</td><td>Drives replacement demand where enforced</td></tr>
+    <tr><td>State enforcement practice</td><td>Highly variable; automated challans spreading</td><td>The real determinant of replacement volume</td></tr>
+    <tr><td>E-commerce listing rules</td><td>Platforms required to sell only certified helmets</td><td>Closes a large channel to uncertified product</td></tr>
+    <tr><td>Export standards conformity</td><td>ECE 22.06 and DOT</td><td>Decides which export markets an Indian maker can enter</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: the rule arrived, the margin did not</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Demand</td><td>Structurally lifted</td><td>The two-helmet rule has been in force since January; Studds' revenue rose 13.7% in Q1 FY27</td></tr>
+    <tr><td>Costs</td><td>The problem</td><td>Styrene-based polymers and incremental wages; EBITDA down 35.3% year on year</td></tr>
+    <tr><td>Pricing</td><td>Catching up</td><td>A ~9% increase taken, ~5% realised in Q1 FY27, the balance guided to flow from Q2</td></tr>
+    <tr><td>Margin</td><td>Guided to recover</td><td>11.5% in Q1 FY27; management guides 14–15% in Q2 and an 18–20% run-rate by Q4 FY27, explicitly conditional on stable commodities</td></tr>
+    <tr><td>Capacity</td><td>Expanding</td><td>1.5 million helmets a year of new capacity due to start in October 2026</td></tr>
+    <tr><td>The stock</td><td>De-rated</td><td>−24% in 2026, −29% from its listing-month peak, below its ₹585 issue price</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The investment case and the quarterly reality have separated, which is the most interesting position a business can be in. The case is intact and improving: a compulsory two-helmet attach rate, an unorganised third of the market under regulatory pressure, new capacity landing in October, and a leader with the scale and SKU depth to supply a dealer channel nationally. What 2026 has established is the bill: this is a polymer converter first, and its margin is decided by styrene and by how fast a price increase moves through thousands of small shops. The guidance to 18–20% by the March quarter is the number to hold management to, and it carries its own explicit condition — stable commodity prices — which is exactly the thing nobody in this chain controls. One listed company and eleven months of history mean position sizing should reflect that this is a single-stock bet on execution, not a diversified exposure to a rule.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Monthly two-wheeler sales</td><td>Monthly (see 018)</td><td>The original-equipment helmet channel, at two units per vehicle</td></tr>
+    <tr><td>Styrene and ABS prices</td><td>Ongoing</td><td>The margin, one quarter ahead</td></tr>
+    <tr><td>Realised versus announced price increase</td><td>Quarterly calls</td><td>The pass-through lag is the whole result</td></tr>
+    <tr><td>EBITDA margin against the 14–15% and 18–20% guideposts</td><td>Quarterly</td><td>A direct test of management's own forecast</td></tr>
+    <tr><td>Commissioning of the 1.5 million-unit expansion</td><td>From October 2026</td><td>Utilisation and operating leverage</td></tr>
+    <tr><td>Enforcement news and challan data</td><td>State-level</td><td>Replacement demand</td></tr>
+    <tr><td>BIS licence counts and enforcement against uncertified product</td><td>Ongoing</td><td>The pace of formalisation</td></tr>
+    <tr><td>Export mix and standards certifications</td><td>Annual report</td><td>Which markets are open</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else this shows up</h2>
+  <ul>
+    <li><b>Two- and three-wheelers</b> (018): the demand driver, and the source of the ABS rule that shares this one's commencement date.</li>
+    <li><b>Auto dealerships</b> (027): the channel that now has to stock and hand over two helmets per vehicle.</li>
+    <li><b>Auto electricals and electronics</b> (024): the comms and camera adjacency in premium helmets.</li>
+    <li><b>Tyres</b> (025): the same lesson in pass-through lag, one order of magnitude larger.</li>
+    <li><b>Petrochemicals and plastics:</b> styrene, ABS and polycarbonate — the actual cost base.</li>
+    <li><b>General insurance:</b> the other commercial party with an interest in helmet compliance.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of volume now comes through the dealer channel because of the two-helmet rule, and at what average realisation compared with retail?</li>
+    <li>Of the roughly 9% price increase, how much is in the invoice today, and what is left to realise?</li>
+    <li>What is the current raw-material cost per helmet, and what is hedged or contracted?</li>
+    <li>What utilisation is the existing 9.04 million-unit capacity running at before the October expansion?</li>
+    <li>What is the premium (SMK) share of revenue, and where is it going?</li>
+    <li>How many SKUs actually earn their tooling cost — is the 19,000-plus SKU count an asset or working capital?</li>
+    <li>What is the export mix by standard (IS, ECE, DOT), and which market is growing?</li>
+    <li>What is the replacement cycle assumption, given a cohort of buyers who received two free helmets in 2026?</li>
+    <li>What specifically has to happen for the 18–20% Q4 FY27 margin run-rate to be met if styrene does not fall?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Volume growth from the dealer channel at falling realisation — the rule filled by the cheapest certified product.</li>
+    <li>A margin guidance repeated but pushed out by a quarter each time.</li>
+    <li>Inventory and receivable days rising with the SKU count.</li>
+    <li>Capacity commissioned into a demand pull-forward.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"The two-helmet rule is a guaranteed windfall."</td><td>It is a guaranteed volume event, not a guaranteed profit event. It began in January 2026; by the June quarter the listed player's profit was down 39% on input costs.</td></tr>
+    <tr><td>"The unorganised sector will disappear."</td><td>Certification has been mandatory for years and the informal trade has been estimated at more than 30% of the market. Enforcement at the roadside, not the rule itself, is what shrinks it.</td></tr>
+    <tr><td>"Helmets are a commodity."</td><td>Partly true on cost, false on demand: brand, fit, visor quality and weight drive repeat purchase, which is why a leader can hold an 18–20% margin ambition that a moulder cannot.</td></tr>
+    <tr><td>"Free helmets with the bike will kill the replacement market."</td><td>They pull demand forward and reset the replacement clock for a cohort. Over a full cycle it is volume-positive; over the next two years it may be mix-negative.</td></tr>
+    <tr><td>"It is a safety stock, so demand is recession-proof."</td><td>Compulsory at purchase, discretionary at replacement. The replacement half moves with enforcement and with household budgets.</td></tr>
+    <tr><td>"One listed company is enough to represent the industry."</td><td>It is the only one, which is not the same thing. There is no peer set to check margins, multiples or claims against, and eleven months of price history supports no statistical inference at all.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. EPS, ECE 22.06" autocomplete="off"><span id="gcount"></span></div>
+  <h3>The product</h3><dl>
+    <dt>Shell</dt><dd>The hard outer layer that spreads an impact over a wide area and resists penetration.</dd>
+    <dt>EPS liner</dt><dd>Expanded polystyrene foam inside the shell; it crushes on impact and absorbs the energy. The part that actually protects.</dd>
+    <dt>Multi-density liner</dt><dd>A liner built from foams of different densities to handle both low and high-energy impacts.</dd>
+    <dt>Comfort padding</dt><dd>The removable cloth-covered foam that sets fit; it is not protective.</dd>
+    <dt>Retention system</dt><dd>The strap and buckle that keep the helmet on; strap strength is a tested parameter.</dd>
+    <dt>D-ring</dt><dd>The double-ring strap fastening used on racing and enthusiast helmets.</dd>
+    <dt>Visor</dt><dd>The clear polycarbonate shield; anti-fog and photochromic versions are common upgrades.</dd>
+    <dt>Full-face helmet</dt><dd>A helmet with a fixed chin bar, the safest mainstream design.</dd>
+    <dt>Open-face helmet</dt><dd>Covers the head but leaves the chin exposed.</dd>
+    <dt>Half helmet</dt><dd>Covers the top of the head only; the entry price point.</dd>
+    <dt>Modular helmet</dt><dd>A full-face helmet with a chin bar that flips up.</dd>
+    <dt>Rotational protection</dt><dd>A low-friction slip layer that reduces twisting forces on the brain in an angled impact.</dd>
+    <dt>Composite shell</dt><dd>Fibreglass, aramid or carbon-fibre shell, lighter than thermoplastic for the same strength.</dd>
+    <dt>Thermoplastic (ABS) shell</dt><dd>An injection-moulded shell; cheaper and the basis of the mass market.</dd>
+    <dt>Single-use protection</dt><dd>The principle that a helmet's liner is spent after one real impact and must be replaced.</dd>
+  </dl>
+  <h3>Standards and regulation</h3><dl>
+    <dt>BIS</dt><dd>The Bureau of Indian Standards, which licenses the ISI mark.</dd>
+    <dt>ISI mark</dt><dd>The certification mark showing a product meets the relevant Indian standard.</dd>
+    <dt>IS 4151</dt><dd>The Indian standard for protective helmets, revised as IS 4151:2015; covers impact absorption, penetration, strap strength and material thickness.</dd>
+    <dt>Quality control order (QCO)</dt><dd>An order making BIS certification mandatory for manufacture, import and sale (see 025).</dd>
+    <dt>ECE 22.06</dt><dd>The current European helmet standard, adding rotational-acceleration and multi-impact testing.</dd>
+    <dt>DOT (FMVSS 218)</dt><dd>The US standard, self-certified by the maker with audit testing.</dd>
+    <dt>SNELL</dt><dd>A stricter voluntary private standard used by racing buyers.</dd>
+    <dt>Penetration test</dt><dd>Dropping a pointed striker onto a fixed helmet to check the shell is not pierced.</dd>
+    <dt>Impact absorption test</dt><dd>Dropping a headform-mounted helmet onto anvils and measuring the acceleration transmitted.</dd>
+    <dt>Challan</dt><dd>A traffic fine; automated challan systems are the main enforcement mechanism driving replacement demand.</dd>
+    <dt>Motor Vehicles Act</dt><dd>The statute requiring helmet use; its 2019 amendment set the ₹1,000 pillion penalty.</dd>
+    <dt>Attach rate</dt><dd>How many helmets are sold per vehicle sold; the rule moved this to two in the dealer channel.</dd>
+  </dl>
+  <h3>Materials and manufacturing</h3><dl>
+    <dt>Styrene</dt><dd>The crude-derived chemical behind ABS and polystyrene; its price decided the 2026 margin.</dd>
+    <dt>ABS</dt><dd>Acrylonitrile butadiene styrene, the standard thermoplastic shell material.</dd>
+    <dt>Polycarbonate</dt><dd>The tough transparent plastic used for visors.</dd>
+    <dt>Injection moulding</dt><dd>Forcing molten plastic into a mould; the core shell-making process.</dd>
+    <dt>Tooling</dt><dd>The moulds for each design and size; a fixed cost per SKU (see 025).</dd>
+    <dt>SKU</dt><dd>A stock-keeping unit — one specific design, size and colour. Studds listed more than 19,000.</dd>
+    <dt>Capacity utilisation</dt><dd>Output as a share of installed capacity; the main swing factor in a fixed-cost business.</dd>
+    <dt>Price pass-through lag</dt><dd>The delay between a cost increase and the price increase reaching the invoice (see 025).</dd>
+  </dl>
+  <h3>Market terms</h3><dl>
+    <dt>Organised versus unorganised</dt><dd>Certified, taxed, branded manufacture versus the informal trade; the latter has been estimated at more than 30% of this market.</dd>
+    <dt>Original-equipment channel</dt><dd>Helmets supplied through vehicle dealers with a new vehicle (see 023).</dd>
+    <dt>Replacement channel</dt><dd>Helmets bought by riders later, driven by enforcement and wear.</dd>
+    <dt>Premiumisation</dt><dd>Mix shift toward higher-value products; here, from half helmets to full-face and composite.</dd>
+    <dt>Pull-forward</dt><dd>Demand brought into an earlier period by an incentive or a rule, leaving a gap later.</dd>
+    <dt>Anchor investor and listing price</dt><dd>See 023; Studds listed at ₹565 against a ₹585 issue price.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What changed in January 2026?</summary><p>Every new two-wheeler must be supplied with two BIS-certified helmets — rider and pillion — alongside mandatory ABS.</p></details>
+  <details class="q"><summary>2. Which part of a helmet actually protects the head?</summary><p>The EPS liner. It crushes and absorbs energy; the shell spreads the load and resists penetration.</p></details>
+  <details class="q"><summary>3. Why did Studds' profit fall 39% in a quarter when revenue rose 13.7%?</summary><p>Styrene-based raw materials and wage costs rose faster than prices could be passed through: EBITDA margin fell 880 basis points to 11.5%.</p></details>
+  <details class="q"><summary>4. Why is the pillion helmet the focus of the rule?</summary><p>Pillion riders are close to 30% of two-wheeler deaths but were found about 2.3 times less likely than riders to wear a helmet in a Bengaluru study.</p></details>
+  <details class="q"><summary>5. Why does this primer contain no seasonality table?</summary><p>The section has one listed company with eleven months of price history. Any statistic from that would be an artefact.</p></details>
+  <details class="q"><summary>6. How big is the Indian helmet market?</summary><p>It depends what is counted: about ₹2,500 cr for the branded, certified market, against roughly US$2.25 bn in studies that include the whole roadside trade at retail prices. The leader's run-rate of ₹650–700 cr is the sanity check.</p></details>
+  <details class="q"><summary>7. What margin has management guided to, and on what condition?</summary><p>14–15% EBITDA in Q2 FY27 and 18–20% on a Q4 FY27 run-rate, explicitly conditional on stable commodity prices.</p></details>
+  <details class="q"><summary>8. What is the main risk to the replacement market from the new rule?</summary><p>Pull-forward: buyers who receive two helmets with the vehicle will not replace them for years.</p></details>
+  <details class="q"><summary>9. Which standard raised the global engineering bar, and how?</summary><p>ECE 22.06, by adding rotational-acceleration and multi-impact testing to the traditional straight-line drop test.</p></details>
+  <details class="q"><summary>10. What should be tracked to read this industry between results?</summary><p>Monthly two-wheeler sales, styrene prices, and enforcement or challan news — in that order.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes for NSE:STUDDS, month-end values, 7 November 2025 to 18 September 2026. No basket statistics are computed for this section, for the reasons given in section 8.</li>
+    <li>Company: <a href="https://www.business-standard.com/markets/capital-market-news/studds-accessories-declines-after-pat-fall-over-39-yoy-amid-elevated-raw-material-prices-126081000219_1.html">Q1 FY27 profit fall and raw-material cause</a>; <a href="https://hexawealth.in/blog/studds-q1-fy27-revenue-up-profit-margin-squeeze-8eb7c1">revenue, EBITDA margin, the 9% price increase and the margin guidance</a>; <a href="https://www.sahi.com/news/studds-accessories-q1-standalone-profit-falls-to-13-2-crore-revenue-at-167-crore-5177438-PE1_">standalone results</a>; <a href="https://scanx.trade/stock-market-news/companies/studds-accessories-q1-results-net-profit-falls-35-yoy-to-132-52-million/47748164">expenses and margin detail</a>; <a href="https://www.screener.in/company/STUDDS/consolidated/">financial history</a>.</li>
+    <li>IPO and market position: <a href="https://www.chittorgarh.com/ipo/studds-accessories-ipo/2259/">issue details and listing price</a>; <a href="https://www.business-standard.com/amp/markets/capital-market-news/studds-accessories-ipo-ends-with-subscription-of-73-25-times-125110400456_1.html">73.25-times subscription</a>; <a href="https://www.indmoney.com/blog/ipo/studds-accessories-ipo-review">market-share, capacity, SKU and volume data</a>; <a href="https://www.kotakneo.com/ipo/studds-accessories-ltd-ipo/">brands and business description</a>.</li>
+    <li>Rules and safety: <a href="https://thelogicalindian.com/new-safety-rules-abs-and-two-bis-certified-helmets-compulsory-with-every-two-wheeler-from-2026/">the January 2026 ABS and two-helmet requirement</a>; <a href="https://bikeadvice.in/two-helmets-mandatory-on-purchase-of-new-two-wheelers-from-jan-2026/">the dealer obligation</a>; <a href="https://tvarra.com/blogs/article/helmet-rules-pillion-riders-india-2026">pillion rules, the ₹1,000 penalty and the Bengaluru pillion study</a>; <a href="https://ackodrive.com/bike-guide/helmet-rules-in-india/">IS 4151 and the ISI requirement</a>; <a href="https://www.newkerala.com/news/a/mandatory-two-helmet-rule-could-cut-two-wheeler-deaths-25-253.htm">the industry estimate of a 25% fatality reduction</a>.</li>
+    <li>Market size and structure: <a href="https://www.imarcgroup.com/india-two-wheeler-helmets-market">the US$2.25 bn to US$3.82 bn estimate</a>; <a href="https://businessindia.co/magazine/steelbird-rides-on-the-emergent-market">the ₹2,500 cr domestic market and the unorganised share</a>; <a href="https://www.maximizemarketresearch.com/market-report/india-motorcycle-helmets-market/44869/">manufacturer count and compliance estimate</a>; <a href="https://www.persistencemarketresearch.com/market-research/motorcycle-helmet-market.asp">India's share of the Asia-Pacific market</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

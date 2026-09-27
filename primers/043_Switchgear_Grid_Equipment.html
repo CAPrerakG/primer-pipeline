@@ -1,0 +1,610 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Switchgear and Grid Equipment Primer</title>
+<meta name="description" content="Industry 43 of 278: the protection, switching and power-electronics equipment that makes a grid controllable — from a household switch to an HVDC converter. Two global-parent giants with record backlogs, a smart-meter small cap, a two-year +196% and +204% run, and the nine listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Switchgear &amp; Grid Equipment · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 43 of 278 · Power family, part 8</div>
+  <h1>Switchgear &amp; Grid Equipment</h1>
+  <p class="lede">The equipment that lets a grid be switched, protected and controlled: circuit breakers that isolate faults in milliseconds, gas-insulated switchgear that fits a substation into a building, the power electronics that convert between AC and DC, and — at the small end — the switches and meters in every home. As India moves renewable power across the country and data centres multiply worldwide, this is where the technology content of the grid lives, and it is dominated by two companies with global parents.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 9 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Wires, Cables &amp; Conductors</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹32,222 cr</div><div class="l">Hitachi Energy India's order backlog — the highest in its history</div></div>
+    <div class="stat"><div class="n">33.6%</div><div class="l">Share of Hitachi Energy India's non-HVDC orders that came from exports this quarter</div></div>
+    <div class="stat"><div class="n">₹1.9 lakh cr</div><div class="l">Cost of the 8–9 HVDC projects planned through FY32</div></div>
+    <div class="stat"><div class="n">+196% / +204%</div><div class="l">The basket's 2023 and 2024 returns, before small caps gave much of it back</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The grid's control system, owned largely by global engineering groups</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Think of the electricity grid as a gigantic set of water pipes. You need taps to turn the flow on and off, safety valves that snap shut if a pipe bursts, and meters that measure how much each house uses. Switchgear is the electrical version: breakers that cut the power in a fraction of a second when something goes wrong, so a fault in one place does not black out a whole city. Some of this equipment is simple, like the switches on your wall. Some is very advanced — machines that turn alternating current into direct current so electricity can travel a thousand kilometres with little loss. India is building a lot of new grid, and the world is short of this equipment, so the companies that can make the advanced kind are extremely busy.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>A two-speed sector: advanced grid technology is booming, commodity electrical products are squeezed.</p>
+    <ul>
+      <li><b>Hitachi Energy India</b>: revenue +68.6% to ₹2,494 cr, profit more than doubled to ₹294 cr, EBITDA margin +450 bps, record backlog ₹32,222 cr, and 33.6% of non-HVDC orders from exports. Data centres led its ordering.</li>
+      <li><b>GE Vernova T&amp;D India</b>: revenue +38% to ₹1,836 cr, profit +25% to ₹363 cr at a 25.1% EBITDA margin — but order inflows fell 30% and the backlog slipped to about ₹20,930 cr.</li>
+      <li><b>HVDC is the structural driver:</b> 8–9 HVDC links planned through FY32 at about ₹1.9 lakh cr, including a ±800 kV, 6,000 MW Khavda–Nagpur link won by a Hitachi Energy–BHEL consortium.</li>
+      <li><b>Domestic small caps are being squeezed:</b> HPL Electric's revenue rose 35% but its margin fell from 15.1% to 12.3% on metal and plastics costs; its stock is −30%.</li>
+      <li><b>Returns follow technology:</b> Hitachi +79% and GE Vernova T&amp;D +40% against HPL −30% and Salzer −20% in the same year.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From a wall switch to an HVDC converter</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it does</th><th>Technology level</th><th>Listed makers</th></tr></thead><tbody>
+    <tr><td>HVDC converter stations</td><td>Convert AC to DC and back for long-distance, low-loss transmission</td><td>Highest — a handful of global suppliers</td><td>Hitachi Energy India, GE Vernova T&amp;D India</td></tr>
+    <tr><td>Gas-insulated switchgear (GIS)</td><td>Compact high-voltage switching for substations with little space</td><td>High</td><td>Hitachi Energy India, GE Vernova T&amp;D India</td></tr>
+    <tr><td>Air-insulated switchgear and circuit breakers</td><td>Isolate faults in transmission and distribution substations</td><td>Medium to high</td><td>GE Vernova T&amp;D India, Hitachi Energy India, S&amp;S Power</td></tr>
+    <tr><td>Power quality and grid integration</td><td>Reactive power compensation and connecting renewables and data centres</td><td>High</td><td>Hitachi Energy India</td></tr>
+    <tr><td>Protection, automation and digital substations</td><td>Relays and control systems that sense and clear faults</td><td>High, software-heavy</td><td>GE Vernova T&amp;D India, Hitachi Energy India</td></tr>
+    <tr><td>Low-voltage switchgear and wiring devices</td><td>MCBs, switches and distribution boards in buildings</td><td>Low; brand and distribution matter</td><td>HPL Electric, Salzer, Veto, Kaycee</td></tr>
+    <tr><td>Smart meters</td><td>Measure and communicate consumption (see 039)</td><td>Medium; volume-driven</td><td>HPL Electric, Salzer</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>If transformers (see 042) are the grid's gearboxes, switchgear is its brakes, fuses and dashboard. A car can have a powerful engine, but without brakes that work in milliseconds it cannot be driven safely. As the grid carries more power over longer distances and from more intermittent sources, the brakes and the dashboard become more sophisticated — and more valuable per unit of capacity.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a global technology licence to a substation</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Technology and design</h4><div class="an">The know-how</div>Global parents own the core HVDC, GIS and protection technology.<div class="who">Hitachi Energy, GE Vernova (parents)</div><div class="m">The moat; licensed to the Indian arms</div></div>
+    <div class="stage"><div class="no">02</div><h4>Components</h4><div class="an">The parts</div>Power semiconductors, SF6 gas and alternatives, copper, steel enclosures, insulators.<div class="who">Global and domestic suppliers</div><div class="m">Metal and plastics costs hit small makers</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Manufacture and assembly</h4><div class="an">The factory</div>Indian factories build for domestic projects and increasingly for export.<div class="who">Hitachi Energy India (a 20th unit under construction), GE Vernova T&amp;D India</div><div class="m">Export hubs for the parents</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Project and system integration</h4><div class="an">Making it work together</div>Substation packages, HVDC stations, grid-integration solutions.<div class="who">The listed Indian arms, EPC partners (048)</div><div class="m">Where the highest margins sit</div></div>
+    <div class="stage"><div class="no">05</div><h4>Customers</h4><div class="an">Who buys</div>Transmission utilities, renewable developers, data centres, industry, exporters.<div class="who">Power Grid, Adani Energy Solutions (039), data centres</div><div class="m">Data centres led Hitachi's orders</div></div>
+    <div class="stage"><div class="no">06</div><h4>Service and upgrades</h4><div class="an">The tail</div>Maintenance, retrofits and digital upgrades over decades.<div class="who">Original equipment makers</div><div class="m">High-margin annuity</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Technology:</b> the hardest designs belong to a few big international companies, which share them with their Indian branches.</li>
+    <li><b>Components:</b> special chips, gases, copper and steel boxes are bought in.</li>
+    <li><b>Factories:</b> Indian factories build the equipment — for Indian projects and, more and more, for customers abroad.</li>
+    <li><b>Integration:</b> engineers make all the pieces of a substation or converter station work as one system.</li>
+    <li><b>Customers:</b> power companies, solar farms, factories and data centres.</li>
+    <li><b>Service:</b> the equipment lasts decades and needs looking after.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The dividing line in this section is technology ownership. The two large companies are Indian arms of global groups — Hitachi Energy and GE Vernova — with access to HVDC, GIS and protection technology that very few firms possess, and with parents that increasingly source from India for export. That gives them pricing power in a global shortage and explains margins in the mid-20s. The domestic small caps make lower-technology products — wiring devices, low-voltage switchgear, meters — where competition is intense and input costs pass straight into margins, as HPL's 290 basis-point decline shows. Watch the order intake as well as the backlog: GE Vernova T&amp;D's 30% fall in inflows is the first sign in this section that the ordering peak may have passed for some product lines.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 9 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Hitachi Energy India (~₹1.35 lakh cr)</td><td>The Indian arm of Hitachi Energy, demerged from ABB India and listed in March 2020: HVDC, transformers, grid integration, power quality and substation systems.</td><td>Revenue ₹2,493.7 cr (+68.6%), pre-tax profit ₹389.5 cr (+120.2%), net profit ₹294.2 cr (+123.5%) and EBITDA margin +450 bps. Orders ₹5,096.5 cr (+26.1% excluding HVDC) led by HVDC, grid connection, power quality and transformers; data centres the largest segment. Record backlog ₹32,222.1 cr. Exports 33.6% of orders, from Europe, North America and South Asia. Construction of a 20th factory at Karjan, Vadodara began in June 2026. Part of the Hitachi Energy–BHEL consortium on the ±800 kV, 6,000 MW Khavda–Nagpur HVDC link. Stock +78.6%.</td></tr>
+    <tr><td>GE Vernova T&amp;D India (~₹1.10 lakh cr)</td><td>The Indian arm of GE Vernova's grid business (formerly Alstom's and then GE's T&amp;D arm): switchgear, transformers, protection and automation, HVDC.</td><td>Revenue ₹1,836 cr (+38%), profit ₹363 cr (+25%), EBITDA margin 25.1% within its mid-20s guidance, though gross margin fell to 41.3% from 48.4%. Order inflows ₹1,137 cr, down 30% from ₹1,620 cr, and backlog about ₹20,930 cr against ₹21,460 cr a year earlier. GE Vernova was awarded HVDC technology for Adani's 2.5 GW Khavda–South Olpad corridor. Stock +40.0%.</td></tr>
+    <tr><td>HPL Electric &amp; Power (~₹1,800 cr)</td><td>Smart meters, switchgear, wires and lighting — a domestic maker with a large metering business.</td><td>Record Q1 revenue ₹515.2 cr (+34.5%), but EBITDA only +8.9% to ₹63.2 cr as margin fell to 12.26% from 15.14% on metal and plastics costs and mix. Consumer and industrial revenue +55% to ₹277.6 cr; smart metering +16.5% to ₹237.7 cr. Order book above ₹3,200 cr, about 96% smart metering. Stock −30.2%, −58% from its August 2024 peak.</td></tr>
+    <tr><td>Salzer Electronics (~₹990 cr)</td><td>Industrial switches, wires, energy management and smart meters.</td><td>−19.6% in 2026 after −50% in 2025; −66% from its December 2024 peak.</td></tr>
+    <tr><td>S&amp;S Power Switchgear (~₹410 cr)</td><td>Medium-voltage switchgear and power distribution equipment.</td><td>+9.9% in 2026; its 2023 gain of 712% was the section's most extreme move.</td></tr>
+    <tr><td>Veto Switchgears &amp; Cables (~₹245 cr)</td><td>Wiring devices, switches and cables for retail.</td><td>+21.3%, −28% from its August 2024 peak.</td></tr>
+    <tr><td>Kaycee Industries (~₹260 cr)</td><td>Industrial switches and controls.</td><td>−10.0% in 2026 and −83% from its October 2024 peak.</td></tr>
+    <tr><td>Shivalic Power Control (~₹150 cr)</td><td>Electrical control panels; listed July 2024.</td><td>−35.7% and −83% from its listing-month peak.</td></tr>
+    <tr><td>Switching Technologies Gunther (~₹31 cr)</td><td>A micro-cap maker of reed switches and relays.</td><td>+110% in 2026 on negligible volume. Not investable at scale.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Read the section in two halves</span><p>Two companies — Hitachi Energy India and GE Vernova T&amp;D India — make up more than 95% of the section's market value and nearly all of its technology. The rest are domestic makers of lower-technology electrical products whose economics resemble consumer electricals more than grid infrastructure. An equal-weighted basket gives the small caps most of the weight, which is why it shows +12% while the two giants are up 79% and 40%. Several small caps also peaked in mid-to-late 2024 and are 58–83% below those levels.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Technology premium versus commodity pass-through</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>Margin character</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>HVDC and advanced grid systems</td><td>High; mid-20s EBITDA at the listed arms</td><td>Technology scarcity, global shortage, parent sourcing for export</td></tr>
+    <tr><td>High-voltage switchgear and GIS</td><td>High</td><td>Few qualified suppliers; long approval cycles</td></tr>
+    <tr><td>Service and digital</td><td>Highest and steady</td><td>Installed base</td></tr>
+    <tr><td>Low-voltage switchgear and wiring devices</td><td>Low to mid-teens</td><td>Brand, distribution and metal costs</td></tr>
+    <tr><td>Smart meters</td><td>Low to mid-teens</td><td>Volume, government tenders and component costs</td></tr>
+  </tbody></table></div>
+  <h3>Why the giants and the small caps diverged in 2026</h3>
+  <p>The two multinational arms sell technology that few can supply, into a market where demand from grids and data centres exceeds global capacity. That lets them hold prices while their costs rise, and their Indian factories benefit twice: from domestic HVDC and substation orders, and from parents routing export orders to lower-cost Indian plants. Hitachi Energy India's EBITDA margin rose 450 basis points in the quarter. The domestic small caps sell products where many competitors exist and customers are price-sensitive, so rising copper, steel and plastics costs cannot be passed on quickly — HPL's revenue grew 35% while EBITDA grew 9%. The same grid cycle, in other words, produces very different outcomes depending on where a company sits on the technology ladder.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>It is the difference between a company that makes jet engines and one that makes seat belts for the same aircraft. Both are needed; both see more orders when airlines expand. Only one can raise prices when its costs go up.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Parent technology and licensing</td><td>HVDC, GIS and protection designs belong to the global parents</td><td>The source of the giants' moat, and a royalty cost</td></tr>
+    <tr><td>Power semiconductors</td><td>IGBTs and thyristors for converters</td><td>Globally constrained supply</td></tr>
+    <tr><td>Copper and steel</td><td>Conductors and enclosures</td><td>Rising; the cause of HPL's margin decline</td></tr>
+    <tr><td>Engineering plastics</td><td>Insulation and housings for low-voltage products</td><td>Volatile, crude-linked (see 002)</td></tr>
+    <tr><td>SF6 gas and alternatives</td><td>Insulating gas in GIS</td><td>Environmental pressure to move to alternatives</td></tr>
+    <tr><td>Factory capacity</td><td>Manufacturing slots in a global shortage</td><td>Hitachi building a 20th factory</td></tr>
+    <tr><td>Type approvals and utility qualification</td><td>Required to bid for high-voltage equipment</td><td>A high barrier for new entrants</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Orders in spring, execution through the year</h2>
+  <ul>
+    <li><b>April–June:</b> new financial year budgets release orders from utilities and developers; the strongest months for these stocks.</li>
+    <li><b>July–September:</b> execution continues; monsoon affects site work but not factory output.</li>
+    <li><b>October–December:</b> commissioning season for substations; mixed for the stocks.</li>
+    <li><b>January–March:</b> year-end dispatch pushes; historically weak share prices.</li>
+    <li><b>Parent reporting cycles:</b> Hitachi and GE Vernova's global results and outlooks move the Indian arms, independently of the Indian calendar.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 5 names (Hitachi Energy India Limited, GE Vernova T&amp;D India Limited, HPL Electric &amp; Power Limited, Salzer Electronics Limited, S&amp;S Power Switchgear Ltd.), equal-weighted, monthly from Jan 2016, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.2 pts (beat in 7 of 11 years); Jun +4.4 pts (beat in 7 of 11 years); Dec +4.3 pts (beat in 8 of 10 years).</li><li><b>Weakest months:</b> Nov -3.3 pts (beat in 5 of 10 years); Jul -2.2 pts (beat in 5 of 11 years); May -1.9 pts (beat in 5 of 11 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 5 of 11 years (median -5.2 pts); Apr–Jul beat the Nifty in 7 of 11 years (median +10.4 pts); Aug–Sep beat the Nifty in 6 of 10 years (median +2.8 pts); Oct–Dec beat the Nifty in 5 of 10 years (median +1.0 pts); Sep–Nov beat the Nifty in 4 of 10 years (median -8.2 pts); Jan–Mar beat the Nifty in 5 of 11 years (median -6.8 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.2 points.</p><p><b>Reading it:</b> only ten years of data, so treat the pattern loosely. April is the strongest month (7 of 11, +7.2 points) and April–July the best window (7 of 11, median +10.4), as utilities and developers place orders at the start of the financial year. September–November is the weakest (4 of 10, median −8.2) and January–March almost as poor (5 of 11, median −6.8). October–December, which is excellent for transformers (see 042), is only a coin toss here.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July worked in 7 of 11 years (median +10.4)</b>; the failures were 2018 (−41.6), 2019 (−20.5), 2016 (−11.7) and 2020 (−10.8) — all before the upcycle.</li>
+    <li><b>The best runs were 2024 (+58.3) and 2023 (+52.2)</b>, the peak of the grid-equipment re-rating.</li>
+    <li><b>September–November fails more than it works</b> (4 of 10, median −8.2), with 2025 (−14.3) the latest.</li>
+    <li><b>January–March has failed in 6 of 11 years</b>, with 2020 (−17.4) and 2025 (−15.8) the worst.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The record is only ten years long and the basket is dominated by small caps, so the pattern is suggestive rather than reliable. The larger point is that the two stocks that matter for most portfolios — Hitachi Energy India and GE Vernova T&amp;D India — move with their global parents and order announcements more than with any Indian season. For them, the useful calendar is the parents' results and the award dates of HVDC projects.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>HVDC ordering:</b> 8–9 links through FY32 at about ₹1.9 lakh cr, each worth thousands of crores to the winners.</li>
+    <li><b>Transmission and substation capex:</b> the national transmission plan and inter-state build-out (see 039).</li>
+    <li><b>Data centres:</b> the leading segment in Hitachi Energy India's orders this quarter.</li>
+    <li><b>Export sourcing by global parents:</b> a third of Hitachi's non-HVDC orders.</li>
+    <li><b>Renewable integration:</b> power quality and grid-connection equipment for solar and wind (see 038).</li>
+    <li><b>Smart metering tenders:</b> the main demand driver for the domestic small caps.</li>
+    <li><b>Copper, steel and plastics prices:</b> decisive for low-voltage makers' margins.</li>
+    <li><b>Order intake momentum:</b> GE Vernova T&amp;D's 30% fall in inflows is worth watching as a turning signal.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2016 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of GE Vernova T&amp;D India and Salzer in 2016, HPL Electric from 2017, and Hitachi Energy India and S&amp;S Power Switchgear from 2021 (their TradingView series begin in March 2020). Monthly returns capped at ±50%, price only; 2026 to 18 September. The record starts in 2016 because that is when two members first have full-year history.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of this cycle</h3>
+  <ol>
+    <li><b>A lean decade</b> (2016–2020): thin utility ordering, losses at GE's Indian arm and a collapse in small-cap valuations — four negative years in five.</li>
+    <li><b>The grid shortage</b> (2021–2024): HVDC ordering, renewable integration and data centres coincided with global capacity shortages; the basket rose +103%, +20%, +196% and +204%.</li>
+    <li><b>The split</b> (2025–2026): the technology leaders kept rising on record backlogs and exports, while the domestic small caps de-rated as costs rose.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Global parentage is a durable advantage:</b> technology access and export sourcing gave the multinational arms both growth and margin.</li>
+    <li><b>Small caps overshoot in both directions:</b> S&amp;S +712% in 2023; Kaycee and Shivalic are each 83% below their peaks.</li>
+    <li><b>Order intake turns before revenue:</b> backlogs sustain revenue for years after inflows slow, so falling inflows are the early signal.</li>
+    <li><b>Input costs separate the two halves</b> in every year that metal prices rise.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A handful of global suppliers, and India as their factory</h2>
+  <p>High-voltage grid technology is one of the most concentrated industries in the world. HVDC converter stations are supplied by a small group — Hitachi Energy, Siemens Energy and GE Vernova among the leaders — and the same firms dominate gas-insulated switchgear and advanced protection. Demand from grid reinforcement, offshore wind, cross-border interconnectors and data centres has outrun their global capacity, with order books stretching years ahead. That has made India valuable to them in two ways: as a large domestic market with its own HVDC programme, and as a cost-competitive manufacturing base for exports. Hitachi Energy India's export share — a third of non-HVDC orders, from Europe, North America and South Asia — and its 20th factory are the clearest evidence of that shift.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>Hitachi Energy</td><td>A global leader in HVDC and grid systems</td><td>Hitachi Energy India is its listed arm and an export hub</td></tr>
+    <tr><td>GE Vernova</td><td>A global grid and power leader</td><td>GE Vernova T&amp;D India is its listed arm; won HVDC technology for Adani's Khavda corridor</td></tr>
+    <tr><td>Siemens Energy</td><td>A global HVDC and grid leader</td><td>Listed in India as Siemens Energy India (see 041)</td></tr>
+    <tr><td>Chinese grid-equipment makers</td><td>Large and low-cost</td><td>Restricted in Indian grid procurement</td></tr>
+    <tr><td>Domestic Indian makers</td><td>Low- and medium-voltage products, meters</td><td>Competitive, fragmented, margin-constrained</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From ABB and Alstom to Hitachi and GE Vernova:</b> corporate reorganisations moved the Indian grid businesses into new parents, which then made India an export base.</li>
+    <li><b>From AC to HVDC for long distances:</b> renewable zones far from demand made HVDC central to the grid plan.</li>
+    <li><b>From domestic supply to export hub:</b> the global shortage turned Indian factories into suppliers to Europe and North America.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>VSC-HVDC:</b> voltage-source converter technology, better for connecting renewables and weak grids.</li>
+    <li><b>Higher HVDC voltages:</b> ±800 kV links like Khavda–Nagpur carrying 6,000 MW.</li>
+    <li><b>SF6-free switchgear:</b> alternatives to a potent greenhouse gas, driven by regulation in Europe.</li>
+    <li><b>Digital substations:</b> fibre-optic process buses and software-based protection.</li>
+    <li><b>Grid-forming inverters and power quality:</b> keeping grids stable as synchronous generation declines (see 038).</li>
+    <li><b>Smart metering and advanced metering infrastructure:</b> the digitisation of distribution (see 039).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>HVDC programme</td><td>8–9 projects through FY32 at about ₹1.9 lakh cr</td><td>The largest single source of high-value orders</td></tr>
+    <tr><td>National Electricity Plan transmission targets</td><td>The national transmission build-out (see 039)</td><td>Substation and switchgear volume</td></tr>
+    <tr><td>Restrictions on Chinese equipment</td><td>In force for grid procurement</td><td>Protects the market for multinational arms and domestic makers</td></tr>
+    <tr><td>Smart metering programme</td><td>Central funding for prepaid meters</td><td>The main order source for domestic small caps</td></tr>
+    <tr><td>Local manufacturing preference</td><td>Public procurement rules</td><td>Encourages Indian factories — which the global parents are building</td></tr>
+    <tr><td>Environmental regulation of SF6</td><td>Tightening globally</td><td>Shifts technology toward alternatives</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: leaders pulling away</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Leaders' revenue</td><td>Surging</td><td>Hitachi +68.6%, GE Vernova T&amp;D +38%</td></tr>
+    <tr><td>Leaders' margins</td><td>Expanding or holding</td><td>Hitachi +450 bps; GE Vernova T&amp;D 25.1%</td></tr>
+    <tr><td>Backlogs</td><td>Mixed</td><td>Hitachi a record ₹32,222 cr; GE Vernova T&amp;D slightly lower at ~₹20,930 cr after a 30% fall in inflows</td></tr>
+    <tr><td>Exports</td><td>Rising</td><td>A third of Hitachi's non-HVDC orders</td></tr>
+    <tr><td>Small caps</td><td>Squeezed</td><td>HPL margin 12.26% against 15.14%</td></tr>
+    <tr><td>Stocks</td><td>Split</td><td>Hitachi +79%, GE Vernova T&amp;D +40%; HPL −30%, Salzer −20%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This section is two industries that happen to share a name. The high-technology half — HVDC, gas-insulated switchgear, grid integration — is in a global shortage, has pricing power, and is becoming an export business run from Indian factories for global parents; Hitachi Energy India's results are about as strong as industrial results get. The low-technology half is a competitive electrical-products business whose margins fall whenever copper and plastics rise. The main risk for the leaders is not demand but valuation and the ordering cycle: GE Vernova T&amp;D's inflows fell 30% this quarter, which may be lumpy timing or an early sign that the post-2023 ordering wave is maturing. A record backlog sustains revenue for years, so the time to worry is when inflows fall for several consecutive quarters — something worth tracking closely from here.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Order inflows versus revenue</td><td>Quarterly</td><td>The earliest sign of a turn; GE Vernova T&amp;D inflows −30%</td></tr>
+    <tr><td>HVDC award announcements</td><td>Power Grid and private transmission developers</td><td>Large, lumpy orders</td></tr>
+    <tr><td>Export share of orders</td><td>Quarterly</td><td>Parent sourcing and global demand</td></tr>
+    <tr><td>Global parents' results and outlook</td><td>Quarterly</td><td>Drive the Indian arms' sentiment</td></tr>
+    <tr><td>Data-centre capex</td><td>Global and domestic</td><td>The fastest-growing customer segment</td></tr>
+    <tr><td>Copper, steel and plastics prices</td><td>Monthly</td><td>Small-cap margins</td></tr>
+    <tr><td>Smart meter tender awards</td><td>Ongoing</td><td>Small-cap demand</td></tr>
+    <tr><td>Royalty and technology fee terms</td><td>Annual reports</td><td>What the parents take from the Indian arms</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Transformers</b> (042): sold into the same substations, with the same global shortage.</li>
+    <li><b>Power transmission utilities</b> (039): the main domestic buyer, including of HVDC.</li>
+    <li><b>Boilers, turbines &amp; power equipment</b> (041): Siemens Energy India, the third global-parent arm.</li>
+    <li><b>Wires, cables &amp; conductors</b> (044): the copper and aluminium side of the grid.</li>
+    <li><b>Renewable power generation</b> (038): grid integration for solar and wind.</li>
+    <li><b>Data centres and electronics:</b> the new demand source for grid equipment.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the mix of HVDC, high-voltage, service and export in the backlog?</li>
+    <li>Why did order inflows change this quarter, and what is the tender pipeline?</li>
+    <li>What share of exports comes through the parent, and at what pricing?</li>
+    <li>What royalty and technology fees are paid to the parent, and how are they set?</li>
+    <li>What is factory utilisation, and when does new capacity come on line?</li>
+    <li>What is the margin on HVDC contracts compared with the product business?</li>
+    <li>(Small caps) What share of contracts carry price-variation clauses for copper and plastics?</li>
+    <li>(Smart meters) What is the payment cycle on government metering contracts?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Several consecutive quarters of falling order inflows.</li>
+    <li>Rising royalty payments to the parent outpacing profit.</li>
+    <li>Margin decline despite revenue growth at the small caps.</li>
+    <li>Large receivables on government metering contracts.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Every grid-equipment stock benefits from the grid boom."</td><td>Hitachi +79% and GE Vernova T&amp;D +40% against HPL −30% and Salzer −20% in the same year.</td></tr>
+    <tr><td>"A record backlog means the cycle is intact."</td><td>A backlog sustains revenue; inflows show direction. GE Vernova T&amp;D's inflows fell 30% while its revenue grew 38%.</td></tr>
+    <tr><td>"The multinational arms are just assemblers for their parents."</td><td>Hitachi Energy India grew EBITDA margin 450 bps and is building a 20th factory; export sourcing is adding margin, not subtracting it.</td></tr>
+    <tr><td>"Smart meters are a guaranteed growth story."</td><td>HPL's revenue grew 35% and its margin fell 290 bps; volume growth in a competitive tender market does not guarantee profit.</td></tr>
+    <tr><td>"The 2023–24 gains were a bubble."</td><td>For some small caps, clearly — several are 58–84% below their peaks. For the leaders, earnings have largely caught up with the prices.</td></tr>
+    <tr><td>"HVDC is a niche."</td><td>8–9 links through FY32 cost about ₹1.9 lakh cr, and a single ±800 kV link carries 6,000 MW.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. HVDC, GIS" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Equipment</h3><dl>
+    <dt>Switchgear</dt><dd>The switches, fuses and circuit breakers that control, protect and isolate electrical equipment.</dd>
+    <dt>Circuit breaker</dt><dd>A device that automatically interrupts current when a fault is detected.</dd>
+    <dt>Gas-insulated switchgear (GIS)</dt><dd>Compact high-voltage switchgear sealed in insulating gas; used where space is scarce.</dd>
+    <dt>Air-insulated switchgear (AIS)</dt><dd>Outdoor switchgear insulated by air; cheaper but needs more space.</dd>
+    <dt>SF6</dt><dd>Sulphur hexafluoride, the insulating gas used in most GIS; a potent greenhouse gas.</dd>
+    <dt>Converter station</dt><dd>The facility at each end of an HVDC link that converts between AC and DC.</dd>
+    <dt>LCC and VSC</dt><dd>Line-commutated and voltage-source converter technologies; VSC suits renewables and weak grids.</dd>
+    <dt>IGBT</dt><dd>Insulated-gate bipolar transistor, the power semiconductor at the heart of VSC converters.</dd>
+    <dt>Bi-pole</dt><dd>An HVDC configuration with two conductors of opposite polarity, such as ±800 kV.</dd>
+    <dt>Protection relay</dt><dd>A device that senses abnormal conditions and trips breakers.</dd>
+    <dt>Digital substation</dt><dd>A substation using fibre-optic communication and software-based protection.</dd>
+    <dt>Reactive power compensation</dt><dd>Equipment such as STATCOMs that stabilises voltage on the grid.</dd>
+    <dt>STATCOM</dt><dd>A static synchronous compensator for voltage and power-quality control.</dd>
+    <dt>Miniature circuit breaker (MCB)</dt><dd>A low-voltage breaker used in homes and buildings.</dd>
+    <dt>Distribution board</dt><dd>The panel housing breakers in a building.</dd>
+    <dt>Advanced metering infrastructure (AMI)</dt><dd>The full system of smart meters, communications and data management.</dd>
+    <dt>Vacuum circuit breaker (VCB)</dt><dd>A medium-voltage breaker that interrupts the arc inside a vacuum bottle; the workhorse of distribution switchgear.</dd>
+    <dt>Moulded case circuit breaker (MCCB)</dt><dd>A larger low-voltage breaker for commercial and industrial feeders.</dd>
+    <dt>Residual current device (RCCB)</dt><dd>A breaker that trips on earth leakage to protect people from shock.</dd>
+    <dt>Disconnector (isolator)</dt><dd>A switch that visibly separates equipment for maintenance; it is not designed to break fault current.</dd>
+    <dt>Earthing switch</dt><dd>Connects isolated equipment to earth so it is safe to work on.</dd>
+    <dt>Ring main unit (RMU)</dt><dd>A compact, sealed medium-voltage switchgear unit used in city distribution networks.</dd>
+    <dt>Busbar</dt><dd>The thick conductor inside switchgear and substations that distributes power between circuits.</dd>
+    <dt>Instrument transformer</dt><dd>Current and voltage transformers that step values down so meters and relays can measure them.</dd>
+    <dt>Surge arrester</dt><dd>Diverts lightning and switching surges to earth to protect equipment.</dd>
+    <dt>Breaking capacity</dt><dd>The largest fault current a breaker can safely interrupt, in kiloamperes.</dd>
+    <dt>Fault clearing time</dt><dd>How quickly protection detects and removes a fault, typically a few cycles — tens of milliseconds.</dd>
+    <dt>Arc</dt><dd>The plasma that forms when current is interrupted; quenching it is the core engineering problem in a breaker.</dd>
+    <dt>Thyristor valve</dt><dd>The switching building block of classic LCC HVDC converters.</dd>
+    <dt>Back-to-back and multi-terminal HVDC</dt><dd>A converter pair at one site linking two unsynchronised grids, versus a DC network with three or more converter stations.</dd>
+    <dt>FACTS</dt><dd>Flexible AC transmission systems — SVCs, STATCOMs and series compensation that raise the capacity and stability of AC lines.</dd>
+    <dt>Synchronous condenser</dt><dd>A spinning machine that supplies inertia and reactive power without generating energy, increasingly used where renewables dominate.</dd>
+    <dt>Contactor and control relay</dt><dd>Industrial switching devices for motors and machines — Salzer's and Kaycee's core products.</dd>
+    <dt>Reed switch</dt><dd>A tiny magnetically operated switch sealed in glass; Switching Technologies Gunther's product.</dd>
+    <dt>Control panel</dt><dd>A cabinet of breakers, relays and meters assembled for a specific plant or substation; Shivalic's business.</dd>
+    <dt>Wiring devices</dt><dd>Switches, sockets and similar low-voltage products sold through retail.</dd>
+  </dl>
+  <h3>Commercial and market</h3><dl>
+    <dt>Order inflow</dt><dd>New orders won in a period — ₹5,096.5 cr at Hitachi, ₹1,137 cr at GE Vernova T&amp;D this quarter.</dd>
+    <dt>Order backlog</dt><dd>Orders not yet executed — a record ₹32,222 cr at Hitachi.</dd>
+    <dt>Export sourcing</dt><dd>A global parent routing orders to its Indian factories.</dd>
+    <dt>Royalty and technical fee</dt><dd>Payments from an Indian subsidiary to its parent for technology and brand.</dd>
+    <dt>Type test and qualification</dt><dd>Proof that equipment meets a utility's specification; a barrier to entry (see 042).</dd>
+    <dt>Turnkey substation</dt><dd>A complete substation delivered as one package.</dd>
+    <dt>Price variation clause (PVC)</dt><dd>A contract term that passes changes in copper, steel or other input costs to the customer.</dd>
+    <dt>Voltage classes</dt><dd>Low voltage up to 1 kV, medium voltage 1–36 kV, high voltage above that, and extra- and ultra-high voltage at 400 kV, 765 kV and ±800 kV DC.</dd>
+    <dt>Consortium bid</dt><dd>A joint bid by several suppliers, such as Hitachi Energy with BHEL for Khavda–Nagpur.</dd>
+    <dt>Related-party transactions</dt><dd>Purchases, sales and fees between the Indian arm and its parent group; shareholders must approve the material ones.</dd>
+    <dt>Grid integration</dt><dd>Equipment and engineering to connect generators or large loads to the grid.</dd>
+    <dt>Demerger</dt><dd>How Hitachi Energy India came to be listed separately from ABB India in 2020 (see 028).</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Transformer, CRGO, MVA</dt><dd>See 042.</dd>
+    <dt>HVDC, substation, smart meter, bay, TBCB, capitalisation</dt><dd>See 039.</dd>
+    <dt>Book-to-bill</dt><dd>See 029.</dd>
+    <dt>Drawdown from peak</dt><dd>See 029.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What separates the winners from the losers in this section in 2026?</summary><p>Technology and global parentage. Hitachi Energy India (+79%) and GE Vernova T&amp;D (+40%) sell scarce high-voltage technology; HPL (−30%) and Salzer (−20%) sell competitive low-voltage products.</p></details>
+  <details class="q"><summary>2. What did Hitachi Energy India report?</summary><p>Revenue +68.6% to ₹2,494 cr, profit more than doubled to ₹294 cr, EBITDA margin +450 bps, and a record ₹32,222 cr backlog.</p></details>
+  <details class="q"><summary>3. What early warning appeared at GE Vernova T&amp;D India?</summary><p>Order inflows fell 30% to ₹1,137 cr and the backlog slipped slightly, even as revenue grew 38%.</p></details>
+  <details class="q"><summary>4. What is HVDC, and why does India need it?</summary><p>High-voltage direct current transmission, which moves large amounts of power over long distances with low losses — essential for carrying desert renewables to cities.</p></details>
+  <details class="q"><summary>5. How large is India's HVDC programme?</summary><p>8–9 projects through FY32 at about ₹1.9 lakh cr, including a ±800 kV, 6,000 MW Khavda–Nagpur link.</p></details>
+  <details class="q"><summary>6. Why did HPL's margin fall while revenue rose 35%?</summary><p>Metal and plastics costs and product mix; EBITDA margin fell to 12.26% from 15.14%.</p></details>
+  <details class="q"><summary>7. What share of Hitachi Energy India's non-HVDC orders were exports?</summary><p>33.6%, from Europe, North America and South Asia.</p></details>
+  <details class="q"><summary>8. Which customer segment led Hitachi's ordering?</summary><p>Data centres, followed by industry and renewables.</p></details>
+  <details class="q"><summary>9. Why is the equal-weighted basket misleading here?</summary><p>Two companies make up over 95% of market value but only two-fifths of the basket; the small caps dominate the average.</p></details>
+  <details class="q"><summary>10. Which window is weakest for these stocks?</summary><p>September–November: 4 of 10 years, median −8.2 points.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of section members with sufficient history versus NSE:NIFTY, 2016 to 18 September 2026.</li>
+    <li>Hitachi Energy India: <a href="https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results">the company's Q1 FY27 results release</a>; <a href="https://upstox.com/news/market-news/earnings/hitachi-energy-india-q1-profit-soars-over-two-folds-yo-y-to-294-crore-revenue-rises-to-2-494-crore/article-198334/">revenue and profit</a>; <a href="https://www.tndindia.com/highest-ever-order-backlog-for-hitachi-energy-india/">the record backlog</a>; <a href="https://www.investing.com/news/company-news/hitachi-energy-india-q1-fy27-slides-record-backlog-margin-expansion-93CH-4846640">margin expansion</a>; <a href="https://www.business-standard.com/companies/quarterly-results/healthy-order-inflows-margin-expansion-brighten-outlook-for-hitachi-energy-126081001716_1.html">order inflows and outlook</a>; <a href="https://scanx.trade/stock-market-news/companies/hitachi-energy-q1-results-net-profit-surges-123-5-yoy-to-294-2-crore/47656323">pre-tax and net profit growth</a>.</li>
+    <li>GE Vernova T&amp;D India: <a href="https://www.investing.com/news/company-news/ge-vernova-td-india-q1-fy27-slides-revenue-surges-38-amid-order-softness-93CH-4847054">Q1 FY27 revenue and order softness</a>; <a href="https://www.tndindia.com/ge-vernova-td-india-reports-rs-1137-crore-order-booking-in-q1fy27/amp/">order booking and backlog</a>; <a href="https://www.multibagg.ai/market-pulse/articles/gevernova-q1-97469">margins</a>; <a href="https://www.gevernova.com/news/press-releases/ge-vernova-awarded-major-contract-deliver-hvdc">the Khavda–South Olpad HVDC award</a>.</li>
+    <li>HPL Electric: <a href="https://www.equitybulls.com/category.php?id=373994">Q1 FY27 revenue and segments</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/HPL-Electric-and-Power-Q1-Revenue-Soars-35percent-to-Rs-515-Cr-Margins-Face-Pressure/6a82acf96817e697e7cebe4f">margin pressure</a>; <a href="https://www.multibagg.ai/market-pulse/articles/hpl-q1fy27-97708">order book</a>.</li>
+    <li>HVDC and grid plan: <a href="https://www.hitachienergy.com/us/en/news-and-events/press-releases/2024/11/hitachi-energy-hvdc-technology-selected-by-powergrid-to-connect-khavda-to-nagpur">the Khavda–Nagpur HVDC award</a>; <a href="https://www.businessworld.in/article/hvdc-will-be-central-to-india-s-next-phase-of-grid-modernisation-says-sandeep-zanzaria-managing-director-and-ceo-ge-vernova-t-d-india-616918">HVDC in India's grid modernisation</a>; <a href="https://greenstocksresearch.com/grid-hardware-stocks/">the HVDC pipeline and transmission targets</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2016, "v": -6.9}, {"y": 2017, "v": -5.2}, {"y": 2018, "v": 0.1}, {"y": 2019, "v": -10.2}, {"y": 2020, "v": -23.1}, {"y": 2021, "v": 12.4}, {"y": 2022, "v": -11.5}, {"y": 2023, "v": 4.6}, {"y": 2024, "v": 27.6}, {"y": 2025, "v": -8.4}, {"y": 2026, "v": 16.5}], "AprJul": [{"y": 2016, "v": -11.7}, {"y": 2017, "v": 1.4}, {"y": 2018, "v": -41.6}, {"y": 2019, "v": -20.5}, {"y": 2020, "v": -10.8}, {"y": 2021, "v": 30.7}, {"y": 2022, "v": 11.4}, {"y": 2023, "v": 52.2}, {"y": 2024, "v": 58.3}, {"y": 2025, "v": 19.8}, {"y": 2026, "v": 10.4}], "AugSep": [{"y": 2016, "v": -9.3}, {"y": 2017, "v": 4.0}, {"y": 2018, "v": -11.4}, {"y": 2019, "v": 9.8}, {"y": 2020, "v": 3.0}, {"y": 2021, "v": -7.7}, {"y": 2022, "v": 18.7}, {"y": 2023, "v": 28.0}, {"y": 2024, "v": 2.7}, {"y": 2025, "v": -4.5}], "OctDec": [{"y": 2016, "v": -18.4}, {"y": 2017, "v": 7.3}, {"y": 2018, "v": 4.3}, {"y": 2019, "v": -21.8}, {"y": 2020, "v": -2.3}, {"y": 2021, "v": 15.4}, {"y": 2022, "v": -6.0}, {"y": 2023, "v": 18.1}, {"y": 2024, "v": 22.5}, {"y": 2025, "v": -12.0}], "SepNov": [{"y": 2016, "v": -11.1}, {"y": 2017, "v": 3.4}, {"y": 2018, "v": -11.0}, {"y": 2019, "v": -8.2}, {"y": 2020, "v": -10.0}, {"y": 2021, "v": 3.1}, {"y": 2022, "v": -8.2}, {"y": 2023, "v": 17.6}, {"y": 2024, "v": 5.2}, {"y": 2025, "v": -14.3}], "JanMar": [{"y": 2016, "v": -6.8}, {"y": 2017, "v": 2.1}, {"y": 2018, "v": -6.9}, {"y": 2019, "v": -15.1}, {"y": 2020, "v": -17.4}, {"y": 2021, "v": 18.8}, {"y": 2022, "v": -8.2}, {"y": 2023, "v": 12.9}, {"y": 2024, "v": 44.6}, {"y": 2025, "v": -15.8}, {"y": 2026, "v": 11.5}]}, "my": {"1": {"2016": -0.3, "2017": 7.4, "2018": -7.7, "2019": -5.1, "2020": 11.0, "2021": 5.6, "2022": 3.7, "2023": 8.2, "2024": 13.0, "2025": -8.1, "2026": -4.3}, "2": {"2016": -13.0, "2017": -6.8, "2018": 0.7, "2019": -3.6, "2020": -13.9, "2021": 12.1, "2022": -13.9, "2023": 2.1, "2024": 27.7, "2025": -19.3, "2026": 17.7}, "3": {"2016": 9.5, "2017": 1.9, "2018": -0.6, "2019": -6.6, "2020": -15.6, "2021": 0.2, "2022": 3.6, "2023": 2.5, "2024": -0.5, "2025": 16.2, "2026": 0.7}, "4": {"2016": -5.2, "2017": 7.6, "2018": -11.1, "2019": -0.6, "2020": 7.2, "2021": 7.1, "2022": 20.2, "2023": 9.4, "2024": 25.5, "2025": -4.8, "2026": 24.4}, "5": {"2016": -15.0, "2017": -8.1, "2018": -12.1, "2019": 7.2, "2020": -13.5, "2021": 1.5, "2022": -4.6, "2023": 0.1, "2024": -1.2, "2025": 18.8, "2026": 5.5}, "6": {"2016": 10.1, "2017": 3.8, "2018": -8.6, "2019": -7.1, "2020": 10.1, "2021": 14.3, "2022": -2.0, "2023": 21.8, "2024": 9.2, "2025": 0.8, "2026": -4.0}, "7": {"2016": 0.3, "2017": -1.7, "2018": -13.2, "2019": -19.4, "2020": -9.2, "2021": 3.7, "2022": -0.8, "2023": 10.7, "2024": 13.8, "2025": 4.2, "2026": -12.3}, "8": {"2016": -14.3, "2017": 2.0, "2018": -2.9, "2019": -1.6, "2020": 11.0, "2021": -4.1, "2022": 17.3, "2023": 15.1, "2024": 7.7, "2025": -3.5, "2026": 1.3}, "9": {"2016": 5.5, "2017": 2.0, "2018": -8.7, "2019": 11.8, "2020": -6.9, "2021": -3.3, "2022": 1.7, "2023": 11.2, "2024": -4.8, "2025": -0.9}, "10": {"2016": 2.5, "2017": -0.2, "2018": 0.3, "2019": -3.1, "2020": -9.4, "2021": -0.9, "2022": 0.8, "2023": 3.3, "2024": 7.3, "2025": -4.7}, "11": {"2016": -17.7, "2017": 1.4, "2018": -3.2, "2019": -14.6, "2020": 8.8, "2021": 7.2, "2022": -10.4, "2023": 2.0, "2024": 2.6, "2025": -8.5}, "12": {"2016": -3.5, "2017": 5.7, "2018": 7.3, "2019": -4.4, "2020": 0.1, "2021": 8.7, "2022": 3.9, "2023": 11.4, "2024": 12.4, "2025": 1.4}}, "basket": ["Hitachi Energy India Limited", "GE Vernova T&D India Limited", "HPL Electric & Power Limited", "Salzer Electronics Limited", "S&S Power Switchgear Ltd."], "nbasket": 5, "start": "Jan 2016", "monthly": [{"m": 1, "abs": 1.6, "rel": 2.1, "hit": 6, "n": 11}, {"m": 2, "abs": -2.7, "rel": -0.9, "hit": 5, "n": 11}, {"m": 3, "abs": 0.7, "rel": 1.0, "hit": 7, "n": 11}, {"m": 4, "abs": 10.7, "rel": 7.2, "hit": 7, "n": 11}, {"m": 5, "abs": -0.9, "rel": -1.9, "hit": 5, "n": 11}, {"m": 6, "abs": 6.0, "rel": 4.4, "hit": 7, "n": 11}, {"m": 7, "abs": 0.8, "rel": -2.2, "hit": 5, "n": 11}, {"m": 8, "abs": 3.7, "rel": 2.5, "hit": 6, "n": 11}, {"m": 9, "abs": 0.5, "rel": 0.8, "hit": 5, "n": 10}, {"m": 10, "abs": 0.5, "rel": -0.4, "hit": 5, "n": 10}, {"m": 11, "abs": -1.3, "rel": -3.3, "hit": 5, "n": 10}, {"m": 12, "abs": 5.9, "rel": 4.3, "hit": 8, "n": 10}], "cy": [{"y": 2016, "b": -37.3, "n": 3.0, "rel": -40.3, "partial": false}, {"y": 2017, "b": 47.7, "n": 28.6, "rel": 19.1, "partial": false}, {"y": 2018, "b": -44.6, "n": 3.2, "rel": -47.8, "partial": false}, {"y": 2019, "b": -34.3, "n": 12.0, "rel": -46.3, "partial": false}, {"y": 2020, "b": -19.8, "n": 14.9, "rel": -34.7, "partial": false}, {"y": 2021, "b": 102.7, "n": 24.1, "rel": 78.6, "partial": false}, {"y": 2022, "b": 19.9, "n": 4.3, "rel": 15.6, "partial": false}, {"y": 2023, "b": 196.4, "n": 20.0, "rel": 176.4, "partial": false}, {"y": 2024, "b": 203.6, "n": 8.8, "rel": 194.8, "partial": false}, {"y": 2025, "b": -6.5, "n": 10.5, "rel": -17.0, "partial": false}, {"y": 2026, "b": 12.2, "n": -10.7, "rel": 22.8, "partial": true}], "dd": [{"co": "Hitachi Energy India", "peak": "Dec 2025", "fp": 44, "y1": 69}, {"co": "GE Vernova T&D India", "peak": "Nov 2025", "fp": 38, "y1": 47}, {"co": "HPL Electric & Power", "peak": "Aug 2024", "fp": -58, "y1": -41}, {"co": "Salzer Electronics", "peak": "Dec 2024", "fp": -66, "y1": -33}, {"co": "S&S Power Switchgear", "peak": "Dec 2024", "fp": -34, "y1": -20}, {"co": "Kaycee Industries", "peak": "Oct 2024", "fp": -83, "y1": -35}, {"co": "Veto Switchgears & Cables", "peak": "Aug 2024", "fp": -28, "y1": 12}, {"co": "Shivalic Power Control", "peak": "Jul 2024", "fp": -83, "y1": -34}, {"co": "Switching Technologies Gunther", "peak": "Dec 2024", "fp": 10, "y1": 81}], "win": {"FebMar": {"mean": -0.4, "median": -5.2, "hit": 5, "n": 11}, "AprJul": {"mean": 9.1, "median": 10.4, "hit": 7, "n": 11}, "AugSep": {"mean": 3.3, "median": 2.8, "hit": 6, "n": 10}, "OctDec": {"mean": 0.7, "median": 1.0, "hit": 5, "n": 10}, "SepNov": {"mean": -3.4, "median": -8.2, "hit": 4, "n": 10}, "JanMar": {"mean": 1.8, "median": -6.8, "hit": 5, "n": 11}}, "ytd": {"b": 12.2, "n": -10.7}, "notes": {"2016": "\u221237.3% against the Nifty's +3.0%, on a two-stock basket: GE's then T&amp;D arm \u221237% and Salzer \u221228% (HPL Electric listed only in October). Transmission ordering was weak and the equipment makers were fighting over thin tenders.", "2017": "+47.7% versus +28.6%. GE's T&amp;D arm +48%, HPL +46%, Salzer +38% in a broad small-cap rally.", "2018": "\u221244.6% versus +3.2%. HPL \u221259%, Salzer \u221242%, GE's T&amp;D arm \u221234%: the small-cap collapse on top of weak grid ordering.", "2019": "\u221234.3% versus +12.0%. GE's Indian T&amp;D business \u221250% on losses and restructuring; HPL \u221235%.", "2020": "\u221219.8% versus +14.9%, but the median member rose 14% (Salzer +17%, HPL +14%, GE's T&amp;D arm \u221220%); the basket figure is dragged down by monthly rebalancing and the \u00b150% cap through the March crash and rebound, so the median is the better guide. Hitachi Energy India, demerged from ABB India, listed in March.", "2021": "+102.7% versus +24.1%. S&amp;S Power Switchgear +270%, Hitachi Energy +95% \u2014 the start of the grid-equipment upcycle.", "2022": "+19.9% versus +4.3%. HPL +42%, Hitachi Energy +32%; GE's arm \u221214% before its turnaround.", "2023": "+196.4% versus +20.0%. S&amp;S Power Switchgear +712%, GE Vernova T&amp;D +336%, HPL +149% \u2014 the global grid shortage and HVDC ordering arrived together.", "2024": "+203.6% versus +8.8%. GE Vernova T&amp;D +312%, Salzer +240%, Hitachi Energy +174%: the second consecutive doubling-plus year.", "2025": "\u22126.5% versus +10.5%, median \u221225%. The multinationals held up (GE Vernova T&amp;D +51%, Hitachi +27%) while the small caps fell hard: Salzer \u221250%, S&amp;S \u221230%, HPL \u221225%.", "2026": "+12.2% against a Nifty \u221210.7%, median +10%. Hitachi Energy India +79% and GE Vernova T&amp;D +40% on record revenue; HPL Electric \u221230% and Salzer \u221220% as input costs squeezed domestic makers."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

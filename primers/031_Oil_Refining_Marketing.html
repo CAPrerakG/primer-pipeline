@@ -1,0 +1,605 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oil Refining and Marketing Primer</title>
+<meta name="description" content="Industry 31 of 278: India&#x27;s refiners and fuel retailers. Why a company can earn a $41 refining margin and still lose ₹1,873 cr, how LPG under-recoveries and frozen pump prices work, what the vanished Russian discount changes, and the five listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Oil Refining &amp; Marketing · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What comes out of a barrel</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where the business is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 31 of 278 · Oil &amp; Gas family, part 4 of 8</div>
+  <h1>Oil Refining &amp; Marketing</h1>
+  <p class="lede">The middle of the barrel's journey: buying crude, cracking it into petrol, diesel, LPG and jet fuel, and selling it through 90,000-odd retail outlets at a price the government effectively sets. It is two businesses bolted together — a cyclical processing business that is currently earning extraordinary margins, and a retail business that is currently losing ₹25 a litre on diesel. Understanding this section means never quoting the combined number.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 5 (3 marketers, 2 pure refiners)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Petroleum Products &amp; Trading</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">$41.4</div><div class="l">BPCL's Q1 FY27 gross refining margin per barrel — 8.5 times a year earlier</div></div>
+    <div class="stat"><div class="n">−₹25.2</div><div class="l">Marketing margin per litre of diesel in the same quarter; petrol was −₹7.7</div></div>
+    <div class="stat"><div class="n">₹62,000 cr</div><div class="l">Industry LPG under-recovery by August 2026, against ₹30,000 cr of approved compensation</div></div>
+    <div class="stat"><div class="n">₹510</div><div class="l">Loss per domestic LPG cylinder in the June quarter, against about ₹80 in March</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Two businesses, one share price</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Crude oil is useless as it comes out of the ground — it is a thick black soup of hundreds of different liquids mixed together. A refinery heats it in a tall tower so the lightest parts rise to the top and the heaviest sink, and takes each one off at a different height: cooking gas near the top, then petrol, then kerosene and jet fuel, then diesel, and tar at the bottom. The refinery earns the difference between what the soup cost and what the separated parts sell for. Then the same company sells the petrol and diesel at pumps. And here is the catch: the government does not like the pump price going up, so when crude becomes expensive the company must keep selling at the old price and lose money on every litre — even while its refinery is making more than ever.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Never look at this sector as one industry. It is a spread business and a regulated retail business, and in 2026 they are pointing in opposite directions.</p>
+    <ul>
+      <li><b>Refining is booming.</b> BPCL earned $41.4 a barrel, HPCL $23.8, and Chennai Petroleum's margin rose from $3.22 to $8.78 — the best refining environment in years.</li>
+      <li><b>Marketing is bleeding.</b> Diesel was sold at a loss of ₹25.2 a litre and petrol at ₹7.7, so HPCL lost ₹12,264 cr and BPCL ₹1,873 cr in a single quarter, against profits a year earlier.</li>
+      <li><b>LPG is the biggest hole:</b> about ₹510 of loss per cylinder in the June quarter against ₹80 in March, and an industry under-recovery of ₹62,000 cr by August — against ₹30,000 cr of compensation approved by the Cabinet, payable in twelve tranches.</li>
+      <li><b>The structural change is the Russian discount disappearing.</b> It had underwritten Indian refining economics for two years and, by August 2026, Urals was trading at or near parity with dated Brent.</li>
+      <li><b>The stocks have split accordingly:</b> Chennai Petroleum +69%, HPCL −28%.</li>
+    </ul>
+    <p>The pure refiners are the clean expression of a strong crack environment. The marketers are a bet on when the government lets prices rise, and that has always been a political question rather than a financial one.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What comes out of a barrel">
+  <p class="eyebrow">2 · What comes out of a barrel</p>
+  <h2>The product slate, from lightest to heaviest</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Who buys it</th><th>Pricing in India</th></tr></thead><tbody>
+    <tr><td>LPG</td><td>Cooking gas, propane and butane</td><td>Households, commercial kitchens</td><td>Domestic cylinders sold far below cost; the loss is the industry's biggest single problem</td></tr>
+    <tr><td>Petrol (gasoline)</td><td>Motor spirit for cars and two-wheelers</td><td>Retail customers (see 027)</td><td>Officially deregulated, in practice held steady by the marketers when crude spikes</td></tr>
+    <tr><td>Naphtha</td><td>Petrochemical feedstock</td><td>Crackers and fertiliser plants (see 002, 014)</td><td>Market-linked</td></tr>
+    <tr><td>Jet fuel (ATF)</td><td>Aviation turbine fuel</td><td>Airlines</td><td>Market-linked, revised fortnightly</td></tr>
+    <tr><td>Diesel (HSD)</td><td>The largest single product by volume</td><td>Trucking, farming, industry (see 019, 020)</td><td>Deregulated in October 2014, in practice frozen when crude rises</td></tr>
+    <tr><td>Fuel oil and bitumen</td><td>Bunker fuel, road surfacing</td><td>Shipping, road contractors</td><td>Market-linked</td></tr>
+    <tr><td>Petrochemical intermediates</td><td>Polymers, aromatics and speciality streams</td><td>Downstream chemicals (see 002)</td><td>The diversification every refiner is chasing</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A refinery is a mutton shop. You buy the whole animal at one price and sell it in cuts, each worth something different, and your profit is the difference between the carcass and the cuts — the "crack". Skill lies in buying a cheaper carcass than your competitor and getting more of the expensive cuts out of it. The Indian twist is that the government has decided two of the cuts are essential to the poor, and fixes their price at the counter while the carcass price floats.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a cargo of crude to a litre in a tank</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Crude sourcing</h4><div class="an">Buying the soup</div>Term and spot cargoes from West Asia, Africa, the Americas and, lately, Russia.<div class="who">The refiner's trading desk</div><div class="m">India imports about 90% of its crude (see 028)</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Refining</h4><div class="an">Splitting the barrel</div>Distillation, then cracking and treating to upgrade heavy fractions into light ones.<div class="who">IOC, BPCL, HPCL, MRPL, CPCL and private refiners</div><div class="m">Complexity decides how much value can be extracted</div></div>
+    <div class="stage"><div class="no">03</div><h4>Evacuation</h4><div class="an">Moving product</div>Product pipelines, rail rakes, coastal tankers and road tankers to depots.<div class="who">Pipeline owners, contractors (see 030)</div><div class="m">Pipelines are the cheapest mode by far</div></div>
+    <div class="stage"><div class="no">04</div><h4>Depots and terminals</h4><div class="an">Storage</div>Tank farms holding weeks of demand near consumption centres.<div class="who">The marketers</div><div class="m">Where inventory gains and losses are created</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Retail and bulk sales</h4><div class="an">The counter</div>Tens of thousands of fuel stations, LPG distributors, bulk and aviation customers.<div class="who">IOC, BPCL, HPCL and private retailers</div><div class="m">Where the pricing decision bites</div></div>
+    <div class="stage"><div class="no">06</div><h4>Compensation</h4><div class="an">The state settles up</div>Budgetary support for under-recoveries, paid in tranches and after the event.<div class="who">Government of India</div><div class="m">₹30,000 cr approved against ₹62,000 cr of LPG under-recovery</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Sourcing:</b> huge ships bring crude from other countries; the buyer tries to find the cheapest one that the refinery can handle.</li>
+    <li><b>Refining:</b> the crude is heated and separated into different fuels; clever equipment turns the cheap heavy leftovers into expensive light fuels.</li>
+    <li><b>Evacuation:</b> the fuels travel through underground pipes and trains to storage depots near cities.</li>
+    <li><b>Retail:</b> tankers take them to the pumps you see on the road.</li>
+    <li><b>Compensation:</b> when the government keeps the price low, it later pays the companies back — but less than the loss, and much later.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Model the two halves separately or you will get this sector wrong every time. <b>Refining</b> earns gross refining margin per barrel times throughput; it is a global spread business, and right now an exceptional one. <b>Marketing</b> earns a rupee margin per litre times volume; it is a regulated business whose margin is whatever is left between an international product price and an administered pump price. In a crude spike the first expands and the second goes negative — which is exactly why BPCL's record $41.4 margin produced a loss. The marketer's real asset is not the refinery but the retail network, and its real liability is political.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 5 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Indian Oil (~₹1.90 lakh cr)</td><td>The largest: refining, the country's biggest fuel retail network, product pipelines and a growing petrochemicals business.</td><td>Revenue ₹2,75,972 cr (+26.2%) and a standalone net loss of ₹2,662 cr. Throughput 19.2 million tonnes at 109.4% capacity utilisation. Reported gross refining margin $15.59 a barrel after a special additional excise duty, which management put at roughly $36 excluding that levy. High input costs and inventory losses did the damage; government LPG compensation gave partial relief. Stock −17.7%, −29% from its February 2024 peak.</td></tr>
+    <tr><td>BPCL (~₹1.31 lakh cr)</td><td>The second marketer, with refineries at Mumbai, Kochi and Bina, and the strongest recent operating record of the three.</td><td>Gross refining margin $41.4 a barrel, 8.5 times a year earlier — and a consolidated net loss of ₹1,873 cr against a ₹6,839 cr profit in Q1 FY26. Marketing margins were negative ₹25.2 a litre on diesel and ₹7.7 on petrol; cumulative LPG under-recovery ₹15,803 cr at 30 June. Stock −18.2%.</td></tr>
+    <tr><td>HPCL (~₹74,700 cr)</td><td>The third marketer, refining at Mumbai and Visakhapatnam with a large retail network and the thinnest cushion of the three.</td><td>Gross refining margin $23.8 a barrel, and a net loss of ₹12,264 cr against a ₹4,110 cr profit a year earlier — the largest loss in the group. LPG under-recoveries ₹16,405 cr. Stock −28.1%, the worst in the section.</td></tr>
+    <tr><td>Mangalore Refinery &amp; Petrochemicals (~₹29,100 cr)</td><td>An ONGC subsidiary and a pure refiner: it sells product, not petrol at pumps, so it keeps the crack without the retail liability.</td><td>+8.8% in 2026, though still −42% from its February 2024 peak.</td></tr>
+    <tr><td>Chennai Petroleum (~₹21,700 cr)</td><td>The other pure refiner, an Indian Oil subsidiary at Manali.</td><td>Standalone profit ₹1,017 cr against a ₹57 cr loss a year earlier, on revenue up 84.8% to ₹27,369 cr; gross refining margin $8.78 a barrel against $3.22. Profit still fell 27% sequentially. Stock +69.4% — the best in the family after the small independents.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The distinction that matters</span><p>Three of these companies are <b>oil marketing companies</b> — they refine and retail, and the state expects them to absorb price shocks. Two are <b>pure refiners</b> — MRPL and CPCL — which sell their output to the marketers and keep the refining margin without the retail obligation. In a normal year the difference is modest. In a crude spike it is the whole story: in 2026 the pure refiners are up 69% and 9%, and the marketers are down 18% to 28%. The same split happened in 2022, when Chennai Petroleum rose 101% while HPCL fell 20%. If you have a view on crude, this distinction is the position.</p></div>
+  <h3>Beyond the listed five</h3>
+  <p>Roughly half of India's refining capacity sits outside this section: Reliance's Jamnagar complex, the largest refining site in the world, and Nayara Energy, part-owned by Rosneft. Both are export-oriented and unconstrained by domestic retail pricing obligations, and they set the competitive standard for complexity and crude flexibility. Nayara's ownership has also made it a direct target of sanctions, which is one of the channels through which Western measures reach the Indian market.</p>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Two margins, moving in opposite directions</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Margin</th><th>Definition</th><th>Q1 FY27</th><th>What moves it</th></tr></thead><tbody>
+    <tr><td>Gross refining margin (GRM)</td><td>Value of products minus cost of crude, per barrel</td><td>BPCL $41.4, HPCL $23.8, IOC $15.59 after levy (~$36 before), CPCL $8.78</td><td>Product cracks, crude differentials, refinery complexity</td></tr>
+    <tr><td>Marketing margin</td><td>Pump price minus the cost of the product delivered to the pump, per litre</td><td>−₹25.2 on diesel, −₹7.7 on petrol</td><td>The gap between international product prices and administered retail prices</td></tr>
+    <tr><td>LPG under-recovery</td><td>Cost of a domestic cylinder minus its subsidised selling price</td><td>~₹510 per cylinder, versus ~₹80 in the March quarter</td><td>International LPG prices, the rupee, and the political willingness to raise cylinder prices</td></tr>
+    <tr><td>Inventory gain or loss</td><td>Revaluation of crude and product stock as prices move</td><td>A loss for IOC this quarter</td><td>Direction of crude within the quarter; weeks of stock held</td></tr>
+  </tbody></table></div>
+  <h3>Why a $41 refining margin produced a loss</h3>
+  <p>The arithmetic is worth doing once, because it explains the whole section. A refiner-marketer buys crude, converts it, and then sells a large share of the output through its own pumps. On the refining leg it books the international crack, which in the June quarter was exceptional. On the marketing leg it sells at a pump price that has not moved, and books the difference between that price and the international product value as its margin — which, with diesel at −₹25.2 a litre, was deeply negative. Because the marketers sell billions of litres, a negative rupee-per-litre margin overwhelms even an $41 barrel margin. HPCL, with the largest retail exposure relative to its refining capacity, lost the most: ₹12,264 cr in three months. MRPL and CPCL, which have no retail obligation, simply kept the crack.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Imagine a bakery that mills its own flour. The mill is having a wonderful year, because flour prices have doubled. But the bakery must sell bread at last year's price by government order. The better the mill does, the worse the bakery does, and the owner reports one combined number that satisfies nobody. The way out is either to let bread prices rise, or for the state to write a cheque — which is exactly the ₹30,000 cr LPG compensation, and it covers less than half the hole.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Crude oil</td><td>Around 90% of the cost of a litre before tax</td><td>Brent averaging $88 and above $100 in September (see 028)</td></tr>
+    <tr><td>Crude differentials and discounts</td><td>The difference between what India pays and the benchmark is pure margin</td><td>The Russian discount, worth two years of structural advantage, had vanished by August 2026 with Urals at or near parity to dated Brent</td></tr>
+    <tr><td>The rupee</td><td>Crude is paid for in dollars, fuel is sold in rupees</td><td>Rupee weakness compounded the Q1 FY27 losses</td></tr>
+    <tr><td>Refinery complexity</td><td>Secondary units decide how much heavy crude can be processed into light products</td><td>The structural advantage of Jamnagar and the reason CPCL's $8.78 trails BPCL's $41.4</td></tr>
+    <tr><td>Product pipelines and depots</td><td>The cheapest way to move fuel to market</td><td>Continuous expansion (see 030)</td></tr>
+    <tr><td>Retail network</td><td>Tens of thousands of outlets; the real competitive asset in marketing</td><td>Also the conduit for the losses when prices are held</td></tr>
+    <tr><td>Government compensation</td><td>The mechanism that settles under-recoveries</td><td>₹30,000 cr approved, in twelve tranches, against ₹62,000 cr outstanding in August</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Elections, maintenance and the monsoon</h2>
+  <ul>
+    <li><b>The election calendar:</b> the most reliable predictor of pump-price behaviour in India. Prices are rarely raised in the run-up to national or major state elections; 2018 and 2021 are the clearest examples.</li>
+    <li><b>Refinery turnarounds:</b> planned maintenance shutdowns, usually scheduled in low-demand months, which cut throughput for a quarter.</li>
+    <li><b>The monsoon (June–September):</b> diesel demand softens with construction and transport activity.</li>
+    <li><b>The winter and harvest quarters:</b> diesel demand peaks with agricultural pumping and freight; LPG demand peaks in winter.</li>
+    <li><b>Fortnightly ATF revisions and daily retail revisions:</b> the formal mechanism, which functions normally until crude spikes and then quietly stops.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 5 names (Indian Oil Corp. Ltd., Bharat Petroleum Corporation Limited, Hindustan Petroleum Corporation Limited, Mangalore Refinery &amp; Petrochemicals Ltd., Chennai Petroleum Corporation Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +3.6 pts (beat in 10 of 15 years); Jan +3.2 pts (beat in 11 of 15 years); Mar +2.0 pts (beat in 7 of 15 years).</li><li><b>Weakest months:</b> Feb -1.1 pts (beat in 5 of 15 years); Aug -0.9 pts (beat in 7 of 16 years); Oct -0.6 pts (beat in 8 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 7 of 15 years (median -0.6 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +2.6 pts); Aug–Sep beat the Nifty in 6 of 14 years (median -2.0 pts); Oct–Dec beat the Nifty in 7 of 14 years (median +0.1 pts); Sep–Nov beat the Nifty in 6 of 14 years (median -2.3 pts); Jan–Mar beat the Nifty in 8 of 15 years (median +1.8 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +0.6 points.</p><p><b>Reading it:</b> weak and unreliable, as you would expect from a group whose profit is decided by a government pricing decision. January is the best month (11 of 15 years, +3.2 points) and April second (10 of 15); April–July works 10 of 15 but with a median of only +2.6 and two catastrophic failures (2013 −29.8, 2018 −24.5). The post-monsoon stretch is poor — August–September 6 of 14 (median −2.0) and September–November 6 of 14 (median −2.3). Nothing here survives a policy event, and in this industry policy events are the norm.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed five times</b>, and two of them were disasters: 2013 (−29.8), when the rupee collapsed and under-recoveries exploded, and 2018 (−24.5), when crude ran to $86 before a general election.</li>
+    <li><b>The best April–July runs were 2015 (+45.0) and 2016 (+25.2)</b> — the two years of cheap crude and freshly deregulated diesel.</li>
+    <li><b>January is the most consistent month</b> (11 of 15), helped by December-quarter results and by budget expectations.</li>
+    <li><b>September–November is the weakest window</b> (6 of 14, median −2.3), with 2024 (−17.6), 2020 (−15.3) and 2022 (−13.5) the worst.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Barely. The seasonal signal in this section is weak because the dominant variable is a pricing decision, not a season. The more useful conditional rule is the one the record keeps repeating: when crude is rising fast, own the pure refiners and avoid the marketers; when crude is falling while pump prices stay put, own the marketers, because that is when the payback comes. 2022 and 2026 are the first case; 2023, when the basket rose 104%, is the second.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Product cracks:</b> diesel, petrol and jet fuel spreads over crude, set in Singapore and the Gulf.</li>
+    <li><b>Crude differentials:</b> the discount on the grades India can buy — the Russian advantage, now gone.</li>
+    <li><b>The retail pricing decision:</b> whether pump prices are allowed to follow international prices. The single largest swing factor in the marketers' profit.</li>
+    <li><b>LPG under-recovery and compensation:</b> ₹62,000 cr outstanding against ₹30,000 cr approved.</li>
+    <li><b>The rupee:</b> a dollar cost base against rupee revenue.</li>
+    <li><b>Inventory effects:</b> large stock positions revalued with every move in crude.</li>
+    <li><b>Demand growth:</b> India's fuel consumption is still rising, unlike most large markets.</li>
+    <li><b>Levies:</b> excise duty, and the special additional excise duty that reduced IOC's reported margin from roughly $36 to $15.59.</li>
+  </ol>
+  <div class="box warn"><span class="tag">The windfall levy is back — on product exports</span><p>The special additional excise duty, introduced in July 2022, was withdrawn in December 2024. It was re-imposed on 27 March 2026, after the West Asia conflict began, at ₹21.5 a litre on diesel exports and ₹29.5 on ATF exports, and has been reset every fortnight since — raised in early August (diesel to ₹25.5) and cut in mid-September to ₹20 on diesel, ₹15 on ATF and ₹0.5 on petrol. This time it applies to <b>exports of petrol, diesel and ATF only, not to domestically produced crude</b>, so 028's statement that the crude levy ended in December 2024 still holds for ONGC and Oil India. For refiners it is a direct cut to the margin on every exported litre: Indian Oil reported a GRM of $15.59 a barrel "net of SAED" against about $36 before it. Because the rate changes every two weeks, check the latest notification before modelling a quarter.</p></div>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of all five members, which have full history. Monthly returns capped at ±50%, price only; 2026 to 18 September. Note that the equal weighting gives the two small pure refiners 40% of the basket, which is why the basket is flat in 2026 while the median stock is down 18%.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the Indian fuel cycle</h3>
+  <ol>
+    <li><b>Crude rises.</b> Refining margins expand; pump prices are held; marketing margins turn negative. The marketers report losses and de-rate — 2018, 2022, 2026.</li>
+    <li><b>The state part-compensates</b>, late and partially, through budgetary support: ₹30,000 cr against ₹62,000 cr today.</li>
+    <li><b>Crude falls, and pump prices stay where they are.</b> Marketing margins become extraordinary and the losses are recovered — 2015, 2023.</li>
+    <li><b>Normality returns</b> until the next spike, and the cycle repeats with different numbers.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The pure refiners are the hedge.</b> In both crude spikes in this record — 2022 and 2026 — Chennai Petroleum rose (+101%, +69%) while HPCL fell (−20%, −28%).</li>
+    <li><b>Deregulation was the single biggest structural event.</b> Diesel was freed in October 2014; the basket rose 54% that year and 70% the next.</li>
+    <li><b>Election years suppress pricing freedom.</b> 2018 and 2021 both show the marketers underperforming despite reasonable underlying conditions.</li>
+    <li><b>The payback is real but delayed.</b> The 104% year of 2023 followed directly from the frozen prices of 2022.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>India refines for the world, and buys from whoever is cheapest</h2>
+  <p>India is one of the world's largest refining hubs and a substantial net exporter of refined products, particularly diesel and jet fuel to Europe. That position was hugely strengthened after 2022, when Russian crude became available at a discount that western buyers would not take: Indian refiners bought the crude, processed it, and sold the products into markets that had sanctioned the crude but not the products. Volumes reached roughly 1.9 million barrels a day by May 2026, having peaked near 2.3 million as refiners front-loaded purchases before a waiver expired. Then the arbitrage closed. By August 2026 the discount had been eliminated — Urals trading at or near parity with dated Brent — after Black Sea disruption, stronger Chinese buying and a sharp fall in Indian purchases. February 2026's imports of 1.06 million barrels a day were the lowest since September 2022.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Force</th><th>What it does</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>Singapore and Gulf product markets</td><td>Set the crack spreads Indian refiners earn</td><td>The benchmark for every GRM quoted here</td></tr>
+    <tr><td>Russian crude and the discount</td><td>Underwrote Indian refining economics for two years</td><td>Gone as of August 2026 — a structural margin headwind</td></tr>
+    <tr><td>US sanctions on Rosneft and Lukoil</td><td>Threaten the supply chain and the financing of Russian barrels</td><td>Temporary licences allowed already-loaded cargoes to complete</td></tr>
+    <tr><td>EU measures on products refined from Russian crude</td><td>Restrict the export route that made the trade profitable</td><td>Directly hits India's petroleum product exports</td></tr>
+    <tr><td>Chinese refining capacity</td><td>The competing export supply</td><td>Sets the ceiling on Asian cracks</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From subsidised distribution to deregulated retail (2010–2014):</b> petrol was freed in 2010 and diesel in October 2014, turning the marketers into real businesses — until crude spikes revealed the freedom was conditional.</li>
+    <li><b>From simple to complex refining:</b> investment in secondary processing let Indian refiners buy heavier, cheaper crude — the foundation of the export position.</li>
+    <li><b>From diversified sourcing to Russian dependence and back (2022–2026):</b> a four-year round trip that gave Indian refining an extraordinary cost advantage and then took it away.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where the business is going">
+  <p class="eyebrow">12 · Where the business is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Refinery-to-petrochemical integration:</b> converting more of the barrel into polymers and aromatics rather than fuels, the main defence against peak fuel demand (see 002).</li>
+    <li><b>Higher complexity:</b> more cracking and coking capacity to handle heavier, cheaper crude slates.</li>
+    <li><b>Ethanol blending:</b> a material and growing share of the petrol pool, which displaces refinery volume and changes the economics of the pump.</li>
+    <li><b>Retail diversification:</b> convenience formats, electric-vehicle charging (see 022) and non-fuel income at the forecourt.</li>
+    <li><b>Compressed and liquefied natural gas retail:</b> the marketers are also city gas licensees and CNG retailers (see 034).</li>
+    <li><b>Green hydrogen and biofuels at refineries:</b> early, capital-intensive, and driven by mandates rather than returns.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Retail price deregulation</td><td>Formally in force for petrol (2010) and diesel (October 2014)</td><td>Suspended in practice whenever crude spikes; the central risk in owning a marketer</td></tr>
+    <tr><td>Domestic LPG subsidy</td><td>Cylinders sold far below cost; loss about ₹510 per cylinder in the June quarter</td><td>₹62,000 cr of industry under-recovery by August 2026</td></tr>
+    <tr><td>LPG compensation</td><td>Cabinet approved ₹30,000 cr to IOCL, BPCL and HPCL, payable in twelve tranches</td><td>Covers under half the hole, and arrives late</td></tr>
+    <tr><td>Aadhaar authentication for subsidised refills</td><td>Mandatory from 1 October 2026</td><td>Aims to stop diversion of subsidised cylinders to commercial use</td></tr>
+    <tr><td>Special additional excise duty</td><td>Reducing IOC's reported GRM from roughly $36 to $15.59 a barrel in Q1 FY27</td><td>The state's share of the refining windfall; see the note in section 9</td></tr>
+    <tr><td>Excise duty and state VAT</td><td>The largest component of the retail price after the product itself</td><td>Changes alter demand and the political room to raise prices</td></tr>
+    <tr><td>Sanctions on Russian entities</td><td>US measures on Rosneft and Lukoil; EU measures on products refined from Russian crude</td><td>Constrain both the crude supply and the export route</td></tr>
+    <tr><td>Ethanol blending programme</td><td>Rising blend rates</td><td>Displaces petrol volume and supports sugar (a separate industry)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: the best refining year and the worst marketing year at once</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Refining margins</td><td>Exceptional</td><td>BPCL $41.4/bbl, HPCL $23.8, IOC ~$36 before levy, CPCL $8.78 against $3.22</td></tr>
+    <tr><td>Marketing margins</td><td>Deeply negative</td><td>−₹25.2 a litre on diesel, −₹7.7 on petrol</td></tr>
+    <tr><td>Reported profits</td><td>Large losses at the marketers</td><td>HPCL −₹12,264 cr, BPCL −₹1,873 cr, IOC −₹2,662 cr standalone</td></tr>
+    <tr><td>LPG</td><td>The structural hole</td><td>~₹510 per cylinder of loss; ₹62,000 cr under-recovery in August against ₹30,000 cr approved</td></tr>
+    <tr><td>Crude sourcing</td><td>Advantage lost</td><td>Russian discount eliminated by August; Urals at or near parity with dated Brent</td></tr>
+    <tr><td>Stocks</td><td>Split</td><td>CPCL +69%, MRPL +9%; HPCL −28%, BPCL −18%, IOC −18%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Everything in this section turns on one question: when do pump prices move? The refining half is performing as well as it ever has, and if the marketers were allowed to pass through international product prices, the group's earnings would be extraordinary rather than negative. They are not being allowed to, and the history in this primer says that changes only after crude falls — at which point prices stay put and the payback arrives, as it did in 2015 and 2023. That is a genuine, repeatable pattern, but it requires being early into a losing business and waiting for a political decision, which is a different discipline from owning a compounder. The cleaner expressions today are the two pure refiners, which capture the crack with no retail liability — though note that CPCL's 69% rise has already done much of that work, and that the vanished Russian discount removes a structural support the whole industry had relied on. Anyone quoting this sector's flat basket return as evidence it is holding up is quoting an equal weighting that gives 40% of the basket to the two smallest companies.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Singapore diesel and petrol cracks</td><td>Daily</td><td>The refining margin, before India-specific effects</td></tr>
+    <tr><td>Retail price revisions at the pump</td><td>Daily</td><td>The single most important variable for the marketers</td></tr>
+    <tr><td>Implied marketing margin per litre</td><td>Broker estimates, weekly</td><td>Turns the pump price into a profit forecast</td></tr>
+    <tr><td>LPG under-recovery and compensation tranches</td><td>Monthly; PPAC data</td><td>₹62,000 cr outstanding, ₹30,000 cr approved</td></tr>
+    <tr><td>Urals differential to dated Brent</td><td>Weekly</td><td>Whether the discount returns</td></tr>
+    <tr><td>Refinery throughput and utilisation</td><td>Quarterly; monthly PPAC data</td><td>Volume against which margins are earned</td></tr>
+    <tr><td>Product export volumes and EU measures</td><td>Monthly</td><td>The outlet for surplus diesel</td></tr>
+    <tr><td>The election calendar</td><td>Ongoing</td><td>The best available predictor of pricing freedom</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else this shows up</h2>
+  <ul>
+    <li><b>Oil &amp; gas exploration</b> (028): the mirror image — producers gain from the crude price that costs refiners.</li>
+    <li><b>Petroleum products &amp; trading</b> (032) and <b>lubricants</b> (035): the specialty streams off the same barrel.</li>
+    <li><b>Petrochemicals &amp; polymers</b> (002): where refiners are pushing the barrel to escape fuel demand risk.</li>
+    <li><b>City gas distribution</b> (034): the marketers are also CNG retailers and city gas licensees.</li>
+    <li><b>Oil &amp; gas EPC</b> (030): refinery expansions and product pipelines.</li>
+    <li><b>Commercial vehicles</b> (019) and <b>auto dealerships</b> (027): diesel demand and the forecourt economy.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What was the marketing margin per litre on petrol and diesel through the quarter, and where is it today?</li>
+    <li>What is the cumulative LPG under-recovery, and how much compensation has actually been received rather than approved?</li>
+    <li>What is the gross refining margin before and after levies, and what is the core margin excluding inventory effects?</li>
+    <li>What was the inventory gain or loss, and how many days of crude and product are held?</li>
+    <li>What share of the crude slate was Russian this quarter, and what discount was realised?</li>
+    <li>What is the current crude slate flexibility if discounted barrels are unavailable?</li>
+    <li>What is the capital expenditure plan, and how is it funded given the quarter's losses?</li>
+    <li>What is the petrochemical share of the barrel today and in three years?</li>
+    <li>(Pure refiners) What is the pricing formula with the parent marketer, and does it move with international cracks?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Borrowing rising to fund working capital while losses continue.</li>
+    <li>Compensation announced but not received, counted as good news twice.</li>
+    <li>Capital expenditure deferred to protect dividends, which stores up competitive weakness.</li>
+    <li>A refining margin flattered by inventory gains rather than cracks.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"High crude is good for refiners."</td><td>For pure refiners, often. For refiner-marketers, no: BPCL earned $41.4 a barrel and lost ₹1,873 cr, because the retail leg was selling diesel at −₹25.2 a litre.</td></tr>
+    <tr><td>"Fuel pricing is deregulated in India."</td><td>Formally since 2010 and 2014. In practice pump prices stop moving whenever crude spikes, which is precisely when the mechanism is needed.</td></tr>
+    <tr><td>"The government compensates the losses."</td><td>Partially and late: ₹30,000 cr approved in twelve tranches against ₹62,000 cr of LPG under-recovery alone, with nothing for negative auto-fuel margins.</td></tr>
+    <tr><td>"The Russian discount is a permanent edge."</td><td>It lasted two years and was gone by August 2026, with Urals at or near parity to dated Brent. Structural advantages built on sanctions arbitrage are rented, not owned.</td></tr>
+    <tr><td>"The sector held up this year — it is flat against a falling market."</td><td>The equal-weighted basket is flat; the median stock is −18%. Two small pure refiners are carrying a basket that gives them 40% of the weight.</td></tr>
+    <tr><td>"Electric vehicles make refining a value trap."</td><td>Indian fuel demand is still growing, and the sector's answer is petrochemical integration. The nearer risk is regulatory pricing, not demand destruction.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. GRM, under-recovery" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Refining</h3><dl>
+    <dt>Refinery</dt><dd>A plant that separates and converts crude oil into usable fuels and feedstocks.</dd>
+    <dt>Atmospheric distillation</dt><dd>The first separation of crude by boiling point in a tall column.</dd>
+    <dt>Cracking</dt><dd>Breaking heavy molecules into lighter, more valuable ones; the heart of a complex refinery.</dd>
+    <dt>Fluid catalytic cracker (FCC)</dt><dd>The unit that converts heavy gas oil mainly into petrol.</dd>
+    <dt>Hydrocracker</dt><dd>A unit that uses hydrogen to convert heavy feed into diesel and jet fuel.</dd>
+    <dt>Coker</dt><dd>A unit that converts the heaviest residue into lighter products and petroleum coke.</dd>
+    <dt>Complexity (Nelson index)</dt><dd>A measure of a refinery's secondary processing capability; higher complexity means cheaper crude can be used.</dd>
+    <dt>Throughput</dt><dd>Crude processed in a period. Indian Oil ran 19.2 million tonnes in Q1 FY27.</dd>
+    <dt>Capacity utilisation</dt><dd>Throughput against nameplate capacity; IOC ran at 109.4%.</dd>
+    <dt>Distillate yield</dt><dd>The share of output that is middle distillates such as diesel and jet fuel (see 028).</dd>
+    <dt>Turnaround</dt><dd>A planned maintenance shutdown, which removes a refinery's output for weeks.</dd>
+    <dt>Crude slate</dt><dd>The mix of crude grades a refinery processes.</dd>
+    <dt>Sour and sweet crude</dt><dd>High-sulphur and low-sulphur crude; sour grades are cheaper and need more processing.</dd>
+    <dt>Heavy and light crude</dt><dd>Denser or lighter crude; heavier grades yield less light product without conversion units.</dd>
+  </dl>
+  <h3>Margins and pricing</h3><dl>
+    <dt>Gross refining margin (GRM)</dt><dd>Value of products minus cost of crude, per barrel. BPCL reported $41.4 in Q1 FY27.</dd>
+    <dt>Crack spread</dt><dd>The margin on one product over crude, such as the diesel crack.</dd>
+    <dt>Benchmark GRM</dt><dd>The regional margin (typically Singapore) against which a refiner's own margin is compared.</dd>
+    <dt>Marketing margin</dt><dd>Pump price minus the delivered cost of the product, per litre. It was −₹25.2 on diesel in Q1 FY27.</dd>
+    <dt>Under-recovery</dt><dd>The shortfall when a regulated product is sold below cost; ₹62,000 cr on LPG by August 2026.</dd>
+    <dt>Compensation / budgetary support</dt><dd>Government payments to cover under-recoveries; ₹30,000 cr approved, in twelve tranches.</dd>
+    <dt>Inventory gain or loss</dt><dd>Revaluation of crude and product stock as prices move within a quarter.</dd>
+    <dt>Trade parity pricing</dt><dd>The formula that values domestic products against import and export parity.</dd>
+    <dt>Special additional excise duty (SAED)</dt><dd>The windfall levy. From July 2022 to December 2024 it applied to domestic crude and to fuel exports; since 27 March 2026 it has applied again to exports of petrol, diesel and ATF only, reset every fortnight. It reduced IOC's reported GRM by roughly $20 a barrel this quarter (see the note in section 9).</dd>
+    <dt>Excise duty and VAT</dt><dd>Central and state taxes that make up a large share of the retail price.</dd>
+    <dt>Dated Brent and Urals</dt><dd>The North Sea benchmark and the Russian export grade; their differential was the Indian refiners' advantage until August 2026.</dd>
+    <dt>Differential / discount</dt><dd>The price of a crude grade relative to the benchmark — pure margin for the buyer.</dd>
+  </dl>
+  <h3>Products and market</h3><dl>
+    <dt>LPG</dt><dd>Liquefied petroleum gas, sold in subsidised domestic cylinders and at market prices commercially.</dd>
+    <dt>HSD</dt><dd>High-speed diesel, India's largest fuel by volume.</dd>
+    <dt>MS</dt><dd>Motor spirit, or petrol.</dd>
+    <dt>ATF</dt><dd>Aviation turbine fuel, priced fortnightly.</dd>
+    <dt>Naphtha</dt><dd>A light stream used as petrochemical feedstock (see 002).</dd>
+    <dt>Bitumen</dt><dd>The heavy residue used for road surfacing.</dd>
+    <dt>Petcoke</dt><dd>Solid carbon residue from a coker, used as fuel in cement and other industries.</dd>
+    <dt>Oil marketing company (OMC)</dt><dd>A refiner that also retails fuel and is expected to absorb price shocks; IOC, BPCL and HPCL.</dd>
+    <dt>Pure refiner</dt><dd>A refiner with no retail obligation, selling product to marketers; MRPL and CPCL.</dd>
+    <dt>Retail outlet</dt><dd>A fuel station; the marketers' principal competitive asset (see 027).</dd>
+    <dt>Ethanol blending</dt><dd>Mixing ethanol into petrol, which displaces refinery volume.</dd>
+    <dt>PPAC</dt><dd>The Petroleum Planning and Analysis Cell, which publishes India's consumption, import and subsidy data.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Indian crude basket, Brent, price-taker</dt><dd>See 028.</dd>
+    <dt>Operating leverage</dt><dd>See 019.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. How did BPCL earn $41.4 a barrel and still lose ₹1,873 cr?</summary><p>The marketing leg. It sold diesel at a loss of ₹25.2 a litre and petrol at ₹7.7, and retail volumes are large enough to overwhelm an exceptional refining margin.</p></details>
+  <details class="q"><summary>2. What is the difference between an OMC and a pure refiner?</summary><p>An OMC refines and retails and is expected to absorb price shocks; a pure refiner like MRPL or CPCL sells product to the marketers and keeps the crack without the retail obligation.</p></details>
+  <details class="q"><summary>3. What happened to the LPG loss per cylinder this year?</summary><p>It rose from about ₹80 in the March quarter to about ₹510 in the June quarter, taking industry under-recovery to ₹62,000 cr by August.</p></details>
+  <details class="q"><summary>4. How much compensation has been approved, and on what terms?</summary><p>₹30,000 cr to IOCL, BPCL and HPCL, payable in twelve tranches — less than half the LPG hole, and nothing for negative auto-fuel margins.</p></details>
+  <details class="q"><summary>5. Why was 2023 such a good year for this sector?</summary><p>Crude fell while pump prices stayed where they were, so marketing margins expanded enormously. The basket rose 104% against the Nifty's 20%.</p></details>
+  <details class="q"><summary>6. What was the Russian discount, and what happened to it?</summary><p>A structural cost advantage from buying sanctioned crude cheaply for two years. By August 2026 it was eliminated, with Urals at or near parity to dated Brent.</p></details>
+  <details class="q"><summary>7. Why is the 2026 basket return misleading?</summary><p>The basket is flat but the median stock is −18%: equal weighting gives the two small pure refiners 40% of the weight, and they are the only risers.</p></details>
+  <details class="q"><summary>8. What was the single most important structural reform for this sector?</summary><p>Diesel deregulation in October 2014, which converted the marketers from subsidy conduits into businesses with a margin. The basket rose 54% that year and 70% the next.</p></details>
+  <details class="q"><summary>9. Why did IOC report a GRM of $15.59 when peers reported far more?</summary><p>It was struck net of a special additional excise duty; management put the normalised figure at roughly $36 a barrel.</p></details>
+  <details class="q"><summary>10. What is the best single predictor of a marketer's profit?</summary><p>Whether pump prices are being allowed to move — which historically tracks the election calendar more closely than it tracks crude.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of all five members versus NSE:NIFTY, 2012 to 18 September 2026. The median is quoted alongside the basket wherever the two diverge.</li>
+    <li>Indian Oil: <a href="https://indianmasterminds.com/news/indian-oil-q1-fy27-results-revenue-net-loss-lpg-compensation-220710/">Q1 FY27 revenue, loss and LPG compensation</a>; <a href="https://www.investing.com/news/company-news/indian-oil-q1-fy27-slides-show-sharp-loss-amid-crude-volatility-93CH-4829578">GRM net of SAED, throughput and utilisation</a>; <a href="https://www.iocl.com/uploads/IOCLTranscriptQ126-27.pdf">the company's own earnings call transcript</a>.</li>
+    <li>BPCL and HPCL: <a href="https://www.business-standard.com/companies/news/bpcl-hpcl-slip-into-losses-in-q1-amid-west-asia-crisis-126072201500_1.html">Q1 FY27 losses, GRMs and the West Asia context</a>; <a href="https://www.tribuneindia.com/news/bpcl-earnings/weak-marketing-margins-drag-down-bpcl-and-hpcl-q1-earnings">negative marketing margins per litre and LPG under-recoveries</a>; <a href="https://www.psuconnect.in/financial/hpcl-bpcl-q1-fy27-results-revenue-growth-but-heavy-losses">the loss detail</a>; <a href="https://upstox.com/news/market-news/stocks/ioc-hpcl-bpcl-q1-fy-27-fuel-losses-could-wipe-out-entire-fy-26-profits-of-psu-om-cs-check-the-math/article-193497/">the scale of fuel losses against FY26 profits</a>.</li>
+    <li>Chennai Petroleum: <a href="https://www.business-standard.com/markets/capital-market-news/chennai-petroleum-corporation-slips-after-q1-pat-falls-27-qoq-to-rs-1-017-crore-126072300791_1.html">Q1 FY27 profit, revenue and the sequential fall</a>; <a href="https://indianmasterminds.com/news/cpcl-q1-fy27-results-net-profit-grm-revenue-growth-218802/">its GRM of $8.78 against $3.22</a>.</li>
+    <li>LPG and compensation: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2154118">the Cabinet's ₹30,000 cr approval, in twelve tranches</a>; <a href="https://www.angelone.in/news/economy/omcs-lpg-under-recovery-increases-to-62-000-crore-in-august-2026">under-recovery reaching ₹62,000 cr in August</a>; <a href="https://ppac.gov.in/subsidy/subsidies-under-recoveries-to-oil-marketing-companies-omcs-on-sale-of-sensitive-petroleum-products-rs-crore">PPAC's subsidy and under-recovery series</a>; <a href="https://news24online.com/india/lpg-new-rule-you-may-lose-your-subsidy-from-october-1-if-you-fail-to-complete-this-process-check-what-consumers-need-to-do/928504">Aadhaar authentication from 1 October 2026</a>.</li>
+    <li>Crude sourcing and sanctions: <a href="https://discoveryalert.com/analysis/russian-crude-discount-indian-refiners-august-2026/">the disappearance of the Russian discount</a>; <a href="https://discoveryalert.com/indian-refiners-buy-russian-crude-2026-sanctions-policy/">import volumes and the waiver</a>; <a href="https://gulfnews.com/business/energy/us-sanctions-on-rosneft-lukoil-threaten-indian-refiners-russian-oil-supply-1.500318540">US sanctions on Rosneft and Lukoil</a>; <a href="https://www.deccanherald.com/business/eu-s-new-sanctions-on-russia-to-hit-india-s-petroleum-exports-3639414">EU measures on Indian product exports</a>.</li>
+    <li>Windfall levy on fuel exports: <a href="https://www.forbesindia.com/article/news/india-raises-windfall-tax-on-fuel-exports-diesel-duty-jumps-sharply/2996671/1">August 2026 increase</a>; <a href="https://www.businesstoday.in/india/story/centre-slashes-windfall-tax-on-export-of-petrol-diesel-and-aviation-turbine-fuel-556019-2026-09-17">September 2026 cut</a>; <a href="https://cleartax.in/s/windfall-tax">scope: product exports, not domestic crude</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 1.4}, {"y": 2013, "v": -8.3}, {"y": 2014, "v": 7.1}, {"y": 2015, "v": 6.7}, {"y": 2016, "v": -1.1}, {"y": 2017, "v": -2.9}, {"y": 2018, "v": -7.2}, {"y": 2019, "v": 8.4}, {"y": 2020, "v": -7.7}, {"y": 2021, "v": -0.6}, {"y": 2022, "v": -5.3}, {"y": 2023, "v": -1.9}, {"y": 2024, "v": 10.6}, {"y": 2025, "v": 5.0}, {"y": 2026, "v": 2.1}], "AprJul": [{"y": 2012, "v": -2.0}, {"y": 2013, "v": -29.8}, {"y": 2014, "v": 12.6}, {"y": 2015, "v": 45.0}, {"y": 2016, "v": 25.2}, {"y": 2017, "v": -2.3}, {"y": 2018, "v": -24.5}, {"y": 2019, "v": -11.6}, {"y": 2020, "v": 0.2}, {"y": 2021, "v": 4.6}, {"y": 2022, "v": 16.1}, {"y": 2023, "v": 20.8}, {"y": 2024, "v": 0.9}, {"y": 2025, "v": 5.3}, {"y": 2026, "v": 2.6}], "AugSep": [{"y": 2012, "v": -11.0}, {"y": 2013, "v": -4.7}, {"y": 2014, "v": 8.7}, {"y": 2015, "v": -1.4}, {"y": 2016, "v": 5.6}, {"y": 2017, "v": 8.3}, {"y": 2018, "v": -5.1}, {"y": 2019, "v": 1.3}, {"y": 2020, "v": -19.6}, {"y": 2021, "v": -2.6}, {"y": 2022, "v": -11.4}, {"y": 2023, "v": 4.6}, {"y": 2024, "v": -5.0}, {"y": 2025, "v": 6.3}], "OctDec": [{"y": 2012, "v": -1.4}, {"y": 2013, "v": 7.1}, {"y": 2014, "v": -14.9}, {"y": 2015, "v": 7.0}, {"y": 2016, "v": 10.8}, {"y": 2017, "v": -4.9}, {"y": 2018, "v": 1.6}, {"y": 2019, "v": -18.0}, {"y": 2020, "v": 4.2}, {"y": 2021, "v": -8.1}, {"y": 2022, "v": -3.4}, {"y": 2023, "v": 30.8}, {"y": 2024, "v": -12.5}, {"y": 2025, "v": 6.8}], "SepNov": [{"y": 2012, "v": -11.4}, {"y": 2013, "v": 6.9}, {"y": 2014, "v": -2.1}, {"y": 2015, "v": 2.1}, {"y": 2016, "v": 16.4}, {"y": 2017, "v": -13.0}, {"y": 2018, "v": -2.5}, {"y": 2019, "v": -5.4}, {"y": 2020, "v": -15.3}, {"y": 2021, "v": 0.0}, {"y": 2022, "v": -13.5}, {"y": 2023, "v": 31.7}, {"y": 2024, "v": -17.6}, {"y": 2025, "v": 18.6}], "JanMar": [{"y": 2012, "v": 4.8}, {"y": 2013, "v": -0.5}, {"y": 2014, "v": 14.7}, {"y": 2015, "v": 16.2}, {"y": 2016, "v": -0.1}, {"y": 2017, "v": 4.3}, {"y": 2018, "v": -12.5}, {"y": 2019, "v": -0.8}, {"y": 2020, "v": -9.8}, {"y": 2021, "v": -0.1}, {"y": 2022, "v": 1.8}, {"y": 2023, "v": 7.2}, {"y": 2024, "v": 32.5}, {"y": 2025, "v": -6.0}, {"y": 2026, "v": 4.5}]}, "my": {"1": {"2012": 3.2, "2013": 9.2, "2014": 6.7, "2015": 8.8, "2016": 0.9, "2017": 7.0, "2018": -5.9, "2019": -7.9, "2020": -3.4, "2021": 0.5, "2022": 7.5, "2023": 9.4, "2024": 19.3, "2025": -10.4, "2026": 2.7}, "2": {"2012": 4.1, "2013": -4.6, "2014": -4.4, "2015": -2.7, "2016": -3.9, "2017": 2.8, "2018": -4.3, "2019": -1.8, "2020": -6.6, "2021": 4.6, "2022": -7.8, "2023": -7.4, "2024": 13.8, "2025": -8.9, "2026": 9.7}, "3": {"2012": -2.5, "2013": -4.1, "2014": 11.9, "2015": 9.4, "2016": 3.6, "2017": -5.4, "2018": -3.3, "2019": 10.5, "2020": -3.0, "2021": -4.7, "2022": 3.1, "2023": 6.1, "2024": -3.0, "2025": 16.9, "2026": -6.0}, "4": {"2012": -2.0, "2013": -2.6, "2014": 7.7, "2015": 8.8, "2016": 4.9, "2017": 9.9, "2018": -12.7, "2019": -4.1, "2020": 1.1, "2021": 4.3, "2022": 23.5, "2023": 8.9, "2024": 5.3, "2025": 1.3, "2026": -0.8}, "5": {"2012": 1.0, "2013": -8.8, "2014": 12.4, "2015": 6.3, "2016": -4.1, "2017": -2.9, "2018": -2.3, "2019": -1.7, "2020": -6.0, "2021": 10.2, "2022": -1.6, "2023": 5.7, "2024": -3.9, "2025": 4.7, "2026": -1.5}, "6": {"2012": -5.0, "2013": -10.2, "2014": 0.4, "2015": 15.0, "2016": 3.2, "2017": -8.8, "2018": -7.8, "2019": -5.0, "2020": 11.0, "2021": 2.7, "2022": 6.7, "2023": 2.0, "2024": -5.8, "2025": -0.2, "2026": 1.3}, "7": {"2011": 0.8, "2012": 3.7, "2013": -11.3, "2014": -8.1, "2015": 8.7, "2016": 18.7, "2017": 0.8, "2018": -1.4, "2019": -1.7, "2020": -4.4, "2021": -11.2, "2022": -11.8, "2023": 1.3, "2024": 5.6, "2025": -0.6, "2026": 3.4}, "8": {"2011": 2.8, "2012": -3.5, "2013": -7.0, "2014": 5.6, "2015": 2.5, "2016": 0.5, "2017": 19.8, "2018": -7.6, "2019": -6.6, "2020": -7.3, "2021": -7.6, "2022": -2.6, "2023": 0.9, "2024": -1.5, "2025": -4.9, "2026": 1.9}, "9": {"2011": 0.2, "2012": -7.4, "2013": 3.0, "2014": 2.8, "2015": -4.0, "2016": 5.1, "2017": -9.5, "2018": 2.1, "2019": 8.8, "2020": -13.0, "2021": 5.1, "2022": -8.9, "2023": 3.7, "2024": -3.5, "2025": 12.1}, "10": {"2011": -11.5, "2012": 1.8, "2013": -4.8, "2014": -1.1, "2015": -1.6, "2016": 6.2, "2017": 4.8, "2018": -3.3, "2019": 1.1, "2020": 3.7, "2021": 1.3, "2022": -9.3, "2023": 6.4, "2024": -13.9, "2025": 11.0}, "11": {"2011": -2.1, "2012": -5.6, "2013": 7.7, "2014": -3.7, "2015": 8.0, "2016": 5.0, "2017": -7.4, "2018": -1.4, "2019": -13.5, "2020": -4.1, "2021": -5.7, "2022": 5.6, "2023": 18.9, "2024": -0.8, "2025": -5.3}, "12": {"2011": -5.8, "2012": 2.4, "2013": 3.2, "2014": -9.8, "2015": 0.6, "2016": -0.4, "2017": -1.3, "2018": 6.7, "2019": -5.4, "2020": 3.9, "2021": -3.7, "2022": 0.7, "2023": 1.8, "2024": 2.2, "2025": 1.6}}, "basket": ["Indian Oil Corp. Ltd.", "Bharat Petroleum Corporation Limited", "Hindustan Petroleum Corporation Limited", "Mangalore Refinery & Petrochemicals Ltd.", "Chennai Petroleum Corporation Limited"], "nbasket": 5, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 3.9, "rel": 3.2, "hit": 11, "n": 15}, {"m": 2, "abs": -2.3, "rel": -1.1, "hit": 5, "n": 15}, {"m": 3, "abs": 1.8, "rel": 2.0, "hit": 7, "n": 15}, {"m": 4, "abs": 6.1, "rel": 3.6, "hit": 10, "n": 15}, {"m": 5, "abs": 1.7, "rel": 0.5, "hit": 6, "n": 15}, {"m": 6, "abs": 1.7, "rel": -0.0, "hit": 8, "n": 15}, {"m": 7, "abs": 1.5, "rel": -0.5, "hit": 8, "n": 16}, {"m": 8, "abs": -1.1, "rel": -0.9, "hit": 7, "n": 16}, {"m": 9, "abs": 0.4, "rel": -0.2, "hit": 9, "n": 15}, {"m": 10, "abs": 1.5, "rel": -0.6, "hit": 8, "n": 15}, {"m": 11, "abs": 0.6, "rel": -0.3, "hit": 5, "n": 15}, {"m": 12, "abs": 0.5, "rel": -0.2, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": 15.6, "n": 27.7, "rel": -12.1, "partial": false}, {"y": 2013, "b": -24.0, "n": 6.8, "rel": -30.8, "partial": false}, {"y": 2014, "b": 54.0, "n": 31.4, "rel": 22.6, "partial": false}, {"y": 2015, "b": 69.7, "n": -4.1, "rel": 73.7, "partial": false}, {"y": 2016, "b": 48.3, "n": 3.0, "rel": 45.3, "partial": false}, {"y": 2017, "b": 35.3, "n": 28.6, "rel": 6.7, "partial": false}, {"y": 2018, "b": -32.5, "n": 3.2, "rel": -35.7, "partial": false}, {"y": 2019, "b": -17.9, "n": 12.0, "rel": -29.9, "partial": false}, {"y": 2020, "b": -17.3, "n": 14.9, "rel": -32.2, "partial": false}, {"y": 2021, "b": 16.0, "n": 24.1, "rel": -8.1, "partial": false}, {"y": 2022, "b": 5.9, "n": 4.3, "rel": 1.6, "partial": false}, {"y": 2023, "b": 104.0, "n": 20.0, "rel": 84.0, "partial": false}, {"y": 2024, "b": 18.7, "n": 8.8, "rel": 9.9, "partial": false}, {"y": 2025, "b": 23.4, "n": 10.5, "rel": 12.9, "partial": false}, {"y": 2026, "b": 0.0, "n": -10.7, "rel": 10.7, "partial": true}], "dd": [{"co": "Indian Oil Corp.", "peak": "Feb 2024", "fp": -29, "y1": -7}, {"co": "Bharat Petroleum Corporation", "peak": "Dec 2025", "fp": -18, "y1": -4}, {"co": "Hindustan Petroleum Corporation", "peak": "Dec 2025", "fp": -28, "y1": -12}, {"co": "Mangalore Refinery & Petrochemicals", "peak": "Feb 2024", "fp": -42, "y1": 26}, {"co": "Chennai Petroleum Corporation", "peak": "Jul 2024", "fp": 16, "y1": 90}], "win": {"FebMar": {"mean": 0.4, "median": -0.6, "hit": 7, "n": 15}, "AprJul": {"mean": 4.2, "median": 2.6, "hit": 10, "n": 15}, "AugSep": {"mean": -1.9, "median": -2.0, "hit": 6, "n": 14}, "OctDec": {"mean": 0.4, "median": 0.1, "hit": 7, "n": 14}, "SepNov": {"mean": -0.4, "median": -2.3, "hit": 6, "n": 14}, "JanMar": {"mean": 3.7, "median": 1.8, "hit": 8, "n": 15}}, "ytd": {"b": 0.0, "n": -10.7}, "notes": {"2012": "+15.6% against the Nifty's +27.7%. The peak of the under-recovery era: diesel, kerosene and LPG were all sold below cost, the marketers were reimbursed late and partially, and upstream producers funded part of the gap (see 028).", "2013": "\u221224.0% versus +6.8%, the worst relative year in the record. The rupee collapsed, which raised the rupee cost of imported crude while pump prices stayed administered, and under-recoveries ballooned.", "2014": "+54.0% versus +31.4%. The turning point: crude halved in the second half and diesel was deregulated in October, converting the marketers from subsidy conduits into businesses with a real margin. HPCL +131%, BPCL +86%.", "2015": "+69.7% versus \u22124.1%, the best year in the record. Cheap crude, deregulated pricing and expanding marketing margins at once. Chennai Petroleum +185%.", "2016": "+48% versus +3%. The same combination persisted; HPCL +58%, IOC +52%, and every stock in the basket rose at least 37%.", "2017": "+35% versus +29%. Gains narrowed as crude recovered and the GST transition disrupted the quarter; Chennai Petroleum +56%.", "2018": "\u221232% versus +3%. Brent reached $86 in October and, with a general election approaching, the market assumed pump prices would be frozen. It was right to. Mangalore \u221241%, HPCL \u221240%.", "2019": "\u221218% versus +12%. Weak refining margins and a demand slowdown; BPCL +36% on privatisation hopes was the only riser, while Chennai Petroleum fell 58%.", "2020": "\u221217% versus +15%. The pandemic destroyed fuel demand and left refiners with enormous inventory losses on crude bought before the crash.", "2021": "+16% versus +24%. Demand recovered, but pump prices were held through a run of state elections, capping marketing margins exactly when they should have expanded.", "2022": "+6% versus +4% \u2014 and the year that rhymes with 2026. Crude spiked after the invasion of Ukraine, retail prices were frozen, and the marketers absorbed the difference. The pure refiner escaped: Chennai Petroleum +101% against HPCL \u221220% and BPCL \u221214%.", "2023": "+104% versus +20%, the payback. Crude fell while pump prices stayed where they were, so marketing margins expanded enormously and the whole group re-rated. Chennai Petroleum +237%, Mangalore +137%.", "2024": "+19% versus +9%. Normalisation, with HPCL +54% as the market grew confident that the 2022 losses would not repeat.", "2025": "+23% versus +10%. A comfortable year: moderate crude, discounted Russian barrels and stable pump prices. Chennai Petroleum +34%, BPCL +31%.", "2026": "Flat against a Nifty \u221211%, with a median of \u221218%. Crude above $100 in September, a weaker rupee, frozen retail prices and LPG sold far below cost split the section in two: Chennai Petroleum +69% and Mangalore +9% against HPCL \u221228%, BPCL \u221218% and IOC \u221218%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>
