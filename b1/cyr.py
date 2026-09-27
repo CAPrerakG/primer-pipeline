@@ -1,5 +1,6 @@
 import json,sys,datetime
-p=json.load(open('prices.json',encoding='utf-8'))
+CUT=1789776000  # project data date: bars up to and including 18-Sep-2026 (UTC)
+p=json.load(open('prices.json',encoding='utf-8')); p={k:[r for r in v if r[0]<CUT] for k,v in p.items() if v}
 def cy(sym):
     s=p[sym]; last={}
     for t,c in s:

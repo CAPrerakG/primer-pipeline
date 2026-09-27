@@ -1,6 +1,7 @@
 # Per-year and per-month driver attribution for an industry basket.
 import json,sys,datetime,statistics
-P=json.load(open('prices.json')); R=json.load(open('roster.json',encoding='utf-8'))
+CUT=1789776000  # project data date: bars up to and including 18-Sep-2026 (UTC)
+P=json.load(open('prices.json')); P={k:[r for r in v if r[0]<CUT] for k,v in P.items() if v}; R=json.load(open('roster.json',encoding='utf-8'))
 no=sys.argv[1]; D=json.load(open(f'data_{no}.json'))
 names={m['co']:m['sym'] for m in R[no]['members']}
 syms=[(c,names[c]) for c in D['basket'] if c in names]

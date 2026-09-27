@@ -81,3 +81,11 @@ drawing, 9.5%) in the same section. Apply the same test to bearings, pumps, valv
   since FY21, +226% in 2026 on a takeover.
 - **Pipeline bug fixed 26 Sep 2026:** artifact URLs for 069–078 had been saved as bare ids, breaking their index
   links. urls.json must hold full https URLs; mkchecklist.py now refuses to run otherwise.
+- **18-Sep cutoff not enforced (fixed 27 Sep 2026):** compute_stats.py defined END = 2026-09-18 but never applied it,
+  so series pulled after 18 Sep leaked later bars into 2026 figures. 079's basket was published at −10.3% using
+  closes to 25 Sep; at the 18-Sep cut it is −10.4% (republished). compute_stats.py, drivers.py, ytd.py and cyr.py now
+  drop every bar after 18-Sep-2026 on load. Rerunning all sections changed only 049, 056 and 079: 056's difference is
+  its hand-removed MPF Systems drawdown row (kept); **049's published 2026 figures (basket −13.8%, per-name YTDs)
+  come from an earlier price vintage — the 18-Sep closes give −13.3% and several names differ by 1–5 points
+  (e.g. Lux +2.3% not +7.1%). Not yet corrected — awaiting Prerak's go-ahead.** Never hand-edit a data_NNN.json
+  without noting it here, since a rerun of compute_stats will overwrite it.

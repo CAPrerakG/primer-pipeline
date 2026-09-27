@@ -1,5 +1,6 @@
 import json, sys, pandas as pd, numpy as np
-P=json.load(open('b1/prices.json')); R=json.load(open('b1/roster.json'))
+CUT=1789776000  # project data date: bars up to and including 18-Sep-2026 (UTC)
+P=json.load(open('b1/prices.json')); P={k:[r for r in v if r[0]<CUT] for k,v in P.items() if v}; R=json.load(open('b1/roster.json'))
 def ser(s):
     v=P.get(s)
     if not v: return None

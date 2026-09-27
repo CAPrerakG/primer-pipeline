@@ -1,5 +1,6 @@
 import json,sys,datetime
-p=json.load(open('prices.json'))
+CUT=1789776000  # project data date: bars up to and including 18-Sep-2026 (UTC)
+p=json.load(open('prices.json')); p={k:[r for r in v if r[0]<CUT] for k,v in p.items() if v}
 def ytd(s):
     x=p.get(s)
     if not x: return None
