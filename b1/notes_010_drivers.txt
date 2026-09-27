@@ -1,0 +1,23 @@
+BASKET 5 names
+2014: basket +109 nifty +31 rel +77 | n=2 median +103 | TOP Oriental Aromatics +122, Mangalam Organics  +83 | BOTTOM 
+2015: basket +50 nifty -4 rel +54 | n=2 median +50 | TOP Oriental Aromatics +111, Mangalam Organics  -10 | BOTTOM 
+2016: basket +36 nifty +3 rel +33 | n=3 median +23 | TOP Mangalam Organics  +49, S H Kelkar and Com +23, Oriental Aromatics +20 | BOTTOM 
+2017: basket +106 nifty +29 rel +78 | n=3 median +76 | TOP Mangalam Organics  +373, Oriental Aromatics +76, S H Kelkar and Com -4 | BOTTOM 
+2018: basket +15 nifty +3 rel +11 | n=3 median -4 | TOP Mangalam Organics  +172, Oriental Aromatics -4, S H Kelkar and Com -42 | BOTTOM 
+2019: basket -35 nifty +12 rel -47 | n=3 median -38 | TOP S H Kelkar and Com -36, Oriental Aromatics -38, Mangalam Organics  -38 | BOTTOM 
+2020: basket +72 nifty +15 rel +58 | n=3 median +41 | TOP Oriental Aromatics +214, Mangalam Organics  +41, S H Kelkar and Com +9 | BOTTOM 
+2021: basket +73 nifty +24 rel +49 | n=3 median +38 | TOP Mangalam Organics  +154, Oriental Aromatics +38, S H Kelkar and Com +29 | BOTTOM 
+2022: basket -36 nifty +4 rel -41 | n=3 median -46 | TOP S H Kelkar and Com -8, Oriental Aromatics -46, Mangalam Organics  -51 | BOTTOM 
+2023: basket -7 nifty +20 rel -27 | n=3 median -4 | TOP S H Kelkar and Com +2, Oriental Aromatics -4, Mangalam Organics  -27 | BOTTOM 
+2024: basket +34 nifty +9 rel +25 | n=3 median +16 | TOP S H Kelkar and Com +70, Mangalam Organics  +16, Oriental Aromatics +2 | BOTTOM 
+2025: basket +5 nifty +10 rel -5 | n=3 median -27 | TOP Mangalam Organics  +12, S H Kelkar and Com -27, Oriental Aromatics -29 | BOTTOM 
+2026: basket +16 nifty -11 rel +27 | n=5 median -7 | TOP Oriental Aromatics +77, Sacheerome Limited +41, Mangalam Organics  -7 | BOTTOM Mangalam Organics  -7, Gem Aromatics Limi -11, S H Kelkar and Com -24
+MONTH 4 avg +13.6 (11/13): worst years [('2018', -6.7), ('2019', -0.3), ('2022', 2.5)] best years [('2024', 22.1), ('2015', 29.8), ('2021', 29.9)]
+MONTH 7 avg +6.5 (9/13): worst years [('2019', -10.7), ('2017', -7.2), ('2022', -5.1)] best years [('2014', 16.1), ('2015', 18.6), ('2020', 22.5)]
+MONTH 2 avg -5.3 (4/13): worst years [('2015', -16.3), ('2020', -15.5), ('2019', -13.4)] best years [('2014', 2.8), ('2026', 4.8), ('2017', 11.4)]
+WIN FebMar: hit 2/13 median -10.6 | negative years [(2015, -10.7), (2016, -15.8), (2018, -4.6), (2019, -11.9), (2020, -2.4), (2021, -10.6), (2022, -9.7), (2023, -19.9), (2024, -13.7), (2025, -15.9), (2026, -7.1)] | biggest [(2014, 5.2), (2017, 4.5)]
+WIN AprJul: hit 9/13 median +26.2 | negative years [(2017, -3.6), (2018, -19.4), (2019, -24.1), (2022, -16.9)] | biggest [(2025, 46.5), (2021, 46.0)]
+WIN AugSep: hit 7/12 median +3.0 | negative years [(2015, -16.4), (2021, -15.1), (2022, -4.8), (2023, -0.4), (2025, -3.8)] | biggest [(2016, 40.1), (2018, 23.8)]
+WIN OctDec: hit 6/12 median -2.7 | negative years [(2014, -16.5), (2019, -24.1), (2022, -14.6), (2023, -8.4), (2024, -7.6), (2025, -7.9)] | biggest [(2015, 60.1), (2017, 54.1)]
+WIN SepNov: hit 7/12 median +8.7 | negative years [(2019, -12.2), (2022, -12.3), (2023, -11.8), (2024, -1.2), (2025, -13.3)] | biggest [(2015, 45.5), (2017, 42.1)]
+WIN JanMar: hit 4/13 median -10.2 | negative years [(2015, -11.1), (2016, -17.6), (2018, -6.2), (2019, -13.6), (2022, -10.2), (2023, -23.2), (2024, -9.9), (2025, -25.7), (2026, -10.7)] | biggest [(2014, 21.5), (2017, 10.2)]

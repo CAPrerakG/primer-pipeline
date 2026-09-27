@@ -1,0 +1,634 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stock Exchanges & Depositories Primer</title>
+<meta name="description" content="Industry 63 of 278: the toll collectors of Indian capital markets — BSE, MCX, CDSL and NSDL, with NSE listing on 24 September 2026. How exchanges and depositories earn on every trade and every account, why their margins exceed 50%, the options boom and SEBI&#x27;s curbs, MCX&#x27;s rise from the 2013 NSEL scandal, and what the structural shift of household savings into markets means for them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Exchanges &amp; Depositories · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the services are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#regulation">SEBI and the options boom</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 63 of 278 · Capital Markets family, part 1</div>
+  <h1>Stock Exchanges &amp; Depositories</h1>
+  <p class="lede">Every share bought in India is traded on an exchange, cleared by a clearing corporation and held in a demat account at a depository. The four listed companies in this section — BSE, MCX, CDSL and NSDL — collect a small fee at each of those steps, on a volume of activity that has multiplied as Indian households moved savings from gold, property and bank deposits into markets. They are among the most profitable businesses in the country. This primer explains how they earn, why their margins exceed 50%, how a single regulatory circular can cut their volumes, and what the listing of NSE — the largest of them all — on 24 September 2026 changes.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Finance, Property, Diversified</span><span><b>Companies</b> 4 listed, NSE listing 24 Sep</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Capital Markets family continues</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">23 cr</div><div class="l">Demat accounts in India — 18.6 cr at CDSL, 4.6 cr at NSDL (June 2026)</div></div>
+    <div class="stat"><div class="n">13.2 cr</div><div class="l">Unique registered investors at NSE, June 2026 — about four times six years earlier</div></div>
+    <div class="stat"><div class="n">72%</div><div class="l">MCX's Q1 FY27 EBITDA margin; BSE's net profit is over half its revenue</div></div>
+    <div class="stat"><div class="n">₹22,562 cr</div><div class="l">NSE's IPO, 5.7 times subscribed; listing on 24 September 2026</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A toll road on the financialisation of savings</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Think of a huge marketplace where people swap shares of companies instead of vegetables. The exchange is the market ground: it sets the rules, matches every buyer with a seller and charges a tiny fee for each swap. The depository is like a giant, very safe locker room where everyone's shares are kept, not as paper certificates but as entries in a computer, and it charges a small rent for each locker and a fee each time something leaves it. As more families in India start buying shares and mutual funds, more people use the market and the lockers, and these companies earn more — without needing to build much more.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Market infrastructure is the purest listed way to own the shift of Indian savings into financial assets — with one big regulatory risk.</p>
+    <ul>
+      <li><b>Scale:</b> 23 crore demat accounts; 13.2 crore unique investors at NSE; NSE is the world's largest derivatives exchange by contracts traded.</li>
+      <li><b>Economics:</b> costs are mostly fixed, so extra volume falls to profit — MCX's EBITDA margin was 72% in Q1 FY27; BSE's profit rose 62% on revenue up 63%.</li>
+      <li><b>Leaders now:</b> MCX (bullion options +541%) and BSE (Sensex options premium +96%) are growing fastest.</li>
+      <li><b>Laggards:</b> the depositories — CDSL profit +16%, NSDL +10% — as account openings slowed and SEBI's curbs cut derivatives trading.</li>
+      <li><b>Risk:</b> SEBI's measures since November 2024 cut retail F&amp;O traders from 98 lakh to 79 lakh; removing weekly expiries is reportedly under consideration.</li>
+      <li><b>Event:</b> NSE lists on 24 September at up to ₹1,785 a share — about ₹4.4 lakh cr, 43 times FY26 profit.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the services are">
+  <p class="eyebrow">2 · What the services are</p>
+  <h2>Trading, clearing, holding and data</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Service</th><th>What it does</th><th>Who provides it</th><th>How it is charged</th></tr></thead><tbody>
+    <tr><td>Equity cash trading</td><td>Buying and selling shares</td><td>NSE, BSE</td><td>A fee per crore of turnover</td></tr>
+    <tr><td>Equity derivatives</td><td>Futures and options on indices and stocks</td><td>NSE (Nifty), BSE (Sensex)</td><td>A fee per crore of option premium or futures turnover</td></tr>
+    <tr><td>Commodity derivatives</td><td>Futures and options on gold, silver, crude oil, natural gas, base metals</td><td>MCX (dominant), NSE, NCDEX (agri)</td><td>A fee per crore of turnover or premium</td></tr>
+    <tr><td>Clearing and settlement</td><td>Guarantees every trade and moves money and securities</td><td>Exchange-owned clearing corporations</td><td>Part of transaction charges; interest on margins</td></tr>
+    <tr><td>Depository accounts</td><td>Hold shares, bonds and mutual-fund units electronically</td><td>CDSL, NSDL</td><td>Annual fees from issuers; fees per debit transaction</td></tr>
+    <tr><td>Listing</td><td>Companies list their shares</td><td>NSE, BSE</td><td>Initial and annual listing fees</td></tr>
+    <tr><td>Data, indices and technology</td><td>Market data, index licensing (Sensex, Nifty), mutual-fund platforms</td><td>BSE (StAR MF), NSE, MCX</td><td>Subscriptions and licence fees</td></tr>
+    <tr><td>KYC, e-voting and other services</td><td>Investor identity records, shareholder voting, account statements</td><td>CDSL (CVL KRA), NSDL</td><td>Per-record or per-use fees</td></tr>
+  </tbody></table></div>
+  <p>The exchanges and depositories do not buy or sell anything themselves and take almost no market risk. They are platforms: the more trades, accounts and listings pass through them, the more they earn. That makes them, economically, closer to payment networks or software companies than to banks or brokers.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From an investor's app to a share in a demat account</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Investor</h4><div class="an">The saver</div>Households, traders, mutual funds, foreign investors.<div class="who">23 crore demat accounts; 13.2 crore unique NSE investors</div><div class="m">Participation drives everything</div></div>
+    <div class="stage"><div class="no">02</div><h4>Broker and app</h4><div class="an">The door</div>Takes orders, checks margins, sends trades to the exchange.<div class="who">Zerodha, Groww, Angel One and others (stockbroking section)</div><div class="m">Customer acquisition</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Exchange</h4><div class="an">The marketplace</div>Matches orders, runs indices, lists companies.<div class="who">NSE, BSE, MCX</div><div class="m">Liquidity attracts liquidity</div></div>
+    <div class="stage"><div class="no">04</div><h4>Clearing corporation</h4><div class="an">The guarantor</div>Becomes buyer to every seller and seller to every buyer; collects margins.<div class="who">NSE Clearing, ICCL (BSE), MCXCCL</div><div class="m">Risk management</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Depository</h4><div class="an">The locker</div>Holds securities electronically and records ownership changes.<div class="who">CDSL, NSDL</div><div class="m">Accounts and transactions</div></div>
+    <div class="stage"><div class="no">06</div><h4>Registrars and issuers</h4><div class="an">The owners' register</div>Maintain shareholder and fund-unit records; pay dividends.<div class="who">CAMS, KFin (registrars section); listed companies</div><div class="m">Annual issuer fees</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Investors</b> place orders through brokers.</li>
+    <li><b>Exchanges</b> match them and charge a fee.</li>
+    <li><b>Clearing corporations</b> guarantee them.</li>
+    <li><b>Depositories</b> move the shares into the buyer's demat account.</li>
+    <li><b>Issuers</b> pay the depositories and registrars to keep their shareholder records.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical economic feature is the network effect. Traders go where liquidity is deepest, so the leading exchange in each product tends to keep its lead: NSE in equity derivatives, MCX in commodities. Depositories are a near-duopoly protected by regulation and switching costs. Competition arises mainly when a regulator or a product change resets the game — as when BSE relaunched Sensex options in 2023 and won a meaningful share of options trading. That is why regulatory decisions matter more to these stocks than almost anything their managements do.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 4 companies, and the one about to list</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>BSE Ltd (~₹1,31,965 cr)</td><td>Asia's oldest stock exchange (1875); equity cash, Sensex derivatives, StAR MF mutual-fund platform, India INX in GIFT City; owns 15% of CDSL.</td><td>Q1 FY27 revenue ₹1,566 cr (+63%), profit ₹873 cr (+62%); transaction charges ₹1,328 cr (+80%); average daily options premium ₹29,615 cr (+96%); record cash turnover. About 38 times Q1 profit annualised. Stock +24% in 2026, 26% below its 26 May high.</td></tr>
+    <tr><td>Multi Commodity Exchange — MCX (~₹81,810 cr)</td><td>India's dominant commodity exchange: bullion, energy and base-metal futures and options; moved to a new in-house trading platform in October 2024.</td><td>Q1 FY27 revenue ₹702 cr (+88%), profit ₹413 cr (+103%), EBITDA margin 72%. Average daily turnover ₹10.5 lakh cr (+47%); options +266%, bullion options +541%; gold and silver are 64% of futures turnover. Results missed estimates and the stock fell 3%. About 50 times Q1 profit annualised. +46% in 2026.</td></tr>
+    <tr><td>Central Depository Services — CDSL (~₹27,149 cr)</td><td>India's larger depository by accounts (about 80% share), promoted by BSE; also runs CVL, a KYC registration agency.</td><td>Q1 FY27 total income ₹340.5 cr (+15.4%), profit ₹118 cr (+15.7%); added 58 lakh accounts to 18.59 crore. About 58 times Q1 profit annualised. Stock −4% in 2026, 29% below its December 2024 high.</td></tr>
+    <tr><td>National Securities Depository — NSDL (~₹15,797 cr)</td><td>India's first depository (1996): fewer accounts but 85.8% of custody value (about $5.7 trillion), serving institutions; owns NSDL Payments Bank. Listed August 2025 at an IPO price of ₹800.</td><td>Q1 FY27 revenue +66%, led by its payments bank; profit about ₹98 cr (+10%); 4.56 crore accounts (+12.7%). Stock −25% in 2026, below its IPO price and 41% below its September 2025 high.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">NSE, and the rest of the industry</span><p>The National Stock Exchange — by far the largest Indian exchange — is listing on 24 September 2026 after a ₹22,562 cr offer for sale at ₹1,700–1,785 a share, subscribed 5.7 times (institutions 12.7 times, retail 1.4 times). In FY26 it earned ₹10,302 cr on revenue from operations of ₹16,601 cr, 79% of it transaction charges; at the top of the band it is valued at about ₹4.4 lakh cr, more than three times BSE. NCDEX (agricultural commodities) and the GIFT City exchanges are unlisted. Brokers, registrars (CAMS, KFin) and asset managers sit in their own sections of the Capital Markets family.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Fixed costs, variable revenue, very high margins</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Revenue line</th><th>Driver</th><th>Who depends on it most</th></tr></thead><tbody>
+    <tr><td>Transaction charges</td><td>Trading volume, especially options premium</td><td>BSE (85% of revenue), MCX, NSE (79%)</td></tr>
+    <tr><td>Annual issuer charges</td><td>Number of folios and listed securities</td><td>CDSL, NSDL</td></tr>
+    <tr><td>Depository transaction fees</td><td>Sell trades that move shares out of accounts</td><td>CDSL, NSDL</td></tr>
+    <tr><td>KYC and account-opening fees</td><td>New investors</td><td>CDSL (CVL)</td></tr>
+    <tr><td>Listing fees</td><td>IPOs and listed companies</td><td>BSE, NSE</td></tr>
+    <tr><td>Data, index and platform fees</td><td>Subscriptions, index licences, mutual-fund transactions</td><td>BSE, NSE</td></tr>
+    <tr><td>Treasury income</td><td>Interest on own cash and clearing funds</td><td>All</td></tr>
+    <tr><td>Banking services</td><td>Payments bank</td><td>NSDL</td></tr>
+  </tbody></table></div>
+  <p>The cost base — technology, staff, regulatory contributions and a settlement guarantee fund — changes slowly, while revenue moves with activity. So when volumes jump, margins jump: MCX's EBITDA margin rose to 72% in Q1 FY27 from 68% a year earlier, and BSE's profit is now more than half its revenue. The reverse is also true. In 2022, when IPOs dried up and trading slowed, the basket fell 12% and CDSL 26%.</p>
+  <h3>Why options changed everything</h3>
+  <p>Options trading is where Indian exchanges have grown fastest. A retail trader can buy a short-dated index option for a few thousand rupees, and millions did so every week after 2020. Exchanges charge on the option premium, so option volumes now dominate their revenue. That has made exchange earnings highly sensitive to the regulator's view of retail speculation — which is where the biggest risk to the sector lies.</p>
+  <h3>Depositories: steadier, slower</h3>
+  <p>Depositories earn from accounts and from transactions that move securities out of them. Account growth drove CDSL in 2020–2024, when crore after crore of new investors opened demat accounts; as openings slowed and trading activity cooled after SEBI's curbs, its growth fell to the mid-teens. NSDL's strength is custody value — it holds the securities of banks, funds and foreign investors — which is stickier but grows with market value, not with new retail accounts.</p>
+</section>
+
+<section id="regulation" data-toc="SEBI and the options boom">
+  <p class="eyebrow">5b · SEBI and the options boom</p>
+  <h2>The regulator as the biggest single variable</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Date</th><th>Measure</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>May 2023</td><td>BSE relaunches Sensex derivatives with a weekly expiry</td><td>BSE wins a meaningful share of index options; stock +308% in 2023</td></tr>
+    <tr><td>Oct 2024 (from 1 Oct)</td><td>Higher securities transaction tax on futures and options (announced in the July 2024 budget)</td><td>Higher trading cost</td></tr>
+    <tr><td>Oct 2024</td><td>"True-to-label" rule: exchanges must charge every broker the same rate</td><td>Changed broker economics; exchanges restructured fees</td></tr>
+    <tr><td>From 20 Nov 2024</td><td>One weekly expiry per exchange; larger contract size; upfront option premium; extra margin on expiry day; no calendar-spread benefit on expiry</td><td>Retail participation and volumes fell</td></tr>
+    <tr><td>May 2025</td><td>Expiry days streamlined across exchanges (NSE Tuesday, BSE Thursday)</td><td>Ended expiry-day competition</td></tr>
+    <tr><td>Jul 2025</td><td>Interim order against Jane Street over alleged index manipulation around expiries</td><td>Temporary drop in options activity</td></tr>
+    <tr><td>2026</td><td>Removal of weekly expiries reportedly under consideration</td><td>The largest open risk to exchange earnings</td></tr>
+  </tbody></table></div>
+  <p>SEBI's study of FY26 found that retail investors' aggregate losses in equity derivatives fell to ₹91,685 cr from about ₹1.12 lakh cr a year earlier, and the number of individual traders fell from 98.1 lakh to 78.6 lakh — but the average loss per trader rose to ₹1.17 lakh. From the regulator's point of view the job is unfinished; from the exchanges' point of view, every further step is a potential cut to revenue. Yet BSE's options premium still rose 96% year on year in Q1 FY27, showing how strong underlying demand remains.</p>
+  <div class="box pm"><span class="tag">How to read it</span><p>The structural tailwind — more Indians investing — is real and durable. The cyclical-regulatory overlay — how much speculative options trading the regulator tolerates — is not. Valuing these companies means separating the two: account growth, mutual-fund flows, listings and cash trading on one side, short-dated index options on the other.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the business depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it matters</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Regulatory approval</td><td>SEBI sets products, fees, expiries and contract sizes</td><td>The critical dependency; a circular can move revenue by a third</td></tr>
+    <tr><td>Trading technology</td><td>Speed, capacity and reliability</td><td>Outages invite penalties; MCX's years-long platform migration raised costs</td></tr>
+    <tr><td>Market volatility</td><td>Volatility drives volume, especially in options and commodities</td><td>Quiet markets reduce revenue</td></tr>
+    <tr><td>Retail participation</td><td>New accounts and active traders</td><td>Slows in bear markets</td></tr>
+    <tr><td>Cybersecurity</td><td>Market integrity</td><td>A breach would be severe</td></tr>
+    <tr><td>Global prices</td><td>Gold, silver and crude volatility drive MCX</td><td>Calm commodity markets cut volumes</td></tr>
+    <tr><td>Talent</td><td>Technology and risk staff</td><td>Competition from fintechs and global firms</td></tr>
+  </tbody></table></div>
+  <p>Unlike most industries in this project, there are no physical raw materials. The critical inputs are permission and trust: a licence from SEBI, the confidence of investors that trades will settle, and technology that never fails on a busy day. MCX's history shows the cost of getting technology wrong: for years it paid its former promoter's software company to run its trading system and struggled to replace it, until its new platform went live in October 2024 — after which its margins rose sharply.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Volatility, IPO waves and expiry days</h2>
+  <ul>
+    <li><b>Weekly:</b> expiry days (NSE Tuesday, BSE Thursday) carry a large share of options volume.</li>
+    <li><b>Event days:</b> the Union Budget, elections, RBI and US Federal Reserve decisions, and global shocks spike volumes.</li>
+    <li><b>IPO seasons:</b> listings cluster in September–December and February–March, lifting account openings and depository and listing fees.</li>
+    <li><b>Commodities:</b> MCX trades until late evening, following US markets; gold, silver and crude volatility drive its volumes regardless of the Indian calendar.</li>
+    <li><b>Fiscal year start:</b> depositories bill annual issuer charges to companies at the start of each fiscal year, based on their shareholder folios.</li>
+  </ul>
+  <p>Because activity follows volatility and sentiment rather than the calendar, the stocks' seasonality is weaker than in most industries. The useful monthly data are operational: exchanges publish daily turnover, and depositories monthly account additions.</p>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of BSE, MCX, CDSL and NSDL minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (BSE Ltd., Central Depository Services (India) Limited, Multi Commodity Exchange of India Limited, National Securities Depository Limited), equal-weighted, monthly from Mar 2017, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Oct +6.7 pts (beat in 7 of 9 years); Apr +5.2 pts (beat in 8 of 10 years); Sep +4.5 pts (beat in 5 of 9 years).</li><li><b>Weakest months:</b> Feb -2.1 pts (beat in 4 of 9 years); Jan -1.5 pts (beat in 3 of 9 years); Dec -1.2 pts (beat in 3 of 9 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 5 of 9 years (median +0.2 pts); Apr–Jul beat the Nifty in 7 of 10 years (median +10.9 pts); Aug–Sep beat the Nifty in 4 of 9 years (median -2.7 pts); Oct–Dec beat the Nifty in 4 of 9 years (median -0.0 pts); Sep–Nov beat the Nifty in 5 of 9 years (median +1.2 pts); Jan–Mar beat the Nifty in 5 of 9 years (median 0.0 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +2.2 points.</p><p><b>Reading it:</b> the basket runs from March 2017 (BSE and CDSL listed that year; MCX has traded since 2012) and adds NSDL from August 2025, so there are nine full years. April has beaten the Nifty in 8 of 10 years (average +5.2 points) and October in 7 of 9 (+6.7); April–July has worked in 7 of 10 (median +10.9). January and December have been weak (3 of 9 each). The first quarter of the year is a coin toss (January–March 5 of 9, median 0.0). The pattern is weaker than in cyclical industries because these stocks follow market activity, which follows volatility and IPO waves more than the calendar.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed in 2022 (−16.3), 2019 (−8.2) and 2018 (−2.1)</b> — the years when IPOs and trading slowed. The best runs were 2021 (+60.5) and 2020 (+36.2), the retail-boom years.</li>
+    <li><b>October–December was strongest in 2023 (+43.8) and 2024 (+33.7)</b> and weakest in 2020 (−15.9) and 2017 (−12.6).</li>
+    <li><b>January–March failed in 2018 (−17.4) and 2025 (−14.0)</b>, both periods of broad small- and mid-cap selling.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>For these stocks, the operating data — monthly demat additions, daily options premium, IPO pipeline — lead the share prices far better than the calendar. The April and October strength is worth knowing, but it reflects the booms of 2020–2024 more than a durable season.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Options volumes.</b> The largest single revenue driver for exchanges.</li>
+    <li><b>SEBI's product and fee rules.</b> Expiries, contract sizes and fee structures.</li>
+    <li><b>Market share.</b> Between NSE and BSE in index options; MCX's dominance in commodities.</li>
+    <li><b>Retail participation.</b> New accounts and active traders.</li>
+    <li><b>IPOs and listings.</b> Listing fees and account openings.</li>
+    <li><b>Commodity volatility.</b> Gold, silver and crude drive MCX.</li>
+    <li><b>Technology costs.</b> Platform upgrades and outages.</li>
+    <li><b>Treasury income.</b> Interest rates on large cash balances.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2018 to 2026, and MCX before that</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: BSE, MCX and CDSL from March 2017, NSDL from August 2025, equal-weighted monthly. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The longer record: MCX, and CME as a global mirror</h3>
+  <p>MCX has traded since 2012, so it carries the industry's longest listed record — including its worst crisis. CME Group (NASDAQ:CME), the world's largest derivatives exchange group, shows what a mature exchange looks like. Calendar-year price returns from TradingView.</p>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">MCX</th><th class="num">CME</th><th>What happened</th></tr></thead><tbody>
+    <tr><td class="num">2013</td><td class="num">−67.6</td><td class="num">+54.8</td><td>The NSEL payment crisis, linked to MCX's then-promoter, crushed MCX; low on 16 August</td></tr>
+    <tr><td class="num">2014</td><td class="num">+76.3</td><td class="num">+13.0</td><td>The promoter was forced to sell; Kotak Mahindra Bank took a stake</td></tr>
+    <tr><td class="num">2015</td><td class="num">+10.0</td><td class="num">+2.2</td><td>Stabilisation under new owners</td></tr>
+    <tr><td class="num">2016</td><td class="num">+36.9</td><td class="num">+27.3</td><td>Commodity recovery</td></tr>
+    <tr><td class="num">2017</td><td class="num">−28.1</td><td class="num">+26.6</td><td>Rising competition talk and costs</td></tr>
+    <tr><td class="num">2018</td><td class="num">−19.4</td><td class="num">+28.8</td><td>Small-cap crash</td></tr>
+    <tr><td class="num">2019</td><td class="num">+58.9</td><td class="num">+6.7</td><td>Commodity options take off</td></tr>
+    <tr><td class="num">2020</td><td class="num">+48.2</td><td class="num">−9.3</td><td>Pandemic volatility</td></tr>
+    <tr><td class="num">2021</td><td class="num">−8.5</td><td class="num">+25.5</td><td>Platform-migration delays</td></tr>
+    <tr><td class="num">2022</td><td class="num">−1.8</td><td class="num">−26.4</td><td>High software costs squeeze MCX</td></tr>
+    <tr><td class="num">2023</td><td class="num">+105.9</td><td class="num">+25.2</td><td>Options volumes surge</td></tr>
+    <tr><td class="num">2024</td><td class="num">+94.8</td><td class="num">+10.3</td><td>New platform live in October</td></tr>
+    <tr><td class="num">2025</td><td class="num">+78.6</td><td class="num">+17.6</td><td>Gold and silver volatility; bullion options boom</td></tr>
+    <tr><td class="num">2026*</td><td class="num">+46.4</td><td class="num">+1.1</td><td>Profit +103% in Q1 FY27</td></tr>
+  </tbody></table></div>
+  <p class="note">*2026 to 18 September. CME is up about 5.7 times since the end of 2011, with only two down years in fifteen — the steadiness that mature, diversified exchanges show.</p>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Crisis and reset</b> (2013–2016): the NSEL scandal, MCX's change of ownership and stricter rules for market infrastructure ownership.</li>
+    <li><b>Listing and the first retail wave</b> (2017–2019): BSE and CDSL listed; the 2018 small-cap crash cut them hard.</li>
+    <li><b>The retail boom</b> (2020–2021): pandemic-era account openings and IPOs; CDSL +139% and +181%, BSE +210% in 2021.</li>
+    <li><b>The options era</b> (2023–2025): Sensex options, commodity options and MCX's new platform; the basket rose 148% and 113% in 2023–24.</li>
+    <li><b>Regulation bites</b> (2024–2026): SEBI's curbs slow retail trading; depositories lag; NSE comes to market.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Operating leverage works both ways:</b> 2022 (−12%) and 2018 (−29%) show how fast earnings expectations fall when activity slows.</li>
+    <li><b>Product launches re-rate exchanges:</b> Sensex options for BSE, bullion options for MCX.</li>
+    <li><b>Governance shocks are existential:</b> MCX lost two-thirds of its value in 2013 over its promoter's other business.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>The world's busiest derivatives market</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Exchange group</th><th>Model</th><th>Relevance</th></tr></thead><tbody>
+    <tr><td>CME Group (US)</td><td>Futures and options on rates, equities, commodities</td><td>The mature benchmark; steady compounding</td></tr>
+    <tr><td>ICE (US)</td><td>Energy futures, NYSE, mortgage technology</td><td>Diversified with data and technology</td></tr>
+    <tr><td>LSEG, Deutsche Börse (Europe)</td><td>Exchanges plus data, indices and post-trade</td><td>Shift from trading fees to data revenue</td></tr>
+    <tr><td>HKEX (Hong Kong)</td><td>Monopoly exchange with China connect</td><td>Volumes tied to one market's sentiment</td></tr>
+    <tr><td>NSE, BSE, MCX (India)</td><td>Retail-heavy, options-heavy</td><td>Fastest growth; most regulatory risk</td></tr>
+  </tbody></table></div>
+  <p>By contracts traded, NSE has been the world's largest derivatives exchange for several years, driven by retail index options. That scale is also the concern: in most developed markets, options are a smaller share of activity and retail speculation is less concentrated. Over time, global exchanges have diversified into data, indices and post-trade services, which are steadier than trading fees. BSE's index business, NSE's indices and data, and the depositories' account-based fees are the Indian equivalents — still small relative to transaction charges.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Faster settlement.</b> India moved to T+1 settlement in 2023 and has piloted same-day settlement.</li>
+    <li><b>Mobile-first investing.</b> Discount-broker apps brought millions of first-time investors.</li>
+    <li><b>Electronic everything.</b> e-KYC, e-voting and consolidated account statements reduce costs.</li>
+    <li><b>Cloud and resilience.</b> Regulators demand disaster recovery and near-zero downtime.</li>
+    <li><b>Surveillance and AI.</b> Detecting manipulation, especially around expiries.</li>
+    <li><b>GIFT City.</b> International exchanges for dollar-denominated trading.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>SEBI derivatives framework</td><td>Expiries, contract sizes, margins, position limits</td><td>Directly sets options volumes</td></tr>
+    <tr><td>Securities transaction tax</td><td>Tax on every trade; raised on F&amp;O from October 2024</td><td>Raises trading cost</td></tr>
+    <tr><td>Market infrastructure ownership rules</td><td>Caps on how much any single shareholder may own of an exchange or depository</td><td>Keeps ownership dispersed; limits takeovers</td></tr>
+    <tr><td>True-to-label fees</td><td>Uniform charges across brokers</td><td>Ended volume-based rebates</td></tr>
+    <tr><td>Settlement guarantee funds</td><td>Exchanges must fund default protection</td><td>A cost that rises with volume</td></tr>
+    <tr><td>Regulatory fees to SEBI</td><td>Fees based on turnover</td><td>Rise with activity</td></tr>
+    <tr><td>Public issues and listing rules</td><td>IPO process and disclosures</td><td>Affect listing volumes</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: record profits, regulatory overhang, NSE arrives</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Commodity trading</td><td>Booming</td><td>MCX turnover +47%, bullion options +541%</td></tr>
+    <tr><td>Equity options</td><td>Growing despite curbs</td><td>BSE options premium +96%</td></tr>
+    <tr><td>Accounts</td><td>Growing more slowly</td><td>CDSL +58 lakh in Q1; profit +16%</td></tr>
+    <tr><td>Retail derivatives traders</td><td>Fewer</td><td>98.1 lakh → 78.6 lakh in FY26</td></tr>
+    <tr><td>Regulation</td><td>Overhang</td><td>Weekly-expiry removal reportedly considered</td></tr>
+    <tr><td>Supply</td><td>Large new listing</td><td>NSE, about ₹4.4 lakh cr, lists 24 September</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +9.4% this year vs -10.7% for the Nifty (to 18 Sep 2026). The four-stock basket is up 9% against a Nifty down 11%, but the members have split. MCX (+46%) is booming on bullion options — Q1 FY27 profit +103% — and BSE (+24%) on Sensex options, with Q1 profit +62%, though BSE is 26% below its May high. The depositories have lagged: CDSL −4% and NSDL −25%, below its ₹800 IPO price, as account growth slowed and SEBI's derivatives curbs cut trading. NSE's ₹22,562 cr IPO, 5.7 times subscribed at up to ₹1,785 a share (about ₹4.4 lakh cr, 43 times FY26 profit), lists on 24 September.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th><th class="num">1 year</th></tr></thead><tbody>
+    <tr><td>BSE</td><td class="num">₹3,266</td><td>₹4,403 (26 May 2026)</td><td class="num">−26%</td><td class="num">+24%</td><td class="num">+49%</td></tr>
+    <tr><td>MCX</td><td class="num">₹3,260</td><td>₹3,442 (20 May 2026)</td><td class="num">−5%</td><td class="num">+46%</td><td class="num">+104%</td></tr>
+    <tr><td>CDSL</td><td class="num">₹1,390</td><td>₹1,964 (17 Dec 2024)</td><td class="num">−29%</td><td class="num">−4%</td><td class="num">−13%</td></tr>
+    <tr><td>NSDL</td><td class="num">₹795</td><td>₹1,342 (9 Sep 2025)</td><td class="num">−41%</td><td class="num">−25%</td><td class="num">−38%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>On Q1 FY27 profit annualised, BSE trades at about 38 times, MCX about 50 times, CDSL about 58 times and NSDL about 40 times; NSE is coming at about 43 times FY26 profit. Those multiples assume that the structural growth in investors continues and that regulation does not cut deeper into options. The market is already discriminating: MCX, whose growth comes from commodities and is less exposed to the equity-options debate, has held near its high; BSE is 26% below its May peak as weekly-expiry risks were discussed; the depositories, whose growth has slowed, have de-rated. NSE's listing also gives investors a larger, more liquid alternative, which may pull money away from BSE.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>These are exceptional businesses — near-monopolies with high margins, little capital need and a decades-long tailwind. But their current earnings are unusually dependent on short-dated options trading that the regulator is actively trying to shrink. The durable parts — accounts, mutual-fund flows, listings, custody, data — grow steadily; the volatile part — options — can change with one circular. Owning them well means paying a multiple that reflects both.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Daily options premium turnover</td><td>The main exchange revenue driver</td><td>NSE, BSE daily reports</td></tr>
+    <tr><td>MCX average daily turnover by commodity</td><td>MCX revenue</td><td>MCX monthly data</td></tr>
+    <tr><td>Monthly demat account additions</td><td>Depository growth</td><td>CDSL, NSDL monthly data</td></tr>
+    <tr><td>SEBI consultation papers and circulars</td><td>Regulatory risk</td><td>SEBI website</td></tr>
+    <tr><td>NSE's market share in index options against BSE's</td><td>Competition</td><td>Exchange data</td></tr>
+    <tr><td>IPO pipeline</td><td>Listing fees and new accounts</td><td>DRHP filings</td></tr>
+    <tr><td>Mutual-fund SIP flows</td><td>The steady financialisation signal</td><td>AMFI monthly data</td></tr>
+    <tr><td>Gold, silver and crude volatility</td><td>MCX volumes</td><td>Commodity markets</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Stockbroking:</b> the brokers who bring investors to the exchanges; their revenue is even more options-dependent.</li>
+    <li><b>Asset management:</b> mutual-fund flows drive depository and registrar activity.</li>
+    <li><b>Registrars and fund services:</b> CAMS and KFin, the record-keepers for mutual funds and companies.</li>
+    <li><b>Wealth management and insurance distribution:</b> the other routes into financial savings.</li>
+    <li><b>Payments and fintech:</b> NSDL's payments bank; app-based distribution.</li>
+    <li><b>Global proxies:</b> CME, ICE and HKEX.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of revenue comes from index options, and from weekly expiries in particular?</li>
+    <li>What would a removal of weekly expiries mean for volumes and revenue?</li>
+    <li>How is market share in index options moving, and why?</li>
+    <li>What is the cost base's fixed and variable split?</li>
+    <li>How much revenue comes from non-trading sources — data, indices, listing, platforms?</li>
+    <li>How fast are new accounts growing, and how many are active?</li>
+    <li>What regulatory fees and settlement-fund contributions are expected this year?</li>
+    <li>What technology investment is planned, and what are the resilience targets?</li>
+    <li>For MCX: how concentrated are volumes in gold and silver, and what new products are planned?</li>
+    <li>For NSDL: how much of growth and profit comes from the payments bank?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Exchanges are pure structural compounders"</td><td>Basket −29% in 2018, −12% in 2022; SEBI curbs cut traders by a fifth</td><td>Structural growth with a cyclical, regulatory overlay</td></tr>
+    <tr><td>"SEBI's curbs broke the options market"</td><td>BSE options premium +96% and MCX options +266% in Q1 FY27</td><td>Slowed retail, not demand</td></tr>
+    <tr><td>"More demat accounts mean more revenue"</td><td>23 crore accounts but 13.2 crore unique investors, and fewer are active</td><td>Activity matters more than counts</td></tr>
+    <tr><td>"NSE's listing is good for BSE"</td><td>Validates valuations, but offers a larger alternative</td><td>Mixed</td></tr>
+    <tr><td>"MCX is a gold bet"</td><td>Gold and silver are 64% of futures turnover</td><td>Largely true: it is a volatility bet on precious metals</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. demat, expiry" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Market structure</h3><dl>
+    <dt>Exchange</dt><dd>A regulated marketplace that matches buy and sell orders.</dd>
+    <dt>Clearing corporation</dt><dd>The entity that guarantees trades by standing between buyer and seller.</dd>
+    <dt>Depository</dt><dd>An institution that holds securities electronically.</dd>
+    <dt>Depository participant (DP)</dt><dd>A broker or bank that opens demat accounts on behalf of a depository.</dd>
+    <dt>Demat account</dt><dd>An electronic account holding shares, bonds and fund units.</dd>
+    <dt>Beneficial owner (BO) account</dt><dd>The depositories' term for a demat account.</dd>
+    <dt>Custody value</dt><dd>The market value of securities held in a depository.</dd>
+    <dt>Market infrastructure institution (MII)</dt><dd>SEBI's term for exchanges, clearing corporations and depositories.</dd>
+    <dt>Registrar and transfer agent (RTA)</dt><dd>Keeps shareholder or unitholder records for companies and funds.</dd>
+    <dt>KRA</dt><dd>KYC registration agency that stores investors' identity records.</dd>
+    <dt>Unique client code (UCC)</dt><dd>An investor's trading-account identifier at an exchange.</dd>
+    <dt>GIFT City</dt><dd>India's international financial services centre in Gujarat.</dd>
+  </dl>
+  <h3>Trading and products</h3><dl>
+    <dt>Cash segment</dt><dd>Buying and selling shares for delivery.</dd>
+    <dt>Futures</dt><dd>Contracts to buy or sell at a set price on a future date.</dd>
+    <dt>Options</dt><dd>Contracts giving the right, not the obligation, to buy or sell.</dd>
+    <dt>Option premium</dt><dd>The price paid for an option; exchanges charge on it.</dd>
+    <dt>Notional turnover</dt><dd>The full contract value of options traded, far larger than premium.</dd>
+    <dt>Expiry</dt><dd>The day a derivative contract ends.</dd>
+    <dt>Weekly expiry</dt><dd>Options that expire every week, heavily traded by retail.</dd>
+    <dt>Index derivatives</dt><dd>Futures and options on indices such as the Nifty or Sensex.</dd>
+    <dt>Average daily turnover (ADTV)</dt><dd>The average value traded per day.</dd>
+    <dt>Bullion</dt><dd>Gold and silver.</dd>
+    <dt>Settlement</dt><dd>The exchange of money and securities after a trade.</dd>
+    <dt>T+1</dt><dd>Settlement one working day after the trade.</dd>
+    <dt>Colocation</dt><dd>Placing trading servers next to the exchange's systems for speed.</dd>
+    <dt>Margin</dt><dd>Money a trader must deposit to cover possible losses on a position.</dd>
+    <dt>Position limit</dt><dd>The maximum exposure a trader may hold in a contract.</dd>
+    <dt>Calendar spread</dt><dd>Holding opposite positions in two expiries of the same contract.</dd>
+    <dt>Upfront premium collection</dt><dd>The rule that option buyers pay the full premium before trading.</dd>
+  </dl>
+  <h3>Regulation and business terms</h3><dl>
+    <dt>SEBI</dt><dd>Securities and Exchange Board of India, the markets regulator.</dd>
+    <dt>STT</dt><dd>Securities transaction tax, charged on trades.</dd>
+    <dt>True-to-label</dt><dd>SEBI's rule that exchange charges must be the same for all brokers.</dd>
+    <dt>Core SGF</dt><dd>Core settlement guarantee fund that protects against member defaults.</dd>
+    <dt>Transaction charges</dt><dd>The fee an exchange levies on each trade.</dd>
+    <dt>Annual issuer charges</dt><dd>Fees companies pay depositories based on their shareholder folios.</dd>
+    <dt>Listing fees</dt><dd>Fees companies pay exchanges to be listed.</dd>
+    <dt>Operating leverage</dt><dd>When fixed costs make profit rise or fall faster than revenue.</dd>
+    <dt>Offer for sale (OFS)</dt><dd>An IPO in which existing shareholders sell; the company raises no new money.</dd>
+    <dt>NSEL</dt><dd>National Spot Exchange, whose 2013 payment crisis crushed MCX.</dd>
+    <dt>StAR MF</dt><dd>BSE's mutual-fund transaction platform.</dd>
+    <dt>Financialisation</dt><dd>The shift of household savings from physical assets into financial ones.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What does a depository do?</summary><p>It holds securities electronically in demat accounts and records changes in ownership.</p></details>
+  <details class="q"><summary>2. Why are exchange margins so high?</summary><p>Costs are largely fixed while revenue rises with volume.</p></details>
+  <details class="q"><summary>3. What did BSE report in Q1 FY27?</summary><p>Revenue ₹1,566 cr (+63%), profit ₹873 cr (+62%); options premium +96%.</p></details>
+  <details class="q"><summary>4. What drove MCX's Q1 FY27 growth?</summary><p>Options, especially bullion options (+541%); profit +103% at a 72% EBITDA margin.</p></details>
+  <details class="q"><summary>5. What happened to MCX in 2013?</summary><p>The NSEL payment crisis, linked to its promoter, cut the stock by two-thirds.</p></details>
+  <details class="q"><summary>6. What were SEBI's main derivatives measures from November 2024?</summary><p>One weekly expiry per exchange, larger contract sizes, upfront premium collection, extra expiry-day margin and no calendar-spread benefit on expiry.</p></details>
+  <details class="q"><summary>7. How did retail F&amp;O participation change in FY26?</summary><p>Individual traders fell from 98.1 lakh to 78.6 lakh and aggregate losses to ₹91,685 cr.</p></details>
+  <details class="q"><summary>8. How many demat accounts are there, and how are they split?</summary><p>About 23 crore — 18.6 crore at CDSL and 4.6 crore at NSDL.</p></details>
+  <details class="q"><summary>9. What are the terms of NSE's IPO?</summary><p>A ₹22,562 cr offer for sale at ₹1,700–1,785, 5.7 times subscribed, listing on 24 September 2026.</p></details>
+  <details class="q"><summary>10. What is the biggest open risk to exchange earnings?</summary><p>Further SEBI curbs on short-dated options, such as removing weekly expiries.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes to 18 September 2026 against NSE:NIFTY; NASDAQ:CME for the global mirror. Profit multiples use Q1 FY27 profit annualised and the 18 September market value.</li>
+    <li>BSE: <a href="https://www.investing.com/news/company-news/bse-q1-fy27-slides-record-revenue-driven-by-derivatives-surge-93CH-4835228">Q1 FY27 slides</a>; <a href="https://indianmasterminds.com/news/bse-q1-fy27-results-net-profit-jumps-62-percent-revenue-rises-iibh-stake-20-percent-221665/">Q1 FY27 results</a>; <a href="https://www.niftytrader.in/markets/bse-q1-profit-crosses-870-crore/">profit and premium turnover</a>.</li>
+    <li>MCX: <a href="https://www.investing.com/news/company-news/mcx-q1-fy27-slides-show-103-profit-growth-options-surge-266-93CH-4837392">Q1 FY27 slides</a>; <a href="https://www.indiainfoline.com/news/companies/mcx-q1-fy27-results-net-profit-rises-103-yoy-to-413-crore-revenue-jumps-88-despite-sequential-decline">Q1 FY27 results</a>; <a href="https://www.investywise.com/mcx-q1-fy27-earnings-conference-call-transcript/">earnings call</a>.</li>
+    <li>Depositories: <a href="https://www.investing.com/news/company-news/cdsl-q1-fy27-slides-consolidated-profit-rises-16-amid-mixed-results-93CH-4829935">CDSL Q1 FY27</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/central-depository-services-india-ltd-010218910.html">CDSL call highlights</a>; <a href="https://www.investing.com/news/company-news/nsdl-q1-fy27-slides-market-share-gains-offset-by-margin-pressure-93CH-4827827">NSDL Q1 FY27</a>; <a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:3940065:0-nsdl-q1-fy27-delivered-strong-growth-in-accounts-income-and-market-share-leadership/">NSDL accounts and custody</a>. One source prints NSDL's quarterly profit as ₹983 cr; the figure consistent with its size is ₹98.3 cr (₹983 mn).</li>
+    <li>Regulation and NSE: <a href="https://www.business-standard.com/markets/news/sebi-measures-reduce-equity-f-o-losses-for-retail-investors-in-fy26-126081101071_1.html">SEBI study on FY26 F&amp;O losses</a>; <a href="https://www.business-standard.com/amp/markets/news/sebi-announces-six-key-changes-to-curb-speculation-in-derivatives-trading-124100101316_1.html">SEBI's six measures</a>; <a href="https://lapaasvoice.com/sebi-may-remove-weekly-fo-expiry-to-curb-retail-investor-losses-reports">weekly-expiry reports</a>; <a href="https://www.kotakneo.com/ipo/nse-ipo/">NSE IPO terms and subscription</a>.</li>
+    <li>Participation: <a href="https://www.businesstoday.in/markets/story/nse-trading-accounts-cross-25-crore-unique-investors-at-127-crore-516069-2026-02-13">NSE accounts and unique investors</a>; <a href="https://www.sahi.com/news/nse-unique-client-codes-hit-26-crore-as-june-demat-additions-bounce-to-2-5-million-3932-PE1_COR">June 2026 client codes</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2018, "v": -6.4}, {"y": 2019, "v": 2.7}, {"y": 2020, "v": 3.0}, {"y": 2021, "v": 0.2}, {"y": 2022, "v": 10.0}, {"y": 2023, "v": -7.8}, {"y": 2024, "v": -1.5}, {"y": 2025, "v": -3.7}, {"y": 2026, "v": 0.8}], "AprJul": [{"y": 2017, "v": 2.1}, {"y": 2018, "v": -2.1}, {"y": 2019, "v": -8.2}, {"y": 2020, "v": 36.2}, {"y": 2021, "v": 60.5}, {"y": 2022, "v": -16.3}, {"y": 2023, "v": 28.4}, {"y": 2024, "v": 12.9}, {"y": 2025, "v": 28.6}, {"y": 2026, "v": 8.9}], "AugSep": [{"y": 2017, "v": -2.7}, {"y": 2018, "v": -13.0}, {"y": 2019, "v": 9.1}, {"y": 2020, "v": 13.4}, {"y": 2021, "v": -12.1}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": 31.8}, {"y": 2024, "v": 27.2}, {"y": 2025, "v": -5.8}], "OctDec": [{"y": 2017, "v": -12.6}, {"y": 2018, "v": -1.4}, {"y": 2019, "v": -0.0}, {"y": 2020, "v": -15.9}, {"y": 2021, "v": 22.6}, {"y": 2022, "v": -4.2}, {"y": 2023, "v": 43.8}, {"y": 2024, "v": 33.7}, {"y": 2025, "v": 7.6}], "SepNov": [{"y": 2017, "v": -5.3}, {"y": 2018, "v": -5.7}, {"y": 2019, "v": 1.2}, {"y": 2020, "v": -2.9}, {"y": 2021, "v": 20.2}, {"y": 2022, "v": -2.7}, {"y": 2023, "v": 91.4}, {"y": 2024, "v": 36.5}, {"y": 2025, "v": 11.5}], "JanMar": [{"y": 2018, "v": -17.4}, {"y": 2019, "v": 0.0}, {"y": 2020, "v": 12.2}, {"y": 2021, "v": -4.2}, {"y": 2022, "v": 9.9}, {"y": 2023, "v": -9.9}, {"y": 2024, "v": 1.4}, {"y": 2025, "v": -14.0}, {"y": 2026, "v": 4.2}]}, "my": {"1": {"2018": -12.5, "2019": -2.4, "2020": 12.4, "2021": -4.0, "2022": -0.1, "2023": -2.5, "2024": 2.9, "2025": -10.7, "2026": 3.9}, "2": {"2018": 0.1, "2019": -3.1, "2020": 2.1, "2021": 0.2, "2022": -5.8, "2023": -6.8, "2024": 5.5, "2025": -7.8, "2026": -3.6}, "3": {"2017": 2.2, "2018": -6.8, "2019": 6.2, "2020": 1.4, "2021": 0.0, "2022": 17.6, "2023": -1.1, "2024": -6.7, "2025": 5.3, "2026": 4.1}, "4": {"2017": 0.4, "2018": 2.8, "2019": 0.4, "2020": -4.1, "2021": 9.0, "2022": -1.4, "2023": 4.0, "2024": 17.7, "2025": 9.7, "2026": 13.8}, "5": {"2017": -7.7, "2018": 4.1, "2019": -4.3, "2020": 13.1, "2021": 19.4, "2022": -6.6, "2023": 2.0, "2024": -5.2, "2025": 14.9, "2026": 2.7}, "6": {"2017": 4.3, "2018": -5.5, "2019": 0.6, "2020": 0.3, "2021": -4.0, "2022": -7.5, "2023": 2.9, "2024": -0.3, "2025": 15.7, "2026": -1.5}, "7": {"2017": 5.4, "2018": -3.0, "2019": -5.2, "2020": 18.0, "2021": 26.4, "2022": -1.5, "2023": 15.2, "2024": 0.4, "2025": -11.7, "2026": -5.5}, "8": {"2017": -4.0, "2018": -7.4, "2019": 9.9, "2020": -0.2, "2021": -15.4, "2022": -3.8, "2023": 11.0, "2024": 14.3, "2025": -5.8, "2026": 6.5}, "9": {"2017": 1.4, "2018": -6.4, "2019": -1.0, "2020": 13.2, "2021": 4.0, "2022": -0.5, "2023": 19.0, "2024": 10.9, "2025": -0.1}, "10": {"2017": -1.7, "2018": 4.1, "2019": 6.6, "2020": -7.1, "2021": 4.7, "2022": 1.8, "2023": 24.3, "2024": 20.8, "2025": 6.7}, "11": {"2017": -4.8, "2018": -3.5, "2019": -4.1, "2020": -8.6, "2021": 10.2, "2022": -3.9, "2023": 27.8, "2024": 2.2, "2025": 4.2}, "12": {"2017": -5.8, "2018": -2.1, "2019": -2.1, "2020": 1.5, "2021": 6.3, "2022": -1.9, "2023": -12.6, "2024": 9.4, "2025": -3.3}}, "basket": ["BSE Ltd.", "Central Depository Services (India) Limited", "Multi Commodity Exchange of India Limited", "National Securities Depository Limited"], "nbasket": 4, "start": "Mar 2017", "monthly": [{"m": 1, "abs": -2.1, "rel": -1.5, "hit": 3, "n": 9}, {"m": 2, "abs": -3.8, "rel": -2.1, "hit": 4, "n": 9}, {"m": 3, "abs": 0.8, "rel": 2.2, "hit": 7, "n": 10}, {"m": 4, "abs": 8.9, "rel": 5.2, "hit": 8, "n": 10}, {"m": 5, "abs": 4.0, "rel": 3.2, "hit": 6, "n": 10}, {"m": 6, "abs": 2.1, "rel": 0.5, "hit": 5, "n": 10}, {"m": 7, "abs": 6.7, "rel": 3.9, "hit": 5, "n": 10}, {"m": 8, "abs": 1.7, "rel": 0.5, "hit": 4, "n": 10}, {"m": 9, "abs": 4.4, "rel": 4.5, "hit": 5, "n": 9}, {"m": 10, "abs": 7.7, "rel": 6.7, "hit": 7, "n": 9}, {"m": 11, "abs": 4.8, "rel": 2.2, "hit": 4, "n": 9}, {"m": 12, "abs": 0.6, "rel": -1.2, "hit": 3, "n": 9}], "cy": [{"y": 2018, "b": -29.3, "n": 3.2, "rel": -32.5, "partial": false}, {"y": 2019, "b": 11.4, "n": 12.0, "rel": -0.6, "partial": false}, {"y": 2020, "b": 70.4, "n": 14.9, "rel": 55.5, "partial": false}, {"y": 2021, "b": 104.4, "n": 24.1, "rel": 80.3, "partial": false}, {"y": 2022, "b": -12.1, "n": 4.3, "rel": -16.4, "partial": false}, {"y": 2023, "b": 147.9, "n": 20.0, "rel": 127.8, "partial": false}, {"y": 2024, "b": 112.5, "n": 8.8, "rel": 103.7, "partial": false}, {"y": 2025, "b": 21.7, "n": 10.5, "rel": 11.2, "partial": false}, {"y": 2026, "b": 9.4, "n": -10.7, "rel": 20.0, "partial": true}], "dd": [{"co": "BSE", "peak": "Jun 2025", "fp": 9, "y1": 49}, {"co": "Multi Commodity Exchange of India", "peak": "Dec 2025", "fp": 46, "y1": 104}, {"co": "Central Depository Services (India)", "peak": "Dec 2024", "fp": -29, "y1": -12}, {"co": "National Securities Depository", "peak": "Sep 2025", "fp": -41, "y1": -38}], "win": {"FebMar": {"mean": -0.3, "median": 0.2, "hit": 5, "n": 9}, "AprJul": {"mean": 15.1, "median": 10.9, "hit": 7, "n": 10}, "AugSep": {"mean": 4.9, "median": -2.7, "hit": 4, "n": 9}, "OctDec": {"mean": 8.2, "median": -0.0, "hit": 4, "n": 9}, "SepNov": {"mean": 16.0, "median": 1.2, "hit": 5, "n": 9}, "JanMar": {"mean": -2.0, "median": 0.0, "hit": 5, "n": 9}}, "ytd": {"b": 9.4, "n": -10.7}, "notes": {"2018": "\u221229.3% against +3.2%. The small-cap crash: CDSL \u221238%, BSE \u221234%, MCX \u221219%.", "2019": "+11.4% against +12.0%. MCX +59% as commodity options grew; CDSL flat; BSE \u221216%.", "2020": "+70.4% against +14.9%. The pandemic retail-investor boom: CDSL +139%, MCX +48%, BSE +23%.", "2021": "+104.4% against +24.1%. Record demat openings and an IPO boom: BSE +210%, CDSL +181%; MCX \u22129%.", "2022": "\u221212.1% against +4.3%. IPOs dried up and account growth slowed: CDSL \u221226%, BSE \u221215%, MCX \u22122%.", "2023": "+147.9% against +20.0%. BSE +308% after relaunching Sensex options in May; MCX +106%; CDSL +64%.", "2024": "+112.5% against +8.8%. BSE +140%, MCX +95% after moving to its new trading platform in October, CDSL +93%. SEBI announced its derivatives curbs in October.", "2025": "+21.7% against +10.5%. MCX +79% on bullion options, BSE +48%; CDSL \u221218% as account growth slowed; NSDL listed in August.", "2026": "+9.4% against a Nifty \u221210.7%. MCX +46%, BSE +24%; CDSL \u22124%, NSDL \u221225%; NSE's IPO in September."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

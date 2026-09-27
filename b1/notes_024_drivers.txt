@@ -1,0 +1,25 @@
+BASKET 9 names
+2012: basket +23 nifty +28 rel -4 | n=5 median +16 | TOP Bosch Limited +40, Fiem Industries Li +25, India Nippon Elect +16 | BOTTOM India Nippon Elect +16, Danlaw Technologie +15, Lumax Industries L +3
+2013: basket +12 nifty +7 rel +5 | n=5 median +5 | TOP Fiem Industries Li +88, India Nippon Elect +10, Bosch Limited +5 | BOTTOM Bosch Limited +5, Lumax Industries L -13, Danlaw Technologie -29
+2014: basket +119 nifty +31 rel +88 | n=5 median +140 | TOP Danlaw Technologie +181, India Nippon Elect +143, Fiem Industries Li +140 | BOTTOM Fiem Industries Li +140, Bosch Limited +95, Lumax Industries L +23
+2015: basket +32 nifty -4 rel +36 | n=5 median -4 | TOP Danlaw Technologie +457, Lumax Industries L +14, Bosch Limited -4 | BOTTOM Bosch Limited -4, Fiem Industries Li -5, India Nippon Elect -16
+2016: basket +20 nifty +3 rel +16 | n=5 median +24 | TOP Lumax Industries L +61, Fiem Industries Li +43, India Nippon Elect +24 | BOTTOM India Nippon Elect +24, Bosch Limited +13, Danlaw Technologie -44
+2017: basket +60 nifty +29 rel +32 | n=5 median +35 | TOP Lumax Industries L +182, India Nippon Elect +137, Danlaw Technologie +35 | BOTTOM Danlaw Technologie +35, Bosch Limited -4, Fiem Industries Li -11
+2018: basket -21 nifty +3 rel -24 | n=6 median -22 | TOP Danlaw Technologie +43, Bosch Limited -3, Lumax Industries L -20 | BOTTOM India Nippon Elect -23, Fiem Industries Li -52, Pricol Ltd. -56
+2019: basket -23 nifty +12 rel -35 | n=7 median -22 | TOP Pricol Ltd. -5, Fiem Industries Li -7, India Nippon Elect -18 | BOTTOM Lumax Industries L -25, Varroc Engineering -42, Danlaw Technologie -52
+2020: basket +23 nifty +15 rel +8 | n=7 median +8 | TOP Danlaw Technologie +62, Fiem Industries Li +25, Pricol Ltd. +9 | BOTTOM India Nippon Elect -5, Varroc Engineering -5, Bosch Limited -17
+2021: basket +54 nifty +24 rel +30 | n=7 median +35 | TOP Danlaw Technologie +202, Pricol Ltd. +138, Fiem Industries Li +100 | BOTTOM India Nippon Elect +5, Lumax Industries L -13, Varroc Engineering -16
+2022: basket +25 nifty +4 rel +20 | n=7 median +9 | TOP Pricol Ltd. +72, Fiem Industries Li +53, Lumax Industries L +42 | BOTTOM Bosch Limited -0, Danlaw Technologie -7, Varroc Engineering -11
+2023: basket +78 nifty +20 rel +58 | n=8 median +40 | TOP Danlaw Technologie +445, Pricol Ltd. +99, Varroc Engineering +87 | BOTTOM Bosch Limited +29, Fiem Industries Li +21, Motherson Sumi Wir +6
+2024: basket +19 nifty +9 rel +10 | n=8 median +26 | TOP Bosch Limited +54, Pricol Ltd. +43, Fiem Industries Li +41 | BOTTOM Varroc Engineering +6, Motherson Sumi Wir -6, Lumax Industries L -6
+2025: basket +20 nifty +10 rel +10 | n=9 median +16 | TOP Lumax Industries L +124, Fiem Industries Li +53, Motherson Sumi Wir +25 | BOTTOM Azad India Mobilit +4, Varroc Engineering +0, Danlaw Technologie -48
+2026: basket +15 nifty -11 rel +26 | n=9 median +16 | TOP Danlaw Technologie +114, India Nippon Elect +55, Varroc Engineering +46 | BOTTOM Fiem Industries Li -14, Motherson Sumi Wir -26, Azad India Mobilit -39
+MONTH 4 avg +4.4 (12/15): worst years [('2025', -2.9), ('2013', -1.8), ('2019', -1.2)] best years [('2022', 9.6), ('2026', 11.9), ('2020', 14.5)]
+MONTH 7 avg +2.9 (12/16): worst years [('2019', -14.7), ('2017', -3.5), ('2024', -2.8)] best years [('2022', 7.6), ('2012', 10.1), ('2015', 30.5)]
+MONTH 2 avg -2.3 (4/15): worst years [('2020', -12.8), ('2022', -8.5), ('2016', -8.3)] best years [('2026', 2.7), ('2023', 4.1), ('2021', 8.5)]
+WIN FebMar: hit 4/15 median -3.1 | negative years [(2013, -3.3), (2014, -2.8), (2015, -5.9), (2016, -1.6), (2017, -8.3), (2019, -6.2), (2020, -16.5), (2022, -17.0), (2024, -3.1), (2025, -5.8), (2026, -3.1)] | biggest [(2021, 9.9), (2023, 7.1)]
+WIN AprJul: hit 12/15 median +11.6 | negative years [(2013, -3.0), (2017, -1.4), (2019, -26.1)] | biggest [(2022, 30.8), (2026, 28.1)]
+WIN AugSep: hit 8/14 median +2.4 | negative years [(2012, -5.0), (2013, -1.9), (2015, -2.0), (2018, -10.7), (2021, -11.5), (2024, -1.9)] | biggest [(2020, 27.1), (2014, 21.4)]
+WIN OctDec: hit 8/14 median +3.1 | negative years [(2012, -4.4), (2018, -7.8), (2020, -16.9), (2022, -2.3), (2024, -3.1), (2025, -2.6)] | biggest [(2015, 24.3), (2014, 19.2)]
+WIN SepNov: hit 9/14 median +3.5 | negative years [(2012, -10.3), (2018, -14.6), (2019, -2.4), (2020, -3.7), (2024, -2.4)] | biggest [(2015, 31.1), (2017, 26.8)]
+WIN JanMar: hit 5/15 median -5.1 | negative years [(2012, -5.1), (2015, -5.2), (2016, -0.4), (2017, -0.6), (2018, -6.8), (2019, -15.6), (2020, -11.0), (2022, -9.6), (2025, -12.5), (2026, -8.7)] | biggest [(2021, 25.3), (2024, 10.0)]

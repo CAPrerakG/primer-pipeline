@@ -1,0 +1,576 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industrial Gases Primer</title>
+<meta name="description" content="Industry 6 of 278: oxygen, nitrogen, argon, hydrogen and helium. Air separation, on-site vs merchant vs cylinder models, electricity as the raw material, a year-by-year record, and the Linde India governance fight.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Industrial Gases · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 6 of 278 · Chemicals family</div>
+  <h1>Industrial Gases</h1>
+  <p class="lede">Companies that pull oxygen, nitrogen and argon out of the air, then deliver them by pipeline, tanker or cylinder to steel plants, hospitals, chip fabs and welders. The main raw material isn't air, it's electricity.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 6 after the audit (Rajasthan Securities out; 2 more flagged here)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Fluorochemicals</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~$1.4 bn</div><div class="l">India industrial gases market in 2025 (research estimate), growing ~7–8% a year</div></div>
+    <div class="stat"><div class="n">4,200+ TPD</div><div class="l">INOX Air Products' liquid-gas capacity across ~50 plants; it plans a ~$1 bn IPO</div></div>
+    <div class="stat"><div class="n">~11%</div><div class="l">Share of global helium supply lost after the March 2026 strike on Qatar's Ras Laffan</div></div>
+    <div class="stat"><div class="n">89%</div><div class="l">Share of Linde India minority votes against the Praxair related-party deal (March 2026 EGM)</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Selling air, cleaned and cooled</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Air is a mix: about 78% nitrogen, 21% oxygen and a little argon. If you make air extremely cold, around −190°C, it turns into a liquid, and each gas boils off at a slightly different temperature, so you can separate them like sorting coins by size. Steel plants need huge amounts of oxygen, hospitals need clean oxygen for patients, chip factories need super-pure nitrogen, and welders need argon. The machine that does this sorting is an "air separation unit", and running it is mostly an electricity bill. Gas companies make money by building these machines next to big customers and signing contracts that last 15–20 years. In 2021, when India ran short of hospital oxygen, everyone suddenly learned how important this quiet industry is.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Industrial gases are a global oligopoly (Linde, Air Liquide, Air Products, Nippon Sanso, Messer) with utility-like on-site contracts and higher-margin merchant and packaged businesses. Power is the main cost and is passed through in contracts. In India the market is ~$1.4 bn, led by Linde India and INOX Air Products (an Air Products–INOX joint venture now planning a ~$1 bn IPO), with Air Liquide (which bought NovaAir in 2025), Praxair India and Ellenbarrie behind them. Growth comes from steel capacity, hospitals, electronics (semiconductor fabs need specialty gases) and eventually hydrogen. The listed plays are Linde India, a 75% subsidiary of Linde plc in a long-running fight with minority shareholders and SEBI over how business is split with its unlisted sister Praxair India, and Ellenbarrie (listed July 2025, Indian-owned, ~39% EBITDA margins). Helium is fully imported, and the 2026 Qatar disruption is a live supply shock.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Air gases and the rest</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Gas</th><th>Made from</th><th>Main users</th></tr></thead><tbody>
+    <tr><td>Oxygen</td><td>Air separation</td><td>Steel (blast furnace enrichment, BOF), hospitals, glass, welding and cutting, water treatment</td></tr>
+    <tr><td>Nitrogen</td><td>Air separation (or on-site PSA/membrane units)</td><td>Blanketing in chemicals and pharma, electronics, food packaging, freezing, oil &amp; gas</td></tr>
+    <tr><td>Argon</td><td>Air separation (only ~0.93% of air, a by-product of big plants)</td><td>Welding, stainless steel, solar and semiconductor manufacturing, bulbs</td></tr>
+    <tr><td>Hydrogen</td><td>Steam methane reforming today; electrolysis (green) in future</td><td>Refineries, fertilisers, chemicals, glass, future steel and fuel</td></tr>
+    <tr><td>Carbon dioxide</td><td>Recovered from ammonia, ethanol and refinery plants</td><td>Beverages, dry ice, welding, food processing</td></tr>
+    <tr><td>Helium</td><td>Extracted from natural gas (Qatar, US, Algeria, Russia); fully imported by India</td><td>MRI magnets, semiconductors, fibre optics, leak testing, balloons</td></tr>
+    <tr><td>Specialty and electronic gases</td><td>Purification and mixing; some synthesised</td><td>Chip fabs, display panels, labs, calibration</td></tr>
+    <tr><td>Acetylene, LPG</td><td>Carbide route; refinery product</td><td>Cutting and welding (National Oxygen makes dissolved acetylene); fuel (Gagan Gases bottles LPG)</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The oxygen mask in a hospital ICU; the nitrogen that keeps a packet of chips puffed and fresh; the argon shielding a welder's arc on a building's steel frame; the CO₂ fizz in a cola; the helium cooling the magnet inside an MRI scanner; the LPG cylinder in a dhaba kitchen.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a power plug to a hospital bed</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Equipment</h4><div class="an">Building the fridge</div>Air separation units, compressors, cold boxes, cryogenic tanks.<div class="who">Linde Engineering (Linde India's project arm), Air Liquide E&amp;C, INOX India (cryogenic tanks), Chinese makers</div><div class="m">Project margins, lumpy</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Production</h4><div class="an">The fridge running</div>ASUs, hydrogen reformers, CO₂ recovery units, electrolysers.<div class="who">Linde India, INOX Air Products, Air Liquide, Praxair India, Ellenbarrie</div><div class="m">Power is 50–70% of liquid-gas cost</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>On-site / tonnage</h4><div class="an">A pipeline to the customer's door</div>Plant built inside or next to a steel mill or refinery; 15–20 year take-or-pay contracts.<div class="who">Steel mills (Tata, JSW, SAIL), refineries</div><div class="m">Utility-like returns</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Merchant liquid</h4><div class="an">The milk tanker</div>Surplus liquefied and trucked in cryogenic tankers to mid-sized customers.<div class="who">All producers; Ellenbarrie is merchant-focused</div><div class="m">Highest margins; prices move with supply</div></div>
+    <div class="stage"><div class="no">05</div><h4>Packaged</h4><div class="an">The corner-shop bottle</div>Cylinders filled and delivered to welders, hospitals, labs.<div class="who">Producers plus hundreds of local fillers (National Oxygen)</div><div class="m">High margin per unit; logistics-heavy</div></div>
+    <div class="stage"><div class="no">06</div><h4>End users</h4><div class="an">The people breathing and welding</div>Steel, healthcare, chemicals, pharma, electronics, food, glass, fabrication.<div class="who">Everyone from SAIL to a local welder</div><div class="m">—</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Equipment:</b> a giant, very cold fridge the size of a building, full of tall metal columns.</li>
+    <li><b>Production:</b> running the fridge day and night; the electricity bill is the biggest cost.</li>
+    <li><b>On-site:</b> like a water tank built right next to a school with a 20-year promise to fill it; the school pays even if it drinks less.</li>
+    <li><b>Merchant:</b> like a milk van delivering to many small shops; good money when milk is scarce, poor when there's too much.</li>
+    <li><b>Packaged:</b> like gas cylinders delivered to homes: small, but you get paid for the bottle too.</li>
+  </ul>
+  <h3>Critical inputs and choke points</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Electricity</td><td>State grids, power exchange, captive and renewable PPAs</td><td>All producers; merchant plants without pass-through most</td><td>Energy costs up with the Hormuz shock; renewables are the hedge</td></tr>
+    <tr><td>Helium</td><td>100% imported: Qatar (~40% of traded supply), US, Algeria, Russia</td><td>Gas distributors, hospitals (MRI), fabs</td><td>Qatar's Ras Laffan hit on 19 March; spot above $1,000/Mcf vs $500–550 contract; India holds only 7–10 days of inventory</td></tr>
+    <tr><td>ASU equipment and cryogenic tanks</td><td>Linde, Air Liquide, Chinese makers; INOX India (tanks)</td><td>New entrants (Ellenbarrie's expansions)</td><td>Long lead times</td></tr>
+    <tr><td>Anchor customers</td><td>Steel mills, refineries</td><td>On-site business</td><td>Steel capacity growth supports new tonnage contracts</td></tr>
+    <tr><td>Specialty gas supply chains</td><td>Imports from Japan, Korea, US</td><td>Fabs (Tata Dholera, Micron Sanand)</td><td>War-related shipping disruption raised costs 35–50% and delayed some fab timelines</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Three business models with different economics. On-site: low risk, low but steady return, backed by contracts that pass through power costs. Merchant: this is where profits swing; when a steel mill takes less gas, the surplus floods the merchant market and prices fall. Packaged: local density matters; the densest cylinder network wins. Oxygen is heavy relative to its value, so it can't travel far by road (typically a few hundred kilometres), which makes every market regional.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>Companies in the watchlist</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What to know</th></tr></thead><tbody>
+    <tr><td>Linde India <span class="tk">LINDEINDIA</span></td><td>75% owned by Linde plc. Two segments: gases (78% of Q1 FY27 revenue) and project engineering (building ASUs and plants). Q1 FY27 revenue ₹694 cr (+22% year on year), gas revenue ₹544 cr (+9%), profit ₹103 cr (−2%). Territory and product split with sister Praxair India (unlisted) is the subject of the SEBI/SAT dispute: Linde India got the north, east and part of the west plus project engineering; Praxair got the south, central, part of the west, and hydrogen, CO and CO₂ including carbon capture. SAT dismissed Linde's appeal (5 December 2025); the Supreme Court admitted a further appeal (16 January 2026) without a stay; 89% of minority votes rejected ₹418 cr of 2025–26 Praxair transactions (5 March 2026); SEBI sent further summons in April. A new CFO joined in September 2026.</td></tr>
+    <tr><td>Ellenbarrie Industrial Gases <span class="tk">ELLEN</span></td><td>Kolkata-based, founded 1973, one of the oldest 100% Indian-owned gas companies. Listed 1 July 2025 (issue ₹400; ₹853 cr IPO including ₹400 cr fresh) at a 23% premium. Merchant plants at Uluberia (115 TPD and 220 TPD) and Kurnool; capacity ~1,910 TPD by FY26, over 2,100 TPD by FY27. Q1 FY27: revenue ₹99 cr (+18%), EBITDA margin 39%, profit ₹35 cr (+87%). Capex ₹250 cr in FY27 and ₹200 cr in FY28, targeting ~40% margins.</td></tr>
+    <tr><td>National Oxygen <span class="tk">NOL</span></td><td>A tiny (~₹35 cr) maker of liquid and gaseous oxygen, nitrogen, medical oxygen and dissolved acetylene. Up 251% in the 2021 oxygen crisis; down 44% in 2025.</td></tr>
+    <tr><td>Bhagawati Oxygen <span class="tk">BHAGWOX</span> <span class="chip ch-mid">Flag</span></td><td>Its gas plant has been shut since October 2021, when its gas supply contract with Hindustan Copper expired. FY26 profit (₹3.3 cr) came from arbitration and settlement income. <b>Effectively not an operating gas company now.</b></td></tr>
+    <tr><td>Southern Gas <span class="tk">ZSOUTGAS</span></td><td>A small independent gas maker in South India; very thinly traded, so excluded from the price basket.</td></tr>
+    <tr><td>Gagan Gases <span class="tk">GAGAN</span> <span class="chip ch-mid">Flag</span></td><td>An LPG bottling plant at Pithampur (Indore), selling LPG in 17–33 kg cylinders and bottling for Reliance and Aegis. LPG is a fuel, not an air gas; a gas-distribution home fits better.</td></tr>
+  </tbody></table></div>
+  <p><b>Moved out:</b> Rajasthan Securities (formerly Rajasthan Gases), now an investment vehicle.</p>
+  <h3>Big unlisted competitors</h3>
+  <ul>
+    <li><b>INOX Air Products:</b> a joint venture of Air Products and the INOX Group; the joint market leader (~25% share), 4,200+ TPD across ~50 plants, FY25 revenue ~$295 m; has hired Kotak, JPMorgan and Citi for a ~$1 bn IPO.</li>
+    <li><b>Air Liquide India:</b> added a 300+ TPD ASU in Mathura in 2023 and bought NovaAir (from PE firm PAG) in October 2025, adding East and South India bulk and specialty gases.</li>
+    <li><b>Praxair India:</b> Linde plc's other Indian arm, central to the governance dispute.</li>
+    <li><b>Air Water India</b> and hundreds of regional fillers.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens: three ways to own Indian gases</span><p><b>Linde India</b> gives you the best-run global parent and project-engineering upside, but you take governance risk: the Praxair split decides how much Indian growth reaches minority shareholders, and the Supreme Court outcome is binary. <b>Ellenbarrie</b> is a pure, Indian-owned merchant play with high margins (~39%) and visible capacity growth, but merchant prices are the most cyclical part of the business, and new capacity from Air Liquide–NovaAir and INOX will compete in the same regions. <b>INOX Air Products</b>, once listed, will be the cleanest large-scale option (on-site plus merchant, ~50 plants), and its prospectus will reveal merchant pricing and returns that the industry rarely discloses. The small listed names (National Oxygen, Bhagawati, Southern Gas, Gagan) are not a way to own the industry: one is shut, one is an LPG bottler, and the others are tiny.</p></div>
+  <h3>Related listed names elsewhere</h3>
+  <ul><li><b>INOX India</b> (cryogenic tanks and equipment; Capital Goods). <b>Steel makers</b> with captive ASUs. <b>Refiners and fertiliser makers</b> that make their own hydrogen. <b>Gujarat Alkalies</b> and other chlor-alkali makers (by-product hydrogen, 003).</li></ul>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Capex, contracts and electricity</h2>
+  <ul>
+    <li><b>On-site:</b> the gas company builds a ₹200–1,000 cr ASU for one customer and charges a fixed facility fee plus a variable fee linked to power costs. Returns ~12–15% on capital for 15–20 years.</li>
+    <li><b>Merchant:</b> sold per tonne from liquefied surplus; EBITDA margins can reach 35–40% (Ellenbarrie's Q1 FY27: 39%).</li>
+    <li><b>Packaged:</b> cylinder rentals plus gas charges; small volumes at high prices.</li>
+    <li><b>Project engineering:</b> building plants for others (Linde India); revenue is lumpy and margins lower.</li>
+  </ul>
+  <div class="box ana"><span class="tag">Analogy</span><p>On-site is like a landlord with a 20-year lease to one tenant. Merchant is like a hotel: great when full, painful when a new hotel opens across the street. Packaged is like a milk delivery round: profit depends on how many houses you pass per kilometre.</p></div>
+  <p>Why margins at global majors (Linde plc near 30% operating margin) are so high: once a plant is built, competitors rarely build next door, contracts pass on power costs, and price increases stick because gas is a tiny share of the customer's cost. Indian merchant markets are more competitive, so margins vary by region and by how much new capacity arrives.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">6 · The business calendar</p>
+  <h2>Mostly steady, with power and steel as swing factors</h2>
+  <ul>
+    <li><b>Steel maintenance shutdowns</b> free up oxygen, which spills into the merchant market and softens prices.</li>
+    <li><b>Summer power tariffs and shortages (April–June)</b> raise production costs for merchant producers without pass-through.</li>
+    <li><b>Winter respiratory season</b> raises medical oxygen demand modestly; pandemics raise it massively (April–May 2021).</li>
+    <li><b>Year-end capex</b> finalisation (January–March) brings project-engineering orders.</li>
+    <li><b>Governance calendar for Linde India:</b> related-party approvals at AGMs and EGMs, SEBI and court dates.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">7 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 5 names (Linde India Ltd., Ellenbarrie Industrial Gases Limited, National Oxygen Limited, Bhagawati Oxygen Ltd., Gagan Gases Limited.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Dec +5.4 pts (beat in 11 of 15 years); Sep +3.2 pts (beat in 8 of 15 years); Aug +2.1 pts (beat in 8 of 16 years).</li><li><b>Weakest months:</b> Jan -1.8 pts (beat in 5 of 15 years); Oct -1.7 pts (beat in 5 of 15 years); Feb -1.3 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -3.0 pts); Apr–Jul beat the Nifty in 7 of 15 years (median -3.8 pts); Aug–Sep beat the Nifty in 7 of 14 years (median +2.9 pts); Oct–Dec beat the Nifty in 9 of 14 years (median +6.9 pts); Sep–Nov beat the Nifty in 7 of 14 years (median +0.7 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -6.4 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about -1.2 points.</p><p><b>Reading it:</b> the basket is equal-weighted, so three tiny names (National Oxygen, Bhagawati Oxygen, Gagan Gases) carry as much weight as Linde India; treat it as small-cap behaviour. December is the only month with a consistent edge (beat the Nifty in 11 of 15 years) and October–December is the best window (9 of 14, median +6.9 points). January–March is the weak stretch (4 of 15). Unlike most chemicals, April–July has been poor (7 of 15, median −3.8).</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="OctDec" viewBox="0 0 720 280" role="img" aria-label="October to December return minus Nifty by year"></svg><figcaption>October–December return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>Biggest Decembers (2022: +30.2 pts; 2021: +22.8; 2020: +14.8).</b> The oxygen-crisis years, when the small names ran and Linde re-rated.</li>
+    <li><b>December misses (2025: −10.8; 2019: −10.2; 2013: −7.9).</b> 2025: the SAT ruling against Linde India; 2019 and 2013: small-cap bear markets.</li>
+    <li><b>October–December failures (2013: −18.7; 2019: −18.8; 2025: −22.4).</b> The same three years; the 2025 slide came with the Linde governance ruling.</li>
+    <li><b>April–July has been poor</b> (7 of 15, median −3.8). Big misses were 2018 (−29.0), 2020 (−18.1) and 2014 (−16.2); the big exception was 2021 (+69.0), the oxygen crisis.</li>
+    <li><b>January–March</b> lagged in 11 of 15 years; the exceptions were 2020 (+30.4, oxygen suddenly strategic) and 2012 (+12.2).</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This basket is thin and its calendar is mostly small-cap noise plus Linde India's governance dates. The one strong signal is event-driven: healthcare oxygen shocks (2020–21) and helium shocks (2026) re-rate the whole group. For Linde India, court and SEBI dates matter more than months.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">8 · What moves demand and margins</p>
+  <h2>Six drivers</h2>
+  <ol>
+    <li><b>Steel capacity additions:</b> the largest source of tonnage contracts. India's plan to reach ~300 mt capacity by 2030 means new ASUs.</li>
+    <li><b>Merchant supply-demand:</b> new ASUs (Air Liquide Mathura, NovaAir's plants, Ellenbarrie Uluberia 2 and Kurnool) and steel outages decide merchant prices.</li>
+    <li><b>Power cost:</b> each tonne of liquid oxygen needs roughly 0.6–0.9 MWh of electricity; captive or renewable power lowers costs.</li>
+    <li><b>Healthcare:</b> post-COVID hospital pipelines and PSA plants changed the mix (see technology).</li>
+    <li><b>Electronics and hydrogen:</b> India's semiconductor fabs (Tata Electronics' ~$10.9 bn Dholera fab targeting 2026 production; Micron's $2.75 bn Sanand plant) need ultra-high-purity gases; the green hydrogen mission could open a new business, but it is slow (~8,000 t a year commissioned by February 2026 vs a 5 mt target).</li>
+    <li><b>Helium availability:</b> a global shock in 2026 that raises distributor margins but hurts MRI and fab users.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">9 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of Linde India, National Oxygen, Bhagawati Oxygen and Gagan Gases (plus Ellenbarrie from its 2025 listing), price only; 2026 is to 18 September. There is no free long-run series for Indian oxygen or power prices, so the notes carry the story. Named stock moves are that stock's calendar-year return.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of an industrial-gas cycle in India</h3>
+  <ol>
+    <li><b>Steel capex boom</b> → gas majors sign tonnage contracts and build ASUs (2008–13).</li>
+    <li><b>Steel slump or customer under-use</b> → tonnage plants earn poor returns; surplus floods merchant markets (2014–19 for Linde India).</li>
+    <li><b>A demand shock</b> (COVID oxygen in 2021, helium in 2026) → merchant prices and investor attention jump.</li>
+    <li><b>New merchant capacity</b> (Air Liquide, NovaAir, Ellenbarrie, INOX) → prices normalise regionally.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Crises re-rate everything, including shells.</b> In 2021 Bhagawati Oxygen rose 195% even as its only plant was about to close.</li>
+    <li><b>Governance drives Linde India's multiple.</b> Its best years (2021–23) came before the SEBI orders; since 2024 the Praxair dispute has capped it.</li>
+    <li><b>IPOs follow good years.</b> Ellenbarrie listed in 2025; INOX Air Products is preparing to list in 2026.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">10 · The global picture</p>
+  <h2>A five-company world</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Home</th><th>India presence</th></tr></thead><tbody>
+    <tr><td>Linde plc</td><td>UK/US (merged with Praxair 2018)</td><td>Linde India (listed, 75%) and Praxair India (unlisted)</td></tr>
+    <tr><td>Air Liquide</td><td>France</td><td>Air Liquide India; NovaAir acquired in 2025</td></tr>
+    <tr><td>Air Products</td><td>US</td><td>INOX Air Products (joint venture)</td></tr>
+    <tr><td>Nippon Sanso</td><td>Japan</td><td>Smaller presence</td></tr>
+    <tr><td>Messer</td><td>Germany</td><td>Smaller presence</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><b>China</b> has its own large players (Hangzhou Oxygen, Yingde Gases) and is the biggest maker of ASU equipment outside the majors.</li>
+    <li><b>Helium</b> comes from a handful of gas fields: the US, Qatar (~40% of traded supply), Algeria and Russia. The March 2026 strike on Ras Laffan and the Hormuz closure created the worst shortage on record; spot helium rose above $1,000 per thousand cubic feet vs contract prices of $500–550.</li>
+    <li>The industry is known for pricing discipline: operating margins at Linde plc are close to 30%.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">11 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ul>
+    <li><b>PSA oxygen plants in hospitals:</b> after 2021, over a thousand pressure-swing adsorption plants were installed in public hospitals, cutting their need for delivered liquid oxygen.</li>
+    <li><b>Zero-boil-off MRI machines:</b> most Indian MRIs now recycle helium and need refilling only every 4–10 years, which limits the 2026 shortage's bite.</li>
+    <li><b>Green hydrogen:</b> electrolysers powered by renewables; gas majors want to own the plants and pipelines, but Indian commissioning is slow.</li>
+    <li><b>Carbon capture:</b> CO₂ capture from steel and cement; gas companies build and run the units (in India, Praxair India holds the carbon-capture rights under the Linde split).</li>
+    <li><b>Electronic gases:</b> ultra-high-purity nitrogen, argon, helium and specialty molecules for chips and displays.</li>
+    <li><b>Oxy-fuel and hydrogen steelmaking</b> could change how much oxygen steel needs per tonne.</li>
+  </ul>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">12 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Medical oxygen price control (NLEM/DPCO; 2021 LMO caps)</td><td>Medical oxygen is price-controlled</td><td>Caps healthcare margins</td></tr>
+    <tr><td>PESO rules on cylinders and cryogenic tankers</td><td>Licensing and safety</td><td>Entry barrier for small fillers</td></tr>
+    <tr><td>National Green Hydrogen Mission (2023)</td><td>SIGHT awards of ~862,000 t; ~8,000 t commissioned by February 2026; ~₹250 cr spent of the outlay</td><td>A long-term market, slow in practice</td></tr>
+    <tr><td>India Semiconductor Mission</td><td>Fabs under construction</td><td>Demand for specialty gases</td></tr>
+    <tr><td>SEBI related-party rules</td><td>SAT upheld SEBI against Linde India (December 2025); Supreme Court appeal admitted without a stay; April 2026 summons</td><td>Determines how Linde India shares business with Praxair India</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">13 · Where the cycle stands now</p>
+  <h2>September 2026: growth intact, governance overhang</h2>
+  <div class="sig">
+    <div class="sg"><div class="t">Volumes <span class="chip ch-good">Growing</span></div>Linde India gas revenue +9% and total revenue +22% in Q1 FY27; Ellenbarrie's new plants are ramping.</div>
+    <div class="sg"><div class="t">Governance <span class="chip ch-bad">Unresolved</span></div>Minority shareholders rejected the Praxair deal; the Supreme Court case is pending.</div>
+    <div class="sg"><div class="t">Helium <span class="chip ch-bad">Shortage</span></div>Qatar running at ~25% of normal helium capacity at last report.</div>
+    <div class="sg"><div class="t">Competition <span class="chip ch-mid">Rising</span></div>Air Liquide–NovaAir, Ellenbarrie's expansion and an INOX IPO war chest.</div>
+  </div>
+  <p id="now-stocks">Stocks: the basket is -0.3% this year vs -10.7% for the Nifty (to 18 Sep 2026). Linde India is ~36% below its 2023 peak and Ellenbarrie ~39% below its post-listing high, even as Ellenbarrie's profits nearly doubled in Q1 FY27. INOX Air Products, the co-leader, is preparing a ~$1 billion IPO that will give investors a third listed choice.</p>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">14 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Steel production and capacity additions</td><td>JPC monthly; company announcements</td><td>Tonnage demand and merchant surplus</td></tr>
+    <tr><td>Industrial power tariffs</td><td>State regulators; exchange prices</td><td>Merchant cost</td></tr>
+    <tr><td>Helium spot vs contract prices; Qatar restart</td><td>Industry reports</td><td>Import cost and availability</td></tr>
+    <tr><td>Linde India–Praxair case</td><td>Supreme Court, SEBI, company filings</td><td>Value transfer risk for minorities</td></tr>
+    <tr><td>INOX Air Products IPO filing</td><td>SEBI DRHP</td><td>Disclosure on India merchant pricing and a valuation benchmark</td></tr>
+    <tr><td>Linde plc and Air Liquide commentary on India</td><td>Quarterly results</td><td>Parent view of the market</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">15 · Adjacent industries and proxies</p>
+  <h2>Who else benefits</h2>
+  <ul>
+    <li><b>Cryogenic equipment:</b> INOX India (tanks, trailers, LNG equipment).</li>
+    <li><b>Steel:</b> the largest customer; steel capex is a leading indicator.</li>
+    <li><b>Hospitals:</b> big medical oxygen buyers; MRI helium users.</li>
+    <li><b>Electronics manufacturing and semiconductors:</b> future specialty-gas demand.</li>
+    <li><b>Green hydrogen developers and electrolyser makers;</b> De Nora India (003) for electrolysers.</li>
+    <li><b>LPG distribution:</b> Gagan Gases' real peers (Aegis Logistics).</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">16 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <div class="two"><div><ol>
+    <li>What share of revenue is on-site vs merchant vs packaged, and how much of the on-site business is take-or-pay?</li>
+    <li>What are merchant utilisation and price trends by region?</li>
+    <li>Is power pass-through automatic in contracts? What share of power is renewable or captive?</li>
+    <li>What is the order book for project engineering (Linde India)?</li>
+    <li>What's the plan and timeline for resolving the Praxair allocation (Linde India)?</li>
+    <li>(Ellenbarrie) What anchor customers underpin the new capacity, and what are merchant prices at Uluberia and Kurnool?</li>
+  </ol></div><div><h3>Red flags</h3><ul>
+    <li>Growth via related-party transfers or sales to the parent.</li>
+    <li>Merchant capacity added without anchor customers.</li>
+    <li>Rising receivables from state hospitals.</li>
+    <li>Profits from one-off arbitration rather than operations (Bhagawati).</li>
+  </ul></div></div>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">17 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Linde India is a proxy for Linde plc."</td><td>Only partly: territory and product allocation to Praxair India means some Indian growth accrues to the unlisted sister. That's exactly what the SEBI case is about.</td></tr>
+    <tr><td>"COVID made oxygen a permanent growth story."</td><td>The 2021 spike was temporary; hospitals installed PSA plants afterwards, reducing reliance on delivered gas.</td></tr>
+    <tr><td>"Gases are utilities."</td><td>On-site contracts are; merchant and packaged businesses are cyclical and competitive.</td></tr>
+    <tr><td>"The helium shortage will shut Indian MRI centres."</td><td>Most Indian MRIs use zero-boil-off magnets; the bigger risk is higher costs for new machines and fabs.</td></tr>
+    <tr><td>"Green hydrogen will be a big gas-company business soon."</td><td>Commissioned capacity is ~0.16% of the 2030 target; it's a 2030s story.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">18 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. ASU, merchant" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Technology</h3><dl>
+    <dt>ASU</dt><dd>Air separation unit: a plant that liquefies and distils air into oxygen, nitrogen and argon.</dd>
+    <dt>Cryogenic</dt><dd>Extremely cold (below about −150°C).</dd>
+    <dt>Cold box</dt><dd>The insulated heart of an ASU where air is liquefied and separated.</dd>
+    <dt>TPD</dt><dd>Tonnes per day, the unit of ASU capacity.</dd>
+    <dt>LOX / LIN / LAR</dt><dd>Liquid oxygen, liquid nitrogen, liquid argon.</dd>
+    <dt>PSA / VSA</dt><dd>Pressure- or vacuum-swing adsorption: small non-cryogenic units that make oxygen or nitrogen on site.</dd>
+    <dt>Membrane nitrogen</dt><dd>Nitrogen separated from air through polymer fibres; for small, lower-purity needs.</dd>
+    <dt>HyCO</dt><dd>Hydrogen and carbon monoxide plants, usually for refineries and chemicals.</dd>
+    <dt>SMR</dt><dd>Steam methane reforming: making hydrogen from natural gas.</dd>
+    <dt>Electrolyser</dt><dd>A machine that splits water into hydrogen and oxygen using electricity.</dd>
+    <dt>Green / grey / blue hydrogen</dt><dd>From renewable electrolysis / from gas with CO₂ released / from gas with CO₂ captured.</dd>
+    <dt>UHP gases</dt><dd>Ultra-high-purity gases used in chip manufacturing.</dd>
+    <dt>Zero boil-off (ZBO)</dt><dd>MRI magnet technology that recycles helium.</dd>
+    <dt>Dissolved acetylene</dt><dd>Acetylene stored in cylinders dissolved in acetone; for cutting and welding.</dd>
+    <dt>Carbon capture</dt><dd>Separating CO₂ from flue gas for storage or use.</dd>
+    <dt>Argon</dt><dd>An inert gas making up ~0.93% of air, recovered only by large ASUs; used to shield welding.</dd>
+    <dt>Oxygen enrichment</dt><dd>Adding pure oxygen to a blast furnace's air blast to raise output and cut coke use.</dd>
+    <dt>BOF</dt><dd>Basic oxygen furnace: the steelmaking step that blows pure oxygen through molten iron.</dd>
+    <dt>Nitrogen blanketing</dt><dd>Filling tanks and reactors with nitrogen to keep oxygen and moisture out.</dd>
+    <dt>Calibration gas</dt><dd>A precise gas mixture used to check instruments and emission monitors.</dd>
+    <dt>Liquefier</dt><dd>The part of an ASU that turns gas into liquid for merchant sale.</dd>
+    <dt>Cryogenic tanker</dt><dd>An insulated road tanker that carries liquid oxygen, nitrogen or argon.</dd>
+    <dt>Dewar</dt><dd>An insulated flask for liquid helium or nitrogen.</dd>
+    <dt>NLEM / DPCO</dt><dd>National List of Essential Medicines and the Drug Price Control Order, which cap medical oxygen prices.</dd>
+    <dt>Ras Laffan</dt><dd>Qatar's gas-processing complex, the world's biggest single helium source.</dd>
+  </dl>
+  <h3>Business</h3><dl>
+    <dt>On-site / tonnage</dt><dd>A plant dedicated to one customer, supplying by pipeline under a long contract.</dd>
+    <dt>Take-or-pay</dt><dd>The customer pays for a minimum volume even if it takes less.</dd>
+    <dt>Facility fee</dt><dd>The fixed monthly charge in an on-site contract, covering the plant's capital.</dd>
+    <dt>Power pass-through</dt><dd>A contract clause that moves electricity cost changes to the customer.</dd>
+    <dt>Merchant liquid</dt><dd>Liquefied gas sold and trucked to many customers.</dd>
+    <dt>Packaged gas</dt><dd>Gas sold in cylinders.</dd>
+    <dt>Cylinder rental</dt><dd>A charge for the use of the company's cylinders, separate from the gas.</dd>
+    <dt>LMO</dt><dd>Liquid medical oxygen.</dd>
+    <dt>Project engineering</dt><dd>Designing and building gas plants for others (Linde India's second segment).</dd>
+    <dt>Related-party transaction (RPT)</dt><dd>A deal between a listed company and its promoter's other entities; large ones need minority approval.</dd>
+    <dt>Material RPT</dt><dd>An RPT above SEBI's size threshold, which needs a shareholder vote.</dd>
+    <dt>SAT</dt><dd>Securities Appellate Tribunal, which hears appeals against SEBI orders.</dd>
+    <dt>PESO</dt><dd>Petroleum and Explosives Safety Organisation, the regulator for cylinders and tankers.</dd>
+    <dt>Mcf</dt><dd>Thousand cubic feet, the unit for helium pricing.</dd>
+    <dt>SIGHT</dt><dd>Strategic Interventions for Green Hydrogen Transition, the incentive scheme under the green hydrogen mission.</dd>
+    <dt>DRHP</dt><dd>Draft red herring prospectus, the IPO filing (INOX Air Products is expected to file one).</dd>
+  </dl>
+  <p class="note" id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">19 · Test yourself</p>
+  <h2>Nine questions; answers hidden</h2>
+  <details class="q"><summary>1. What's the largest cost in making liquid oxygen?</summary><p>Electricity.</p></details>
+  <details class="q"><summary>2. Why is merchant oxygen a regional market?</summary><p>It's shipped as a cryogenic liquid by road; freight makes long hauls uneconomic, so supply is local.</p></details>
+  <details class="q"><summary>3. What is the Linde India minority-shareholder dispute about?</summary><p>Whether business split with sister company Praxair India needed minority approval, and whether it moved value away from Linde India's minorities.</p></details>
+  <details class="q"><summary>4. Why did a missile strike in Qatar matter for Indian hospitals and fabs?</summary><p>Qatar supplies ~40% of traded helium, which India fully imports for MRI machines and chip manufacturing.</p></details>
+  <details class="q"><summary>5. Why do steel shutdowns hurt merchant oxygen prices?</summary><p>On-site plants keep running; the unused oxygen is liquefied and sold in the merchant market, adding supply.</p></details>
+  <details class="q"><summary>6. Why is Bhagawati Oxygen flagged?</summary><p>Its only gas plant has been shut since October 2021; its recent profit came from arbitration income.</p></details>
+  <details class="q"><summary>7. Who owns INOX Air Products?</summary><p>It's a joint venture between Air Products and the INOX Group; it plans a ~$1 bn IPO.</p></details>
+  <details class="q"><summary>8. Which quarter has been best for this basket, and why?</summary><p>October–December (9 of 14 years), driven by December; the biggest gains came in the oxygen-crisis years.</p></details>
+  <details class="q"><summary>9. Why hasn't the helium shortage shut Indian MRI centres?</summary><p>Most use zero-boil-off magnets that recycle helium and need refilling only every 4–10 years.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">20 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members vs NSE:NIFTY; individual stock returns for the year notes.</li>
+    <li><a href="https://www.marknteladvisors.com/research-library/industrial-gases-market-india.html">India industrial gases market size and shares</a>; <a href="https://www.kenresearch.com/industry-reports/india-industrial-gas-market">Ken Research</a>.</li>
+    <li><a href="https://www.sahi.com/news/linde-india-q1-revenue-touches-7-billion-consolidated-net-profit-muted-at-1-05-billion-154-PE1_CORP">Linde India Q1 FY27</a>; <a href="https://indiankanoon.org/doc/105878644/">SAT order, 5 December 2025</a>; <a href="https://scanx.trade/stock-market-news/companies/linde-india-shareholders-reject-4-177-million-related-party-transaction-proposal-at-egm/36753892">March 2026 EGM vote</a>; <a href="https://theprint.in/economy/linde-indias-minority-investors-cry-foul-after-firm-asks-sc-to-stay-sebi-action-on-key-valuation-report/2955700/">ThePrint on the Supreme Court appeal</a>; <a href="https://www.business-standard.com/companies/news/linde-seeks-shareholder-approval-for-rpt-with-praxair-126021101576_1.html">Business Standard: RPT approval sought</a>; <a href="https://www.whalesbook.com/corporate-news/English/sebiexchange/Linde-India-Faces-SEBI-Dispute-Over-Related-Party-Transaction-Rules/6a1aa98cde28c5c0a911d379">SEBI dispute update</a>.</li>
+    <li><a href="https://www.multibagg.ai/market-pulse/articles/ellenbarrie-q1fy27-97534">Ellenbarrie Q1 FY27</a>; <a href="https://www.5paisa.com/news/ellenbarrie-industrial-gases-ipo-listing">Ellenbarrie listing</a>; <a href="https://www.chittorgarh.com/ipo/ellenbarrie-industrial-gases-ipo/2189/">IPO details</a>.</li>
+    <li><a href="https://www.angelone.in/news/ipos/inox-air-products-eyes-1-billion-ipo-appoints-kotak-jpmorgan-and-citi">INOX Air Products IPO plans</a>; <a href="https://in.airliquide.com/air-liquide-expands-its-presence-india-acquisition-novaair">Air Liquide–NovaAir</a>.</li>
+    <li><a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Bhagawati-Oxygen-Posts-Profit-Driven-by-Arbitration-Gas-Plant-Closed/6a1978206ec823f1f291b8f9">Bhagawati Oxygen plant closure</a>; <a href="https://stockanalysis.com/quote/bom/524624/company/">Gagan Gases profile</a>.</li>
+    <li><a href="https://www.agbi.com/industry/2026/03/qatari-lng-shutdown-puts-11-of-global-helium-supply-at-risk/">AGBI: Qatar helium</a>; <a href="https://www.fusionww.com/insights/helium-shortage-2026">helium shortage 2026 pricing</a>; <a href="https://finshots.in/archive/inside-indias-response-to-the-global-helium-shortage/">India's response to the helium shortage</a>; <a href="https://www.indoneo.com/tech-ai/india-chip-fab-west-asia-supply-disruption/">fabs and West Asia disruption</a>; <a href="https://www.reslink.org/blogs/india-s-green-hydrogen-mission-is-moving-from-paper-to-projects/">green hydrogen progress</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 18.1}, {"y": 2013, "v": 4.9}, {"y": 2014, "v": -3.0}, {"y": 2015, "v": -5.5}, {"y": 2016, "v": -20.5}, {"y": 2017, "v": -1.9}, {"y": 2018, "v": -4.1}, {"y": 2019, "v": -22.3}, {"y": 2020, "v": 23.5}, {"y": 2021, "v": 2.2}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": -2.3}, {"y": 2024, "v": -8.1}, {"y": 2025, "v": -10.9}, {"y": 2026, "v": -0.3}], "AprJul": [{"y": 2012, "v": -4.6}, {"y": 2013, "v": 1.9}, {"y": 2014, "v": -16.2}, {"y": 2015, "v": -6.1}, {"y": 2016, "v": 22.2}, {"y": 2017, "v": -10.1}, {"y": 2018, "v": -29.0}, {"y": 2019, "v": 9.6}, {"y": 2020, "v": -18.1}, {"y": 2021, "v": 69.0}, {"y": 2022, "v": 12.6}, {"y": 2023, "v": -3.8}, {"y": 2024, "v": 4.4}, {"y": 2025, "v": 9.9}, {"y": 2026, "v": -4.4}], "AugSep": [{"y": 2012, "v": -15.7}, {"y": 2013, "v": -5.0}, {"y": 2014, "v": 11.1}, {"y": 2015, "v": 29.7}, {"y": 2016, "v": 7.0}, {"y": 2017, "v": -1.2}, {"y": 2018, "v": 28.9}, {"y": 2019, "v": -8.0}, {"y": 2020, "v": 10.3}, {"y": 2021, "v": -7.0}, {"y": 2022, "v": -4.7}, {"y": 2023, "v": 21.2}, {"y": 2024, "v": 6.9}, {"y": 2025, "v": -5.3}], "OctDec": [{"y": 2012, "v": 37.8}, {"y": 2013, "v": -18.7}, {"y": 2014, "v": 8.1}, {"y": 2015, "v": -2.6}, {"y": 2016, "v": 7.9}, {"y": 2017, "v": 17.3}, {"y": 2018, "v": 7.5}, {"y": 2019, "v": -18.8}, {"y": 2020, "v": 0.4}, {"y": 2021, "v": 35.1}, {"y": 2022, "v": 15.0}, {"y": 2023, "v": 6.3}, {"y": 2024, "v": -0.8}, {"y": 2025, "v": -22.4}], "SepNov": [{"y": 2012, "v": 12.9}, {"y": 2013, "v": -6.7}, {"y": 2014, "v": 6.2}, {"y": 2015, "v": 13.5}, {"y": 2016, "v": 17.6}, {"y": 2017, "v": 6.8}, {"y": 2018, "v": 30.2}, {"y": 2019, "v": -5.4}, {"y": 2020, "v": -13.8}, {"y": 2021, "v": 4.8}, {"y": 2022, "v": -14.6}, {"y": 2023, "v": -4.5}, {"y": 2024, "v": -3.5}, {"y": 2025, "v": -11.8}], "JanMar": [{"y": 2012, "v": 12.2}, {"y": 2013, "v": 7.0}, {"y": 2014, "v": -3.7}, {"y": 2015, "v": -11.8}, {"y": 2016, "v": -13.6}, {"y": 2017, "v": -4.0}, {"y": 2018, "v": -6.4}, {"y": 2019, "v": -27.2}, {"y": 2020, "v": 30.4}, {"y": 2021, "v": -4.3}, {"y": 2022, "v": -8.0}, {"y": 2023, "v": -13.3}, {"y": 2024, "v": -6.7}, {"y": 2025, "v": -14.2}, {"y": 2026, "v": 2.8}]}, "my": {"1": {"2012": -6.7, "2013": 2.0, "2014": -0.8, "2015": -6.6, "2016": 7.2, "2017": -1.9, "2018": -2.4, "2019": -5.8, "2020": 7.6, "2021": -5.8, "2022": -4.0, "2023": -11.5, "2024": 1.5, "2025": -3.8, "2026": 3.6}, "2": {"2012": 14.0, "2013": 0.0, "2014": 4.8, "2015": -3.7, "2016": -14.9, "2017": -3.3, "2018": 7.3, "2019": -4.9, "2020": 13.3, "2021": 8.0, "2022": -16.0, "2023": -9.9, "2024": -6.1, "2025": -1.5, "2026": -6.7}, "3": {"2012": 3.7, "2013": 5.2, "2014": -7.5, "2015": -2.0, "2016": -5.1, "2017": 1.5, "2018": -10.8, "2019": -18.0, "2020": 12.5, "2021": -5.2, "2022": 15.5, "2023": 8.7, "2024": -2.0, "2025": -10.0, "2026": 6.0}, "4": {"2012": 3.7, "2013": -9.0, "2014": -3.2, "2015": -5.2, "2016": -0.5, "2017": 9.4, "2018": -12.7, "2019": -4.0, "2020": -14.5, "2021": 38.4, "2022": 13.6, "2023": -1.8, "2024": 20.8, "2025": -4.6, "2026": -3.2}, "5": {"2012": 3.9, "2013": 2.1, "2014": -10.6, "2015": 0.5, "2016": -2.8, "2017": -13.6, "2018": 7.7, "2019": 9.6, "2020": -3.8, "2021": 12.8, "2022": -14.4, "2023": -5.7, "2024": -6.8, "2025": 16.6, "2026": 11.4}, "6": {"2012": -12.9, "2013": 3.2, "2014": 2.3, "2015": -5.3, "2016": 16.9, "2017": -2.6, "2018": -12.9, "2019": -11.7, "2020": 16.4, "2021": 7.3, "2022": 6.1, "2023": 2.1, "2024": -2.3, "2025": -6.6, "2026": -11.2}, "7": {"2011": 7.5, "2012": 0.4, "2013": 5.7, "2014": -3.8, "2015": 4.5, "2016": 6.3, "2017": -1.8, "2018": -10.8, "2019": 17.8, "2020": -11.9, "2021": -1.2, "2022": 10.1, "2023": 2.0, "2024": -5.7, "2025": 5.0, "2026": -0.4}, "8": {"2011": -3.1, "2012": -6.8, "2013": -8.8, "2014": 2.0, "2015": 20.1, "2016": -4.4, "2017": 0.8, "2018": 5.1, "2019": -11.2, "2020": 10.8, "2021": -0.9, "2022": -3.9, "2023": 23.6, "2024": 8.9, "2025": -5.8, "2026": 7.5}, "9": {"2011": 9.4, "2012": -8.9, "2013": 4.9, "2014": 8.7, "2015": 8.5, "2016": 11.5, "2017": -2.0, "2018": 22.3, "2019": 4.1, "2020": -0.4, "2021": -5.7, "2022": -0.9, "2023": -2.4, "2024": -1.9, "2025": 0.6}, "10": {"2011": -14.6, "2012": 24.9, "2013": -7.3, "2014": -0.6, "2015": 6.0, "2016": -2.3, "2017": -2.4, "2018": -1.6, "2019": -7.5, "2020": 2.3, "2021": -2.1, "2022": -12.4, "2023": 0.0, "2024": 0.4, "2025": -8.2}, "11": {"2011": -1.1, "2012": -3.2, "2013": -3.6, "2014": -2.2, "2015": -1.2, "2016": 8.3, "2017": 11.3, "2018": 9.2, "2019": -1.4, "2020": -15.2, "2021": 12.7, "2022": -1.5, "2023": -2.1, "2024": -2.2, "2025": -4.0}, "12": {"2011": 7.4, "2012": 12.4, "2013": -7.9, "2014": 10.4, "2015": -7.0, "2016": 1.9, "2017": 6.8, "2018": 0.6, "2019": -10.2, "2020": 14.8, "2021": 22.8, "2022": 30.2, "2023": 8.4, "2024": 0.8, "2025": -10.8}}, "basket": ["Linde India Ltd.", "Ellenbarrie Industrial Gases Limited", "National Oxygen Limited", "Bhagawati Oxygen Ltd.", "Gagan Gases Limited."], "nbasket": 5, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -1.1, "rel": -1.8, "hit": 5, "n": 15}, {"m": 2, "abs": -2.5, "rel": -1.3, "hit": 6, "n": 15}, {"m": 3, "abs": -0.7, "rel": -0.5, "hit": 7, "n": 15}, {"m": 4, "abs": 4.4, "rel": 1.8, "hit": 5, "n": 15}, {"m": 5, "abs": 1.6, "rel": 0.5, "hit": 8, "n": 15}, {"m": 6, "abs": 1.0, "rel": -0.7, "hit": 7, "n": 15}, {"m": 7, "abs": 3.4, "rel": 1.5, "hit": 9, "n": 16}, {"m": 8, "abs": 1.9, "rel": 2.1, "hit": 8, "n": 16}, {"m": 9, "abs": 3.8, "rel": 3.2, "hit": 8, "n": 15}, {"m": 10, "abs": 0.4, "rel": -1.7, "hit": 5, "n": 15}, {"m": 11, "abs": 1.2, "rel": 0.3, "hit": 4, "n": 15}, {"m": 12, "abs": 6.1, "rel": 5.4, "hit": 11, "n": 15}], "cy": [{"y": 2012, "b": 57.5, "n": 27.7, "rel": 29.8, "partial": false}, {"y": 2013, "b": -8.0, "n": 6.8, "rel": -14.8, "partial": false}, {"y": 2014, "b": 30.0, "n": 31.4, "rel": -1.4, "partial": false}, {"y": 2015, "b": 2.4, "n": -4.1, "rel": 6.5, "partial": false}, {"y": 2016, "b": 23.0, "n": 3.0, "rel": 20.0, "partial": false}, {"y": 2017, "b": 29.2, "n": 28.6, "rel": 0.5, "partial": false}, {"y": 2018, "b": -0.1, "n": 3.2, "rel": -3.3, "partial": false}, {"y": 2019, "b": -30.3, "n": 12.0, "rel": -42.3, "partial": false}, {"y": 2020, "b": 56.1, "n": 14.9, "rel": 41.2, "partial": false}, {"y": 2021, "b": 148.7, "n": 24.1, "rel": 124.6, "partial": false}, {"y": 2022, "b": 18.0, "n": 4.3, "rel": 13.6, "partial": false}, {"y": 2023, "b": 28.0, "n": 20.0, "rel": 8.0, "partial": false}, {"y": 2024, "b": 11.7, "n": 8.8, "rel": 2.9, "partial": false}, {"y": 2025, "b": -22.6, "n": 10.5, "rel": -33.1, "partial": false}, {"y": 2026, "b": -0.3, "n": -10.7, "rel": 10.4, "partial": true}], "dd": [{"co": "Linde India", "peak": "May 2024", "fp": -36, "y1": -3}, {"co": "Ellenbarrie Industrial Gases", "peak": "Jul 2025", "fp": -39, "y1": -31}, {"co": "National Oxygen", "peak": "Jan 2022", "fp": -75, "y1": -50}, {"co": "Bhagawati Oxygen", "peak": "Jan 2022", "fp": -62, "y1": -20}, {"co": "Gagan Gases.", "peak": "Jul 2025", "fp": -40, "y1": -17}], "win": {"FebMar": {"mean": -2.3, "median": -3.0, "hit": 4, "n": 15}, "AprJul": {"mean": 2.5, "median": -3.8, "hit": 7, "n": 15}, "AugSep": {"mean": 4.9, "median": 2.9, "hit": 7, "n": 14}, "OctDec": {"mean": 5.1, "median": 6.9, "hit": 9, "n": 14}, "SepNov": {"mean": 2.3, "median": 0.7, "hit": 7, "n": 14}, "JanMar": {"mean": -4.1, "median": -6.4, "hit": 4, "n": 15}}, "ytd": {"b": -0.3, "n": -10.7}, "notes": {"2012": "Small-cap rally: Bhagawati Oxygen +113%, Gagan Gases +66%, Linde India +40%.", "2013": "Steel slowdown and the rupee crisis; Gagan \u221233%, Bhagawati \u221222%, Linde \u221214%.", "2014": "The post-election re-rating: Gagan +98%, Linde +36%; Bhagawati \u221225%.", "2015": "Linde India \u221229% as debt-heavy tonnage plants built for steel customers earned poor returns; Bhagawati +58%.", "2016": "Bhagawati +58%, Linde +12%; Gagan \u221225%.", "2017": "Linde and Praxair announced their global merger (completed October 2018): Linde India +51%, Gagan +32%.", "2018": "The merger made Linde India and unlisted Praxair India sister companies, planting the governance issue. Linde +27%; Bhagawati \u221247% in the small-cap sell-off.", "2019": "A small-cap bear market: Bhagawati \u221268%, Gagan \u221223%; Linde roughly flat (\u22123%).", "2020": "COVID put oxygen at the centre of healthcare: Bhagawati +219%, Linde +47%.", "2021": "The second-wave oxygen crisis (April\u2013May): industrial oxygen was diverted to hospitals and prices capped. National Oxygen +251%, Bhagawati +195% (even as its own plant shut in October), Linde +156%. The basket beat the Nifty by 125 points.", "2022": "Linde +38% on project orders and gas volumes; the small names faded.", "2023": "Linde India's peak year (+64%); Gagan +42%; National Oxygen \u221222%.", "2024": "SEBI issued two orders against Linde India over related-party dealings with Praxair India; Linde +6%, Gagan +27%.", "2025": "SAT dismissed Linde's appeal (December). National Oxygen \u221244%, Bhagawati \u221219%; Ellenbarrie listed in July at a 23% premium.", "2026": "Minority shareholders rejected the Praxair transactions (5 March); strikes on Qatar cut global helium supply. Ellenbarrie +10%, Linde +5%; National Oxygen \u221223%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

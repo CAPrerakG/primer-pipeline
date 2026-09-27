@@ -1,0 +1,2782 @@
+[
+ {
+  "section": "AEROSPACE & DEFENCE MANUFACTURING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 9,
+  "status": "done",
+  "primer": "057",
+  "family": "Defence",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "AGROCHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 39,
+  "status": "done",
+  "primer": "001",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ALCOHOL & SOLVENT CHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 1,
+  "status": "done",
+  "primer": "005",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ALUMINIUM",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 19,
+  "status": "done",
+  "primer": "072",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "APPAREL & FOOTWEAR RETAIL",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 42,
+  "status": "done",
+  "primer": "049",
+  "family": "Consumer",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "AROMA & FLAVOUR CHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 8,
+  "status": "done",
+  "primer": "010",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "AUTO COMPONENTS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 77,
+  "status": "done",
+  "primer": "023",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "AUTO DEALERSHIPS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 5,
+  "status": "done",
+  "primer": "027",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "AUTO ELECTRICALS & ELECTRONICS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 14,
+  "status": "done",
+  "primer": "024",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "AUTOMOBILE MANUFACTURERS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 1,
+  "status": "done",
+  "primer": "021",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "BATTERIES & ENERGY STORAGE",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 15,
+  "status": "done",
+  "primer": "046",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "BOILERS TURBINES & POWER EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 14,
+  "status": "done",
+  "primer": "041",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "CASTINGS & FOUNDRIES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 28,
+  "status": "done",
+  "primer": "078",
+  "family": "Engineering & Capital Goods",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "CHEMICAL DISTRIBUTION",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 16,
+  "status": "done",
+  "primer": "016",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "CHLOR-ALKALI & SODA ASH",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 14,
+  "status": "done",
+  "primer": "003",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "CITY GAS DISTRIBUTION",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 4,
+  "status": "done",
+  "primer": "034",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "COAL & COKE",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 12,
+  "status": "done",
+  "primer": "036",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "COMMERCIAL VEHICLES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 5,
+  "status": "done",
+  "primer": "019",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "COPPER",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 6,
+  "status": "done",
+  "primer": "073",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "DEFENCE ELECTRONICS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 9,
+  "status": "done",
+  "primer": "058",
+  "family": "Defence",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "DEFENCE SERVICES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 1,
+  "status": "done",
+  "primer": "062",
+  "family": "Defence",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "DIVERSIFIED METALS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 1,
+  "status": "done",
+  "primer": "075",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "DRONES & SPACE TECHNOLOGY",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 6,
+  "status": "done",
+  "primer": "061",
+  "family": "Defence",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "DYES & PIGMENTS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 29,
+  "status": "done",
+  "primer": "009",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ELECTRIC METERS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "done",
+  "primer": "055",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ELECTRIC MOBILITY & CHARGING",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 4,
+  "status": "done",
+  "primer": "022",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ELECTRONIC COMPONENTS & MATERIALS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 8,
+  "status": "done",
+  "primer": "051",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ELECTRONIC EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "done",
+  "primer": "054",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ELECTRONICS MANUFACTURING SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 18,
+  "status": "done",
+  "primer": "052",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "EXPLOSIVES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 5,
+  "status": "done",
+  "primer": "060",
+  "family": "Defence",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "FERRO ALLOYS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 13,
+  "status": "done",
+  "primer": "065",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "FERTILIZERS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 20,
+  "status": "done",
+  "primer": "014",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "FLUOROCHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 5,
+  "status": "done",
+  "primer": "007",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "GAS TRANSMISSION & LNG",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 3,
+  "status": "done",
+  "primer": "033",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "GRAPHITE & CARBON MATERIALS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "done",
+  "primer": "071",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "GRAPHITE ELECTRODES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "done",
+  "primer": "071",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "INDUSTRIAL GASES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 7,
+  "status": "done",
+  "primer": "006",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "INORGANIC & COMMODITY CHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 18,
+  "status": "done",
+  "primer": "004",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "IRON ORE & MANGANESE MINING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 4,
+  "status": "done",
+  "primer": "064",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "LUBRICANTS & SPECIALTY OILS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 9,
+  "status": "done",
+  "primer": "035",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "METAL RECYCLING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "done",
+  "primer": "076",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "METAL TRADING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 12,
+  "status": "done",
+  "primer": "077",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "MOTORCYCLE HELMETS & SAFETY ACCESSORIES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 1,
+  "status": "done",
+  "primer": "026",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "NON-FERROUS METALS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 5,
+  "status": "done",
+  "primer": "075",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "OIL & GAS EPC",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 1,
+  "status": "done",
+  "primer": "030",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "OIL & GAS EXPLORATION",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 6,
+  "status": "done",
+  "primer": "028",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "OIL REFINING & MARKETING",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "done",
+  "primer": "031",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "OILFIELD & DRILLING SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 16,
+  "status": "done",
+  "primer": "029",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "PAINTS COATINGS & ADHESIVES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 27,
+  "status": "done",
+  "primer": "013",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "PASSENGER VEHICLES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 4,
+  "status": "done",
+  "primer": "017",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "PETROCHEMICALS & POLYMERS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 20,
+  "status": "done",
+  "primer": "002",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "PETROLEUM PRODUCTS & TRADING",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 8,
+  "status": "done",
+  "primer": "032",
+  "family": "Oil & Gas",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "POWER ELECTRONICS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "done",
+  "primer": "053",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "POWER GENERATION & INTEGRATED UTILITIES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 22,
+  "status": "done",
+  "primer": "037",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "POWER T&D EPC",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 13,
+  "status": "done",
+  "primer": "048",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "POWER TRADING",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "done",
+  "primer": "040",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "POWER TRANSMISSION & DISTRIBUTION UTILITIES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "done",
+  "primer": "039",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "PRECIOUS METALS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "done",
+  "primer": "075",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "REFRACTORIES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 9,
+  "status": "done",
+  "primer": "070",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "RENEWABLE ENERGY EPC",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 14,
+  "status": "done",
+  "primer": "047",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "RENEWABLE POWER GENERATION",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 20,
+  "status": "done",
+  "primer": "038",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "RUBBER CHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 3,
+  "status": "done",
+  "primer": "011",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SALT",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 1,
+  "status": "done",
+  "primer": "015",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SECURITY & SURVEILLANCE EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "done",
+  "primer": "056",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SEMICONDUCTORS & ELECTRONIC COMPONENTS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 10,
+  "status": "done",
+  "primer": "050",
+  "family": "Electronics & EMS",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SHIPBUILDING & SHIP REPAIR",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 5,
+  "status": "done",
+  "primer": "059",
+  "family": "Defence",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SOLAR CELLS & MODULES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 18,
+  "status": "done",
+  "primer": "045",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SPECIALTY ALLOYS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "done",
+  "primer": "075",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SPECIALTY CHEMICALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 102,
+  "status": "done",
+  "primer": "008",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "STAINLESS STEEL",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 10,
+  "status": "done",
+  "primer": "067",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "STEEL & IRON",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 87,
+  "status": "done",
+  "primer": "066",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "STEEL PIPES & TUBES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 34,
+  "status": "done",
+  "primer": "068",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "STEEL WIRE & WIRE ROPES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 12,
+  "status": "done",
+  "primer": "069",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "STOCK EXCHANGES & DEPOSITORIES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 4,
+  "status": "done",
+  "primer": "063",
+  "family": "Capital Markets",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SWITCHGEAR & GRID EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 9,
+  "status": "done",
+  "primer": "043",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "SYNTHETIC RUBBER & LATEX",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 3,
+  "status": "done",
+  "primer": "012",
+  "family": "Chemicals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "TRACTORS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 4,
+  "status": "done",
+  "primer": "020",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "TRANSFORMERS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 13,
+  "status": "done",
+  "primer": "042",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "TWO & THREE WHEELERS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 12,
+  "status": "done",
+  "primer": "018",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "TYRES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 18,
+  "status": "done",
+  "primer": "025",
+  "family": "Auto",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "WIRES CABLES & CONDUCTORS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 33,
+  "status": "done",
+  "primer": "044",
+  "family": "Power & Energy",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "ZINC & LEAD",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 5,
+  "status": "done",
+  "primer": "074",
+  "family": "Metals",
+  "order": null,
+  "note": ""
+ },
+ {
+  "section": "INDUSTRIAL MINERALS & MINING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 16,
+  "status": "queued",
+  "primer": null,
+  "family": "Metals - gap to close",
+  "order": 1,
+  "note": "Missed when Metals was marked complete; do this first."
+ },
+ {
+  "section": "FORGINGS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 31,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 2,
+  "note": ""
+ },
+ {
+  "section": "METAL FABRICATION & ENGINEERING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 23,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 3,
+  "note": ""
+ },
+ {
+  "section": "FASTENERS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 4,
+  "note": "Suggest merging with Industrial Tools and Abrasives."
+ },
+ {
+  "section": "INDUSTRIAL TOOLS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 5,
+  "note": "Suggest merging into Fasteners."
+ },
+ {
+  "section": "ABRASIVES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 6,
+  "note": "Suggest merging into Fasteners."
+ },
+ {
+  "section": "WELDING & CUTTING EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 7,
+  "note": ""
+ },
+ {
+  "section": "BEARINGS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 15,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 8,
+  "note": ""
+ },
+ {
+  "section": "INDUSTRIAL GEARS & TRANSMISSION",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 9,
+  "note": "Suggest merging with Hydraulics & Motion Control."
+ },
+ {
+  "section": "HYDRAULICS & MOTION CONTROL",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 10,
+  "note": "Suggest merging into Industrial Gears."
+ },
+ {
+  "section": "PUMPS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 11,
+  "note": ""
+ },
+ {
+  "section": "VALVES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 5,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 12,
+  "note": "Suggest merging with Flexible Hoses & Piping."
+ },
+ {
+  "section": "FLEXIBLE HOSES & PIPING SYSTEMS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 13,
+  "note": "Suggest merging into Valves."
+ },
+ {
+  "section": "COMPRESSORS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 14,
+  "note": "Suggest merging with Industrial Engines."
+ },
+ {
+  "section": "INDUSTRIAL ENGINES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 15,
+  "note": "Suggest merging into Compressors."
+ },
+ {
+  "section": "MACHINE TOOLS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 16,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 16,
+  "note": ""
+ },
+ {
+  "section": "INDUSTRIAL MACHINERY",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 28,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 17,
+  "note": "Suggest absorbing Foundry & Metal Processing Equipment."
+ },
+ {
+  "section": "FOUNDRY & METAL PROCESSING EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 18,
+  "note": "Suggest merging into Industrial Machinery."
+ },
+ {
+  "section": "MATERIAL HANDLING EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 10,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 19,
+  "note": ""
+ },
+ {
+  "section": "CONSTRUCTION & MINING EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 20,
+  "note": ""
+ },
+ {
+  "section": "INDUSTRIAL AUTOMATION & INSTRUMENTATION",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 21,
+  "note": ""
+ },
+ {
+  "section": "HEAT EXCHANGERS & PROCESS EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 22,
+  "note": "Suggest absorbing Cryogenic, Bioenergy & Distillery and Industrial Furnaces."
+ },
+ {
+  "section": "CRYOGENIC EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 23,
+  "note": "Suggest merging into Heat Exchangers."
+ },
+ {
+  "section": "BIOENERGY & DISTILLERY EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 24,
+  "note": "Suggest merging into Heat Exchangers."
+ },
+ {
+  "section": "INDUSTRIAL FURNACES & HEATING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 25,
+  "note": "Suggest merging into Heat Exchangers."
+ },
+ {
+  "section": "GAS CYLINDERS & CONTAINERS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 26,
+  "note": ""
+ },
+ {
+  "section": "POLLUTION CONTROL EQUIPMENT",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 27,
+  "note": "Suggest merging with Industrial Filters."
+ },
+ {
+  "section": "INDUSTRIAL FILTERS & SEPARATION",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 28,
+  "note": "Suggest merging into Pollution Control."
+ },
+ {
+  "section": "INDUSTRIAL HVAC & REFRIGERATION",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 29,
+  "note": "Suggest merging with Cleanroom & HVAC."
+ },
+ {
+  "section": "CLEANROOM & HVAC ENGINEERING",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 30,
+  "note": "Suggest merging into Industrial HVAC."
+ },
+ {
+  "section": "TEXTILE MACHINERY",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 31,
+  "note": "Suggest merging with Plastic & Packaging and Food & Agri machinery."
+ },
+ {
+  "section": "PLASTIC & PACKAGING MACHINERY",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 32,
+  "note": "Suggest merging into Textile Machinery."
+ },
+ {
+  "section": "FOOD & AGRICULTURAL MACHINERY",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 33,
+  "note": "Suggest merging into Textile Machinery."
+ },
+ {
+  "section": "INDUSTRIAL SAFETY PRODUCTS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 34,
+  "note": ""
+ },
+ {
+  "section": "RAILWAY EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 12,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 35,
+  "note": ""
+ },
+ {
+  "section": "ENGINEERING R&D SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 12,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 36,
+  "note": "Suggest merging with Engineering Consultancy."
+ },
+ {
+  "section": "ENGINEERING CONSULTANCY",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Engineering & Capital Goods",
+  "order": 37,
+  "note": "Suggest merging into Engineering R&D."
+ },
+ {
+  "section": "ELECTRICAL EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 18,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 38,
+  "note": "Power & Energy (036-048) was marked complete but missed these."
+ },
+ {
+  "section": "ELECTRICAL EQUIPMENT REPAIR",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 39,
+  "note": "Suggest merging into Electrical Equipment."
+ },
+ {
+  "section": "ELECTRIC MOTORS & GENERATORS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 40,
+  "note": ""
+ },
+ {
+  "section": "ELECTRICAL INSULATORS & BUSHINGS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 41,
+  "note": "Suggest merging with Transformer Components."
+ },
+ {
+  "section": "TRANSFORMER COMPONENTS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 42,
+  "note": "Suggest merging into Insulators & Bushings; see 042."
+ },
+ {
+  "section": "TRANSMISSION TOWERS & STRUCTURES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 43,
+  "note": ""
+ },
+ {
+  "section": "WIND TURBINES & EQUIPMENT",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 44,
+  "note": "Suggest merging with Renewable O&M."
+ },
+ {
+  "section": "RENEWABLE O&M SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 45,
+  "note": "Suggest merging into Wind Turbines."
+ },
+ {
+  "section": "RENEWABLE ENERGY SOLUTIONS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 46,
+  "note": ""
+ },
+ {
+  "section": "BIOFUELS & ETHANOL",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 7,
+  "status": "queued",
+  "primer": null,
+  "family": "Electrical Equipment & Power - gaps",
+  "order": 47,
+  "note": "Cross-reference Sugar & Integrated Ethanol later."
+ },
+ {
+  "section": "CEMENT",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 35,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 48,
+  "note": ""
+ },
+ {
+  "section": "CONSTRUCTION & INFRASTRUCTURE EPC",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 98,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 49,
+  "note": "98 names - split sensibly by segment."
+ },
+ {
+  "section": "ROAD CONSTRUCTION",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 15,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 50,
+  "note": ""
+ },
+ {
+  "section": "RAILWAY EPC",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 51,
+  "note": ""
+ },
+ {
+  "section": "WATER INFRASTRUCTURE & TREATMENT",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 12,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 52,
+  "note": ""
+ },
+ {
+  "section": "DREDGING",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 53,
+  "note": ""
+ },
+ {
+  "section": "GLASS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 11,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 54,
+  "note": ""
+ },
+ {
+  "section": "TILES & SANITARYWARE",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 13,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 55,
+  "note": ""
+ },
+ {
+  "section": "PLYWOOD LAMINATES & BOARDS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 23,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 56,
+  "note": ""
+ },
+ {
+  "section": "PLASTIC PIPES & FITTINGS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 23,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 57,
+  "note": ""
+ },
+ {
+  "section": "STONE & OTHER BUILDING MATERIALS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 25,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 58,
+  "note": ""
+ },
+ {
+  "section": "BUILDING HARDWARE",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Construction & Building Materials",
+  "order": 59,
+  "note": "Suggest merging into Stone & Other Building Materials."
+ },
+ {
+  "section": "RAIL LOGISTICS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 60,
+  "note": ""
+ },
+ {
+  "section": "PORTS & TERMINALS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 61,
+  "note": ""
+ },
+ {
+  "section": "SHIPPING OPERATORS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 62,
+  "note": ""
+ },
+ {
+  "section": "CONTAINER & WAREHOUSE LOGISTICS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 63,
+  "note": ""
+ },
+ {
+  "section": "FREIGHT FORWARDING & LOGISTICS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 63,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 64,
+  "note": "63 names - heavy audit."
+ },
+ {
+  "section": "EXPRESS & PARCEL LOGISTICS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 65,
+  "note": ""
+ },
+ {
+  "section": "COLD CHAIN LOGISTICS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 66,
+  "note": ""
+ },
+ {
+  "section": "AIRLINES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 67,
+  "note": ""
+ },
+ {
+  "section": "AIRPORTS & AVIATION SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 5,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 68,
+  "note": ""
+ },
+ {
+  "section": "VEHICLE RENTAL & MOBILITY SERVICES",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Transport & Logistics",
+  "order": 69,
+  "note": ""
+ },
+ {
+  "section": "CARBON BLACK",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 70,
+  "note": "A chemicals gap (not in 001-016); tyre input, see 025 and 071."
+ },
+ {
+  "section": "INDUSTRIAL PLASTICS & COMPOSITES",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 32,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 71,
+  "note": ""
+ },
+ {
+  "section": "INDUSTRIAL RUBBER PRODUCTS",
+  "watchlist": "Industry - Industrials, Metals, Defence",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 72,
+  "note": ""
+ },
+ {
+  "section": "FLEXIBLE PACKAGING & FILMS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 29,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 73,
+  "note": ""
+ },
+ {
+  "section": "RIGID PLASTIC PACKAGING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 74,
+  "note": ""
+ },
+ {
+  "section": "METAL PACKAGING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 75,
+  "note": ""
+ },
+ {
+  "section": "PACKAGING PRODUCTS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 29,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 76,
+  "note": ""
+ },
+ {
+  "section": "PAPER & PAPERBOARD",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 42,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 77,
+  "note": ""
+ },
+ {
+  "section": "PRINTING SERVICES",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 12,
+  "status": "queued",
+  "primer": null,
+  "family": "Materials: Plastics, Rubber, Packaging & Paper",
+  "order": 78,
+  "note": ""
+ },
+ {
+  "section": "COTTON & BLENDED YARN",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 75,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 79,
+  "note": "75 names - heavy audit."
+ },
+ {
+  "section": "SYNTHETIC FIBRES & YARNS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 37,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 80,
+  "note": ""
+ },
+ {
+  "section": "FABRICS & TEXTILE PROCESSING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 43,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 81,
+  "note": ""
+ },
+ {
+  "section": "INTEGRATED TEXTILES",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 42,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 82,
+  "note": ""
+ },
+ {
+  "section": "HOME TEXTILES",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 83,
+  "note": ""
+ },
+ {
+  "section": "TECHNICAL TEXTILES",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 84,
+  "note": ""
+ },
+ {
+  "section": "APPAREL MANUFACTURING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 38,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 85,
+  "note": ""
+ },
+ {
+  "section": "JUTE PRODUCTS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 7,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 86,
+  "note": ""
+ },
+ {
+  "section": "LEATHER & LEATHER PRODUCTS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Textiles",
+  "order": 87,
+  "note": ""
+ },
+ {
+  "section": "IT SERVICES & CONSULTING",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 128,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 88,
+  "note": "128 names - split sensibly."
+ },
+ {
+  "section": "SOFTWARE PRODUCTS & PLATFORMS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 25,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 89,
+  "note": ""
+ },
+ {
+  "section": "BPM & OUTSOURCING SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 19,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 90,
+  "note": ""
+ },
+ {
+  "section": "BANKING & FINANCIAL SOFTWARE",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 91,
+  "note": "Software, not financial services - not deferred."
+ },
+ {
+  "section": "DATA ANALYTICS & AI SERVICES",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 92,
+  "note": ""
+ },
+ {
+  "section": "CYBERSECURITY",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 7,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 93,
+  "note": ""
+ },
+ {
+  "section": "CLOUD COMMUNICATIONS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 94,
+  "note": ""
+ },
+ {
+  "section": "DATA CENTRES & CLOUD INFRASTRUCTURE",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 95,
+  "note": ""
+ },
+ {
+  "section": "GEOSPATIAL & MAPPING",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 7,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 96,
+  "note": ""
+ },
+ {
+  "section": "IT HARDWARE & DISTRIBUTION",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 30,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 97,
+  "note": ""
+ },
+ {
+  "section": "INTERNET PLATFORMS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 98,
+  "note": ""
+ },
+ {
+  "section": "E-COMMERCE & INTERNET RETAIL",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 99,
+  "note": ""
+ },
+ {
+  "section": "FOOD DELIVERY & QUICK COMMERCE",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 100,
+  "note": ""
+ },
+ {
+  "section": "TELECOM OPERATORS",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 13,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 101,
+  "note": ""
+ },
+ {
+  "section": "TELECOM TOWERS & INFRASTRUCTURE",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 102,
+  "note": ""
+ },
+ {
+  "section": "TELECOM EQUIPMENT & OPTICAL FIBRE",
+  "watchlist": "Industry - Energy, Electricals, Tech, Logistics",
+  "members": 13,
+  "status": "queued",
+  "primer": null,
+  "family": "Technology & Telecom",
+  "order": 103,
+  "note": ""
+ },
+ {
+  "section": "CONSUMER APPLIANCES & ELECTRONICS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 35,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 104,
+  "note": ""
+ },
+ {
+  "section": "LIGHTING & ELECTRICAL ACCESSORIES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 105,
+  "note": ""
+ },
+ {
+  "section": "CONSUMER PRODUCTS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 17,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 106,
+  "note": ""
+ },
+ {
+  "section": "CONSUMER CONTRACT MANUFACTURING",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 107,
+  "note": ""
+ },
+ {
+  "section": "PERSONAL CARE & HOUSEHOLD PRODUCTS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 23,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 108,
+  "note": ""
+ },
+ {
+  "section": "FURNITURE & HOME PRODUCTS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 23,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 109,
+  "note": ""
+ },
+ {
+  "section": "JEWELLERY RETAIL & MANUFACTURING",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 70,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 110,
+  "note": "70 names - heavy audit."
+ },
+ {
+  "section": "WATCHES & ACCESSORIES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 11,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 111,
+  "note": ""
+ },
+ {
+  "section": "EYEWEAR",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 112,
+  "note": ""
+ },
+ {
+  "section": "FOOTWEAR",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 11,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 113,
+  "note": ""
+ },
+ {
+  "section": "LUGGAGE & TRAVEL ACCESSORIES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 114,
+  "note": ""
+ },
+ {
+  "section": "ELECTRONICS RETAIL",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 115,
+  "note": ""
+ },
+ {
+  "section": "RETAIL CHAINS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 11,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 116,
+  "note": ""
+ },
+ {
+  "section": "STATIONERY & EDUCATION PRODUCTS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 117,
+  "note": ""
+ },
+ {
+  "section": "TOYS & LEISURE PRODUCTS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 118,
+  "note": ""
+ },
+ {
+  "section": "PERSONAL & HOME SERVICES",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Consumer",
+  "order": 119,
+  "note": ""
+ },
+ {
+  "section": "SEEDS & AGRICULTURAL INPUTS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 120,
+  "note": "Cross-reference 001 and 014."
+ },
+ {
+  "section": "AGRICULTURE & COMMODITY TRADING",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 55,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 121,
+  "note": ""
+ },
+ {
+  "section": "SUGAR & INTEGRATED ETHANOL",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 37,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 122,
+  "note": ""
+ },
+ {
+  "section": "EDIBLE OILS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 31,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 123,
+  "note": ""
+ },
+ {
+  "section": "RICE & GRAIN PROCESSING",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 16,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 124,
+  "note": ""
+ },
+ {
+  "section": "TEA & COFFEE",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 33,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 125,
+  "note": ""
+ },
+ {
+  "section": "DAIRY",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 13,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 126,
+  "note": ""
+ },
+ {
+  "section": "POULTRY & ANIMAL FEED",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 8,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 127,
+  "note": ""
+ },
+ {
+  "section": "MEAT & POULTRY PROCESSING",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 128,
+  "note": ""
+ },
+ {
+  "section": "SEAFOOD & AQUACULTURE",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 11,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 129,
+  "note": ""
+ },
+ {
+  "section": "PACKAGED FOODS & FOOD PROCESSING",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 88,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 130,
+  "note": "88 names - heavy audit."
+ },
+ {
+  "section": "GELATIN & FOOD INGREDIENTS",
+  "watchlist": "Industry - Auto, Chemicals, Construction, Consumer",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 131,
+  "note": ""
+ },
+ {
+  "section": "NON-ALCOHOLIC BEVERAGES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 4,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 132,
+  "note": ""
+ },
+ {
+  "section": "ALCOHOLIC BEVERAGES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 25,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 133,
+  "note": ""
+ },
+ {
+  "section": "TOBACCO",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Food, Beverages & Agri",
+  "order": 134,
+  "note": ""
+ },
+ {
+  "section": "ADVERTISING & MARKETING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 22,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 135,
+  "note": ""
+ },
+ {
+  "section": "TV & RADIO BROADCASTING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 21,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 136,
+  "note": ""
+ },
+ {
+  "section": "FILM MUSIC & CONTENT",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 51,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 137,
+  "note": ""
+ },
+ {
+  "section": "CINEMA EXHIBITION",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 6,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 138,
+  "note": ""
+ },
+ {
+  "section": "PUBLISHING & NEWS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 14,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 139,
+  "note": ""
+ },
+ {
+  "section": "LEISURE & GAMING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 12,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 140,
+  "note": ""
+ },
+ {
+  "section": "EVENTS & EXHIBITIONS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 7,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 141,
+  "note": ""
+ },
+ {
+  "section": "RESTAURANTS & QSR",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 11,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 142,
+  "note": ""
+ },
+ {
+  "section": "TRAVEL & TOURISM",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 12,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 143,
+  "note": "Adjacent to Hotels (deferred) but not itself deferred."
+ },
+ {
+  "section": "RAILWAY CATERING & TOURISM",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 1,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 144,
+  "note": ""
+ },
+ {
+  "section": "EDUCATION & TRAINING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 33,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 145,
+  "note": ""
+ },
+ {
+  "section": "PROFESSIONAL & BUSINESS SERVICES",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 30,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 146,
+  "note": ""
+ },
+ {
+  "section": "STAFFING & FACILITY MANAGEMENT",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 22,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 147,
+  "note": ""
+ },
+ {
+  "section": "TESTING INSPECTION & CERTIFICATION",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 2,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 148,
+  "note": ""
+ },
+ {
+  "section": "WASTE MANAGEMENT & RECYCLING",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Media, Services & Leisure",
+  "order": 149,
+  "note": "Cross-reference 076."
+ },
+ {
+  "section": "REAL ESTATE DEVELOPMENT",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 168,
+  "status": "queued",
+  "primer": null,
+  "family": "Real Estate & Infrastructure Assets",
+  "order": 150,
+  "note": "168 names - split sensibly."
+ },
+ {
+  "section": "REAL ESTATE SERVICES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 3,
+  "status": "queued",
+  "primer": null,
+  "family": "Real Estate & Infrastructure Assets",
+  "order": 151,
+  "note": ""
+ },
+ {
+  "section": "REITS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Real Estate & Infrastructure Assets",
+  "order": 152,
+  "note": ""
+ },
+ {
+  "section": "INFRASTRUCTURE INVESTMENT TRUSTS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 19,
+  "status": "queued",
+  "primer": null,
+  "family": "Real Estate & Infrastructure Assets",
+  "order": 153,
+  "note": ""
+ },
+ {
+  "section": "FLEXIBLE WORKSPACES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 9,
+  "status": "queued",
+  "primer": null,
+  "family": "Real Estate & Infrastructure Assets",
+  "order": 154,
+  "note": ""
+ },
+ {
+  "section": "ROAD ASSET OPERATORS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 7,
+  "status": "queued",
+  "primer": null,
+  "family": "Real Estate & Infrastructure Assets",
+  "order": 155,
+  "note": ""
+ },
+ {
+  "section": "DIVERSIFIED BUSINESSES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 53,
+  "status": "queued",
+  "primer": null,
+  "family": "Diversified",
+  "order": 156,
+  "note": ""
+ },
+ {
+  "section": "TRADING & DISTRIBUTION",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 33,
+  "status": "queued",
+  "primer": null,
+  "family": "Diversified",
+  "order": 157,
+  "note": "Unrelated grab-bag; see the note in 077."
+ },
+ {
+  "section": "PRIVATE SECTOR BANKS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 20,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 158,
+  "note": ""
+ },
+ {
+  "section": "PUBLIC SECTOR BANKS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 12,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 159,
+  "note": ""
+ },
+ {
+  "section": "SMALL FINANCE BANKS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 8,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 160,
+  "note": ""
+ },
+ {
+  "section": "DIVERSIFIED & OTHER LENDING",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 249,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 161,
+  "note": ""
+ },
+ {
+  "section": "HOUSING FINANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 19,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 162,
+  "note": ""
+ },
+ {
+  "section": "VEHICLE FINANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 7,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 163,
+  "note": ""
+ },
+ {
+  "section": "GOLD FINANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 3,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 164,
+  "note": ""
+ },
+ {
+  "section": "MICROFINANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 8,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 165,
+  "note": ""
+ },
+ {
+  "section": "INFRASTRUCTURE FINANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 9,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 166,
+  "note": ""
+ },
+ {
+  "section": "CREDIT CARDS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 1,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 167,
+  "note": ""
+ },
+ {
+  "section": "PAYMENTS & FINTECH",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 24,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 168,
+  "note": ""
+ },
+ {
+  "section": "FOREIGN EXCHANGE & REMITTANCES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 5,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 169,
+  "note": ""
+ },
+ {
+  "section": "DIVERSIFIED FINANCIAL SERVICES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 11,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 170,
+  "note": ""
+ },
+ {
+  "section": "INVESTMENT HOLDING COMPANIES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 88,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 171,
+  "note": ""
+ },
+ {
+  "section": "STOCKBROKING & INVESTMENT BANKING",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 111,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 172,
+  "note": ""
+ },
+ {
+  "section": "ASSET MANAGEMENT",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 13,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 173,
+  "note": ""
+ },
+ {
+  "section": "WEALTH MANAGEMENT",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 7,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 174,
+  "note": ""
+ },
+ {
+  "section": "REGISTRARS & FUND SERVICES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 2,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 175,
+  "note": ""
+ },
+ {
+  "section": "CREDIT RATING AGENCIES",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 3,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 176,
+  "note": ""
+ },
+ {
+  "section": "FINANCIAL DATA & RESEARCH",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 2,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 177,
+  "note": ""
+ },
+ {
+  "section": "FINANCIAL PRODUCT DISTRIBUTION",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 1,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 178,
+  "note": ""
+ },
+ {
+  "section": "TRUSTEESHIP & CORPORATE ADVISORY",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 7,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 179,
+  "note": ""
+ },
+ {
+  "section": "EXCHANGE-TRADED FUNDS",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 1,
+  "status": "deferred",
+  "primer": null,
+  "family": "Financials & Capital Markets - LAST",
+  "order": 180,
+  "note": ""
+ },
+ {
+  "section": "LIFE INSURANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 6,
+  "status": "deferred",
+  "primer": null,
+  "family": "Insurance - LAST",
+  "order": 181,
+  "note": ""
+ },
+ {
+  "section": "GENERAL INSURANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 4,
+  "status": "deferred",
+  "primer": null,
+  "family": "Insurance - LAST",
+  "order": 182,
+  "note": ""
+ },
+ {
+  "section": "HEALTH INSURANCE",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 2,
+  "status": "deferred",
+  "primer": null,
+  "family": "Insurance - LAST",
+  "order": 183,
+  "note": ""
+ },
+ {
+  "section": "INSURANCE DISTRIBUTION",
+  "watchlist": "Industry - Finance, Property, Diversified",
+  "members": 2,
+  "status": "deferred",
+  "primer": null,
+  "family": "Insurance - LAST",
+  "order": 184,
+  "note": ""
+ },
+ {
+  "section": "PHARMA FORMULATIONS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 105,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 185,
+  "note": ""
+ },
+ {
+  "section": "PHARMA APIS & INTERMEDIATES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 57,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 186,
+  "note": ""
+ },
+ {
+  "section": "PHARMA CONTRACT RESEARCH & MANUFACTURING",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 21,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 187,
+  "note": ""
+ },
+ {
+  "section": "PHARMA EXCIPIENTS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 4,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 188,
+  "note": ""
+ },
+ {
+  "section": "PHARMA DISTRIBUTION & RETAIL",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 11,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 189,
+  "note": ""
+ },
+ {
+  "section": "BIOLOGICS & VACCINES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 14,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 190,
+  "note": ""
+ },
+ {
+  "section": "MEDICAL DEVICES & SUPPLIES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 17,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 191,
+  "note": ""
+ },
+ {
+  "section": "DIAGNOSTICS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 18,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 192,
+  "note": ""
+ },
+ {
+  "section": "HOSPITALS",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 46,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 193,
+  "note": ""
+ },
+ {
+  "section": "HEALTHCARE ADMINISTRATION SERVICES",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 1,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 194,
+  "note": ""
+ },
+ {
+  "section": "NUTRACEUTICALS & CONSUMER HEALTH",
+  "watchlist": "Industry - Food, Healthcare, Consumer",
+  "members": 29,
+  "status": "deferred",
+  "primer": null,
+  "family": "Pharma & Healthcare - LAST",
+  "order": 195,
+  "note": "Borderline consumer/health; held back with healthcare to respect the instruction."
+ },
+ {
+  "section": "HOTELS & RESORTS",
+  "watchlist": "Industry - Textiles, Packaging, Media, Services",
+  "members": 59,
+  "status": "deferred",
+  "primer": null,
+  "family": "Hotels - LAST",
+  "order": 196,
+  "note": ""
+ }
+]

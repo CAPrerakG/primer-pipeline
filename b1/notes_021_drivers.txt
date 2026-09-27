@@ -1,0 +1,25 @@
+BASKET 1 names
+2012: basket +12 nifty +28 rel -16 | n=1 median +17 | TOP Hindustan Motors L +17 | BOTTOM 
+2013: basket -11 nifty +7 rel -18 | n=1 median -11 | TOP Hindustan Motors L -11 | BOTTOM 
+2014: basket -8 nifty +31 rel -39 | n=1 median -8 | TOP Hindustan Motors L -8 | BOTTOM 
+2015: basket -7 nifty -4 rel -2 | n=1 median -7 | TOP Hindustan Motors L -7 | BOTTOM 
+2016: basket -9 nifty +3 rel -12 | n=1 median -6 | TOP Hindustan Motors L -6 | BOTTOM 
+2017: basket +40 nifty +29 rel +11 | n=1 median +40 | TOP Hindustan Motors L +40 | BOTTOM 
+2018: basket -20 nifty +3 rel -23 | n=1 median -20 | TOP Hindustan Motors L -20 | BOTTOM 
+2019: basket -26 nifty +12 rel -38 | n=1 median -26 | TOP Hindustan Motors L -26 | BOTTOM 
+2020: basket +32 nifty +15 rel +17 | n=1 median +32 | TOP Hindustan Motors L +32 | BOTTOM 
+2021: basket +54 nifty +24 rel +30 | n=1 median +54 | TOP Hindustan Motors L +54 | BOTTOM 
+2022: basket +52 nifty +4 rel +47 | n=1 median +52 | TOP Hindustan Motors L +52 | BOTTOM 
+2023: basket -4 nifty +20 rel -24 | n=1 median -5 | TOP Hindustan Motors L -5 | BOTTOM 
+2024: basket +21 nifty +9 rel +12 | n=1 median +68 | TOP Hindustan Motors L +68 | BOTTOM 
+2025: basket -27 nifty +10 rel -37 | n=1 median -27 | TOP Hindustan Motors L -27 | BOTTOM 
+2026: basket -40 nifty -11 rel -30 | n=1 median -35 | TOP Hindustan Motors L -35 | BOTTOM 
+MONTH 4 avg +10.9 (10/15): worst years [('2013', -1.6), ('2018', -1.6), ('2022', -0.9)] best years [('2015', 24.5), ('2026', 42.5), ('2024', 48.8)]
+MONTH 10 avg +4.5 (7/15): worst years [('2025', -10.0), ('2020', -9.8), ('2017', -8.1)] best years [('2018', 4.1), ('2021', 49.3), ('2016', 49.7)]
+MONTH 3 avg -9.6 (2/15): worst years [('2026', -25.2), ('2017', -19.9), ('2018', -16.1)] best years [('2013', -3.3), ('2019', 2.2), ('2022', 13.6)]
+WIN FebMar: hit 0/15 median -13.3 | negative years [(2012, -7.7), (2013, -9.5), (2014, -10.4), (2015, -13.3), (2016, -14.3), (2017, -15.6), (2018, -12.0), (2019, -11.2), (2020, -17.5), (2021, -0.1), (2022, -6.1), (2023, -20.7), (2024, -14.9), (2025, -21.6), (2026, -26.5)] | biggest [(2021, -0.1), (2022, -6.1)]
+WIN AprJul: hit 9/15 median +4.8 | negative years [(2012, -4.4), (2013, -25.6), (2017, -12.1), (2018, -3.1), (2019, -20.9), (2023, -0.3)] | biggest [(2020, 55.4), (2024, 46.6)]
+WIN AugSep: hit 6/14 median -2.4 | negative years [(2012, -2.7), (2016, -5.1), (2017, -9.0), (2020, -4.4), (2021, -25.6), (2022, -2.0), (2024, -28.5), (2025, -12.1)] | biggest [(2013, 13.4), (2018, 7.4)]
+WIN OctDec: hit 8/14 median +3.7 | negative years [(2012, -7.6), (2014, -18.2), (2018, -2.3), (2019, -6.6), (2023, -2.0), (2025, -4.0)] | biggest [(2021, 59.2), (2017, 17.6)]
+WIN SepNov: hit 9/14 median +5.6 | negative years [(2012, -4.4), (2017, -6.2), (2020, -23.6), (2024, -18.3), (2025, -24.2)] | biggest [(2021, 43.8), (2016, 32.2)]
+WIN JanMar: hit 3/15 median -17.8 | negative years [(2013, -5.7), (2014, -21.4), (2015, -22.8), (2016, -27.7), (2018, -22.9), (2019, -12.3), (2020, -17.5), (2021, -17.8), (2023, -22.7), (2024, -4.4), (2025, -24.7), (2026, -35.9)] | biggest [(2017, 17.3), (2022, 3.6)]

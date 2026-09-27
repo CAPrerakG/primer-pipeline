@@ -1,0 +1,25 @@
+BASKET 4 names
+2012: basket +10 nifty +28 rel -17 | n=3 median +12 | TOP Swaraj Engines Ltd +21, Escorts Kubota Lim +12, VST Tillers Tracto -5 | BOTTOM 
+2013: basket +62 nifty +7 rel +55 | n=3 median +65 | TOP Escorts Kubota Lim +85, VST Tillers Tracto +65, Swaraj Engines Ltd +32 | BOTTOM 
+2014: basket +46 nifty +31 rel +15 | n=3 median +40 | TOP VST Tillers Tracto +115, Swaraj Engines Ltd +40, Escorts Kubota Lim -6 | BOTTOM 
+2015: basket +18 nifty -4 rel +22 | n=3 median +8 | TOP Escorts Kubota Lim +34, Swaraj Engines Ltd +8, VST Tillers Tracto +5 | BOTTOM 
+2016: basket +44 nifty +3 rel +41 | n=3 median +34 | TOP Escorts Kubota Lim +73, Swaraj Engines Ltd +34, VST Tillers Tracto +20 | BOTTOM 
+2017: basket +89 nifty +29 rel +60 | n=3 median +58 | TOP Escorts Kubota Lim +165, Swaraj Engines Ltd +58, VST Tillers Tracto +45 | BOTTOM 
+2018: basket -24 nifty +3 rel -27 | n=3 median -27 | TOP Escorts Kubota Lim -10, Swaraj Engines Ltd -27, VST Tillers Tracto -37 | BOTTOM 
+2019: basket -21 nifty +12 rel -33 | n=3 median -26 | TOP Escorts Kubota Lim -11, Swaraj Engines Ltd -26, VST Tillers Tracto -31 | BOTTOM 
+2020: basket +72 nifty +15 rel +57 | n=3 median +72 | TOP Escorts Kubota Lim +100, VST Tillers Tracto +72, Swaraj Engines Ltd +28 | BOTTOM 
+2021: basket +40 nifty +24 rel +16 | n=3 median +48 | TOP Escorts Kubota Lim +51, VST Tillers Tracto +48, Swaraj Engines Ltd +13 | BOTTOM 
+2022: basket -3 nifty +4 rel -7 | n=3 median -4 | TOP Escorts Kubota Lim +12, Swaraj Engines Ltd -4, VST Tillers Tracto -20 | BOTTOM 
+2023: basket +58 nifty +20 rel +38 | n=3 median +56 | TOP VST Tillers Tracto +72, Swaraj Engines Ltd +56, Escorts Kubota Lim +39 | BOTTOM 
+2024: basket +26 nifty +9 rel +18 | n=3 median +22 | TOP VST Tillers Tracto +39, Swaraj Engines Ltd +22, Escorts Kubota Lim +12 | BOTTOM 
+2025: basket +21 nifty +10 rel +10 | n=3 median +19 | TOP Swaraj Engines Ltd +21, VST Tillers Tracto +19, Escorts Kubota Lim +12 | BOTTOM 
+2026: basket -22 nifty -11 rel -11 | n=4 median -29 | TOP Swaraj Engines Ltd +1, Escorts Kubota Lim -25, VST Tillers Tracto -32 | BOTTOM Escorts Kubota Lim -25, VST Tillers Tracto -32, Indo Farm Equipmen -34
+MONTH 4 avg +6.8 (13/15): worst years [('2019', -4.9), ('2025', -4.9), ('2021', 0.6)] best years [('2022', 11.7), ('2024', 12.8), ('2016', 21.7)]
+MONTH 6 avg +5.7 (10/15): worst years [('2018', -7.3), ('2012', -5.7), ('2025', -3.4)] best years [('2017', 14.3), ('2014', 17.0), ('2020', 22.4)]
+MONTH 3 avg -1.9 (3/15): worst years [('2022', -10.5), ('2013', -8.1), ('2026', -4.5)] best years [('2014', 3.4), ('2017', 5.2), ('2025', 8.0)]
+WIN FebMar: hit 3/15 median -5.0 | negative years [(2012, -8.1), (2013, -11.4), (2015, -4.6), (2016, -1.1), (2019, -7.5), (2020, -4.2), (2021, -5.4), (2022, -13.5), (2023, -4.5), (2024, -5.0), (2025, -6.8), (2026, -6.9)] | biggest [(2018, 11.1), (2017, 8.3)]
+WIN AprJul: hit 12/15 median +16.8 | negative years [(2012, -4.8), (2018, -15.5), (2019, -25.4)] | biggest [(2020, 46.6), (2016, 38.9)]
+WIN AugSep: hit 11/14 median +4.5 | negative years [(2012, -3.7), (2017, -1.4), (2018, -20.6)] | biggest [(2020, 15.9), (2023, 15.6)]
+WIN OctDec: hit 7/14 median +0.0 | negative years [(2014, -15.7), (2016, -1.9), (2019, -6.4), (2020, -22.2), (2022, -7.0), (2023, -4.5), (2025, -3.4)] | biggest [(2013, 39.9), (2021, 11.6)]
+WIN SepNov: hit 6/14 median -1.1 | negative years [(2012, -11.3), (2015, -1.1), (2017, -1.1), (2018, -14.8), (2019, -2.8), (2020, -2.4), (2022, -2.9), (2025, -7.3)] | biggest [(2013, 27.3), (2021, 16.6)]
+WIN JanMar: hit 5/15 median -8.5 | negative years [(2012, -8.9), (2013, -16.0), (2015, -8.7), (2016, -6.4), (2019, -10.6), (2021, -8.5), (2022, -14.6), (2024, -11.6), (2025, -2.4), (2026, -11.8)] | biggest [(2017, 18.4), (2020, 11.1)]

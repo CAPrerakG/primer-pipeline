@@ -1,0 +1,623 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steel Wire & Wire Ropes Primer</title>
+<meta name="description" content="Industry 69 of 278: drawn steel wire and the ropes made from it. Why wire drawing is a conversion business, how a rope that lifts a mine cage or an elevator earns four times the margin of plain wire, the specialty-wire import-substitution push, and why these stocks lose to the Nifty in the first quarter almost every year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Steel Wire &amp; Ropes · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#specialty">The import-substitution push</a></li>
+<li><a href="#safety">The economics of safety</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 69 of 278 · Metals family, part 6</div>
+  <h1>Steel Wire &amp; Wire Ropes</h1>
+  <p class="lede">Wire is steel pulled through a series of shrinking holes until it is thin, strong and precise. Twisted together it becomes rope — the cable that lifts a mine cage, holds a suspension bridge, raises a crane or runs an elevator. Inside a tyre, a coated wire ring holds the tyre onto the wheel; inside a tall building, high-tensile strand holds the concrete in tension. These are small industries by market value but excellent illustrations of a general rule: the further a steel product moves from the mill and the more it must be certified, the less it behaves like a commodity. This primer explains the drawing process, the four wire markets, why rope earns more than wire, and what separates the one high-quality Indian producer from the rest.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 12 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Refractories</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">73%</div><div class="l">Share of Usha Martin's revenue from wire rope, which is half its volume</div></div>
+    <div class="stat"><div class="n">₹1,033 cr</div><div class="l">Its Q1 FY27 revenue — the first quarter above ₹1,000 cr</div></div>
+    <div class="stat"><div class="n">7–8%</div><div class="l">The steel wire industry's underlying growth rate</div></div>
+    <div class="stat"><div class="n">2 of 15</div><div class="l">Years in which the basket beat the Nifty in February–March</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Two businesses: commodity wire and certified rope</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Imagine pulling a thick strand of clay through a smaller and smaller hole until it becomes a long thin thread. Steel wire is made the same way, by pulling a rod through hard rings until it is the thickness you want. Then, like plaiting hair, many wires are twisted together to make a rope strong enough to lift a lift full of people or hold up a bridge. Plain wire is sold by the kilo and everyone can make it. The special ropes are different: if one breaks, people die, so buyers pay more and only trust a few factories.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>A small sector with one good business model and several poor ones.</p>
+    <ul>
+      <li><b>The quality name:</b> Usha Martin — Q1 FY27 revenue ₹1,033 cr, profit ₹142 cr (+41%), wire-rope volumes +18%; rope is half its tonnage but 73% of revenue.</li>
+      <li><b>Guidance:</b> 10–12% volume growth, about 15% value growth and EBITDA margins above 20% in FY27, with a ₹250–300 cr elevator-rope expansion starting October 2026.</li>
+      <li><b>The specialty push:</b> Bansal Wire is spending ₹2,000–2,500 cr on specialty wire, targeting ₹600–800 cr of EBITDA, and has won a trial order for steel tyre cord — a product India imports.</li>
+      <li><b>The niche compounder:</b> Rajratan Global's tyre bead wire profit rose 70% on better mix, with volumes up 16%.</li>
+      <li><b>The calendar:</b> February–March has beaten the Nifty just twice in fifteen years.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From plain wire to certified rope</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Who buys it</th><th>Margin</th></tr></thead><tbody>
+    <tr><td>Plain drawn wire</td><td>Rod drawn to size, sometimes galvanised</td><td>Fencing, nails, springs, general industry</td><td>Thin; a commodity</td></tr>
+    <tr><td>Wire rope</td><td>Wires twisted into strands and strands into rope</td><td>Mining, cranes, ports, elevators, offshore, fishing</td><td>High, and highest in certified grades</td></tr>
+    <tr><td>Elevator rope</td><td>Rope certified for lifts</td><td>Elevator makers</td><td>Premium; Usha Martin is adding 6,000 tonnes</td></tr>
+    <tr><td>LRPC strand</td><td>Low-relaxation prestressed concrete strand</td><td>Bridges, flyovers, sleepers, stay cables</td><td>Moderate to good</td></tr>
+    <tr><td>Tyre bead wire</td><td>Coated high-carbon wire that anchors a tyre to the wheel</td><td>Tyre makers (see 025)</td><td>Good, in a consolidated niche</td></tr>
+    <tr><td>Steel tyre cord</td><td>Fine wire reinforcing the tyre carcass</td><td>Tyre makers</td><td>Largely imported today; an import-substitution target</td></tr>
+    <tr><td>Specialty and IHT/OHT wire</td><td>Induction- and oil-hardened-tempered wires for suspension springs</td><td>Autos</td><td>High; technically demanding</td></tr>
+  </tbody></table></div>
+  <p>The economic ladder runs from plain wire, where anyone with a drawing bench competes, to certified ropes and specialty wires, where approvals, testing and failure consequences create real barriers. Usha Martin's disclosure captures it exactly: wire rope is about half of its physical sales but nearly three-quarters of its revenue.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From wire rod to a certified rope</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Wire rod</h4><div class="an">The raw material</div>Hot-rolled rod in coils, high or low carbon depending on the end use.<div class="who">Steel mills (066); imported special grades</div><div class="m">Most of the cost</div></div>
+    <div class="stage"><div class="no">02</div><h4>Cleaning and coating</h4><div class="an">Preparation</div>Pickling or mechanical descaling, then a coating that lets the rod slide through dies.<div class="who">Wire mills</div><div class="m">Surface quality</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Drawing</h4><div class="an">The stretch</div>The rod is pulled through successively smaller dies, growing stronger as it thins.<div class="who">All wire makers</div><div class="m">Power, dies, yield</div></div>
+    <div class="stage"><div class="no">04</div><h4>Heat treatment and plating</h4><div class="an">The properties</div>Patenting, galvanising, brass or bronze coating for adhesion in tyres and concrete.<div class="who">Specialty producers</div><div class="m">Where technical barriers appear</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Stranding and closing</h4><div class="an">Making rope</div>Wires are laid into strands and strands around a core to make rope.<div class="who">Usha Martin, Bharat Wire Ropes</div><div class="m">Design, testing and certification</div></div>
+    <div class="stage"><div class="no">06</div><h4>End users</h4><div class="an">The customers</div>Mines, ports, cranes, elevators, bridges, tyres, autos, fishing fleets.<div class="who">Industrial and infrastructure buyers worldwide</div><div class="m">Replacement demand is steady</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Steel mills</b> supply rod.</li>
+    <li><b>Wire mills</b> clean it and draw it thinner and stronger.</li>
+    <li><b>Heat treatment and coating</b> give it the properties customers need.</li>
+    <li><b>Stranding machines</b> twist wires into rope.</li>
+    <li><b>Mines, cranes and lifts</b> wear the rope out and buy another.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical distinction is between tonnes and value. A wire drawer measures success in tonnes at a thin spread; a rope maker measures it in revenue per tonne, because a certified elevator or offshore rope sells for a multiple of plain wire. Usha Martin's rope business — half the volume, 73% of revenue, group margins above 20% — is what the good version of this industry looks like. The poor version is a drawer buying rod from a mill that also makes wire, selling into a fragmented market with no approvals to protect it.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 12 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Usha Martin (~₹14,564 cr)</td><td>India's leading wire-rope maker and a global exporter, since selling its steel business in 2019; plants in India, Thailand, the UK, the UAE and the US.</td><td>Q1 FY27 revenue ₹1,033 cr (from ₹887 cr), profit ₹142 cr (+41%); wire-rope volumes +18%; rope is 50% of volume and 73% of revenue. Guides to 10–12% volume growth, about 15% value growth and EBITDA margins above 20%; a ₹250–300 cr elevator-rope line adding 6,000 tonnes starts phased commissioning from October 2026. Middle East volumes fell on geopolitical disruption. Stock +12% in 2026.</td></tr>
+    <tr><td>Bansal Wire Industries (~₹4,783 cr)</td><td>India's large-volume wire maker, listed in July 2024, building the country's largest single-location wire plant at Dadri.</td><td>Q1 FY27 revenue ₹1,168 cr (+24%) but profit ₹20.5 cr (−48%) with operating margin down to 4.83% from 7.65%; volumes 111,962 tonnes. Targets 8 lakh tonnes of capacity by the end of FY27 and is investing ₹2,000–2,500 cr in specialty wire for ₹600–800 cr of eventual EBITDA. Stock flat in 2026. <b>Excluded from the basket: listed 2024.</b></td></tr>
+    <tr><td>Rajratan Global Wire (~₹2,352 cr)</td><td>Tyre bead wire, with plants in India and Thailand — a consolidated niche serving tyre makers.</td><td>Q1 FY27 revenue ₹318 cr (+29%), EBITDA ₹41.7 cr (+35%) at a 13.1% margin, profit ₹23.0 cr (+70%); volumes 33,300 tonnes (+16%); Chennai plant past break-even, capacity heading to 60,000 tonnes. <b>Excluded: its NSE series starts in 2020.</b> Note that one widely syndicated report printed its quarterly profit as ₹229.6 crore; the figure consistent with its revenue and EBITDA is ₹23.0 crore.</td></tr>
+    <tr><td>Bharat Wire Ropes (~₹1,157 cr)</td><td>A rope maker in Maharashtra that came through a debt restructuring and now exports.</td><td>Stock −5% in 2026, 56% below its January 2024 high.</td></tr>
+    <tr><td>Bedmutha Industries (~₹321 cr), Geekay Wires (~₹319 cr), DP Wires (~₹222 cr), Kritika Wires (~₹138 cr), Shalimar Wires (~₹79 cr)</td><td>Small drawers of galvanised wire, LRPC strand and specialty products.</td><td>Mostly flat to lower this year; DP Wires −28% and Kritika −29%.</td></tr>
+    <tr><td>National Standard (India) (~₹219 cr)</td><td>A Larsen-linked legacy company whose price series shows a 92% fall in 2026 after a corporate action we could not verify.</td><td><b>Excluded; recommend checking the corporate action before using its data.</b></td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The rest of the industry</span><p>Much of the wire industry is unlisted: Tata Steel's wire division, the JSW and ArcelorMittal Nippon Steel wire businesses, and hundreds of small drawers. Tyre cord — the finest and most valuable wire product — is dominated globally by Bekaert and by Chinese producers, and India still imports most of what it uses, which is why Bansal Wire's trial order matters. Welded wire mesh, nails and fasteners sit in other sections.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Spread per tonne, and the certification premium</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>Economics</th><th>Barrier</th></tr></thead><tbody>
+    <tr><td>Plain wire</td><td>Rod cost plus a few thousand rupees a tonne</td><td>None; local competition</td></tr>
+    <tr><td>Galvanised wire and strand</td><td>Better spread, zinc cost pass-through</td><td>Modest</td></tr>
+    <tr><td>LRPC strand</td><td>Project-linked, approvals required</td><td>Moderate</td></tr>
+    <tr><td>Wire rope</td><td>Designed products, tested and certified</td><td>High: approvals, failure consequences, service</td></tr>
+    <tr><td>Elevator rope, offshore rope</td><td>Premium pricing and long qualification</td><td>Very high</td></tr>
+    <tr><td>Tyre bead wire and cord</td><td>Customer-specific, long qualification with tyre makers</td><td>Very high; a consolidated global market</td></tr>
+  </tbody></table></div>
+  <p>Two case studies in the same quarter make the point. Usha Martin grew revenue 16% and profit 41% because its mix moved further toward rope and value-added products. Bansal Wire grew revenue 24% but profit fell 48% and its operating margin dropped to 4.8%, because it is selling more tonnes of ordinary wire while building capacity and absorbing higher input and energy costs. Same industry, same quarter, opposite outcomes — the difference is product mix.</p>
+  <h3>Why replacement demand matters</h3>
+  <p>A wire rope is a consumable. A dragline rope in a coal mine, a crane rope at a port or the ropes in a lift wear out on a schedule and are replaced whether or not anyone is investing in new capacity. That gives the rope business a base of recurring revenue that the plain wire business lacks, and it is why exports — to mines and ports across the world — can be a steadier business than selling into a single domestic construction cycle.</p>
+</section>
+
+<section id="specialty" data-toc="The import-substitution push">
+  <p class="eyebrow">5b · The import-substitution push</p>
+  <h2>Moving up the wire ladder</h2>
+  <p>India's wire industry grows at about 7–8% a year in tonnes, roughly with the economy. The interesting growth is in the products India still imports: steel tyre cord, high-carbon specialty wires, suspension-spring wire, and the finer grades used in autos and engineering. These need cleaner steel, tighter process control and customer qualification that takes years — which is why they earn better margins and why domestic capacity has been slow to arrive.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>Status in India</th><th>Who is investing</th></tr></thead><tbody>
+    <tr><td>Steel tyre cord</td><td>Largely imported</td><td>Bansal Wire has a trial order; global majors dominate</td></tr>
+    <tr><td>Tyre bead wire</td><td>Made in India and Thailand</td><td>Rajratan Global, expanding Chennai to 60,000 tonnes</td></tr>
+    <tr><td>IHT and OHT spring wire</td><td>Partly imported</td><td>Bansal Wire's specialty programme</td></tr>
+    <tr><td>Elevator rope</td><td>Imported and domestic</td><td>Usha Martin adding 6,000 tonnes from October 2026</td></tr>
+    <tr><td>Offshore and mining rope</td><td>Exported by India</td><td>Usha Martin, Bharat Wire Ropes</td></tr>
+  </tbody></table></div>
+  <p>The investment case in this sector rests almost entirely on this ladder. A company that stays in plain wire is a price taker with a thin spread and no protection; a company that climbs into certified rope or qualified specialty wire earns durable margins. The capital cost of climbing is high — Bansal Wire's ₹2,000–2,500 cr programme is roughly half its market value — and the payback takes years, which is why the market treats the transition sceptically until the margin shows up.</p>
+</section>
+
+<section id="safety" data-toc="The economics of safety">
+  <p class="eyebrow">5c · The economics of safety</p>
+  <h2>Why a worn rope must be thrown away</h2>
+  <p>Almost every good business in this sector rests on one fact: a wire rope is a life-safety component with a written expiry rule. It is not replaced when a purchase manager feels like it; it is replaced when an inspector measuring broken wires says it must be. The Indian code of practice for wire ropes, <b>IS 3973</b>, recommends retirement once localised or distributed flaws have cost the rope roughly a tenth of its original breaking strength. Indian mining regulations are more specific still: a rope comes off when broken wires exceed <b>5% of the total in one lay length</b>, or when the cross-sectional area is down <b>10%</b> over the active length. The international equivalent, ISO 4309, and the American crane rule under <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1413">OSHA 1926.1413</a>, work the same way — a documented inspection at a set frequency, with numerical <a href="https://verope.com/rope-tech/discard-criteria/">discard criteria</a> that leave the operator no discretion.</p>
+  <p>Three commercial consequences follow, and they explain most of what you see in the financial statements.</p>
+  <ul>
+    <li><b>Demand is non-discretionary.</b> A mine winder or a port crane cannot postpone a rope change in a bad year the way it can postpone buying a new machine. That is why rope revenue is steadier than capital-goods revenue and why the replacement base grows with the installed fleet rather than with this year's capex budget.</li>
+    <li><b>Life is a selling point, not a giveaway.</b> If a compacted or plastic-impregnated rope lasts 50% longer, the customer's cost per tonne hauled falls even at a much higher purchase price — which is exactly how a rope maker escapes price competition. The economics are the same as premium refractories or premium tyres: the buyer is purchasing hours of service, not kilograms of steel.</li>
+    <li><b>The supplier list is short and slow to change.</b> A rope that fails can kill people and stop a mine, so buyers qualify a handful of makers and stay with them. <a href="https://ndtinspect.com/non-destructive-testing-of-steel-wire-ropes-and-their-discard-criteria/">Magnetic non-destructive testing</a> and <a href="https://www.techknowserv.com/post/wire-rope-inspection-in-mining-applications">routine mine inspections</a> generate a performance record for every rope on site, and a supplier whose ropes retire early loses the next order.</li>
+  </ul>
+  <p>This is the whole argument for owning the rope makers rather than the wire drawers, and it is the reason elevator rope — where a failure is unthinkable and the certification burden is heaviest — is the most attractive tonne in the industry, and why Usha Martin is spending ₹250–300 cr to make 6,000 tonnes more of it.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What wire makers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Wire rod</td><td>The raw material, usually 60–70% of cost</td><td>The critical input; special grades are imported</td></tr>
+    <tr><td>Zinc</td><td>Galvanising</td><td>Metal price (see 074)</td></tr>
+    <tr><td>Power</td><td>Drawing, heat treatment and plating</td><td>Tariffs; a meaningful cost</td></tr>
+    <tr><td>Industrial gases</td><td>Heat treatment atmospheres</td><td>Supply disruption hit Bansal Wire this quarter</td></tr>
+    <tr><td>Dies and consumables</td><td>The tools that shape the wire</td><td>Imported tungsten carbide and diamond dies</td></tr>
+    <tr><td>Approvals</td><td>Customer and standards certification</td><td>Years to obtain; the real moat</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Projects, monsoon and year-end destocking</h2>
+  <ul>
+    <li><b>January–March:</b> distributors run down stock before the fiscal year ends; the weakest window, with only 2 wins in 15 years in February–March.</li>
+    <li><b>April–July:</b> new budgets, pre-monsoon construction and mining activity; April has worked in 10 of 15 years.</li>
+    <li><b>July–September:</b> the monsoon slows mining and construction; August–September has worked in only 4 of 14 years.</li>
+    <li><b>October–December:</b> post-monsoon project work and export shipments; December has worked in 9 of 15 years.</li>
+    <li><b>Replacement cycles:</b> rope replacement at mines and ports continues through the year, smoothing the trough.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the four-stock wire basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (Usha Martin Limited, Bharat Wire Ropes Ltd., Bedmutha Industries Limited, Shalimar Wires Industries Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.4 pts (beat in 10 of 15 years); Dec +4.2 pts (beat in 9 of 15 years); Oct +3.7 pts (beat in 11 of 15 years).</li><li><b>Weakest months:</b> Feb -4.8 pts (beat in 5 of 15 years); Mar -2.9 pts (beat in 5 of 15 years); Nov -2.7 pts (beat in 7 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 2 of 15 years (median -11.4 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +4.4 pts); Aug–Sep beat the Nifty in 4 of 14 years (median -6.9 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +4.9 pts); Sep–Nov beat the Nifty in 7 of 14 years (median -1.4 pts); Jan–Mar beat the Nifty in 3 of 15 years (median -11.3 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.4 points.</p><p><b>Reading it:</b> four companies with long histories — Usha Martin, Bharat Wire Ropes, Bedmutha and Shalimar Wires. <b>February–March has beaten the Nifty in only 2 of 15 years</b> (median −11.4 points) and January–March in 3 of 15 (median −11.3) — the weakest first quarter anywhere in the Metals family. April has worked in 10 of 15 (average +7.4) and December in 9 of 15. April–July has worked in 9 of 15. The shape follows the customers: mining, construction and infrastructure projects order before the monsoon and again in the second half, while the January–March quarter brings year-end destocking at distributors.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="FebMar" viewBox="0 0 720 280" role="img" aria-label="February to March return minus Nifty by year"></svg><figcaption>February–March return of the basket minus the Nifty, by year, in percentage points. Green bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>February–March has worked twice in fifteen years</b>, with a median loss of 11.4 points — the clearest negative season in the Metals family.</li>
+    <li><b>April has failed only in 2019 (−12.8), 2025 (−10.3) and 2012 (−1.5)</b>, and delivered +35.6 in 2021 and +23.7 in 2018.</li>
+    <li><b>2019 was the worst year (−47.1)</b>, when small-cap wire makers with debt were sold indiscriminately.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The first-quarter weakness is consistent across the whole Metals family — mining (064), ferro alloys (065), steel (066) and wire all lose to the Nifty in February–March — which makes it one of the more reliable patterns in this project. It reflects the same physical reality: the Indian fiscal year-end and Chinese New Year fall together, and metal buyers stop buying.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Product mix.</b> Rope and specialty wire against plain wire.</li>
+    <li><b>Wire rod prices.</b> The input, and the source of inventory effects.</li>
+    <li><b>Mining and port activity.</b> Replacement demand for rope.</li>
+    <li><b>Construction and infrastructure.</b> LRPC strand and galvanised wire.</li>
+    <li><b>Auto and tyre production.</b> Bead wire, cord and spring wire.</li>
+    <li><b>Exports.</b> Usha Martin's global network; Middle East disruption hurt this quarter.</li>
+    <li><b>Zinc and power costs.</b> Galvanising and drawing.</li>
+    <li><b>Capacity expansion.</b> Whether new tonnes come with better mix or just more tonnes.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Usha Martin, Bharat Wire Ropes (from 2016), Bedmutha and Shalimar Wires, equal-weighted monthly. Bansal Wire, Rajratan and other recent or thinly traded listings are excluded. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Debt and dilution</b> (2012–2015): expansion funded with borrowing met a weak market; Usha Martin fell 62% in 2015.</li>
+    <li><b>Restructuring</b> (2016–2019): Usha Martin sold its steel business in 2019 to become a focused rope maker; the small caps struggled.</li>
+    <li><b>The recovery</b> (2020–2023): exports, mining demand and a small-cap boom; the basket rose 119% in 2021 and 133% in 2023.</li>
+    <li><b>Divergence</b> (2024–2026): Usha Martin's mix-led growth against flat or falling small caps.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Mix beats volume.</b> Every good year for Usha Martin has come from rope, not tonnes.</li>
+    <li><b>Leverage kills in this sector.</b> The 2015 and 2019 collapses were balance-sheet events, not demand events.</li>
+    <li><b>The first quarter of the calendar year is reliably weak.</b></li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A niche global industry with real leaders</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>Bekaert (Belgium)</td><td>The global leader in steel cord and specialty wire</td><td>The benchmark India is trying to substitute</td></tr>
+    <tr><td>Chinese producers</td><td>Volume leaders in cord and rope</td><td>The source of import competition</td></tr>
+    <tr><td>Kiswire (Korea), WireCo (US)</td><td>Rope and specialty leaders</td><td>Competitors in export markets</td></tr>
+    <tr><td>Usha Martin (India)</td><td>Among the larger global rope makers, with plants on four continents</td><td>India's one global-scale name in this space</td></tr>
+  </tbody></table></div>
+  <p>Wire rope is a genuinely global business: a mine in Chile, a port in Rotterdam and a fishing fleet in Norway all buy from a handful of certified makers. That is why an Indian company with the right approvals can export more than half its output, and why geopolitical disruption — Middle East shipping this year — shows up directly in quarterly volumes.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Compacted and plastic-impregnated ropes.</b> Longer life and higher breaking loads for cranes and mines.</li>
+    <li><b>Rope condition monitoring.</b> Sensors that predict replacement, sold as a service.</li>
+    <li><b>Stay cables and structural strand.</b> Usha Martin's first international plasticated LRPC order this quarter.</li>
+    <li><b>Ultra-fine tyre cord.</b> The hardest wire product, still mostly imported.</li>
+    <li><b>Higher-strength spring wires.</b> Lighter vehicles need stronger, cleaner steel.</li>
+    <li><b>Coating chemistry.</b> Zinc-aluminium and organic coatings that outlast plain galvanising.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Quality control orders on wire and rope</td><td>Standards compliance for domestic and imported products</td><td>Limits cheap imports</td></tr>
+    <tr><td>Safeguard duty on flat steel (066)</td><td>Raises steel prices generally</td><td>Indirect cost pressure</td></tr>
+    <tr><td>Anti-dumping duties on wire products</td><td>Applied to some wire and cord imports over the years</td><td>Protects specific niches</td></tr>
+    <tr><td>Infrastructure spending</td><td>Bridges, metros and ports use strand and rope</td><td>Demand driver</td></tr>
+    <tr><td>Mining policy (064, 036)</td><td>Mine output drives rope replacement</td><td>Steady demand</td></tr>
+    <tr><td>Production incentives for auto components</td><td>Support for spring wire and cord substitution</td><td>Encourages specialty capacity</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: mix is winning</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Wire rope</td><td>Strong</td><td>Usha Martin volumes +18%; revenue past ₹1,000 cr</td></tr>
+    <tr><td>Plain wire</td><td>Margin-squeezed</td><td>Bansal Wire's operating margin 4.83% against 7.65%</td></tr>
+    <tr><td>Specialty niches</td><td>Growing</td><td>Rajratan volumes +16%, profit +70%</td></tr>
+    <tr><td>Exports</td><td>Mixed</td><td>US and Europe growing; Middle East disrupted</td></tr>
+    <tr><td>Capacity</td><td>Being added</td><td>Elevator rope from October 2026; Bansal to 8 lakh tonnes</td></tr>
+    <tr><td>Stocks</td><td>Divergent</td><td>Usha Martin +12%; the small caps flat to lower</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is -3.0% this year vs -10.7% for the Nifty (to 18 Sep 2026). The basket is down 3% against a Nifty down 11%, and the spread within it is wide. Usha Martin, the quality name, is up 12% after crossing ₹1,000 cr of quarterly revenue for the first time, with profit up 41% and wire-rope volumes up 18%; it guides to 10–12% volume growth and margins above 20%. The smaller rope and wire makers are flat to lower. Outside the basket, the two newer listings show the industry's two directions: Rajratan Global's tyre bead wire profit rose 70% on better mix, while Bansal Wire's profit halved as it builds capacity toward 8 lakh tonnes.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>Usha Martin</td><td class="num">₹507</td><td>₹520 (5 Aug 2026)</td><td class="num">−2%</td><td class="num">+12%</td></tr>
+    <tr><td>Bansal Wire</td><td class="num">₹311</td><td>₹488 (6 Dec 2024)</td><td class="num">−36%</td><td class="num">+1%</td></tr>
+    <tr><td>Rajratan Global</td><td class="num">₹453</td><td>₹1,324 (12 Sep 2022)</td><td class="num">−66%</td><td class="num">−3%</td></tr>
+    <tr><td>Bharat Wire Ropes</td><td class="num">₹173</td><td>₹396 (15 Jan 2024)</td><td class="num">−56%</td><td class="num">−5%</td></tr>
+    <tr><td>Bedmutha Industries</td><td class="num">₹105</td><td>₹304 (1 Feb 2024)</td><td class="num">−65%</td><td class="num">−7%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>Usha Martin trades close to its high on a business that is compounding volumes at 10–12% with margins above 20% — the market is paying for consistency, and the elevator-rope expansion gives it a further mix lever. Everything else in the sector is priced for disappointment: Rajratan is 66% below its 2022 high despite 70% profit growth this quarter, Bharat Wire Ropes 56% below and Bedmutha 65% below. That gap is the sector's central question. If Rajratan's niche and Bansal's specialty programme deliver, today's prices will look cheap; if they remain volume businesses in a 7–8% growth industry, they will not.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is a small sector with one high-quality business and a long tail of converters. The lesson generalises across the Metals family: in commodity processing, the only durable profits come from certification, approvals and mix — the things that stop a customer switching supplier on price. Buy the ladder-climbers, and treat the plain drawers as leveraged bets on steel spreads.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Wire-rope volume growth and mix</td><td>The value driver</td><td>Quarterly results</td></tr>
+    <tr><td>Revenue per tonne</td><td>Shows whether mix is improving</td><td>Company disclosures</td></tr>
+    <tr><td>Wire rod prices</td><td>The main cost</td><td>Steel price agencies</td></tr>
+    <tr><td>Mining and port activity</td><td>Replacement demand</td><td>Coal and cargo statistics</td></tr>
+    <tr><td>Tyre production</td><td>Bead wire and cord demand (025)</td><td>ATMA data</td></tr>
+    <tr><td>Elevator-rope commissioning</td><td>Usha Martin's next mix step</td><td>Company updates</td></tr>
+    <tr><td>Specialty capacity announcements</td><td>Import substitution progress</td><td>Bansal Wire, Rajratan disclosures</td></tr>
+    <tr><td>Export shipping conditions</td><td>Middle East disruption hit volumes</td><td>Freight and route news</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Steel &amp; iron (066):</b> wire rod is the input.</li>
+    <li><b>Steel pipes &amp; tubes (068):</b> the same conversion logic, larger scale.</li>
+    <li><b>Tyres (025):</b> bead wire and steel cord.</li>
+    <li><b>Zinc &amp; lead (074):</b> galvanising cost.</li>
+    <li><b>Mining (064, 036):</b> rope replacement demand.</li>
+    <li><b>Construction and infrastructure:</b> LRPC strand for bridges and sleepers.</li>
+    <li><b>Global proxies:</b> Bekaert for cord and specialty wire; WireCo and Kiswire for rope.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the split of volume and revenue between rope, strand and plain wire?</li>
+    <li>What is revenue per tonne, and how has mix changed?</li>
+    <li>Which approvals or qualifications were won this year, and for which customers?</li>
+    <li>How much of sales is export, and to which regions?</li>
+    <li>What is the replacement share of rope demand?</li>
+    <li>How are rod costs passed through, and with what lag?</li>
+    <li>What is the capital cost and expected return of the capacity being added?</li>
+    <li>For specialty programmes: what is the qualification timeline with customers?</li>
+    <li>What are the utilisation rates by plant?</li>
+    <li>What is net debt, and how did it move this year?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Wire is a commodity business"</td><td>Rope is half of Usha Martin's volume and 73% of its revenue</td><td>True only at the bottom of the ladder</td></tr>
+    <tr><td>"Capacity growth drives value"</td><td>Bansal Wire's revenue rose 24% and profit fell 48%</td><td>Mix decides, not tonnes</td></tr>
+    <tr><td>"Small wire stocks are cheap"</td><td>Several are 56–66% below their highs after debt-driven collapses in 2015 and 2019</td><td>Cheap for reasons; check the balance sheet</td></tr>
+    <tr><td>"Import substitution is imminent"</td><td>Steel tyre cord is still largely imported; trial orders only</td><td>Years away, capital-heavy</td></tr>
+    <tr><td>"Profit figures are straightforward"</td><td>One report printed Rajratan's quarterly profit as ₹229.6 cr instead of ₹23.0 cr</td><td>Check units against revenue</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. LRPC, bead wire" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Process</h3><dl>
+    <dt>Wire rod</dt><dd>Hot-rolled steel in coil form, the input to wire drawing.</dd>
+    <dt>Drawing</dt><dd>Pulling rod through progressively smaller dies to make wire.</dd>
+    <dt>Die</dt><dd>The hard ring, usually tungsten carbide or diamond, through which wire is pulled.</dd>
+    <dt>Descaling</dt><dd>Removing the oxide layer from rod before drawing.</dd>
+    <dt>Patenting</dt><dd>A heat treatment that gives high-carbon wire strength and ductility.</dd>
+    <dt>Galvanising</dt><dd>Coating wire with zinc for corrosion resistance.</dd>
+    <dt>Stranding</dt><dd>Twisting wires together into a strand.</dd>
+    <dt>Closing</dt><dd>Laying strands around a core to form a rope.</dd>
+    <dt>Core</dt><dd>The centre of a rope, of steel or fibre.</dd>
+    <dt>Lay</dt><dd>The direction and length of the twist in a rope.</dd>
+    <dt>Compacted rope</dt><dd>Rope whose strands are pressed to increase steel area and strength.</dd>
+    <dt>Plasticated rope</dt><dd>Rope impregnated with polymer for longer life.</dd>
+  </dl>
+  <h3>Products</h3><dl>
+    <dt>Wire rope</dt><dd>The finished cable used for lifting and hauling.</dd>
+    <dt>LRPC strand</dt><dd>Low-relaxation prestressed concrete strand used in bridges and sleepers.</dd>
+    <dt>Stay cable</dt><dd>The cables that hold up a cable-stayed bridge.</dd>
+    <dt>Bead wire</dt><dd>High-carbon coated wire that anchors a tyre to the rim.</dd>
+    <dt>Steel tyre cord</dt><dd>Very fine wire reinforcing the body of a tyre.</dd>
+    <dt>IHT / OHT wire</dt><dd>Induction- and oil-hardened-tempered wire for suspension springs.</dd>
+    <dt>Elevator rope</dt><dd>Certified rope used in lifts.</dd>
+    <dt>Dragline rope</dt><dd>Heavy rope used on mining excavators.</dd>
+    <dt>Breaking load</dt><dd>The force at which a rope fails — the key specification.</dd>
+  </dl>
+  <h3>Business terms</h3><dl>
+    <dt>Conversion spread</dt><dd>The gap between rod cost and wire selling price.</dd>
+    <dt>Revenue per tonne</dt><dd>The best single indicator of product mix.</dd>
+    <dt>Replacement demand</dt><dd>Sales driven by wear rather than new investment.</dd>
+    <dt>Qualification</dt><dd>The process of being approved as a supplier for a critical product.</dd>
+    <dt>Import substitution</dt><dd>Replacing imported products with domestic production.</dd>
+    <dt>Utilisation</dt><dd>Output as a share of installed capacity.</dd>
+    <dt>Operating margin</dt><dd>Operating profit as a share of revenue.</dd>
+    <dt>Value-added share</dt><dd>The proportion of sales from higher-margin products.</dd>
+    <dt>Tonne-realisation</dt><dd>Revenue divided by tonnes sold; the shorthand for mix.</dd>
+    <dt>Pass-through</dt><dd>Passing input-cost changes on to customers, with a lag.</dd>
+    <dt>Installed base</dt><dd>The fleet of cranes, mines and lifts that generates replacement demand.</dd>
+  </dl>
+  <h3>Safety and standards</h3><dl>
+    <dt>IS 3973</dt><dd>The Indian code of practice for selecting, installing and maintaining wire ropes.</dd>
+    <dt>ISO 4309</dt><dd>The international standard for rope inspection and discard on cranes.</dd>
+    <dt>Discard criteria</dt><dd>The numerical rules — broken wires, area loss, corrosion — that force a rope out of service.</dd>
+    <dt>Lay length</dt><dd>The distance along a rope in which a strand makes one full turn; broken wires are counted per lay length.</dd>
+    <dt>Active length</dt><dd>The part of a rope that actually runs over sheaves and drums, and so wears.</dd>
+    <dt>Non-destructive testing (NDT)</dt><dd>Magnetic or ultrasonic inspection that finds internal broken wires without cutting the rope.</dd>
+    <dt>Rope life</dt><dd>Service hours or cycles before discard — the number a premium rope is sold on.</dd>
+    <dt>Mine winder</dt><dd>The hoist that raises and lowers the cage in a shaft; its ropes are the most safety-critical of all.</dd>
+    <dt>Sheave</dt><dd>The grooved pulley a rope runs over; its diameter governs rope fatigue.</dd>
+    <dt>Fatigue</dt><dd>Damage accumulated by repeated bending, the usual cause of broken wires.</dd>
+    <dt>Corrosion loss</dt><dd>Section lost to rust, counted against the discard threshold.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. How is wire made?</summary><p>Steel rod is cleaned and pulled through progressively smaller dies, growing stronger as it thins.</p></details>
+  <details class="q"><summary>2. Why does rope earn more than wire?</summary><p>It is designed, tested and certified, and failure has severe consequences, so buyers pay for trust.</p></details>
+  <details class="q"><summary>3. What share of Usha Martin's revenue comes from rope?</summary><p>73%, from about half its volume.</p></details>
+  <details class="q"><summary>4. What did Usha Martin report in Q1 FY27?</summary><p>Revenue ₹1,033 cr and profit ₹142 cr (+41%), with wire-rope volumes up 18%.</p></details>
+  <details class="q"><summary>5. Why did Bansal Wire's profit fall while revenue rose?</summary><p>More tonnes of ordinary wire, capacity build-out and higher input and energy costs cut its operating margin to 4.83%.</p></details>
+  <details class="q"><summary>6. Which wire product does India still largely import?</summary><p>Steel tyre cord.</p></details>
+  <details class="q"><summary>7. What is LRPC strand used for?</summary><p>Prestressed concrete — bridges, flyovers, sleepers and stay cables.</p></details>
+  <details class="q"><summary>8. What is the weakest season for these stocks?</summary><p>February–March, which has beaten the Nifty in only 2 of 15 years.</p></details>
+  <details class="q"><summary>9. What caused the 2015 and 2019 collapses?</summary><p>Balance sheets — leverage in a weak market — rather than demand.</p></details>
+  <details class="q"><summary>10. What number should be checked against revenue in reports on this sector?</summary><p>Profit: one report printed Rajratan's quarterly profit as ₹229.6 cr when the figure consistent with its revenue and EBITDA is ₹23.0 cr.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, 2011 to 18 September 2026, against NSE:NIFTY.</li>
+    <li>Usha Martin: <a href="https://www.investing.com/news/company-news/usha-martin-q1-fy27-slides-revenue-crosses-rs-1000-cr-milestone-93CH-4815549">Q1 FY27 slides</a>; <a href="https://tradebrains.in/usha-martin-q1-fy27-net-profit-surges-40-9-yoy-to-142-cr/">profit growth</a>; <a href="https://www.multibagg.ai/market-pulse/articles/usha-martin-q1fy27-earnings-call-cmsdi18oo03dd0zoy1kd40mc9">earnings call, guidance and elevator-rope expansion</a>.</li>
+    <li>Bansal Wire: <a href="https://www.equitybulls.com/category.php?id=373336">Q1 FY27 results and tyre-cord trial order</a>; <a href="https://ca.investing.com/news/company-news/bansal-wire-q1-fy27-slides-volumes-rise-as-margins-face-temporary-hit-93CH-4748080">Q1 FY27 slides</a>; <a href="https://www.sahi.com/news/bansal-wire-expects-600-800-crore-ebitda-from-2-000-2-500-crore-specialty-investment-3472-PE1_COR">specialty investment plan</a>.</li>
+    <li>Rajratan Global: <a href="https://www.tradingview.com/news/urn:summary_document_report:quartr.com:3685596:0-rajratan-q1-fy27-saw-robust-revenue-and-profit-growth-led-by-both-domestic-and-global-operations/">Q1 FY27 summary</a>; <a href="https://quartr.com/events/rajratan-global-wire-limited-517522-q1-26-27_FRV0oy0l">quarterly event page</a>; <a href="https://groww.in/stocks/rajratan-global-wire-ltd">share data</a>.</li>
+    <li>Industry: <a href="https://www.wirecable.in/bansal-wire-advances/">specialty wire and steel cord expansion</a>; <a href="https://tradebrains.in/indian-markets/how-usha-martin-is-becoming-the-aston-martin-of-indias-high-performance-rope-industry-12522910">the shift to high-performance rope</a>.</li>
+    <li>Safety standards: <a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.1413">OSHA 1926.1413 on wire-rope inspection</a>; <a href="https://verope.com/rope-tech/discard-criteria/">discard criteria explained</a>; <a href="https://ndtinspect.com/non-destructive-testing-of-steel-wire-ropes-and-their-discard-criteria/">NDT of steel wire ropes and IS 3973 retirement rules</a>; <a href="https://www.techknowserv.com/post/wire-rope-inspection-in-mining-applications">rope inspection in mining</a>; <a href="https://www.mazzellacompanies.com/learning-center/wire-rope-inspection-removal-from-service-criteria/">removal-from-service criteria</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -17.8}, {"y": 2013, "v": -14.9}, {"y": 2014, "v": -11.6}, {"y": 2015, "v": -11.4}, {"y": 2016, "v": -13.5}, {"y": 2017, "v": -3.0}, {"y": 2018, "v": -12.9}, {"y": 2019, "v": -6.6}, {"y": 2020, "v": -3.8}, {"y": 2021, "v": -12.1}, {"y": 2022, "v": 4.1}, {"y": 2023, "v": 10.2}, {"y": 2024, "v": -24.2}, {"y": 2025, "v": -6.5}, {"y": 2026, "v": -0.0}], "AprJul": [{"y": 2012, "v": -18.5}, {"y": 2013, "v": -3.3}, {"y": 2014, "v": 37.5}, {"y": 2015, "v": -1.1}, {"y": 2016, "v": 30.4}, {"y": 2017, "v": 34.5}, {"y": 2018, "v": 13.4}, {"y": 2019, "v": -28.3}, {"y": 2020, "v": 4.4}, {"y": 2021, "v": 99.6}, {"y": 2022, "v": 0.5}, {"y": 2023, "v": 36.4}, {"y": 2024, "v": -1.9}, {"y": 2025, "v": -3.8}, {"y": 2026, "v": 9.5}], "AugSep": [{"y": 2012, "v": -8.6}, {"y": 2013, "v": -9.7}, {"y": 2014, "v": -13.1}, {"y": 2015, "v": -7.3}, {"y": 2016, "v": -6.9}, {"y": 2017, "v": -6.9}, {"y": 2018, "v": 1.9}, {"y": 2019, "v": -17.4}, {"y": 2020, "v": 16.4}, {"y": 2021, "v": -14.8}, {"y": 2022, "v": 15.8}, {"y": 2023, "v": 19.3}, {"y": 2024, "v": -0.9}, {"y": 2025, "v": -1.1}], "OctDec": [{"y": 2012, "v": 11.1}, {"y": 2013, "v": 10.0}, {"y": 2014, "v": -7.0}, {"y": 2015, "v": 2.6}, {"y": 2016, "v": 30.8}, {"y": 2017, "v": 36.4}, {"y": 2018, "v": -1.7}, {"y": 2019, "v": -8.3}, {"y": 2020, "v": 23.6}, {"y": 2021, "v": 32.7}, {"y": 2022, "v": -3.0}, {"y": 2023, "v": 7.3}, {"y": 2024, "v": -1.5}, {"y": 2025, "v": -5.7}], "SepNov": [{"y": 2012, "v": 1.1}, {"y": 2013, "v": -7.4}, {"y": 2014, "v": -8.5}, {"y": 2015, "v": 0.1}, {"y": 2016, "v": 24.0}, {"y": 2017, "v": 7.8}, {"y": 2018, "v": 10.9}, {"y": 2019, "v": -5.3}, {"y": 2020, "v": -13.7}, {"y": 2021, "v": 10.1}, {"y": 2022, "v": -11.6}, {"y": 2023, "v": 24.8}, {"y": 2024, "v": -2.9}, {"y": 2025, "v": -5.4}], "JanMar": [{"y": 2012, "v": -12.4}, {"y": 2013, "v": -22.1}, {"y": 2014, "v": -17.6}, {"y": 2015, "v": -17.0}, {"y": 2016, "v": -10.4}, {"y": 2017, "v": 16.1}, {"y": 2018, "v": -26.6}, {"y": 2019, "v": -13.3}, {"y": 2020, "v": -4.8}, {"y": 2021, "v": -21.7}, {"y": 2022, "v": 11.0}, {"y": 2023, "v": 15.1}, {"y": 2024, "v": -6.1}, {"y": 2025, "v": -11.3}, {"y": 2026, "v": -0.2}]}, "my": {"1": {"2012": 9.0, "2013": -8.7, "2014": -6.5, "2015": -5.8, "2016": 2.8, "2017": 18.5, "2018": -16.5, "2019": -6.7, "2020": -1.6, "2021": -10.4, "2022": 6.6, "2023": 4.8, "2024": 23.0, "2025": -5.2, "2026": -0.2}, "2": {"2012": -4.0, "2013": -6.2, "2014": -14.8, "2015": 2.1, "2016": -12.9, "2017": 1.2, "2018": 2.2, "2019": -6.1, "2020": -3.5, "2021": 2.8, "2022": -0.1, "2023": -10.2, "2024": -13.9, "2025": -11.7, "2026": 2.4}, "3": {"2012": -13.9, "2013": -9.9, "2014": 4.8, "2015": -13.0, "2016": 1.0, "2017": -4.1, "2018": -15.4, "2019": -0.0, "2020": -1.1, "2021": -13.6, "2022": 4.4, "2023": 23.2, "2024": -11.5, "2025": 7.2, "2026": -2.2}, "4": {"2012": -1.5, "2013": -1.3, "2014": 3.9, "2015": 5.2, "2016": 13.4, "2017": 11.9, "2018": 23.7, "2019": -12.8, "2020": 9.3, "2021": 35.6, "2022": 14.6, "2023": -1.1, "2024": 7.5, "2025": -10.3, "2026": 12.7}, "5": {"2012": -1.4, "2013": -4.1, "2014": 19.2, "2015": -12.8, "2016": -5.7, "2017": 7.9, "2018": -0.3, "2019": -7.8, "2020": -7.2, "2021": 9.4, "2022": -10.8, "2023": 1.9, "2024": 1.7, "2025": 2.0, "2026": 6.3}, "6": {"2012": -6.8, "2013": 3.1, "2014": 13.2, "2015": 1.5, "2016": 10.6, "2017": -0.7, "2018": -3.9, "2019": -13.3, "2020": 17.5, "2021": 19.9, "2022": 1.0, "2023": 13.1, "2024": -8.6, "2025": 7.5, "2026": -7.5}, "7": {"2011": 5.3, "2012": -10.4, "2013": -1.0, "2014": -3.8, "2015": 5.7, "2016": 7.9, "2017": 10.5, "2018": -4.8, "2019": 0.9, "2020": -11.9, "2021": 9.0, "2022": -2.8, "2023": 16.8, "2024": -2.2, "2025": -2.0, "2026": -1.4}, "8": {"2011": -4.2, "2012": -5.5, "2013": -0.4, "2014": -11.2, "2015": -2.4, "2016": -4.2, "2017": -4.2, "2018": -4.7, "2019": -10.3, "2020": 23.1, "2021": -15.5, "2022": 21.2, "2023": 4.3, "2024": -0.1, "2025": -4.6, "2026": -1.7}, "9": {"2011": -8.2, "2012": -2.8, "2013": -9.8, "2014": -2.0, "2015": -5.4, "2016": -2.9, "2017": -2.9, "2018": 6.4, "2019": -7.5, "2020": -5.1, "2021": 1.3, "2022": -3.7, "2023": 14.7, "2024": -0.8, "2025": 3.7}, "10": {"2011": -9.6, "2012": 9.3, "2013": 0.7, "2014": -5.6, "2015": 14.4, "2016": 28.6, "2017": 11.9, "2018": 4.0, "2019": -4.1, "2020": -10.6, "2021": 6.5, "2022": 3.5, "2023": 1.4, "2024": 5.2, "2025": 0.2}, "11": {"2011": -23.7, "2012": -5.5, "2013": 2.4, "2014": -0.7, "2015": -7.2, "2016": 0.7, "2017": -0.3, "2018": 0.3, "2019": 6.9, "2020": 3.7, "2021": 2.2, "2022": -10.9, "2023": 7.0, "2024": -7.4, "2025": -8.7}, "12": {"2011": -13.7, "2012": 6.8, "2013": 6.0, "2014": -0.7, "2015": -3.1, "2016": 2.3, "2017": 21.3, "2018": -5.9, "2019": -10.2, "2020": 30.5, "2021": 22.8, "2022": 4.9, "2023": -1.6, "2024": 0.6, "2025": 3.3}}, "basket": ["Usha Martin Limited", "Bharat Wire Ropes Ltd.", "Bedmutha Industries Limited", "Shalimar Wires Industries Limited"], "nbasket": 4, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.0, "rel": 0.2, "hit": 6, "n": 15}, {"m": 2, "abs": -6.0, "rel": -4.8, "hit": 5, "n": 15}, {"m": 3, "abs": -3.1, "rel": -2.9, "hit": 5, "n": 15}, {"m": 4, "abs": 9.9, "rel": 7.4, "hit": 10, "n": 15}, {"m": 5, "abs": 1.0, "rel": -0.1, "hit": 7, "n": 15}, {"m": 6, "abs": 4.9, "rel": 3.1, "hit": 9, "n": 15}, {"m": 7, "abs": 2.9, "rel": 1.0, "hit": 7, "n": 16}, {"m": 8, "abs": -1.5, "rel": -1.3, "hit": 3, "n": 16}, {"m": 9, "abs": -1.1, "rel": -1.7, "hit": 4, "n": 15}, {"m": 10, "abs": 5.8, "rel": 3.7, "hit": 11, "n": 15}, {"m": 11, "abs": -1.8, "rel": -2.7, "hit": 7, "n": 15}, {"m": 12, "abs": 4.9, "rel": 4.2, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": -5.7, "n": 27.7, "rel": -33.4, "partial": false}, {"y": 2013, "b": -21.6, "n": 6.8, "rel": -28.4, "partial": false}, {"y": 2014, "b": 18.5, "n": 31.4, "rel": -12.9, "partial": false}, {"y": 2015, "b": -25.2, "n": -4.1, "rel": -21.1, "partial": false}, {"y": 2016, "b": 44.2, "n": 3.0, "rel": 41.2, "partial": false}, {"y": 2017, "b": 140.5, "n": 28.6, "rel": 111.9, "partial": false}, {"y": 2018, "b": -16.2, "n": 3.2, "rel": -19.4, "partial": false}, {"y": 2019, "b": -47.1, "n": 12.0, "rel": -59.1, "partial": false}, {"y": 2020, "b": 53.1, "n": 14.9, "rel": 38.2, "partial": false}, {"y": 2021, "b": 119.4, "n": 24.1, "rel": 95.3, "partial": false}, {"y": 2022, "b": 31.0, "n": 4.3, "rel": 26.6, "partial": false}, {"y": 2023, "b": 133.4, "n": 20.0, "rel": 113.4, "partial": false}, {"y": 2024, "b": -2.0, "n": 8.8, "rel": -10.8, "partial": false}, {"y": 2025, "b": -11.6, "n": 10.5, "rel": -22.1, "partial": false}, {"y": 2026, "b": -3.0, "n": -10.7, "rel": 7.7, "partial": true}], "dd": [{"co": "Usha Martin", "peak": "Oct 2025", "fp": 5, "y1": 22}, {"co": "Bansal Wire Industries", "peak": "Dec 2024", "fp": -36, "y1": -12}, {"co": "Rajratan Global Wire", "peak": "Sep 2022", "fp": -66, "y1": 29}, {"co": "Bharat Wire Ropes", "peak": "Jan 2024", "fp": -56, "y1": 2}, {"co": "Bedmutha Industries", "peak": "Feb 2024", "fp": -65, "y1": -27}, {"co": "Geekay Wires", "peak": "Sep 2024", "fp": -52, "y1": -9}, {"co": "DP Wires", "peak": "Nov 2023", "fp": -77, "y1": -46}, {"co": "Kritika Wires", "peak": "May 2024", "fp": -79, "y1": -43}, {"co": "Shalimar Wires Industries", "peak": "Sep 2024", "fp": -49, "y1": -15}, {"co": "Shree Steel Wire Ropes", "peak": "May 2024", "fp": -48, "y1": -8}, {"co": "Bombay Wire Ropes", "peak": "Jan 2022", "fp": -57, "y1": -25}], "win": {"FebMar": {"mean": -8.3, "median": -11.4, "hit": 2, "n": 15}, "AprJul": {"mean": 14.0, "median": 4.4, "hit": 9, "n": 15}, "AugSep": {"mean": -2.4, "median": -6.9, "hit": 4, "n": 14}, "OctDec": {"mean": 9.1, "median": 4.9, "hit": 8, "n": 14}, "SepNov": {"mean": 1.7, "median": -1.4, "hit": 7, "n": 14}, "JanMar": {"mean": -8.1, "median": -11.3, "hit": 3, "n": 15}}, "ytd": {"b": -3.0, "n": -10.7}, "notes": {"2012": "\u22125.7% against +27.7%. Usha Martin +41% but Bedmutha \u221248%.", "2013": "\u221221.6% against +6.8%. The capex freeze: Shalimar \u221238%, Bedmutha \u221221%.", "2014": "+18.5% against +31.4%. Bedmutha +57%; Usha Martin fell 12% on debt worries.", "2015": "\u221225.2% against \u22124.1%. Usha Martin \u221262% as leverage and weak steel prices bit.", "2016": "+44.2% against +3.0%. Usha Martin +47% on a steel recovery.", "2017": "+140.5% against +28.6%. Shalimar +531%, Bharat Wire Ropes +95%, Usha Martin +65%.", "2018": "\u221216.2% against +3.2%. Usha Martin +46% on its steel-business sale, but the small caps fell.", "2019": "\u221247.1% against +12.0%. The worst year: Shalimar \u221272%, Bharat Wire Ropes \u221259%.", "2020": "+53.1% against +14.9%. Post-lockdown recovery; Bedmutha +64%.", "2021": "+119.4% against +24.1%. Shalimar +154%, Usha Martin +145%, Bedmutha +135%.", "2022": "+31.0% against +4.3%. Usha Martin +91% and Bharat Wire Ropes +79% on export demand.", "2023": "+133.4% against +20.0%. Small-cap mania: Bharat Wire Ropes +195%, Bedmutha +189%.", "2024": "\u22122.0% against +8.8%. Only Usha Martin (+27%) rose.", "2025": "\u221211.6% against +10.5%. Bedmutha \u221244%; Usha Martin +21%.", "2026": "\u22123.0% against a Nifty \u221210.7%. Usha Martin +12%; the smaller names are flat to lower."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

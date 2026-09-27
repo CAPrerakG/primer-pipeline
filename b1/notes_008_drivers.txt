@@ -1,0 +1,25 @@
+BASKET 51 names
+2012: basket +57 nifty +28 rel +29 | n=23 median +62 | TOP Atul Limited +215, Vinati Organics Li +133, Thirumalai Chemica +128 | BOTTOM Amines & Plasticiz -9, Sadhana Nitro Chem -13, DMCC Speciality Ch -27
+2013: basket +1 nifty +7 rel -6 | n=23 median -8 | TOP Paushak Limited +154, Alkyl Amines Chemi +73, Plastiblends India +29 | BOTTOM Tamilnadu Petro Pr -40, DMCC Speciality Ch -48, Jayant Agro-Organi -49
+2014: basket +104 nifty +31 rel +73 | n=23 median +118 | TOP Atul Limited +206, Transpek Industry  +199, Alkyl Amines Chemi +196 | BOTTOM Godrej Industries  +6, India Glycols Limi -2, Thirumalai Chemica -7
+2015: basket +57 nifty -4 rel +61 | n=23 median +56 | TOP Paushak Limited +230, Amines & Plasticiz +132, Balaji Amines Limi +131 | BOTTOM Deepak Nitrite Lim -10, Jayant Agro-Organi -10, BASF India Limited -26
+2016: basket +34 nifty +3 rel +31 | n=29 median +22 | TOP Jayant Agro-Organi +348, Thirumalai Chemica +253, POCL Enterprises L +108 | BOTTOM Fineotex Chemical  -22, Paushak Limited -42, Vishnu Chemicals L -43
+2017: basket +100 nifty +29 rel +71 | n=30 median +91 | TOP Sadhana Nitro Chem +248, India Glycols Limi +244, IG Petrochemicals  +221 | BOTTOM Plastiblends India +7, POCL Enterprises L +6, Privi Speciality C -1
+2018: basket -8 nifty +3 rel -11 | n=31 median -28 | TOP Sadhana Nitro Chem +830, Valiant Organics L +140, Paushak Limited +101 | BOTTOM Fineotex Chemical  -52, Camlin Fine Scienc -58, Vishnu Chemicals L -60
+2019: basket -6 nifty +12 rel -18 | n=34 median -11 | TOP Deepak Nitrite Lim +69, Fine Organic Indus +64, Camlin Fine Scienc +54 | BOTTOM Jayant Agro-Organi -46, IG Petrochemicals  -60, Sadhana Nitro Chem -74
+2020: basket +66 nifty +15 rel +51 | n=35 median +48 | TOP Alkyl Amines Chemi +253, IG Petrochemicals  +152, Deepak Nitrite Lim +152 | BOTTOM Jayant Agro-Organi -3, Grauer & Weil Indi -14, POCL Enterprises L -19
+2021: basket +110 nifty +24 rel +86 | n=39 median +86 | TOP Yasho Industries L +609, Vishnu Chemicals L +310, Balaji Amines Limi +268 | BOTTOM Plastiblends India -13, Chemcon Speciality -26, Valiant Organics L -32
+2022: basket -5 nifty +4 rel -9 | n=46 median -19 | TOP POCL Enterprises L +143, Sadhana Nitro Chem +100, Fineotex Chemical  +82 | BOTTOM Clean Science & Te -40, Valiant Organics L -43, Rossari Biotech Lt -43
+2023: basket +17 nifty +20 rel -3 | n=47 median +8 | TOP Shree Ganesh Remed +176, Foseco India Limit +98, Amines & Plasticiz +80 | BOTTOM Epigral Ltd -22, Tatva Chintan Phar -26, Paushak Limited -26
+2024: basket +14 nifty +9 rel +5 | n=47 median -3 | TOP Sudarshan Pharma I +444, POCL Enterprises L +370, Epigral Ltd +94 | BOTTOM Valiant Organics L -39, Sadhana Nitro Chem -40, Tatva Chintan Phar -44
+2025: basket -12 nifty +10 rel -23 | n=48 median -23 | TOP Anupam Rasayan Ind +83, Privi Speciality C +59, India Glycols Limi +58 | BOTTOM Neogen Chemicals L -47, Chemplast Sanmar L -48, Sadhana Nitro Chem -82
+2026: basket +19 nifty -11 rel +30 | n=50 median +11 | TOP Yasho Industries L +182, Fineotex Chemical  +131, Neogen Chemicals L +110 | BOTTOM Thirumalai Chemica -33, Chemplast Sanmar L -34, Camlin Fine Scienc -34
+MONTH 4 avg +8.7 (14/15): worst years [('2019', -1.7), ('2025', 0.2), ('2013', 0.6)] best years [('2015', 12.6), ('2021', 17.6), ('2026', 17.9)]
+MONTH 9 avg +3.0 (11/15): worst years [('2018', -3.7), ('2023', -3.7), ('2025', -2.9)] best years [('2017', 9.2), ('2016', 9.9), ('2014', 11.6)]
+MONTH 2 avg -1.9 (7/15): worst years [('2016', -9.3), ('2013', -7.5), ('2022', -7.3)] best years [('2026', 2.0), ('2020', 3.8), ('2021', 6.0)]
+WIN FebMar: hit 3/15 median -3.3 | negative years [(2012, -0.7), (2013, -9.9), (2015, -1.2), (2016, -7.2), (2018, -3.3), (2019, -2.2), (2020, -3.5), (2022, -4.7), (2023, -7.6), (2024, -15.0), (2025, -10.8), (2026, -1.5)] | biggest [(2021, 13.4), (2017, 4.2)]
+WIN AprJul: hit 11/15 median +15.7 | negative years [(2013, -5.2), (2018, -8.4), (2019, -9.3), (2022, -1.2)] | biggest [(2021, 53.0), (2014, 40.0)]
+WIN AugSep: hit 11/14 median +5.2 | negative years [(2015, -0.1), (2021, -3.8), (2025, -5.6)] | biggest [(2020, 21.9), (2014, 21.1)]
+WIN OctDec: hit 8/14 median +1.4 | negative years [(2014, -4.6), (2019, -2.5), (2020, -5.6), (2022, -15.0), (2023, -2.7), (2025, -13.3)] | biggest [(2017, 28.5), (2015, 22.5)]
+WIN SepNov: hit 9/14 median +1.2 | negative years [(2018, -0.8), (2019, -2.1), (2022, -10.4), (2023, -6.2), (2025, -14.8)] | biggest [(2017, 30.9), (2016, 25.6)]
+WIN JanMar: hit 5/15 median -4.8 | negative years [(2013, -15.3), (2015, -3.9), (2016, -11.5), (2018, -6.2), (2019, -9.4), (2022, -0.4), (2023, -10.4), (2024, -14.3), (2025, -16.0), (2026, -4.8)] | biggest [(2021, 15.5), (2017, 8.2)]

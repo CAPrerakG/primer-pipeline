@@ -1,0 +1,25 @@
+BASKET 4 names
+2012: basket +20 nifty +28 rel -7 | n=4 median +15 | TOP Olectra Greentech  +27, Ashok Leyland Limi +18, SML Mahindra Limit +12 | BOTTOM Ashok Leyland Limi +18, SML Mahindra Limit +12, Force Motors Limit +7
+2013: basket -24 nifty +7 rel -30 | n=4 median -28 | TOP Olectra Greentech  -15, Force Motors Limit -20, SML Mahindra Limit -36 | BOTTOM Force Motors Limit -20, SML Mahindra Limit -36, Ashok Leyland Limi -36
+2014: basket +158 nifty +31 rel +127 | n=4 median +184 | TOP Ashok Leyland Limi +198, Force Motors Limit +187, SML Mahindra Limit +181 | BOTTOM Force Motors Limit +187, SML Mahindra Limit +181, Olectra Greentech  +41
+2015: basket +82 nifty -4 rel +86 | n=4 median +60 | TOP Force Motors Limit +188, Ashok Leyland Limi +71, SML Mahindra Limit +50 | BOTTOM Ashok Leyland Limi +71, SML Mahindra Limit +50, Olectra Greentech  +38
+2016: basket +14 nifty +3 rel +11 | n=4 median +6 | TOP Olectra Greentech  +39, Force Motors Limit +21, Ashok Leyland Limi -9 | BOTTOM Force Motors Limit +21, Ashok Leyland Limi -9, SML Mahindra Limit -12
+2017: basket +67 nifty +29 rel +38 | n=4 median +24 | TOP Olectra Greentech  +640, Ashok Leyland Limi +49, Force Motors Limit -1 | BOTTOM Ashok Leyland Limi +49, Force Motors Limit -1, SML Mahindra Limit -15
+2018: basket -21 nifty +3 rel -25 | n=4 median -21 | TOP Olectra Greentech  +19, Ashok Leyland Limi -14, SML Mahindra Limit -27 | BOTTOM Ashok Leyland Limi -14, SML Mahindra Limit -27, Force Motors Limit -56
+2019: basket -21 nifty +12 rel -33 | n=4 median -23 | TOP SML Mahindra Limit -15, Ashok Leyland Limi -20, Olectra Greentech  -25 | BOTTOM Ashok Leyland Limi -20, Olectra Greentech  -25, Force Motors Limit -33
+2020: basket +1 nifty +15 rel -14 | n=4 median +1 | TOP Force Motors Limit +26, Ashok Leyland Limi +17, SML Mahindra Limit -14 | BOTTOM Ashok Leyland Limi +17, SML Mahindra Limit -14, Olectra Greentech  -22
+2021: basket +87 nifty +24 rel +63 | n=4 median +30 | TOP Olectra Greentech  +488, SML Mahindra Limit +32, Ashok Leyland Limi +28 | BOTTOM SML Mahindra Limit +32, Ashok Leyland Limi +28, Force Motors Limit -8
+2022: basket -0 nifty +4 rel -5 | n=4 median +9 | TOP Ashok Leyland Limi +17, Force Motors Limit +11, SML Mahindra Limit +6 | BOTTOM Force Motors Limit +11, SML Mahindra Limit +6, Olectra Greentech  -38
+2023: basket +115 nifty +20 rel +95 | n=4 median +119 | TOP Olectra Greentech  +172, Force Motors Limit +142, SML Mahindra Limit +95 | BOTTOM Force Motors Limit +142, SML Mahindra Limit +95, Ashok Leyland Limi +27
+2024: basket +19 nifty +9 rel +10 | n=4 median +14 | TOP Force Motors Limit +94, Ashok Leyland Limi +21, Olectra Greentech  +7 | BOTTOM Ashok Leyland Limi +21, Olectra Greentech  +7, SML Mahindra Limit +6
+2025: basket +100 nifty +10 rel +90 | n=4 median +123 | TOP Force Motors Limit +216, SML Mahindra Limit +183, Ashok Leyland Limi +63 | BOTTOM SML Mahindra Limit +183, Ashok Leyland Limi +63, Olectra Greentech  -17
+2026: basket +11 nifty -11 rel +22 | n=4 median -5 | TOP SML Mahindra Limit +58, Olectra Greentech  -0, Ashok Leyland Limi -9 | BOTTOM Olectra Greentech  -0, Ashok Leyland Limi -9, Force Motors Limit -15
+MONTH 4 avg +5.5 (11/15): worst years [('2019', -7.3), ('2021', -5.1), ('2025', -2.1)] best years [('2024', 12.4), ('2020', 13.7), ('2022', 17.4)]
+MONTH 8 avg +4.6 (9/16): worst years [('2021', -13.9), ('2024', -7.6), ('2016', -4.3)] best years [('2020', 17.8), ('2014', 18.2), ('2023', 19.5)]
+MONTH 11 avg -0.5 (7/15): worst years [('2019', -6.7), ('2018', -5.7), ('2017', -5.0)] best years [('2020', 3.5), ('2013', 6.2), ('2021', 7.3)]
+WIN FebMar: hit 10/15 median +2.4 | negative years [(2012, -7.7), (2013, -11.4), (2016, -4.3), (2020, -22.6), (2022, -18.2)] | biggest [(2017, 22.1), (2015, 18.4)]
+WIN AprJul: hit 9/15 median +13.2 | negative years [(2012, -7.1), (2013, -16.8), (2017, -9.0), (2018, -21.4), (2019, -23.7), (2020, -6.2)] | biggest [(2023, 56.6), (2025, 51.6)]
+WIN AugSep: hit 10/14 median +6.8 | negative years [(2016, -2.8), (2019, -1.9), (2021, -4.1), (2024, -15.6)] | biggest [(2014, 38.7), (2020, 17.9)]
+WIN OctDec: hit 7/14 median +0.7 | negative years [(2012, -4.5), (2017, -4.2), (2018, -2.9), (2019, -4.7), (2022, -12.8), (2023, -4.6), (2024, -5.0)] | biggest [(2021, 19.8), (2015, 13.9)]
+WIN SepNov: hit 6/14 median -0.5 | negative years [(2013, -0.5), (2018, -11.1), (2019, -8.9), (2020, -2.8), (2022, -6.8), (2023, -0.4), (2024, -6.4), (2025, -15.0)] | biggest [(2021, 36.9), (2014, 23.6)]
+WIN JanMar: hit 7/15 median -0.4 | negative years [(2012, -0.4), (2013, -20.2), (2014, -2.2), (2016, -6.7), (2018, -3.4), (2019, -0.4), (2020, -19.7), (2022, -15.8)] | biggest [(2017, 33.1), (2015, 30.7)]

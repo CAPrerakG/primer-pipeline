@@ -1,0 +1,611 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oilfield and Drilling Services Primer</title>
+<meta name="description" content="Industry 29 of 278: the contractors who drill, service and supply India&#x27;s oil and gas fields. Day rates, order books and the ONGC tender cycle; why services outperform producers in a capital-expenditure upcycle; 16 listed companies from ₹4,700 cr compounders to a company in insolvency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Oilfield &amp; Drilling Services · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the services are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 29 of 278 · Oil &amp; Gas family, part 2 of 8</div>
+  <h1>Oilfield &amp; Drilling Services</h1>
+  <p class="lede">The contractors who do the physical work of the oil industry: drilling the wells, servicing them when they tire, compressing the gas, running the boats and divers offshore, shooting the seismic and making the pipe that goes down the hole. They sell days and hours, not barrels — which means they are paid whether or not the well finds anything, and they prosper when producers spend rather than when prices rise.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 16 (2 flagged for reclassification)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Oil &amp; Gas EPC</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">$18–20 bn</div><div class="l">Value of ONGC's deepwater rig tender, its largest exploration programme ever</div></div>
+    <div class="stat"><div class="n">$97,750</div><div class="l">Day rate the offshore rig market was asking, against the $55,000 ONGC was willing to pay — so the tender was cancelled</div></div>
+    <div class="stat"><div class="n">₹3,047 cr</div><div class="l">Deep Industries' order book at 30 June 2026, against FY27 revenue guidance of ₹1,100 cr</div></div>
+    <div class="stat"><div class="n">+39%</div><div class="l">The median stock this year — a genuinely broad advance, unlike 028</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Selling days, not barrels</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Suppose your neighbour wants a well dug in his garden. He does not own a digging machine, and he would not know how to use one. So he hires a man with a machine, and pays him for every day the machine works — whether or not water is found. That man is an oilfield services company. He does not care much what water sells for; he cares that people keep wanting wells dug, and that there are not too many other men with machines competing for the job. When everyone wants a well at once, his daily price goes up. When nobody does, his machine sits idle and he still has to pay for it.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Services are the better way to own an upstream capital-expenditure cycle, because they take activity risk instead of price risk.</p>
+    <ul>
+      <li><b>The demand is visible in advance.</b> These companies carry order books: Deep Industries ₹3,047 cr, Asian Energy ₹1,754 cr with a ₹3,000–4,000 cr bid pipeline. Producers give no such visibility.</li>
+      <li><b>The cycle is turning on activity, not price.</b> ONGC has tendered for deepwater rigs in a programme worth $18–20 bn and is committing over ₹40,000 cr to Western Offshore (see 028).</li>
+      <li><b>Tightness has become the constraint.</b> ONGC cancelled a major offshore rig tender because the market wanted $97,750 a day against the $55,000 it was prepared to pay. Good for rig owners, awkward for the programme.</li>
+      <li><b>2026 is broad:</b> basket +36%, median +39%, against a Nifty −11%.</li>
+      <li><b>The tail is dangerous.</b> Aban Offshore, once the sector's giant, is in insolvency proceedings; Revathi is 80% below its peak. Asset-owning contractors die of debt, not of demand.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the services are">
+  <p class="eyebrow">2 · What the services are</p>
+  <h2>Six businesses that get grouped as one</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Service</th><th>What it does</th><th>How it is paid</th><th>Listed exposure</th></tr></thead><tbody>
+    <tr><td>Drilling (onshore and offshore)</td><td>Drills the well with a rig and crew</td><td>Day rate, multi-year contract</td><td>Jindal Drilling, Deep Industries, Aban Offshore</td></tr>
+    <tr><td>Well services and workover</td><td>Keeps existing wells producing: interventions, re-completions, stimulation</td><td>Day rate or per job</td><td>Deep Industries, Asian Energy, Aakash Exploration</td></tr>
+    <tr><td>Gas compression and processing</td><td>Compresses and dehydrates gas so it can enter a pipeline</td><td>Contracted hire, often long tenure</td><td>Deep Industries (80+ compressors)</td></tr>
+    <tr><td>Offshore support and subsea</td><td>Vessels, diving, inspection, maintenance and repair of offshore structures</td><td>Charter hire per day</td><td>SEAMEC, Dolphin Offshore, ABS Marine, Garware Offshore</td></tr>
+    <tr><td>Seismic and geophysical</td><td>Images the subsurface before anyone drills</td><td>Per survey / per line-kilometre</td><td>Alphageo, Asian Energy, South West Pinnacle</td></tr>
+    <tr><td>Tubulars and downhole tools</td><td>Makes and services the steel that goes down the hole</td><td>Product sale</td><td>Oil Country Tubular, United Drilling Tools</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>An upstream producer is a farmer who owns the field; the services sector is the entire machinery-hire trade around it — the tractor on daily hire, the man who repairs the irrigation, the surveyor who maps the soil, and the shop that sells the pipe. In a good season the farmer earns more, but the hire firms fill their order books first, because the farmer has to hire before he can harvest.</p></div>
+  <div class="box ana"><span class="tag">Everyday example</span><p>When ONGC decides to drill in the Arabian Sea, it does not own most of what it needs. It charters a jackup rig from a contractor at a day rate, hires a support vessel to carry people and supplies, engages divers to inspect the platform's legs, buys drill pipe from a tubular maker, and pays a service firm to cement and log the well. Each of those is a listed company in this section.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>How a contract becomes revenue</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>The producer's plan</h4><div class="an">Someone decides to drill</div>Capital budgets and field development plans set the work.<div class="who">ONGC, Oil India, private operators (028)</div><div class="m">ONGC is the dominant buyer in India</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>The tender</h4><div class="an">The auction for the job</div>Technical qualification, then price; day rates are compared globally.<div class="who">ONGC's tender machinery</div><div class="m">A cancelled tender can erase a year of expected work</div></div>
+    <div class="stage"><div class="no">03</div><h4>Award and order book</h4><div class="an">Visibility</div>A multi-year contract enters the order book at a stated day rate.<div class="who">The contractor</div><div class="m">Deep: opening ₹3,007 cr, closing ₹3,047 cr in one quarter</div></div>
+    <div class="stage"><div class="no">04</div><h4>Mobilisation</h4><div class="an">Getting there</div>Moving a rig or vessel to location, refurbishing, crewing up.<div class="who">Contractor, at its own cost</div><div class="m">ONGC's deepwater tender allowed 80 days; Jindal's Pioneer is refurbishing for a 2027 start</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Execution</h4><div class="an">Earning the day rate</div>Days worked, adjusted for downtime and weather.<div class="who">Contractor crews</div><div class="m">SEAMEC gained 110 extra vessel deployment days in one quarter</div></div>
+    <div class="stage"><div class="no">06</div><h4>Renewal or idleness</h4><div class="an">What next</div>Contract renewal, redeployment, or a cold-stacked asset.<div class="who">—</div><div class="m">Utilisation is the whole business</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>The plan:</b> the oil company decides how many wells it wants this year.</li>
+    <li><b>The tender:</b> it asks contractors to bid, and the cheapest qualified one wins.</li>
+    <li><b>The order book:</b> winning means a promise of work for several years — that is what investors pay for.</li>
+    <li><b>Mobilisation:</b> the contractor has to move the rig or boat there first, at its own expense.</li>
+    <li><b>Execution:</b> it gets paid for each day the equipment is working, so a breakdown or a storm is its problem.</li>
+    <li><b>Renewal:</b> when the job ends, the equipment either finds new work or sits idle, still costing money.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Three things separate the good contractors here from the dangerous ones. <b>Order book against revenue</b> — Deep Industries' ₹3,047 cr book on ₹1,100 cr of guided FY27 revenue is nearly three years of visibility, which is what justifies a services multiple. <b>Asset ownership versus asset-light service</b> — owning rigs and vessels earns more in an upcycle and kills you in a downcycle, which is the entire history of Aban Offshore. <b>Customer concentration</b> — most of this sector ultimately invoices one customer, so an ONGC tender cancellation is a company event, not just an industry one.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 16 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it does</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Deep Industries (~₹4,700 cr)</td><td>The sector's compounder: gas compression and dehydration, onshore drilling and workover rigs, and production enhancement contracts. A fleet of 20 onshore rigs — 6 drilling, 14 workover — and more than 80 gas compressors.</td><td>Revenue ₹278.9 cr (+40%), EBITDA ₹131.8 cr (+38.7%), net profit ₹85.4 cr against ₹58.8 cr (+45%). Order book ₹3,047 cr at 30 June against ₹3,007 cr at 1 April, with ₹319 cr added and ₹279 cr executed. Guides about ₹1,100 cr of FY27 revenue and roughly ₹800 cr of execution from the book, with more than 60% of it running over two to two-and-a-half years; targets ₹500 cr of profit by FY28 on offshore expansion. Stock +61%.</td></tr>
+    <tr><td>SEAMEC (~₹4,300 cr)</td><td>Offshore support and subsea: multi-support vessels, diving and underwater services, largely for ONGC work. Part of the HAL Offshore group.</td><td>Revenue ₹296.9 cr (+41%), EBITDA ₹123.9 cr (+28%), profit ₹81.3 cr (+7%) — growth from 110 additional vessel deployment days, with margins absorbing a heavier cost base. FY26 was a record ₹1,000 cr of revenue with profit up 188%. In July 2026 it agreed to buy the vessel SEAMEC ANANT from its parent for $70 mn and signed $19.38 mn of diving agreements for subsea work on the ONGC vessels Samudra Prabha and Samudra Sevak; it also took a $5.21 mn charter from Lamprell for an ONGC project. Stock +57%.</td></tr>
+    <tr><td>Dolphin Offshore (~₹2,500 cr)</td><td>Offshore diving, subsea and marine services, relisted and restructured.</td><td>+38.9% in 2026 after +348% in 2024; still −26% from its May 2024 peak. The 2024 move is a reminder of how violently these re-rate.</td></tr>
+    <tr><td>Asian Energy Services (~₹2,400 cr)</td><td>Seismic, well services and integrated oilfield services, increasingly diversified into mineral services.</td><td>Revenue ₹271 cr (+135%), EBITDA +81%, profit ₹12.8 cr (+129%). Order book ₹1,754 cr at 30 June — about 60% oil and gas, 40% mineral services — giving two to three years of visibility, with a bid pipeline of ₹3,000–4,000 cr and a major GSECL order won in the quarter. Shareholders have approved a merger with Oilmax, expected to complete around September or October 2026. Stock +74%, the best of the meaningful names.</td></tr>
+    <tr><td>Jindal Drilling (~₹1,700 cr)</td><td>Offshore drilling: jackup rigs contracted to ONGC.</td><td>Won a three-year ONGC award for the jackup Jindal Pioneer at an effective day rate of about ₹45.8 lakh (roughly $47,900); the rig is being refurbished and the contract is expected to start in Q3 2027. Reported day rates across its ONGC deployments span roughly $35,000 to $48,000, which is the clearest public evidence of rates rising. Stock +3.7% and −39% from its February 2025 peak: a reminder that an award starting in 2027 does not pay a 2026 dividend.</td></tr>
+    <tr><td>ABS Marine Services (~₹720 cr)</td><td>Offshore support vessels and marine services; listed May 2024.</td><td>+45.1% in 2026, −29% from its July 2024 peak.</td></tr>
+    <tr><td>South West Pinnacle Exploration (~₹590 cr)</td><td>Exploration drilling — coal, minerals and water as well as hydrocarbons — plus mine development.</td><td>+1.8% in 2026 after +242% in 2021 and +125% in 2020. More a mining-services company than an oilfield one.</td></tr>
+    <tr><td>United Drilling Tools (~₹450 cr)</td><td>Drilling tools, downhole equipment and accessories.</td><td>+10.3% but still −62% from its January 2022 peak.</td></tr>
+    <tr><td>Oil Country Tubular (~₹330 cr)</td><td>OCTG — the casing, tubing and drill pipe that lines and drills a well — plus finishing services.</td><td>+7.2% in 2026, −33% from its June 2025 peak. Its history (−68% in 2018, −61% in 2019, +123% in 2024) shows how completely it depends on the drilling cycle.</td></tr>
+    <tr><td>Alphageo (India) (~₹190 cr)</td><td>Seismic data acquisition and processing — the earliest-cycle activity in the whole chain.</td><td>+28.7% in 2026, −43% from its July 2024 peak.</td></tr>
+    <tr><td>Garware Offshore Services (~₹120 cr)</td><td>Offshore support vessel owner with a long history of financial stress.</td><td>−23.1% in 2026 and −68% from its December 2024 peak — one of only three fallers in a strong year.</td></tr>
+    <tr><td>Aakash Exploration Services (~₹90 cr)</td><td>Small onshore well services and workover contractor.</td><td>+1.6%, but −74% from its February 2022 peak.</td></tr>
+    <tr><td>Aban Offshore (~₹83 cr)</td><td>Once India's largest offshore drilling contractor and a market favourite before 2009; now a cautionary tale.</td><td>Its one-time settlement was rejected by the NCLAT and the appeal is to be heard on merits, with the insolvency process continuing under a new resolution professional; ₹281 cr of non-convertible redeemable preference shares issued in 2014 remained unredeemed as at 2 April 2026. Stock −26% in 2026 and −84% from its February 2024 peak. Not an investment case; a case study in leverage.</td></tr>
+    <tr><td>Duke Offshore (~₹71 cr)</td><td>Micro-cap marine and offshore services.</td><td>+341% in 2026 and at its all-time high. Nothing in the public record I could verify explains a move of that size on a ₹71 cr company. Treat it as unexplained and effectively untradeable, not as a signal about the sector.</td></tr>
+    <tr><td>Revathi Equipment India (~₹200 cr)</td><td><b>Flagged.</b> Makes blasthole drilling rigs for mining and construction, not oilfield equipment.</td><td>−1.3% in 2026 and −80% from its September 2024 peak. Recommend moving to mining and construction equipment.</td></tr>
+    <tr><td>Starlog Enterprises (~₹56 cr)</td><td><b>Flagged.</b> Port handling, cranes and logistics — classified under port services, with no evident oilfield services business.</td><td>+0.4% in 2026, −58% from its April 2025 peak. Recommend moving to logistics.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Classification notes</span><p>Two names should come out of this section. <b>Revathi Equipment</b> builds blasthole drills for mining — the word "drilling" is doing all the work in its classification. <b>Starlog Enterprises</b> is a ports and logistics business. Two more sit on the boundary honestly: <b>South West Pinnacle</b> drills for minerals, coal and water as much as for hydrocarbons, and <b>Asian Energy</b> now derives about 40% of its order book from mineral services — both are kept here because oil and gas remains the larger or founding business, but neither is a pure oilfield play. Finally, <b>Aban Offshore</b> is in an insolvency process and <b>Duke Offshore</b>'s 341% move is unexplained; both distort any screen that includes them.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Day rate times utilisation, minus a heavy fixed cost</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th>Economics</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Asset owner-operator (rigs, vessels, compressors)</td><td>High margins when utilised — Deep Industries ran a 47% EBITDA margin in Q1 FY27</td><td>The asset must be paid for whether it works or not; this is what bankrupts contractors</td></tr>
+    <tr><td>Service contractor (seismic, well services)</td><td>Lower capital intensity, project-based</td><td>Execution and receivables; customer concentration</td></tr>
+    <tr><td>Product supplier (tubulars, tools)</td><td>Manufacturing margins, order-driven</td><td>Steel prices and the drilling cycle together</td></tr>
+  </tbody></table></div>
+  <h3>The four numbers that matter</h3>
+  <ol>
+    <li><b>Day rate:</b> what a rig or vessel earns per working day. ONGC's cancelled tender is the cleanest data point available — willing to pay $55,000, market asking $97,750, against a global average of $112,900.</li>
+    <li><b>Utilisation:</b> days worked as a share of days available. SEAMEC's entire 41% revenue increase came from 110 additional deployment days.</li>
+    <li><b>Order book and its tenure:</b> Deep's ₹3,047 cr book with more than 60% executing over two to two-and-a-half years is what a services multiple is actually paying for.</li>
+    <li><b>Mobilisation and refurbishment cost:</b> spent before revenue begins — Jindal's Pioneer is being refurbished now for a contract starting in Q3 2027.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>A rig is a hotel that can be moved. Its costs barely change whether it is full or empty, so profit is almost entirely a function of occupancy and room rate. And because moving the hotel takes months and costs a fortune, a contractor will accept a poor rate rather than have it sit empty — which is why day rates overshoot in both directions.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Upstream capital budgets</td><td>The entire demand side; ONGC dominates it</td><td>Over ₹40,000 cr going into Western Offshore, plus the deepwater programme (see 028)</td></tr>
+    <tr><td>Rigs and vessels</td><td>The assets that earn the day rate</td><td>Globally tight; day rates near $100,000 for deepwater units</td></tr>
+    <tr><td>Skilled offshore crews</td><td>Drillers, divers, marine engineers — scarce and mobile</td><td>A genuine constraint on growing an offshore fleet quickly</td></tr>
+    <tr><td>Steel</td><td>Tubulars, tools and structures</td><td>Cost-linked for Oil Country Tubular and United Drilling Tools</td></tr>
+    <tr><td>Capital and balance-sheet strength</td><td>Assets are bought with debt against contracts</td><td>The variable that decides which contractors survive downturns</td></tr>
+    <tr><td>Tender qualification</td><td>Track record and equipment specification gate who may bid</td><td>A quiet barrier to entry that protects incumbents</td></tr>
+    <tr><td>Weather windows</td><td>Offshore work stops in the monsoon</td><td>Structural seasonality in vessel and rig deployment</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Tenders, monsoon and mobilisation</h2>
+  <ul>
+    <li><b>April–June:</b> the new financial year opens budgets and tender cycles; this is when order books are refreshed.</li>
+    <li><b>June–September:</b> the monsoon curtails offshore operations in the Arabian Sea and Bay of Bengal, so deployment days fall and maintenance is scheduled.</li>
+    <li><b>October–December:</b> the post-monsoon campaign season — the busiest offshore window, and the reason this group's fourth quarter beats the market in 11 of 14 years while the producers' does not.</li>
+    <li><b>January–March:</b> year-end execution and settlements, historically the weakest window for the stocks.</li>
+    <li><b>Tender events:</b> awards, cancellations and re-tenders move these shares more than any macro number, and they follow no calendar at all.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 9 names (Deep Industries Limited, SEAMEC Limited, Dolphin Offshore Enterprises India Ltd., Asian Energy Services Limited, Jindal Drilling &amp; Industries Ltd., ABS Marine Services Ltd., South West Pinnacle Exploration Ltd., United Drilling Tools Limited, Oil Country Tubular Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +8.1 pts (beat in 12 of 15 years); Jun +2.9 pts (beat in 8 of 15 years); Oct +2.8 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Feb -4.7 pts (beat in 3 of 15 years); Nov -1.3 pts (beat in 5 of 15 years); Jul -0.8 pts (beat in 7 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -8.7 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +15.5 pts); Aug–Sep beat the Nifty in 5 of 14 years (median -1.5 pts); Oct–Dec beat the Nifty in 11 of 14 years (median +4.5 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +3.5 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -4.4 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +5.1 points.</p><p><b>Reading it:</b> almost the mirror image of 028. April is the best month (12 of 15 years, +8.1 points) and April–July works 10 of 15 with a median of +15.5 — but unlike the producers, this group is also strong in the fourth quarter: October–December beat the Nifty in 11 of 14 years (median +4.5) and September–November in 9 of 14. That is the contract calendar, not the oil price: awards and mobilisations cluster after the monsoon. The weak window is the same as everywhere else in this series — February–March, 4 of 15, median −8.7, and January–March 6 of 15, median −4.4.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed five times in fifteen years:</b> 2019 (−22.8), 2013 (−21.3), 2018 (−16.9), 2022 (−14.1) and 2012 (−5.2). Every one of them was a year in which upstream spending plans were being cut or deferred.</li>
+    <li><b>The best runs were 2021 (+49.4) and 2016 (+31.1)</b>, both the first year of an activity recovery.</li>
+    <li><b>The fourth quarter is the distinguishing feature:</b> October–December beat the Nifty in 11 of 14 years, with only 2014 (−30.1), 2012 (−14.7) and 2022 (−7.9) failing — and 2014 was the crude collapse.</li>
+    <li><b>February–March is brutal and consistent:</b> 4 of 15 years, median −8.7, with 2016 (−19.0), 2025 (−15.7) and 2013 (−13.3) the worst.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is the most usable seasonality in the Oil &amp; Gas family so far, because it maps onto something physical: the monsoon stops offshore work and the post-monsoon campaign restarts it, so activity — and news about activity — clusters in the fourth quarter. The combination that has worked is to own the group from April and through the October–December campaign season, and to be cautious in February–March. As always, an order-book collapse or a tender cancellation overrides the calendar.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Upstream capital expenditure:</b> the demand side entirely, and it follows crude with a lag of roughly a year.</li>
+    <li><b>Day rates:</b> set globally for mobile assets; India competes for rigs with every other basin.</li>
+    <li><b>Utilisation and deployment days:</b> the operating leverage.</li>
+    <li><b>Order book additions and tenure:</b> visibility is what the market pays for in this sector.</li>
+    <li><b>Tender outcomes:</b> awards, cancellations and re-tenders — ONGC's cancelled offshore rig tender is the live example.</li>
+    <li><b>Asset availability:</b> a tight global rig market lifts rates but also makes expansion expensive, as SEAMEC's $70 mn vessel purchase shows.</li>
+    <li><b>Balance sheet:</b> leverage determines who survives the down-leg; see Aban Offshore.</li>
+    <li><b>Diversification into mining and minerals:</b> Asian Energy at roughly 40% mineral services and South West Pinnacle's coal and water work smooth the oil cycle.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2013 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of section members with sufficient history — 3 names in 2013–2019 rising to 9 by 2025–26. Monthly returns capped at ±50%, price only; 2026 to 18 September. Several members listed recently (Dolphin 2023, ABS Marine 2024), so the early record is a small-sample read on offshore drilling and tubulars rather than on today's mix.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a services cycle</h3>
+  <ol>
+    <li><b>Crude rises and producers approve budgets.</b> Nothing happens to contractors yet.</li>
+    <li><b>Tenders are floated and awarded</b>, typically six to eighteen months later. Order books fill and the stocks re-rate — this is the phase that produced +154% in 2021 and +116% in 2023.</li>
+    <li><b>Assets tighten and day rates rise</b>, which is where the profit is, and where the buyer starts to resist. ONGC's cancellation at $97,750 a day is precisely this moment.</li>
+    <li><b>Crude falls, budgets are cut and tenders are deferred.</b> Order books run off, assets go idle and the leveraged operators fail: 2015, 2018–19 and, mildly, 2025.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Services lag producers into a cycle and beat them through it.</b> In 2021 and 2023 this basket rose 154% and 116% against the producers' 63% and 67%.</li>
+    <li><b>The median tells you what kind of year it is.</b> 2022 had a +12% basket and a −18% median — contract wins, not the sector. 2026 has +36% and +39%: genuinely broad.</li>
+    <li><b>Leverage decides survival, not skill.</b> Aban Offshore and Garware Offshore were both large, competent operators; both were undone by debt against idle assets.</li>
+    <li><b>Tubulars amplify everything:</b> Oil Country Tubular fell 68% and 61% in consecutive years and rose 123% in another.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>India rents from a global fleet</h2>
+  <p>The world's oilfield services industry is led by SLB, Halliburton and Baker Hughes in technical services, and by a separate set of owners — Transocean, Valaris, Noble, Seadrill and Borr among them — in offshore rigs. Those rigs are mobile, so India does not have a domestic rig market so much as a domestic share of a global one. That is why ONGC's tender economics are set in Houston and Oslo as much as in Delhi: with global day rates around $112,900 on average and the Indian tender asking for $55,000, the rigs simply went elsewhere.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player / segment</th><th>Position</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>SLB, Halliburton, Baker Hughes</td><td>Technology-led services: logging, completions, digital</td><td>Operate in India directly; the technical benchmark Indian contractors are measured against</td></tr>
+    <tr><td>Global rig owners</td><td>Own the mobile drilling fleet</td><td>Set the day rate India must match to attract units</td></tr>
+    <tr><td>Middle East national programmes</td><td>Aramco and ADNOC's large, steady campaigns</td><td>The competing demand that keeps rigs away from India</td></tr>
+    <tr><td>Chinese and South-East Asian yards</td><td>Build and stack rigs and vessels</td><td>The supply side of new capacity</td></tr>
+    <tr><td>Indian contractors</td><td>Onshore rigs, compression, vessels, seismic, tubulars</td><td>Competitive in cost and increasingly in scale; SEAMEC and Deep are now ₹4,000 cr-plus companies</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>The 2008 boom and bust:</b> Aban Offshore's leveraged fleet expansion made it one of India's most valuable companies and then destroyed it — the defining event in this sector's local history.</li>
+    <li><b>From day-rate hire to integrated contracts:</b> production enhancement contracts, where the contractor is paid for the incremental output it delivers, shift risk and reward toward the service provider. Deep Industries' long-tenure order book is anchored on one.</li>
+    <li><b>From oil-only to multi-mineral services:</b> Asian Energy and South West Pinnacle have deliberately diversified into mineral and coal exploration to dampen the hydrocarbon cycle.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Deepwater capability:</b> drillships and semi-submersibles able to work in ultra-deep water — the capability India is tendering for and does not domestically own.</li>
+    <li><b>Production enhancement contracts:</b> paying a contractor for incremental barrels rather than for days, which aligns incentives and raises the contractor's share of the upside.</li>
+    <li><b>Directional and horizontal drilling:</b> more reservoir contact per well, and higher-value work per rig day.</li>
+    <li><b>Digital drilling and predictive maintenance:</b> reducing non-productive time, which is pure margin in a day-rate business.</li>
+    <li><b>Subsea inspection by remote vehicles:</b> replacing some diving work, and a capability SEAMEC and Dolphin are both building.</li>
+    <li><b>Gas infrastructure services:</b> compression, dehydration and processing, growing with the gas share of the energy mix (see 033 and 034).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>ONGC's deepwater rig programme</td><td>Tender worth $18–20 bn for up to five deepwater units, four years firm plus a one-year option, with an 80-day mobilisation requirement</td><td>The largest single demand event this sector has ever seen — if it is concluded</td></tr>
+    <tr><td>Tender cancellations</td><td>A major offshore rig tender cancelled over day rates</td><td>Shows the ceiling on what the dominant buyer will pay, and defers work</td></tr>
+    <tr><td>Upstream licensing rounds</td><td>OALP XI and the deep-water mission (see 028)</td><td>New acreage eventually becomes seismic and drilling contracts</td></tr>
+    <tr><td>Domestic preference in procurement</td><td>Make-in-India provisions in public tenders</td><td>Favours Indian-flagged vessels and domestic contractors</td></tr>
+    <tr><td>Cabotage and shipping rules</td><td>Governs which vessels may operate on the Indian coast</td><td>Protects Indian offshore vessel owners</td></tr>
+    <tr><td>Insolvency framework</td><td>Aban Offshore's process continues under a new resolution professional after the NCLAT rejected its settlement</td><td>Determines how quickly distressed capacity is recycled</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: full order books, one very expensive bottleneck</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Order books</td><td>Full and lengthening</td><td>Deep ₹3,047 cr (up from ₹3,007 cr in a quarter); Asian Energy ₹1,754 cr with a ₹3,000–4,000 cr pipeline</td></tr>
+    <tr><td>Revenue growth</td><td>Strong across the board</td><td>Deep +40%, SEAMEC +41%, Asian Energy +135%</td></tr>
+    <tr><td>Margins</td><td>High but flattening</td><td>Deep's EBITDA margin near 47%; SEAMEC's EBITDA grew 28% on 41% revenue as costs rose</td></tr>
+    <tr><td>Asset availability</td><td>The bottleneck</td><td>Deepwater day rates near $97,750–112,900; ONGC cancelled a tender rather than pay</td></tr>
+    <tr><td>Capacity addition</td><td>Expensive</td><td>SEAMEC paying $70 mn for one vessel; Jindal refurbishing a rig for a 2027 start</td></tr>
+    <tr><td>Stocks</td><td>Broadly higher</td><td>Basket +36%, median +39%, against a Nifty −11%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Services are where this cycle is actually being paid out. The producers in 028 have record profits and static share prices; here, the order books are visible, the revenue growth is real and the market is paying for both. The specific thing to watch is the tension the ONGC cancellation exposed: the buyer's price and the asset market's price are roughly $40,000 a day apart, and one of three things must give — ONGC pays more, the programme shrinks, or global rates soften. The first is good for rig owners, the second is bad for everyone here, and the third depends on crude. Meanwhile the asset-light and long-contract names — Deep's compression and production-enhancement book, Asian Energy's mineral diversification — are the ones that do not need the bottleneck resolved to keep growing. And the tail of this section is genuinely uninvestable: one company in insolvency, one up 341% for no verifiable reason, two that belong in other industries.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>ONGC tender awards and cancellations</td><td>ONGC tenders portal, ongoing</td><td>The single largest demand signal in Indian oilfield services</td></tr>
+    <tr><td>Global offshore rig day rates and utilisation</td><td>Industry trackers, monthly</td><td>Sets what India must pay and what rig owners earn</td></tr>
+    <tr><td>Order book additions by company</td><td>Quarterly</td><td>Visibility, and the multiple the market will pay</td></tr>
+    <tr><td>Deployment or operating days</td><td>Quarterly</td><td>The operating leverage, as SEAMEC's 110 extra days showed</td></tr>
+    <tr><td>Upstream capital expenditure announcements</td><td>028's companies, quarterly</td><td>Next year's tenders</td></tr>
+    <tr><td>Debt and interest cover of asset owners</td><td>Quarterly</td><td>Who survives the next down-leg</td></tr>
+    <tr><td>Receivable days on government contracts</td><td>Quarterly</td><td>The quiet cash-flow risk of a one-customer industry</td></tr>
+    <tr><td>Mobilisation and refurbishment timelines</td><td>Company announcements</td><td>When an award becomes revenue — Jindal's is Q3 2027</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else this cycle shows up</h2>
+  <ul>
+    <li><b>Oil &amp; gas exploration</b> (028): the customer, whose capital budget is this industry's revenue.</li>
+    <li><b>Oil &amp; gas EPC</b> (030): the builders of the facilities these contractors drill into.</li>
+    <li><b>Gas transmission &amp; LNG</b> (033): where compression and processing work goes next.</li>
+    <li><b>Steel pipes and tubes:</b> the tubular supply chain behind Oil Country Tubular.</li>
+    <li><b>Shipping and offshore vessels:</b> SEAMEC, ABS Marine and Garware are marine businesses as much as energy ones.</li>
+    <li><b>Mining services:</b> increasingly relevant, given Asian Energy's 40% mineral order book and South West Pinnacle's coal work.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the order book, what was added this quarter, and over how many years does it execute?</li>
+    <li>What proportion of the book is firm versus optional extensions?</li>
+    <li>What are current day rates on renewals compared with the expiring contract?</li>
+    <li>What was utilisation or deployment days, and what caused any downtime?</li>
+    <li>What is the mobilisation and refurbishment spend still to come before revenue starts?</li>
+    <li>What share of revenue is from a single customer, and what are receivable days on it?</li>
+    <li>What is net debt against EBITDA, and how would that look at 60% utilisation?</li>
+    <li>(Deep Industries) What are the economics of the production enhancement contract, and how is incremental output measured and paid?</li>
+    <li>(Asian Energy) What changes after the Oilmax merger completes, and what is the pro-forma order book?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>An order book that grows while revenue does not — awards that never mobilise.</li>
+    <li>Debt raised to buy assets at the top of the day-rate cycle.</li>
+    <li>Receivables stretching on public-sector contracts.</li>
+    <li>Guidance that depends on a single tender being concluded.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Services are just a leveraged bet on crude."</td><td>They are a bet on capital expenditure, which follows crude by roughly a year and is set by budgets, not spot prices. In 2026 the producers' stocks are flat and the contractors' are up 39% at the median.</td></tr>
+    <tr><td>"The order book guarantees the revenue."</td><td>Only once the asset mobilises. Jindal's three-year ONGC award starts in Q3 2027 after refurbishment, which is why its stock is up 4% in a year when its peers are up 60%.</td></tr>
+    <tr><td>"Rising day rates are unambiguously good."</td><td>They are good for rig owners and bad for the programme: ONGC cancelled a tender rather than pay $97,750 against a $55,000 budget. Rates that are too high defer the work everyone is counting on.</td></tr>
+    <tr><td>"Indian contractors are protected from global competition."</td><td>Cabotage and procurement preferences help, but rigs are mobile assets priced in a global market. India competes with Aramco and ADNOC campaigns for the same units.</td></tr>
+    <tr><td>"The sector is up 36%, so anything in it works."</td><td>Three names are down, one is in insolvency, and two are misclassified. The median of +39% describes the real contractors, not the section as listed.</td></tr>
+    <tr><td>"Aban Offshore is a turnaround candidate."</td><td>Its settlement was rejected by the NCLAT, the insolvency process continues under a new resolution professional, and ₹281 cr of preference shares from 2014 remain unredeemed. That is a legal process, not a business case.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. jackup, day rate" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Equipment and operations</h3><dl>
+    <dt>Drilling rig</dt><dd>The machine and derrick that drills a well; onshore rigs are trucked in, offshore rigs float or stand on the seabed.</dd>
+    <dt>Jackup rig</dt><dd>An offshore rig with legs that jack down to the seabed, used in shallow water. Jindal Drilling's Pioneer is one.</dd>
+    <dt>Semi-submersible</dt><dd>A floating rig held in place for deeper water.</dd>
+    <dt>Drillship</dt><dd>A ship-shaped drilling vessel for the deepest water; the type ONGC is tendering for.</dd>
+    <dt>Workover rig</dt><dd>A smaller rig used to repair or re-complete an existing well rather than drill a new one.</dd>
+    <dt>Well intervention</dt><dd>Any operation on a live well to restore or raise production.</dd>
+    <dt>Offshore support vessel (OSV)</dt><dd>A ship carrying crew, supplies and equipment to offshore installations.</dd>
+    <dt>Multi-support vessel</dt><dd>A vessel equipped for diving, construction and maintenance work offshore; SEAMEC's core asset type.</dd>
+    <dt>Subsea and diving services</dt><dd>Underwater inspection, repair and maintenance of platforms and pipelines.</dd>
+    <dt>Remotely operated vehicle (ROV)</dt><dd>An unmanned submersible replacing divers for many inspection tasks.</dd>
+    <dt>Gas compression</dt><dd>Raising gas pressure so it can flow into a pipeline; Deep Industries runs more than 80 compressors.</dd>
+    <dt>Dehydration</dt><dd>Removing water from produced gas before it enters a pipeline.</dd>
+    <dt>OCTG</dt><dd>Oil country tubular goods: the casing, tubing and drill pipe used in wells.</dd>
+    <dt>Casing and tubing</dt><dd>The steel lining of a well, and the pipe through which fluids are produced.</dd>
+    <dt>Drill pipe</dt><dd>The pipe string that turns the bit and carries drilling fluid.</dd>
+    <dt>Mud engineering</dt><dd>Designing and managing drilling fluid, which cools the bit and controls well pressure.</dd>
+    <dt>Cementing and logging</dt><dd>Sealing the casing in place, and measuring the rock and fluids around the well.</dd>
+    <dt>Directional drilling</dt><dd>Steering a well away from vertical to reach more reservoir.</dd>
+    <dt>Seismic acquisition</dt><dd>Recording sound reflections to image the subsurface (see 028); Alphageo's business.</dd>
+    <dt>Non-productive time</dt><dd>Paid or unpaid hours when the rig is not drilling; the main margin leak in a day-rate business.</dd>
+  </dl>
+  <h3>Commercial terms</h3><dl>
+    <dt>Day rate</dt><dd>The daily charge for a rig or vessel with crew. ONGC's cancelled tender contrasted $55,000 offered with $97,750 asked.</dd>
+    <dt>Effective day rate (EDR)</dt><dd>The rate after adjustments and allowances; Jindal's Pioneer award is about ₹45.8 lakh, roughly $47,900.</dd>
+    <dt>Utilisation</dt><dd>Working days as a share of available days.</dd>
+    <dt>Deployment days</dt><dd>Days a vessel was actually on hire; SEAMEC gained 110 of them year on year.</dd>
+    <dt>Mobilisation</dt><dd>Moving and preparing an asset for a contract, usually at the contractor's cost and before any revenue.</dd>
+    <dt>Cold stacking / warm stacking</dt><dd>Laying up an idle rig with minimal crew, or keeping it ready to work at higher cost.</dd>
+    <dt>Order book</dt><dd>Contracted future revenue; the sector's key disclosure. Deep's stood at ₹3,047 cr at 30 June 2026.</dd>
+    <dt>Book-to-bill</dt><dd>Order additions divided by revenue executed in the same period; above one means the book is growing.</dd>
+    <dt>Production enhancement contract (PEC)</dt><dd>A contract paying a service provider for incremental output from a field rather than for days worked.</dd>
+    <dt>Charter hire</dt><dd>Payment for the use of a vessel, with or without crew.</dd>
+    <dt>Tender qualification</dt><dd>The technical and financial criteria a bidder must meet before price is even considered.</dd>
+    <dt>Customer concentration</dt><dd>Dependence on one buyer — in Indian oilfield services, usually ONGC.</dd>
+    <dt>Cabotage</dt><dd>Rules reserving coastal movements for domestically flagged vessels.</dd>
+    <dt>CIRP</dt><dd>The corporate insolvency resolution process under India's bankruptcy code; Aban Offshore is in one.</dd>
+    <dt>NCLAT</dt><dd>The appellate tribunal for insolvency matters, which rejected Aban's one-time settlement.</dd>
+    <dt>One-time settlement</dt><dd>A negotiated lump-sum repayment to creditors in place of full dues.</dd>
+    <dt>Non-convertible redeemable preference shares</dt><dd>Preference shares repayable in cash; ₹281 cr of Aban's 2014 issue remained unredeemed at April 2026.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Upstream, MMTOE, DGH, OALP</dt><dd>See 028.</dd>
+    <dt>Operating leverage</dt><dd>See 019.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What are these companies actually selling?</summary><p>Days and jobs — rig days, vessel days, seismic surveys, tubulars. They take activity risk, not oil-price risk.</p></details>
+  <details class="q"><summary>2. Why did ONGC cancel an offshore rig tender?</summary><p>Day rates: it was willing to pay $55,000 a day while the market was asking $97,750, against a global average of $112,900.</p></details>
+  <details class="q"><summary>3. What is the most important disclosure in this sector?</summary><p>The order book and its tenure. Deep Industries' ₹3,047 cr against ₹1,100 cr of guided FY27 revenue is close to three years of visibility.</p></details>
+  <details class="q"><summary>4. Why did SEAMEC's revenue rise 41%?</summary><p>110 additional vessel deployment days — utilisation, not price.</p></details>
+  <details class="q"><summary>5. Why is Jindal Drilling up only 4% in a year when peers are up 60%?</summary><p>Its three-year ONGC award for the Jindal Pioneer starts in Q3 2027 after refurbishment. An award is not revenue until the asset mobilises.</p></details>
+  <details class="q"><summary>6. What distinguishes this sector's seasonality from the producers'?</summary><p>The fourth quarter. October–December has beaten the Nifty in 11 of 14 years here, because the post-monsoon campaign season drives offshore activity, while for producers it is the weakest window.</p></details>
+  <details class="q"><summary>7. What happened to Aban Offshore?</summary><p>A leveraged fleet expansion before 2009, then collapse. Its one-time settlement was rejected by the NCLAT, insolvency continues under a new resolution professional, and ₹281 cr of 2014 preference shares remain unredeemed.</p></details>
+  <details class="q"><summary>8. Which two companies are misclassified in this section?</summary><p>Revathi Equipment, which makes mining blasthole drills, and Starlog Enterprises, a ports and logistics business.</p></details>
+  <details class="q"><summary>9. What does a production enhancement contract change?</summary><p>The contractor is paid for incremental output rather than for days worked, taking more risk and more of the upside.</p></details>
+  <details class="q"><summary>10. Why was 2022 a misleading year for this basket?</summary><p>The basket rose 12% while the median stock fell 18%: two contract winners carried it. Always check the median here.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of section members with sufficient history versus NSE:NIFTY, 3 names in the early years rising to 9 by 2025–26.</li>
+    <li>Deep Industries: <a href="https://www.sahi.com/news/deep-industries-reports-q1-consolidated-net-profit-of-85-4-cr-vs-58-8-cr-yoy-4812-PE1_COR">Q1 FY27 consolidated profit</a>; <a href="https://www.whalesbook.com/corporate-news/English/energy/Deep-Industries-Q1-FY27-Revenue-Surges-40percent-to-indian-rupee27892-Crore-Order-Book-Strong/6a707e1d10bce1fd203a2947">revenue, EBITDA and order book</a>; <a href="https://www.multibagg.ai/market-pulse/articles/deep-q1fy27-96718">the order-book bridge, rig fleet and compressor count</a>; <a href="https://www.whalesbook.com/corporate-news/English/energy/Deep-Industries-Eyes-Rs-1100-Cr-Revenue-in-FY27-with-Rs-3000-Cr-Order-Book/6a0ee549057ca1d3da17dc68">FY27 revenue guidance</a>; <a href="https://scanx.trade/stock-market-news/companies/deep-industries-q1-results-net-profit-jumps-45-yoy-to-854m-rupees/46772075">the FY28 profit target</a>.</li>
+    <li>SEAMEC: <a href="https://www.whalesbook.com/corporate-news/English/energy/Seamec-Q1-FY27-Revenue-Jumps-41percent-Driven-by-Vessel-Deployment/6a7ddfd66817e697e7c9ee32">Q1 FY27 revenue and deployment days</a>; <a href="https://www.whalesbook.com/corporate-news/English/energy/Seamec-Q1-FY27-Revenue-Jumps-41percent-to-Rs-297-Cr-Acquires-New-Vessel/6a82e4306817e697e7cf3456">the SEAMEC ANANT purchase and diving agreements</a>; <a href="https://www.multibagg.ai/market-pulse/articles/seamec-q1fy27-98188">margins and the cost base</a>; <a href="https://tradebrains.in/seamec-secures-5-21-million-vessel-charter-from-lamprell-energy-for-ongc-project/">the Lamprell charter</a>; <a href="https://www.whalesbook.com/corporate-news/English/energy/Seamec-Ltd-Hits-Record-indian-rupee1000-Cr-Revenue-in-FY26-Profit-Surges-188percent/6a0b2ac8cfe07c0307e69e09">FY26 record</a>.</li>
+    <li>Asian Energy Services: <a href="https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/asian-energy-services-q1-fy27-pat-rises-129-per-cent/96068">Q1 FY27 results</a>; <a href="https://www.multibagg.ai/market-pulse/articles/aesl-q1fy27-98125">order book, bid pipeline and the Oilmax merger timeline</a>.</li>
+    <li>Contracts and tenders: <a href="https://www.psuconnect.in/psu-news/ongc-20-billion-deepwater-rig-tender-2026-india-largest-offshore-exploration-programme">ONGC's deepwater rig tender</a>; <a href="https://ocean-energyresources.com/2026/04/26/ongc-cancels-major-offshore-rig-tender/">the cancelled tender</a>; <a href="https://discoveryalert.com/ongc-market-position-strategic-impact-2026/">day-rate comparison</a>; <a href="https://drillingcontractor.org/jindal-drilling-secures-rig-deployment-renewal-from-ongc-79238">Jindal Pioneer's three-year award and effective day rate</a>; <a href="https://indianmasterminds.com/news/jindal-drilling-secures-3-year-rig-deployment-contract-from-ongc-at-35138-daily-rate-116552/">an ONGC deployment at a lower day rate</a>.</li>
+    <li>Distress: <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/NCLAT-Rejects-Aban-Offshore-Settlement-Case-Goes-to-Full-Appeal/69d3a55131d4f2ab480bc2da">the NCLAT's rejection of Aban Offshore's settlement</a>; <a href="https://www.indiainfoline.com/company/aban-offshore-ltd/summary">its unredeemed preference shares</a>. Duke Offshore's 341% rise is stated as unexplained because no verifiable corporate disclosure accounting for it was found.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -8.9}, {"y": 2013, "v": -13.3}, {"y": 2014, "v": 20.3}, {"y": 2015, "v": -6.2}, {"y": 2016, "v": -19.0}, {"y": 2017, "v": -12.4}, {"y": 2018, "v": -8.7}, {"y": 2019, "v": 7.3}, {"y": 2020, "v": -11.4}, {"y": 2021, "v": -1.1}, {"y": 2022, "v": 11.0}, {"y": 2023, "v": -5.7}, {"y": 2024, "v": -11.0}, {"y": 2025, "v": -15.7}, {"y": 2026, "v": 6.9}], "AprJul": [{"y": 2012, "v": -5.2}, {"y": 2013, "v": -21.3}, {"y": 2014, "v": 5.8}, {"y": 2015, "v": 12.2}, {"y": 2016, "v": 31.1}, {"y": 2017, "v": 20.1}, {"y": 2018, "v": -16.9}, {"y": 2019, "v": -22.8}, {"y": 2020, "v": 25.2}, {"y": 2021, "v": 49.4}, {"y": 2022, "v": -14.1}, {"y": 2023, "v": 28.0}, {"y": 2024, "v": 22.9}, {"y": 2025, "v": 15.5}, {"y": 2026, "v": 23.8}], "AugSep": [{"y": 2012, "v": -0.7}, {"y": 2013, "v": -1.6}, {"y": 2014, "v": 2.9}, {"y": 2015, "v": -3.6}, {"y": 2016, "v": -2.6}, {"y": 2017, "v": -7.1}, {"y": 2018, "v": -14.4}, {"y": 2019, "v": -12.1}, {"y": 2020, "v": 11.4}, {"y": 2021, "v": 22.3}, {"y": 2022, "v": 10.4}, {"y": 2023, "v": 17.8}, {"y": 2024, "v": -1.4}, {"y": 2025, "v": -4.7}], "OctDec": [{"y": 2012, "v": -14.7}, {"y": 2013, "v": 18.2}, {"y": 2014, "v": -30.1}, {"y": 2015, "v": 2.0}, {"y": 2016, "v": 7.0}, {"y": 2017, "v": 13.2}, {"y": 2018, "v": 0.9}, {"y": 2019, "v": 12.0}, {"y": 2020, "v": 1.2}, {"y": 2021, "v": 15.4}, {"y": 2022, "v": -7.9}, {"y": 2023, "v": 39.1}, {"y": 2024, "v": 16.5}, {"y": 2025, "v": 1.4}], "SepNov": [{"y": 2012, "v": -11.5}, {"y": 2013, "v": 5.4}, {"y": 2014, "v": -20.8}, {"y": 2015, "v": 8.0}, {"y": 2016, "v": 7.6}, {"y": 2017, "v": 4.4}, {"y": 2018, "v": -14.0}, {"y": 2019, "v": 11.6}, {"y": 2020, "v": 2.1}, {"y": 2021, "v": 23.1}, {"y": 2022, "v": -2.4}, {"y": 2023, "v": 41.9}, {"y": 2024, "v": 2.6}, {"y": 2025, "v": -10.6}], "JanMar": [{"y": 2012, "v": -4.4}, {"y": 2013, "v": -18.8}, {"y": 2014, "v": 19.3}, {"y": 2015, "v": -13.0}, {"y": 2016, "v": -21.1}, {"y": 2017, "v": -0.7}, {"y": 2018, "v": -12.7}, {"y": 2019, "v": 14.9}, {"y": 2020, "v": -11.1}, {"y": 2021, "v": 1.1}, {"y": 2022, "v": 23.3}, {"y": 2023, "v": -9.0}, {"y": 2024, "v": 4.5}, {"y": 2025, "v": -21.5}, {"y": 2026, "v": 1.9}]}, "my": {"1": {"2012": 5.9, "2013": -6.5, "2014": -0.2, "2015": -7.1, "2016": -3.6, "2017": 13.0, "2018": -4.3, "2019": 6.7, "2020": 0.2, "2021": 2.1, "2022": 11.1, "2023": -3.7, "2024": 16.9, "2025": -7.0, "2026": -5.0}, "2": {"2012": -6.5, "2013": -10.3, "2014": 4.0, "2015": 1.0, "2016": -6.0, "2017": -10.7, "2018": -1.0, "2019": -0.1, "2020": -11.8, "2021": -7.1, "2022": 6.0, "2023": -9.0, "2024": -4.6, "2025": -12.8, "2026": -2.1}, "3": {"2012": -2.5, "2013": -3.6, "2014": 14.9, "2015": -7.0, "2016": -14.3, "2017": -1.5, "2018": -8.2, "2019": 7.4, "2020": -2.9, "2021": 6.0, "2022": 4.6, "2023": 3.7, "2024": -6.6, "2025": -2.5, "2026": 9.0}, "4": {"2012": 1.1, "2013": -1.8, "2014": 3.2, "2015": 13.2, "2016": 32.8, "2017": 16.7, "2018": -3.5, "2019": -4.3, "2020": 10.8, "2021": 3.4, "2022": 2.8, "2023": 11.6, "2024": 16.3, "2025": 1.4, "2026": 18.4}, "5": {"2012": -2.6, "2013": -7.9, "2014": 10.7, "2015": 1.8, "2016": -5.3, "2017": -12.6, "2018": -5.1, "2019": -1.4, "2020": 9.4, "2021": 7.9, "2022": -8.7, "2023": -4.5, "2024": -3.3, "2025": 3.3, "2026": 8.3}, "6": {"2012": -4.1, "2013": -2.2, "2014": 8.0, "2015": -2.1, "2016": 5.9, "2017": 16.8, "2018": -6.8, "2019": -10.2, "2020": 14.8, "2021": 12.2, "2022": -3.3, "2023": 12.9, "2024": 4.4, "2025": 6.4, "2026": -9.2}, "7": {"2011": 13.9, "2012": 0.2, "2013": -10.7, "2014": -14.1, "2015": -1.1, "2016": -4.0, "2017": -1.2, "2018": -0.8, "2019": -9.5, "2020": -13.3, "2021": 17.2, "2022": -5.8, "2023": 4.3, "2024": 3.2, "2025": 3.2, "2026": 5.6}, "8": {"2011": -6.4, "2012": -4.8, "2013": 5.8, "2014": 2.5, "2015": -4.8, "2016": -2.0, "2017": -5.4, "2018": -3.3, "2019": -13.6, "2020": 4.7, "2021": 4.8, "2022": 3.5, "2023": 5.4, "2024": 7.9, "2025": 3.1, "2026": 14.3}, "9": {"2011": -3.7, "2012": 4.6, "2013": -7.6, "2014": 0.4, "2015": 1.3, "2016": -0.6, "2017": -1.9, "2018": -11.4, "2019": 2.4, "2020": 6.3, "2021": 15.3, "2022": 6.6, "2023": 12.0, "2024": -8.6, "2025": -7.8}, "10": {"2011": -4.3, "2012": -3.8, "2013": -0.3, "2014": -10.8, "2015": -1.5, "2016": 9.8, "2017": 8.6, "2018": 6.1, "2019": 4.2, "2020": 3.5, "2021": 8.9, "2022": 4.5, "2023": 13.0, "2024": 5.3, "2025": -1.6}, "11": {"2011": -4.6, "2012": -11.0, "2013": 13.0, "2014": -10.6, "2015": 8.1, "2016": -0.8, "2017": -1.6, "2018": -9.6, "2019": 4.0, "2020": -8.2, "2021": -1.3, "2022": -12.8, "2023": 11.2, "2024": 6.2, "2025": -0.8}, "12": {"2011": -4.2, "2012": -0.2, "2013": 3.2, "2014": -11.3, "2015": -4.3, "2016": -1.4, "2017": 5.7, "2018": 4.3, "2019": 2.9, "2020": 5.9, "2021": 7.9, "2022": 1.2, "2023": 8.5, "2024": 5.1, "2025": 3.8}}, "basket": ["Deep Industries Limited", "SEAMEC Limited", "Dolphin Offshore Enterprises India Ltd.", "Asian Energy Services Limited", "Jindal Drilling & Industries Ltd.", "ABS Marine Services Ltd.", "South West Pinnacle Exploration Ltd.", "United Drilling Tools Limited", "Oil Country Tubular Limited"], "nbasket": 9, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 2.0, "rel": 1.2, "hit": 7, "n": 15}, {"m": 2, "abs": -5.9, "rel": -4.7, "hit": 3, "n": 15}, {"m": 3, "abs": -0.4, "rel": -0.2, "hit": 6, "n": 15}, {"m": 4, "abs": 10.7, "rel": 8.1, "hit": 12, "n": 15}, {"m": 5, "abs": 0.5, "rel": -0.7, "hit": 6, "n": 15}, {"m": 6, "abs": 4.7, "rel": 2.9, "hit": 8, "n": 15}, {"m": 7, "abs": 1.1, "rel": -0.8, "hit": 7, "n": 16}, {"m": 8, "abs": 0.5, "rel": 0.7, "hit": 9, "n": 16}, {"m": 9, "abs": 1.1, "rel": 0.5, "hit": 8, "n": 15}, {"m": 10, "abs": 4.8, "rel": 2.8, "hit": 9, "n": 15}, {"m": 11, "abs": -0.3, "rel": -1.3, "hit": 5, "n": 15}, {"m": 12, "abs": 2.5, "rel": 1.8, "hit": 10, "n": 15}], "cy": [{"y": 2012, "b": -0.9, "n": 27.7, "rel": -28.6, "partial": false}, {"y": 2013, "b": -22.3, "n": 6.8, "rel": -29.0, "partial": false}, {"y": 2014, "b": 19.0, "n": 31.4, "rel": -12.3, "partial": false}, {"y": 2015, "b": -7.8, "n": -4.1, "rel": -3.7, "partial": false}, {"y": 2016, "b": 7.8, "n": 3.0, "rel": 4.8, "partial": false}, {"y": 2017, "b": 57.4, "n": 28.6, "rel": 28.8, "partial": false}, {"y": 2018, "b": -34.8, "n": 3.2, "rel": -38.0, "partial": false}, {"y": 2019, "b": -4.5, "n": 12.0, "rel": -16.5, "partial": false}, {"y": 2020, "b": 29.9, "n": 14.9, "rel": 15.0, "partial": false}, {"y": 2021, "b": 154.2, "n": 24.1, "rel": 130.1, "partial": false}, {"y": 2022, "b": 12.4, "n": 4.3, "rel": 8.1, "partial": false}, {"y": 2023, "b": 116.1, "n": 20.0, "rel": 96.1, "partial": false}, {"y": 2024, "b": 59.3, "n": 8.8, "rel": 50.5, "partial": false}, {"y": 2025, "b": -4.1, "n": 10.5, "rel": -14.6, "partial": false}, {"y": 2026, "b": 36.1, "n": -10.7, "rel": 46.7, "partial": true}], "dd": [{"co": "Deep Industries", "peak": "Dec 2024", "fp": 21, "y1": 37}, {"co": "SEAMEC", "peak": "Aug 2024", "fp": 7, "y1": 84}, {"co": "Dolphin Offshore Enterprises India", "peak": "May 2024", "fp": -26, "y1": 67}, {"co": "Asian Energy Services", "peak": "Aug 2024", "fp": 14, "y1": 39}, {"co": "Jindal Drilling & Industries", "peak": "Feb 2025", "fp": -39, "y1": -2}, {"co": "ABS Marine Services", "peak": "Jul 2024", "fp": -29, "y1": 51}, {"co": "South West Pinnacle Exploration", "peak": "Feb 2022", "fp": -20, "y1": 41}, {"co": "United Drilling Tools", "peak": "Jan 2022", "fp": -62, "y1": 11}, {"co": "Oil Country Tubular", "peak": "Jun 2025", "fp": -33, "y1": -18}, {"co": "Revathi Equipment India", "peak": "Sep 2024", "fp": -80, "y1": -35}, {"co": "Alphageo (India)", "peak": "Jul 2024", "fp": -43, "y1": 5}, {"co": "Garware Offshore Services", "peak": "Dec 2024", "fp": -68, "y1": -42}, {"co": "Aakash Exploration Services", "peak": "Feb 2022", "fp": -74, "y1": -11}, {"co": "Aban Offshore", "peak": "Feb 2024", "fp": -84, "y1": -67}, {"co": "Duke Offshore", "peak": "Sep 2024", "fp": 135, "y1": 382}, {"co": "Starlog Enterprises", "peak": "Apr 2025", "fp": -58, "y1": -39}], "win": {"FebMar": {"mean": -4.5, "median": -8.7, "hit": 4, "n": 15}, "AprJul": {"mean": 10.2, "median": 15.5, "hit": 10, "n": 15}, "AugSep": {"mean": 1.2, "median": -1.5, "hit": 5, "n": 14}, "OctDec": {"mean": 5.3, "median": 4.5, "hit": 11, "n": 14}, "SepNov": {"mean": 3.4, "median": 3.5, "hit": 9, "n": 14}, "JanMar": {"mean": -3.2, "median": -4.4, "hit": 6, "n": 15}}, "ytd": {"b": 36.1, "n": -10.7}, "notes": {"2012": "Flat (\u22120.9%) against a Nifty up 27.7% \u2014 a 28-point miss, on a basket of just three tubular and offshore names. Upstream activity was stagnant while the broader market re-rated, which is the normal state of this sector when producers are not spending.", "2013": "\u221222% against the Nifty's +7%, on a three-stock basket. The rupee crisis and a squeeze on upstream capital spending hit every contractor; SEAMEC \u221222%, Jindal Drilling \u221223%, Oil Country Tubular \u221229%.", "2014": "+19% versus +31%. SEAMEC +70% on vessel deployment, but the crude collapse in the second half froze the tender pipeline that drives this industry with a one-year lag.", "2015": "\u22128% versus \u22124%. The capital-expenditure cut arrived exactly as expected: when producers stop drilling, contractors stop earning. Jindal Drilling \u221220%.", "2016": "+8% versus +3%. Crude bottomed in January and activity planning resumed. Jindal Drilling +23%, Oil Country Tubular +18%, SEAMEC \u221221%.", "2017": "+57% versus +29%. SEAMEC +127% as vessel utilisation recovered; the small-cap boom did the rest.", "2018": "\u221235% versus +3%, the worst year in the record. The promised upstream capital expenditure did not arrive, the credit shock hit leveraged asset owners hardest, and Oil Country Tubular fell 68%.", "2019": "\u22124% versus +12%, with a median of \u221228% \u2014 the dispersion year. SEAMEC +133% on contracts while Oil Country Tubular \u221261% and Jindal Drilling \u221228%.", "2020": "+30% versus +15%. Counter-intuitive for a pandemic year, but the small contractors were coming off very low bases and South West Pinnacle rose 125%.", "2021": "+154% versus +24%, the best year in this entire primer series so far. Activity recovered, day rates turned and every name re-rated: South West Pinnacle +242%, SEAMEC +151%, United Drilling Tools +70%.", "2022": "+12% versus +4%, but the median stock fell 18%. Jindal Drilling +123% and Oil Country Tubular +86% against Asian Energy \u221246% and United Drilling Tools \u221243%: contract wins, not the sector, decided the year.", "2023": "+116% versus +20%. Asian Energy +271%, Jindal Drilling +150%, Deep Industries +82% as order books filled with multi-year work.", "2024": "+59% versus +9%. Dolphin Offshore +348%, Oil Country Tubular +123%, Deep Industries +113% on a \u20b91,400 cr order win. The re-rating peaked for several names in mid-2024.", "2025": "\u22124% versus +10%, median \u221216%. The pause: crude fell back, tender awards slipped and the market stopped paying for order books. Jindal Drilling \u221226%, Asian Energy \u221224%.", "2026": "+36% against a Nifty \u221211%, and this time the median stock is +39% \u2014 the advance is broad rather than one-stock. Asian Energy +74%, Deep Industries +61%, SEAMEC +57%. Order books, not the oil price, are doing the work; ONGC's deepwater programme and its cancelled rig tender define both the opportunity and the constraint."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

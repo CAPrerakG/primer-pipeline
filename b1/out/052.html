@@ -1,0 +1,618 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electronics Manufacturing Services Primer</title>
+<meta name="description" content="Industry 52 of 278: the contract manufacturers that build India&#x27;s phones, air-conditioners, meters, car electronics and aircraft boards. Two very different businesses under one label — high-volume consumer assembly and high-mix industrial electronics — a PLI scheme that has just ended, record exports, and the 18 listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Electronics Manufacturing Services · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">The two business models</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#acchain">The AC value chain</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 52 of 278 · Electronics &amp; EMS family, part 3</div>
+  <h1>Electronics Manufacturing Services</h1>
+  <p class="lede">Electronics manufacturing services (EMS) companies build electronic products for brands that design and sell them: phones, televisions, air-conditioners, smart meters, car electronics, industrial controls, medical devices and aircraft systems. India has turned this into one of its fastest-growing manufacturing industries, with iPhone exports alone worth about ₹2 trillion last year. But the listed companies fall into two camps with very different economics — and in 2026 the market is rewarding only one of them.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 18 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Power Electronics</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">$47.96 bn</div><div class="l">India's electronics exports in FY26, up 24%</div></div>
+    <div class="stat"><div class="n">~₹2.6 tn</div><div class="l">Smartphone exports in FY26 — about ₹2 tn of it iPhones</div></div>
+    <div class="stat"><div class="n">March 2026</div><div class="l">The mobile production-linked incentive scheme ended, squeezing assemblers' margins</div></div>
+    <div class="stat"><div class="n">+189% vs −12%</div><div class="l">Avalon versus Kaynes in 2026: high-mix exporters against a cash-hungry growth story</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Two businesses under one name</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>When you buy a phone with a famous brand name, the company that designed it often did not build it. Another company — a contract manufacturer — bought the parts, put them together, tested the phone and packed it. Some contract manufacturers build millions of the same thing, like phones or air-conditioners; they are like a giant bakery making one kind of bread very cheaply. Others build a few hundred of many complicated things, like boards for trains, satellites or hospital machines; they are like a cake shop making special orders. The giant bakery earns a tiny profit on each loaf but sells millions. The cake shop earns more on each order but must be very skilled.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>EMS in India is growing fast, but high-volume consumer assembly and high-mix industrial electronics are now diverging sharply.</p>
+    <ul>
+      <li><b>Scale:</b> electronics exports $47.96 bn in FY26 (+24%); smartphone exports about ₹2.6 tn, iPhones about ₹2 tn.</li>
+      <li><b>High-mix winners:</b> Syrma revenue +67% and profit +112%; Avalon revenue +50%, profit +145%, order book ₹2,208 cr; Cyient DLM order book a record ₹2,598 cr.</li>
+      <li><b>Consumer assemblers squeezed:</b> Dixon revenue +21% but margins compressed after the mobile PLI ended in March 2026; PG Electroplast revenue +35%, profit +13%.</li>
+      <li><b>Cash matters:</b> Kaynes revenue +41% but profit −24% and operating cash flow −₹250 cr; stock −54% from its peak.</li>
+      <li><b>The next leg is components:</b> Dixon's display and camera modules, Vivo joint venture, ECMS projects (051).</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="The two business models">
+  <p class="eyebrow">2 · The two business models</p>
+  <h2>Volume versus mix</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Feature</th><th>High-volume consumer EMS</th><th>High-mix, low-volume (HMLV) EMS</th></tr></thead><tbody>
+    <tr><td>Products</td><td>Phones, TVs, ACs, washing machines, lighting, wearables</td><td>Industrial controls, auto electronics, medical devices, railway, aerospace and defence boards, smart meters</td></tr>
+    <tr><td>Customers</td><td>A few big brands (Samsung, Xiaomi, Vivo, Motorola, AC brands)</td><td>Many industrial and global OEMs, often exporters</td></tr>
+    <tr><td>Revenue per unit</td><td>High, but mostly bought-in components</td><td>Lower volumes, higher value added</td></tr>
+    <tr><td>EBITDA margin</td><td>3–8%</td><td>10–15% or more</td></tr>
+    <tr><td>Return on capital</td><td>High when assets turn fast</td><td>Good; slower turns, more engineering</td></tr>
+    <tr><td>Stickiness</td><td>Contracts renegotiated often; brands dual-source</td><td>Qualification takes years; customers rarely switch</td></tr>
+    <tr><td>Policy dependence</td><td>High (PLI for mobiles, ACs, LEDs)</td><td>Lower; export- and order-book-driven</td></tr>
+    <tr><td>Listed examples</td><td>Dixon, PG Electroplast, Amber, Epack, Elin, Optiemus</td><td>Syrma, Avalon, Cyient DLM, Centum, Kaynes, Aimtron, Vinyas</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>High-volume EMS is a printing press for bestsellers: enormous runs, razor-thin margins per copy, and the publisher can take the next book to another printer. High-mix EMS is a bespoke tailor for demanding clients: every order is different and harder, but once a client trusts the fit, they rarely change tailors.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a component list to a shipped product</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Components</h4><div class="an">The ingredients</div>Chips, displays, cameras, batteries, passives, PCBs — mostly imported.<div class="who">Global suppliers; Indian component makers (050, 051)</div><div class="m">60–85% of product cost</div></div>
+    <div class="stage"><div class="no">02</div><h4>Design and engineering</h4><div class="an">The recipe</div>Brand design, or ODM design by the EMS firm.<div class="who">Brands; Syrma, Dixon (ODM)</div><div class="m">ODM adds margin</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>PCB assembly</h4><div class="an">Putting parts on boards</div>Surface-mount lines place and solder components.<div class="who">All EMS companies</div><div class="m">The core process</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Box build and testing</h4><div class="an">The finished product</div>Final assembly, software loading, quality testing.<div class="who">Dixon (phones, TVs), Amber and PG (ACs)</div><div class="m">Labour and scale</div></div>
+    <div class="stage"><div class="no">05</div><h4>Logistics and exports</h4><div class="an">Shipping it</div>Delivery to brands in India and abroad.<div class="who">EMS firms, brands</div><div class="m">Exports now a quarter of Syrma's revenue</div></div>
+    <div class="stage"><div class="no">06</div><h4>Brand and retail</h4><div class="an">Selling it</div>The brand markets and sells the product.<div class="who">Samsung, Apple, AC brands, industrial OEMs</div><div class="m">Where most value is captured</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Ingredients:</b> thousands of tiny parts, most bought from abroad.</li>
+    <li><b>Recipe:</b> someone designs how everything fits together.</li>
+    <li><b>Boards:</b> robots place parts on green boards and solder them.</li>
+    <li><b>Finishing:</b> workers assemble the case, load software and test it.</li>
+    <li><b>Shipping:</b> products go to shops in India and to other countries.</li>
+    <li><b>Selling:</b> the brand sells it with its own name on it.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical measure in EMS is value added — revenue minus bought-in components — because headline revenue is inflated by pass-through parts. A phone assembler with ₹15,000 cr of revenue may add only a small fraction of that itself; a high-mix maker with ₹500 cr of revenue may add far more per rupee. That is why EBITDA margins range from about 3% to 15% across companies doing, on the surface, the same thing. The second measure is cash conversion: EMS growth consumes working capital, and a company growing revenue 40% with negative operating cash flow — as Kaynes did this quarter — is financing its customers. The third is dependence on incentives: the mobile PLI's end in March 2026 showed how much of assemblers' margin was policy.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 18 companies</h2>
+  <h3>High-volume consumer EMS</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Dixon Technologies (~₹80,646 cr)</td><td>India's largest listed EMS: smartphones, TVs, lighting, washing machines, IT hardware; moving into display and camera modules.</td><td>Revenue ₹15,557 cr (+21%) on higher average selling prices; margins compressed after the mobile PLI 1.0 scheme expired in March 2026 and input costs rose. FY27 mobile volumes guided flat at 32–33 mn excluding the Vivo JV, which won government approval in late July and should add revenue from Q3 FY27. Display-module trials in Q3; camera-module capacity rising from 70 mn to 180–190 mn a year. Stock +7.5%, −31% from its December 2024 peak.</td></tr>
+    <tr><td>Amber Enterprises (~₹24,402 cr)</td><td>Room-AC components and ODM, plus electronics (PCBs, IoT) and railway subsystems.</td><td>Revenue ₹3,888 cr (+13%), below forecasts of ₹4,288 cr; electronics the standout, railway margins under pressure. Stock +11.6%.</td></tr>
+    <tr><td>PG Electroplast (~₹14,997 cr)</td><td>Room ACs, washing machines, coolers and plastic parts for brands.</td><td>Record revenue ₹2,034 cr (+35%), room ACs ₹1,401 cr (+38%), washing machines ₹211 cr (+67%); profit ₹75 cr (+13%) as commodity costs and a weaker rupee squeezed margins; targets 8% EBITDA for FY27 and compressor production. Stock −8.0%, −48% from its January 2025 peak.</td></tr>
+    <tr><td>Optiemus Infracom (~₹5,284 cr)</td><td>Mobile phone, wearable and accessory contract manufacturing.</td><td>+16.9%.</td></tr>
+    <tr><td>Epack Durable (~₹1,713 cr)</td><td>Room-AC and small-appliance ODM; listed January 2024.</td><td>−36.6%, −72% from its peak.</td></tr>
+    <tr><td>Elin Electronics (~₹441 cr)</td><td>Small appliances and fractional-horsepower motors; listed December 2022.</td><td>−46.4%, −67% from its peak.</td></tr>
+  </tbody></table></div>
+  <h3>High-mix industrial, automotive and aerospace EMS</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Syrma SGS (~₹29,129 cr)</td><td>Diversified EMS and ODM across automotive, industrial, consumer, healthcare and RFID; growing exports.</td><td>Revenue ₹1,604 cr (+67%), EBITDA ₹177 cr (+72%), profit ₹106 cr (+112%); exports 24% of revenue, ODM sales nearly doubled. Stock +135.8%.</td></tr>
+    <tr><td>Kaynes Technology (~₹22,704 cr)</td><td>Industrial, automotive, aerospace and railway EMS; a PCB plant; Kaynes Semicon (050).</td><td>Revenue ₹946 cr (+41%) but profit ₹56 cr (−24%); higher inventory and receivables drove operating cash flow of −₹250 cr; employee costs and depreciation rising with new plants. A SEBI notice to its managing director in March 2025 added to concerns. Stock −12.4%, −54% from its January 2025 peak.</td></tr>
+    <tr><td>Avalon Technologies (~₹14,755 cr)</td><td>High-mix EMS for US and Indian industrial, clean-energy, medical and mobility customers.</td><td>Revenue ₹484 cr (+50%), the eighth straight quarter of growth; profit ₹35 cr (+145%); order book ₹2,208 cr (+23%); reached its target of doubling FY24 revenue nearly a year early. Stock +188.7%, the section's best.</td></tr>
+    <tr><td>Cyient DLM (~₹6,891 cr)</td><td>Aerospace, defence, medical and industrial electronics; a subsidiary of Cyient.</td><td>Revenue ₹374 cr (+34%), EBITDA margin 10.5% (+147 bps), profit more than doubled; record order book ₹2,598 cr and a target book-to-bill of 1.5. Stock +126.3%, up 177% from its March low.</td></tr>
+    <tr><td>Centum Electronics (~₹6,325 cr)</td><td>Bengaluru-based defence, space and industrial electronics design and manufacturing.</td><td>+85.4% in 2026.</td></tr>
+    <tr><td>Aimtron Electronics (~₹3,348 cr)</td><td>Gujarat-based electronics design and manufacturing; listed 2024.</td><td>+99.8%.</td></tr>
+    <tr><td>Vinyas Innovative (~₹1,778 cr)</td><td>Mysuru-based aerospace and industrial EMS.</td><td>+27.0%.</td></tr>
+    <tr><td>Virtuoso Optoelectronics (~₹1,557 cr)</td><td>Lighting and appliance ODM from Nashik.</td><td>+20.2%.</td></tr>
+    <tr><td>Merritronix, Visdem, Panache Digilife, Arham</td><td>Recent or small listings.</td><td>Panache +55%, Arham +38%; Merritronix and Visdem too recent.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">What is missing</span><p>The largest electronics manufacturers in India are unlisted or foreign: Foxconn, Pegatron's former plant (now Tata Electronics), Samsung, and the Tata Electronics iPhone plants. Bharat FIH (Foxconn) and several others have filed or planned listings. The listed EMS universe is therefore dominated by Indian mid-caps rather than the giants.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Thin margins, fast assets, and incentives</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Consumer EMS</th><th>High-mix EMS</th></tr></thead><tbody>
+    <tr><td>Pricing</td><td>Cost-plus, renegotiated annually; components passed through</td><td>Quoted per programme; engineering valued</td></tr>
+    <tr><td>Scale</td><td>Decisive: line utilisation and purchasing power</td><td>Less important than capability</td></tr>
+    <tr><td>Incentives</td><td>PLI worth several percent of incremental sales while it lasted</td><td>ECMS for components; less direct</td></tr>
+    <tr><td>Working capital</td><td>Low if brands pay fast</td><td>High: inventory of many parts, long qualification</td></tr>
+    <tr><td>Growth driver</td><td>Brands' outsourcing and India's domestic market</td><td>Exports, defence, automotive, industrial electronics</td></tr>
+  </tbody></table></div>
+  <h3>Why the PLI's end matters</h3>
+  <p>The mobile PLI scheme, launched in 2020, paid manufacturers a percentage of incremental sales above a base year. It helped build India's phone-assembly industry and made up a meaningful share of assemblers' profits on low-margin volumes. Its expiry in March 2026 removed that support just as component costs rose — the reason Dixon's margins contracted in Q1 FY27 even as revenue grew 21%. Dixon's response — backward integration into displays and camera modules, and joint ventures with brands such as Vivo — is the industry's answer: earn more of the value, rather than depend on assembly fees and incentives.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>The PLI was like a sponsorship deal paying an athlete a bonus for every race won. It helped a lot of new athletes turn professional. When the sponsorship ended, only those who had become good enough to win on prize money alone stayed comfortable.</p></div>
+</section>
+
+<section id="acchain" data-toc="The AC value chain">
+  <p class="eyebrow">5b · A closer look</p>
+  <h2>The room-air-conditioner chain: where three listed companies compete</h2>
+  <p>Room air-conditioners are the second-largest consumer EMS product in India after phones, and three listed companies — Amber, PG Electroplast and Epack — depend on them. Brands such as Voltas, Blue Star, LG, Daikin and Panasonic design and sell the ACs, but increasingly outsource manufacturing of the complete unit or its main sub-assemblies. A split AC contains an indoor unit (heat-exchanger coil, fan, motor, control board, plastic casing) and an outdoor unit (compressor, coil, fan, valves). The compressor and many electronic parts are still imported; coils, plastics, sheet metal and control boards are increasingly made in India.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Position in the AC chain</th><th>Q1 FY27</th></tr></thead><tbody>
+    <tr><td>Amber Enterprises</td><td>The largest AC ODM, plus heat exchangers, motors, control boards (through IL JIN) and railway subsystems (through Sidwal)</td><td>Revenue +13%, below forecasts; electronics strong, railways weak</td></tr>
+    <tr><td>PG Electroplast</td><td>Complete ACs and washing machines for brands; plastic parts; plans for compressors</td><td>Record room-AC revenue of ₹1,401 cr (+38%); profit +13%</td></tr>
+    <tr><td>Epack Durable</td><td>ACs and small appliances for brands</td><td>Stock −37% in 2026, −72% from its peak</td></tr>
+  </tbody></table></div>
+  <p>The economics are seasonal and weather-driven: production peaks from January to May, a hot summer lifts sell-through and next year's orders, and a mild or rainy summer leaves brands with inventory and cuts orders to contract makers. Margins depend on copper and aluminium prices (see 044) and on how much of the unit the contract maker produces itself — which is why PG Electroplast's compressor plan and Amber's component businesses matter more than their headline volumes.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What EMS depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Chips and memory</td><td>The largest cost in most boards</td><td>A global memory boom has raised prices (see 050)</td></tr>
+    <tr><td>Displays and camera modules</td><td>The largest cost in phones and TVs</td><td>Dixon localising both</td></tr>
+    <tr><td>Passive components and PCBs</td><td>Needed on every board</td><td>ECMS projects starting to localise (051)</td></tr>
+    <tr><td>Copper and steel</td><td>AC coils and compressors</td><td>Copper at a record (044)</td></tr>
+    <tr><td>Rupee</td><td>Components priced in dollars</td><td>A weaker rupee squeezed PG Electroplast</td></tr>
+    <tr><td>Anchor customers</td><td>Volume and qualification</td><td>Brand JVs (Vivo) and global OEMs</td></tr>
+    <tr><td>Skilled engineers and line workers</td><td>High-mix quality and ramp-ups</td><td>Rising wage costs (Kaynes' employee costs nearly doubled)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Summer for ACs, festivals for phones</h2>
+  <ul>
+    <li><b>January–May:</b> room-AC production peaks ahead of summer; AC-heavy makers report their biggest quarters.</li>
+    <li><b>June–September:</b> phones and TVs built for the festive season; monsoon softens AC demand.</li>
+    <li><b>October–December:</b> festive retail sales; lower production after Diwali.</li>
+    <li><b>March:</b> fiscal year-end; PLI and incentive claims; order-book resets.</li>
+    <li><b>Industrial and export EMS:</b> driven by customers' programmes rather than seasons.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 14 names (Dixon Technologies (India) Ltd., Syrma SGS Technology Limited, Amber Enterprises India Ltd., Kaynes Technology India Ltd., PG Electroplast Limited, Avalon Technologies Limited, Cyient DLM Limited, Centum Electronics Limited, Optiemus Infracom Limited, Aimtron Electronics Limited, Vinyas Innovative Technologies Limited, Epack Durable Limited, Virtuoso Optoelectronics Limited, Elin Electronics Limited), equal-weighted, monthly from Oct 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Jun +7.4 pts (beat in 11 of 15 years); Apr +6.0 pts (beat in 13 of 15 years); Sep +5.5 pts (beat in 12 of 14 years).</li><li><b>Weakest months:</b> Mar -4.8 pts (beat in 4 of 15 years); May -0.2 pts (beat in 9 of 15 years); Feb -0.1 pts (beat in 7 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -5.9 pts); Apr–Jul beat the Nifty in 12 of 15 years (median +23.6 pts); Aug–Sep beat the Nifty in 11 of 14 years (median +4.5 pts); Oct–Dec beat the Nifty in 9 of 14 years (median +5.6 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +8.0 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -3.8 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +3.0 points.</p><p><b>Reading it:</b> one of the strongest seasonal patterns in the library. April–July has beaten the Nifty in 12 of 15 years with a median of +23.6 points, and April alone in 13 of 15 (+6.0 points). February–March is the mirror image — 4 of 15, median −5.9 — and March alone 4 of 15 (−4.8 points). For the consumer-durables makers the logic is physical: room-air-conditioner production peaks from January to May ahead of summer, so their strongest quarter is reported in April–May, while the new financial year also resets PLI and order-book guidance.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed only in 2018 (−28.7), 2019 (−12.1) and 2022 (−5.9)</b>: the small-cap crash, its aftermath, and the 2022 consumer slowdown. The best runs were 2026 (+48.1) and 2017 (+37.5).</li>
+    <li><b>February–March succeeded only in 2021 (+22.0), 2015 (+12.8), 2012 (+3.6) and 2026 (+2.6)</b>; its worst was 2013 (−44.1).</li>
+    <li><b>October–December failed in 2025 (−18.0) and 2015 (−13.2)</b> among five misses in 14 years.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is a pattern with a business reason for the AC makers and a market reason for everyone: results for the strongest consumer quarter arrive in April–May, and the new fiscal year brings fresh guidance and order books. The sample before 2018 is only two stocks, so the recent years deserve more weight — and April–July has worked in six of the eight years since 2019.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Brands' outsourcing to India:</b> Apple, Samsung, Chinese handset makers, AC brands.</li>
+    <li><b>Export programmes:</b> "China plus one" for industrial, automotive and medical electronics.</li>
+    <li><b>Defence and aerospace orders:</b> Centum, Cyient DLM, Kaynes, Vinyas (see 058).</li>
+    <li><b>Incentives:</b> the end of the mobile PLI; ECMS for components.</li>
+    <li><b>Component localisation:</b> displays, cameras, PCBs — where the next margin lies.</li>
+    <li><b>Summer weather:</b> AC demand for Amber, PG Electroplast and Epack.</li>
+    <li><b>Working capital:</b> inventory and receivables in fast growth.</li>
+    <li><b>Currency:</b> imported components priced in dollars.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of PG Electroplast and Centum until Dixon (2017) and Amber (2018) listed, then the newer EMS listings as they gained a year of history — 14 members by 2026. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Pre-history</b> (2012–2016): a handful of small companies, including PG Electroplast's collapse from optical discs.</li>
+    <li><b>The first listings</b> (2017–2019): Dixon and Amber list; the small-cap crash of 2018.</li>
+    <li><b>The PLI boom</b> (2020–2021): +133.8% and +137.3% as phone, AC and LED incentives launched.</li>
+    <li><b>The EMS re-rating</b> (2023–2024): Kaynes, Syrma and the others list; +84.5% and +102.0%.</li>
+    <li><b>The split</b> (2025–2026): consumer assemblers de-rate as PLI ends and margins thin; high-mix exporters surge.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Incentive schemes create booms, and their expiry tests who can stand alone.</b></li>
+    <li><b>The market pays for margin and cash, not for revenue:</b> Kaynes' 41% revenue growth came with a falling share price.</li>
+    <li><b>Listings cluster at re-rating peaks:</b> Epack and Elin are 67–72% below their peaks.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>From China to "China plus one"</h2>
+  <p>Global EMS is dominated by Taiwanese and Chinese firms — Foxconn (Hon Hai), Pegatron, Luxshare, Wistron — and US and Singaporean groups such as Jabil, Flex and Celestica, which lead in high-mix and data-centre hardware. China built the world's electronics supply chain over three decades. Since 2020, tariffs, pandemic disruption and geopolitics have pushed brands to add capacity in India, Vietnam and Mexico. India's advantage is its domestic market and incentives; its gap is components, most of which are still imported. India's electronics exports reached $47.96 bn in FY26, led by smartphones — iPhone exports alone about ₹2 tn.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Country</th><th>Role</th><th>India comparison</th></tr></thead><tbody>
+    <tr><td>China</td><td>The complete supply chain, components to finished goods</td><td>India imports most components from China</td></tr>
+    <tr><td>Vietnam</td><td>Samsung phones, many brands' assembly</td><td>India's main competitor for relocated assembly</td></tr>
+    <tr><td>Mexico</td><td>US-facing assembly, servers</td><td>Competes for North American programmes</td></tr>
+    <tr><td>Taiwan</td><td>The largest EMS groups</td><td>Foxconn and others operate plants in India</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From the US and Japan to Taiwan and China</b> (1990s–2010s): the outsourcing of assembly.</li>
+    <li><b>To "China plus one"</b> (2020–2026): tariffs, pandemic and security concerns.</li>
+    <li><b>From assembly to design and components:</b> ODM and backward integration as the source of margin.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>ODM:</b> designing products for brands, not just assembling them (Syrma, Dixon).</li>
+    <li><b>Component integration:</b> display modules, camera modules, PCBs and compressors.</li>
+    <li><b>Automotive electronics:</b> EV controllers, battery management and infotainment.</li>
+    <li><b>Aerospace and defence electronics:</b> high-reliability boards and systems (see 058).</li>
+    <li><b>Automation and traceability:</b> smarter surface-mount lines and full product traceability.</li>
+    <li><b>Data-centre hardware:</b> servers and networking equipment, a growing global EMS segment.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Mobile PLI (large-scale electronics)</td><td>Ended March 2026</td><td>Assemblers' margins compressed</td></tr>
+    <tr><td>PLI for white goods (ACs, LEDs) and IT hardware</td><td>Continuing for eligible firms</td><td>Supports AC component localisation</td></tr>
+    <tr><td>ECMS</td><td>₹40,000 cr, 106 projects approved</td><td>Component localisation (051)</td></tr>
+    <tr><td>Press Note 3 (investment from neighbouring countries)</td><td>Case-by-case approvals</td><td>Governs Chinese-brand JVs such as Dixon–Vivo, approved in July 2026</td></tr>
+    <tr><td>Customs duties on components and finished goods</td><td>Adjusted in budgets</td><td>Local value addition</td></tr>
+    <tr><td>US tariffs</td><td>Evolving</td><td>Export competitiveness for US-bound products</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: the market separates volume from value</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Exports</td><td>Strong</td><td>$47.96 bn in FY26; Syrma exports 24% of revenue</td></tr>
+    <tr><td>High-mix order books</td><td>Records</td><td>Cyient DLM ₹2,598 cr; Avalon ₹2,208 cr</td></tr>
+    <tr><td>Consumer assembly margins</td><td>Compressed</td><td>Dixon after PLI; PG Electroplast profit +13% on revenue +35%</td></tr>
+    <tr><td>Cash flow</td><td>A differentiator</td><td>Kaynes −₹250 cr operating cash flow</td></tr>
+    <tr><td>Stocks</td><td>Split</td><td>Avalon +189%, Syrma +136%; Kaynes −12%, Epack −37%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Indian EMS is not one trade. The high-mix companies are delivering what investors hoped for in 2023–24 — growth with improving margins and exports — and their shares have re-rated sharply, so the question now is valuation. The consumer assemblers are larger and still growing, but the end of the mobile PLI shows how thin their economics are without support, and their future depends on component integration succeeding. Kaynes is the cautionary case: excellent revenue growth, but profits and cash lagging. Across the section, the metrics that matter are value added, cash conversion and order-book quality — not revenue.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Operating cash flow and working-capital days</td><td>Quarterly</td><td>Separates real growth from financed growth</td></tr>
+    <tr><td>Order book and book-to-bill</td><td>High-mix firms, quarterly</td><td>Revenue visibility</td></tr>
+    <tr><td>Export share of revenue</td><td>Quarterly</td><td>Quality of demand</td></tr>
+    <tr><td>Monthly electronics and smartphone exports</td><td>Ministry of Commerce, ICEA</td><td>Industry momentum</td></tr>
+    <tr><td>Component localisation milestones</td><td>Dixon displays and cameras; ECMS</td><td>Margin expansion</td></tr>
+    <tr><td>Summer temperature and AC sell-through</td><td>January–May</td><td>AC makers' quarters</td></tr>
+    <tr><td>New incentive schemes</td><td>Budgets, cabinet decisions</td><td>Policy support after PLI</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Semiconductors</b> (050) and <b>components</b> (051): the inputs.</li>
+    <li><b>Consumer appliances and electronics</b> (a later primer): the brands EMS firms build for.</li>
+    <li><b>Defence electronics</b> (058) and <b>aerospace</b> (057): high-mix customers.</li>
+    <li><b>Auto electricals and electronics</b> (024): automotive boards.</li>
+    <li><b>Electric meters</b> (055): smart-meter assembly.</li>
+    <li><b>IT hardware</b> (a later primer): laptops and servers.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is value added as a share of revenue, and how is it trending?</li>
+    <li>What share of revenue came from incentives last year, and what replaces it?</li>
+    <li>What is operating cash flow, and why does it differ from profit?</li>
+    <li>How concentrated is revenue by customer?</li>
+    <li>What is the order book, and what share is export?</li>
+    <li>What component integration is planned, with what capital and returns?</li>
+    <li>How are component price and currency changes passed through?</li>
+    <li>What is the ramp-up plan and utilisation of new plants?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Negative operating cash flow for several quarters.</li>
+    <li>Rising inventory and receivables faster than revenue.</li>
+    <li>Margin dependence on incentives that are ending.</li>
+    <li>Top customer above half of revenue.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"All EMS stocks ride the same India manufacturing wave."</td><td>Avalon +189% and Syrma +136% against Kaynes −12% and Epack −37% in the same year.</td></tr>
+    <tr><td>"Revenue growth is what matters."</td><td>Kaynes grew revenue 41% while profit fell 24% and operating cash flow was −₹250 cr.</td></tr>
+    <tr><td>"PLI made Indian EMS competitive for good."</td><td>Dixon's margins compressed as soon as the mobile PLI ended in March 2026.</td></tr>
+    <tr><td>"High-mix EMS is a niche."</td><td>It is where the export growth and margin are: Syrma exports +61–67%, Cyient DLM margin +147 bps.</td></tr>
+    <tr><td>"India can replace China in electronics."</td><td>In assembly, increasingly; in components, not yet — most are still imported.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. ODM, SMT" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Manufacturing</h3><dl>
+    <dt>EMS</dt><dd>Electronics manufacturing services — building products for brands.</dd>
+    <dt>ODM</dt><dd>Original design manufacturer — designs and builds products that brands sell under their names.</dd>
+    <dt>OEM</dt><dd>Original equipment manufacturer — the brand that sells the product.</dd>
+    <dt>ESDM</dt><dd>Electronics system design and manufacturing — India's policy term for the sector.</dd>
+    <dt>PCB</dt><dd>Printed circuit board — the board components are soldered onto.</dd>
+    <dt>PCBA</dt><dd>A printed circuit board assembled with components.</dd>
+    <dt>SMT</dt><dd>Surface-mount technology — placing components directly on a board's surface.</dd>
+    <dt>Through-hole</dt><dd>Mounting components with leads through holes in the board.</dd>
+    <dt>Pick-and-place machine</dt><dd>The robot that places components on boards.</dd>
+    <dt>Reflow soldering</dt><dd>Melting solder paste in an oven to fix components.</dd>
+    <dt>Box build</dt><dd>Assembling boards into a finished product in its case.</dd>
+    <dt>Cable and wire harness</dt><dd>Bundled wiring assemblies, a common EMS product.</dd>
+    <dt>High-mix, low-volume (HMLV)</dt><dd>Many different products in small quantities — industrial and aerospace EMS.</dd>
+    <dt>High-volume, low-mix</dt><dd>Few products in huge quantities — phones and TVs.</dd>
+    <dt>SKD and CKD</dt><dd>Semi-knocked-down and completely-knocked-down kits assembled locally.</dd>
+    <dt>Display module</dt><dd>The screen assembly of a phone or TV.</dd>
+    <dt>Camera module</dt><dd>A phone's camera unit — Dixon is scaling production.</dd>
+    <dt>Line utilisation</dt><dd>How much of an assembly line's capacity is used.</dd>
+    <dt>First-pass yield</dt><dd>The share of products that pass testing first time.</dd>
+    <dt>Traceability</dt><dd>Tracking each component and board through production.</dd>
+    <dt>New product introduction (NPI)</dt><dd>The process of moving a new design into production.</dd>
+  </dl>
+  <h3>Commercial</h3><dl>
+    <dt>Room air-conditioner (RAC)</dt><dd>The split or window AC sold to homes — the main product of Amber, PG Electroplast and Epack.</dd>
+    <dt>Indoor and outdoor units</dt><dd>The two halves of a split AC; each is a separate assembly.</dd>
+    <dt>Compressor</dt><dd>The pump at the heart of an AC or fridge, still largely imported; PG Electroplast plans to make them.</dd>
+    <dt>Heat-exchanger coil</dt><dd>The copper-and-aluminium coil that moves heat — a large share of AC cost.</dd>
+    <dt>Value added</dt><dd>Revenue minus bought-in components — what the EMS firm really earns on.</dd>
+    <dt>Pass-through</dt><dd>Component costs charged to the customer at cost.</dd>
+    <dt>Cost-plus pricing</dt><dd>Price set as cost plus an agreed margin.</dd>
+    <dt>Order book</dt><dd>Contracted but undelivered revenue.</dd>
+    <dt>Qualification</dt><dd>A customer's approval of a supplier's process and product.</dd>
+    <dt>Dual sourcing</dt><dd>A brand using two manufacturers for the same product.</dd>
+    <dt>Operating cash flow</dt><dd>Cash generated by the business before investment.</dd>
+    <dt>Working-capital days</dt><dd>Inventory plus receivables minus payables, in days of sales.</dd>
+    <dt>Average selling price (ASP)</dt><dd>Revenue per unit; rises with product mix and component costs.</dd>
+    <dt>Press Note 3</dt><dd>India's 2020 rule requiring approval for investment from neighbouring countries.</dd>
+    <dt>PLI</dt><dd>Production-linked incentive — a payment on incremental production or sales.</dd>
+    <dt>China plus one</dt><dd>Brands adding a manufacturing base outside China.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>OSAT, chip, wafer</dt><dd>See 050.</dd>
+    <dt>ECMS, shunt, qualification</dt><dd>See 051.</dd>
+    <dt>Book-to-bill, drawdown from peak</dt><dd>See 029.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What are the two EMS business models?</summary><p>High-volume consumer assembly (phones, ACs) and high-mix, low-volume industrial and aerospace electronics.</p></details>
+  <details class="q"><summary>2. Why do EBITDA margins range from about 3% to 15%?</summary><p>Consumer assembly passes through expensive components and adds little value; high-mix work adds engineering value.</p></details>
+  <details class="q"><summary>3. What happened to Dixon's margins, and why?</summary><p>They compressed in Q1 FY27 because the mobile PLI expired in March 2026 and input costs rose.</p></details>
+  <details class="q"><summary>4. Why did Kaynes' shares fall despite 41% revenue growth?</summary><p>Profit fell 24% and operating cash flow was −₹250 cr as inventory and receivables rose.</p></details>
+  <details class="q"><summary>5. Which company rose most in 2026?</summary><p>Avalon, +189%, on 50% revenue growth and a ₹2,208 cr order book.</p></details>
+  <details class="q"><summary>6. How large were India's electronics exports in FY26?</summary><p>$47.96 bn, up 24%, led by smartphones.</p></details>
+  <details class="q"><summary>7. What is ODM, and why does it matter?</summary><p>Designing as well as building products; it earns more margin than pure assembly.</p></details>
+  <details class="q"><summary>8. Which is the strongest seasonal window?</summary><p>April–July: 12 of 15 years, median +23.6 points.</p></details>
+  <details class="q"><summary>9. What is Dixon's plan to restore margins?</summary><p>Backward integration into display and camera modules, and joint ventures with brands such as Vivo.</p></details>
+  <details class="q"><summary>10. Why does value added matter more than revenue?</summary><p>Revenue includes pass-through components; value added is what the EMS company actually earns on.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket versus NSE:NIFTY, 2012 to 18 September 2026.</li>
+    <li>Consumer EMS: <a href="https://www.investing.com/news/company-news/dixon-technologies-q1-fy27-slides-revenue-up-21-margins-contract-93CH-4828133">Dixon Q1 FY27</a>; <a href="https://www.sahi.com/news/dixon-tech-expects-32-33-million-fy27-mobile-sales-and-180-190-million-camera-modules-3872-PE1_COR">Dixon volume and camera-module guidance</a>; <a href="https://www.investywise.com/pg-electroplast-limited-q1-fy27-earnings-conference-call-transcript/">PG Electroplast Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/pg-electroplast-q1-results-consolidated-profit-rises-13-yoy/47586822">PG margin target</a>; <a href="https://www.investing.com/news/company-news/amber-q1-fy27-slides-electronics-surge-offsets-railway-margin-pressure-93CH-4859737">Amber Q1 FY27</a>.</li>
+    <li>High-mix EMS: <a href="https://www.autocarpro.in/news/syrma-sgs-technology-reports-112-percent-jump-in-q1-fy27-net-profit-to-rs-106-crore-133805">Syrma Q1 FY27</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/avalon-technologies-ltd-nse-avalon-010409710.html">Avalon Q1 FY27</a>; <a href="https://www.business-standard.com/markets/news/cyient-dlm-soars-18-on-strong-q1-earnings-zooms-177-from-march-low-126072200524_1.html">Cyient DLM Q1 FY27</a>; <a href="https://www.sahi.com/news/cyient-dlm-expects-to-maintain-1-5x-book-to-bill-ratio-with-2-598-crore-order-book-3768-PE1_COR">Cyient DLM order book</a>; <a href="https://upstox.com/news/market-news/stocks/kaynes-technology-shares-fall-3-strong-execution-but-working-capital-remains-a-key-concern/article-198424/">Kaynes working capital</a>; <a href="https://www.sahi.com/news/kaynes-tech-q1-consolidated-net-profit-falls-to-56-4-crore-yoy-misses-estimates-5226-PE1_COR">Kaynes profit</a>.</li>
+    <li>Other context: <a href="https://www.business-standard.com/markets/news/kaynes-tech-shares-slide-9-as-md-gets-sebi-notice-stock-down-44-in-2025-125031200230_1.html">Kaynes and the SEBI notice (March 2025)</a>; <a href="https://www.electronicsforyou.biz/eb-specials/industry-report/syrma-sgs-makes-67-revenue-growth-in-q1-fy27/">Syrma growth drivers</a>; <a href="https://www.tradingview.com/news/urn:summary_document_slides:quartr.com:3882738:0-cyient-strong-revenue-growth-record-dlm-orders-and-strategic-investments-drive-q1-fy27-momentum/">Cyient's DLM orders</a>.</li>
+    <li>Exports: <a href="https://knnindia.co.in/news/newsdetails/sectors/indias-electronics-exports-jump-24-in-fy26-on-smartphone-surge">electronics exports FY26</a>; <a href="https://www.business-standard.com/amp/companies/news/iphone-exports-hit-record-2-trillion-in-final-year-of-smartphone-pli-126042901178_1.html">iPhone exports and the PLI's final year</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 3.6}, {"y": 2013, "v": -44.1}, {"y": 2014, "v": -12.4}, {"y": 2015, "v": 12.8}, {"y": 2016, "v": -11.5}, {"y": 2017, "v": -3.6}, {"y": 2018, "v": -7.2}, {"y": 2019, "v": -6.8}, {"y": 2020, "v": -5.9}, {"y": 2021, "v": 22.0}, {"y": 2022, "v": -4.3}, {"y": 2023, "v": -0.3}, {"y": 2024, "v": -12.2}, {"y": 2025, "v": -6.2}, {"y": 2026, "v": 2.6}], "AprJul": [{"y": 2012, "v": 13.2}, {"y": 2013, "v": 35.6}, {"y": 2014, "v": 35.0}, {"y": 2015, "v": 24.2}, {"y": 2016, "v": 15.2}, {"y": 2017, "v": 37.5}, {"y": 2018, "v": -28.7}, {"y": 2019, "v": -12.1}, {"y": 2020, "v": 19.6}, {"y": 2021, "v": 6.8}, {"y": 2022, "v": -5.9}, {"y": 2023, "v": 36.4}, {"y": 2024, "v": 35.8}, {"y": 2025, "v": 23.6}, {"y": 2026, "v": 48.1}], "AugSep": [{"y": 2012, "v": 5.1}, {"y": 2013, "v": 42.8}, {"y": 2014, "v": -9.6}, {"y": 2015, "v": 21.0}, {"y": 2016, "v": -10.5}, {"y": 2017, "v": 0.3}, {"y": 2018, "v": -16.9}, {"y": 2019, "v": 1.1}, {"y": 2020, "v": 33.5}, {"y": 2021, "v": 6.6}, {"y": 2022, "v": 3.9}, {"y": 2023, "v": 20.2}, {"y": 2024, "v": 10.9}, {"y": 2025, "v": 0.3}], "OctDec": [{"y": 2012, "v": 13.1}, {"y": 2013, "v": 47.0}, {"y": 2014, "v": 3.8}, {"y": 2015, "v": -13.2}, {"y": 2016, "v": 7.4}, {"y": 2017, "v": 43.2}, {"y": 2018, "v": -5.3}, {"y": 2019, "v": -2.3}, {"y": 2020, "v": 23.2}, {"y": 2021, "v": 29.7}, {"y": 2022, "v": 0.1}, {"y": 2023, "v": -2.2}, {"y": 2024, "v": 35.4}, {"y": 2025, "v": -18.0}], "SepNov": [{"y": 2012, "v": 14.7}, {"y": 2013, "v": 37.9}, {"y": 2014, "v": 11.3}, {"y": 2015, "v": -11.1}, {"y": 2016, "v": 4.8}, {"y": 2017, "v": 25.8}, {"y": 2018, "v": -7.2}, {"y": 2019, "v": -6.0}, {"y": 2020, "v": 38.6}, {"y": 2021, "v": 33.5}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": 1.3}, {"y": 2024, "v": 26.6}, {"y": 2025, "v": -7.2}], "JanMar": [{"y": 2012, "v": 9.1}, {"y": 2013, "v": -48.1}, {"y": 2014, "v": -10.7}, {"y": 2015, "v": 16.4}, {"y": 2016, "v": -14.7}, {"y": 2017, "v": 6.9}, {"y": 2018, "v": -3.8}, {"y": 2019, "v": -9.8}, {"y": 2020, "v": 8.5}, {"y": 2021, "v": 32.0}, {"y": 2022, "v": -9.4}, {"y": 2023, "v": -1.3}, {"y": 2024, "v": -8.5}, {"y": 2025, "v": -22.0}, {"y": 2026, "v": -3.5}]}, "my": {"1": {"2012": 4.8, "2013": -6.1, "2014": 1.3, "2015": 2.5, "2016": -4.1, "2017": 10.3, "2018": 4.4, "2019": -3.0, "2020": 21.7, "2021": 8.2, "2022": -5.4, "2023": -1.0, "2024": 4.1, "2025": -16.9, "2026": -6.6}, "2": {"2012": 4.3, "2013": -18.1, "2014": 4.3, "2015": 24.0, "2016": -6.8, "2017": 0.2, "2018": -8.5, "2019": -4.1, "2020": -8.8, "2021": 26.5, "2022": -10.9, "2023": 1.0, "2024": -3.2, "2025": -9.5, "2026": 8.1}, "3": {"2012": -0.6, "2013": -34.2, "2014": -15.8, "2015": -8.1, "2016": -4.6, "2017": -3.7, "2018": 1.2, "2019": -2.5, "2020": 1.0, "2021": -3.6, "2022": 8.2, "2023": -1.3, "2024": -9.1, "2025": 4.7, "2026": -4.3}, "4": {"2012": -1.7, "2013": 6.9, "2014": 0.9, "2015": 19.8, "2016": 5.6, "2017": 1.4, "2018": -1.5, "2019": 0.5, "2020": 7.2, "2021": 1.3, "2022": 10.3, "2023": 2.3, "2024": 11.6, "2025": 4.1, "2026": 21.5}, "5": {"2012": 9.1, "2013": -16.4, "2014": 3.7, "2015": -4.7, "2016": -13.0, "2017": 1.5, "2018": -3.4, "2019": 2.8, "2020": 0.3, "2021": -4.4, "2022": -9.0, "2023": 19.9, "2024": 1.2, "2025": 6.3, "2026": 3.8}, "6": {"2012": 6.4, "2013": 34.1, "2014": 8.1, "2015": -8.0, "2016": 24.1, "2017": 27.3, "2018": -14.3, "2019": -14.6, "2020": 11.6, "2021": 7.0, "2022": -2.0, "2023": 7.3, "2024": 14.8, "2025": 2.2, "2026": 7.6}, "7": {"2012": -0.7, "2013": 12.0, "2014": 16.3, "2015": 17.7, "2016": -0.6, "2017": 2.3, "2018": -9.1, "2019": -0.7, "2020": -2.6, "2021": 2.4, "2022": -4.6, "2023": 1.0, "2024": 2.9, "2025": 8.4, "2026": 7.6}, "8": {"2012": -6.9, "2013": 31.6, "2014": -8.0, "2015": 13.9, "2016": -12.7, "2017": -1.8, "2018": -12.9, "2019": -2.0, "2020": 15.8, "2021": -8.3, "2022": -2.0, "2023": 16.9, "2024": 2.3, "2025": -1.8, "2026": 7.5}, "9": {"2012": 13.4, "2013": 7.7, "2014": -1.7, "2015": 6.6, "2016": 2.2, "2017": 2.1, "2018": -5.3, "2019": 3.3, "2020": 15.1, "2021": 15.1, "2022": 5.8, "2023": 2.7, "2024": 8.3, "2025": 2.2}, "10": {"2011": -27.8, "2012": 13.1, "2013": 17.9, "2014": -7.3, "2015": -1.3, "2016": 11.2, "2017": 8.4, "2018": -0.6, "2019": -5.3, "2020": 12.4, "2021": 8.4, "2022": -0.5, "2023": 1.7, "2024": 7.6, "2025": -1.7}, "11": {"2011": 2.3, "2012": -11.6, "2013": 6.9, "2014": 21.4, "2015": -15.3, "2016": -7.1, "2017": 13.2, "2018": -1.7, "2019": -3.4, "2020": 4.1, "2021": 7.4, "2022": -9.2, "2023": -3.3, "2024": 9.3, "2025": -7.3}, "12": {"2011": -21.1, "2012": 11.9, "2013": 15.0, "2014": -7.5, "2015": 4.1, "2016": 4.8, "2017": 15.0, "2018": -3.1, "2019": 6.8, "2020": 2.4, "2021": 11.8, "2022": 9.9, "2023": -0.6, "2024": 17.0, "2025": -9.0}}, "basket": ["Dixon Technologies (India) Ltd.", "Syrma SGS Technology Limited", "Amber Enterprises India Ltd.", "Kaynes Technology India Ltd.", "PG Electroplast Limited", "Avalon Technologies Limited", "Cyient DLM Limited", "Centum Electronics Limited", "Optiemus Infracom Limited", "Aimtron Electronics Limited", "Vinyas Innovative Technologies Limited", "Epack Durable Limited", "Virtuoso Optoelectronics Limited", "Elin Electronics Limited"], "nbasket": 14, "start": "Oct 2011", "monthly": [{"m": 1, "abs": 1.7, "rel": 1.0, "hit": 8, "n": 15}, {"m": 2, "abs": -1.3, "rel": -0.1, "hit": 7, "n": 15}, {"m": 3, "abs": -5.0, "rel": -4.8, "hit": 4, "n": 15}, {"m": 4, "abs": 8.6, "rel": 6.0, "hit": 13, "n": 15}, {"m": 5, "abs": 1.0, "rel": -0.2, "hit": 9, "n": 15}, {"m": 6, "abs": 9.2, "rel": 7.4, "hit": 11, "n": 15}, {"m": 7, "abs": 5.7, "rel": 3.5, "hit": 9, "n": 15}, {"m": 8, "abs": 2.5, "rel": 2.1, "hit": 6, "n": 15}, {"m": 9, "abs": 6.3, "rel": 5.5, "hit": 12, "n": 14}, {"m": 10, "abs": 4.5, "rel": 2.4, "hit": 8, "n": 15}, {"m": 11, "abs": 1.3, "rel": 0.4, "hit": 7, "n": 15}, {"m": 12, "abs": 4.5, "rel": 3.8, "hit": 10, "n": 15}], "cy": [{"y": 2012, "b": 84.4, "n": 27.7, "rel": 56.7, "partial": false}, {"y": 2013, "b": 47.3, "n": 6.8, "rel": 40.5, "partial": false}, {"y": 2014, "b": 44.8, "n": 31.4, "rel": 13.4, "partial": false}, {"y": 2015, "b": 46.7, "n": -4.1, "rel": 50.8, "partial": false}, {"y": 2016, "b": -4.1, "n": 3.0, "rel": -7.1, "partial": false}, {"y": 2017, "b": 157.4, "n": 28.6, "rel": 128.8, "partial": false}, {"y": 2018, "b": -42.4, "n": 3.2, "rel": -45.5, "partial": false}, {"y": 2019, "b": -12.1, "n": 12.0, "rel": -24.1, "partial": false}, {"y": 2020, "b": 133.8, "n": 14.9, "rel": 118.9, "partial": false}, {"y": 2021, "b": 137.3, "n": 24.1, "rel": 113.2, "partial": false}, {"y": 2022, "b": -7.6, "n": 4.3, "rel": -11.9, "partial": false}, {"y": 2023, "b": 84.5, "n": 20.0, "rel": 64.5, "partial": false}, {"y": 2024, "b": 102.0, "n": 8.8, "rel": 93.2, "partial": false}, {"y": 2025, "b": -12.2, "n": 10.5, "rel": -22.7, "partial": false}, {"y": 2026, "b": 37.5, "n": -10.7, "rel": 48.2, "partial": true}], "dd": [{"co": "Dixon Technologies (India)", "peak": "Dec 2024", "fp": -31, "y1": -29}, {"co": "Syrma SGS Technology", "peak": "Nov 2025", "fp": 91, "y1": 113}, {"co": "Amber Enterprises India", "peak": "Oct 2025", "fp": -16, "y1": -14}, {"co": "Kaynes Technology India", "peak": "Jan 2025", "fp": -54, "y1": -51}, {"co": "PG Electroplast", "peak": "Jan 2025", "fp": -48, "y1": -7}, {"co": "Avalon Technologies", "peak": "Oct 2025", "fp": 103, "y1": 157}, {"co": "Cyient DLM", "peak": "Feb 2024", "fp": 8, "y1": 96}, {"co": "Centum Electronics", "peak": "Sep 2025", "fp": 46, "y1": 64}, {"co": "Optiemus Infracom", "peak": "Sep 2024", "fp": -31, "y1": -10}, {"co": "Aimtron Electronics", "peak": "Nov 2025", "fp": 64, "y1": 129}, {"co": "Vinyas Innovative Technologies", "peak": "Jul 2025", "fp": 2, "y1": 14}, {"co": "Epack Durable", "peak": "Jan 2025", "fp": -72, "y1": -54}, {"co": "Virtuoso Optoelectronics", "peak": "Jan 2025", "fp": -24, "y1": -1}, {"co": "Elin Electronics", "peak": "Sep 2024", "fp": -67, "y1": -60}, {"co": "Panache Digilife", "peak": "Oct 2025", "fp": 12, "y1": 93}, {"co": "Arham Technologies", "peak": "May 2024", "fp": 15, "y1": 114}], "win": {"FebMar": {"mean": -4.9, "median": -5.9, "hit": 4, "n": 15}, "AprJul": {"mean": 19.0, "median": 23.6, "hit": 12, "n": 15}, "AugSep": {"mean": 7.8, "median": 4.5, "hit": 11, "n": 14}, "OctDec": {"mean": 11.6, "median": 5.6, "hit": 9, "n": 14}, "SepNov": {"mean": 11.3, "median": 8.0, "hit": 9, "n": 14}, "JanMar": {"mean": -3.9, "median": -3.8, "hit": 5, "n": 15}}, "ytd": {"b": 37.5, "n": -10.7}, "notes": {"2012": "+84.4% against +27.7%, on a two-stock basket: PG Electroplast +149%, Centum +17%.", "2013": "+47.3% against +6.8%. Centum +143%; PG Electroplast \u221238%.", "2014": "+44.8% against +31.4%. Centum +398%; PG Electroplast \u221266% as its old CD and optical-disc business collapsed.", "2015": "+46.7% against \u22124.1%. PG Electroplast +97%; Centum \u22127%.", "2016": "\u22124.1% against +3.0%. Centum \u22126%, PG Electroplast \u221211%.", "2017": "+157.4% against +28.6%. PG Electroplast +222%; Dixon listed in September.", "2018": "\u221242.4% against +3.2%, median \u221249%. The small-cap crash: PG Electroplast \u221276%, Dixon \u221251%, Centum \u221248%.", "2019": "\u221212.1% against +12.0%, median +6%. Dixon +84% on the mobile and LED TV opportunity; Optiemus \u221278%, PG Electroplast \u221243%.", "2020": "+133.8% against +14.9%. The mobile PLI scheme launched: Dixon +254%, Optiemus +234%, PG Electroplast +147%, Amber +111%.", "2021": "+137.3% against +24.1%. PG Electroplast +472%, Optiemus +246%, Dixon +105% as PLI schemes extended to ACs and LEDs.", "2022": "\u22127.6% against +4.3%. Amber \u221243% and Dixon \u221229% as consumer demand slowed; PG Electroplast +40%.", "2023": "+84.5% against +20.0%. Kaynes +248% and Syrma +139% after listing; PG Electroplast +111%.", "2024": "+102.0% against +8.8%. PG Electroplast +313%, Kaynes +184%, Dixon +173% at the peak of the EMS re-rating; Syrma \u221212%.", "2025": "\u221212.2% against +10.5%, median \u221222%. Kaynes \u221246% after a SEBI notice to its MD and cash-flow questions, PG Electroplast \u221241%, Epack \u221249%; Aimtron +49%, Syrma +24%.", "2026": "+37.5% against a Nifty \u221210.7%, median +19%. Avalon +189%, Syrma +136%, Cyient DLM +126%, Aimtron +100%, Centum +85%; Kaynes \u221212%, Epack \u221237%, Elin \u221246%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

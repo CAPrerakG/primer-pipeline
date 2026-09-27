@@ -1,0 +1,25 @@
+BASKET 2 names
+2012: basket +96 nifty +28 rel +69 | n=2 median +124 | TOP Rubfila Internatio +148, Apcotex Industries +100 | BOTTOM 
+2013: basket -9 nifty +7 rel -16 | n=2 median -12 | TOP Apcotex Industries -10, Rubfila Internatio -14 | BOTTOM 
+2014: basket +209 nifty +31 rel +177 | n=2 median +213 | TOP Apcotex Industries +288, Rubfila Internatio +138 | BOTTOM 
+2015: basket -1 nifty -4 rel +3 | n=2 median -2 | TOP Apcotex Industries +2, Rubfila Internatio -7 | BOTTOM 
+2016: basket +11 nifty +3 rel +8 | n=2 median +10 | TOP Apcotex Industries +28, Rubfila Internatio -9 | BOTTOM 
+2017: basket +99 nifty +29 rel +70 | n=2 median +97 | TOP Rubfila Internatio +132, Apcotex Industries +62 | BOTTOM 
+2018: basket -24 nifty +3 rel -27 | n=2 median -21 | TOP Apcotex Industries +7, Rubfila Internatio -48 | BOTTOM 
+2019: basket -26 nifty +12 rel -38 | n=2 median -27 | TOP Apcotex Industries -25, Rubfila Internatio -28 | BOTTOM 
+2020: basket +42 nifty +15 rel +28 | n=2 median +44 | TOP Rubfila Internatio +83, Apcotex Industries +6 | BOTTOM 
+2021: basket +96 nifty +24 rel +72 | n=2 median +93 | TOP Apcotex Industries +116, Rubfila Internatio +70 | BOTTOM 
+2022: basket -1 nifty +4 rel -5 | n=2 median +4 | TOP Apcotex Industries +30, Rubfila Internatio -22 | BOTTOM 
+2023: basket +8 nifty +20 rel -12 | n=2 median +6 | TOP Apcotex Industries +9, Rubfila Internatio +3 | BOTTOM 
+2024: basket -13 nifty +9 rel -22 | n=2 median -14 | TOP Rubfila Internatio -1, Apcotex Industries -27 | BOTTOM 
+2025: basket -2 nifty +10 rel -12 | n=2 median -3 | TOP Apcotex Industries +0, Rubfila Internatio -7 | BOTTOM 
+2026: basket +22 nifty -11 rel +33 | n=2 median +26 | TOP Apcotex Industries +62, Rubfila Internatio -10 | BOTTOM 
+MONTH 4 avg +10.5 (12/15): worst years [('2025', -5.3), ('2015', -1.2), ('2019', -0.1)] best years [('2021', 21.6), ('2016', 23.7), ('2022', 26.6)]
+MONTH 6 avg +4.6 (9/15): worst years [('2013', -5.0), ('2026', -3.9), ('2018', -2.8)] best years [('2017', 12.8), ('2020', 12.9), ('2014', 18.4)]
+MONTH 2 avg -5.7 (2/15): worst years [('2015', -17.2), ('2020', -17.1), ('2024', -11.5)] best years [('2025', -2.4), ('2019', 1.3), ('2018', 7.8)]
+WIN FebMar: hit 3/15 median -5.7 | negative years [(2012, -2.3), (2013, -13.7), (2014, -6.4), (2015, -5.7), (2016, -5.7), (2017, -3.2), (2020, -14.9), (2021, -3.4), (2022, -12.2), (2024, -21.4), (2025, -10.5), (2026, -3.6)] | biggest [(2018, 6.5), (2019, 3.2)]
+WIN AprJul: hit 12/15 median +23.0 | negative years [(2018, -7.5), (2019, -8.2), (2023, -3.6)] | biggest [(2021, 80.8), (2017, 48.4)]
+WIN AugSep: hit 6/14 median -1.5 | negative years [(2013, -1.6), (2015, -15.3), (2016, -6.1), (2018, -12.3), (2019, -1.5), (2021, -3.1), (2024, -16.2), (2025, -1.5)] | biggest [(2014, 59.6), (2020, 22.5)]
+WIN OctDec: hit 4/14 median -2.9 | negative years [(2013, -1.6), (2015, -12.0), (2016, -0.8), (2017, -0.3), (2018, -4.3), (2019, -19.4), (2021, -6.6), (2022, -20.9), (2023, -11.1), (2025, -13.7)] | biggest [(2014, 16.0), (2012, 10.6)]
+WIN SepNov: hit 5/14 median -4.1 | negative years [(2015, -8.3), (2016, -1.0), (2018, -10.7), (2019, -20.6), (2021, -3.3), (2022, -23.8), (2023, -5.1), (2024, -8.2), (2025, -5.0)] | biggest [(2014, 42.2), (2012, 29.9)]
+WIN JanMar: hit 1/15 median -7.8 | negative years [(2012, -7.8), (2013, -22.3), (2014, -9.3), (2015, -5.2), (2016, -10.7), (2018, -5.1), (2019, -11.3), (2020, -10.5), (2021, -0.6), (2022, -4.9), (2023, -4.3), (2024, -16.8), (2025, -14.9), (2026, -3.2)] | biggest [(2017, 7.7), (2021, -0.6)]

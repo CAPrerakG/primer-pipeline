@@ -1,0 +1,278 @@
+ABRASIVES (3): Abrasives & Bearings=3
+ADVERTISING & MARKETING (22): Advertising & Media Agencies=6; IT Enabled Services=3; Web based media and service=2; Media & Entertainment=2; Household Appliances=1; Other Consumer Services=1; Other Financial Services=1; Trading - Textile Products=1; Software Products=1; Furniture, Home Furnishing=1; Personal Care=1; Other Agricultural Products=1; None=1
+AEROSPACE & DEFENCE MANUFACTURING (9): Aerospace & Defense=7; Industrial Products=2
+AGRICULTURE & COMMODITY TRADING (55): Trading & Distributors=17; Other Agricultural Products=13; Other Textile Products=4; Edible Oil=2; Other Food Products=2; Industrial Products=2; Diversified Commercial Services=2; Fertilizers=2; Tea & Coffee=2; Trading - Metals=1; Iron & Steel Products=1; Investment Company=1; Other Financial Services=1; Commodity Chemicals=1; Plastic Products - Industrial=1; Non Banking Financial Company (NBFC)=1; Civil Construction=1; Consulting Services=1
+AGROCHEMICALS (39): Pesticides & Agrochemicals=27; Trading & Distributors=2; Specialty Chemicals=2; Other Agricultural Products=2; Fertilizers=2; Consumer Electronics=2; Computers - Software & Consulting=1; Gems, Jewellery And Watches=1
+AIRLINES (2): Airline=2
+AIRPORTS & AVIATION SERVICES (5): Airport & Airport services=2; Airline=1; Residential, Commercial Projects=1; Civil Construction=1
+ALCOHOL & SOLVENT CHEMICALS (1): Edible Oil=1
+ALCOHOLIC BEVERAGES (25): Breweries & Distilleries=20; Trading & Distributors=2; Non Banking Financial Company (NBFC)=1; Other Food Products=1; Diversified Commercial Services=1
+ALUMINIUM (19): Aluminium=9; Aluminium, Copper & Zinc Products=5; Trading & Distributors=3; Commodity Chemicals=1; Industrial Products=1
+APPAREL & FOOTWEAR RETAIL (42): Garments & Apparels=22; Speciality Retail=11; Footwear=5; Other Textile Products=3; Diversified Retail=1
+APPAREL MANUFACTURING (38): Garments & Apparels=15; Other Textile Products=10; Trading & Distributors=4; Trading - Textile Products=3; Gems, Jewellery And Watches=3; Leather And Leather Products=2; E-Retail/ E-Commerce=1
+AROMA & FLAVOUR CHEMICALS (8): Specialty Chemicals=4; Commodity Chemicals=2; Household Products=1; Trading & Distributors=1
+ASSET MANAGEMENT (13): Asset Management Company=9; Non Banking Financial Company (NBFC)=2; Other Financial Services=2
+AUTO COMPONENTS (77): Auto Components & Equipments=70; Other Textile Products=2; Computers Hardware & Equipments=1; Trading & Distributors=1; Trading - Auto Components=1; Castings & Forgings=1; Other Industrial Products=1
+AUTO DEALERSHIPS (5): Auto -Dealer=3; Trading - Auto components=1; Other Financial Services=1
+AUTO ELECTRICALS & ELECTRONICS (14): Auto Components & Equipments=9; Industrial Products=2; Iron & Steel Products=1; Passenger Cars & Utility Vehicles=1; Aerospace & Defense=1
+AUTOMOBILE MANUFACTURERS (1): Passenger Cars & Utility Vehicles=1
+BANKING & FINANCIAL SOFTWARE (6): Software Products=3; Computers - Software & Consulting=2; IT Enabled Services=1
+BATTERIES & ENERGY STORAGE (15): Auto Components & Equipments=4; Household Products=4; Other Agricultural Products=1; Other Industrial Products=1; Industrial Minerals=1; Electrodes & Refractories=1; Non Banking Financial Company (NBFC)=1; Computers - Software & Consulting=1; Power Generation=1
+BEARINGS (15): Auto Components & Equipments=7; Abrasives & Bearings=5; Industrial Products=2; Other Industrial Products=1
+BIOENERGY & DISTILLERY EQUIPMENT (1): Industrial Products=1
+BIOFUELS & ETHANOL (7): Breweries & Distilleries=2; Commodity Chemicals=2; Refineries & Marketing=1; Other Agricultural Products=1; Other Textile Products=1
+BIOLOGICS & VACCINES (14): Pharmaceuticals=4; Biotechnology=2; Commodity Chemicals=2; Other Agricultural Products=2; Software Products=1; Pesticides & Agrochemicals=1; Medical Equipment & Supplies=1; Healthcare Service Provider=1
+BOILERS TURBINES & POWER EQUIPMENT (14): Heavy Electrical Equipment=6; Iron & Steel Products=3; Industrial Products=2; Power Generation=1; Civil Construction=1; Other Industrial Products=1
+BPM & OUTSOURCING SERVICES (19): Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)=10; IT Enabled Services=7; Gems, Jewellery And Watches=1; Healthcare Service Provider=1
+BUILDING HARDWARE (1): Furniture, Home Furnishing=1
+CARBON BLACK (3): Waste Management=1; Carbon Black=1; Industrial Minerals=1
+CASTINGS & FOUNDRIES (28): Castings & Forgings=9; Auto Components & Equipments=8; Other Industrial Products=3; Trading - Metals=2; Iron & Steel Products=2; Industrial Products=1; Specialty Chemicals=1; Coal=1; Breweries & Distilleries=1
+CEMENT (35): Cement & Cement Products=31; Iron & Steel Products=1; Other Textile Products=1; Civil Construction=1; Other Construction Materials=1
+CHEMICAL DISTRIBUTION (16): Trading - Chemicals=5; Trading & Distributors=2; Electrodes & Refractories=1; Specialty Chemicals=1; Packaging=1; Other Food Products=1; Other Agricultural Products=1; Non Banking Financial Company (NBFC)=1; Commodity Chemicals=1; Diversified Commercial Services=1; Industrial Gases=1
+CHLOR-ALKALI & SODA ASH (14): Commodity Chemicals=9; Petrochemicals=1; Electrodes & Refractories=1; Industrial Products=1; Non Banking Financial Company (NBFC)=1; Other Food Products=1
+CINEMA EXHIBITION (6): Film Production, Distribution & Exhibition=4; Speciality Retail=1; Advertising & Media Agencies=1
+CITY GAS DISTRIBUTION (4): LPG/CNG/PNG/LNG Supplier=4
+CLEANROOM & HVAC ENGINEERING (3): Industrial Products=1; Medical Equipment & Supplies=1; Civil Construction=1
+CLOUD COMMUNICATIONS (3): Web based media and service=1; Other Telecom Services=1; Software Products=1
+COAL & COKE (12): Coal=4; Diversified Commercial Services=1; Trading Coal=1; Trading & Distributors=1; Diversified=1; Distributors=1; Software Products=1; Waste Management=1; Residential, Commercial Projects=1
+COLD CHAIN LOGISTICS (4): Diversified Commercial Services=2; Residential, Commercial Projects=1; Logistics Solution Provider=1
+COMMERCIAL VEHICLES (5): Commercial Vehicles=3; Passenger Cars & Utility Vehicles=2
+COMPRESSORS (3): Compressors, Pumps & Diesel Engines=3
+CONSTRUCTION & INFRASTRUCTURE EPC (98): Civil Construction=54; Residential, Commercial Projects=22; Diversified Commercial Services=4; Trading & Distributors=4; Non Banking Financial Company (NBFC)=3; Other Construction Materials=2; Other Electrical Equipment=2; Iron & Steel Products=1; Other Industrial Products=1; Gas Transmission/Marketing=1; Power Generation=1; Telecom - Infrastructure=1; Water Supply & Management=1; Other Financial Services=1
+CONSTRUCTION & MINING EQUIPMENT (9): Industrial Products=4; Construction Vehicles=3; Diversified Commercial Services=1; Dairy Products=1
+CONSUMER APPLIANCES & ELECTRONICS (35): Household Appliances=19; Consumer Electronics=5; Houseware=4; Trading & Distributors=2; Glass - Industrial=1; Glass - Consumer=1; Other Industrial Products=1; Consulting Services=1; Industrial Products=1
+CONSUMER CONTRACT MANUFACTURING (4): Other Financial Services=1; Pharmaceuticals=1; Diversified FMCG=1; Personal Care=1
+CONSUMER PRODUCTS (17): Diversified Retail=3; Garments & Apparels=3; Leisure Products=1; E-Retail/ E-Commerce=1; Packaged Foods=1; Investment Company=1; Diversified=1; Gems, Jewellery And Watches=1; Hotels & Resorts=1; Cigarettes & Tobacco Products=1; Non Banking Financial Company (NBFC)=1; Trading & Distributors=1; IT Enabled Services=1
+CONTAINER & WAREHOUSE LOGISTICS (14): Logistics Solution Provider=5; Diversified Commercial Services=2; Residential, Commercial Projects=1; Food Storage Facilities=1; Paper & Paper Products=1; Investment Company=1; E-Retail/ E-Commerce=1; Industrial Products=1; Other Textile Products=1
+COPPER (6): Aluminium, Copper & Zinc Products=3; Copper=2; Aluminium=1
+COTTON & BLENDED YARN (75): Other Textile Products=65; Trading & Distributors=4; Packaged Foods=2; Medical Equipment & Supplies=1; Other Electrical Equipment=1; Packaging=1; Precious Metals=1
+CREDIT CARDS (1): Non Banking Financial Company (NBFC)=1
+CREDIT RATING AGENCIES (3): Ratings=2; Other Financial Services=1
+CRYOGENIC EQUIPMENT (2): Industrial Products=1; Other Industrial Products=1
+CYBERSECURITY (7): Computers - Software & Consulting=2; Software Products=2; Consulting Services=1; IT Enabled Services=1; Healthcare Research, Analytics & Technology=1
+DAIRY (13): Dairy Products=8; Other Agricultural Products=2; Jute & Jute Products=1; Packaged Foods=1; Specialty Chemicals=1
+DATA ANALYTICS & AI SERVICES (3): Computers - Software & Consulting=3
+DATA CENTRES & CLOUD INFRASTRUCTURE (3): IT Enabled Services=3
+DEFENCE ELECTRONICS (9): Aerospace & Defense=7; Industrial Products=1; Auto Components & Equipments=1
+DEFENCE SERVICES (1): Aerospace & Defense=1
+DIAGNOSTICS (18): Healthcare Service Provider=13; Medical Equipment & Supplies=3; Hotels & Resorts=1; Pharmaceuticals=1
+DIVERSIFIED & OTHER LENDING (249): Non Banking Financial Company (NBFC)=157; Other Financial Services=34; Diversified Commercial Services=19; Investment Company=11; Trading & Distributors=4; Stockbroking & Allied=4; Financial Products Distributor=2; Financial Institution=2; Other Capital Market related Services=2; Iron & Steel Products=2; Breweries & Distilleries=1; IT Enabled Services=1; Healthcare Service Provider=1; Consulting Services=1; Other Construction Materials=1; Real Estate related services=1; Other Electrical Equipment=1; Logistics Solution Provider=1; Residential, Commercial Projects=1; Cement & Cement Products=1; Housing Finance Company=1; Other Textile Products=1
+DIVERSIFIED BUSINESSES (53): Trading & Distributors=11; Diversified=3; Non Banking Financial Company (NBFC)=3; Pharmaceuticals=2; Trading - Metals=2; Other Textile Products=2; Cement & Cement Products=2; Gems, Jewellery And Watches=2; Garments & Apparels=2; Other Electrical Equipment=2; Iron & Steel Products=2; Trading - Minerals=1; Road Assets–Toll, Annuity, Hybrid-Annuity=1; Computers Hardware & Equipments=1; Holding Company=1; Edible Oil=1; Residential, Commercial Projects=1; Industrial Products=1; Diversified Commercial Services=1; Plastic Products - Industrial=1; Leather And Leather Products=1; Hotels & Resorts=1; Film Production, Distribution & Exhibition=1; Ferro & Silica Manganese=1; Power Generation=1; Packaging=1; E-Retail/ E-Commerce=1; Refineries & Marketing=1; Civil Construction=1; Petrochemicals=1; Waste Management=1
+DIVERSIFIED FINANCIAL SERVICES (11): Investment Company=3; Holding Company=3; Non Banking Financial Company (NBFC)=2; Other Financial Services=2; Trading & Distributors=1
+DIVERSIFIED METALS (1): Diversified Metals=1
+DREDGING (2): Dredging=2
+DRONES & SPACE TECHNOLOGY (6): Aerospace & Defense=2; Computers - Software & Consulting=2; Education=1; Diversified Commercial Services=1
+DYES & PIGMENTS (29): Dyes And Pigments=12; Specialty Chemicals=10; Other Textile Products=2; Other Agricultural Products=2; Diversified=1; Pesticides & Agrochemicals=1; Commodity Chemicals=1
+E-COMMERCE & INTERNET RETAIL (14): E-Retail/ E-Commerce=6; Internet & Catalogue Retail=3; Trading & Distributors=3; Non Banking Financial Company (NBFC)=1; Investment Company=1
+EDIBLE OILS (31): Edible Oil=20; Trading & Distributors=4; Other Agricultural Products=4; Other Food Products=2; Other Textile Products=1
+EDUCATION & TRAINING (33): Education=17; E-Learning=9; Software Products=2; Printing & Publication=1; Internet & Catalogue Retail=1; IT Enabled Services=1; Computers - Software & Consulting=1; Tour, Travel Related Services=1
+ELECTRIC METERS (2): Power Generation=1; Other Electrical Equipment=1
+ELECTRIC MOBILITY & CHARGING (4): Power Distribution=1; Heavy Electrical Equipment=1; Other Electrical Equipment=1; Road Transport=1
+ELECTRIC MOTORS & GENERATORS (5): Heavy Electrical Equipment=3; Industrial Products=1; Other Electrical Equipment=1
+ELECTRICAL EQUIPMENT (18): Heavy Electrical Equipment=5; Other Electrical Equipment=3; Civil Construction=2; Trading & Distributors=2; Industrial Products=2; Consumer Electronics=1; Compressors, Pumps & Diesel Engines=1; Multi Utilities=1; Cables - Electricals=1
+ELECTRICAL EQUIPMENT REPAIR (1): Diversified Commercial Services=1
+ELECTRICAL INSULATORS & BUSHINGS (4): Other Electrical Equipment=2; Other Construction Materials=1; Civil Construction=1
+ELECTRONIC COMPONENTS & MATERIALS (8): IT Enabled Services=1; Auto Components & Equipments=1; Industrial Products=1; Other Industrial Products=1; Other Construction Materials=1; Leisure Products=1; Other Electrical Equipment=1; Iron & Steel Products=1
+ELECTRONIC EQUIPMENT (5): Trading & Distributors=1; Aerospace & Defense=1; Other Industrial Products=1; Industrial Products=1; Personal Care=1
+ELECTRONICS MANUFACTURING SERVICES (18): Industrial Products=5; Consumer Electronics=4; Household Appliances=3; Aerospace & Defense=2; Other Electrical Equipment=1; Telecom -  Equipment & Accessories=1; IT Enabled Services=1; Diversified consumer products=1
+ELECTRONICS RETAIL (8): Speciality Retail=6; Diversified Retail=2
+ENGINEERING CONSULTANCY (2): Civil Construction=2
+ENGINEERING R&D SERVICES (12): IT Enabled Services=6; Computers - Software & Consulting=4; Aerospace & Defense=1; Airline=1
+EVENTS & EXHIBITIONS (7): Other Consumer Services=3; Film Production, Distribution & Exhibition=1; Diversified Commercial Services=1; Trading & Distributors=1; Residential, Commercial Projects=1
+EXCHANGE-TRADED FUNDS (1): None=1
+EXPLOSIVES (5): Explosives=4; Specialty Chemicals=1
+EXPRESS & PARCEL LOGISTICS (5): Logistics Solution Provider=4; Trading Coal=1
+EYEWEAR (1): Speciality Retail=1
+FABRICS & TEXTILE PROCESSING (43): Other Textile Products=30; Garments & Apparels=4; Trading & Distributors=3; Plastic Products - Consumer=1; Packaging=1; Paper & Paper Products=1; Commodity Chemicals=1; Distributors=1; Plastic Products - Industrial=1
+FASTENERS (6): Auto Components & Equipments=5; Industrial Products=1
+FERRO ALLOYS (13): Ferro & Silica Manganese=7; Iron & Steel Products=3; Distributors=1; Electrodes & Refractories=1; Iron & Steel=1
+FERTILIZERS (20): Fertilizers=18; Commodity Chemicals=2
+FILM MUSIC & CONTENT (51): Film Production, Distribution & Exhibition=19; Media & Entertainment=14; Advertising & Media Agencies=4; TV Broadcasting & Software Production=2; Trading & Distributors=2; Consumer Electronics=2; Packaged Foods=1; Digital Entertainment=1; Residential, Commercial Projects=1; Computers - Software & Consulting=1; Speciality Retail=1; Real Estate related services=1; Non Banking Financial Company (NBFC)=1; Civil Construction=1
+FINANCIAL DATA & RESEARCH (2): Non Banking Financial Company (NBFC)=1; Other Financial Services=1
+FINANCIAL PRODUCT DISTRIBUTION (1): Financial Products Distributor=1
+FLEXIBLE HOSES & PIPING SYSTEMS (3): Iron & Steel Products=2; Industrial Products=1
+FLEXIBLE PACKAGING & FILMS (29): Packaging=19; Plastic Products - Industrial=5; Film Production, Distribution & Exhibition=1; Plastic Products - Consumer=1; Paper & Paper Products=1; Auto Components & Equipments=1; Commodity Chemicals=1
+FLEXIBLE WORKSPACES (9): Diversified Commercial Services=8; Internet & Catalogue Retail=1
+FLUOROCHEMICALS (5): Specialty Chemicals=2; Commodity Chemicals=2; Holding Company=1
+FOOD & AGRICULTURAL MACHINERY (3): Industrial Products=1; Auto Components & Equipments=1; Other Industrial Products=1
+FOOD DELIVERY & QUICK COMMERCE (2): E-Retail/ E-Commerce=2
+FOOTWEAR (11): Footwear=6; Leather And Leather Products=2; Trading & Distributors=1; Gems, Jewellery And Watches=1; Garments & Apparels=1
+FOREIGN EXCHANGE & REMITTANCES (5): Other Financial Services=4; Financial Technology (Fintech)=1
+FORGINGS (31): Auto Components & Equipments=16; Castings & Forgings=11; Iron & Steel Products=2; Heavy Electrical Equipment=1; Edible Oil=1
+FOUNDRY & METAL PROCESSING EQUIPMENT (1): Industrial Products=1
+FREIGHT FORWARDING & LOGISTICS (63): Logistics Solution Provider=41; Road Transport=6; Diversified Commercial Services=5; Trading & Distributors=2; Diversified=1; Transport Related Services=1; Plastic Products - Industrial=1; Other Agricultural Products=1; Oil Storage & Transportation=1; E-Retail/ E-Commerce=1; Computers - Software & Consulting=1; Tour, Travel Related Services=1; Civil Construction=1
+FURNITURE & HOME PRODUCTS (23): Furniture, Home Furnishing=10; Plastic Products - Consumer=3; Houseware=2; Diversified Commercial Services=2; Plastic Products - Industrial=2; Garments & Apparels=1; Other Textile Products=1; Speciality Retail=1; Specialty Chemicals=1
+GAS CYLINDERS & CONTAINERS (8): Trading & Distributors=3; Industrial Products=2; Packaging=1; Other Electrical Equipment=1; Other Industrial Products=1
+GAS TRANSMISSION & LNG (3): LPG/CNG/PNG/LNG Supplier=2; Gas Transmission/Marketing=1
+GELATIN & FOOD INGREDIENTS (2): Specialty Chemicals=2
+GENERAL INSURANCE (4): General Insurance=4
+GEOSPATIAL & MAPPING (7): IT Enabled Services=3; Trading & Distributors=1; Software Products=1; Investment Company=1; Other Financial Services=1
+GLASS (11): Glass - Industrial=4; Packaging=2; Auto Components & Equipments=2; Other Construction Materials=2; Gems, Jewellery And Watches=1
+GOLD FINANCE (3): Non Banking Financial Company (NBFC)=3
+GRAPHITE & CARBON MATERIALS (2): Carbon Black=1; Petrochemicals=1
+GRAPHITE ELECTRODES (2): Electrodes & Refractories=2
+HEALTH INSURANCE (2): General Insurance=2
+HEALTHCARE ADMINISTRATION SERVICES (1): Insurance Distributors=1
+HEAT EXCHANGERS & PROCESS EQUIPMENT (14): Industrial Products=11; Other Industrial Products=1; Iron & Steel Products=1; Civil Construction=1
+HOME TEXTILES (9): Other Textile Products=8; Furniture, Home Furnishing=1
+HOSPITALS (46): Hospital=34; Healthcare Service Provider=8; Hotels & Resorts=2; Wellness=1; Medical Equipment & Supplies=1
+HOTELS & RESORTS (59): Hotels & Resorts=55; Amusement Parks/ Other Recreation=1; Other Agricultural Products=1; Restaurants=1; Other Financial Services=1
+HOUSING FINANCE (19): Housing Finance Company=18; Diversified Commercial Services=1
+HYDRAULICS & MOTION CONTROL (8): Industrial Products=3; Commodity Chemicals=1; Other Industrial Products=1; Heavy Electrical Equipment=1; Auto Components & Equipments=1; Compressors, Pumps & Diesel Engines=1
+INDUSTRIAL AUTOMATION & INSTRUMENTATION (14): Industrial Products=7; Other Electrical Equipment=4; Computers - Software & Consulting=1; E-Retail/ E-Commerce=1; Trading & Distributors=1
+INDUSTRIAL ENGINES (4): Compressors, Pumps & Diesel Engines=3; Cement & Cement Products=1
+INDUSTRIAL FILTERS & SEPARATION (2): Industrial Products=1; Other Utilities=1
+INDUSTRIAL FURNACES & HEATING (1): Industrial Products=1
+INDUSTRIAL GASES (7): Industrial Gases=4; Commodity Chemicals=2; Refineries & Marketing=1
+INDUSTRIAL GEARS & TRANSMISSION (6): Industrial Products=3; Heavy Electrical Equipment=1; Other Industrial Products=1; Rubber=1
+INDUSTRIAL HVAC & REFRIGERATION (2): Industrial Products=1; Aerospace & Defense=1
+INDUSTRIAL MACHINERY (28): Industrial Products=10; Other Industrial Products=3; Auto Components & Equipments=2; Specialty Chemicals=2; Civil Construction=2; Diversified Commercial Services=2; Trading & Distributors=1; Gems, Jewellery And Watches=1; Computers - Software & Consulting=1; Aerospace & Defense=1; Iron & Steel Products=1; Packaging=1; Cables - Electricals=1
+INDUSTRIAL MINERALS & MINING (16): Industrial Minerals=6; Industrial Products=2; Other Construction Materials=2; Consulting Services=1; Specialty Chemicals=1; Investment Company=1; IT Enabled Services=1; Granites & Marbles=1; Trading - Minerals=1
+INDUSTRIAL PLASTICS & COMPOSITES (32): Plastic Products - Industrial=13; Packaging=7; Plastic Products - Consumer=2; Furniture, Home Furnishing=2; Specialty Chemicals=1; Waste Management=1; Houseware=1; Other Electrical Equipment=1; Printing Inks=1; Petrochemicals=1; Trading & Distributors=1; Commodity Chemicals=1
+INDUSTRIAL RUBBER PRODUCTS (6): Rubber=4; Tyres & Rubber Products=1; Commodity Chemicals=1
+INDUSTRIAL SAFETY PRODUCTS (4): Diversified Commercial Services=1; Diversified=1; Other Industrial Products=1; Aluminium=1
+INDUSTRIAL TOOLS (3): Iron & Steel Products=2; Computers - Software & Consulting=1
+INFRASTRUCTURE FINANCE (9): Financial Institution=6; Non Banking Financial Company (NBFC)=3
+INFRASTRUCTURE INVESTMENT TRUSTS (19): Road AssetsToll, Annuity, Hybrid-Annuity=9; None=4; Power - Transmission=3; Civil Construction=2; Diversified Commercial Services=1
+INORGANIC & COMMODITY CHEMICALS (18): Specialty Chemicals=7; Commodity Chemicals=4; Trading - Chemicals=2; Software Products=1; Diversified Commercial Services=1; Other Construction Materials=1; Pharmaceuticals=1; Dyes And Pigments=1
+INSURANCE DISTRIBUTION (2): Financial Technology (Fintech)=2
+INTEGRATED TEXTILES (42): Other Textile Products=27; Trading & Distributors=6; Plastic Products - Industrial=2; Trading - Textile Products=2; Healthcare Research, Analytics & Technology=1; Garments & Apparels=1; Consulting Services=1; Rubber=1; Residential, Commercial Projects=1
+INTERNET PLATFORMS (9): Internet & Catalogue Retail=3; IT Enabled Services=2; E-Retail/ E-Commerce=1; Computers - Software & Consulting=1; Residential, Commercial Projects=1; Industrial Products=1
+INVESTMENT HOLDING COMPANIES (88): Investment Company=30; Non Banking Financial Company (NBFC)=21; Holding Company=6; Diversified Commercial Services=5; Residential, Commercial Projects=4; Trading & Distributors=4; Other Financial Services=4; Iron & Steel Products=2; Packaged Foods=1; Packaging=1; Tea & Coffee=1; Industrial Products=1; Dealers-Commercial Vehicles, Tractors, Construction Vehicles=1; Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)=1; Computers - Software & Consulting=1; Real Estate related services=1; Consulting Services=1; Other Capital Market related Services=1; Trading - Chemicals=1; Sugar=1
+IRON ORE & MANGANESE MINING (4): Industrial Minerals=3; Iron & Steel=1
+IT HARDWARE & DISTRIBUTION (30): Computers Hardware & Equipments=14; Trading & Distributors=4; Software Products=3; Computers - Software & Consulting=3; IT Enabled Services=2; Education=1; Pharmaceuticals=1; Diversified Commercial Services=1; Consumer Electronics=1
+IT SERVICES & CONSULTING (128): Computers - Software & Consulting=47; IT Enabled Services=37; Software Products=12; Diversified Commercial Services=8; Computers Hardware & Equipments=4; Non Banking Financial Company (NBFC)=3; Civil Construction=3; Business Process Outsourcing (BPO)/ Knowledge Process Outsourcing (KPO)=2; Other Telecom Services=2; Leather And Leather Products=1; Telecom - Cellular & Fixed line services=1; Other Agricultural Products=1; Healthcare Research, Analytics & Technology=1; Investment Company=1; Auto Components & Equipments=1; Education=1; Consulting Services=1; Data Processing Services=1; Restaurants=1
+JEWELLERY RETAIL & MANUFACTURING (70): Gems, Jewellery And Watches=55; Trading & Distributors=6; Other Textile Products=2; Speciality Retail=1; Residential, Commercial Projects=1; Garments & Apparels=1; Trading - Minerals=1; Diversified=1; Holding Company=1; IT Enabled Services=1
+JUTE PRODUCTS (7): Jute & Jute Products=4; Other Textile Products=1; Packaging=1; Specialty Chemicals=1
+LEATHER & LEATHER PRODUCTS (6): Leather And Leather Products=4; Trading & Distributors=1; Granites & Marbles=1
+LEISURE & GAMING (12): Amusement Parks/ Other Recreation=5; Digital Entertainment=2; Hotels & Resorts=1; Software Products=1; Civil Construction=1; Other Financial Services=1; None=1
+LIFE INSURANCE (6): Life Insurance=6
+LIGHTING & ELECTRICAL ACCESSORIES (8): Other Electrical Equipment=2; Consumer Electronics=2; Household Appliances=1; Auto Components & Equipments=1; Cables - Electricals=1; Trading & Distributors=1
+LUBRICANTS & SPECIALTY OILS (9): Lubricants=7; Computers Hardware & Equipments=1; Refineries & Marketing=1
+LUGGAGE & TRAVEL ACCESSORIES (3): Plastic Products - Consumer=2; Diversified consumer products=1
+MACHINE TOOLS (16): Industrial Products=13; Auto Components & Equipments=1; Castings & Forgings=1; Aerospace & Defense=1
+MATERIAL HANDLING EQUIPMENT (10): Industrial Products=7; Road Transport=1; Aerospace & Defense=1; Residential, Commercial Projects=1
+MEAT & POULTRY PROCESSING (3): Meat Products including Poultry=3
+MEDICAL DEVICES & SUPPLIES (17): Medical Equipment & Supplies=10; Consumer Electronics=1; Personal Care=1; Pharmaceuticals=1; Oil Equipment & Services=1; Other Financial Services=1; Packaging=1; Diversified consumer products=1
+METAL FABRICATION & ENGINEERING (23): Industrial Products=8; Auto Components & Equipments=6; Other Electrical Equipment=2; Civil Construction=2; Aerospace & Defense=1; Furniture, Home Furnishing=1; Other Industrial Products=1; Construction Vehicles=1; Castings & Forgings=1
+METAL PACKAGING (8): Packaging=6; Aluminium, Copper & Zinc Products=1; Aluminium=1
+METAL RECYCLING (8): Aluminium, Copper & Zinc Products=3; Diversified Metals=2; Industrial Minerals=1; Ship Building & Allied Services=1; Trading - Metals=1
+METAL TRADING (12): Trading & Distributors=5; Iron & Steel Products=2; Industrial Products=1; Aluminium=1; Trading - Metals=1; Specialty Chemicals=1; Non Banking Financial Company (NBFC)=1
+MICROFINANCE (8): Microfinance Institutions=5; Non Banking Financial Company (NBFC)=3
+MOTORCYCLE HELMETS & SAFETY ACCESSORIES (1): Auto Components & Equipments=1
+NON-ALCOHOLIC BEVERAGES (4): Other Beverages=2; Trading & Distributors=1; Non Banking Financial Company (NBFC)=1
+NON-FERROUS METALS (5): Aluminium=1; Iron & Steel Products=1; Aerospace & Defense=1; Plastic Products - Industrial=1; Non Banking Financial Company (NBFC)=1
+NUTRACEUTICALS & CONSUMER HEALTH (29): Pharmaceuticals=11; Healthcare Service Provider=4; Packaged Foods=2; Other Food Products=2; Hospital=1; Biotechnology=1; Amusement Parks/ Other Recreation=1; Wellness=1; Medical Equipment & Supplies=1; Pesticides & Agrochemicals=1; Trading & Distributors=1; Software Products=1; Distributors=1; Diversified=1
+OIL & GAS EPC (1): Civil Construction=1
+OIL & GAS EXPLORATION (6): Oil Exploration & Production=6
+OIL REFINING & MARKETING (5): Refineries & Marketing=5
+OILFIELD & DRILLING SERVICES (16): Offshore Support Solution Drilling=5; Oil Equipment & Services=4; Shipping=3; Industrial Products=2; Diversified Commercial Services=1; Port & Port services=1
+PACKAGED FOODS & FOOD PROCESSING (88): Packaged Foods=31; Other Agricultural Products=13; Other Food Products=12; Specialty Chemicals=5; Dairy Products=5; Trading & Distributors=3; Edible Oil=3; Other Textile Products=3; Other Beverages=2; Hotels & Resorts=2; Pharmaceuticals=2; Diversified Commercial Services=1; Commodity Chemicals=1; Packaging=1; Sugar=1; Paper & Paper Products=1; Biotechnology=1; Tea & Coffee=1
+PACKAGING PRODUCTS (29): Packaging=15; Other Textile Products=3; Plastic Products - Industrial=2; Paper & Paper Products=2; Pharmaceuticals=2; Healthcare Research, Analytics & Technology=1; None=1; Trading & Distributors=1; Iron & Steel Products=1; Civil Construction=1
+PAINTS COATINGS & ADHESIVES (27): Paints=10; Specialty Chemicals=9; Packaging=1; Software Products=1; Dyes And Pigments=1; Plastic Products - Industrial=1; Iron & Steel Products=1; Trading & Distributors=1; Commodity Chemicals=1; Other Industrial Products=1
+PAPER & PAPERBOARD (42): Paper & Paper Products=35; Trading & Distributors=2; Packaging=2; Other Textile Products=2; Edible Oil=1
+PASSENGER VEHICLES (4): Passenger Cars & Utility Vehicles=4
+PAYMENTS & FINTECH (24): Financial Technology (Fintech)=9; Other Financial Services=3; Computers - Software & Consulting=2; IT Enabled Services=2; Software Products=2; Non Banking Financial Company (NBFC)=2; Stockbroking & Allied=1; Hotels & Resorts=1; Other Bank=1; E-Retail/ E-Commerce=1
+PERSONAL & HOME SERVICES (1): E-Retail/ E-Commerce=1
+PERSONAL CARE & HOUSEHOLD PRODUCTS (23): Personal Care=10; Household Products=3; Distributors=2; Trading & Distributors=2; Edible Oil=2; Education=1; Diversified FMCG=1; Medical Equipment & Supplies=1; Diversified Retail=1
+PETROCHEMICALS & POLYMERS (20): Commodity Chemicals=5; Petrochemicals=5; Other Textile Products=5; Trading - Chemicals=2; Industrial Products=1; Plastic Products - Industrial=1; Specialty Chemicals=1
+PETROLEUM PRODUCTS & TRADING (8): Petrochemicals=1; Commodity Chemicals=1; Industrial Minerals=1; Trading & Distributors=1; Refineries & Marketing=1; Lubricants=1; Diversified Commercial Services=1; Breweries & Distilleries=1
+PHARMA APIS & INTERMEDIATES (57): Pharmaceuticals=52; Commodity Chemicals=3; Paper & Paper Products=1; Pesticides & Agrochemicals=1
+PHARMA CONTRACT RESEARCH & MANUFACTURING (21): Pharmaceuticals=15; Healthcare Research, Analytics & Technology=4; Biotechnology=2
+PHARMA DISTRIBUTION & RETAIL (11): Pharmaceuticals=3; Trading & Distributors=3; Pharmacy Retail=2; Hospital=1; Aluminium=1; Non Banking Financial Company (NBFC)=1
+PHARMA EXCIPIENTS (4): Pharmaceuticals=2; Specialty Chemicals=2
+PHARMA FORMULATIONS (105): Pharmaceuticals=91; Specialty Chemicals=3; Trading & Distributors=3; Diversified Commercial Services=2; Plastic Products - Industrial=1; Gems, Jewellery And Watches=1; Computers - Software & Consulting=1; Pesticides & Agrochemicals=1; Packaged Foods=1; Healthcare Research, Analytics & Technology=1
+PLASTIC & PACKAGING MACHINERY (8): Industrial Products=6; Trading & Distributors=1; Computers Hardware & Equipments=1
+PLASTIC PIPES & FITTINGS (23): Plastic Products - Industrial=20; Other Textile Products=1; Specialty Chemicals=1; Industrial Products=1
+PLYWOOD LAMINATES & BOARDS (23): Plywood Boards/ Laminates=13; Furniture, Home Furnishing=2; Forest Products=2; Leather And Leather Products=1; Plastic Products - Industrial=1; Commodity Chemicals=1; Iron & Steel Products=1; Tyres & Rubber Products=1; Trading & Distributors=1
+POLLUTION CONTROL EQUIPMENT (3): Industrial Products=3
+PORTS & TERMINALS (9): Port & Port services=4; Diversified Commercial Services=2; Trading - Gas=1; Oil Storage & Transportation=1; Logistics Solution Provider=1
+POULTRY & ANIMAL FEED (8): Animal Feed=4; Other Agricultural Products=2; Meat Products including Poultry=2
+POWER ELECTRONICS (5): Heavy Electrical Equipment=1; Industrial Products=1; Other Electrical Equipment=1; Other Textile Products=1; Other Telecom Services=1
+POWER GENERATION & INTEGRATED UTILITIES (22): Power Generation=14; Integrated Power Utilities=4; Iron & Steel Products=1; LPG/CNG/PNG/LNG Supplier=1; Cement & Cement Products=1; Oil Exploration & Production=1
+POWER T&D EPC (13): Civil Construction=9; Heavy Electrical Equipment=3; Non Banking Financial Company (NBFC)=1
+POWER TRADING (2): Exchange and Data Platform=1; Power Trading=1
+POWER TRANSMISSION & DISTRIBUTION UTILITIES (5): Integrated Power Utilities=2; Power Distribution=1; Power - Transmission=1; Other Electrical Equipment=1
+PRECIOUS METALS (3): Precious Metals=1; Auto -Dealer=1; Diversified=1
+PRINTING SERVICES (12): Printing & Publication=3; Other Industrial Products=1; Printing Inks=1; Stationary=1; Advertising & Media Agencies=1; Paper & Paper Products=1; Packaging=1; Financial Technology (Fintech)=1; Aluminium, Copper & Zinc Products=1; Industrial Products=1
+PRIVATE SECTOR BANKS (20): Private Sector Bank=20
+PROFESSIONAL & BUSINESS SERVICES (30): Consulting Services=11; Advertising & Media Agencies=3; Trading & Distributors=3; Other Financial Services=2; Civil Construction=2; Software Products=1; Computers - Software & Consulting=1; Tour, Travel Related Services=1; Pharmaceuticals=1; IT Enabled Services=1; Diversified Commercial Services=1; Industrial Products=1; Non Banking Financial Company (NBFC)=1; Shipping=1
+PUBLIC SECTOR BANKS (12): Public Sector Bank=12
+PUBLISHING & NEWS (14): Print Media=5; Electronic Media=4; Printing & Publication=3; Internet & Catalogue Retail=1; Garments & Apparels=1
+PUMPS (8): Compressors, Pumps & Diesel Engines=5; Civil Construction=1; Heavy Electrical Equipment=1; Industrial Products=1
+RAIL LOGISTICS (2): Logistics Solution Provider=1; Civil Construction=1
+RAILWAY CATERING & TOURISM (1): Tour, Travel Related Services=1
+RAILWAY EPC (6): Civil Construction=6
+RAILWAY EQUIPMENT (12): Railway Wagons=4; Industrial Products=2; Construction Vehicles=1; Iron & Steel Products=1; Water Supply & Management=1; Civil Construction=1; Transport Related Services=1; Cables - Electricals=1
+REAL ESTATE DEVELOPMENT (168): Residential, Commercial Projects=114; Trading & Distributors=9; Civil Construction=8; Diversified Commercial Services=6; Investment Company=4; Other Textile Products=4; Non Banking Financial Company (NBFC)=3; Industrial Products=3; Commodity Chemicals=3; Gems, Jewellery And Watches=2; Packaged Foods=2; Real Estate related services=2; Fertilizers=1; None=1; Wellness=1; Granites & Marbles=1; Refineries & Marketing=1; Hotels & Resorts=1; Personal Care=1; Telecom -  Equipment & Accessories=1
+REAL ESTATE SERVICES (3): Diversified Commercial Services=1; Hotels & Resorts=1; Residential, Commercial Projects=1
+REFRACTORIES (9): Electrodes & Refractories=9
+REGISTRARS & FUND SERVICES (2): Depositories, Clearing Houses and Other Intermediaries=2
+REITS (9): Real Estate Investment Trusts (REITs)=6; None=3
+RENEWABLE ENERGY EPC (14): Other Electrical Equipment=6; Civil Construction=2; E-Retail/ E-Commerce=1; Telecom - Infrastructure=1; Residential, Commercial Projects=1; Compressors, Pumps & Diesel Engines=1; Packaged Foods=1; Real Estate related services=1
+RENEWABLE ENERGY SOLUTIONS (8): Non Banking Financial Company (NBFC)=1; Power Generation=1; Civil Construction=1; Diversified Commercial Services=1; Refineries & Marketing=1; Industrial Products=1; Other Agricultural Products=1; Other Electrical Equipment=1
+RENEWABLE O&M SERVICES (2): Diversified Commercial Services=2
+RENEWABLE POWER GENERATION (20): Power Generation=12; Civil Construction=1; Ferro & Silica Manganese=1; Other Electrical Equipment=1; Rubber=1; Plastic Products - Industrial=1; Heavy Electrical Equipment=1; Consulting Services=1; Diversified Commercial Services=1
+RESTAURANTS & QSR (11): Restaurants=10; Diversified Commercial Services=1
+RETAIL CHAINS (11): Diversified Retail=7; Speciality Retail=2; Packaged Foods=2
+RICE & GRAIN PROCESSING (16): Other Agricultural Products=7; Packaged Foods=3; Other Food Products=3; Trading & Distributors=2; Other Textile Products=1
+RIGID PLASTIC PACKAGING (14): Packaging=10; Plastic Products - Consumer=3; Plastic Products - Industrial=1
+ROAD ASSET OPERATORS (7): Road Assets–Toll, Annuity, Hybrid-Annuity=4; Civil Construction=3
+ROAD CONSTRUCTION (15): Civil Construction=13; Road Assets–Toll, Annuity, Hybrid-Annuity=1; Hotels & Resorts=1
+RUBBER CHEMICALS (3): Specialty Chemicals=2; Commodity Chemicals=1
+SALT (1): Other Food Products=1
+SEAFOOD & AQUACULTURE (11): Seafood=6; Animal Feed=2; Other Food Products=2; Packaged Foods=1
+SECURITY & SURVEILLANCE EQUIPMENT (5): Industrial Products=2; Aerospace & Defense=1; Consulting Services=1; Diversified Commercial Services=1
+SEEDS & AGRICULTURAL INPUTS (14): Other Agricultural Products=13; Fertilizers=1
+SEMICONDUCTORS & ELECTRONIC COMPONENTS (10): Other Electrical Equipment=4; Industrial Products=3; Computers Hardware & Equipments=2; TV Broadcasting & Software Production=1
+SHIPBUILDING & SHIP REPAIR (5): Ship Building & Allied Services=4; Aerospace & Defense=1
+SHIPPING OPERATORS (8): Shipping=6; Logistics Solution Provider=1; Other Financial Services=1
+SMALL FINANCE BANKS (8): Other Bank=8
+SOFTWARE PRODUCTS & PLATFORMS (25): Computers - Software & Consulting=10; Software Products=8; IT Enabled Services=5; Web based media and service=1; Data Processing Services=1
+SOLAR CELLS & MODULES (18): Other Electrical Equipment=11; Heavy Electrical Equipment=3; Iron & Steel Products=1; Power Generation=1; Copper=1; Civil Construction=1
+SPECIALTY ALLOYS (2): Aerospace & Defense=2
+SPECIALTY CHEMICALS (102): Specialty Chemicals=50; Commodity Chemicals=19; Pharmaceuticals=8; Sugar=2; Edible Oil=2; Packaging=2; Other Textile Products=1; Other Financial Services=1; IT Enabled Services=1; Oil Storage & Transportation=1; Diversified=1; Breweries & Distilleries=1; Forest Products=1; Plastic Products - Industrial=1; Paper & Paper Products=1; Other Industrial Products=1; Dyes And Pigments=1; Furniture, Home Furnishing=1; Rubber=1; Industrial Minerals=1; Diversified Commercial Services=1; Healthcare Research, Analytics & Technology=1; Petrochemicals=1; Other Agricultural Products=1; Trading - Chemicals=1
+STAFFING & FACILITY MANAGEMENT (22): Diversified Commercial Services=15; Other Financial Services=2; Trading & Distributors=1; Software Products=1; Other Consumer Services=1; Consulting Services=1; Computers - Software & Consulting=1
+STAINLESS STEEL (10): Iron & Steel Products=7; Iron & Steel=1; Houseware=1; Trading & Distributors=1
+STATIONERY & EDUCATION PRODUCTS (9): Stationary=7; Packaging=1; Printing & Publication=1
+STEEL & IRON (87): Iron & Steel Products=45; Iron & Steel=11; Sponge Iron=6; Industrial Products=5; Civil Construction=3; Auto Components & Equipments=3; Trading & Distributors=2; Residential, Commercial Projects=2; Trading - Metals=1; Other Construction Materials=1; Pig Iron=1; Industrial Minerals=1; Other Electrical Equipment=1; Plastic Products - Consumer=1; Furniture, Home Furnishing=1; Aluminium, Copper & Zinc Products=1; Port & Port services=1; Packaging=1
+STEEL PIPES & TUBES (34): Iron & Steel Products=31; Plastic Products - Industrial=1; Iron & Steel=1; Civil Construction=1
+STEEL WIRE & WIRE ROPES (12): Iron & Steel Products=9; Residential, Commercial Projects=1; Auto Components & Equipments=1; Other Textile Products=1
+STOCK EXCHANGES & DEPOSITORIES (4): Exchange and Data Platform=2; Depositories, Clearing Houses and Other Intermediaries=2
+STOCKBROKING & INVESTMENT BANKING (111): Stockbroking & Allied=32; Non Banking Financial Company (NBFC)=30; Other Financial Services=27; Diversified Commercial Services=4; Trading & Distributors=3; Investment Company=3; Holding Company=2; Other Capital Market related Services=2; Logistics Solution Provider=1; Residential, Commercial Projects=1; Real Estate related services=1; Consulting Services=1; IT Enabled Services=1; None=1; Packaged Foods=1; Other Textile Products=1
+STONE & OTHER BUILDING MATERIALS (25): Other Construction Materials=13; Granites & Marbles=5; Cement & Cement Products=2; Speciality Retail=2; Iron & Steel Products=1; Other Industrial Products=1; Civil Construction=1
+SUGAR & INTEGRATED ETHANOL (37): Sugar=32; Diversified FMCG=2; Trading & Distributors=2; Other Food Products=1
+SWITCHGEAR & GRID EQUIPMENT (9): Other Electrical Equipment=5; Heavy Electrical Equipment=2; Industrial Products=1; Consumer Electronics=1
+SYNTHETIC FIBRES & YARNS (37): Other Textile Products=29; Petrochemicals=2; Trading - Textile Products=1; Plastic Products - Industrial=1; Residential, Commercial Projects=1; Investment Company=1; Trading & Distributors=1; Garments & Apparels=1
+SYNTHETIC RUBBER & LATEX (3): Other Textile Products=2; Rubber=1
+TEA & COFFEE (33): Tea & Coffee=25; Trading & Distributors=1; Logistics Solution Provider=1; Other Agricultural Products=1; Tyres & Rubber Products=1; Edible Oil=1; Rubber=1; Other Industrial Products=1; Investment Company=1
+TECHNICAL TEXTILES (8): Other Textile Products=5; Trading - Textile Products=1; Industrial Products=1; Packaging=1
+TELECOM EQUIPMENT & OPTICAL FIBRE (13): Telecom -  Equipment & Accessories=8; Telecom - Infrastructure=2; Trading & Distributors=1; Power Generation=1; IT Enabled Services=1
+TELECOM OPERATORS (13): Telecom - Cellular & Fixed line services=8; TV Broadcasting & Software Production=3; Computers Hardware & Equipments=1; Other Telecom Services=1
+TELECOM TOWERS & INFRASTRUCTURE (6): Telecom - Infrastructure=4; Other Telecom Services=2
+TESTING INSPECTION & CERTIFICATION (2): Healthcare Service Provider=1; Diversified Commercial Services=1
+TEXTILE MACHINERY (8): Industrial Products=7; Other Textile Products=1
+TILES & SANITARYWARE (13): Ceramics=10; Sanitary Ware=2; Furniture, Home Furnishing=1
+TOBACCO (9): Cigarettes & Tobacco Products=5; Residential, Commercial Projects=2; Diversified FMCG=1; Trading & Distributors=1
+TOYS & LEISURE PRODUCTS (4): Leisure Products=2; Cycles=1; Advertising & Media Agencies=1
+TRACTORS (4): Tractors=2; Construction Vehicles=1; Compressors, Pumps & Diesel Engines=1
+TRADING & DISTRIBUTION (33): Other Financial Services=5; Trading & Distributors=4; Gems, Jewellery And Watches=3; Diversified Commercial Services=2; Industrial Products=2; None=1; Diversified=1; Healthcare Service Provider=1; Consulting Services=1; Household Appliances=1; Pharmaceuticals=1; Investment Company=1; Non Banking Financial Company (NBFC)=1; Other Consumer Services=1; Household Products=1; Packaging=1; Other Agricultural Products=1; Trading - Textile Products=1; Computers Hardware & Equipments=1; Precious Metals=1; Iron & Steel Products=1; Other Industrial Products=1
+TRANSFORMER COMPONENTS (2): Other Electrical Equipment=1; Other Industrial Products=1
+TRANSFORMERS (13): Heavy Electrical Equipment=9; Other Electrical Equipment=4
+TRANSMISSION TOWERS & STRUCTURES (3): Heavy Electrical Equipment=3
+TRAVEL & TOURISM (12): Tour, Travel Related Services=10; Road Transport=1; Logistics Solution Provider=1
+TRUSTEESHIP & CORPORATE ADVISORY (7): Other Financial Services=2; Depositories, Clearing Houses and Other Intermediaries=1; Diversified Retail=1; Diversified=1; Trading & Distributors=1; Non Banking Financial Company (NBFC)=1
+TV & RADIO BROADCASTING (21): TV Broadcasting & Software Production=13; Media & Entertainment=4; Consumer Electronics=1; Trading & Distributors=1; Film Production, Distribution & Exhibition=1; Advertising & Media Agencies=1
+TWO & THREE WHEELERS (12): 2/3 Wheelers=9; Commercial Vehicles=2; Logistics Solution Provider=1
+TYRES (18): Tyres & Rubber Products=16; Rubber=1; Dealers-Commercial Vehicles, Tractors, Construction Vehicles=1
+VALVES (5): Industrial Products=4; Other Industrial Products=1
+VEHICLE FINANCE (7): Non Banking Financial Company (NBFC)=5; Diversified Commercial Services=1; Investment Company=1
+VEHICLE RENTAL & MOBILITY SERVICES (1): Road Transport=1
+WASTE MANAGEMENT & RECYCLING (9): Waste Management=6; Other Textile Products=1; Plastic Products - Industrial=1; Refineries & Marketing=1
+WATCHES & ACCESSORIES (11): Gems, Jewellery And Watches=8; Precious Metals=3
+WATER INFRASTRUCTURE & TREATMENT (12): Water Supply & Management=6; Civil Construction=3; Waste Management=3
+WEALTH MANAGEMENT (7): Stockbroking & Allied=4; Other Financial Services=2; Financial Products Distributor=1
+WELDING & CUTTING EQUIPMENT (8): Other Industrial Products=5; Other Electrical Equipment=1; Auto Components & Equipments=1; Industrial Products=1
+WIND TURBINES & EQUIPMENT (2): Heavy Electrical Equipment=2
+WIRES CABLES & CONDUCTORS (33): Cables - Electricals=16; Other Electrical Equipment=7; Aluminium, Copper & Zinc Products=4; Telecom -  Equipment & Accessories=2; Trading - Metals=1; Granites & Marbles=1; Other Telecom Services=1; Civil Construction=1
+ZINC & LEAD (5): Zinc=2; Diversified Metals=1; Iron & Steel Products=1; Rubber=1

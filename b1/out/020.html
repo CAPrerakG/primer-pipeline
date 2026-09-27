@@ -1,0 +1,614 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tractors Primer</title>
+<meta name="description" content="Industry 20 of 278: farm tractors, power tillers and farm machinery. India is the world&#x27;s largest tractor market; how monsoon, crop cash and credit drive the cycle, the four listed makers plus the unlisted leaders, GST at 5%, TREM emission norms, and a year-by-year record from 2012 to the FY27 slowdown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Tractors · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 20 of 278 · Auto family</div>
+  <h1>Tractors</h1>
+  <p class="lede">India buys more tractors than any other country: about a third of the world's volume. A tractor is a farmer's biggest purchase, made with harvest cash and a loan, so the industry runs on rainfall, crop prices and credit. The listed makers are a small part of the market; the biggest player sits inside Mahindra.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 4 (no changes in the audit)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Automobile Manufacturers</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">11.3–11.5 lakh</div><div class="l">Record Indian tractor sales in FY26 (+23.5%), on a good monsoon, the GST cut and pre-buying</div></div>
+    <div class="stat"><div class="n">12% → 5%</div><div class="l">GST on tractors from September 2025, the biggest affordability change in years</div></div>
+    <div class="stat"><div class="n">1–4%</div><div class="l">ICRA's FY27 growth forecast, on a high base and a below-normal monsoon (90% of LPA)</div></div>
+    <div class="stat"><div class="n">41%+</div><div class="l">Mahindra's combined share (Mahindra plus Swaraj) of August 2026 retail sales</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The farmer's biggest purchase</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A tractor is a farm's engine. It ploughs the field, pulls a trailer, runs a pump and sometimes earns money hauling bricks or sand for neighbours. It costs as much as a small car, so a farmer buys one only after a good harvest, usually with a loan repaid over five years. If the rains are good, crops sell well and everyone buys tractors. If the rains fail, sales drop hard the following year. That is why tractor companies watch the sky as closely as their factories.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Tractors are a rural credit cycle with a weather trigger. FY26 was a record: 11.3–11.5 lakh units, up 23.5%, helped by a 108% monsoon, the GST cut from 12% to 5% in September 2025, and pre-buying before new emission norms. FY27 is the payback year, with ICRA forecasting 1–4% growth and the monsoon forecast at 90% of the long-period average.</p>
+    <ul>
+      <li><b>Mahindra</b> (in 017) leads with over 41% share including its Swaraj division; <b>TAFE</b>, <b>Sonalika</b> and <b>John Deere</b> are unlisted here.</li>
+      <li><b>Escorts Kubota</b> is the listed pure play, now controlled by Japan's Kubota, gaining share (Q1 FY27 tractor sales +20.5%).</li>
+      <li><b>Swaraj Engines</b> makes engines for Mahindra's Swaraj tractors, a quiet compounder.</li>
+      <li><b>VST Tillers</b> owns the power-tiller and small-machinery niche.</li>
+      <li><b>Indo Farm</b> is a small maker of tractors and pick-and-carry cranes, listed in January 2025.</li>
+    </ul>
+    <p>The stocks have already de-rated 25–34% in 2026 for the coming slowdown, while volumes are still growing and margins are falling.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>By horsepower and by job</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>What it is</th><th>Who buys it</th><th>Leaders</th></tr></thead><tbody>
+    <tr><td>Under 25 HP</td><td>Compact tractors, mini tractors</td><td>Small and horticulture farms; exports</td><td>Mahindra, VST, Kubota</td></tr>
+    <tr><td>25–40 HP</td><td>The volume segment for small farms</td><td>Most Indian farmers</td><td>Mahindra, Swaraj, Sonalika, TAFE</td></tr>
+    <tr><td>41–50 HP</td><td>The largest single segment by volume</td><td>Medium farms, haulage users</td><td>Mahindra, Swaraj, Escorts, John Deere</td></tr>
+    <tr><td>Above 50 HP</td><td>Large-farm and commercial tractors</td><td>Punjab, Haryana, large holdings, contractors</td><td>John Deere, New Holland, Sonalika, Escorts</td></tr>
+    <tr><td>Power tillers and weeders</td><td>Walk-behind machines for small and wet-land farms</td><td>Rice belts, horticulture, small holdings</td><td>VST Tillers (the leader), Kubota</td></tr>
+    <tr><td>Farm implements</td><td>Rotavators, seed drills, harvesters, balers</td><td>Farmers and custom-hiring centres</td><td>OEMs and hundreds of local makers</td></tr>
+    <tr><td>Construction and material handling</td><td>Backhoe loaders, pick-and-carry cranes, compactors</td><td>Contractors; a counter-cycle to farming</td><td>Escorts Kubota, Indo Farm, Action Construction</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A tractor is to a farmer what a delivery van is to a shopkeeper: a tool bought to earn, not to enjoy. It is also a status symbol at village weddings, and a rental business on the side. That mix of income, credit and pride is why sales swing so hard with the harvest.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The red Mahindra ploughing a field outside a highway town. The Swaraj hauling sugarcane to a mill. The John Deere with an air-conditioned cab on a large Punjab farm. The VST power tiller in a Kerala paddy field. The yellow Escorts backhoe digging a village drain under a government works scheme.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From steel and diesel engines to a field</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Materials</h4><div class="an">The raw pieces</div>Steel castings and forgings, sheet metal, rubber tyres, hydraulics.<div class="who">Steel mills, foundries, tyre makers (025)</div><div class="m">Commodity-linked</div></div>
+    <div class="stage"><div class="no">02</div><h4>Engines and transmissions</h4><div class="an">The heart</div>Diesel engines (25–75 HP), gearboxes, hydraulics, PTO systems.<div class="who">In-house; Swaraj Engines supplies Mahindra's Swaraj division</div><div class="m">The costliest assembly</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Tractor assembly</h4><div class="an">Putting it together</div>Chassis, engine, transmission, hydraulics, tyres and cab.<div class="who">Mahindra, TAFE, Sonalika, Escorts Kubota, John Deere, VST, Indo Farm</div><div class="m">Scale and dealer reach</div></div>
+    <div class="stage"><div class="no">04</div><h4>Dealers and finance</h4><div class="an">The village showroom</div>About 80% of tractors are financed, often by NBFCs and rural banks.<div class="who">Dealers (027), Mahindra Finance, Shriram, regional banks, co-operatives</div><div class="m">Credit decides the sale</div></div>
+    <div class="stage"><div class="no">05</div><h4>Farmers and contractors</h4><div class="an">The user</div>Own-farm use, custom hiring to neighbours, haulage of sand, bricks and crops.<div class="who">Farmers, custom-hiring centres, contractors</div><div class="m">Harvest cash and rentals</div></div>
+    <div class="stage"><div class="no">06</div><h4>Second-hand and exports</h4><div class="an">The long tail</div>A deep used-tractor market; exports to Africa, the US compact segment, Southeast Asia.<div class="who">Dealers; Mahindra, TAFE, Sonalika, VST</div><div class="m">Residual values support new sales</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Materials:</b> a tractor is heavy steel, because it has to pull a plough through hard soil without lifting off the ground.</li>
+    <li><b>Engines:</b> the diesel engine and gearbox are the expensive parts. Some companies buy them; Mahindra's Swaraj tractors use engines from a separate listed company, Swaraj Engines.</li>
+    <li><b>Assembly:</b> the factory bolts the engine, gearbox, axles and big rear wheels onto a frame.</li>
+    <li><b>Dealers and finance:</b> a village dealer arranges the loan; the farmer pays back after harvests.</li>
+    <li><b>Use:</b> many farmers rent their tractor out to neighbours, so it earns money even when their own field is idle.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Tractors look like an auto business but behave like rural credit. Three things decide the year: rainfall and crop cash flows (can the farmer pay?), lender appetite (will someone finance 80% of it?), and any tax or emission-rule change that shifts timing. Market share moves slowly because the dealer network and resale value matter more than the product. Watch the gap between wholesale dispatches and FADA retail registrations to spot channel stuffing in a weak year.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The four listed companies, and the market around them</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Position</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Escorts Kubota (~₹31,000 cr)</td><td>The listed pure play, controlled by Japan's Kubota since 2022 (it invested in 2020 and then took control). Tractors (Farmtrac, Powertrac), construction equipment (backhoes, cranes) and railway equipment. A big exporter through Kubota's network.</td><td>Tractor sales 36,862 (+20.5%); domestic volumes +22.9% against industry growth of 18.6%, so it gained share. Revenue ₹3,179 cr (+28%), profit ₹387 cr (+26%), PBT +18%; EBITDA margin 11.2% (13.0% a year earlier) on commodity inflation. Construction equipment 1,344 units (+27%). Plans ₹900 cr of capex and guides mid-single-digit tractor growth for the year. 2026 −25%; −36% from its September 2024 peak.</td></tr>
+    <tr><td>Swaraj Engines (~₹4,270 cr)</td><td>Makes diesel engines for Mahindra's Swaraj tractor division (Mahindra is both its largest shareholder and its customer). A high-return, low-capex business tied to one brand's volumes.</td><td>Revenue ₹588 cr (+21%), profit ₹55.5 cr (+11%), engine volumes a record 56,803 (+15.8%); cumulative production passed 2 million engines. 2026 +1%, the group's only positive.</td></tr>
+    <tr><td>VST Tillers Tractors (~₹3,460 cr)</td><td>Bengaluru-based leader in power tillers and power weeders, with small tractors (under 30 HP) and a growing implements range; a target of ₹3,000 cr revenue by 2030.</td><td>Revenue ₹313 cr (+11%), profit ₹48.7 cr (+9%); volumes 18,741 (+22.5%), power tillers +18%, power weeders +56%. 2026 −32%.</td></tr>
+    <tr><td>Indo Farm Equipment (~₹640 cr)</td><td>Himachal-based maker of tractors and pick-and-carry cranes; listed in January 2025.</td><td>2026 −34%; −51% from its January 2025 listing peak. Small and thinly traded.</td></tr>
+  </tbody></table></div>
+  <h3>The rest of the market (unlisted or listed elsewhere)</h3>
+  <ul>
+    <li><b>Mahindra &amp; Mahindra</b> (see 017): the market leader. In August 2026 retail, Mahindra took 23.53% and its Swaraj division 18.09%, over 41% together.</li>
+    <li><b>Sonalika (International Tractors):</b> 13.43% in August 2026, gaining share.</li>
+    <li><b>TAFE</b> (Massey Ferguson in India): 12.25%, slipping.</li>
+    <li><b>John Deere India:</b> 6,294 units in August 2026, strong in higher horsepower.</li>
+    <li><b>New Holland, Kubota's own brand, Captain, Preet, ACE:</b> the rest.</li>
+    <li><b>Action Construction Equipment (ACE):</b> listed in construction equipment, also makes tractors.</li>
+  </ul>
+  <div class="box warn"><span class="tag">Classification notes</span><p><b>Swaraj Engines</b> is classified under engines and pumps by the exchange, but it is a pure tractor-cycle stock, so it belongs here. <b>Indo Farm</b> is classified as construction vehicles; it straddles both. The biggest issue with this watchlist is what it cannot hold: the tractor market leader is inside <b>Mahindra</b> (017), so the listed basket captures only about a fifth of industry volume. Use Escorts as the tracker and Mahindra's monthly tractor numbers as the industry read.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Volumes, mix and a very efficient cost base</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th class="num">EBITDA margin*</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>Tractors (Escorts)</td><td class="num">10–15%</td><td>Volumes, horsepower mix, steel costs, discounting</td></tr>
+    <tr><td>Tractors (Mahindra's farm segment)</td><td class="num">15–19%</td><td>Scale leadership and dealer reach</td></tr>
+    <tr><td>Engines (Swaraj Engines)</td><td class="num">13–16%</td><td>One customer, high asset turns, almost no capex</td></tr>
+    <tr><td>Power tillers (VST)</td><td class="num">10–14%</td><td>A protected niche; subsidy-linked demand</td></tr>
+    <tr><td>Construction equipment</td><td class="num">6–12%</td><td>Infrastructure spending; competitive</td></tr>
+    <tr><td>Spare parts</td><td class="num">High</td><td>A 9 million-tractor installed base keeps demand steady</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges from company filings; Q1 FY27: Escorts Kubota 11.2%.</p>
+  <h3>What makes a good year</h3>
+  <ol>
+    <li><b>Two good seasons in a row:</b> a strong kharif harvest (October–November cash) followed by a good rabi (March–April cash) is what really lifts sales.</li>
+    <li><b>Financing:</b> loan approval rates and NBFC appetite; a rural credit squeeze can cut sales even after a good harvest.</li>
+    <li><b>Non-farm demand:</b> roughly a fifth of tractor use is haulage and construction, so infrastructure spending cushions bad crop years.</li>
+    <li><b>Mix and price:</b> higher horsepower and cabs raise realisations; the GST cut effectively lowered on-road prices by about 6–7%.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>Selling tractors is like selling sewing machines to tailors. The customer is buying a way to earn, so he waits for a good season and a cheap loan. Once bought, he uses it for a decade and buys spare parts every year, which is where the steady profit lives.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What a tractor maker buys, and what the farmer needs</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Steel, castings and forgings</td><td>Domestic mills and foundries</td><td>All makers; roughly half of material cost</td><td>Rising; Escorts' margin fell 180 bp</td></tr>
+    <tr><td>Engines and after-treatment</td><td>In-house; Swaraj Engines; suppliers</td><td>All; TREM V will add after-treatment cost</td><td>Norms deferred for 25–75 HP to 2032</td></tr>
+    <tr><td>Tyres</td><td>Tyre makers (025)</td><td>All</td><td>Natural rubber at records (see 012)</td></tr>
+    <tr><td>Hydraulics and electricals</td><td>Component makers (023, 024)</td><td>All</td><td>Stable</td></tr>
+    <tr><td>Diesel (the farmer's cost)</td><td>Oil marketing companies</td><td>Running cost, not the maker's</td><td>Up ~8.6% in May 2026, squeezing farm margins</td></tr>
+    <tr><td>Rural credit</td><td>NBFCs, rural and co-operative banks</td><td>The buyer</td><td>Rates easing; availability adequate</td></tr>
+    <tr><td>Rainfall and crop prices</td><td>Monsoon, MSP, mandi prices</td><td>The whole industry</td><td>Monsoon forecast 90% of LPA (El Niño)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Two harvests and a monsoon</h2>
+  <ul>
+    <li><b>April–June:</b> pre-monsoon buying for kharif sowing; dealers stock up. The strongest window for the stocks.</li>
+    <li><b>June–September (monsoon):</b> sowing; sales depend on how the rains spread. The first IMD forecast (April) sets sentiment.</li>
+    <li><b>October–November:</b> the kharif harvest brings cash, and festive buying (Dhanteras and Diwali are auspicious for a new tractor) peaks.</li>
+    <li><b>December–February:</b> rabi sowing and a quieter stretch for sales.</li>
+    <li><b>March:</b> a year-end push and rabi harvest cash in some states.</li>
+    <li><b>Monthly data:</b> company dispatches on the 1st; FADA retail registrations mid-month.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (Escorts Kubota Limited, Swaraj Engines Ltd, VST Tillers Tractors Limited, Indo Farm Equipment Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +6.8 pts (beat in 13 of 15 years); Jun +5.7 pts (beat in 10 of 15 years); Aug +2.8 pts (beat in 9 of 16 years).</li><li><b>Weakest months:</b> Feb -1.9 pts (beat in 3 of 15 years); Mar -1.9 pts (beat in 3 of 15 years); Jul -1.0 pts (beat in 7 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -5.0 pts); Apr–Jul beat the Nifty in 12 of 15 years (median +16.8 pts); Aug–Sep beat the Nifty in 11 of 14 years (median +4.5 pts); Oct–Dec beat the Nifty in 7 of 14 years (median 0.0 pts); Sep–Nov beat the Nifty in 6 of 14 years (median -1.1 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -8.5 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +3.8 points.</p><p><b>Reading it:</b> this is the cleanest seasonal pattern in the library so far. April beat the Nifty in 13 of 15 years and April–July in 12 of 15, with a median of +16.8 points: the market buys tractor stocks ahead of the monsoon and the kharif sowing season. February–March is the opposite (3 of 15, median −5.0), and January–March is worse (5 of 15, median −8.5), when the rabi harvest is still uncertain and the sales year is ending. October–December is a coin toss (7 of 14).</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed only three times: 2012 (−4.8), 2018 (−15.5) and 2019 (−25.4).</b> 2012 was a failing monsoon; 2018 and 2019 were the rural distress and NBFC credit freeze, when no forecast could help. The biggest runs were 2020 (+46.6, the COVID rural boom) and 2016 (+38.9, the monsoon recovery after two droughts).</li>
+    <li><b>April misses: 2019 (−4.9) and 2025 (−4.9).</b> The best Aprils were 2016 (+21.7), 2024 (+12.8) and 2022 (+11.7).</li>
+    <li><b>February–March</b> beat the Nifty in only 3 of 15 years; the exceptions were 2018 (+11.1) and 2017 (+8.3).</li>
+    <li><b>October–December misses: 2020 (−22.2) after the huge summer run, and 2014 (−15.7) when the drought became undeniable.</b> The best was 2013 (+39.9), a bumper harvest year.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This basket has the library's most consistent seasonal edge: own it from April to July, avoid January to March. The logic is real, because the market prices the monsoon forecast and sowing expectations before volumes arrive. The rule fails when credit breaks (2018–19), so check rural lending and dealer inventory before trusting it. In 2026 the window worked in a small way (+5.0 points) even in a de-rating year.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Nine drivers</h2>
+  <ol>
+    <li><b>Monsoon and its spread:</b> the first forecast in April moves the stocks; the distribution across districts moves the volumes.</li>
+    <li><b>Crop prices and MSP:</b> what the harvest earns decides the down payment.</li>
+    <li><b>Rural credit:</b> around 80% of tractors are financed; NBFC and bank appetite is decisive (2018–19 proved it).</li>
+    <li><b>Taxes:</b> GST cut from 12% to 5% in September 2025 lowered on-road prices and pulled demand forward.</li>
+    <li><b>Emission norms:</b> TREM stages. The draft moves above-75 HP and below-25 HP to TREM V from October 2026, while 25–75 HP is deferred to 2032 (with TREM IIIAA for 25–50 HP in 2028). Deadlines cause pre-buying, then a hole.</li>
+    <li><b>Non-farm use:</b> haulage and construction demand, and government works programmes.</li>
+    <li><b>Replacement cycle:</b> tractors last 8–12 years, so the FY21 record cohort will come up for replacement.</li>
+    <li><b>Commodity costs:</b> steel and rubber, with a one- to two-quarter lag.</li>
+    <li><b>Exports:</b> compact tractors to the US and Africa; Kubota's network for Escorts, and Mahindra's and TAFE's own.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of Escorts Kubota, Swaraj Engines and VST Tillers, with Indo Farm added in 2026; monthly returns capped at ±50%, price only; 2026 is to 18 September. Monsoon figures in the notes are IMD June–September rainfall as a percentage of the long-period average, the same series used in 001 and 014.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a tractor cycle</h3>
+  <ol>
+    <li><b>A good monsoon</b> lifts crop output and cash; sales rise for two to three years as confidence and credit build (2016–17, 2020–21, 2025–26).</li>
+    <li><b>The stocks front-run it,</b> rising on the forecast before the volumes appear.</li>
+    <li><b>A shock arrives:</b> a drought (2014–15), a credit freeze (2018–19) or simply a high base after a stimulus (2026).</li>
+    <li><b>De-rating:</b> the stocks fall 20–35% while volumes are still growing, then bottom before the volume trough.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Stocks lead volumes by two to three quarters,</b> in both directions. 2026 is a textbook example: volumes up 19% in April–July, stocks down 25%.</li>
+    <li><b>A tax or norm change pulls demand forward</b> and creates a hole the next year (GST 2025, TREM pre-buying).</li>
+    <li><b>Two droughts in a row do the real damage</b> (2014 and 2015), because the second one exhausts savings.</li>
+    <li><b>Share shifts are slow but persistent:</b> Sonalika and Escorts have been gaining, TAFE slipping.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>India sells the most; the West sells the biggest</h2>
+  <p>India is the world's largest tractor market by units, roughly a third of global volume, but its average tractor is small (35–50 HP) and cheap. North America and Europe buy far fewer, far larger machines with cabs, GPS guidance and precision equipment, at many times the price. That split explains the industry's structure: Indian makers dominate at home and in other developing markets, while Deere, CNH and AGCO dominate high-horsepower machines and technology.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Strength</th><th>India angle</th></tr></thead><tbody>
+    <tr><td>Mahindra (India)</td><td>The world's largest tractor brand by volume</td><td>Market leader with Swaraj; exports widely</td></tr>
+    <tr><td>John Deere (US)</td><td>Technology, high horsepower, precision farming</td><td>Manufactures in India; strong above 50 HP</td></tr>
+    <tr><td>CNH (New Holland, Case)</td><td>Global range</td><td>Indian plants; mid and high horsepower</td></tr>
+    <tr><td>AGCO (Massey Ferguson, Fendt)</td><td>Global brands</td><td>Massey Ferguson is built in India by TAFE</td></tr>
+    <tr><td>Kubota (Japan)</td><td>Compact tractors, power tillers, Asian markets</td><td>Controls Escorts Kubota; its own brand too</td></tr>
+    <tr><td>Sonalika, TAFE (India)</td><td>Value tractors, exports</td><td>Unlisted; together about a quarter of the market</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Imports to local champions (1970s–1990s):</b> licences and then liberalisation built Mahindra, TAFE, Escorts and Punjab Tractors (whose Swaraj brand Mahindra later bought).</li>
+    <li><b>Japanese entry (2010s–2020s):</b> Kubota invested in Escorts in 2020 and took control in 2022, bringing technology and export access.</li>
+    <li><b>Value players gaining:</b> Sonalika has grown share steadily with aggressive pricing and exports.</li>
+    <li><b>Technology moving down:</b> GPS guidance, cabins and precision implements are entering the Indian 50 HP-plus segment.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Emission norms (TREM):</b> the deferral for 25–75 HP to 2032 avoids a big cost step for the volume segment, while larger and very small tractors move to TREM V from October 2026.</li>
+    <li><b>Electric tractors:</b> BIS has issued India's first testing standards, and 40–60 HP pilots can run six to eight hours on a charge. Adoption is still negligible, with fewer than 100 registered as of 2024 against an installed base of over 9 million.</li>
+    <li><b>Precision farming:</b> GPS auto-steer, laser levellers and variable-rate spraying, still mostly on large farms.</li>
+    <li><b>Rental and custom hiring:</b> app-based tractor rental and government-funded custom-hiring centres let small farmers use machines they cannot buy.</li>
+    <li><b>Drones and implements:</b> spraying drones and better implements (rotavators, seeders, balers) raise the value of each tractor.</li>
+    <li><b>Compact tractors for export:</b> the US hobby-farm segment has become a big market for Indian-built compacts.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>GST on tractors</td><td>Cut from 12% to 5% in September 2025</td><td>Lower on-road price; a major driver of FY26's record</td></tr>
+    <tr><td>TREM emission norms</td><td>Draft: TREM V from October 2026 for above 75 HP and below 25 HP; 25–75 HP deferred to 2032; TREM IIIAA for 25–50 HP in 2028</td><td>Avoids a cost step in the volume segment; pre-buying around deadlines</td></tr>
+    <tr><td>Farm mechanisation subsidies (SMAM)</td><td>State and central subsidies on tractors, tillers and implements</td><td>Supports power tillers and small machinery (VST)</td></tr>
+    <tr><td>MSP and procurement</td><td>Annual support prices for wheat, paddy and others</td><td>Farm cash flows</td></tr>
+    <tr><td>Farm credit and interest subvention</td><td>Priority-sector lending, subsidised crop loans</td><td>Financing availability</td></tr>
+    <tr><td>PM-Kisan and rural schemes</td><td>Direct income transfers and rural works</td><td>Cushions bad years</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: good volumes, bad expectations</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Volumes</td><td>Still growing</td><td>April–July wholesales +19%; Escorts' Q1 tractor sales +20.5%; August retail +0.84%</td></tr>
+    <tr><td>Outlook</td><td>Slowing</td><td>ICRA sees FY27 growth of 1–4% on a 23.5% base</td></tr>
+    <tr><td>Monsoon</td><td>Below normal</td><td>IMD forecast 90% of LPA, with El Niño</td></tr>
+    <tr><td>Margins</td><td>Falling</td><td>Escorts 11.2% from 13.0% on commodity costs</td></tr>
+    <tr><td>Stocks</td><td>De-rated</td><td>Escorts −25%, VST −32%, Indo Farm −34% in 2026</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The market has already paid for the slowdown, which is what tractor stocks always do first. The question for the next two quarters is how bad the monsoon shortfall actually was by district and whether the GST cut's demand pull-forward leaves a hole in H2 FY27. Escorts has the cleanest exposure and is gaining share; Swaraj Engines is the low-drama way to own Mahindra's volumes; VST is a niche with better structural growth than the industry.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>IMD monsoon forecasts and weekly rainfall by district</td><td>April, June; weekly</td><td>The demand trigger</td></tr>
+    <tr><td>Reservoir levels</td><td>CWC weekly</td><td>Rabi sowing prospects</td></tr>
+    <tr><td>Monthly tractor dispatches and FADA retail</td><td>1st of the month; FADA mid-month</td><td>Volumes and channel health</td></tr>
+    <tr><td>Mahindra's tractor numbers</td><td>Monthly</td><td>The industry read the listed basket can't give</td></tr>
+    <tr><td>Rural credit growth and NBFC asset quality</td><td>Quarterly</td><td>Financing</td></tr>
+    <tr><td>Crop prices, MSP announcements, mandi arrivals</td><td>Seasonal</td><td>Farm cash flows</td></tr>
+    <tr><td>Steel prices</td><td>Weekly</td><td>Margins with a lag</td></tr>
+    <tr><td>TREM notifications</td><td>Ministry notices</td><td>Pre-buying and cost steps</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the rural cycle shows up</h2>
+  <ul>
+    <li><b>Mahindra</b> (017): the tractor leader inside a car company.</li>
+    <li><b>Two-wheelers</b> (018): the same rural income cycle, one price point below.</li>
+    <li><b>Agrochemicals</b> (001) and <b>fertilizers</b> (014): the same monsoon.</li>
+    <li><b>Rural finance:</b> Mahindra Finance, Shriram, regional rural banks.</li>
+    <li><b>Tyres</b> (025): tractor tyres are a distinct, profitable niche.</li>
+    <li><b>Construction equipment:</b> Escorts and Indo Farm overlap here; ACE is the listed pure play.</li>
+    <li><b>Rural consumption:</b> FMCG and consumer durables in villages.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What are dealer inventory days, and how do wholesale dispatches compare with retail registrations?</li>
+    <li>How is demand splitting between states, and how has the monsoon shortfall affected bookings?</li>
+    <li>What is the horsepower mix, and how much of growth is price versus volume?</li>
+    <li>How much margin was lost to commodities, and what pricing has been taken?</li>
+    <li>What share of sales is financed, and have approval rates or delinquencies changed?</li>
+    <li>(Escorts) What is Kubota adding in technology and exports, and what is the ₹900 cr capex for?</li>
+    <li>(VST) How much of power-tiller demand depends on subsidies?</li>
+    <li>How are you preparing for TREM V in the segments that move in October 2026?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Dispatches running well ahead of FADA retail.</li>
+    <li>Rising discounts and free-insurance offers in a "good" quarter.</li>
+    <li>Receivable days stretching at the dealer level.</li>
+    <li>Capacity expansion announced at the top of a rural cycle.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"A bad monsoon means a bad year for tractor stocks."</td><td>Usually, but not always: 2014 and 2015 were drought years and the stocks still rose on recovery hopes. The stocks trade the forecast, not the rainfall.</td></tr>
+    <tr><td>"The GST cut changed the industry's growth rate."</td><td>It lowered prices about 6–7% and pulled demand forward into FY26; FY27 growth is forecast at just 1–4%.</td></tr>
+    <tr><td>"Electric tractors are about to disrupt this market."</td><td>Fewer than 100 were registered as of 2024 against 9 million diesel tractors. Standards now exist, but diesel torque, price and resale value still win.</td></tr>
+    <tr><td>"Escorts is losing to Mahindra."</td><td>Its Q1 FY27 domestic volumes grew 22.9% against industry growth of 18.6%, and its August retail share rose to 11.09%.</td></tr>
+    <tr><td>"Tractor demand is purely agricultural."</td><td>Roughly a fifth of use is haulage and construction, which is why infrastructure spending cushions weak crop years.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. TREM, kharif" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Machines and farming</h3><dl>
+    <dt>HP (horsepower)</dt><dd>The standard way tractors are segmented; India's volume segment is 25–50 HP.</dd>
+    <dt>PTO</dt><dd>Power take-off: the shaft that drives implements such as rotavators and pumps.</dd>
+    <dt>Power tiller</dt><dd>A walk-behind two-wheeled machine for small and wet-land farms; VST's speciality.</dd>
+    <dt>Power weeder</dt><dd>A smaller machine for weeding between rows, popular in horticulture.</dd>
+    <dt>Implement</dt><dd>A tool towed or driven by a tractor: plough, rotavator, seed drill, trailer.</dd>
+    <dt>Rotavator</dt><dd>A rotating-blade implement that prepares soil in one pass.</dd>
+    <dt>Custom hiring centre</dt><dd>A government-supported facility that rents machinery to small farmers.</dd>
+    <dt>Backhoe loader</dt><dd>A digger with a loader bucket, sold by Escorts and others.</dd>
+    <dt>Pick-and-carry crane</dt><dd>A mobile crane used at construction sites; Indo Farm's second business.</dd>
+    <dt>2WD / 4WD</dt><dd>Two- or four-wheel drive; 4WD costs more but pulls better in wet or heavy soil and is growing in India.</dd>
+    <dt>Lift capacity</dt><dd>How much weight the tractor's hydraulic arms can raise; the headline spec farmers compare after horsepower.</dd>
+    <dt>Tillage</dt><dd>Breaking and preparing soil before sowing; primary tillage (ploughing) and secondary tillage (levelling).</dd>
+    <dt>Zero-till seeder / happy seeder</dt><dd>An implement that sows into unploughed soil and crop residue, saving diesel and reducing stubble burning.</dd>
+    <dt>Combine harvester</dt><dd>A self-propelled machine that cuts and threshes grain in one pass; usually owned by contractors, not farmers.</dd>
+    <dt>Compact tractor</dt><dd>An under-30 HP machine; India's big export product for American hobby farms.</dd>
+    <dt>Sowing acreage</dt><dd>The area actually planted in a season; the weekly official number during kharif.</dd>
+    <dt>Horticulture mechanisation</dt><dd>Machinery for orchards and vegetables, the fastest-growing use for small tractors and weeders.</dd>
+    <dt>Loan-to-value (LTV) / down payment</dt><dd>How much of the tractor the lender funds, and what the farmer pays upfront from harvest cash.</dd>
+    <dt>Delinquency</dt><dd>Missed loan instalments; rising delinquencies make lenders tighten and sales fall.</dd>
+    <dt>Kharif / rabi</dt><dd>The monsoon crop season / the winter crop season (see 014).</dd>
+    <dt>MSP</dt><dd>Minimum support price: the government's guaranteed purchase price for key crops.</dd>
+    <dt>Mandi</dt><dd>The regulated wholesale market where farmers sell produce.</dd>
+    <dt>Farm mechanisation</dt><dd>The share of farm work done by machines rather than manual labour.</dd>
+    <dt>Installed base</dt><dd>Tractors already in use; over 9 million in India, the source of spare-parts demand.</dd>
+  </dl>
+  <h3>Regulation and the cycle</h3><dl>
+    <dt>TREM</dt><dd>Tractor Emission Norms: India's emission stages for agricultural tractors.</dd>
+    <dt>TREM V</dt><dd>The stage requiring after-treatment systems; drafted for above 75 HP and below 25 HP from October 2026.</dd>
+    <dt>TREM IIIA / IIIAA</dt><dd>The current stage, and an intermediate step planned for 25–50 HP in 2028.</dd>
+    <dt>Pre-buying</dt><dd>Buying ahead of a norm or price change (see 019).</dd>
+    <dt>SMAM</dt><dd>The central farm-mechanisation subsidy scheme.</dd>
+    <dt>PM-Kisan</dt><dd>Direct income support to farmers.</dd>
+    <dt>LPA</dt><dd>Long-period average rainfall; "normal" is 96–104% (see 014).</dd>
+    <dt>El Niño</dt><dd>A Pacific warming pattern that often weakens the Indian monsoon.</dd>
+    <dt>FADA</dt><dd>The dealers' association, which publishes retail registration data (see 017).</dd>
+    <dt>Wholesale vs retail</dt><dd>Factory dispatches vs actual farmer purchases (see 017).</dd>
+    <dt>Custom hiring / rental income</dt><dd>Money a farmer earns renting his tractor to neighbours, which helps repay the loan.</dd>
+    <dt>Residual value</dt><dd>The resale price of a used tractor; high residuals make financing easier.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>GST 2.0</dt><dd>See 017.</dd>
+    <dt>Operating leverage</dt><dd>See 017 and 019.</dd>
+    <dt>Monsoon as a driver</dt><dd>See 001 and 014.</dd>
+    <dt>Natural rubber and tyres</dt><dd>See 012.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why did FY26 tractor sales hit a record?</summary><p>A 108% monsoon, the GST cut from 12% to 5% in September 2025, and pre-buying ahead of emission norms lifted volumes 23.5% to 11.3–11.5 lakh units.</p></details>
+  <details class="q"><summary>2. Why are the stocks down 25–34% in 2026 while volumes grow?</summary><p>Tractor stocks trade the forecast: ICRA sees FY27 growth of only 1–4%, the monsoon forecast is 90% of LPA, and margins are falling on commodity costs.</p></details>
+  <details class="q"><summary>3. What is the best seasonal window, and why does it make sense?</summary><p>April–July (12 of 15 years, median +16.8 points), because the market prices the monsoon forecast and kharif sowing before volumes appear.</p></details>
+  <details class="q"><summary>4. Who leads the Indian tractor market?</summary><p>Mahindra, with over 41% of August 2026 retail sales including its Swaraj division; it is inside the passenger-vehicle watchlist, not this one.</p></details>
+  <details class="q"><summary>5. What does Swaraj Engines actually do?</summary><p>It makes the diesel engines for Mahindra's Swaraj tractors, so it is a low-capex proxy for one brand's volumes.</p></details>
+  <details class="q"><summary>6. What is the TREM V situation?</summary><p>Draft rules move above-75 HP and below-25 HP tractors to TREM V from October 2026, while the 25–75 HP volume segment is deferred to 2032, avoiding a big cost step.</p></details>
+  <details class="q"><summary>7. Why did 2018–19 hurt so much despite a decent monsoon in 2019?</summary><p>Rural distress and the NBFC credit freeze stopped financing, and about 80% of tractors are bought on loans.</p></details>
+  <details class="q"><summary>8. What is VST Tillers' niche?</summary><p>Power tillers and power weeders for small and wet-land farms, plus small tractors; Q1 FY27 power weeders grew 56%.</p></details>
+  <details class="q"><summary>9. How big is the electric-tractor market?</summary><p>Negligible: fewer than 100 registered as of 2024 against an installed base of more than 9 million diesel tractors, though BIS standards now exist.</p></details>
+  <details class="q"><summary>10. What cushions tractor demand in a bad crop year?</summary><p>Non-farm use: roughly a fifth of tractor work is haulage and construction, supported by infrastructure and rural works spending.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket vs NSE:NIFTY; monsoon figures from IMD (the series used in 001 and 014).</li>
+    <li>Companies: <a href="https://www.investing.com/news/company-news/escorts-kubota-q1-fy27-slides-record-tractor-sales-margins-under-pressure-93CH-4831285">Escorts Kubota Q1 FY27</a>; <a href="https://www.tractorjunction.com/tractor-news/escorts-kubota-q1-fy27-tractor-sales-rise-20-5-percent-to-36862-units">Escorts volumes</a>; <a href="https://scanx.trade/stock-market-news/companies/escorts-kubota-q1-results-pbt-rises-to-4-9b-revenue-up-to-32b-yoy/47292595">Escorts guidance and capex</a>; <a href="https://www.business-standard.com/markets/capital-market-news/swaraj-engines-q1-pat-rises-11-yoy-to-rs-56-cr-126072000744_1.html">Swaraj Engines Q1 FY27</a>; <a href="https://www.equitybulls.com/category.php?id=373167">Swaraj record engine sales</a>; <a href="https://www.whalesbook.com/corporate-news/English/auto/VST-Tillers-Tractors-Q1-FY27-Revenue-Up-11percent-PAT-Rises-to-Rs-487-Cr/6a85b74b6817e697e7d26aba">VST Tillers Q1 FY27</a>; <a href="https://www.sahi.com/news/vst-tillers-tractors-aims-for-3-000-crore-revenue-by-2030-1022-PE1_COR">VST's 2030 target</a>.</li>
+    <li>Industry: <a href="https://www.autocarpro.in/news/icra-estimates-tractor-industry-volumes-at-record-113-115-lakh-units-in-fy2026-growth-to-slow-to-1-4-in-fy2027-131946">ICRA on FY26 record and FY27 slowdown</a>; <a href="https://www.autocarpro.in/news/icra-tractor-sales-grow-in-june-monsoon-risks-cloud-fy27-outlook-133676">ICRA on monsoon risk</a>; <a href="https://eng.ruralvoice.in/agribusiness/india%E2%80%99s-tractor-industry-faces-demand-moderation-in-fy27-after-strong-fy26-growth.html">demand moderation in FY27</a>; <a href="https://www.autopunditz.com/post/tractor-sales-august-2026-india">August 2026 retail shares</a>; <a href="https://www.tractorjunction.com/tractor-news/fada-august-2026-retail-tractor-sales-rise-0-84-percent-to-87977-units">FADA August 2026</a>.</li>
+    <li>Technology and rules: <a href="https://www.autocarpro.in/news/govt-drafts-trem-v-for-tractors-from-october-2026-25%E2%80%9375-hp-segment-gets-a-breather-131469">draft TREM V timeline</a>; <a href="https://www.icra.in/Rating/DownloadResearchSpecialCommentReportViewer/6515">ICRA on emission-norm impact</a>; <a href="https://autoevtimes.com/why-2026-could-be-the-turning-point-for-electric-tractors-in-indian-agriculture/">electric tractors and BIS standards</a>.</li>
+    <li>History (the 2014–15 droughts, the NBFC crisis, Kubota's investment in Escorts and subsequent control): contemporaneous reporting, known before this session.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -8.1}, {"y": 2013, "v": -11.4}, {"y": 2014, "v": 2.9}, {"y": 2015, "v": -4.6}, {"y": 2016, "v": -1.1}, {"y": 2017, "v": 8.3}, {"y": 2018, "v": 11.1}, {"y": 2019, "v": -7.5}, {"y": 2020, "v": -4.2}, {"y": 2021, "v": -5.4}, {"y": 2022, "v": -13.5}, {"y": 2023, "v": -4.5}, {"y": 2024, "v": -5.0}, {"y": 2025, "v": -6.8}, {"y": 2026, "v": -6.9}], "AprJul": [{"y": 2012, "v": -4.8}, {"y": 2013, "v": 26.5}, {"y": 2014, "v": 20.1}, {"y": 2015, "v": 16.8}, {"y": 2016, "v": 38.9}, {"y": 2017, "v": 22.5}, {"y": 2018, "v": -15.5}, {"y": 2019, "v": -25.4}, {"y": 2020, "v": 46.6}, {"y": 2021, "v": 6.6}, {"y": 2022, "v": 14.1}, {"y": 2023, "v": 19.5}, {"y": 2024, "v": 29.0}, {"y": 2025, "v": 10.7}, {"y": 2026, "v": 5.0}], "AugSep": [{"y": 2012, "v": -3.7}, {"y": 2013, "v": 5.8}, {"y": 2014, "v": 7.5}, {"y": 2015, "v": 3.3}, {"y": 2016, "v": 13.4}, {"y": 2017, "v": -1.4}, {"y": 2018, "v": -20.6}, {"y": 2019, "v": 13.9}, {"y": 2020, "v": 15.9}, {"y": 2021, "v": 3.7}, {"y": 2022, "v": 2.2}, {"y": 2023, "v": 15.6}, {"y": 2024, "v": 1.2}, {"y": 2025, "v": 5.3}], "OctDec": [{"y": 2012, "v": 1.9}, {"y": 2013, "v": 39.9}, {"y": 2014, "v": -15.7}, {"y": 2015, "v": 11.1}, {"y": 2016, "v": -1.9}, {"y": 2017, "v": 6.7}, {"y": 2018, "v": 3.3}, {"y": 2019, "v": -6.4}, {"y": 2020, "v": -22.2}, {"y": 2021, "v": 11.6}, {"y": 2022, "v": -7.0}, {"y": 2023, "v": -4.5}, {"y": 2024, "v": 2.5}, {"y": 2025, "v": -3.4}], "SepNov": [{"y": 2012, "v": -11.3}, {"y": 2013, "v": 27.3}, {"y": 2014, "v": 0.5}, {"y": 2015, "v": -1.1}, {"y": 2016, "v": 9.2}, {"y": 2017, "v": -1.1}, {"y": 2018, "v": -14.8}, {"y": 2019, "v": -2.8}, {"y": 2020, "v": -2.4}, {"y": 2021, "v": 16.6}, {"y": 2022, "v": -2.9}, {"y": 2023, "v": 2.0}, {"y": 2024, "v": 3.4}, {"y": 2025, "v": -7.3}], "JanMar": [{"y": 2012, "v": -8.9}, {"y": 2013, "v": -16.0}, {"y": 2014, "v": 4.4}, {"y": 2015, "v": -8.7}, {"y": 2016, "v": -6.4}, {"y": 2017, "v": 18.4}, {"y": 2018, "v": 4.7}, {"y": 2019, "v": -10.6}, {"y": 2020, "v": 11.1}, {"y": 2021, "v": -8.5}, {"y": 2022, "v": -14.6}, {"y": 2023, "v": 1.0}, {"y": 2024, "v": -11.6}, {"y": 2025, "v": -2.4}, {"y": 2026, "v": -11.8}]}, "my": {"1": {"2012": 0.2, "2013": -5.2, "2014": 1.4, "2015": -4.2, "2016": -5.3, "2017": 8.5, "2018": -6.7, "2019": -3.1, "2020": 22.5, "2021": -3.1, "2022": -1.3, "2023": 5.8, "2024": -6.7, "2025": 4.7, "2026": -6.3}, "2": {"2012": -5.3, "2013": -4.1, "2014": -0.5, "2015": -3.2, "2016": 1.8, "2017": 2.7, "2018": 11.7, "2019": -6.7, "2020": -0.3, "2021": -3.1, "2022": -3.5, "2023": -1.7, "2024": -1.1, "2025": -12.5, "2026": -2.8}, "3": {"2012": -2.9, "2013": -8.1, "2014": 3.4, "2015": -1.5, "2016": -3.2, "2017": 5.2, "2018": -0.2, "2019": -0.3, "2020": -4.2, "2021": -2.2, "2022": -10.5, "2023": -2.9, "2024": -3.9, "2025": 8.0, "2026": -4.5}, "4": {"2012": 7.0, "2013": 4.0, "2014": 9.1, "2015": 7.2, "2016": 21.7, "2017": 10.3, "2018": 10.6, "2019": -4.9, "2020": 2.1, "2021": 0.6, "2022": 11.7, "2023": 5.0, "2024": 12.8, "2025": -4.9, "2026": 9.9}, "5": {"2012": -0.2, "2013": 11.6, "2014": 2.4, "2015": -4.5, "2016": -1.8, "2017": 4.7, "2018": -9.2, "2019": -6.9, "2020": 16.9, "2021": -2.0, "2022": 1.9, "2023": 6.9, "2024": 1.3, "2025": 2.0, "2026": -6.5}, "6": {"2012": -5.7, "2013": 3.8, "2014": 17.0, "2015": 5.1, "2016": 11.8, "2017": 14.3, "2018": -7.3, "2019": -2.4, "2020": 22.4, "2021": 11.8, "2022": -0.6, "2023": 3.1, "2024": 11.1, "2025": -3.4, "2026": 3.9}, "7": {"2011": 7.2, "2012": -5.8, "2013": 4.8, "2014": -9.4, "2015": 8.2, "2016": 1.3, "2017": -9.0, "2018": -7.3, "2019": -14.3, "2020": -6.2, "2021": -3.7, "2022": 0.9, "2023": 1.6, "2024": -0.1, "2025": 16.7, "2026": -1.2}, "8": {"2011": -4.5, "2012": 1.5, "2013": 7.1, "2014": -8.3, "2015": 11.0, "2016": 5.0, "2017": -1.9, "2018": -5.3, "2019": 8.7, "2020": 8.7, "2021": 2.4, "2022": -0.1, "2023": 18.4, "2024": -0.8, "2025": 7.5, "2026": -4.3}, "9": {"2011": 2.9, "2012": -5.2, "2013": -1.7, "2014": 16.7, "2015": -7.3, "2016": 7.9, "2017": 0.5, "2018": -16.1, "2019": 4.5, "2020": 6.5, "2021": 1.1, "2022": 2.2, "2023": -2.7, "2024": 2.0, "2025": -2.2}, "10": {"2011": -1.3, "2012": 2.1, "2013": 2.5, "2014": -3.7, "2015": 5.7, "2016": 5.0, "2017": 3.4, "2018": 5.8, "2019": 4.6, "2020": -9.7, "2021": 6.1, "2022": -6.8, "2023": 1.6, "2024": -1.5, "2025": 3.3}, "11": {"2011": -3.1, "2012": -8.0, "2013": 22.9, "2014": -11.1, "2015": 1.0, "2016": -3.1, "2017": -4.6, "2018": -4.5, "2019": -10.7, "2020": 1.5, "2021": 8.6, "2022": 1.7, "2023": 3.2, "2024": 3.1, "2025": -7.7}, "12": {"2011": -2.1, "2012": 7.9, "2013": 8.2, "2014": -1.3, "2015": 4.1, "2016": -3.5, "2017": 8.2, "2018": 1.7, "2019": 0.6, "2020": -11.4, "2021": -3.3, "2022": -1.7, "2023": -9.1, "2024": 1.1, "2025": 1.5}}, "basket": ["Escorts Kubota Limited", "Swaraj Engines Ltd", "VST Tillers Tractors Limited", "Indo Farm Equipment Ltd."], "nbasket": 4, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 0.8, "rel": 0.1, "hit": 6, "n": 15}, {"m": 2, "abs": -3.1, "rel": -1.9, "hit": 3, "n": 15}, {"m": 3, "abs": -2.0, "rel": -1.9, "hit": 3, "n": 15}, {"m": 4, "abs": 9.4, "rel": 6.8, "hit": 13, "n": 15}, {"m": 5, "abs": 2.3, "rel": 1.1, "hit": 8, "n": 15}, {"m": 6, "abs": 7.4, "rel": 5.7, "hit": 10, "n": 15}, {"m": 7, "abs": 0.9, "rel": -1.0, "hit": 7, "n": 16}, {"m": 8, "abs": 2.6, "rel": 2.8, "hit": 9, "n": 16}, {"m": 9, "abs": 1.2, "rel": 0.6, "hit": 9, "n": 15}, {"m": 10, "abs": 3.2, "rel": 1.1, "hit": 10, "n": 15}, {"m": 11, "abs": 0.2, "rel": -0.7, "hit": 7, "n": 15}, {"m": 12, "abs": 0.7, "rel": 0.1, "hit": 8, "n": 15}], "cy": [{"y": 2012, "b": 10.3, "n": 27.7, "rel": -17.4, "partial": false}, {"y": 2013, "b": 62.0, "n": 6.8, "rel": 55.3, "partial": false}, {"y": 2014, "b": 46.3, "n": 31.4, "rel": 14.9, "partial": false}, {"y": 2015, "b": 17.8, "n": -4.1, "rel": 21.9, "partial": false}, {"y": 2016, "b": 44.3, "n": 3.0, "rel": 41.3, "partial": false}, {"y": 2017, "b": 89.1, "n": 28.6, "rel": 60.4, "partial": false}, {"y": 2018, "b": -24.3, "n": 3.2, "rel": -27.4, "partial": false}, {"y": 2019, "b": -21.0, "n": 12.0, "rel": -33.0, "partial": false}, {"y": 2020, "b": 72.0, "n": 14.9, "rel": 57.1, "partial": false}, {"y": 2021, "b": 39.8, "n": 24.1, "rel": 15.7, "partial": false}, {"y": 2022, "b": -2.7, "n": 4.3, "rel": -7.0, "partial": false}, {"y": 2023, "b": 57.7, "n": 20.0, "rel": 37.7, "partial": false}, {"y": 2024, "b": 26.3, "n": 8.8, "rel": 17.5, "partial": false}, {"y": 2025, "b": 21.0, "n": 10.5, "rel": 10.5, "partial": false}, {"y": 2026, "b": -22.0, "n": -10.7, "rel": -11.4, "partial": true}], "dd": [{"co": "Escorts Kubota", "peak": "Sep 2024", "fp": -36, "y1": -26}, {"co": "Swaraj Engines", "peak": "Jul 2025", "fp": -21, "y1": -18}, {"co": "VST Tillers Tractors", "peak": "Dec 2025", "fp": -32, "y1": -19}, {"co": "Indo Farm Equipment", "peak": "Jan 2025", "fp": -51, "y1": -47}], "win": {"FebMar": {"mean": -3.8, "median": -5.0, "hit": 3, "n": 15}, "AprJul": {"mean": 14.0, "median": 16.8, "hit": 12, "n": 15}, "AugSep": {"mean": 4.4, "median": 4.5, "hit": 11, "n": 14}, "OctDec": {"mean": 1.1, "median": 0.0, "hit": 7, "n": 14}, "SepNov": {"mean": 1.1, "median": -1.1, "hit": 6, "n": 14}, "JanMar": {"mean": -4.0, "median": -8.5, "hit": 5, "n": 15}}, "ytd": {"b": -22.0, "n": -10.7}, "notes": {"2012": "A deficient monsoon (93% of LPA) cut tractor sales the following year: Swaraj Engines +21%, Escorts +12%, VST \u22125%, against a Nifty up 28%.", "2013": "A strong monsoon (106%) and a record crop year: Escorts +85%, VST +65%, Swaraj +32%. The basket rose 62%.", "2014": "Election optimism carried the stocks (+46%) even though the monsoon failed (88%) and sales fell the next year.", "2015": "A second drought (86% of LPA) hit volumes, but the stocks rose 18% on recovery hopes: Escorts +34%.", "2016": "A normal monsoon (97%) restarted the cycle: Escorts +73%, Swaraj +34%, VST +20%.", "2017": "The upcycle year: record tractor sales and a re-rating. Escorts +165%, Swaraj +58%, VST +45%; the basket rose 89%.", "2018": "Rural distress and the NBFC credit freeze ended it: VST \u221237%, Swaraj \u221227%, Escorts \u221210%.", "2019": "Volumes fell through FY20 despite a 110% monsoon, as farm cash flows and financing stayed weak: VST \u221231%, Swaraj \u221226%.", "2020": "Agriculture was the economy's one bright spot in COVID, and tractor sales hit a record. Escorts +100% (Kubota invested and became a partner), VST +72%, Swaraj +28%.", "2021": "Kubota raised its stake and the rural cycle held: Escorts +51%, VST +48%, Swaraj +13%.", "2022": "Commodity inflation squeezed margins in a flat volume year: Escorts +12%, VST \u221220%.", "2023": "A broad recovery on good rabi cash flows: VST +72%, Swaraj +56%, Escorts +39%.", "2024": "Volumes grew steadily and the stocks followed: VST +39%, Swaraj +22%, Escorts +12%. Indo Farm listed in January 2025.", "2025": "GST on tractors was cut from 12% to 5% in September, the monsoon was 108% of LPA, and buyers rushed ahead of new emission norms: FY26 volumes rose 23.5% to a record 11.3\u201311.5 lakh units. Swaraj +21%, VST +19%, Escorts +12%.", "2026": "The payback year: ICRA sees FY27 growth of only 1\u20134% on a high base, the monsoon forecast was cut to 90% of LPA (El Ni\u00f1o), and commodity costs cut margins (Escorts 11.2% from 13.0%). Escorts \u221225%, VST \u221232%, Indo Farm \u221234%; Swaraj Engines +1%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

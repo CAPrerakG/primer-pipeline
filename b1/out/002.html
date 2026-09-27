@@ -1,0 +1,664 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petrochemicals Primer</title>
+<meta name="description" content="Industry 2 of 278: how crude and gas become plastics, who in India makes what, why spreads swing, a year-by-year record of the cycle, and what to track.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Petrochemicals &amp; Polymers · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 2 of 278 · Chemicals family</div>
+  <h1>Petrochemicals &amp; Polymers</h1>
+  <p class="lede">How crude oil and natural gas become the plastic granules behind pipes, packaging, car parts and fridges. It's a spread business: product price minus feedstock cost. Global capacity waves, mostly Chinese, decide that spread.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 14 (6 moved out in the audit; 2 more flagged here)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Chlor-Alkali &amp; Soda Ash</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~22–23 mt</div><div class="l">India's annual plastics consumption (2025); third-largest market after China and the US</div></div>
+    <div class="stat"><div class="n">3.1 mt</div><div class="l">Polyethylene India imported in 2024, the world's 2nd-largest PE importer</div></div>
+    <div class="stat"><div class="n">~66 mt</div><div class="l">China's ethylene capacity in 2025, up from ~40 mt in 2021</div></div>
+    <div class="stat"><div class="n">$103</div><div class="l">Brent on 18 September 2026 (TradingView), vs a $68 average in 2025</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Oil in, plastic granules out</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Crude oil and natural gas are made of long chains of carbon. A giant machine called a cracker breaks them into small building blocks, like Lego bricks, with names like ethylene and propylene. Another plant clicks thousands of bricks together into long chains; that is plastic. It comes out as small beads, which other factories melt and shape into buckets, pipes, milk pouches and car bumpers. Whoever gets the bricks cheapest earns the most. Right now China has built so many brick factories that everyone's profit got squeezed, and in 2026 a war in the Gulf made the bricks suddenly scarce and expensive.</p>
+  </div>
+  <p>A kitchen analogy that holds up all the way down the chain:</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Kitchen</th><th>Petrochemicals</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>Wheat</td><td>Feedstock</td><td>Naphtha (from crude), ethane and propane (from gas), coal in China</td></tr>
+      <tr><td>Flour mill</td><td>Cracker / reformer</td><td>Makes ethylene, propylene, butadiene (olefins) and benzene, toluene, xylene (aromatics)</td></tr>
+      <tr><td>Dough</td><td>Monomers and intermediates</td><td>Styrene, VCM, propylene oxide, acrylonitrile, MEG, PTA</td></tr>
+      <tr><td>Bread</td><td>Polymers (granules)</td><td>PE, PP, PVC, polystyrene, ABS, polyols</td></tr>
+      <tr><td>Sandwich shop</td><td>Converters</td><td>Pipe, film, moulding and packaging companies</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Petrochemicals are a global commodity game. India consumes far more polyethylene, polypropylene and PVC than it makes, so domestic prices track the landed import price. Margins are spreads over feedstock, and those spreads are set by global capacity cycles. China built roughly 70% of the world's new ethylene capacity in 2020–25, which pushed spreads to multi-decade lows in 2023–25. The Iran war that closed Hormuz from March 2026 sent naphtha and polymer prices to four-year highs, and Indian niche producers posted record quarters (Supreme Petrochem's Q1 FY27 profit nearly tripled) even as their volumes fell. In November 2025 India removed its own protection: 14 quality-control orders were withdrawn and the PVC anti-dumping duty was dropped. The listed pure plays in your watchlist are niche polymer makers (polystyrene, ABS, propylene oxide, PIB, oxo alcohols). The big crackers sit inside Reliance, IOC, GAIL, HPCL's new Barmer complex and unlisted companies.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Two families of building blocks, four families of plastics</h2>
+  <div class="two">
+    <div>
+      <h3>Olefins (from crackers)</h3>
+      <ul><li><b>Ethylene (C2)</b> → polyethylene, PVC (via EDC/VCM), MEG (polyester), styrene.</li><li><b>Propylene (C3)</b> → polypropylene, propylene oxide (polyols), acrylonitrile (ABS, acrylic fibre), oxo alcohols.</li><li><b>Butadiene and C4 streams</b> → synthetic rubber, ABS, polyisobutylene (PIB).</li></ul>
+      <h3>Aromatics (from reformers)</h3>
+      <ul><li><b>Benzene</b> → styrene, cumene/phenol, LAB (detergents).</li><li><b>Toluene</b> → solvents, TDI (polyurethane foam).</li><li><b>Paraxylene</b> → PTA → polyester fibre and PET bottles.</li></ul>
+    </div>
+    <div>
+      <h3>Plastics by family</h3>
+      <ul><li><b>Commodity polymers:</b> polyethylene (LLDPE and LDPE for film, HDPE for pipes and containers), polypropylene (moulded goods, woven sacks, fibre), PVC (pipes, profiles, cables), polystyrene (appliance parts, packaging, EPS thermocol).</li>
+      <li><b>Engineering plastics:</b> ABS and SAN (appliance housings, car interiors), polycarbonate, nylon, PBT; tougher and higher-priced.</li>
+      <li><b>Polyurethane chain:</b> polyols plus MDI/TDI → foams for mattresses and car seats, and coatings.</li>
+      <li><b>Specialty derivatives:</b> PIB (fuel and lubricant additives), oxo alcohols (plasticisers, solvents), glycol ethers and ethoxylates (brake fluid, surfactants).</li></ul>
+    </div>
+  </div>
+  <p>End uses in India: packaging is the largest, then construction and pipes (PVC, HDPE), agriculture (irrigation pipes, mulch film), automobiles, appliances and electronics, and textiles (polyester, via the PTA/MEG chain).</p>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>Your milk pouch is LLDPE; the water tank on the roof is HDPE; the chair on the verandah is polypropylene; the drainpipe is PVC; the thermocol in a TV box is EPS (Supreme Petrochem); the refrigerator's inner lining and the TV's back cover are HIPS and ABS (Supreme, Styrenix, Bhansali); the foam in your mattress started as propylene oxide (Manali); the additive keeping your car's fuel injectors clean is PIB (Kothari).</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a barrel of crude to a PVC pipe</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Feedstock</h4><div class="an">Wheat</div>Naphtha from refineries; ethane and propane from gas; coal in China.<div class="who">Refiners (Reliance, IOC, BPCL, HPCL), gas producers</div><div class="m">Sets the cost floor</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Cracker / reformer / PDH</h4><div class="an">Flour mill</div>Steam cracking breaks naphtha or ethane into olefins; reformers make aromatics; PDH turns propane into propylene.<div class="who">Reliance, IOC, GAIL, HPCL (Barmer, from July 2026), OPaL, Haldia (unlisted), HMEL (unlisted)</div><div class="m">Billions of dollars per plant; scale wins</div></div>
+    <div class="stage"><div class="no">03</div><h4>Monomers &amp; intermediates</h4><div class="an">Dough</div>Styrene, VCM, propylene oxide, acrylonitrile, MEG, PTA, oxo alcohols.<div class="who">Mostly integrated majors; India imports all its styrene; Manali (PO) and Andhra (oxo) are small standalone makers</div><div class="m">Traded globally; volatile</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Polymerisation</h4><div class="an">Bread</div>Monomers linked into long chains, sold as granules by grade (melt flow index).<div class="who">Integrated majors; non-integrated polymer makers (Supreme Petrochem, Styrenix, Bhansali)</div><div class="m">Conversion spread over monomer</div></div>
+    <div class="stage"><div class="no">05</div><h4>Compounding &amp; masterbatch</h4><div class="an">Adding spices</div>Colour, fillers, flame retardants, UV stabilisers.<div class="who">Industrial Plastics watchlist names</div><div class="m">Small, sticky niches</div></div>
+    <div class="stage"><div class="no">06</div><h4>Converters</h4><div class="an">Sandwich shop</div>Pipes, films, moulded parts, packaging.<div class="who">Supreme Industries, Astral, Finolex, Uflex (other watchlists)</div><div class="m">Pass-through pricing; brand and distribution matter</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Feedstock:</b> like buying flour sacks; whoever buys cheapest (US and Gulf gas users) starts ahead.</li>
+    <li><b>Cracker:</b> a giant oven the size of a town that costs more than a big dam; only a few companies can afford one, and it must run all day, every day, to pay for itself.</li>
+    <li><b>Monomers:</b> the individual Lego bricks. Styrene is a brick India doesn't make at all, so Indian polystyrene makers must import every brick.</li>
+    <li><b>Polymerisation:</b> clicking bricks into long chains. Different chain lengths make different "grades", like thin and thick noodles from the same dough.</li>
+    <li><b>Converters:</b> the shops that melt the beads and mould them into things you can buy.</li>
+  </ul>
+  <h3>Critical inputs and choke points</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead>
+    <tbody>
+      <tr><td>Naphtha</td><td>Crude refining; Gulf and Indian refiners</td><td>Asian crackers, including India's</td><td>The naphtha margin over Brent jumped from ~$108/t to over $400/t in March 2026</td></tr>
+      <tr><td>Ethane</td><td>US shale gas, Gulf gas</td><td>US and Middle East crackers (the low-cost end)</td><td>Gulf exports disrupted by Hormuz</td></tr>
+      <tr><td>Styrene monomer</td><td>100% imported; Kandla is the main entry port</td><td>Supreme Petrochem, Styrenix, Bhansali</td><td>~₹82/kg in April, ~₹101–105/kg by late July 2026</td></tr>
+      <tr><td>Acrylonitrile, butadiene</td><td>Imported</td><td>ABS makers (Styrenix, Bhansali, Supreme)</td><td>Volatile with Asian cracker outages</td></tr>
+      <tr><td>Propylene</td><td>Neighbouring refineries by pipeline</td><td>Manali (Chennai refinery), Andhra (HPCL Visakh)</td><td>HPCL halted propylene to Andhra Petro; its plant has been shut since 17 March 2026</td></tr>
+      <tr><td>C4 streams (isobutylene)</td><td>Refineries</td><td>Kothari (PIB)</td><td>Tied to refinery run rates</td></tr>
+      <tr><td>Chlorine / EDC</td><td>Chlor-alkali makers, imports</td><td>PVC makers (via VCM)</td><td>Links PVC to the next primer</td></tr>
+      <tr><td>Licensed technology and catalysts</td><td>Lummus, Univation, LyondellBasell, INEOS and others</td><td>Every polymer plant</td><td>Metallocene catalysts make premium grades</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Profit sits where you are advantaged on feedstock (gas-based or integrated) or protected by a niche (a product few import, or a customer-qualified specialty grade). A non-integrated polymer maker buying imported monomer earns a thin conversion spread. Its edge is plant efficiency, product mix and being the only local supplier with fast delivery. And a standalone plant that depends on one refinery's propylene (Andhra) can be shut by a supply cut it has no control over.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>Your 14 companies, placed on the chain</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Company</th><th>Chain position</th><th>What to know</th></tr></thead>
+    <tbody>
+      <tr><td>Supreme Petrochem <span class="tk">SPLPETRO</span></td><td>Polystyrene, EPS, XPS, ABS (styrenics)</td><td>India's largest polystyrene and EPS maker, promoted by the Rajan Raheja group and the Taparia family (Supreme Industries). Q1 FY27: revenue ₹1,693 cr (+22%), profit ₹236 cr (+192%), EBITDA margin ~20%, but volumes fell 24.5% to 70,842 t as exports were suspended and demand softened. Its new mass-ABS plant at Amdoshi had technical problems and was restored to 65% capacity on 6 March 2026. EPS phase II completed in July 2026; a new 80,000 t polystyrene line (total PS capacity 380,000 t by March 2029) is part of ~₹900 cr of capex.</td></tr>
+      <tr><td>Styrenix Performance Materials <span class="tk">STYRENIX</span></td><td>ABS, SAN, polystyrene</td><td>Formerly INEOS Styrolution India; the ABS/SAN leader with roughly 30% of the domestic ABS market. Q1 FY27 standalone: income ₹771 cr (+7%), EBITDA ₹201 cr (+134%, 26% margin), profit ₹137 cr (+150%), with volumes down 26%. Management called the margin an "abnormal snapshot", not a new baseline. First-phase ABS expansion due in FY27. 40% below its June 2025 peak.</td></tr>
+      <tr><td>Bhansali Engineering Polymers <span class="tk">BEPL</span></td><td>ABS, AES, ASA, SAN and alloys</td><td>The other domestic ABS producer, with plants at Abu Road (Rajasthan) and Satnoor (MP). Q1 FY27: revenue ₹472 cr (+53%), profit ₹66 cr (+43%), EBITDA margin 19.2%. Expanding ABS from 75,000 to 100,000 t a year (~₹200 cr, internally funded; commissioning targeted September 2026). Debt-free, a low-cost producer.</td></tr>
+      <tr><td>Manali Petrochemicals <span class="tk">MANALIPETC</span></td><td>Propylene oxide, propylene glycol, polyols (PU chain)</td><td>India's only propylene-oxide maker (Chennai), with a UK polyurethane-systems arm (Notedome). Q1 FY27: revenue ₹274 cr, profit ₹64 cr, up from almost nothing a year earlier (standalone profit ₹55.5 cr vs ₹3 cr) on better propylene costs and PO/polyol volumes. Exposed to Chinese PO and polyol dumping; 42% below its 2022 peak.</td></tr>
+      <tr><td>Kothari Petrochemicals <span class="tk">KOTHARIPET</span></td><td>Polyisobutylene (PIB)</td><td>HCK group, Chennai; PIB for lubricant and fuel additives, adhesives and sealants. Q1 FY27: revenue ₹149 cr (−8%), profit ₹17 cr (−3%). 47% below its September 2024 peak.</td></tr>
+      <tr><td>Andhra Petrochemicals <span class="tk">ANDHRAPET</span></td><td>Oxo alcohols (2-ethyl hexanol, butanols)</td><td>One of three Indian oxo-alcohol makers (73,000 t a year) at Visakhapatnam, fed propylene by HPCL's adjacent refinery. It had already cut runs on weak margins and imports; operations were suspended on 17 March 2026 when HPCL halted propylene supply during the war. Q1 FY27 sales ₹14 cr, loss ₹3 cr. 77% below its 2021 peak.</td></tr>
+      <tr><td>Advance Petrochemicals <span class="tk">ADVPETR_B</span></td><td>Ethylene-oxide derivatives</td><td>Ahmedabad; glycol ethers, ethoxylates and surfactants, ethanolamines, brake fluid, coolants, PEG. Tiny and illiquid; up 217% in a year.</td></tr>
+      <tr><td>ARCL Organics <span class="tk">ARCL</span></td><td>Formaldehyde-based resins</td><td>Amino, melamine and phenolic resins, formaldehyde, hardeners and "one-shot" resins for panels, foundries, paper and tyres; an MoU with Odisha's IDCO for expansion. Its chemistry is closer to 005 (formaldehyde chain) than to polymers.</td></tr>
+      <tr><td>Gujarat Petrosynthese <span class="tk">GUJPETR</span></td><td>Polymer blends</td><td>Makes and trades plastic polymers and blends; limited public disclosure.</td></tr>
+      <tr><td>Sreechem Resins <span class="tk">SRECR</span></td><td>Resins</td><td>A small resin producer; 90% below its 2022 peak; limited disclosure.</td></tr>
+      <tr><td>Laffans Petrochemicals <span class="tk">LAFFANSQ</span></td><td>Chemical trading</td><td>Trades chemicals; no manufacturing disclosed.</td></tr>
+      <tr><td>Kesar Petroproducts <span class="tk">KESARPE</span> <span class="chip ch-mid">Flag</span></td><td>Pigments (not polymers)</td><td>A leading maker of CPC blue crude and phthalocyanine pigments (Blue 15, Green 7) at Lote Parshuram, plus a new 6,000 t fertiliser plant. <b>I missed this in the audit: its home should be 009 Dyes &amp; Pigments.</b></td></tr>
+      <tr><td>Mysore Petro Chemicals <span class="tk">MYSORPETRO</span> <span class="chip ch-mid">Flag</span></td><td>Trading and holding</td><td>Dhanuka group. It transferred its maleic anhydride business to IG Petrochemicals in 2017 and now trades phthalic and maleic anhydride; it is a promoter-group holder of IG Petrochemicals. Better treated as a holding/trading company.</td></tr>
+      <tr><td>Rajasthan Petro Synthetics <span class="tk">RAJSPTR</span></td><td>Needs your call</td><td>Official record: office management and C&amp;F agency services, effectively a shell.</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Moved out in the audit:</b> Global Pet (PET-bottle machinery), Jasch (coated textiles), KG Petrochem (textiles), Shish (PP sheets), Shubham Polyspin and Zenith Fibres (synthetic yarns).</p>
+  <h3>Where the heavyweights sit</h3>
+  <p>The real crackers are in other watchlists: <b>Reliance</b> (Diversified; the largest polymer producer in India), <b>IOC, BPCL, HPCL</b> (Oil Refining &amp; Marketing; HPCL's 9 mt Barmer refinery with a 2.4 mt petrochemical complex was inaugurated on 4 July 2026), <b>GAIL</b> (Gas Transmission; Pata complex), <b>Chemplast Sanmar</b> (PVC paste resin), <b>Finolex Industries</b> (Plastic Pipes; makes its own PVC resin) and <b>DCW</b> (Chlor-Alkali; PVC). Unlisted: Haldia Petrochemicals, HMEL (HPCL-Mittal), OPaL (ONGC) and Nayara. Adani is building India's largest PVC project at Mundra (first 1 mt planned by December 2026).</p>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Spreads, import parity and inventory</h2>
+  <p><b>Import parity pricing.</b> India is short of polyethylene, polypropylene, PVC and styrene, so domestic producers price off the landed cost of imports: the international price (CFR India) × USD/INR + customs duty + port and freight costs. Anything that raises landed cost (duties, a weak rupee, freight, a supply shock) raises domestic prices and margins. Anything that lowers it, such as Chinese dumping or duties being removed, compresses them. In 2026 all the "raise" levers fired at once: war freight, a rupee at ~₹96 per dollar (TradingView, 18 September) and Gulf supply cuts.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Model</th><th>Earns</th><th class="num">Typical EBITDA*</th><th>Key risk</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>Integrated cracker + polymers</td><td>Cracker margin + polymer margin</td><td class="num">10–25%</td><td>Global capacity cycle; feedstock disadvantage vs ethane</td><td>Reliance O2C, GAIL, IOC petchem</td></tr>
+      <tr><td>Non-integrated polymer maker</td><td>Conversion spread over bought monomer</td><td class="num">6–15% normally; ~20–26% in Q1 FY27</td><td>Monomer price swings; import competition</td><td>Supreme Petrochem, Styrenix, Bhansali</td></tr>
+      <tr><td>Specialty derivative</td><td>Niche product with few local rivals</td><td class="num">8–20%</td><td>Dumping from China; single-product and single-supplier concentration</td><td>Manali, Kothari, Andhra Petro</td></tr>
+      <tr><td>Converter</td><td>Processing margin plus brand and distribution</td><td class="num">8–18%</td><td>Pass-through lag; demand</td><td>Supreme Industries, Astral (other watchlists)</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">*Indicative through-cycle ranges from company filings; 2023–25 sat at the bottom of these ranges for most producers. Q1 FY27 figures are from company results.</p>
+  <h3>Three mechanics every analyst must know</h3>
+  <ol>
+    <li><b>Spread, not price.</b> Revenue can fall 20% while EBITDA rises, if feedstock falls faster than product. Always ask for the spread per tonne.</li>
+    <li><b>Inventory gains and losses.</b> Producers hold 30–60 days of monomer. When prices rise, cheap old stock flatters margins; when they fall, margins get hit. Strip these out to see the underlying business. Q1 FY27's record margins with falling volumes are a textbook inventory-plus-scarcity quarter.</li>
+    <li><b>Grade and mix.</b> Commodity grades earn import parity. Specialty grades (high-impact polystyrene, auto-grade ABS, customer-approved polyols) earn premiums and stickier customers.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>A non-integrated polymer maker is like a baker who buys flour at the market price every week and sells bread at whatever the bakery across the border charges. If the border bakery raises prices (imports get dearer), our baker earns more. If a flood of cheap bread arrives, he earns less, however good his oven.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">6 · The business calendar</p>
+  <h2>Demand is steady, prices are not</h2>
+  <ul>
+    <li><b>Monsoon (June–September)</b> slows construction, so PVC and pipe-grade demand dips. Pre-monsoon stocking (April–May) and post-monsoon construction (October–March) are the strong periods.</li>
+    <li><b>Festive season (September–November)</b> lifts appliance and electronics demand: polystyrene, ABS and polypropylene for housings.</li>
+    <li><b>Summer (March–May)</b> is peak season for air conditioners and refrigerators, which use HIPS, ABS and EPS packaging.</li>
+    <li><b>Chinese New Year (January–February)</b> slows Asian trade and usually softens prices after the holiday restocking.</li>
+    <li><b>Price revisions.</b> Indian producers (Reliance, IOC, Supreme Petrochem) announce prices every fortnight or month. Buyers destock ahead of expected cuts and stock up ahead of expected hikes, which amplifies swings. Reliance announced PE increases effective 16 September 2026.</li>
+    <li><b>Turnarounds.</b> Planned cracker shutdowns (usually spring or autumn in Asia) tighten supply for weeks.</li>
+    <li><b>Hurricane season (June–November)</b> can shut US Gulf capacity, as the February 2021 Texas freeze did, briefly lifting global prices.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">7 · What the stocks do</p>
+  <h2 id="season-h">Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty by calendar month"></svg><figcaption>Average monthly return of the basket minus the Nifty, in percentage points. The label under each month is how many years the basket beat the Nifty in that month.</figcaption></figure>
+  <div id="season-text"><p><b>Basket:</b> 6 names (Supreme Petrochem Limited, Styrenix Performance Materials Ltd, Bhansali Engineering Polymers Ltd., Manali Petrochemicals Limited, Kothari Petrochemicals Ltd., Andhra Petrochemicals Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +10.1 pts (beat in 13 of 15 years); Jun +3.8 pts (beat in 11 of 15 years); Dec +2.5 pts (beat in 10 of 15 years).</li><li><b>Weakest months:</b> Feb -3.7 pts (beat in 3 of 15 years); Mar -2.1 pts (beat in 4 of 15 years); Nov -2.0 pts (beat in 4 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -7.4 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +16.4 pts); Aug–Sep beat the Nifty in 7 of 14 years (median -1.1 pts); Oct–Dec beat the Nifty in 7 of 14 years (median -0.2 pts); Sep–Nov beat the Nifty in 5 of 14 years (median -6.0 pts); Jan–Mar beat the Nifty in 3 of 15 years (median -9.5 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +7.1 points.</p><p><b>Reading it:</b> petrochemicals have the weakest January–March of the chemicals family (the basket beat the Nifty over those three months in only 3 of 15 years) and a strong April. There is no farm calendar here. The likely drivers are the fiscal year-end (post-Chinese-New-Year price softness and March selling in small caps) and April's contract resets plus pre-monsoon pipe stocking. Treat February–March as the cheaper time to study these names, not as a trading rule.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April misses (2019: −2.4 pts; 2025: −1.2 pts).</b> 2019 was the trade-war squeeze in a small-cap bear market; April 2025 came as Chinese capacity was peaking and polymer prices were falling. Every other April since 2012 beat the Nifty.</li>
+    <li><b>Biggest Aprils (2021: +22.1; 2016: +19.7; 2026: +17.8).</b> 2021 was peak-spread euphoria; 2016 was the rebound after crude's $27 bottom; 2026 came right after the Hormuz closure lifted polymer prices.</li>
+    <li><b>April–July failures (2018: −8.7; 2019: −14.7; 2022: −4.8).</b> 2018: crude rising while small caps sold off. 2019: trade war. 2022: the post-Ukraine feedstock spike and Chinese lockdowns.</li>
+    <li><b>Biggest April–July runs (2021: +62.7; 2024: +45.7).</b> 2021: record spreads. 2024: the styrenics rally (Styrenix, Bhansali).</li>
+    <li><b>February is the worst month (beat in 3 of 15).</b> The deepest Februaries were market shocks, not industry ones: 2020 (−13.4, COVID), 2016 (−10.0, the global crude and small-cap sell-off) and 2022 (−8.2, the Russian invasion on 24 February).</li>
+    <li><b>January–March only works in boom years:</b> 2015, 2017 and 2021, the three biggest years in the table below.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Study the names in February–March, when they are usually cheapest relative to the market; expect help in April and the pre-monsoon months. But the annual outcome is set by spreads, which follow crude and Chinese capacity, not the calendar. The basket is small (six names with ₹300 cr+ market cap), equal-weighted, and includes only survivors.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">8 · What moves demand and margins</p>
+  <h2>Capacity waves beat demand every time</h2>
+  <div class="two">
+    <div><h3>Margins (the big driver)</h3><ul>
+      <li><b>Global capacity additions.</b> China added ~26 mt of ethylene capacity between 2021 and 2025. Its 2025 surplus over local demand was forecast at a record 11.5 mt for ethylene and 20.3 mt for propylene.</li>
+      <li><b>Feedstock cost:</b> crude, naphtha cracks, ethane. Brent averaged $68 in 2025 and $88 so far in 2026 (TradingView).</li>
+      <li><b>Supply shocks:</b> war (the 2026 Hormuz crisis; Maersk suspended bookings from most Gulf ports), plant outages, hurricanes.</li>
+      <li><b>Trade protection:</b> duties, anti-dumping measures, quality-control orders.</li>
+      <li><b>Rupee:</b> a weaker rupee lifts import parity; USD/INR averaged ₹87 in 2025 and ~₹94 in 2026.</li>
+      <li><b>Feedstock security:</b> standalone derivative plants depend on one refinery's propylene or C4 (Andhra's 2026 shutdown).</li>
+    </ul></div>
+    <div><h3>Demand</h3><ul>
+      <li><b>Packaging and FMCG</b> are the steady base.</li>
+      <li><b>Construction and infrastructure</b> drive PVC and HDPE pipes; Jal Jeevan Mission water pipelines were a big boost in 2020–24.</li>
+      <li><b>Autos and appliances</b> drive ABS, polypropylene compounds and polystyrene; appliance production-linked incentives (PLI) pull more of this demand onshore.</li>
+      <li><b>Agriculture</b> drives irrigation pipes and films.</li>
+      <li><b>Exports:</b> Supreme Petrochem suspended exports in Q1 FY27 as domestic prices beat export parity.</li>
+      <li>India's plastics demand grows far faster than GDP, but that growth mostly benefits converters, not producers facing import parity.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">9 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">Brent avg</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Brent: calendar-year average of daily closes (TradingView TVC:UKOIL); 2026 is to 18 September. Returns: equal-weighted basket of names with ₹300 cr+ market cap, price only. Stock moves named are calendar-year returns of individual basket members.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year basket return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a petrochemical cycle</h3>
+  <ol>
+    <li><b>Shortage:</b> an outage, war or demand surge lifts product prices faster than feedstock (2015's crude crash; the 2021 Texas freeze; 2026 Hormuz). Spreads widen, niche producers post record quarters.</li>
+    <li><b>Capacity response:</b> fat margins trigger new crackers, above all in China. They take 3–4 years to build.</li>
+    <li><b>Glut:</b> the new plants arrive together, operating rates fall below ~85% and spreads collapse to cash cost (2023–25).</li>
+    <li><b>Cure:</b> high-cost plants close (Japan and Korea from 2024), demand catches up, and the next shock starts the cycle again.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Crude down is often good for these stocks.</b> The best years (2015, 2020) came when crude collapsed and spreads widened. The worst (2012, 2018, 2022) had rising crude.</li>
+    <li><b>Small-cap cycles amplify everything.</b> The basket beat the Nifty by 111 points in 2017 and lagged by 38 in 2019, much more than spreads alone would explain.</li>
+    <li><b>Record quarters come with falling volumes.</b> Q1 FY27 (Supreme, Styrenix) and 2021 show that the most profitable quarters are scarcity quarters, which don't last.</li>
+    <li><b>Standalone plants are fragile.</b> Andhra Petro (a single product, a single feedstock supplier) fell 77% from its 2021 peak and is now shut.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>2020–25 peak</th><th class="num">Now vs peak</th><th class="num">1-year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+  <p class="note">Price only, split-adjusted TradingView data to 18 Sep 2026.</p>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">10 · The global picture</p>
+  <h2>A cost curve decided by feedstock</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Feedstock</th><th>Cost position</th><th>Trend</th></tr></thead><tbody>
+    <tr><td>US Gulf Coast</td><td>Shale ethane</td><td>Lowest</td><td>Big exporter since 2018; hurricanes and freezes are the risk</td></tr>
+    <tr><td>Middle East (SABIC, Borouge, Qatar)</td><td>Subsidised gas, ethane</td><td>Lowest</td><td>Main supplier to India; Hormuz closure in 2026 cut flows</td></tr>
+    <tr><td>China</td><td>Naphtha, coal, imported ethane and propane (PDH)</td><td>Middle to high, but huge scale</td><td>~70% of 2020–25 ethylene additions; near self-sufficient and now exporting</td></tr>
+    <tr><td>Integrated Asian naphtha (Reliance, Korea, Taiwan)</td><td>Naphtha</td><td>Middle</td><td>Squeezed in 2023–25</td></tr>
+    <tr><td>Japan, Korea, older South-East Asian crackers</td><td>Naphtha</td><td>Highest</td><td>Closures and mergers since 2024</td></tr>
+    <tr><td>Europe</td><td>Naphtha, expensive gas</td><td>High</td><td>Closures after the 2022 energy shock</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><b>Country leadership has shifted:</b> Europe and Japan led in the 1970s–90s; the Middle East and the US gained with cheap gas; China became the swing producer in the 2020s.</li>
+    <li><b>The build-out slows after 2026,</b> but analysts don't expect "satisfactory" industry profitability until the early 2030s.</li>
+    <li><b>India</b> is the fastest-growing big market and a net importer. Polypropylene capacity is expected to rise 1.8× over FY25–30 against 1.4× demand growth, and PVC import dependence is projected to fall below 30% by FY27 as Adani, Reliance, HPCL (Barmer) and state refiners add capacity. More domestic supply means prices drift from import parity toward export parity.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">11 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ul>
+    <li><b>Crude-to-chemicals:</b> new refineries convert more of each barrel into petrochemicals rather than fuels, as fuel demand plateaus with EVs. HPCL's Barmer complex is India's newest example.</li>
+    <li><b>PDH and ethane imports:</b> making propylene and ethylene from cheaper gas liquids instead of naphtha (Reliance imports US ethane).</li>
+    <li><b>Recycling mandates:</b> India's plastic waste rules impose extended producer responsibility (EPR) on brand owners and rising minimum recycled content in rigid packaging. Recycled PET and HDPE compete with virgin polymer.</li>
+    <li><b>Single-use plastic ban</b> (identified items since July 2022) and bio-based or compostable polymers (PLA) for niche uses.</li>
+    <li><b>Better catalysts and specialty grades:</b> metallocene PE, specialty ABS/ASA for cars and appliances, XPS insulation boards, move margin from volume to performance (Supreme's XPS and compounding lines, Bhansali's AES/ASA).</li>
+    <li><b>Electrification and lightweighting:</b> EVs use more engineering plastics per car (battery housings, connectors), a tailwind for ABS and compounds.</li>
+  </ul>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">12 · Policy and regulation</p>
+  <h2>The levers that move domestic realisations</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>BIS quality-control orders on polymers</td><td>14 withdrawn in Nov 2025 (PVC, PP, PE, EVA, ABS, polycarbonate, polyurethane, PTA, MEG, polyester fibre and yarns)</td><td>Easier imports, lower input costs for converters, weaker pricing for domestic producers</td></tr>
+    <tr><td>Anti-dumping duty on PVC suspension resin</td><td>DGTR recommended $22–284/t (Aug 2025); the government chose not to impose it (18 Nov 2025)</td><td>Removed an expected support for PVC producers</td></tr>
+    <tr><td>Anti-dumping duty on PVC paste resin</td><td>Definitive duty notified ($89–707/t) on six origins including China</td><td>Supports paste-resin makers such as Chemplast Sanmar</td></tr>
+    <tr><td>Plastic waste rules (EPR, recycled content)</td><td>In force, with targets rising year by year</td><td>A cost for brand owners; a new market for recyclers</td></tr>
+    <tr><td>Single-use plastic ban</td><td>Since July 2022, on identified items</td><td>Small volume effect; a signal of regulatory direction</td></tr>
+    <tr><td>Appliance and electronics PLI</td><td>Running</td><td>More local appliance assembly lifts ABS and HIPS demand</td></tr>
+    <tr><td>GST</td><td>18% on most polymers</td><td>Neutral for B2B (input credit)</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The November 2025 decisions show where policy now leans: the government protects downstream MSME users over upstream producers when the input is "a widely traded raw material". Don't build a producer thesis on expected duties.</p></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">13 · Where the cycle stands now</p>
+  <h2>September 2026: a war-driven price spike on top of a structural glut</h2>
+  <div class="sig">
+    <div class="sg"><div class="t">Global supply <span class="chip ch-bad">Oversupplied</span></div>China's surplus is at record levels; utilisation of global ethylene capacity is about 80%.</div>
+    <div class="sg"><div class="t">Prices <span class="chip ch-mid">Elevated, volatile</span></div>Brent at $103 (18 September); Indian polymer prices rose again in August–September (Reliance PE increase from 16 September).</div>
+    <div class="sg"><div class="t">Indian protection <span class="chip ch-bad">Removed</span></div>Quality-control orders withdrawn and the PVC anti-dumping duty dropped in November 2025.</div>
+    <div class="sg"><div class="t">Domestic capacity <span class="chip ch-mid">Rising</span></div>HPCL Barmer (July 2026), Adani PVC (by December 2026) and polypropylene expansions will cut import needs.</div>
+  </div>
+  <h3>Q1 FY27 at a glance</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Revenue</th><th class="num">Profit</th><th>Note</th></tr></thead><tbody>
+    <tr><td>Supreme Petrochem</td><td class="num">₹1,693 cr (+22%)</td><td class="num">₹236 cr (+192%)</td><td>Volumes −24.5%; exports suspended</td></tr>
+    <tr><td>Styrenix</td><td class="num">₹771 cr (+7%)</td><td class="num">₹137 cr (+150%)</td><td>Volumes −26%; "abnormal" margin</td></tr>
+    <tr><td>Bhansali</td><td class="num">₹472 cr (+53%)</td><td class="num">₹66 cr (+43%)</td><td>ABS expansion due September 2026</td></tr>
+    <tr><td>Manali</td><td class="num">₹274 cr</td><td class="num">₹64 cr</td><td>From near-zero a year earlier</td></tr>
+    <tr><td>Kothari</td><td class="num">₹149 cr (−8%)</td><td class="num">₹17 cr (−3%)</td><td>Steady PIB business</td></tr>
+    <tr><td>Andhra Petro</td><td class="num">₹14 cr</td><td class="num">−₹3 cr</td><td>Plant shut since 17 March</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +19.5% this year vs -10.7% for the Nifty (to 18 Sep 2026). Much of the 2026 outperformance coincides with the war-driven polymer price spike, which also brings inventory gains. Check how much is spread and how much is inventory before extrapolating.</p>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">14 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why it leads</th></tr></thead><tbody>
+    <tr><td>Naphtha crack and Brent</td><td>Platts/Argus, daily; TradingView UKOIL</td><td>Feedstock cost for Asian crackers</td></tr>
+    <tr><td>Polymer prices, CFR India (PE, PP, PVC, PS, ABS)</td><td>Polymerupdate, ChemOrbis, ICIS, weekly</td><td>Sets import parity</td></tr>
+    <tr><td>Domestic price revisions</td><td>Reliance, IOC, Supreme Petrochem circulars, fortnightly</td><td>The market's own view of the direction</td></tr>
+    <tr><td>Styrene, acrylonitrile, butadiene prices</td><td>Weekly (Kandla styrene)</td><td>Cost for styrenics makers</td></tr>
+    <tr><td>Chinese capacity starts and closures</td><td>ICIS, company news</td><td>The supply wave</td></tr>
+    <tr><td>India polymer imports</td><td>DGCI&amp;S, monthly</td><td>Dumping pressure</td></tr>
+    <tr><td>Hormuz shipping and Gulf port bookings</td><td>Shipping lines, freight indices</td><td>Supply shock duration</td></tr>
+    <tr><td>DGTR, BIS and customs notifications</td><td>As issued</td><td>Protection on or off</td></tr>
+    <tr><td>USD/INR and freight</td><td>Daily</td><td>Import parity</td></tr>
+    <tr><td>Andhra Petro restart; Bhansali and Styrenix ABS commissioning</td><td>Exchange filings</td><td>Company-specific catalysts</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">15 · Adjacent industries and proxies</p>
+  <h2>Who wins when polymers get cheap, or dear</h2>
+  <ul>
+    <li><b>Converters gain when polymers are cheap and plentiful:</b> Plastic Pipes (Supreme Industries, Astral, Finolex), Flexible Packaging (Uflex, Cosmo First), Rigid Plastic Packaging, Industrial Plastics. They lose on inventory when prices fall fast.</li>
+    <li><b>Upstream integrated:</b> Reliance (O2C segment), GAIL (petrochemical segment), IOC, HPCL (Barmer ramp-up).</li>
+    <li><b>Sister chains:</b> Chlor-Alkali (chlorine for PVC), Synthetic Fibres (polyester via PTA and MEG), Synthetic Rubber (butadiene), Paints (monomers and solvents), Alcohol &amp; Solvent Chemicals (formaldehyde resins like ARCL's).</li>
+    <li><b>End demand:</b> consumer appliances (Voltas, Blue Star, Amber: big ABS and HIPS users), autos (PP compounds), FMCG packaging, infrastructure.</li>
+    <li><b>Shipping and tank terminals:</b> Kandla and Mundra chemical terminals handle styrene and polymer imports.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">16 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <div class="two"><div><ol>
+    <li>What is your spread per tonne over monomer this quarter against the five-year average?</li>
+    <li>How much of the EBITDA change was inventory gain or loss?</li>
+    <li>Where do you source styrene, AN, butadiene and propylene; what are the contract terms; how many days of stock do you hold?</li>
+    <li>What share of volume is specialty or customer-approved grades?</li>
+    <li>What is utilisation, and what is the payback on new capacity at today's spread?</li>
+    <li>What is the import landed price against your list price?</li>
+    <li>Why did volumes fall while margins rose, and when do exports resume?</li>
+  </ol></div><div><h3>Red flags</h3><ul>
+    <li>Margin expansion that is entirely inventory gains.</li>
+    <li>Capex justified by expected duties.</li>
+    <li>A single large customer, a single product or a single feedstock supplier.</li>
+    <li>Rising receivables in a falling-price market.</li>
+    <li>Plants idle for months (Andhra) or recurring technical problems (Supreme's ABS).</li>
+  </ul></div></div>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">17 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"India's low per-capita plastics use means producers will boom."</td><td>Demand growth is real, but producers price at import parity, and China's surplus caps that parity. Growth accrues mostly to converters.</td></tr>
+    <tr><td>"Anti-dumping duties will protect margins."</td><td>The PVC duty was dropped and the quality-control orders withdrawn in November 2025. Policy now prioritises downstream users.</td></tr>
+    <tr><td>"Oil up is bad, oil down is good."</td><td>What matters is spreads. A supply shock (2026) can lift product prices faster than feedstock at first; a crude crash (2014–15) widened spreads.</td></tr>
+    <tr><td>"Q1 FY27 margins show a new era."</td><td>Styrenix's own management called it an "abnormal snapshot"; volumes fell 25%+ at both Supreme and Styrenix. Scarcity margins historically fade within a few quarters.</td></tr>
+    <tr><td>"The downcycle is ending."</td><td>China's build-out slows after 2026, but analysts see normal profitability only in the early 2030s; closures in Japan and Korea are part of the cure.</td></tr>
+    <tr><td>"New domestic crackers help Indian polymer makers."</td><td>They help converters (cheaper, closer supply) but pressure non-integrated producers, as prices move from import parity toward export parity.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">18 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. PDH, MFI, import parity" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Building blocks</h3><dl>
+    <dt>Feedstock</dt><dd>Raw hydrocarbon fed to a cracker: naphtha, ethane, propane, butane or coal.</dd>
+    <dt>Naphtha</dt><dd>A light liquid from crude refining; the main cracker feed in Asia.</dd>
+    <dt>Ethane / propane</dt><dd>Gas liquids; the cheapest cracker feeds, abundant in the US and Middle East.</dd>
+    <dt>Steam cracker</dt><dd>A furnace that breaks hydrocarbons into olefins using heat and steam.</dd>
+    <dt>PDH</dt><dd>Propane dehydrogenation: makes propylene directly from propane.</dd>
+    <dt>Reformer</dt><dd>A refinery unit that makes aromatics (BTX).</dd>
+    <dt>Olefins (C2, C3, C4)</dt><dd>Ethylene, propylene, butadiene: the main building blocks.</dd>
+    <dt>Aromatics (BTX)</dt><dd>Benzene, toluene, xylenes.</dd>
+    <dt>C4 raffinate</dt><dd>A refinery stream rich in butenes and isobutylene; the raw material for PIB.</dd>
+    <dt>Monomer</dt><dd>A single building-block molecule, such as styrene or VCM.</dd>
+    <dt>Polymer</dt><dd>A long chain of linked monomers; plastic.</dd>
+    <dt>Homopolymer / copolymer</dt><dd>A chain of one monomer, or of two or more (for toughness or clarity).</dd>
+    <dt>COTC</dt><dd>Crude-to-chemicals: a refinery design that maximises chemical yield.</dd>
+    <dt>Coal-to-olefins (CTO)</dt><dd>A Chinese route making olefins from coal via methanol.</dd>
+    <dt>Ethylene oxide (EO) derivatives</dt><dd>Glycol ethers, ethoxylates, PEG and ethanolamines (Advance Petrochemicals).</dd>
+  </dl>
+  <h3>Products</h3><dl>
+    <dt>LLDPE / LDPE / HDPE</dt><dd>Types of polyethylene: stretchy film / soft film / rigid pipes and containers.</dd>
+    <dt>PP (homo, copo, random)</dt><dd>Polypropylene grades for moulding, woven sacks, clear containers.</dd>
+    <dt>PVC (suspension / paste)</dt><dd>Suspension resin for pipes and profiles; paste (emulsion) resin for leathercloth, flooring, gloves.</dd>
+    <dt>EDC / VCM</dt><dd>Ethylene dichloride → vinyl chloride monomer → PVC.</dd>
+    <dt>Styrene</dt><dd>Benzene plus ethylene; the monomer for PS and ABS. India imports all of it.</dd>
+    <dt>GPPS / HIPS</dt><dd>General-purpose (clear) and high-impact polystyrene.</dd>
+    <dt>EPS / XPS</dt><dd>Expandable polystyrene ("thermocol") / extruded polystyrene insulation boards.</dd>
+    <dt>ABS / SAN</dt><dd>Acrylonitrile-butadiene-styrene (tough appliance and auto plastic) / styrene-acrylonitrile (clear, rigid).</dd>
+    <dt>mABS</dt><dd>Mass-polymerised ABS, a cleaner, lower-cost process (Supreme's Amdoshi plant).</dd>
+    <dt>AES / ASA</dt><dd>Weather-resistant ABS alternatives for outdoor and auto parts.</dd>
+    <dt>PC</dt><dd>Polycarbonate: a transparent engineering plastic.</dd>
+    <dt>PTA / MEG / PET</dt><dd>The polyester chain: purified terephthalic acid plus mono-ethylene glycol → PET bottles and fibre.</dd>
+    <dt>PO / PG / polyols</dt><dd>Propylene oxide → propylene glycol and polyether polyols (for PU foam).</dd>
+    <dt>MDI / TDI</dt><dd>Isocyanates reacted with polyols to make polyurethane.</dd>
+    <dt>PIB</dt><dd>Polyisobutylene: fuel and lubricant additives, adhesives.</dd>
+    <dt>Oxo alcohols (2-EH, n-butanol)</dt><dd>2-ethyl hexanol and butanols: for plasticisers and solvents.</dd>
+    <dt>Engineering plastics</dt><dd>High-performance polymers (ABS, PC, nylon, PBT) at premium prices.</dd>
+    <dt>Masterbatch / compound</dt><dd>Polymer pre-mixed with colour, fillers or additives.</dd>
+    <dt>MFI</dt><dd>Melt flow index: how easily a grade flows when melted; defines grades.</dd>
+    <dt>Virgin vs recycled resin</dt><dd>New polymer vs reprocessed plastic (rPET, rHDPE).</dd>
+  </dl>
+  <h3>Economics and trade</h3><dl>
+    <dt>Spread</dt><dd>Product price minus feedstock or monomer cost per tonne.</dd>
+    <dt>Crack spread</dt><dd>The margin of a product (e.g. naphtha) over crude.</dd>
+    <dt>Integrated margin</dt><dd>The combined cracker-plus-polymer margin earned by integrated producers.</dd>
+    <dt>Import parity</dt><dd>Domestic price set equal to landed import cost.</dd>
+    <dt>Export parity</dt><dd>The lower price a producer must accept once it has surplus to export.</dd>
+    <dt>Deemed export</dt><dd>Domestic sales to export-oriented units, priced like exports.</dd>
+    <dt>CFR / FOB</dt><dd>Price including freight to the destination / at the loading port.</dd>
+    <dt>Landed cost</dt><dd>CFR × exchange rate + duty + port and inland charges.</dd>
+    <dt>Inventory gain / loss</dt><dd>The margin effect of holding stock bought at a different price.</dd>
+    <dt>Turnaround</dt><dd>A planned maintenance shutdown.</dd>
+    <dt>Force majeure</dt><dd>A supplier suspending contracts after an uncontrollable event.</dd>
+    <dt>Operating rate</dt><dd>Utilisation of capacity; below ~85% for crackers usually means weak spreads.</dd>
+    <dt>Cost curve</dt><dd>Producers ranked by cash cost; the marginal (highest-cost) plant sets the price.</dd>
+    <dt>QCO</dt><dd>BIS quality-control order: mandatory certification that can block uncertified imports.</dd>
+    <dt>ADD</dt><dd>Anti-dumping duty against imports priced below fair value.</dd>
+    <dt>DGTR</dt><dd>Directorate General of Trade Remedies, which investigates dumping.</dd>
+    <dt>EPR</dt><dd>Extended producer responsibility: brand owners must collect and recycle packaging.</dd>
+    <dt>SUP</dt><dd>Single-use plastics.</dd>
+    <dt>Converter</dt><dd>A company that turns granules into finished plastic products.</dd>
+    <dt>Scarcity margin</dt><dd>An unusually high margin earned during a supply shock, often with falling volumes.</dd>
+  </dl>
+  <p class="note" id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">19 · Test yourself</p>
+  <h2>Eleven questions; answers hidden</h2>
+  <details class="q"><summary>1. Why can domestic polymer prices rise when the rupee weakens, even if global prices are flat?</summary><p>Domestic prices follow import parity (CFR × USD/INR + duty), so a weaker rupee raises landed cost and domestic prices.</p></details>
+  <details class="q"><summary>2. Revenue fell 20% but EBITDA rose. How?</summary><p>Feedstock or monomer prices fell faster than product prices, so the spread widened. Inventory effects can also swing it.</p></details>
+  <details class="q"><summary>3. Why are US and Middle East producers the low-cost suppliers?</summary><p>They crack cheap ethane from gas, while Asian crackers use naphtha priced off crude.</p></details>
+  <details class="q"><summary>4. What did India change in November 2025, and who benefits?</summary><p>It withdrew 14 polymer and chemical quality-control orders and dropped the PVC suspension-resin anti-dumping duty. That benefits converters and MSMEs, and hurts domestic producers.</p></details>
+  <details class="q"><summary>5. Why is styrene a choke point for Supreme Petrochem and Styrenix?</summary><p>India has no styrene plant; they import all of it, so their margin is a conversion spread exposed to global styrene swings.</p></details>
+  <details class="q"><summary>6. What caused the 2023–25 downcycle?</summary><p>China added ~16 mt of ethylene capacity between 2023 and 2025 into weak demand, creating record surpluses and pushing spreads to multi-decade lows.</p></details>
+  <details class="q"><summary>7. What is an inventory gain, and why strip it out?</summary><p>Selling product made from stock bought cheaper before a price rise. It is temporary, so it overstates the underlying margin.</p></details>
+  <details class="q"><summary>8. Who gains most from India's plastics demand growth?</summary><p>Converters and brand owners with distribution. Producers are capped by import parity in a globally oversupplied market.</p></details>
+  <details class="q"><summary>9. Why did Andhra Petrochemicals stop production in March 2026?</summary><p>HPCL halted the propylene it supplies by pipeline from its Visakhapatnam refinery during the war; a standalone plant with one feedstock supplier has no fallback.</p></details>
+  <details class="q"><summary>10. Why did Supreme Petrochem's profit triple in Q1 FY27 while its volumes fell 25%?</summary><p>The war lifted polymer prices faster than costs (a scarcity margin with inventory gains) while exports were suspended and demand softened. It's unlikely to persist.</p></details>
+  <details class="q"><summary>11. Which years were the basket's best, and what did they share?</summary><p>2015, 2017, 2020 and 2021: collapsing or low crude and widening spreads (2015, 2020), plus small-cap booms (2017, 2021).</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">20 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices, seasonality and yearly drivers: TradingView daily closes; equal-weighted basket of the watchlist names with at least ₹300 cr market cap and a year of history (monthly returns capped at ±50%), vs NSE:NIFTY; individual stock returns for the year notes; Brent (TVC:UKOIL) and USD/INR (FX_IDC:USDINR) yearly averages.</li>
+    <li><a href="https://blog.itpweb.com/indias-demand-for-polyolefins-continues-to-grow-and-with-it-the-incentive-to-reduce-import-dependency/">ITP: India PE/PP imports</a>; <a href="https://www.polymerupdate.com/news/details/1393383">Polymerupdate: PVC import dependence</a>; <a href="https://blog.itpweb.com/petrochemical-trade-indias-adani-group-to-add-pvc-capacity-by-2026-international-trader-publications/">Adani PVC</a>; <a href="https://www.eiriindia.org/blog/global-and-india-plastics-industry-market-overview-and-growth-forecast">India plastics consumption</a>; <a href="https://en.wikipedia.org/wiki/Pachpadra_Refinery">HPCL Barmer (Pachpadra) refinery</a>.</li>
+    <li><a href="https://cen.acs.org/business/petrochemicals/Deluge-petrochemicals-China-swamps-Asian/104/web/2026/01">C&amp;EN: China capacity</a>; <a href="https://www.icis.com/asian-chemical-connections/2025/01/chinas-c2-and-c3-capacity-in-2025-forecast-to-be-121-and-179-more-than-local-demand/">ICIS: China C2/C3 surplus</a>; <a href="https://www.woodmac.com/news/opinion/petrochemicals-in-peril-oversupply-crisis-and-energy-transition-threaten-industry-survival/">Wood Mackenzie</a>.</li>
+    <li><a href="https://www.hydrocarbonprocessing.com/news/2026/03/iran-war-chokes-petrochemical-supply-sends-plastic-prices-soaring/">Iran war and plastics prices (Mar 2026)</a>; <a href="https://cen.acs.org/business/Iran-war-debilitate-petrochemicals-rest/104/web/2026/04">C&amp;EN (Apr 2026)</a>; <a href="https://www.chemorbis.com/en/india/india-plastics-news-prices-analysis-pp-hdpe-ldpe-lldpe-gpps-hips-pvc-abs-pet">ChemOrbis India polymer prices</a>; <a href="https://nexizo.ai/chemicals-category/styrene-monomer">styrene prices in India</a>.</li>
+    <li><a href="https://www.angelone.in/news/economy/government-withdraws-14-bis-quality-control-orders-covering-key-chemical-and-polymer-materials">QCO withdrawal</a>; <a href="https://commoplast.com/news/details/17925/">PVC anti-dumping duty dropped</a>; <a href="https://www.polymerupdate.com/News/Details/1409364">DGTR PVC recommendation</a>; <a href="https://www.bizsolindia.com/custom-the-ministry-of-finance-department-of-revenue-has-issued-notification-imposing-definitive-anti-dumping-duty-on-imports-of-poly-vinyl-chloride-pvc-paste-resin-also-known-as-emulsion-pvc-re/">PVC paste resin duty</a>.</li>
+    <li>Company results: <a href="https://www.multibagg.ai/market-pulse/articles/spl-q1fy27-96633">Supreme Petrochem Q1 FY27</a> and <a href="https://www.sahi.com/news/supreme-petrochem-approves-80-000-tpa-polystyrene-line-plans-900-crore-expansion-capex-1390-PE1_COR">capex</a>; <a href="https://www.investing.com/news/company-news/styrenix-q1-fy27-slides-margins-surge-on-pricing-volumes-fall-26-93CH-4837435">Styrenix Q1 FY27</a> and <a href="https://finance.yahoo.com/markets/stocks/articles/styrenix-performance-materials-ltd-bom-010437391.html">call</a>; <a href="https://www.indianchemicalnews.com/general/bhansali-engineering-polymers-reports-strong-q1-fy27-results-as-profit-rise-advances-rs-200-crore-expansion-31173">Bhansali Q1 FY27</a>; <a href="https://www.indianchemicalnews.com/petro-chemical/manali-petrochemicals-q1-profit-jumps-349-to-rs-6436-cr-31501">Manali Q1 FY27</a>; <a href="https://univest.in/blogs/kothari-petro-q1-fy27-results-pat-17-crore">Kothari Q1 FY27</a>; <a href="https://www.autocarpro.in/news/refinery-disruptions-hit-downstream-auto-chemicals-as-andhra-petro-halts-production-131671">Andhra Petro shutdown</a>; <a href="https://www.marketscreener.com/news/andhra-petrochemicals-plant-shutdown-continues-due-to-un-remunerative-realisation-ce7e5bd8d88bf626">Andhra shutdown continues</a>.</li>
+    <li>Micro caps: <a href="https://stockanalysis.com/quote/bom/543993/company/">ARCL Organics</a>; <a href="https://www.kesarpetroproducts.com/">Kesar Petroproducts</a>; <a href="https://www.advancepetro.com/">Advance Petrochemicals</a>; <a href="http://www.mysorepetro.com/company-overview/">Mysore Petro Chemicals</a>; <a href="https://www.polymerupdate.com/News/Details/1371207/PS">India styrene demand</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -3.4}, {"y": 2013, "v": -8.8}, {"y": 2014, "v": -3.9}, {"y": 2015, "v": 2.1}, {"y": 2016, "v": -14.2}, {"y": 2017, "v": 6.4}, {"y": 2018, "v": -3.3}, {"y": 2019, "v": -9.2}, {"y": 2020, "v": -13.5}, {"y": 2021, "v": 7.9}, {"y": 2022, "v": -7.4}, {"y": 2023, "v": -13.0}, {"y": 2024, "v": -16.5}, {"y": 2025, "v": -7.4}, {"y": 2026, "v": 0.6}], "AprJul": [{"y": 2012, "v": -0.9}, {"y": 2013, "v": -1.1}, {"y": 2014, "v": 13.0}, {"y": 2015, "v": 43.9}, {"y": 2016, "v": 17.7}, {"y": 2017, "v": 17.2}, {"y": 2018, "v": -8.7}, {"y": 2019, "v": -14.7}, {"y": 2020, "v": 16.4}, {"y": 2021, "v": 62.7}, {"y": 2022, "v": -4.8}, {"y": 2023, "v": 26.7}, {"y": 2024, "v": 45.7}, {"y": 2025, "v": 6.7}, {"y": 2026, "v": 31.0}], "AugSep": [{"y": 2012, "v": -6.2}, {"y": 2013, "v": 0.1}, {"y": 2014, "v": 5.5}, {"y": 2015, "v": -4.2}, {"y": 2016, "v": 2.3}, {"y": 2017, "v": 6.3}, {"y": 2018, "v": -7.7}, {"y": 2019, "v": 6.0}, {"y": 2020, "v": 35.9}, {"y": 2021, "v": -6.5}, {"y": 2022, "v": -2.4}, {"y": 2023, "v": 8.4}, {"y": 2024, "v": -4.6}, {"y": 2025, "v": -7.5}], "OctDec": [{"y": 2012, "v": -3.5}, {"y": 2013, "v": -1.3}, {"y": 2014, "v": 1.0}, {"y": 2015, "v": 26.5}, {"y": 2016, "v": 15.1}, {"y": 2017, "v": 33.6}, {"y": 2018, "v": -7.3}, {"y": 2019, "v": -11.0}, {"y": 2020, "v": 27.5}, {"y": 2021, "v": 1.0}, {"y": 2022, "v": -14.0}, {"y": 2023, "v": 9.2}, {"y": 2024, "v": -4.6}, {"y": 2025, "v": -15.1}], "SepNov": [{"y": 2012, "v": -9.6}, {"y": 2013, "v": -9.4}, {"y": 2014, "v": -0.2}, {"y": 2015, "v": 24.8}, {"y": 2016, "v": 30.3}, {"y": 2017, "v": 40.5}, {"y": 2018, "v": -15.0}, {"y": 2019, "v": -13.9}, {"y": 2020, "v": 33.6}, {"y": 2021, "v": -2.6}, {"y": 2022, "v": -15.8}, {"y": 2023, "v": 6.8}, {"y": 2024, "v": -14.7}, {"y": 2025, "v": -18.1}], "JanMar": [{"y": 2012, "v": -4.3}, {"y": 2013, "v": -14.0}, {"y": 2014, "v": -12.7}, {"y": 2015, "v": 0.6}, {"y": 2016, "v": -20.2}, {"y": 2017, "v": 17.1}, {"y": 2018, "v": -12.4}, {"y": 2019, "v": -18.8}, {"y": 2020, "v": -8.6}, {"y": 2021, "v": 10.5}, {"y": 2022, "v": -3.7}, {"y": 2023, "v": -12.8}, {"y": 2024, "v": -9.5}, {"y": 2025, "v": -15.4}, {"y": 2026, "v": -4.8}]}, "my": {"1": {"2012": -0.5, "2013": -5.8, "2014": -8.4, "2015": -1.7, "2016": -7.6, "2017": 9.2, "2018": -10.1, "2019": -9.8, "2020": 8.0, "2021": 2.3, "2022": 4.0, "2023": -0.2, "2024": 8.2, "2025": -8.7, "2026": -6.1}, "2": {"2012": -0.8, "2013": -2.6, "2014": -6.6, "2015": -1.9, "2016": -10.0, "2017": -0.0, "2018": 1.2, "2019": -6.9, "2020": -13.4, "2021": 10.9, "2022": -8.2, "2023": -4.8, "2024": -6.6, "2025": -6.8, "2026": 1.8}, "3": {"2012": -2.5, "2013": -6.7, "2014": 3.2, "2015": 4.0, "2016": -3.9, "2017": 6.2, "2018": -4.6, "2019": -1.8, "2020": -4.0, "2021": -2.6, "2022": 1.3, "2023": -8.7, "2024": -10.4, "2025": -0.2, "2026": -0.9}, "4": {"2012": 2.0, "2013": 8.4, "2014": 8.2, "2015": 3.2, "2016": 19.7, "2017": 15.4, "2018": 6.2, "2019": -2.4, "2020": 16.6, "2021": 22.1, "2022": 11.0, "2023": 10.0, "2024": 14.0, "2025": -1.2, "2026": 17.8}, "5": {"2012": 0.7, "2013": -6.3, "2014": 7.3, "2015": -1.8, "2016": -4.6, "2017": -10.4, "2018": -8.9, "2019": -0.2, "2020": 5.6, "2021": 8.0, "2022": -10.6, "2023": 3.1, "2024": 1.4, "2025": 5.8, "2026": 0.7}, "6": {"2012": -6.8, "2013": -0.5, "2014": 10.1, "2015": 12.7, "2016": 3.3, "2017": 8.4, "2018": -5.0, "2019": -7.8, "2020": 4.4, "2021": 10.4, "2022": 0.5, "2023": 6.7, "2024": 12.4, "2025": 5.2, "2026": 3.7}, "7": {"2011": 8.5, "2012": 2.9, "2013": -1.8, "2014": -12.3, "2015": 26.1, "2016": -1.8, "2017": 3.1, "2018": 0.8, "2019": -5.3, "2020": -11.3, "2021": 9.3, "2022": -4.8, "2023": 2.9, "2024": 9.7, "2025": -3.0, "2026": 5.6}, "8": {"2011": 0.6, "2012": -0.3, "2013": 0.3, "2014": -1.7, "2015": -4.6, "2016": -5.4, "2017": 1.7, "2018": -2.6, "2019": 4.5, "2020": 13.4, "2021": -6.2, "2022": -3.0, "2023": 14.8, "2024": 2.6, "2025": -4.1, "2026": 0.0}, "9": {"2011": -0.5, "2012": -5.9, "2013": -0.3, "2014": 7.2, "2015": 0.5, "2016": 7.9, "2017": 4.7, "2018": -5.3, "2019": 1.3, "2020": 19.5, "2021": -0.1, "2022": 0.5, "2023": -6.0, "2024": -7.0, "2025": -3.6}, "10": {"2011": -6.2, "2012": -1.2, "2013": -7.5, "2014": -6.5, "2015": 21.8, "2016": 22.3, "2017": 10.1, "2018": 1.8, "2019": -5.8, "2020": -0.5, "2021": -2.3, "2022": -7.7, "2023": 13.6, "2024": -1.4, "2025": -2.5}, "11": {"2011": -6.8, "2012": -2.3, "2013": -1.4, "2014": -0.8, "2015": 2.3, "2016": 0.2, "2017": 21.2, "2018": -13.4, "2019": -8.9, "2020": 9.6, "2021": -0.3, "2022": -9.1, "2023": -0.8, "2024": -7.8, "2025": -11.9}, "12": {"2011": -1.7, "2012": 0.0, "2013": 7.7, "2014": 8.2, "2015": 1.8, "2016": -5.3, "2017": -1.4, "2018": 4.3, "2019": 4.1, "2020": 14.0, "2021": 3.7, "2022": 2.6, "2023": -4.6, "2024": 4.6, "2025": -0.5}}, "basket": ["Supreme Petrochem Limited", "Styrenix Performance Materials Ltd", "Bhansali Engineering Polymers Ltd.", "Manali Petrochemicals Limited", "Kothari Petrochemicals Ltd.", "Andhra Petrochemicals Limited"], "nbasket": 6, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -1.1, "rel": -1.8, "hit": 5, "n": 15}, {"m": 2, "abs": -4.8, "rel": -3.7, "hit": 3, "n": 15}, {"m": 3, "abs": -2.3, "rel": -2.1, "hit": 4, "n": 15}, {"m": 4, "abs": 12.6, "rel": 10.1, "hit": 13, "n": 15}, {"m": 5, "abs": 0.5, "rel": -0.7, "hit": 8, "n": 15}, {"m": 6, "abs": 5.6, "rel": 3.8, "hit": 11, "n": 15}, {"m": 7, "abs": 3.7, "rel": 1.8, "hit": 9, "n": 16}, {"m": 8, "abs": 0.4, "rel": 0.6, "hit": 8, "n": 16}, {"m": 9, "abs": 1.5, "rel": 0.9, "hit": 7, "n": 15}, {"m": 10, "abs": 4.0, "rel": 1.9, "hit": 5, "n": 15}, {"m": 11, "abs": -1.1, "rel": -2.0, "hit": 4, "n": 15}, {"m": 12, "abs": 3.2, "rel": 2.5, "hit": 10, "n": 15}], "cy": [{"y": 2012, "b": 11.0, "n": 27.7, "rel": -16.7, "partial": false}, {"y": 2013, "b": -10.8, "n": 6.8, "rel": -17.5, "partial": false}, {"y": 2014, "b": 37.0, "n": 31.4, "rel": 5.6, "partial": false}, {"y": 2015, "b": 67.7, "n": -4.1, "rel": 71.7, "partial": false}, {"y": 2016, "b": 12.2, "n": 3.0, "rel": 9.2, "partial": false}, {"y": 2017, "b": 139.8, "n": 28.6, "rel": 111.1, "partial": false}, {"y": 2018, "b": -29.3, "n": 3.2, "rel": -32.5, "partial": false}, {"y": 2019, "b": -25.8, "n": 12.0, "rel": -37.8, "partial": false}, {"y": 2020, "b": 88.0, "n": 14.9, "rel": 73.1, "partial": false}, {"y": 2021, "b": 105.6, "n": 24.1, "rel": 81.5, "partial": false}, {"y": 2022, "b": -19.0, "n": 4.3, "rel": -23.3, "partial": false}, {"y": 2023, "b": 50.8, "n": 20.0, "rel": 30.8, "partial": false}, {"y": 2024, "b": 26.4, "n": 8.8, "rel": 17.6, "partial": false}, {"y": 2025, "b": -21.3, "n": 10.5, "rel": -31.8, "partial": false}, {"y": 2026, "b": 19.5, "n": -10.7, "rel": 30.1, "partial": true}], "dd": [{"co": "Supreme Petrochem", "peak": "Jul 2024", "fp": -5, "y1": 5}, {"co": "Styrenix Performance Materials", "peak": "Jun 2025", "fp": -40, "y1": -19}, {"co": "Bhansali Engineering Polymers", "peak": "Sep 2024", "fp": -25, "y1": 22}, {"co": "Manali Petrochemicals", "peak": "Apr 2022", "fp": -42, "y1": 19}, {"co": "Kothari Petrochemicals", "peak": "Sep 2024", "fp": -47, "y1": -11}, {"co": "Andhra Petrochemicals", "peak": "Aug 2021", "fp": -77, "y1": -27}, {"co": "ARCL Organics", "peak": "Nov 2025", "fp": -39, "y1": -22}, {"co": "Kesar Petroproducts", "peak": "Aug 2025", "fp": -61, "y1": -60}, {"co": "Mysore Petro Chemicals", "peak": "Sep 2024", "fp": -48, "y1": 10}, {"co": "Laffans Petrochemicals", "peak": "Nov 2024", "fp": -61, "y1": -19}, {"co": "Rajasthan Petro Synthetics", "peak": "Aug 2025", "fp": -25, "y1": 34}, {"co": "Advance Petrochemicals", "peak": "Mar 2023", "fp": 22, "y1": 217}, {"co": "Gujarat Petrosynthese", "peak": "May 2024", "fp": -43, "y1": -23}, {"co": "Sreechem Resins", "peak": "Nov 2022", "fp": -90, "y1": -48}], "win": {"FebMar": {"mean": -5.6, "median": -7.4, "hit": 4, "n": 15}, "AprJul": {"mean": 16.7, "median": 16.4, "hit": 10, "n": 15}, "AugSep": {"mean": 1.8, "median": -1.1, "hit": 7, "n": 14}, "OctDec": {"mean": 4.1, "median": -0.2, "hit": 7, "n": 14}, "SepNov": {"mean": 2.6, "median": -6.0, "hit": 5, "n": 14}, "JanMar": {"mean": -7.3, "median": -9.5, "hit": 3, "n": 15}}, "ytd": {"b": 19.5, "n": -10.7}, "hx": {"label": "Brent", "v": {"2012": "$112", "2013": "$109", "2014": "$99", "2015": "$54", "2016": "$45", "2017": "$55", "2018": "$72", "2019": "$64", "2020": "$43", "2021": "$71", "2022": "$99", "2023": "$82", "2024": "$80", "2025": "$68", "2026": "$88"}}, "notes": {"2012": "Brent above $110 kept naphtha expensive and squeezed polymer spreads. Small caps lagged a large-cap-led market; Andhra Petro fell 34% and Bhansali 27%.", "2013": "The taper-tantrum rupee crash (average \u20b953 \u2192 \u20b959 per dollar) raised landed costs but hit demand. Styrenix (then INEOS Styrolution India) fell 43%.", "2014": "Crude began its collapse in the second half ($110 \u2192 $60 by December). Manali rose 96% and Styrenix 54% as feedstock costs started falling.", "2015": "The crude crash widened spreads: polymer prices fell more slowly than monomer and naphtha costs. Kothari +102%, Manali +84%, Bhansali +75%. The basket beat the Nifty by 72 points.", "2016": "Brent bottomed near $27 in January. Supreme Petrochem rose 74% on fat polystyrene spreads, but half the basket fell (Kothari \u221228%, Styrenix \u221222%); the median stock was flat.", "2017": "The biggest outlier year. Bhansali rose 741% as tight Asian ABS markets and a turnaround lifted profits from a low base; Andhra +193% and Supreme +94% in a small-cap mania year.", "2018": "Crude climbed to $86 by October and the IL&amp;FS crisis triggered a small- and mid-cap sell-off. Bhansali fell 53% and Supreme 46%.", "2019": "The US\u2013China trade war, new US shale crackers and the first Chinese capacity waves squeezed spreads, in a small-cap bear market. Every stock but Styrenix fell 24\u201341%.", "2020": "COVID crashed crude to $20, then packaging, hygiene and appliance demand boomed. Bhansali +181%, Supreme +130%, Manali +87%.", "2021": "Peak spreads: the Texas freeze (February) cut US supply and propylene oxide and oxo-alcohol prices hit records. Manali +203%, Kothari +174%, Andhra +142%.", "2022": "Russia\u2013Ukraine lifted Brent to a $99 average; feedstock rose faster than product and Chinese lockdowns cut demand. Styrenix \u221244%, Andhra \u221240%.", "2023": "Crude eased and spreads recovered for niche products. Kothari +111% and Styrenix +86% (renamed after INEOS sold out; a high-payout story).", "2024": "China's capacity wave kept commodity spreads thin, but styrenics held up: Styrenix +102%, Bhansali +36%. Manali \u221220% on Chinese propylene oxide and polyol dumping.", "2025": "China's mega-wave peaked; India withdrew 14 quality-control orders and dropped the PVC anti-dumping duty (November). Bhansali \u221234%, Kothari \u221233%, Styrenix \u221232%.", "2026": "The Hormuz closure sent polymer prices to four-year highs; Brent was $103 on 18 September. Supreme's Q1 profit tripled on lower volumes. Andhra Petro's plant has been shut since 17 March for lack of propylene."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

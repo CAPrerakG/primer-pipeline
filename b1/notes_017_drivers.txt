@@ -1,0 +1,25 @@
+BASKET 4 names
+2012: basket +60 nifty +28 rel +33 | n=3 median +62 | TOP Tata Motors Passen +75, Maruti Suzuki Indi +62, Mahindra & Mahindr +37 | BOTTOM 
+2013: basket +15 nifty +7 rel +8 | n=3 median +18 | TOP Tata Motors Passen +20, Maruti Suzuki Indi +18, Mahindra & Mahindr +1 | BOTTOM 
+2014: basket +51 nifty +31 rel +20 | n=3 median +32 | TOP Maruti Suzuki Indi +89, Tata Motors Passen +32, Mahindra & Mahindr +31 | BOTTOM 
+2015: basket +8 nifty -4 rel +12 | n=3 median +3 | TOP Maruti Suzuki Indi +39, Mahindra & Mahindr +3, Tata Motors Passen -20 | BOTTOM 
+2016: basket +11 nifty +3 rel +8 | n=3 median +15 | TOP Tata Motors Passen +21, Maruti Suzuki Indi +15, Mahindra & Mahindr -7 | BOTTOM 
+2017: basket +30 nifty +29 rel +1 | n=3 median +27 | TOP Maruti Suzuki Indi +83, Mahindra & Mahindr +27, Tata Motors Passen -9 | BOTTOM 
+2018: basket -30 nifty +3 rel -33 | n=3 median -23 | TOP Mahindra & Mahindr +7, Maruti Suzuki Indi -23, Tata Motors Passen -60 | BOTTOM 
+2019: basket -8 nifty +12 rel -20 | n=3 median -1 | TOP Tata Motors Passen +7, Maruti Suzuki Indi -1, Mahindra & Mahindr -34 | BOTTOM 
+2020: basket +16 nifty +15 rel +1 | n=3 median +4 | TOP Mahindra & Mahindr +36, Maruti Suzuki Indi +4, Tata Motors Passen -1 | BOTTOM 
+2021: basket +49 nifty +24 rel +25 | n=3 median +16 | TOP Tata Motors Passen +162, Mahindra & Mahindr +16, Maruti Suzuki Indi -3 | BOTTOM 
+2022: basket +12 nifty +4 rel +8 | n=3 median +13 | TOP Mahindra & Mahindr +49, Maruti Suzuki Indi +13, Tata Motors Passen -20 | BOTTOM 
+2023: basket +52 nifty +20 rel +32 | n=3 median +38 | TOP Tata Motors Passen +101, Mahindra & Mahindr +38, Maruti Suzuki Indi +23 | BOTTOM 
+2024: basket +23 nifty +9 rel +14 | n=3 median +5 | TOP Mahindra & Mahindr +74, Maruti Suzuki Indi +5, Tata Motors Passen -5 | BOTTOM 
+2025: basket +21 nifty +10 rel +10 | n=4 median +25 | TOP Maruti Suzuki Indi +54, Hyundai Motor Indi +27, Mahindra & Mahindr +23 | BOTTOM Hyundai Motor Indi +27, Mahindra & Mahindr +23, Tata Motors Passen -18
+2026: basket -16 nifty -11 rel -5 | n=4 median -18 | TOP Hyundai Motor Indi -4, Tata Motors Passen -17, Mahindra & Mahindr -18 | BOTTOM Tata Motors Passen -17, Mahindra & Mahindr -18, Maruti Suzuki Indi -28
+MONTH 4 avg +4.1 (13/15): worst years [('2021', -4.2), ('2025', -0.5), ('2026', 0.2)] best years [('2022', 7.8), ('2013', 12.0), ('2020', 13.6)]
+MONTH 1 avg +2.1 (9/15): worst years [('2018', -7.4), ('2019', -6.9), ('2016', -4.6)] best years [('2022', 9.7), ('2023', 13.4), ('2021', 16.2)]
+MONTH 3 avg -3.0 (5/15): worst years [('2020', -14.9), ('2022', -7.8), ('2019', -7.6)] best years [('2016', 3.4), ('2024', 3.6), ('2012', 4.3)]
+WIN FebMar: hit 4/15 median -4.1 | negative years [(2013, -4.8), (2016, -0.5), (2017, -8.8), (2018, -1.2), (2019, -8.7), (2020, -21.4), (2021, -2.1), (2022, -13.0), (2023, -8.2), (2025, -5.1), (2026, -4.1)] | biggest [(2024, 14.8), (2012, 8.4)]
+WIN AprJul: hit 10/15 median +6.2 | negative years [(2012, -9.8), (2015, -1.4), (2018, -8.1), (2019, -14.2), (2021, -9.6)] | biggest [(2020, 38.5), (2022, 22.5)]
+WIN AugSep: hit 8/14 median +1.3 | negative years [(2015, -0.6), (2017, -2.8), (2018, -11.7), (2019, -0.6), (2021, -2.7), (2024, -6.2)] | biggest [(2025, 14.6), (2014, 12.7)]
+WIN OctDec: hit 6/14 median -0.3 | negative years [(2014, -4.7), (2016, -5.2), (2018, -8.8), (2020, -0.4), (2022, -9.2), (2023, -0.2), (2024, -6.7), (2025, -8.5)] | biggest [(2021, 18.0), (2019, 14.0)]
+WIN SepNov: hit 8/14 median +3.7 | negative years [(2014, -2.9), (2016, -3.1), (2018, -16.5), (2022, -8.1), (2024, -6.7), (2025, -5.6)] | biggest [(2021, 22.7), (2015, 17.9)]
+WIN JanMar: hit 6/15 median -4.5 | negative years [(2013, -7.8), (2016, -5.2), (2017, -5.0), (2018, -7.9), (2019, -15.4), (2020, -20.9), (2022, -4.5), (2025, -3.9), (2026, -7.5)] | biggest [(2012, 19.4), (2024, 17.8)]

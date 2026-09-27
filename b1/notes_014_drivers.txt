@@ -1,0 +1,25 @@
+BASKET 17 names
+2012: basket +13 nifty +28 rel -15 | n=13 median +4 | TOP Rama Phosphates Li +80, National Fertilize +42, Fertilizers & Chem +25 | BOTTOM Coromandel Interna -5, Chambal Fertiliser -11, Madras Fertilizers -13
+2013: basket -27 nifty +7 rel -34 | n=14 median -22 | TOP Gujarat Narmada Va -9, Coromandel Interna -10, Madras Fertilizers -11 | BOTTOM Rama Phosphates Li -46, Zuari Agro Chemica -48, National Fertilize -68
+2014: basket +53 nifty +31 rel +22 | n=14 median +51 | TOP Aries Agro Ltd. +129, Gujarat State Fert +94, Rashtriya Chemical +92 | BOTTOM Gujarat Narmada Va +8, Khaitan Chemicals  +2, Rama Phosphates Li -20
+2015: basket -11 nifty -4 rel -7 | n=14 median -18 | TOP Rama Phosphates Li +28, Khaitan Chemicals  +15, Deepak Fertilisers +12 | BOTTOM Gujarat State Fert -30, Coromandel Interna -39, Zuari Agro Chemica -39
+2016: basket +34 nifty +3 rel +31 | n=14 median +31 | TOP Gujarat Narmada Va +164, Aries Agro Ltd. +63, Coromandel Interna +55 | BOTTOM Rashtriya Chemical -5, Madras Fertilizers -7, Southern Petrochem -20
+2017: basket +114 nifty +29 rel +85 | n=14 median +108 | TOP Madras Fertilizers +218, Southern Petrochem +160, Zuari Agro Chemica +142 | BOTTOM Rama Phosphates Li +57, Aries Agro Ltd. +54, Khaitan Chemicals  +47
+2018: basket -37 nifty +3 rel -40 | n=14 median -40 | TOP Chambal Fertiliser -3, Rama Phosphates Li -6, Coromandel Interna -22 | BOTTOM Zuari Agro Chemica -57, Aries Agro Ltd. -59, Deepak Fertilisers -65
+2019: basket -27 nifty +12 rel -39 | n=14 median -29 | TOP Coromandel Interna +18, Chambal Fertiliser +3, Fertilizers & Chem -3 | BOTTOM Rama Phosphates Li -49, Gujarat Narmada Va -52, Zuari Agro Chemica -62
+2020: basket +49 nifty +15 rel +34 | n=16 median +41 | TOP Khaitan Chemicals  +259, Rama Phosphates Li +96, Deepak Fertilisers +67 | BOTTOM Madras Fertilizers +5, Gujarat State Fert +3, Madhya Bharat Agro -12
+2021: basket +96 nifty +24 rel +72 | n=16 median +85 | TOP Rama Phosphates Li +252, Madhya Bharat Agro +151, Deepak Fertilisers +137 | BOTTOM Madras Fertilizers +39, Zuari Agro Chemica +21, Coromandel Interna -7
+2022: basket +72 nifty +4 rel +68 | n=16 median +45 | TOP Madhya Bharat Agro +526, Fertilizers & Chem +183, Madras Fertilizers +170 | BOTTOM Gujarat State Fert +15, Rama Phosphates Li -11, Chambal Fertiliser -21
+2023: basket +22 nifty +20 rel +2 | n=17 median +15 | TOP Fertilizers & Chem +116, Gujarat State Fert +73, Madras Fertilizers +43 | BOTTOM Southern Petrochem -12, Khaitan Chemicals  -12, Rama Phosphates Li -24
+2024: basket +14 nifty +9 rel +6 | n=17 median +9 | TOP Deepak Fertilisers +76, Paradeep Phosphate +62, Coromandel Interna +50 | BOTTOM Krishana Phoschem  -19, Madhya Bharat Agro -22, Gujarat Narmada Va -26
+2025: basket +24 nifty +10 rel +13 | n=17 median +9 | TOP Krishana Phoschem  +166, Madhya Bharat Agro +84, Rama Phosphates Li +68 | BOTTOM Rashtriya Chemical -16, Madras Fertilizers -16, National Fertilize -21
+2026: basket -4 nifty -11 rel +7 | n=17 median -16 | TOP Madhya Bharat Agro +89, Krishana Phoschem  +69, Aries Agro Ltd. +44 | BOTTOM National Fertilize -27, Zuari Agro Chemica -33, Khaitan Chemicals  -36
+MONTH 4 avg +7.8 (13/15): worst years [('2019', -4.7), ('2013', -0.8), ('2021', 2.9)] best years [('2022', 12.6), ('2026', 14.8), ('2016', 16.6)]
+MONTH 12 avg +3.2 (12/15): worst years [('2011', -8.3), ('2024', -3.7), ('2012', -1.8)] best years [('2023', 5.5), ('2021', 5.9), ('2022', 19.3)]
+MONTH 2 avg -4.5 (4/15): worst years [('2020', -13.2), ('2024', -11.6), ('2019', -11.0)] best years [('2012', 0.8), ('2017', 2.4), ('2021', 6.0)]
+WIN FebMar: hit 3/15 median -8.0 | negative years [(2012, -2.2), (2013, -15.8), (2014, -4.4), (2015, -10.3), (2016, -5.7), (2018, -11.4), (2019, -10.6), (2020, -8.0), (2023, -10.8), (2024, -22.5), (2025, -9.8), (2026, -6.3)] | biggest [(2022, 19.9), (2021, 8.3)]
+WIN AprJul: hit 10/15 median +7.1 | negative years [(2012, -9.5), (2013, -22.2), (2018, -21.4), (2019, -17.0), (2022, -0.1)] | biggest [(2021, 59.1), (2025, 45.3)]
+WIN AugSep: hit 7/14 median -0.1 | negative years [(2012, -0.7), (2015, -9.4), (2018, -13.3), (2019, -3.4), (2021, -13.1), (2024, -9.9), (2025, -6.7)] | biggest [(2022, 7.1), (2023, 6.4)]
+WIN OctDec: hit 9/14 median +6.2 | negative years [(2012, -7.7), (2014, -1.3), (2019, -5.6), (2021, -1.1), (2025, -8.8)] | biggest [(2017, 27.6), (2015, 20.8)]
+WIN SepNov: hit 7/14 median -0.0 | negative years [(2012, -1.4), (2018, -9.4), (2019, -2.1), (2020, -6.1), (2021, -2.5), (2022, -7.0), (2025, -16.8)] | biggest [(2017, 20.4), (2015, 14.3)]
+WIN JanMar: hit 5/15 median -8.6 | negative years [(2013, -21.2), (2014, -8.0), (2015, -17.7), (2016, -7.3), (2018, -17.0), (2019, -14.5), (2023, -14.1), (2024, -14.0), (2025, -8.6), (2026, -10.2)] | biggest [(2022, 36.4), (2017, 27.6)]

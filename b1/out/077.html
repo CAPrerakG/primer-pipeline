@@ -1,0 +1,629 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metal Trading &amp; Distribution Primer</title>
+<meta name="description" content="Industry 77 of 278, and the last of the Metals family: the thinnest margin in metals. Why a trading business earns 2-4% and lives on working-capital turns, what happened to MMTC when the state withdrew its import monopoly, why SG Mart is building service centres instead of just trading, and why ten of the twelve names in this section are uninvestable.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Metal Trading · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the business actually is</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#mmtc">The MMTC lesson</a></li>
+<li><a href="#fragmented">Why the market stays fragmented</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stock does</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where the model is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where things stand now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 77 of 278 · Metals family, part 14 — the last</div>
+  <h1>Metal Trading &amp; Distribution</h1>
+  <p class="lede">Thirteen primers in this family have described people who dig metal up, melt it, roll it or recycle it. This one is about the people who simply move it from one owner to another — and it earns less than any of them. A metal trader's gross margin is a few percent; its return depends entirely on how many times a year it can turn its working capital; and it has no moat that a well-capitalised rival cannot copy in a season. This section contains both the endpoint of that logic and its modern answer: a state trading corporation whose auditors now question whether it is a going concern, and a distributor building steel service centres because pure trading was never going to be enough.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 12 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Engineering &amp; capital goods</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹0.68 cr</div><div class="l">MMTC's revenue from operations in the June quarter</div></div>
+    <div class="stat"><div class="n">₹145.44 cr</div><div class="l">Its other income in the same quarter — where the profit came from</div></div>
+    <div class="stat"><div class="n">3.5%</div><div class="l">SG Mart's net margin — what a working trading business earns</div></div>
+    <div class="stat"><div class="n">2 of 13</div><div class="l">Years the basket beat the Nifty in February–March</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A few percent, or nothing at all</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Imagine buying a crate of mangoes for ₹100 and selling it for ₹103. You only make ₹3 — but if you can do it every week instead of once a year, those ₹3 add up. That is a trader. The danger is obvious: if the price of mangoes falls while the crate is still in your van, you lose money, and anybody with ₹100 can do exactly what you do. So the clever traders stop just moving crates and start slicing the mangoes, because nobody pays extra for carrying, but they will pay for cutting.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>One cautionary tale and one real business, in the same watchlist section.</p>
+    <ul>
+      <li><b>MMTC (~₹8,972 cr):</b> revenue from operations of <b>₹0.68 cr</b> in Q1 FY27, down 50%. Profit of about ₹104 cr came almost entirely from ₹145.44 cr of other income. Auditors have flagged <b>material uncertainty over going concern</b> after the ministry directed a manpower scale-down and business-exit roadmap, and qualified the accounts over an unprovided ₹82.82 cr Anglo Coal claim.</li>
+      <li><b>SG Mart (~₹8,785 cr):</b> Q1 FY27 revenue ₹1,308.57 cr (+14%), profit before tax ₹58.23 cr (+36.7%), profit ₹45.58 cr (+41%) — a 3.5% net margin. Service centres handle 40,000 tonnes a month, with five more a year planned and a 3.5–4% EBITDA margin targeted in that vertical.</li>
+      <li><b>The capital ask:</b> SG Mart plans over ₹1,500 cr of capex across two to three years, ₹400–500 cr in FY27, and guides EBITDA from about ₹200 cr in FY26 to ₹400 cr in FY27.</li>
+      <li><b>The rest:</b> ten names, several of them 89–98% below old highs, and one with no price data at all.</li>
+      <li><b>The calendar:</b> February–March has worked twice in thirteen years, and August–September twice in twelve.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the business actually is">
+  <p class="eyebrow">2 · What the business actually is</p>
+  <h2>Four ways to stand between a mill and a buyer</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th>What it does</th><th>Where the margin comes from</th><th>Typical spread</th></tr></thead><tbody>
+    <tr><td>Pure trading</td><td>Buys and resells metal without touching it</td><td>Price arbitrage and information</td><td>1–2%, and negative when prices fall</td></tr>
+    <tr><td>Canalised or agency trade</td><td>Imports on behalf of the state or under a licence</td><td>A commission fixed by policy</td><td>Whatever the policy allows — until it is withdrawn</td></tr>
+    <tr><td>Distribution</td><td>Holds stock, breaks bulk, offers credit and delivery</td><td>Service, credit and availability</td><td>2–4%</td></tr>
+    <tr><td>Service centre</td><td>Cuts, slits, shears and processes to the customer's size</td><td>Conversion, not trading</td><td>3.5–4% at the EBITDA line, and stickier</td></tr>
+  </tbody></table></div>
+  <p>The whole investment question in this section is which row a company sits in and which way it is travelling. Rows one and two have no defence: a pure trader's information advantage has been eroded by price transparency, and an agency's commission exists only while the government wants it to. Rows three and four are real businesses, because holding inventory near a customer and cutting metal to size are services that somebody must perform and that carry switching costs.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>Where the middle sits</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>The mill</h4><div class="an">The producer</div>Sells in large lots, on its own schedule, to creditworthy buyers.<div class="who">Steel, aluminium and copper producers; 066, 072, 073</div><div class="m">Wants volume and certainty</div></div>
+    <div class="stage"><div class="no">02</div><h4>Bulk purchase</h4><div class="an">Taking the risk</div>The trader buys a quantity the end user could never order.<div class="who">Traders and distributors</div><div class="m">Price risk from this moment on</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Breaking bulk</h4><div class="an">The service</div>Splitting a rail rake into truckloads a fabricator can actually use.<div class="who">Distributors</div><div class="m">The first genuine value added</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Processing</h4><div class="an">Where margin lives</div>Cutting, slitting and shearing to the customer's dimensions.<div class="who">Service centres — SG Mart's 40,000 t a month</div><div class="m">Conversion margin, and stickiness</div></div>
+    <div class="stage"><div class="no">05</div><h4>Credit</h4><div class="an">The hidden product</div>Small fabricators are financed by their supplier, not their bank.<div class="who">Distributors</div><div class="m">Receivable risk, priced into the spread</div></div>
+    <div class="stage"><div class="no">06</div><h4>The fabricator</h4><div class="an">The customer</div>Needs small quantities, cut to size, delivered tomorrow, on credit.<div class="who">Thousands of small engineering units</div><div class="m">Will pay for convenience, not for trading</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Mills sell big;</b> fabricators buy small.</li>
+    <li><b>Somebody must own the metal</b> in between, and carry the price risk.</li>
+    <li><b>Breaking bulk</b> is worth a little.</li>
+    <li><b>Cutting to size</b> is worth more.</li>
+    <li><b>Extending credit</b> is worth more again, and is the real risk.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Distribution is a return-on-capital business disguised as a revenue business. A 3% net margin is perfectly adequate if capital turns six times a year and terrible if it turns twice — which is why SG Mart's decision to lease some service centres rather than own them, explicitly to improve return on capital, is more informative than its revenue growth. Two numbers settle any thesis here: <b>inventory days plus receivable days</b>, and <b>EBITDA per tonne handled</b>. Revenue growth on its own tells you only that the steel price went up.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 12 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>MMTC (~₹8,972 cr)</td><td>The state trading corporation that once handled India's canalised imports and exports of minerals, metals and bullion.</td><td>Q1 FY27 <b>revenue from operations ₹0.68 cr</b>, down about 50% from ₹1.4 cr. Total revenue ₹146 cr against ₹71.6 cr, with <b>other income of ₹145.44 cr</b> — more than doubled — producing a consolidated profit reported at about ₹104 cr. <b>Auditors flagged material uncertainty about the company's ability to continue as a going concern</b>, following the administrative ministry's direction to prepare a manpower scale-down and business-exit roadmap, and qualified the accounts over a ₹82.82 cr Anglo Coal claim carried as a contingent liability rather than a provision. Stock ₹60.3, −10% in 2026. In the basket, from 2014.</td></tr>
+    <tr><td>SG Mart (~₹8,785 cr)</td><td>A B2B steel distribution and service-centre business — the modern model in this section.</td><td>Q1 FY27 revenue ₹1,308.57 cr (+14%), profit before tax ₹58.23 cr (+36.7%), profit ₹45.58 cr (+41%). Service centres handling 40,000 tonnes a month, adding five a year with some on lease to improve return on capital, targeting a 3.5–4% EBITDA margin in that vertical. Acquiring Tanwar Cargo Solutions for ₹85 cr for strategic land in Haryana. Capex above ₹1,500 cr over two to three years, ₹400–500 cr planned in FY27 with ₹90 cr deployed in Q1. EBITDA guided from about ₹200 cr in FY26 to ₹400 cr in FY27; a ₹137.98 cr institutional stake purchase preceded the results, and Sanjay Gupta was appointed chairman and managing director. Stock ₹734, +96% in 2026. <b>Excluded from the basket: 252 trading days.</b></td></tr>
+    <tr><td>Stratmont Industries (~₹169 cr)</td><td>Tagged as coal by the data provider.</td><td>+5% in 2026 but 71% below its November 2024 high. <b>Excluded.</b></td></tr>
+    <tr><td>Vibrant Global Capital (~₹110 cr)</td><td>Classified as an investment manager.</td><td>24 trading days from 17 August 2026. <b>Excluded, and misclassified.</b></td></tr>
+    <tr><td>Ashnisha Industries (~₹60 cr), Sacheta Metals (~₹47 cr), Lesha Industries (~₹21 cr), Bloom Industries (~₹21 cr), Unitech International (~₹3 cr), AA Plus Tradelink, Lexoraa Industries</td><td>Micro-caps and trading shells.</td><td><b>Ashnisha is 89% below its June 2023 high, Lesha 97% below, Unitech 98% below, Sacheta 77% below.</b> Lesha trades at ₹0.8 and Unitech at ₹3.2. <b>All excluded: no usable price discovery.</b></td></tr>
+    <tr><td>Hariyana Ventures</td><td>No market value recorded.</td><td><b>No price data at all.</b> Excluded.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The audit: why MMTC's record starts in 2014</span>
+    <p>MMTC's price series runs back to 2010 and shows a high of about <b>₹1,249 on 18 January 2010</b> against ₹60 today — a 95% fall. Before anyone uses that figure, look at what happens in 2013: the series closes 2012 at <b>₹425.7</b> and 2013 at <b>₹35.1</b>, a decline of roughly 92% in one year, and yet <b>no single day in the entire series falls more than 10%</b>. A fall of that size with no step is consistent with two very different things — a long run of successive circuit-limited declines, which MMTC genuinely experienced as a notoriously illiquid, thin-float PSU, or an unadjusted change in face value, MMTC's having moved from ₹10 to ₹1. Price data alone cannot distinguish them.</p>
+    <p><b>So we do not try.</b> We start the record on 1 January 2014, make no level claim across 2013, and flag that any long-run MMTC chart should be checked against the corporate-action history before being quoted. This is the fourth corporate-action trap in this family — see also Orient Ceratech in 070, HEG in 071 and Vedanta in 072 and 075 — and the pattern is worth internalising: in a sector full of restructurings, splits and demergers, a fifteen-year price series is a claim to be verified, not a fact.</p>
+    <p><b>Ten of the twelve names here are not investable</b> on any reading: four are 77–98% below old highs, two have under 300 days of data, one has no data at all, and the data provider classifies members of a metal-trading section as coal, an investment manager and — in SG Mart's case — an electric utility. <b>SG Mart's classification in particular should be corrected:</b> it is a steel distributor, not a utility.</p>
+  </div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Turns, not margin</h2>
+  <p>The arithmetic of distribution is worth writing out, because it explains why a 3% margin can be a good business and why revenue growth is almost meaningless.</p>
+  <div class="box"><p><b>Return on capital ≈ (net margin) × (capital turns per year)</b></p></div>
+  <ul>
+    <li><b>At a 3% margin and two turns,</b> the business earns about 6% on its capital — below its cost of debt, and not worth doing.</li>
+    <li><b>At a 3% margin and six turns,</b> it earns about 18% — a genuinely good business.</li>
+    <li><b>The difference is entirely inventory days and receivable days,</b> neither of which appears in a revenue headline.</li>
+  </ul>
+  <p>This is why SG Mart's management talks about leasing service centres rather than buying them and why it quantifies EBITDA rather than revenue: on its own guidance, EBITDA roughly doubles from about ₹200 cr in FY26 to ₹400 cr in FY27, and it has been explicit that the revenue number depends on where steel prices go. That is the right way for a distributor to guide, and the right way to hold one to account.</p>
+  <h3>The two risks that actually kill distributors</h3>
+  <ol>
+    <li><b>Inventory price risk.</b> A trader owns metal it has not yet sold. When steel falls 10% in a month, a business earning a 3% margin loses several quarters of profit on the stock in its yard. This is why distributors fail in falling markets, not rising ones.</li>
+    <li><b>Receivable risk.</b> The customer base is thousands of small fabricators who are financed by their suppliers. In a downturn the metal price falls <em>and</em> the receivables go bad at the same time — the two risks are correlated, which is precisely what makes them dangerous.</li>
+  </ol>
+</section>
+
+<section id="mmtc" data-toc="The MMTC lesson">
+  <p class="eyebrow">5b · The MMTC lesson</p>
+  <h2>What happens when the privilege goes away</h2>
+  <p>MMTC is the most instructive corpse in Indian metals, and it deserves a section rather than a footnote, because the mechanism that hollowed it out applies to any business whose margin comes from a rule rather than from a service.</p>
+  <p>For decades MMTC was a <b>canalising agency</b>: certain imports and exports of minerals, metals and bullion could legally be routed only through designated state trading corporations, and MMTC earned a commission on that flow. It did not need to be efficient, or to hold inventory cleverly, or to build service centres, because the volume arrived by statute. At its peak the company's market value was among the largest on the exchange, on a tiny public float — one of the more famous anomalies in Indian market history.</p>
+  <p>Then the privilege was progressively withdrawn. Gold and silver import channels were opened to banks and private agencies; canalisation of minerals was relaxed; and the commission business simply evaporated. What is left, thirteen years later, is visible in one line of the June quarter: <b>revenue from operations of ₹0.68 crore</b>, against ₹145.44 crore of other income. The company earns money on its cash and its legacy assets, not on trade.</p>
+  <div class="box warn"><span class="tag">Read the accounts, not the profit line</span>
+    <p>Three things in MMTC's June quarter are more important than its reported profit.</p>
+    <ul>
+      <li><b>The going-concern flag.</b> Auditors noted material uncertainty about the company's ability to continue as a going concern, after its administrative ministry directed it to prepare a manpower scale-down and a business-exit roadmap. That is the ministry, not the market, deciding the company's future.</li>
+      <li><b>The audit qualification.</b> A ₹82.82 crore Anglo Coal claim is carried as a contingent liability rather than provided for. Whatever the legal merits, an auditor disagreeing with management about a provision of that size relative to reported profit is a disclosure worth reading in full.</li>
+      <li><b>The reported profit differs by source.</b> Coverage of the same quarter cites consolidated profit of about ₹104 crore in one place and ₹93.73 crore in another. Both cannot be right, and the difference is likely standalone versus consolidated. Take the figure from the filing, not from a summary.</li>
+    </ul>
+  </div>
+  <p>The investment conclusion is not that MMTC is worthless — a company with substantial cash and legacy assets, including its stake in a bullion refining joint venture, has a value. It is that <b>MMTC must be analysed as an asset-realisation situation, not as a trading company</b>, and that its ₹8,972 crore market value has to be justified entirely by what can be sold and distributed, on a timetable the government controls. Anyone valuing it on a price-to-earnings multiple is capitalising treasury income.</p>
+</section>
+
+<section id="fragmented" data-toc="Why the market stays fragmented">
+  <p class="eyebrow">5c · Why the market stays fragmented</p>
+  <h2>A multi-tier chain, and the mills now coming for it</h2>
+  <p>Understanding the opportunity here requires understanding why it still exists. Indian steel distribution is <a href="https://blucrest.in/trends-in-steel-industry-in-india-an-analyctical-perspective/">unusually fragmented</a>: the large integrated producers run their own distribution arms and authorised dealer networks, but a very large share of steel — especially construction-grade long products — still reaches the end user through a multi-tier chain of wholesale dealers, stockists and retailers, each taking a slice.</p>
+  <p>Two structural facts keep that chain alive. First, supply itself is fragmented: <a href="https://www.imarcgroup.com/india-steel-market">secondary and MSME producers accounted for roughly 47% of crude steel capacity in FY2024-25</a>, meaning hundreds of electric-arc and induction-furnace operators whose output has no captive distribution at all. Second, demand is fragmented: the buyer is typically a small fabricator wanting two tonnes cut to size, on credit, tomorrow — a customer no large mill wants to serve directly.</p>
+  <p>That gap is the entire commercial logic of an organised distributor, and it is genuinely large. But it is also now contested from above. <b>JSW Steel has invested heavily in direct digital distribution under the JSW One brand</b>, aggregating availability across its network specifically to reach the small and medium consumers who previously depended on multi-tier dealers — explicitly to strip out intermediary cost. When a producer with its own metal, its own brand and its own balance sheet decides to serve your customer directly, an independent distributor's answer has to be something the mill cannot easily replicate.</p>
+  <ul>
+    <li><b>Multi-brand availability.</b> A fabricator often wants whichever grade is cheapest today, not one producer's catalogue.</li>
+    <li><b>Processing.</b> Cutting and slitting to a drawing is a service business, not a sales channel — which is why service centres, not platforms, are the defensible part of SG Mart's model.</li>
+    <li><b>Credit judgement.</b> Deciding which small fabricator is good for thirty days is local knowledge that a national mill's credit policy handles badly.</li>
+  </ul>
+  <p>For an investor the test is simple: is the distributor growing because the organised share of a fragmented market is rising, or merely because the steel price is? The first is durable and the second is not — and only tonnes handled and EBITDA per tonne can tell them apart. India's steel consumption is <a href="https://www.mordorintelligence.com/industry-reports/india-steel-market">forecast to keep compounding</a> for a decade, so the market will grow either way; the share question is what decides whether a distributor earns its cost of capital while it does.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What a distributor depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Working capital</td><td>The entire business is inventory plus receivables</td><td>The critical input; cost and availability of credit decide returns</td></tr>
+    <tr><td>Mill relationships and allocations</td><td>Access to material, especially when it is tight</td><td>Mills can and do sell direct to large customers</td></tr>
+    <tr><td>Warehouse and yard locations</td><td>Proximity to fabricating clusters</td><td>Land cost — hence SG Mart's ₹85 cr land acquisition</td></tr>
+    <tr><td>Processing equipment</td><td>Cutting, slitting and shearing lines</td><td>Capital intensity; leasing improves return on capital</td></tr>
+    <tr><td>Logistics</td><td>Rail rakes, trucking, handling</td><td>Freight cost and turnaround times</td></tr>
+    <tr><td>Credit assessment</td><td>Deciding which fabricator to finance</td><td>The skill that separates survivors from casualties</td></tr>
+    <tr><td>Policy, for agency businesses</td><td>The right to handle canalised trade</td><td>Can be withdrawn — see MMTC</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>The working-capital year</h2>
+  <ul>
+    <li><b>January–March:</b> positions are cut and balance sheets dressed before the fiscal year end; the weakest stretch, with February winning once in thirteen years.</li>
+    <li><b>April–July:</b> new credit limits, new budgets and restocking; 8 wins of 13, median +11.1 points.</li>
+    <li><b>August–September:</b> the monsoon slows construction and fabricators stop buying; <b>2 wins in 12 years, median −13.2</b>.</li>
+    <li><b>October–December:</b> the post-monsoon construction season is when a distributor makes its year; 8 of 12, and December 8 of 12.</li>
+    <li><b>Through the year:</b> a falling steel price hurts immediately and a rising one helps immediately, because the inventory is already owned.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stock does">
+  <p class="eyebrow">8 · What the stock does</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of MMTC minus the Nifty, in percentage points, from 2014; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> the single listed company (MMTC Limited), monthly from Feb 2014, compared with the Nifty 50. With one stock, these statistics describe that company, not an industry.</p><ul><li><b>Strongest months vs the Nifty:</b> Dec +6.7 pts (beat in 8 of 12 years); May +5.9 pts (beat in 6 of 13 years); Apr +4.1 pts (beat in 10 of 13 years).</li><li><b>Weakest months:</b> Feb -6.2 pts (beat in 1 of 13 years); Sep -4.2 pts (beat in 2 of 12 years); Aug -2.7 pts (beat in 4 of 13 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 2 of 13 years (median -10.1 pts); Apr–Jul beat the Nifty in 8 of 13 years (median +11.1 pts); Aug–Sep beat the Nifty in 2 of 12 years (median -13.2 pts); Oct–Dec beat the Nifty in 8 of 12 years (median +5.4 pts); Sep–Nov beat the Nifty in 4 of 12 years (median -8.9 pts); Jan–Mar beat the Nifty in 3 of 12 years (median -12.2 pts).</li></ul><p><b>Reading it:</b> one company, from 2014. MMTC is the only name in this section with a usable long record, and we start it in 2014 rather than 2010 for the reason set out in the audit. <b>February–March has beaten the Nifty in 2 of 13 years</b> (median −10.1) and <b>August–September in 2 of 12</b> (median −13.2) — two of the weakest windows found anywhere in this project. Against that, April–July has worked in 8 of 13 (median +11.1) and October–December in 8 of 12 (+5.4). For a trading company the mechanism is working capital: positions are cut before the fiscal year end and rebuilt after it.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AugSep" viewBox="0 0 720 280" role="img" aria-label="August to September return minus Nifty by year"></svg><figcaption>August–September return minus the Nifty, by year, in percentage points — negative in ten of twelve years.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>August–September has failed in ten of twelve years</b>, and its two positive years were 2023 (+54.1) and 2025 (+0.8) — the first a PSU re-rating, not a trading recovery.</li>
+    <li><b>February's single win in thirteen years was 2021 (+33.5)</b>, during the divestment-driven PSU rally; its worst were 2025 (−23.1) and 2022 (−21.2).</li>
+    <li><b>April–July's best years were 2024 (+55.5) and 2023 (+22.6)</b>, both PSU-sentiment episodes rather than anything to do with metal trading.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this — barely at all</span><p>Be blunt about what this table measures. It is one state-owned company with almost no operating business, whose share price for the last six years has been driven by PSU sentiment, divestment speculation and treasury income. The February–March and August–September weakness is consistent with the pattern across every other Metals basket, which is mildly reassuring, but nobody should trade a seasonal signal derived from a single going-concern-qualified holding company. Its value on this page is as a record of what happened, not as a signal.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Steel and metal price direction.</b> Rising prices create inventory gains; falling prices destroy a year's profit.</li>
+    <li><b>Working-capital turns.</b> Inventory days plus receivable days — the real determinant of returns.</li>
+    <li><b>Cost of credit.</b> The business is financed borrowing.</li>
+    <li><b>Processing mix.</b> How much volume goes through service centres rather than straight resale.</li>
+    <li><b>Fabricator demand.</b> Construction and small-scale engineering activity.</li>
+    <li><b>Mill direct-selling behaviour.</b> When mills court large customers, distributors lose share.</li>
+    <li><b>Receivable quality.</b> Bad debts arrive with falling prices, not independently.</li>
+    <li><b>Policy, for agency businesses.</b> Canalisation and import channel rules.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2015 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: MMTC alone, from 1 January 2014 — the only name in this section with a usable record, and deliberately started after the 2013 discontinuity described in the audit. SG Mart (listed September 2025), Vibrant Global (August 2026) and nine micro-caps and shells are excluded. No metal-price column is shown, because MMTC no longer has a metal business to link one to. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the decline</h3>
+  <ol>
+    <li><b>Erosion</b> (2015–2019): canalised trade shrank year after year; the stock lost to the index in three of five years and fell 37% and 39% in 2018 and 2019.</li>
+    <li><b>The PSU re-rating</b> (2020–2021): reflation and divestment hopes produced +41% and +67% with no improvement whatsoever in the underlying trade.</li>
+    <li><b>The second PSU wave</b> (2023–2024): +58% and +21%, again on sentiment and treasury earnings rather than operations.</li>
+    <li><b>Reality</b> (2025–2026): the exit roadmap emerged, the going-concern flag appeared, and the shares gave back ground.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The share price has decoupled from the business entirely.</b> Operating revenue fell throughout the +67%, +58% and +21% years.</li>
+    <li><b>Every strong year was a sentiment year</b> — reflation, divestment, PSU re-rating — and none was an earnings year.</li>
+    <li><b>The weak seasons match the rest of the family</b>, which suggests the residual metal-sector association still drives short-term flows.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Where trading actually makes money</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>What it proves</th></tr></thead><tbody>
+    <tr><td>Glencore, Trafigura</td><td>Global commodity traders with logistics, storage and financing arms</td><td>Trading works at scale when it owns infrastructure and information</td></tr>
+    <tr><td>Reliance Steel, Ryerson (US)</td><td>Metal service centre networks</td><td>The model SG Mart is copying: processing plus distribution</td></tr>
+    <tr><td>Marubeni, Mitsui, Sumitomo</td><td>Japanese trading houses</td><td>They survived by becoming investors and project developers, not traders</td></tr>
+    <tr><td>Chinese state trading companies</td><td>Volume intermediaries</td><td>State-backed trade persists where policy sustains it</td></tr>
+    <tr><td>MMTC (India)</td><td>A canalising agency after canalisation</td><td>What happens when policy support is withdrawn without a Plan B</td></tr>
+  </tbody></table></div>
+  <p>The international evidence is consistent and unkind to pure intermediation. Every trading business that has endured has escaped trading: Glencore bought mines, the Japanese houses became investors, and the American metal distributors became processors. None of them stayed in the business of buying metal and selling it unchanged, because that business has no defence. SG Mart's service-centre strategy is therefore not a diversification — it is the only known survival route.</p>
+</section>
+
+<section id="tech" data-toc="Where the model is going">
+  <p class="eyebrow">12 · Where the model is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Service centres over yards.</b> Processing to size converts a trading spread into a conversion margin.</li>
+    <li><b>Digital B2B platforms.</b> Order, price and delivery online, which lowers the cost of serving small fabricators.</li>
+    <li><b>Embedded finance.</b> Formalising the credit that distributors already extend, sometimes with a lender partner.</li>
+    <li><b>Asset-light expansion.</b> Leased service centres to lift return on capital, as SG Mart is doing explicitly.</li>
+    <li><b>Mills going direct.</b> The competitive threat: producers building their own distribution and retail brands.</li>
+    <li><b>Price transparency.</b> Indices and online benchmarks steadily erase the information advantage that pure trading relied on.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Canalisation rules</td><td>Restrict certain trade to state agencies</td><td>Created MMTC's business — and its decline when relaxed</td></tr>
+    <tr><td>Gold and bullion import channels</td><td>Who may import precious metals</td><td>Opened to banks and private agencies; removed a core MMTC revenue line</td></tr>
+    <tr><td>Disinvestment and strategic sale policy</td><td>Government exit from PSUs</td><td>Has driven every strong year in the chart</td></tr>
+    <tr><td>Ministry directions on scale-down</td><td>Manpower reduction and business-exit roadmaps</td><td>The trigger for the going-concern flag</td></tr>
+    <tr><td>Import duties and quality control orders</td><td>Shape what can be imported and by whom</td><td>Determines arbitrage opportunities</td></tr>
+    <tr><td>GST and e-way bill compliance</td><td>Formalises the metal trade</td><td>Favours organised distributors over informal traders</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where things stand now">
+  <p class="eyebrow">14 · Where things stand now</p>
+  <h2>September 2026: one model ending, one beginning</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Agency and canalised trade</td><td>Effectively over</td><td>MMTC operating revenue ₹0.68 cr for the quarter</td></tr>
+    <tr><td>MMTC's continuity</td><td>In question</td><td>Going-concern uncertainty flagged; ministry-directed exit roadmap</td></tr>
+    <tr><td>Modern distribution</td><td>Growing</td><td>SG Mart revenue +14%, profit +41%</td></tr>
+    <tr><td>Processing</td><td>Scaling</td><td>40,000 tonnes a month; five new service centres a year</td></tr>
+    <tr><td>Capital intensity</td><td>Rising</td><td>Over ₹1,500 cr of capex planned across two to three years</td></tr>
+    <tr><td>The rest of the section</td><td>Uninvestable</td><td>Four names 77–98% below old highs; one with no data</td></tr>
+  </tbody></table></div>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>SG Mart</td><td class="num">₹734</td><td>₹842 (26 Aug 2026)</td><td class="num">−13%</td><td class="num">+96%</td></tr>
+    <tr><td>MMTC</td><td class="num">₹60.3</td><td>₹1,249 (18 Jan 2010)*</td><td class="num">—</td><td class="num">−10%</td></tr>
+    <tr><td>Stratmont Industries</td><td class="num">₹60.0</td><td>₹209 (29 Nov 2024)</td><td class="num">−71%</td><td class="num">+5%</td></tr>
+    <tr><td>Ashnisha Industries</td><td class="num">₹2.5</td><td>₹23.3 (9 Jun 2023)</td><td class="num">−89%</td><td class="num">−25%</td></tr>
+    <tr><td>Unitech International</td><td class="num">₹3.2</td><td>₹142 (22 Oct 2010)</td><td class="num">−98%</td><td class="num">−18%</td></tr>
+  </tbody></table></div>
+  <p class="note">*We do not quote a percentage from MMTC's 2010 high because the 2013 discontinuity described in the audit makes the comparison unreliable.</p>
+  <h3>What is priced in</h3>
+  <p>Two completely different things, which is why this section should never be traded as a group. <b>MMTC</b> at ₹8,972 crore is priced as an asset-realisation story: cash, land and a bullion refining joint venture, to be monetised on a government timetable, with a going-concern qualification and an ₹82.82 crore disputed claim attached. Whether that is cheap depends entirely on a net-asset estimate that nobody can build from a quarterly result — and the profit line, being other income, tells you nothing about it.</p>
+  <p><b>SG Mart</b> at ₹8,785 crore is priced for the guidance being delivered: EBITDA doubling to about ₹400 cr in FY27 and a service-centre network compounding. The stock is up 96% this year, so a good deal of that is already in the price. What would justify it is evidence on the two ratios that matter — working-capital days holding steady as volumes scale, and EBITDA per tonne rising as the processing share grows. What would break it is a falling steel price arriving while ₹400–500 cr of capex is in flight, because a 3.5% margin does not absorb inventory losses.</p>
+  <div class="box pm"><span class="tag">The honest read — and the family's conclusion</span><p>This section closes the Metals family on the right note, because it makes the through-line explicit. Across fourteen primers, the businesses that earned durable returns were the ones that did something a customer could not easily switch away from: a certified wire rope (069), a total-refractory-management contract (070), a qualified superalloy (075), an integrated smelter with its own power and bauxite (072), a low-cost orebody (074). The ones that struggled were the ones that merely converted or moved material — the extruders squeezed by their own metal price, the standalone smelters on negative treatment charges, and here, most completely, a trader whose margin came from a rule that no longer exists. <b>In metals, proximity to the commodity is not the risk. Interchangeability is.</b></p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Inventory days plus receivable days</td><td>The determinant of return on capital</td><td>Balance sheet, every half-year</td></tr>
+    <tr><td>Tonnes handled, and the processed share</td><td>Real volume, and the mix shift to service centres</td><td>Quarterly disclosures</td></tr>
+    <tr><td>EBITDA per tonne</td><td>Whether processing is adding value</td><td>Derived from results</td></tr>
+    <tr><td>Steel price direction</td><td>Inventory gains or losses on stock already owned</td><td>Price indices; see 066</td></tr>
+    <tr><td>Bad-debt provisions</td><td>Receivable quality, which deteriorates with prices</td><td>Notes to accounts</td></tr>
+    <tr><td>Capex against guidance</td><td>Whether ₹400–500 cr is actually being deployed</td><td>Quarterly updates</td></tr>
+    <tr><td>MMTC's asset disposals and ministry directions</td><td>The only thing that moves its value</td><td>Exchange filings, DIPAM</td></tr>
+    <tr><td>Audit qualifications and going-concern notes</td><td>The most important paragraph in a trading company's accounts</td><td>Audit report, every quarter</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Steel &amp; iron (066):</b> the supplier, and increasingly the competitor selling direct.</li>
+    <li><b>Steel pipes &amp; tubes (068) and wire (069):</b> conversion businesses one rung up from distribution.</li>
+    <li><b>Metal recycling (076):</b> the other end of the same scrap and trading networks.</li>
+    <li><b>Aluminium (072) and copper (073):</b> the metals traded, and their own distribution chains.</li>
+    <li><b>Specialty &amp; precious metals (075):</b> where MMTC's bullion legacy sits.</li>
+    <li><b>Engineering &amp; capital goods (next):</b> the fabricators who are the customer base.</li>
+    <li><b>Global proxies:</b> Reliance Steel and Ryerson for the service-centre model; Glencore and the Japanese trading houses for how trading survives.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What were tonnes handled, and what share went through service centres?</li>
+    <li>What is EBITDA per tonne, and how has it moved?</li>
+    <li>What are inventory days and receivable days, and where are they heading as you scale?</li>
+    <li>How is inventory price risk managed — back-to-back sales, hedging, or not at all?</li>
+    <li>What were bad-debt provisions, and what is the receivable ageing profile?</li>
+    <li>What proportion of new service centres will be leased rather than owned, and why?</li>
+    <li>What return on capital do you expect from the announced capex, and by when?</li>
+    <li>How much business do your mill suppliers now take direct to end customers?</li>
+    <li>For MMTC: what assets remain, at what book and realisable value, and on what disposal timetable?</li>
+    <li>For MMTC: what is the company's response to the going-concern observation and the Anglo Coal claim?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"MMTC is profitable"</td><td>Profit of about ₹104 cr on ₹0.68 cr of operating revenue, from ₹145.44 cr of other income</td><td>It earns on cash, not on trade</td></tr>
+    <tr><td>"A PSU cannot be a going concern risk"</td><td>Auditors flagged material uncertainty; the ministry directed an exit roadmap</td><td>Read the audit report</td></tr>
+    <tr><td>"Thin margins mean a bad business"</td><td>3% at six turns is 18% on capital; 3% at two turns is 6%</td><td>Turns decide it, not margin</td></tr>
+    <tr><td>"Revenue growth shows a distributor is winning"</td><td>Management itself says revenue depends on steel prices</td><td>Use tonnes and EBITDA</td></tr>
+    <tr><td>"Trading is an asset-light business"</td><td>SG Mart plans over ₹1,500 cr of capex and bought ₹85 cr of land</td><td>Doing it properly is capital-heavy</td></tr>
+    <tr><td>"MMTC's 95% fall from its high shows the decline"</td><td>The 2013 move has no single-day step and the face value changed from ₹10 to ₹1</td><td>Unverifiable from price data; do not quote it</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. canalisation, service centre" autocomplete="off"><span id="gcount"></span></div>
+  <h3>The business</h3><dl>
+    <dt>Trader</dt><dd>A buyer and reseller of metal who does not change the product.</dd>
+    <dt>Distributor</dt><dd>A stockist who breaks bulk, delivers and extends credit.</dd>
+    <dt>Service centre</dt><dd>A facility that cuts, slits and shears metal to a customer's size.</dd>
+    <dt>Slitting</dt><dd>Cutting a wide coil into narrower strips.</dd>
+    <dt>Shearing</dt><dd>Cutting coil or plate into flat sheets of set length.</dd>
+    <dt>Breaking bulk</dt><dd>Splitting a large consignment into quantities a small buyer can use.</dd>
+    <dt>Stockist</dt><dd>A distributor who holds inventory on its own account.</dd>
+    <dt>Back-to-back sale</dt><dd>Buying only against a confirmed sale, which removes price risk.</dd>
+    <dt>Canalisation</dt><dd>A policy routing specified imports or exports only through designated state agencies.</dd>
+    <dt>Canalising agency</dt><dd>The state trading company granted that role — MMTC's original business.</dd>
+    <dt>Agency commission</dt><dd>A fee earned for handling trade on someone else's account.</dd>
+    <dt>B2B platform</dt><dd>A digital marketplace serving business buyers rather than consumers.</dd>
+  </dl>
+  <h3>Financial mechanics</h3><dl>
+    <dt>Gross spread</dt><dd>Selling price less purchase cost, before any operating expense.</dd>
+    <dt>Capital turns</dt><dd>How many times a year working capital cycles through the business.</dd>
+    <dt>Inventory days</dt><dd>Average days stock is held before sale.</dd>
+    <dt>Receivable days</dt><dd>Average days a customer takes to pay.</dd>
+    <dt>Working-capital cycle</dt><dd>Inventory days plus receivable days less payable days.</dd>
+    <dt>Return on capital employed</dt><dd>Roughly margin multiplied by turns; the only metric that matters here.</dd>
+    <dt>Inventory price risk</dt><dd>Loss on metal already owned when the price falls.</dd>
+    <dt>Bad-debt provision</dt><dd>A charge for receivables unlikely to be collected.</dd>
+    <dt>Other income</dt><dd>Earnings from investments and treasury rather than operations — MMTC's entire profit.</dd>
+    <dt>Asset-light</dt><dd>Growing with leased rather than owned assets, to raise return on capital.</dd>
+    <dt>EBITDA per tonne</dt><dd>Operating profit divided by tonnes handled; the honest growth measure.</dd>
+  </dl>
+  <h3>Accounting and corporate terms</h3><dl>
+    <dt>Going concern</dt><dd>The assumption that a company can continue operating; its removal is the gravest audit flag.</dd>
+    <dt>Material uncertainty</dt><dd>The auditor's formal language for doubt about that assumption.</dd>
+    <dt>Audit qualification</dt><dd>An auditor's statement that the accounts are not fully in order.</dd>
+    <dt>Contingent liability</dt><dd>A possible obligation disclosed but not provided for — the ₹82.82 cr dispute here.</dd>
+    <dt>Provision</dt><dd>A charge taken for a liability considered probable.</dd>
+    <dt>Administrative ministry</dt><dd>The government department that directs a state-owned company.</dd>
+    <dt>Scale-down roadmap</dt><dd>A plan to reduce manpower and exit businesses.</dd>
+    <dt>Asset realisation</dt><dd>Valuing a company on what its assets would fetch, not on its earnings.</dd>
+    <dt>Face value</dt><dd>The nominal value of a share; MMTC's moved from ₹10 to ₹1.</dd>
+    <dt>Circuit limit</dt><dd>The daily price band beyond which a stock cannot move, which can mask a collapse over many days.</dd>
+    <dt>Thin float</dt><dd>A small proportion of shares actually tradeable, which distorts price discovery.</dd>
+    <dt>Price discovery</dt><dd>Whether a stock trades enough for its price to mean anything.</dd>
+    <dt>Multi-tier chain</dt><dd>The sequence of wholesaler, stockist and retailer a tonne passes through.</dd>
+    <dt>Authorised dealer</dt><dd>A distributor appointed by a mill to sell its brand.</dd>
+    <dt>Secondary producer</dt><dd>A smaller, usually electric-furnace steelmaker — about 47% of capacity.</dd>
+    <dt>Organised share</dt><dd>The proportion of trade passing through formal, audited businesses.</dd>
+    <dt>Disintermediation</dt><dd>A producer bypassing distributors to sell direct, as with JSW One.</dd>
+    <dt>Long products</dt><dd>Bars, rods and sections — the most dealer-dependent steel category.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why does a 3% margin not tell you whether a distributor is a good business?</summary><p>Return on capital is roughly margin times turns: 3% at six turns is about 18%, at two turns about 6%.</p></details>
+  <details class="q"><summary>2. What is a service centre, and why does it matter?</summary><p>A facility that cuts and slits metal to the customer's size. It converts a trading spread into a conversion margin, which is stickier and better.</p></details>
+  <details class="q"><summary>3. What was canalisation?</summary><p>A policy routing specified imports and exports only through state agencies, which gave MMTC a commission business by statute rather than by service.</p></details>
+  <details class="q"><summary>4. What did MMTC report in Q1 FY27?</summary><p>Revenue from operations of ₹0.68 cr, down 50%, with profit of about ₹104 cr coming almost entirely from ₹145.44 cr of other income.</p></details>
+  <details class="q"><summary>5. What are the two flags in its audit report?</summary><p>Material uncertainty over going concern after a ministry-directed exit roadmap, and a qualification over an unprovided ₹82.82 cr Anglo Coal claim.</p></details>
+  <details class="q"><summary>6. How should MMTC be valued?</summary><p>As an asset-realisation situation — cash, land and its bullion joint venture — not on a multiple of treasury income.</p></details>
+  <details class="q"><summary>7. Why is its record started in 2014?</summary><p>The series falls about 92% during 2013 with no single-day step worse than 10%, which could be successive circuit-limited falls or an unadjusted change in face value; price data cannot settle it.</p></details>
+  <details class="q"><summary>8. What are the two correlated risks in distribution?</summary><p>Inventory price risk and receivable risk — both worsen together when metal prices fall, which is what makes them dangerous.</p></details>
+  <details class="q"><summary>9. What does the international evidence say about pure trading?</summary><p>Every enduring trading business escaped it — Glencore bought mines, the Japanese houses became investors, US distributors became processors.</p></details>
+  <details class="q"><summary>10. What is the through-line of the whole Metals family?</summary><p>Interchangeability is the risk, not proximity to the commodity. The businesses that earned durable returns sold something a customer could not easily switch away from.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes to 18 September 2026 against NSE:NIFTY; MMTC's series is used from 1 January 2014 only, for the reason given in the audit.</li>
+    <li>MMTC: <a href="https://scanx.trade/stock-market-news/companies/mmtc-q1-results-consolidated-net-profit-rises-to-1b-revenue-doubles-yoy/48026216">Q1 FY27 profit and the audit qualification</a>; <a href="https://www.investywise.com/mmtc-limited-board-approves-financial-results/">the board approval, the going-concern observation and the Anglo Coal contingent liability</a>; <a href="https://univest.in/blogs/mmtc-q1-results-fy27-pat-93-crore">the ₹0.68 cr operating revenue and an alternative profit figure</a>; <a href="https://www.kotakneo.com/financial-results/mmtc-share-price-q1fy2026-27-results/">the quarterly statement</a>.</li>
+    <li>SG Mart: <a href="https://www.equitybulls.com/category.php?id=373185">Q1 FY27 results in full</a>; <a href="https://finance.yahoo.com/news/sg-mart-ltd-bom-512329-070112098.html">the earnings call, including service-centre tonnage, leasing and margin targets</a>; <a href="https://www.sahi.com/news/sg-mart-outlines-multi-year-capex-and-long-term-steel-volume-guidance-2523-PE1_COR">the multi-year capex and volume guidance</a>; <a href="https://www.businessworld.in/article/sg-mart-s-q1-profit-surges-41-revenue-rises-to-rs-1-308-cr-615669">revenue and profit detail</a>; <a href="https://scanx.trade/stock-market-news/companies/sg-mart-to-discuss-1qfy27-results-on-july-20/45663306">the Tanwar Cargo acquisition and the CMD appointment</a>; <a href="https://www.sahi.com/news/sg-mart-sets-july-20-for-q1-fy27-earnings-call-following-137-98-crore-institutional-stake-buy-2523-PE1_COR">the ₹137.98 cr institutional stake purchase</a>.</li>
+    <li>Market structure: <a href="https://www.kenresearch.com/industry-reports/india-steel-market">the Indian steel market's share and company structure</a>; <a href="https://www.steelonthenet.com/resources/countries/india.html">facilities and capacity by producer</a>; <a href="https://www.marknteladvisors.com/research-library/india-steel-market-report.html">growth drivers and the organised-versus-unorganised split</a>.</li>
+    <li>Method note: the observation that MMTC's 2013 decline contains no single-day step larger than 10% is our own, computed from the daily series. We report it as an unresolved discontinuity rather than asserting a cause, and we make no level claim across that year.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2014, "v": 1.6}, {"y": 2015, "v": -12.3}, {"y": 2016, "v": -10.1}, {"y": 2017, "v": -8.4}, {"y": 2018, "v": -1.2}, {"y": 2019, "v": -2.6}, {"y": 2020, "v": -11.3}, {"y": 2021, "v": 41.1}, {"y": 2022, "v": -28.5}, {"y": 2023, "v": -16.7}, {"y": 2024, "v": -20.6}, {"y": 2025, "v": -24.8}, {"y": 2026, "v": -8.2}], "AprJul": [{"y": 2014, "v": 14.4}, {"y": 2015, "v": -3.0}, {"y": 2016, "v": 8.3}, {"y": 2017, "v": -11.0}, {"y": 2018, "v": -20.9}, {"y": 2019, "v": -24.4}, {"y": 2020, "v": 19.2}, {"y": 2021, "v": 11.8}, {"y": 2022, "v": -7.2}, {"y": 2023, "v": 22.6}, {"y": 2024, "v": 55.5}, {"y": 2025, "v": 16.4}, {"y": 2026, "v": 11.1}], "AugSep": [{"y": 2014, "v": -18.9}, {"y": 2015, "v": -5.1}, {"y": 2016, "v": -1.5}, {"y": 2017, "v": -5.5}, {"y": 2018, "v": -15.6}, {"y": 2019, "v": -20.0}, {"y": 2020, "v": -12.6}, {"y": 2021, "v": -22.8}, {"y": 2022, "v": -13.8}, {"y": 2023, "v": 54.1}, {"y": 2024, "v": -22.8}, {"y": 2025, "v": 0.8}], "OctDec": [{"y": 2014, "v": -14.8}, {"y": 2015, "v": 14.9}, {"y": 2016, "v": 24.7}, {"y": 2017, "v": 23.1}, {"y": 2018, "v": 13.8}, {"y": 2019, "v": 6.9}, {"y": 2020, "v": 39.0}, {"y": 2021, "v": 0.1}, {"y": 2022, "v": 3.8}, {"y": 2023, "v": -8.3}, {"y": 2024, "v": -10.6}, {"y": 2025, "v": -2.3}], "SepNov": [{"y": 2014, "v": -28.1}, {"y": 2015, "v": 8.6}, {"y": 2016, "v": 7.7}, {"y": 2017, "v": 27.7}, {"y": 2018, "v": -4.3}, {"y": 2019, "v": -19.8}, {"y": 2020, "v": -13.6}, {"y": 2021, "v": -10.2}, {"y": 2022, "v": -11.7}, {"y": 2023, "v": 14.9}, {"y": 2024, "v": -17.7}, {"y": 2025, "v": -7.7}], "JanMar": [{"y": 2015, "v": -16.9}, {"y": 2016, "v": -19.1}, {"y": 2017, "v": 5.3}, {"y": 2018, "v": -20.3}, {"y": 2019, "v": -16.4}, {"y": 2020, "v": -5.1}, {"y": 2021, "v": 55.0}, {"y": 2022, "v": -1.0}, {"y": 2023, "v": -22.1}, {"y": 2024, "v": 8.4}, {"y": 2025, "v": -27.6}, {"y": 2026, "v": -8.0}]}, "my": {"1": {"2015": -4.6, "2016": -10.3, "2017": 14.3, "2018": -21.0, "2019": -13.1, "2020": 10.0, "2021": 10.0, "2022": 38.2, "2023": -7.1, "2024": 35.2, "2025": -3.8, "2026": -0.1}, "2": {"2014": -5.6, "2015": -1.7, "2016": -16.5, "2017": -3.3, "2018": -10.3, "2019": -5.3, "2020": -9.7, "2021": 33.5, "2022": -21.2, "2023": -7.8, "2024": -5.6, "2025": -23.1, "2026": -4.5}, "3": {"2014": 7.7, "2015": -10.7, "2016": 10.8, "2017": -5.0, "2018": 10.3, "2019": 3.2, "2020": -4.6, "2021": 5.2, "2022": -8.6, "2023": -9.9, "2024": -15.6, "2025": -0.4, "2026": -4.4}, "4": {"2014": 4.2, "2015": 2.4, "2016": 3.0, "2017": 4.9, "2018": 10.9, "2019": -7.1, "2020": 4.8, "2021": -3.1, "2022": 4.3, "2023": -2.8, "2024": 10.3, "2025": 4.2, "2026": 16.9}, "5": {"2014": 42.0, "2015": -2.0, "2016": -13.2, "2017": -18.1, "2018": -18.9, "2019": -1.7, "2020": 5.6, "2021": 40.6, "2022": -6.0, "2023": 3.4, "2024": -4.8, "2025": 48.3, "2026": 2.0}, "6": {"2014": 1.0, "2015": 6.9, "2016": 24.2, "2017": 2.1, "2018": -4.3, "2019": -4.2, "2020": 3.7, "2021": -6.7, "2022": 0.3, "2023": 1.8, "2024": 5.8, "2025": -18.3, "2026": 3.5}, "7": {"2014": -23.3, "2015": -9.9, "2016": -3.7, "2017": 2.0, "2018": -5.1, "2019": -14.0, "2020": 0.8, "2021": -11.1, "2022": -6.3, "2023": 17.7, "2024": 36.9, "2025": -8.3, "2026": -10.1}, "8": {"2014": -3.2, "2015": -4.9, "2016": -0.8, "2017": -5.0, "2018": -7.6, "2019": 1.6, "2020": -0.4, "2021": -21.5, "2022": 7.6, "2023": 13.2, "2024": -10.3, "2025": -4.6, "2026": 0.7}, "9": {"2014": -15.8, "2015": -0.2, "2016": -0.7, "2017": -0.6, "2018": -8.9, "2019": -21.5, "2020": -11.9, "2021": -0.8, "2022": -19.0, "2023": 36.7, "2024": -13.5, "2025": 5.7}, "10": {"2014": 3.5, "2015": 4.5, "2016": 6.4, "2017": 7.4, "2018": 9.7, "2019": 11.8, "2020": -6.0, "2021": -6.9, "2022": -5.4, "2023": -2.7, "2024": -5.8, "2025": 1.6}, "11": {"2014": -15.5, "2015": 4.1, "2016": 2.3, "2017": 19.1, "2018": -4.5, "2019": -7.5, "2020": 7.0, "2021": -2.8, "2022": 17.5, "2023": -14.3, "2024": 0.1, "2025": -13.8}, "12": {"2014": -2.3, "2015": 5.6, "2016": 15.5, "2017": -5.0, "2018": 8.0, "2019": 3.2, "2020": 33.6, "2021": 10.8, "2022": -6.3, "2023": 10.9, "2024": -5.7, "2025": 11.4}}, "basket": ["MMTC Limited"], "nbasket": 1, "start": "Feb 2014", "monthly": [{"m": 1, "abs": 4.0, "rel": 4.0, "hit": 5, "n": 12}, {"m": 2, "abs": -7.4, "rel": -6.2, "hit": 1, "n": 13}, {"m": 3, "abs": -1.8, "rel": -1.7, "hit": 5, "n": 13}, {"m": 4, "abs": 6.7, "rel": 4.1, "hit": 10, "n": 13}, {"m": 5, "abs": 7.7, "rel": 5.9, "hit": 6, "n": 13}, {"m": 6, "abs": 2.9, "rel": 1.2, "hit": 9, "n": 13}, {"m": 7, "abs": 0.2, "rel": -2.6, "hit": 4, "n": 13}, {"m": 8, "abs": -2.0, "rel": -2.7, "hit": 4, "n": 13}, {"m": 9, "abs": -4.4, "rel": -4.2, "hit": 2, "n": 12}, {"m": 10, "abs": 2.8, "rel": 1.5, "hit": 7, "n": 12}, {"m": 11, "abs": 1.0, "rel": -0.7, "hit": 6, "n": 12}, {"m": 12, "abs": 7.7, "rel": 6.7, "hit": 8, "n": 12}], "cy": [{"y": 2015, "b": -15.5, "n": -4.1, "rel": -11.5, "partial": false}, {"y": 2016, "b": 10.3, "n": 3.0, "rel": 7.3, "partial": false}, {"y": 2017, "b": 38.8, "n": 28.6, "rel": 10.2, "partial": false}, {"y": 2018, "b": -36.8, "n": 3.2, "rel": -39.9, "partial": false}, {"y": 2019, "b": -39.3, "n": 12.0, "rel": -51.3, "partial": false}, {"y": 2020, "b": 41.1, "n": 14.9, "rel": 26.2, "partial": false}, {"y": 2021, "b": 67.3, "n": 24.1, "rel": 43.2, "partial": false}, {"y": 2022, "b": -14.6, "n": 4.3, "rel": -18.9, "partial": false}, {"y": 2023, "b": 58.2, "n": 20.0, "rel": 38.2, "partial": false}, {"y": 2024, "b": 21.3, "n": 8.8, "rel": 12.5, "partial": false}, {"y": 2025, "b": -8.9, "n": 10.5, "rel": -19.5, "partial": false}, {"y": 2026, "b": -10.4, "n": -10.7, "rel": 0.3, "partial": true}], "dd": [{"co": "MMTC", "peak": "Jul 2024", "fp": -50, "y1": -9}, {"co": "SG Mart", "peak": "Sep 2025", "fp": 91, "y1": 91}, {"co": "Stratmont Industries", "peak": "Nov 2024", "fp": -71, "y1": -24}, {"co": "Ashnisha Industries", "peak": "Jun 2023", "fp": -89, "y1": -11}, {"co": "Sacheta Metals", "peak": "Jan 2022", "fp": -65, "y1": -8}, {"co": "Lesha Industries", "peak": "Jun 2022", "fp": -97, "y1": -34}, {"co": "Bloom Industries", "peak": "Oct 2024", "fp": -39, "y1": -25}, {"co": "Unitech International", "peak": "Dec 2021", "fp": -74, "y1": -35}, {"co": "AA Plus Tradelink", "peak": "Jul 2024", "fp": -54, "y1": 73}, {"co": "Lexoraa Industries", "peak": "Dec 2024", "fp": -30, "y1": -2}], "win": {"FebMar": {"mean": -7.8, "median": -10.1, "hit": 2, "n": 13}, "AprJul": {"mean": 7.1, "median": 11.1, "hit": 8, "n": 13}, "AugSep": {"mean": -7.0, "median": -13.2, "hit": 2, "n": 12}, "OctDec": {"mean": 7.5, "median": 5.4, "hit": 8, "n": 12}, "SepNov": {"mean": -4.5, "median": -8.9, "hit": 4, "n": 12}, "JanMar": {"mean": -5.6, "median": -12.2, "hit": 3, "n": 12}}, "ytd": {"b": -10.4, "n": -10.7}, "notes": {"2015": "\u221215.5% against \u22124.1%. Commodity deflation and the steady erosion of canalised trade.", "2016": "+10.3% against +3.0%. A modest recovery year.", "2017": "+38.8% against +28.6%. The small-cap boom lifted even a shrinking trading house.", "2018": "\u221236.8% against +3.2%. The IL&FS liquidity crunch, and gold import policy moving away from state agencies.", "2019": "\u221239.3% against +12.0%. The worst year: the core business kept contracting.", "2020": "+41.1% against +14.9%. A PSU re-rating and commodity reflation.", "2021": "+67.3% against +24.1%. Divestment hopes and a broad PSU rally.", "2022": "\u221214.6% against +4.3%. The divestment narrative stalled.", "2023": "+58.2% against +20.0%. The PSU re-rating wave \u2014 on treasury income, not trade.", "2024": "+21.3% against +8.8%. The rally continued; the operating business did not.", "2025": "\u22128.9% against +10.5%. Reality reasserted itself as the exit roadmap emerged.", "2026": "\u221210.4% against a Nifty \u221210.7%. Operating revenue of \u20b90.68 cr for the quarter and a going-concern qualification."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

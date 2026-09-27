@@ -1,0 +1,624 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shipbuilding & Ship Repair Primer</title>
+<meta name="description" content="Industry 59 of 278: the shipyards that build India&#x27;s warships and submarines and are trying to win commercial orders from a market dominated by China, Korea and Japan. Warship economics, the order-book cliff before the submarine contracts, the ₹69,725 cr shipbuilding package, the failures of India&#x27;s private yards, and a relisted stock that rose 73-fold on upper circuits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Shipbuilding · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#orderbook">The order-book cliff</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 59 of 278 · Defence family, part 3</div>
+  <h1>Shipbuilding &amp; Ship Repair</h1>
+  <p class="lede">India's listed shipyards build destroyers, frigates, corvettes and submarines for the Navy, and — increasingly — tankers, bulk carriers and hybrid ferries for foreign owners. Warship building is a protected, government-funded business; commercial shipbuilding is one of the most competitive industries in the world, dominated by China, South Korea and Japan. This primer explains how a shipyard makes money, why the three state yards' basket rose about thirteen-fold between 2022 and 2025, why India's private yards failed in the 2010s, and what the next wave of submarine contracts and the government's shipbuilding package could change.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 5 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Explosives</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹1 lakh cr+</div><div class="l">Contracts Mazagon Dock expects from P75(I) and three more Scorpène submarines</div></div>
+    <div class="stat"><div class="n">₹69,725 cr</div><div class="l">Government package for shipbuilding finance, a development fund and new clusters</div></div>
+    <div class="stat"><div class="n">63%</div><div class="l">China's share of world ship orders in 2025; Korea 21%, Japan ~9%</div></div>
+    <div class="stat"><div class="n">73×</div><div class="l">Swan Defence's rise since relisting in January 2025, mostly on 5% upper circuits</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Protected warships, competitive merchant ships</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A shipyard is like a giant garage where huge boats are built piece by piece, a bit like assembling a model kit the size of three football fields. Building one big ship takes years. The Navy is like a customer who orders a few very special, very expensive boats — warships and submarines — and pays in instalments while they are being built. Ordinary boats, like oil tankers and cargo ships, are ordered by companies all over the world, and most of them go to shipyards in China, Korea and Japan because those garages are the biggest and fastest. Indian shipyards are good at the Navy's special boats and are now trying to win more ordinary ones too.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian shipbuilding is a warship business looking for a second leg.</p>
+    <ul>
+      <li><b>Warships:</b> Mazagon Dock (submarines, destroyers, frigates), GRSE (frigates, corvettes, patrol vessels) and Cochin Shipyard (aircraft carrier, anti-submarine craft, repair) are funded by the Navy's capital budget and paid in milestones.</li>
+      <li><b>The cliff:</b> Mazagon's order book has fallen to ₹18,218 cr as big projects deliver; it expects P75(I) and three more Scorpènes to add over ₹1 lakh cr in FY27.</li>
+      <li><b>Commercial:</b> Cochin has ₹7,200 cr of export commercial orders; the government's ₹69,725 cr package supports new yards and finance, but China, Korea and Japan take over 90% of world orders.</li>
+      <li><b>Stocks:</b> the basket rose about thirteen-fold over 2022–2025, then fell; all three yards are 31–51% below their highs.</li>
+      <li><b>Caution:</b> Swan Defence, the relisted former Reliance Naval, has risen 73-fold on upper circuits with a tiny free float.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From submarines to ferries</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Vessel type</th><th>What it is</th><th>Who builds it in India</th><th>Typical build time</th></tr></thead><tbody>
+    <tr><td>Conventional submarines</td><td>Diesel-electric attack submarines; P75(I) adds air-independent propulsion</td><td>Mazagon Dock (Scorpène/Kalvari class)</td><td>6–8 years for the first boat</td></tr>
+    <tr><td>Destroyers and frigates</td><td>Large surface combatants with missiles, radars and helicopters</td><td>Mazagon Dock, GRSE</td><td>5–8 years per ship</td></tr>
+    <tr><td>Corvettes and patrol vessels</td><td>Smaller warships for coastal and anti-submarine work</td><td>GRSE, Cochin, Goa Shipyard (unlisted)</td><td>3–5 years</td></tr>
+    <tr><td>Aircraft carrier</td><td>INS Vikrant, commissioned 2022</td><td>Cochin Shipyard</td><td>Over a decade</td></tr>
+    <tr><td>Commercial vessels</td><td>Tankers, bulk carriers, feeder container ships, offshore and hybrid vessels</td><td>Cochin, Swan, GRSE (some export orders), smaller yards</td><td>1.5–3 years</td></tr>
+    <tr><td>Small craft and inland vessels</td><td>Tugs, ferries, fishing and patrol boats</td><td>Cochin (Kochi Water Metro), Laxmipati, many small yards</td><td>Months</td></tr>
+    <tr><td>Ship repair and refit</td><td>Maintenance, overhaul and life extension</td><td>Cochin (large dry docks), Mazagon, private yards</td><td>Weeks to a year</td></tr>
+  </tbody></table></div>
+  <p>A warship is roughly one-third hull and machinery and two-thirds weapons, sensors and electronics, much of which is supplied to the yard by BEL (058), BDL (057) and foreign vendors. The yard designs (often with the Navy's own design bureau), builds the hull, installs and integrates everything, and runs sea trials. That is why a shipyard's revenue includes large pass-through items and why its margin is lower than a defence-electronics company's.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From steel plate to a commissioned warship</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Design</h4><div class="an">The drawings</div>Naval design bureau, foreign partners (Naval Group, TKMS) or the yard's own designers.<div class="who">Navy's Warship Design Bureau; yards; foreign licensors</div><div class="m">Who owns the design sets who earns later</div></div>
+    <div class="stage"><div class="no">02</div><h4>Steel and materials</h4><div class="an">The skin</div>Warship-grade steel, pipes, cables, paints.<div class="who">SAIL (DMR-249 steel), MIDHANI, cable makers (044)</div><div class="m">Now largely Indian</div></div>
+    <div class="stage"><div class="no">03</div><h4>Equipment</h4><div class="an">The organs</div>Engines, gearboxes, propulsion, pumps, submarine systems, electrical plants.<div class="who">GE, MAN, Wärtsilä, Kirloskar; CFF Fluid Control (057) for submarine systems</div><div class="m">Engines mostly imported</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Shipyard</h4><div class="an">The builder</div>Cut steel, build blocks, erect the hull, outfit, launch, integrate and trial.<div class="who">Mazagon Dock, GRSE, Cochin, Swan, Laxmipati; unlisted Goa and Hindustan Shipyard, L&amp;T</div><div class="m">Dock capacity and skilled labour</div></div>
+    <div class="stage"><div class="no">05</div><h4>Weapons and sensors</h4><div class="an">The teeth and eyes</div>Missiles, guns, radars, sonars, combat management.<div class="who">BEL (058), BDL, BrahMos, foreign vendors</div><div class="m">Often supplied to the yard by the Navy</div></div>
+    <div class="stage"><div class="no">06</div><h4>Customer and after-sales</h4><div class="an">Who pays</div>Navy and Coast Guard; foreign owners for commercial ships; refits for decades.<div class="who">Ministry of Defence; ship owners</div><div class="m">Milestone payments; refit annuity</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Designers</b> draw the ship.</li>
+    <li><b>Steel makers and equipment suppliers</b> provide the materials and machinery.</li>
+    <li><b>The shipyard</b> welds, fits out and tests it over several years.</li>
+    <li><b>Weapons and electronics makers</b> fit the teeth and eyes.</li>
+    <li><b>The Navy</b> pays in stages and returns the ship for refits for 30 years.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical asset is dock capacity plus a nominated position in the Navy's building plan. India has only a handful of yards that can build large warships, and the Navy spreads its orders among them. That gives each state yard a quasi-guaranteed pipeline — but also makes its revenue lumpy, tied to when the next big programme is signed. Mazagon's order book fell from ₹20,535 cr to ₹18,218 cr in one quarter as projects delivered; the next step-up depends almost entirely on the submarine contracts.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 5 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Mazagon Dock Shipbuilders (~₹89,815 cr)</td><td>Mumbai; India's submarine and destroyer builder (Scorpène/Kalvari class, P15B destroyers, P17A frigates). Agreed in 2025 to take a controlling stake in Sri Lanka's Colombo Dockyard.</td><td>Q1 FY27 revenue ₹2,943 cr (+12.1%), EBITDA ₹447 cr at 15.2% (11.5%), profit ₹549 cr (+21.5%). Order book ₹18,218 cr (₹20,535 cr in March). Targets a ₹1 lakh cr order book and 15–17% revenue growth in FY27. Stock −8% in 2026, 39% below its May 2025 high.</td></tr>
+    <tr><td>Cochin Shipyard (~₹34,675 cr)</td><td>Kochi; built INS Vikrant; anti-submarine craft; commercial and export vessels; India's largest ship-repair facilities, including a new dry dock and repair facility opened in 2024.</td><td>Q1 FY27 revenue ₹1,094 cr (+2.4%), profit ₹151 cr (−19.4%): shipbuilding +59% to ₹700 cr but repair −37% to ₹390 cr against a high base. Order book about ₹21,900 cr: defence ₹11,900 cr, export commercial ₹7,200 cr, domestic commercial ₹1,600 cr, repair ₹1,200 cr. Stock fell on weak FY27 margin guidance; −14% in 2026, 51% below its July 2024 high.</td></tr>
+    <tr><td>Garden Reach Shipbuilders &amp; Engineers — GRSE (~₹26,525 cr)</td><td>Kolkata; frigates (P17A), anti-submarine craft, patrol vessels, next-generation corvettes; also bridges and engineering. Granted Navratna status in June 2026.</td><td>Q1 FY27 revenue ₹1,815 cr (+38.5%), profit ₹173 cr (+43.8%). Order book ₹13,596 cr (shipbuilding ₹13,296 cr). Stock −1% in 2026, 31% below its June 2025 high.</td></tr>
+    <tr><td>Swan Defence &amp; Heavy Industries (~₹14,215 cr)</td><td>The former Pipavav yard in Gujarat (later Reliance Naval &amp; Engineering), bought out of insolvency by a Swan group company; relisted on 20 January 2025 at about ₹36.</td><td>MoU with Royal IHC (September 2025); letter of intent for six chemical tankers worth about $220 mn (November 2025); promoter sold 5% in March 2026 to meet public-shareholding rules. Stock ₹2,746, about 73 times its relisting price, much of it on consecutive 5% upper circuits. <b>Excluded</b> from the basket: tiny free float and no normal price discovery.</td></tr>
+    <tr><td>Laxmipati Engineering Works (~₹256 cr)</td><td>A Surat company in the Laxmipati group: small-vessel building and repair, fabrication and machining; holds a licence to build warships.</td><td>Thinly traded on the BSE SME platform. Stock +26% in 2026. Excluded from the basket.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The rest of the industry</span><p>Goa Shipyard and Hindustan Shipyard are state-owned but unlisted; L&amp;T builds warships at Kattupalli; Reliance Naval (now Swan), ABG Shipyard and Bharati Shipyard were the private yards of the 2000s boom, and all three ended in insolvency. Equipment suppliers sit elsewhere: CFF Fluid Control (057), BEL (058), cable makers (044). The basket uses the three state yards with continuous trading histories.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Milestones, cost-plus and the refit annuity</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>How it is priced</th><th>Margin shape</th><th>Cash shape</th></tr></thead><tbody>
+    <tr><td>Warships on nomination</td><td>Negotiated price, often with cost escalation clauses</td><td>Steady; improves with productivity</td><td>Milestone payments and advances; large cash balances</td></tr>
+    <tr><td>Warships by competitive bid</td><td>Lowest bidder among state and private yards</td><td>Thinner; risk of overruns</td><td>Milestones</td></tr>
+    <tr><td>Commercial ships</td><td>Fixed price in dollars or euros</td><td>Thin; exposed to steel, currency and delays</td><td>Instalments from the owner, often backed by refund guarantees</td></tr>
+    <tr><td>Ship repair and refit</td><td>Per job</td><td>Among the best</td><td>Quick</td></tr>
+    <tr><td>Treasury income</td><td>Interest on customer advances</td><td>Adds materially to profit at state yards</td><td>—</td></tr>
+  </tbody></table></div>
+  <p>A warship contract is paid in stages — keel laying, launch, trials, delivery — and the yard recognises revenue as work progresses. Because the Navy pays advances, the state yards hold large cash balances and earn interest on them, which adds to profit. Mazagon Dock's EBITDA margin of 15.2% in Q1 FY27 is modest by defence standards, reflecting the large share of pass-through equipment; its profit margin is flattered by other income.</p>
+  <p>Commercial shipbuilding is a different business. Prices are fixed in foreign currency years before delivery, steel and equipment costs can move against the yard, and delays trigger penalties. India's private yards learned this painfully in the 2010s. The state yards have entered it carefully: Cochin's ₹7,200 cr of export commercial orders — hybrid and specialised vessels for European owners — is the largest such book among the listed yards.</p>
+  <h3>Why repair matters</h3>
+  <p>Ship repair has short cycles, quick cash and good margins. Cochin's repair revenue fell 37% in Q1 FY27 only because the year-ago quarter included the refit of the aircraft carrier INS Vikramaditya. For Cochin, repair can swing profit by a fifth; for investors, the quarterly mix between building and repair explains much of its earnings volatility.</p>
+</section>
+
+<section id="orderbook" data-toc="The order-book cliff">
+  <p class="eyebrow">5b · The order-book cliff</p>
+  <h2>Why Mazagon Dock needs the submarine contracts</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Yard</th><th>Order book</th><th>Main programmes</th><th>What comes next</th></tr></thead><tbody>
+    <tr><td>Mazagon Dock</td><td>₹18,218 cr (June 2026), down from ₹20,535 cr</td><td>P15B destroyers and P17A frigates largely delivered</td><td>P75(I) (six air-independent-propulsion submarines with Germany's TKMS, about ₹70,000 cr) and three more Scorpènes — over ₹1 lakh cr together</td></tr>
+    <tr><td>Cochin Shipyard</td><td>About ₹21,900 cr</td><td>Anti-submarine craft, next-generation missile vessels, export commercial ships</td><td>Commercial orders; a second carrier is a long-term possibility</td></tr>
+    <tr><td>GRSE</td><td>₹13,596 cr</td><td>P17A frigates, anti-submarine craft, patrol vessels, corvettes</td><td>Next-generation corvettes and export vessels</td></tr>
+  </tbody></table></div>
+  <p>P75(I) is the swing factor. After years of trials and negotiation, the Mazagon Dock–TKMS team was selected, cost negotiations were completed by March 2026 and the proposal went for Cabinet Committee on Security approval; by August 2026 a decision was reported to be close, at a headline value of about ₹70,000 cr. The first boat is due within seven years of signing, with indigenous content rising from 45% on the first hull to 60% on the last. Once signed, Mazagon's order book would rise to well over ₹1 lakh cr — more than six times its present level — giving revenue visibility into the 2030s — but revenue would build slowly, because submarine construction takes years to reach full pace.</p>
+  <div class="box pm"><span class="tag">How to read it</span><p>For a shipyard, the order book tells you revenue for the next five years, not the next five quarters. Mazagon's near-term revenue will come from finishing existing ships, and its growth guidance of 15–17% for FY27 does not depend on P75(I). The contract matters for FY29 onward and for the valuation multiple today.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What shipyards depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Source</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Warship-grade steel</td><td>Hull and structure</td><td>SAIL (DMR-249A), imports for special grades</td><td>Now largely indigenous</td></tr>
+    <tr><td>Main engines and gearboxes</td><td>Propulsion</td><td>GE, MAN, Wärtsilä, Rolls-Royce (MTU); some local assembly</td><td>The critical import; long lead times</td></tr>
+    <tr><td>Submarine systems</td><td>Air-independent propulsion, batteries, sonars</td><td>Foreign partners (Naval Group, TKMS); Indian suppliers growing</td><td>Technology transfer terms</td></tr>
+    <tr><td>Weapons and sensors</td><td>Missiles, radars, combat systems</td><td>BEL, BDL, BrahMos, foreign vendors</td><td>Delivery schedules</td></tr>
+    <tr><td>Skilled labour</td><td>Welders, fitters, outfitting crews</td><td>Local workforce and contractors</td><td>Scarcity limits capacity</td></tr>
+    <tr><td>Dock space</td><td>Where ships are built and repaired</td><td>Existing yards; new clusters planned</td><td>Binding constraint on growth</td></tr>
+  </tbody></table></div>
+  <p>Steel is no longer the constraint it once was — DMR-249 grade warship steel is made in India. The binding limits are engines and dock space. Almost every Indian warship runs on foreign-designed engines, and a yard can only work on as many hulls as its docks and slipways allow. That is why the government's package includes a scheme to build new shipbuilding clusters and why Mazagon Dock has pursued extra capacity, including the Colombo Dockyard stake.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Launches, deliveries and the fiscal year-end</h2>
+  <ul>
+    <li><b>January–March:</b> the Ministry's capital spending peaks; milestone billing is heaviest; deliveries are timed before 31 March where possible.</li>
+    <li><b>April–May:</b> fourth-quarter results and dividends; new-year orders.</li>
+    <li><b>June–September:</b> the monsoon slows outdoor work and sea trials on the west coast.</li>
+    <li><b>Throughout:</b> keel-layings, launches and commissionings are public events that often move the stocks, though they rarely change revenue timing.</li>
+  </ul>
+  <p>Large contract signings — P75(I), additional Scorpènes, next-generation corvettes — do not follow a calendar. They depend on Cabinet approvals, which can slip by quarters. The stocks tend to rally on reports of an imminent approval and fade if it is delayed.</p>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the three state shipyards minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty (nine at most).</figcaption></figure>
+  <div><p><b>Basket:</b> 3 names (Mazagon Dock Shipbuilders Ltd., Cochin Shipyard Limited, Garden Reach Shipbuilders &amp; Engineers Ltd.), equal-weighted, monthly from Sep 2017, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +9.2 pts (beat in 5 of 9 years); Jun +8.9 pts (beat in 6 of 9 years); Sep +6.2 pts (beat in 7 of 9 years).</li><li><b>Weakest months:</b> Feb -7.1 pts (beat in 1 of 9 years); Dec -3.0 pts (beat in 3 of 9 years); Aug -1.2 pts (beat in 3 of 9 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 9 years (median -4.2 pts); Apr–Jul beat the Nifty in 8 of 9 years (median +16.4 pts); Aug–Sep beat the Nifty in 4 of 8 years (median +2.5 pts); Oct–Dec beat the Nifty in 5 of 9 years (median +0.3 pts); Sep–Nov beat the Nifty in 7 of 9 years (median +7.8 pts); Jan–Mar beat the Nifty in 1 of 9 years (median -5.1 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +6.2 points.</p><p><b>Reading it:</b> only nine years (2018–2026) and three stocks — Cochin Shipyard from 2017, GRSE from late 2018 and Mazagon Dock from late 2020 — so treat every number as indicative. April–July has beaten the Nifty in 8 of 9 years (median +16.4 points; only 2018 failed). January–March has worked in 1 of 9 and February alone in 1 of 9 (average −7.1). The shape matches the rest of the Defence family: budgets priced in before February; fourth-quarter results, dividends and new-year orders in April–May.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed only in 2018 (−22.5)</b>, when Cochin was the only stock and small caps crashed. Its best runs were 2024 (+187.7) and 2023 (+63.3), the re-rating years.</li>
+    <li><b>January–March worked only in 2025 (+5.3)</b>; every other year from 2018 to 2026 lost to the Nifty.</li>
+    <li><b>August–September failed badly in 2024 (−30.7)</b>, after the July 2024 peak.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Nine years and three stocks make any calendar fragile, and the 2022–2024 re-rating inflates the April–July numbers. But the pattern agrees with 057 and 058 across a larger sample, which makes it more credible: the Defence family as a whole tends to lag in January–March and lead in April–July.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Contract signings.</b> A single submarine programme can multiply an order book.</li>
+    <li><b>Execution pace.</b> Revenue follows physical progress; delays in equipment push it out.</li>
+    <li><b>Pass-through share.</b> More supplied equipment means more revenue but lower margin percentage.</li>
+    <li><b>Repair mix.</b> Refits lift margins; a big refit in one year creates a high base for the next.</li>
+    <li><b>Cost escalation clauses.</b> Protect warship margins; commercial contracts usually have none.</li>
+    <li><b>Treasury income.</b> Interest on advances adds to profit; falling cash balances reduce it.</li>
+    <li><b>Commercial pricing.</b> Newbuilding prices and currency affect export orders.</li>
+    <li><b>Government support.</b> Shipbuilding financial assistance offsets part of the cost gap with Asian yards.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2018 to 2026, and the global cycle behind it</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Mazagon Dock, Cochin Shipyard and GRSE, equal-weighted monthly, from September 2017 (Cochin only until GRSE listed in October 2018; Mazagon from October 2020). Swan and Laxmipati excluded (see section 4). Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The global shipbuilding cycle, 2012–2026</h3>
+  <p>Commercial shipbuilding runs in long cycles. The table uses the world's largest listed shipbuilders — Korea's HD Korea Shipbuilding &amp; Offshore (the former Hyundai Heavy Industries holding company, KRX:009540) and China CSSC Holdings (SSE:600150) — as a proxy. Calendar-year returns in local currency, price only, from TradingView.</p>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">HD KSOE</th><th class="num">China CSSC</th><th>What happened</th></tr></thead><tbody>
+    <tr><td class="num">2012</td><td class="num">−5.8</td><td class="num">+16.6</td><td>Post-2008 order drought; yards cut prices</td></tr>
+    <tr><td class="num">2013</td><td class="num">+6.2</td><td class="num">+4.2</td><td>Brief pick-up in eco-ship orders</td></tr>
+    <tr><td class="num">2014</td><td class="num">−55.3</td><td class="num">+52.3</td><td>Korean offshore losses; China's equity rally and merger talk</td></tr>
+    <tr><td class="num">2015</td><td class="num">−23.7</td><td class="num">−5.5</td><td>Oil collapse kills offshore orders</td></tr>
+    <tr><td class="num">2016</td><td class="num">+65.7</td><td class="num">−20.8</td><td>The trough in new orders; Korean restructuring</td></tr>
+    <tr><td class="num">2017</td><td class="num">−30.9*</td><td class="num">−10.6</td><td>*Hyundai Heavy split into four companies in 2017; the figure is distorted</td></tr>
+    <tr><td class="num">2018</td><td class="num">+34.1</td><td class="num">−46.8</td><td>LNG carrier orders recover; China's market slump</td></tr>
+    <tr><td class="num">2019</td><td class="num">−1.6</td><td class="num">+65.7</td><td>China's shipbuilding merger announced</td></tr>
+    <tr><td class="num">2020</td><td class="num">−14.2</td><td class="num">−18.7</td><td>Pandemic</td></tr>
+    <tr><td class="num">2021</td><td class="num">−12.8</td><td class="num">+40.1</td><td>Container-ship ordering boom begins</td></tr>
+    <tr><td class="num">2022</td><td class="num">−25.3</td><td class="num">−10.1</td><td>LNG carrier boom; Korean yards still loss-making on old contracts</td></tr>
+    <tr><td class="num">2023</td><td class="num">+71.0</td><td class="num">+32.1</td><td>Newbuild prices near 2008 highs; margins return</td></tr>
+    <tr><td class="num">2024</td><td class="num">+88.6</td><td class="num">+22.1</td><td>Record profits; US interest in Korean naval shipbuilding</td></tr>
+    <tr><td class="num">2025</td><td class="num">+78.5</td><td class="num">−7.5</td><td>US–Korea shipbuilding cooperation; US port fees on Chinese-built ships, later suspended</td></tr>
+    <tr><td class="num">2026†</td><td class="num">−17.1</td><td class="num">+18.7</td><td>Orders slow from record levels</td></tr>
+  </tbody></table></div>
+  <p class="note">†2026 to 18 September. HD KSOE remains 35% below its April 2011 peak and China CSSC 72% below its October 2007 peak — a reminder of how deep shipbuilding busts go.</p>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The supercycle and bust</b> (2003–2016, global): China's growth drove record orders; after 2008 orders collapsed and yards worldwide lost money for a decade. India's private yards — ABG, Bharati and Pipavav — expanded into this bust and failed; ABG later became the subject of one of India's largest bank-fraud cases.</li>
+    <li><b>Warship PSUs as bonds</b> (2017–2021): Cochin, GRSE and Mazagon listed and traded as dividend-paying government companies with little growth priced in.</li>
+    <li><b>The re-rating</b> (2022–2024): indigenisation, warship deliveries and the global rearmament theme lifted the basket 114%, 142% and 105% in successive years.</li>
+    <li><b>The pause</b> (2025–2026): peaks in July 2024 (Cochin) and May–June 2025 (Mazagon, GRSE); order books running down ahead of the next big contracts.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Warship stocks follow order visibility,</b> not the global shipping cycle. The Indian yards re-rated while Korean yards were still losing money.</li>
+    <li><b>Commercial shipbuilding punishes over-expansion.</b> Every Indian private yard that bet on the 2000s boom failed.</li>
+    <li><b>Low-float relistings run far ahead of fundamentals.</b> Swan's 73-fold rise mirrors the pattern seen elsewhere in this project.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Three countries build almost everything</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Country</th><th>Share of 2025 orders</th><th>Strength</th></tr></thead><tbody>
+    <tr><td>China</td><td>63% (35.4 mn CGT); 62% of the orderbook</td><td>Scale, state finance, every vessel type</td></tr>
+    <tr><td>South Korea</td><td>21% (11.6 mn CGT)</td><td>LNG carriers, large container ships, naval partnerships with the US</td></tr>
+    <tr><td>Japan</td><td>About 9%</td><td>Bulk carriers, consolidation</td></tr>
+    <tr><td>Europe</td><td>Small</td><td>Cruise ships, naval vessels, specialised ships</td></tr>
+    <tr><td>India</td><td>Well under 1%</td><td>Warships; small commercial and specialised vessels</td></tr>
+  </tbody></table></div>
+  <p>The commercial market is in a strong phase: fleet renewal for decarbonisation, the container-ship boom and LNG demand have pushed newbuilding prices close to their 2008 records (the Clarksons index was about 182 in February 2026). Geopolitics is reshaping it too — the US announced port fees on Chinese-built ships in 2025 (later suspended for a year under a US–China truce) and is courting Korean yards for naval work — which creates an opening for non-Chinese builders. India's ambition, set out in the Maritime India Vision 2030 and Amrit Kaal Vision 2047, is to become a top-ten shipbuilder by 2030 and top-five by 2047; the gap to close is enormous.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Air-independent propulsion.</b> Lets conventional submarines stay submerged for weeks; the core of P75(I).</li>
+    <li><b>Green propulsion.</b> Hybrid, battery-electric, LNG, methanol and ammonia-ready ships; Cochin has a green-propulsion joint venture with HBL (046).</li>
+    <li><b>Modular block construction.</b> Building ships in large pre-outfitted blocks cuts build time.</li>
+    <li><b>Unmanned surface and underwater vessels.</b> A growing naval category (see 061).</li>
+    <li><b>Digital shipyards.</b> 3D design, digital twins and automation raise productivity.</li>
+    <li><b>Indigenous design.</b> The Navy's own designs for destroyers, frigates and corvettes, and a planned indigenous submarine after P75(I).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>₹69,725 cr shipbuilding package</td><td>Shipbuilding Financial Assistance Scheme ₹24,736 cr (to March 2036); Maritime Development Fund ₹25,000 cr (₹20,000 cr investment fund plus ₹5,000 cr interest support); Shipbuilding Development Scheme ₹19,989 cr for new clusters (Andhra Pradesh, Gujarat, Tamil Nadu)</td><td>Narrows the cost gap with Asian yards; targets 4.5 mn gross tonnes a year of capacity</td></tr>
+    <tr><td>Navy's indigenous building plan</td><td>Almost all new warships built in Indian yards</td><td>Guaranteed pipeline for state yards</td></tr>
+    <tr><td>Strategic partnership model</td><td>Submarines with a foreign technology partner (P75(I))</td><td>Mazagon–TKMS</td></tr>
+    <tr><td>Right of first refusal for Indian-built ships</td><td>Preference for Indian yards in government-linked cargo and vessel purchases</td><td>Demand for commercial vessels</td></tr>
+    <tr><td>Infrastructure status for large ships</td><td>Cheaper long-term finance for shipping and shipbuilding</td><td>Lower financing cost</td></tr>
+    <tr><td>Procurement framework (057)</td><td>DAP 2020, indigenisation lists, domestic reservation</td><td>Applies to naval orders</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: growing earnings, shrinking order books, waiting for submarines</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Execution</td><td>Good at GRSE and Mazagon</td><td>GRSE revenue +38.5%; Mazagon margin 15.2%</td></tr>
+    <tr><td>Order books</td><td>Running down at Mazagon</td><td>₹18,218 cr from ₹20,535 cr in one quarter</td></tr>
+    <tr><td>Big contracts</td><td>Pending</td><td>P75(I) awaiting Cabinet approval; three more Scorpènes</td></tr>
+    <tr><td>Commercial</td><td>Building slowly</td><td>Cochin's ₹7,200 cr export book; Swan's tanker letter of intent</td></tr>
+    <tr><td>Policy</td><td>Supportive</td><td>₹69,725 cr package</td></tr>
+    <tr><td>Stocks</td><td>Correcting</td><td>31–51% below highs</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is -7.4% this year vs -10.7% for the Nifty (to 18 Sep 2026). The three-shipyard basket is down 7% against a Nifty down 11%, after four years in which it rose 114%, 142%, 105% and 22%. All three are 31–51% below their 2024–25 highs. Revenue and profit are still growing at GRSE (+38.5% and +43.8% in Q1 FY27) and Mazagon Dock (+12% and +22%), but Mazagon's order book has run down to ₹18,218 cr as destroyers and frigates are delivered, and the market is waiting for the P75(I) and additional Scorpène contracts that management expects to add over ₹1 lakh cr. Cochin's profit fell 19% and its margin guidance disappointed.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th><th class="num">1 year</th></tr></thead><tbody>
+    <tr><td>Mazagon Dock</td><td class="num">₹2,280</td><td>₹3,751 (29 May 2025)</td><td class="num">−39%</td><td class="num">−8%</td><td class="num">−24%</td></tr>
+    <tr><td>Cochin Shipyard</td><td class="num">₹1,398</td><td>₹2,864 (11 Jul 2024)</td><td class="num">−51%</td><td class="num">−14%</td><td class="num">−27%</td></tr>
+    <tr><td>GRSE</td><td class="num">₹2,412</td><td>₹3,493 (23 Jun 2025)</td><td class="num">−31%</td><td class="num">−1%</td><td class="num">−8%</td></tr>
+    <tr><td>Swan Defence</td><td class="num">₹2,746</td><td>₹2,746 (18 Sep 2026)</td><td class="num">0%</td><td class="num">+98%</td><td class="num">+400%</td></tr>
+    <tr><td>Laxmipati Engineering</td><td class="num">₹440</td><td>₹575 (6 Jul 2026)</td><td class="num">−23%</td><td class="num">+26%</td><td class="num">+40%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>After falling 31–51% from their highs, the state yards are priced for their existing execution plus a reasonable chance of the submarine contracts. Mazagon at about ₹89,815 cr is roughly 41 times its Q1 FY27 profit annualised — a full multiple for a company whose order book is shrinking, justified only if P75(I) and the Scorpènes arrive. GRSE, with the fastest growth, has corrected least. Cochin's fall reflects its weaker margin outlook and the difficulty of making commercial shipbuilding profitable. Swan's valuation, by contrast, is the product of a low-float relisting, not of earnings.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>The warship business is sound and protected, and the Navy's plan provides decades of work. But shipyard earnings are lumpy and order books cyclical; the easy re-rating of 2022–2024 is over. The next leg depends on signing the submarine contracts and on whether commercial shipbuilding — supported by the government package — can become profitable at scale. History, including India's own private-yard failures, argues for patience on the second.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>P75(I) Cabinet approval and contract</td><td>The largest single order for Mazagon</td><td>CCS decisions; company filings</td></tr>
+    <tr><td>Additional Scorpène contract</td><td>Near-term order-book refill</td><td>Ministry releases</td></tr>
+    <tr><td>Next-generation corvette and frigate awards</td><td>GRSE and Cochin pipelines</td><td>Ministry releases</td></tr>
+    <tr><td>Quarterly order book</td><td>Shows depletion versus replenishment</td><td>Results presentations</td></tr>
+    <tr><td>Commercial orders and margins</td><td>Tests the second leg</td><td>Cochin, Swan disclosures</td></tr>
+    <tr><td>Shipbuilding scheme disbursements</td><td>Whether the package is used</td><td>Ministry of Ports, Shipping and Waterways</td></tr>
+    <tr><td>Clarksons newbuilding price index</td><td>Global commercial pricing</td><td>Clarksons Research</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Aerospace &amp; defence manufacturing (057):</b> CFF Fluid Control supplies submarine systems; BDL supplies missiles and torpedoes.</li>
+    <li><b>Defence electronics (058):</b> BEL's radars, sonars and combat systems go into every warship.</li>
+    <li><b>Batteries (046):</b> HBL's joint venture with Cochin; submarine batteries.</li>
+    <li><b>Wires and cables (044):</b> kilometres of cable per ship.</li>
+    <li><b>Steel:</b> SAIL's warship steel.</li>
+    <li><b>Ports and shipping:</b> the customers for commercial vessels and repair.</li>
+    <li><b>Global proxies:</b> HD Korea Shipbuilding, China CSSC and the Clarksons newbuilding index.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the expected timeline for the next major contract, and what is its value?</li>
+    <li>How much revenue will the existing order book deliver this year and next?</li>
+    <li>What share of contract value is supplied equipment passed through at low margin?</li>
+    <li>What cost-escalation protection do your warship contracts have?</li>
+    <li>What margins are you earning on commercial ships, and what penalties apply for delay?</li>
+    <li>How much of profit comes from treasury income, and how will it change as advances are used?</li>
+    <li>What is your dock and slipway capacity, and how much is free for new orders?</li>
+    <li>How will the shipbuilding package benefit you directly?</li>
+    <li>How is the ship-repair pipeline for the coming year?</li>
+    <li>What progress is there on indigenous content in engines and submarine systems?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"India will become a global shipbuilder soon"</td><td>China 63%, Korea 21%, Japan 9% of 2025 orders; India well under 1%</td><td>A long road</td></tr>
+    <tr><td>"The order book guarantees growth"</td><td>Mazagon's fell 11% in one quarter as ships delivered</td><td>Only if refilled</td></tr>
+    <tr><td>"Commercial shipbuilding is an easy second leg"</td><td>ABG, Bharati and Pipavav all failed</td><td>Hard and low-margin</td></tr>
+    <tr><td>"A relisted shipyard is a turnaround bargain"</td><td>Swan rose 73× on upper circuits with a tiny free float</td><td>Price discovery is not normal</td></tr>
+    <tr><td>"Shipyard stocks follow the shipping cycle"</td><td>Indian yards re-rated while Korean yards lost money</td><td>They follow Navy orders</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. AIP, CGT" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Ships and programmes</h3><dl>
+    <dt>P75</dt><dd>The six Scorpène (Kalvari-class) submarines built by Mazagon Dock with France's Naval Group.</dd>
+    <dt>P75(I)</dt><dd>Six air-independent-propulsion submarines, Mazagon Dock with Germany's TKMS.</dd>
+    <dt>P15B</dt><dd>Visakhapatnam-class destroyers built by Mazagon Dock.</dd>
+    <dt>P17A</dt><dd>Nilgiri-class frigates built by Mazagon Dock and GRSE.</dd>
+    <dt>ASW SWC</dt><dd>Anti-submarine warfare shallow-water craft built by GRSE and Cochin.</dd>
+    <dt>NGC / NGOPV</dt><dd>Next-generation corvettes and offshore patrol vessels.</dd>
+    <dt>INS Vikrant</dt><dd>India's first indigenous aircraft carrier, built by Cochin Shipyard.</dd>
+    <dt>AIP</dt><dd>Air-independent propulsion — lets a conventional submarine stay submerged longer.</dd>
+    <dt>Scorpène</dt><dd>A French-designed conventional submarine; the Kalvari class in India.</dd>
+    <dt>Corvette</dt><dd>A small warship for coastal defence and anti-submarine work.</dd>
+    <dt>Frigate</dt><dd>A medium warship, often focused on escort and anti-submarine roles.</dd>
+    <dt>Destroyer</dt><dd>A large, heavily armed surface warship.</dd>
+    <dt>Hull</dt><dd>The main watertight body of a ship.</dd>
+    <dt>Bulk carrier</dt><dd>A merchant ship that carries unpackaged cargo such as coal, ore or grain.</dd>
+    <dt>IMO Type II chemical tanker</dt><dd>A tanker built to carry hazardous liquid chemicals, the type Swan's letter of intent covers.</dd>
+    <dt>LNG carrier</dt><dd>A ship that carries liquefied natural gas at −162°C; a Korean speciality.</dd>
+  </dl>
+  <h3>Shipbuilding terms</h3><dl>
+    <dt>Keel laying</dt><dd>The ceremonial start of a ship's construction, often a payment milestone.</dd>
+    <dt>Launch</dt><dd>Floating the hull for the first time.</dd>
+    <dt>Outfitting</dt><dd>Installing machinery, piping, cabling and systems after launch.</dd>
+    <dt>Sea trials</dt><dd>Testing the ship at sea before delivery.</dd>
+    <dt>Commissioning</dt><dd>Formal entry of a warship into naval service.</dd>
+    <dt>Dry dock</dt><dd>A basin that can be drained to build or repair ships.</dd>
+    <dt>Slipway</dt><dd>An inclined ramp on which ships are built and launched.</dd>
+    <dt>Block construction</dt><dd>Building a ship in large modules that are joined together.</dd>
+    <dt>Refit</dt><dd>A major overhaul of a ship during its service life.</dd>
+    <dt>DMR-249</dt><dd>Indian warship-grade steel made by SAIL.</dd>
+    <dt>CGT</dt><dd>Compensated gross tonnage — a measure of shipbuilding work that adjusts for vessel complexity.</dd>
+    <dt>Gross tonnage (GT)</dt><dd>A measure of a ship's internal volume.</dd>
+    <dt>Newbuilding price index</dt><dd>Clarksons' index of new-ship prices.</dd>
+    <dt>Refund guarantee</dt><dd>A bank guarantee that repays a ship owner's instalments if the yard fails to deliver.</dd>
+  </dl>
+  <h3>Finance and policy</h3><dl>
+    <dt>Milestone payment</dt><dd>A payment triggered by a construction stage.</dd>
+    <dt>Cost escalation clause</dt><dd>A contract term that adjusts price for inflation in inputs.</dd>
+    <dt>Pass-through</dt><dd>Equipment bought and billed on with little margin.</dd>
+    <dt>Treasury income</dt><dd>Interest earned on cash, including customer advances.</dd>
+    <dt>SBFAS</dt><dd>Shipbuilding Financial Assistance Scheme — subsidy to Indian yards, extended to 2036.</dd>
+    <dt>Maritime Development Fund</dt><dd>A ₹25,000 cr fund for long-term maritime finance.</dd>
+    <dt>Shipbuilding cluster</dt><dd>A new integrated shipbuilding zone with yards and suppliers.</dd>
+    <dt>Navratna</dt><dd>A status giving large state companies more financial autonomy; GRSE received it in June 2026.</dd>
+    <dt>T group</dt><dd>An exchange category where every trade must be settled by delivery, used for relisted or surveillance stocks.</dd>
+    <dt>Upper circuit</dt><dd>The maximum price rise allowed in a day; low-float stocks can hit it repeatedly.</dd>
+    <dt>Minimum public shareholding</dt><dd>The rule that at least 25% of a listed company's shares be held by the public.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why is a shipyard's EBITDA margin lower than a defence-electronics company's?</summary><p>A large share of contract value is supplied equipment passed through at low margin.</p></details>
+  <details class="q"><summary>2. What is P75(I), and why does it matter to Mazagon Dock?</summary><p>Six air-independent-propulsion submarines with TKMS, about ₹70,000 cr; with three more Scorpènes it would add over ₹1 lakh cr to an order book of ₹18,218 cr.</p></details>
+  <details class="q"><summary>3. What did GRSE report in Q1 FY27?</summary><p>Revenue ₹1,815 cr (+38.5%), profit ₹173 cr (+43.8%); order book ₹13,596 cr.</p></details>
+  <details class="q"><summary>4. Why did Cochin's profit fall in Q1 FY27?</summary><p>Ship repair revenue fell 37% against a high base that included the INS Vikramaditya refit, and margin guidance disappointed.</p></details>
+  <details class="q"><summary>5. What are the three parts of the ₹69,725 cr package?</summary><p>SBFAS ₹24,736 cr, Maritime Development Fund ₹25,000 cr and Shipbuilding Development Scheme ₹19,989 cr.</p></details>
+  <details class="q"><summary>6. What share of 2025 ship orders went to China?</summary><p>63%; Korea 21%, Japan about 9%.</p></details>
+  <details class="q"><summary>7. Which Indian private yards failed in the 2010s?</summary><p>ABG Shipyard, Bharati Shipyard and Pipavav (later Reliance Naval, now Swan Defence).</p></details>
+  <details class="q"><summary>8. Why is Swan Defence excluded from the basket?</summary><p>It relisted in January 2025 with a tiny free float and rose 73-fold, much of it on consecutive upper circuits.</p></details>
+  <details class="q"><summary>9. Which window has been strongest for the shipyards?</summary><p>April–July, which beat the Nifty in 8 of 9 years.</p></details>
+  <details class="q"><summary>10. Why do Indian shipyard stocks not follow the global shipping cycle?</summary><p>Their revenue comes mainly from Navy orders, which follow the defence budget, not freight rates.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, 2017 to 18 September 2026, against NSE:NIFTY; KRX:009540 and SSE:600150 for the global proxy.</li>
+    <li>Mazagon Dock: <a href="https://scanx.trade/stock-market-news/companies/mazagon-dock-shipbuilders-q1-results-consolidated-net-profit-up-22-yoy/46971436">Q1 FY27 results</a>; <a href="https://www.multibagg.ai/market-pulse/articles/mazagon-dock-q1-96893">order book</a>; <a href="https://www.maritimegateway.com/mazagon-dock-keeps-rs-1-lakh-crore-order-book-target-for-fy27-expects-15-17-revenue-growth/">FY27 targets</a>; <a href="https://www.sahi.com/news/mazagon-dock-plans-to-secure-two-major-orders-by-fy27-2883-PE1_COR">submarine contracts</a>.</li>
+    <li>Cochin Shipyard: <a href="https://www.sahi.com/blogs/cochin-shipyard-q1-fy27-results">Q1 FY27</a>; <a href="https://www.sahi.com/blogs/cochin-shipyard-order-book">order book breakdown</a>; <a href="https://www.business-standard.com/markets/capital-market-news/cochin-shipyard-slumps-as-fy27-ebitda-margin-guidance-disappoints-126091100745_1.html">margin guidance</a>.</li>
+    <li>GRSE: <a href="https://www.business-standard.com/markets/capital-market-news/grse-q1-pat-jumps-44-yoy-to-rs-173-cr-126072900771_1.html">Q1 FY27</a>; <a href="https://raksha-anirveda.com/grse-sustains-growth-momentum-in-q1-fy27-with-rs-1815-crore-revenue-rs-173-crore-pat/">order book and Navratna</a>.</li>
+    <li>Swan and Laxmipati: <a href="https://www.business-standard.com/markets/news/swan-defence-shares-relists-on-nse-bse-freezes-at-5-upper-circuit-125012000529_1.html">relisting</a>; <a href="https://www.business-standard.com/markets/news/swan-defence-and-heavy-industries-share-price-hits-record-high-on-loi-win-for-220-million-shipbuilding-deal-markets-bse-125111100578_1.html">tanker letter of intent</a>; <a href="https://www.screener.in/company/537669/">Laxmipati financials</a>.</li>
+    <li>P75(I): <a href="https://www.armyrecognition.com/news/navy-news/2026/india-project-75i-submarine-deal-70000-crore-ccs-approval">approval stage</a>; <a href="https://www.tkmsgroup.com/news/article/milestone-in-indian-submarine-program-tkms-enters-contract-negotiations-with-mazagon-dock-shipbuilders-mdl-for-p75i-program">TKMS negotiations</a>.</li>
+    <li>Policy and global: <a href="https://www.tribuneindia.com/news/business/govt-okays-rs-70k-crore-maritime-package">₹69,725 cr package</a>; <a href="https://www.indiandefensenews.in/2026/07/india-sanctions-69725-crore-package-to.html">package components</a>; <a href="https://www.imarinenews.com/31068.html">2025 global shipbuilding shares</a>; <a href="https://maritime-executive.com/article/china-continued-shipbuilding-dominance-in-2025-raking-in-most-orders">China's dominance</a>; <a href="https://splash247.com/newbuild-prices-surge-52-this-decade/">newbuild prices</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2018, "v": 1.7}, {"y": 2019, "v": 4.8}, {"y": 2020, "v": -4.1}, {"y": 2021, "v": -4.2}, {"y": 2022, "v": -11.4}, {"y": 2023, "v": -9.0}, {"y": 2024, "v": -16.5}, {"y": 2025, "v": 0.6}, {"y": 2026, "v": -13.6}], "AprJul": [{"y": 2018, "v": -22.5}, {"y": 2019, "v": 17.1}, {"y": 2020, "v": 4.6}, {"y": 2021, "v": 2.6}, {"y": 2022, "v": 16.4}, {"y": 2023, "v": 63.3}, {"y": 2024, "v": 187.7}, {"y": 2025, "v": 20.8}, {"y": 2026, "v": 13.0}], "AugSep": [{"y": 2018, "v": -9.8}, {"y": 2019, "v": 9.0}, {"y": 2020, "v": 5.1}, {"y": 2021, "v": -14.8}, {"y": 2022, "v": 48.2}, {"y": 2023, "v": 38.8}, {"y": 2024, "v": -30.7}, {"y": 2025, "v": -0.2}], "OctDec": [{"y": 2017, "v": -1.4}, {"y": 2018, "v": -0.6}, {"y": 2019, "v": 9.9}, {"y": 2020, "v": -16.3}, {"y": 2021, "v": 9.8}, {"y": 2022, "v": 34.4}, {"y": 2023, "v": 0.3}, {"y": 2024, "v": 4.2}, {"y": 2025, "v": -13.5}], "SepNov": [{"y": 2017, "v": 7.8}, {"y": 2018, "v": 1.9}, {"y": 2019, "v": 28.1}, {"y": 2020, "v": -8.8}, {"y": 2021, "v": 8.2}, {"y": 2022, "v": 86.6}, {"y": 2023, "v": 10.6}, {"y": 2024, "v": -1.1}, {"y": 2025, "v": 1.2}], "JanMar": [{"y": 2018, "v": -5.1}, {"y": 2019, "v": -1.4}, {"y": 2020, "v": -2.6}, {"y": 2021, "v": -7.4}, {"y": 2022, "v": -10.8}, {"y": 2023, "v": -6.7}, {"y": 2024, "v": -4.5}, {"y": 2025, "v": 5.3}, {"y": 2026, "v": -6.2}]}, "my": {"1": {"2018": -7.3, "2019": -5.5, "2020": 2.2, "2021": -3.2, "2022": 0.6, "2023": 2.3, "2024": 14.0, "2025": 4.6, "2026": 9.4}, "2": {"2018": 3.9, "2019": -1.2, "2020": -13.1, "2021": -0.7, "2022": -8.9, "2023": -10.9, "2024": -9.7, "2025": -12.3, "2026": -11.3}, "3": {"2018": -2.0, "2019": 6.3, "2020": 7.4, "2021": -3.3, "2022": -2.4, "2023": 2.3, "2024": -7.2, "2025": 16.8, "2026": -4.1}, "4": {"2018": -0.5, "2019": -0.0, "2020": -17.8, "2021": -3.9, "2022": 23.4, "2023": 3.0, "2024": 33.7, "2025": 10.7, "2026": 34.6}, "5": {"2018": -5.0, "2019": 6.1, "2020": -0.2, "2021": -3.3, "2022": -3.5, "2023": -1.2, "2024": 41.5, "2025": 27.0, "2026": -9.8}, "6": {"2018": -12.3, "2019": 2.7, "2020": 34.2, "2021": 9.8, "2022": -4.5, "2023": 26.6, "2024": 26.2, "2025": -3.2, "2026": 1.0}, "7": {"2018": -3.7, "2019": 7.8, "2020": -7.3, "2021": 0.3, "2022": 2.8, "2023": 22.4, "2024": 14.5, "2025": -11.1, "2026": -7.1}, "8": {"2018": -9.2, "2019": -1.9, "2020": -1.2, "2021": -14.9, "2022": 20.0, "2023": 24.0, "2024": -25.1, "2025": -7.0, "2026": 4.2}, "9": {"2017": 2.6, "2018": -1.3, "2019": 11.2, "2020": 6.2, "2021": 0.5, "2022": 23.4, "2023": 11.8, "2024": -6.6, "2025": 7.5}, "10": {"2017": 5.9, "2018": 4.2, "2019": 14.3, "2020": -8.6, "2021": 3.7, "2022": 21.1, "2023": -8.6, "2024": -1.7, "2025": -4.6}, "11": {"2017": -0.7, "2018": -1.0, "2019": -0.3, "2020": -5.9, "2021": 3.7, "2022": 22.8, "2023": 8.8, "2024": 7.6, "2025": -1.7}, "12": {"2017": -6.0, "2018": -3.9, "2019": -3.7, "2020": 0.0, "2021": 2.1, "2022": -9.1, "2023": 1.7, "2024": -1.1, "2025": -7.2}}, "basket": ["Mazagon Dock Shipbuilders Ltd.", "Cochin Shipyard Limited", "Garden Reach Shipbuilders & Engineers Ltd."], "nbasket": 3, "start": "Sep 2017", "monthly": [{"m": 1, "abs": 1.2, "rel": 1.9, "hit": 6, "n": 9}, {"m": 2, "abs": -8.9, "rel": -7.1, "hit": 1, "n": 9}, {"m": 3, "abs": -0.4, "rel": 1.5, "hit": 4, "n": 9}, {"m": 4, "abs": 13.2, "rel": 9.2, "hit": 5, "n": 9}, {"m": 5, "abs": 6.2, "rel": 5.7, "hit": 3, "n": 9}, {"m": 6, "abs": 10.8, "rel": 8.9, "hit": 6, "n": 9}, {"m": 7, "abs": 4.6, "rel": 2.1, "hit": 5, "n": 9}, {"m": 8, "abs": 0.2, "rel": -1.2, "hit": 3, "n": 9}, {"m": 9, "abs": 6.1, "rel": 6.2, "hit": 7, "n": 9}, {"m": 10, "abs": 3.8, "rel": 2.9, "hit": 5, "n": 9}, {"m": 11, "abs": 6.4, "rel": 3.7, "hit": 4, "n": 9}, {"m": 12, "abs": -1.2, "rel": -3.0, "hit": 3, "n": 9}], "cy": [{"y": 2018, "b": -30.2, "n": 3.2, "rel": -33.3, "partial": false}, {"y": 2019, "b": 54.9, "n": 12.0, "rel": 42.9, "partial": false}, {"y": 2020, "b": 4.6, "n": 14.9, "rel": -10.3, "partial": false}, {"y": 2021, "b": 12.7, "n": 24.1, "rel": -11.4, "partial": false}, {"y": 2022, "b": 113.6, "n": 4.3, "rel": 109.3, "partial": false}, {"y": 2023, "b": 142.2, "n": 20.0, "rel": 122.1, "partial": false}, {"y": 2024, "b": 105.2, "n": 8.8, "rel": 96.4, "partial": false}, {"y": 2025, "b": 21.5, "n": 10.5, "rel": 11.0, "partial": false}, {"y": 2026, "b": -7.4, "n": -10.7, "rel": 3.2, "partial": true}], "dd": [{"co": "Mazagon Dock Shipbuilders", "peak": "May 2025", "fp": -39, "y1": -24}, {"co": "Cochin Shipyard", "peak": "Jul 2024", "fp": -51, "y1": -27}, {"co": "Garden Reach Shipbuilders & Engineers", "peak": "Jun 2025", "fp": -31, "y1": -8}, {"co": "Swan Defence and Heavy Industries", "peak": "Dec 2025", "fp": 98, "y1": 400}, {"co": "Laxmipati Engineering Works", "peak": "Jul 2025", "fp": -1, "y1": 40}], "win": {"FebMar": {"mean": -5.7, "median": -4.2, "hit": 3, "n": 9}, "AprJul": {"mean": 33.7, "median": 16.4, "hit": 8, "n": 9}, "AugSep": {"mean": 5.7, "median": 2.5, "hit": 4, "n": 8}, "OctDec": {"mean": 3.0, "median": 0.3, "hit": 5, "n": 9}, "SepNov": {"mean": 15.0, "median": 7.8, "hit": 7, "n": 9}, "JanMar": {"mean": -4.4, "median": -5.1, "hit": 1, "n": 9}}, "ytd": {"b": -7.4, "n": -10.7}, "notes": {"2018": "\u221230.2% against +3.2%. Cochin Shipyard alone for most of the year (\u221232%) in the small-cap crash; GRSE listed in October.", "2019": "+54.9% against +12.0%. GRSE +114% in its first full listed year; Cochin +8%.", "2020": "+4.6% against +14.9%. GRSE \u22122%, Cochin \u22128%; Mazagon Dock listed in October and rose from its IPO price.", "2021": "+12.7% against +24.1%. Mazagon Dock +28%, GRSE +15%, Cochin \u22124%: warship PSUs still priced as low-growth government companies.", "2022": "+113.6% against +4.3%. The re-rating began: Mazagon +184%, GRSE +117%, Cochin +50% on the Ukraine war, indigenisation and dividends.", "2023": "+142.2% against +20.0%. Mazagon +188%, Cochin +153%, GRSE +80% as warship deliveries and orders accelerated.", "2024": "+105.2% against +8.8%. Cochin +127% (commercial export orders and its new dry dock), Mazagon +95%, GRSE +85%; Cochin peaked in July.", "2025": "+21.5% against +10.5%. GRSE +51%, Mazagon +12%, Cochin +5%; Mazagon and GRSE peaked in May\u2013June around Operation Sindoor.", "2026": "\u22127.4% against a Nifty \u221210.7%. GRSE \u22121%, Mazagon \u22128%, Cochin \u221214%: Mazagon's order book running down ahead of the submarine contracts and Cochin's weak margin guidance."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

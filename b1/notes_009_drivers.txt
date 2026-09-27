@@ -1,0 +1,25 @@
+BASKET 13 names
+2012: basket -10 nifty +28 rel -37 | n=8 median -7 | TOP Ultramarine & Pigm +51, Sudarshan Colorant +13, Asahi Songwon Colo +3 | BOTTOM Sudarshan Chemical -17, Bodal Chemicals Li -30, Kiri Industries Li -78
+2013: basket -5 nifty +7 rel -12 | n=8 median -12 | TOP Kiri Industries Li +363, Bodal Chemicals Li +99, Sudarshan Colorant -3 | BOTTOM Ultramarine & Pigm -19, Vipul Organics Lim -28, Indokem Limited -80
+2014: basket +126 nifty +31 rel +95 | n=8 median +95 | TOP Indokem Limited +1103, Sudarshan Chemical +190, Asahi Songwon Colo +105 | BOTTOM Ultramarine & Pigm +62, Sudarshan Colorant +40, Kiri Industries Li +25
+2015: basket +36 nifty -4 rel +40 | n=8 median +41 | TOP Vipul Organics Lim +89, Bodal Chemicals Li +72, Ultramarine & Pigm +70 | BOTTOM Sudarshan Chemical -8, Sudarshan Colorant -15, Indokem Limited -15
+2016: basket +101 nifty +3 rel +98 | n=9 median +112 | TOP Sudarshan Chemical +182, Vipul Organics Lim +182, Indokem Limited +181 | BOTTOM Ultramarine & Pigm +41, Asahi Songwon Colo +34, Sudarshan Colorant -6
+2017: basket +48 nifty +29 rel +20 | n=11 median +63 | TOP Ultramarine & Pigm +139, Vidhi Specialty Fo +101, Kiri Industries Li +76 | BOTTOM Sudarshan Chemical +20, Sudarshan Colorant -18, Bhageria Industrie -20
+2018: basket -23 nifty +3 rel -26 | n=12 median -29 | TOP Vipul Organics Lim +17, Bhageria Industrie +4, Sudarshan Chemical -9 | BOTTOM Asahi Songwon Colo -41, AksharChem India L -42, Indokem Limited -51
+2019: basket -25 nifty +12 rel -37 | n=13 median -28 | TOP Sudarshan Chemical +20, Sudarshan Colorant -8, Kiri Industries Li -11 | BOTTOM Shree Pushkar Chem -38, AksharChem India L -47, Indokem Limited -58
+2020: basket +45 nifty +15 rel +30 | n=13 median +33 | TOP Indokem Limited +243, Vidhi Specialty Fo +101, Asahi Songwon Colo +64 | BOTTOM AksharChem India L +7, Ushanti Colour Che -14, Vipul Organics Lim -15
+2021: basket +60 nifty +24 rel +36 | n=13 median +53 | TOP Vidhi Specialty Fo +210, Indokem Limited +84, AksharChem India L +78 | BOTTOM Asahi Songwon Colo +18, Sudarshan Chemical +16, Kiri Industries Li -9
+2022: basket -3 nifty +4 rel -8 | n=13 median -11 | TOP Indokem Limited +239, Ushanti Colour Che +6, Vipul Organics Lim +3 | BOTTOM Sudarshan Chemical -30, Bhageria Industrie -34, AksharChem India L -41
+2023: basket +18 nifty +20 rel -2 | n=13 median +15 | TOP Sudarshan Colorant +63, Sudarshan Chemical +41, Vipul Organics Lim +33 | BOTTOM Bhageria Industrie +1, Kiri Industries Li -16, Indokem Limited -24
+2024: basket +26 nifty +9 rel +17 | n=13 median +24 | TOP Sudarshan Chemical +108, Kiri Industries Li +55, Shree Pushkar Chem +43 | BOTTOM Ushanti Colour Che -6, Sudarshan Colorant -7, Bodal Chemicals Li -19
+2025: basket +12 nifty +10 rel +1 | n=13 median -14 | TOP Indokem Limited +537, Shree Pushkar Chem +23, Vipul Organics Lim +20 | BOTTOM Ultramarine & Pigm -22, Asahi Songwon Colo -29, Vidhi Specialty Fo -34
+2026: basket +48 nifty -11 rel +58 | n=13 median +30 | TOP Ushanti Colour Che +331, Bodal Chemicals Li +257, Bhageria Industrie +85 | BOTTOM Vidhi Specialty Fo -1, Sudarshan Colorant -19, Kiri Industries Li -27
+MONTH 4 avg +7.1 (11/15): worst years [('2025', -6.4), ('2013', -6.0), ('2019', -4.1)] best years [('2014', 17.9), ('2016', 19.3), ('2026', 19.9)]
+MONTH 6 avg +3.7 (9/15): worst years [('2018', -11.3), ('2019', -6.8), ('2012', -2.8)] best years [('2020', 13.0), ('2014', 13.8), ('2016', 22.3)]
+MONTH 2 avg -3.2 (3/15): worst years [('2015', -12.4), ('2016', -8.8), ('2019', -7.8)] best years [('2024', 1.2), ('2020', 5.1), ('2014', 10.2)]
+WIN FebMar: hit 2/15 median -4.4 | negative years [(2012, -3.0), (2013, -9.1), (2015, -5.4), (2016, -5.4), (2017, -5.9), (2018, -9.6), (2019, -0.2), (2020, -4.4), (2022, -4.1), (2023, -12.3), (2024, -11.7), (2025, -1.5), (2026, -2.2)] | biggest [(2014, 16.1), (2021, 5.0)]
+WIN AprJul: hit 10/15 median +13.9 | negative years [(2012, -19.9), (2013, -15.1), (2018, -11.7), (2019, -22.8), (2022, -0.4)] | biggest [(2016, 58.0), (2014, 46.6)]
+WIN AugSep: hit 7/14 median +0.5 | negative years [(2012, -8.0), (2015, -5.5), (2017, -1.2), (2018, -3.9), (2019, -0.4), (2021, -12.2), (2025, -2.1)] | biggest [(2016, 20.4), (2013, 10.2)]
+WIN OctDec: hit 6/14 median -0.6 | negative years [(2012, -8.7), (2014, -7.9), (2018, -0.4), (2019, -0.8), (2020, -9.6), (2021, -2.0), (2022, -9.9), (2025, -4.9)] | biggest [(2015, 40.3), (2013, 22.6)]
+WIN SepNov: hit 5/14 median -4.2 | negative years [(2012, -13.6), (2014, -5.1), (2018, -5.1), (2019, -5.2), (2020, -12.4), (2021, -2.5), (2022, -5.9), (2023, -3.4), (2025, -5.1)] | biggest [(2016, 35.7), (2015, 21.2)]
+WIN JanMar: hit 5/15 median -6.3 | negative years [(2013, -20.4), (2015, -6.0), (2016, -6.3), (2017, -4.1), (2018, -11.9), (2019, -12.3), (2023, -14.7), (2024, -12.7), (2025, -6.6), (2026, -7.2)] | biggest [(2014, 23.0), (2021, 8.0)]

@@ -1,0 +1,622 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aroma and Flavour Chemicals Primer</title>
+<meta name="description" content="Industry 10 of 278: the business of smell and taste, from mint fields, pine trees and petrochemicals to aroma chemicals, camphor and the fragrance and flavour houses. Six companies (each described), crop and resin cycles, the global big four, and a year-by-year record from 2014 to the 2026 alpha-pinene spike.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Aroma &amp; Flavour Chemicals · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical raw materials</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 10 of 278 · Chemicals family</div>
+  <h1>Aroma &amp; Flavour Chemicals</h1>
+  <p class="lede">The smell of soap, the taste of mint toothpaste, the camphor lit at a puja. A small, high-value industry that sits between farming (mint, pine trees, citrus, cloves) and chemistry, and sells to a handful of global fragrance and flavour houses and FMCG brands.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 6 after the audit (2 moved out)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Rubber Chemicals</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">+70–80%</div><div class="l">Rise in alpha-pinene (camphor raw material) prices in the five months to mid-2026, per Oriental Aromatics</div></div>
+    <div class="stat"><div class="n">~60%+</div><div class="l">Estimated global share of the big four flavour and fragrance houses: Givaudan, DSM-Firmenich, IFF, Symrise</div></div>
+    <div class="stat"><div class="n">₹662 cr</div><div class="l">S H Kelkar's Q1 FY27 revenue (+14%), India's largest listed fragrance house; profit +78%</div></div>
+    <div class="stat"><div class="n">~80%</div><div class="l">India's commonly cited share of world natural mint (Mentha arvensis) oil, mostly from Uttar Pradesh</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Selling smell and taste</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Every shampoo, soap, perfume, biscuit and toothpaste has a smell or taste that someone designed. The designers are called perfumers and flavourists. They mix dozens or hundreds of ingredients, like a musician combining notes into a song. Some ingredients come from plants: mint grown in Uttar Pradesh, oil tapped from pine trees, lemon peel, cloves. Others are made in factories to copy nature cheaply, like making vanilla taste without vanilla pods. Camphor, the white tablet lit in temples, is made from pine-tree oil. When the mint harvest is poor or pine oil gets expensive, the ingredient makers' costs jump. The designers, whose recipes are secret, can usually pass the cost on.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Two layers with opposite economics. <b>Fragrance and flavour (F&amp;F) houses</b> design formulations and earn high, sticky margins because their recipes are locked into customers' brands. Globally these are Givaudan, DSM-Firmenich, IFF and Symrise; in India, S H Kelkar and Sacheerome. <b>Ingredient makers</b> produce aroma chemicals, camphor and mint derivatives (Oriental Aromatics, Mangalam Organics, Kanchi Karpooram, Gem Aromatics, and Privi in the specialty list). They are price-takers exposed to crop and pine-resin cycles and to Chinese competition. India dominates natural mint and is a big camphor consumer and maker. In 2026 alpha-pinene rose 70–80%: Oriental's profit shrank to ₹2.5 cr while S H Kelkar's rose 78%. The stocks moved the other way (Oriental +77%, Kelkar −24%), a reminder that this small basket trades on sentiment and debt more than on the layer model.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From crops and chemicals to compounds</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>Made from</th><th>Used in</th></tr></thead><tbody>
+    <tr><td>Fragrance compounds</td><td>Blends of 20–200+ ingredients</td><td>Soaps, detergents, shampoos, perfumes, air care, incense</td></tr>
+    <tr><td>Flavour compounds</td><td>Natural extracts plus nature-identical chemicals</td><td>Beverages, snacks, dairy, confectionery, pharma syrups</td></tr>
+    <tr><td>Camphor</td><td>Synthetic: alpha-pinene (from turpentine) → camphene → isoborneol → camphor. Natural: camphor-tree wood (small volumes)</td><td>Puja and religious use, balms and rubs, pharma, insect repellents</td></tr>
+    <tr><td>Terpene aroma chemicals</td><td>Gum turpentine (tapped pine resin) and crude sulphate turpentine (a paper-mill by-product)</td><td>Pine and woody notes (terpineol, dihydromyrcenol); pine-oil disinfectants</td></tr>
+    <tr><td>Menthol and mint derivatives</td><td>Mentha arvensis oil from Uttar Pradesh, or synthetic menthol</td><td>Toothpaste, chewing gum, balms, cough drops, cigarettes</td></tr>
+    <tr><td>Clove derivatives</td><td>Clove oil → eugenol, vanillin (partly)</td><td>Dental care, flavours, fragrances</td></tr>
+    <tr><td>Citrus derivatives</td><td>Orange and lemon oil (Brazil, US) → limonene, citral</td><td>Beverages, cleaners, fragrances</td></tr>
+    <tr><td>Synthetic aroma chemicals</td><td>Petrochemicals: benzene, toluene, phenol, guaiacol (see 002, 008)</td><td>Vanillin, musks, floral and fruity notes in all compounds</td></tr>
+  </tbody></table></div>
+  <h3>Naturals vs synthetics</h3>
+  <p>A single rose note can be made three ways: steam-distil tonnes of petals (costly, varies by harvest), synthesise the key molecules (geraniol, phenylethyl alcohol) from petrochemicals, or brew them with engineered microbes (fermentation). Most mass-market products use synthetics because they are cheap, consistent and don't depend on the weather. Naturals are used where labels matter ("natural flavour") and in fine fragrance. The ingredient maker's business depends on which route wins for each molecule.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A fragrance is like a song. The ingredients are the notes (some from nature, some from a synthesiser), the perfumer is the composer, and the brand is the singer who makes it famous. Once a song is a hit, nobody wants to change the tune, so the composer keeps earning. The people who make the instruments do not.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The cooling hit of Colgate or a Vicks rub is menthol, likely from UP mint. The fresh "pine" smell of a floor cleaner is terpineol from turpentine. The vanilla in a biscuit is usually synthetic vanillin (see 008: Camlin). The kapur in a puja thali is synthetic camphor, from Mangalam, Oriental or Kanchi. The smell of a Lux or Dove soap is a compound designed by an F&amp;F house under a secret brief.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a mint field to a toothpaste brand</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Farms and forests</h4><div class="an">The garden</div>Mint (Barabanki, Sambhal, Rampur, Bareilly), cloves, citrus, pine resin (China, Indonesia, Brazil, India), paper-mill turpentine.<div class="who">Farmers, resin tappers, pulp mills</div><div class="m">Weather-driven prices</div></div>
+    <div class="stage"><div class="no">02</div><h4>Extraction</h4><div class="an">Squeezing the juice</div>Distilling mint oil, gum rosin and turpentine; pressing citrus peel.<div class="who">Local distillers; Mangalam (gum rosin, turpentine)</div><div class="m">Thin margins</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Aroma chemicals and camphor</h4><div class="an">Pantry staples</div>Menthol crystals, camphor, terpineol, eugenol, synthetic aroma molecules.<div class="who">Oriental, Mangalam, Kanchi, Gem, Privi (008)</div><div class="m">Commodity-like; China competes</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>F&amp;F houses</h4><div class="an">The chef's secret recipe</div>Creating and producing compounds for brand owners.<div class="who">Givaudan, DSM-Firmenich, IFF, Symrise; S H Kelkar, Sacheerome</div><div class="m">Highest, stickiest margins</div></div>
+    <div class="stage"><div class="no">05</div><h4>Brand owners</h4><div class="an">The restaurant</div>FMCG, beverage, pharma, incense and tobacco companies.<div class="who">HUL, P&amp;G, Colgate, Dabur, ITC, Godrej Consumer</div><div class="m">—</div></div>
+    <div class="stage"><div class="no">06</div><h4>Consumers</h4><div class="an">The diners</div>Soap, toothpaste, drinks, snacks, perfume, agarbatti, kapur.<div class="who">Everyone</div><div class="m">Steady, defensive demand</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Farms and forests:</b> mint is grown like wheat, planted in late winter and cut in early summer. Pine trees are cut gently, like tapping a rubber tree, and sticky resin drips into cups.</li>
+    <li><b>Extraction:</b> the mint leaves are steamed in big drums, and the oil floats on the water. The pine resin is heated and splits into a solid (rosin) and a liquid (turpentine).</li>
+    <li><b>Aroma chemicals:</b> chemists turn those oils into pure, single-smell molecules. Menthol crystals are frozen out of mint oil; camphor is built from turpentine in four chemical steps.</li>
+    <li><b>F&amp;F houses:</b> the perfumer mixes those molecules into a secret recipe for a brand ("make our new soap smell like the monsoon"). Brands run a competition called a "brief", and the winner supplies that smell for years.</li>
+    <li><b>Brand owners:</b> the brand adds a small dose of the recipe to every bar of soap. The fragrance costs very little per bar but decides whether people buy it again.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>A fragrance costs a brand a tiny share of the product's price but defines the product, so brands rarely switch. That gives F&amp;F houses pricing power and 20%+ margins globally. Ingredient makers have none: they sell molecules with global prices and absorb crop swings. Before judging margins, know which layer a company sits in, and whether it is <b>moving up</b> (Oriental and Gem building fragrance and flavour arms) or <b>down</b> (S H Kelkar making its own ingredients).</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The six companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>S H Kelkar (~₹1,850 cr)</td><td>India's largest listed F&amp;F house (Keva brand), with ingredient plants and operations in Europe. Mainly fragrance for FMCG; a fast-growing flavour arm.</td><td>Revenue ₹662 cr (+14%), consolidated profit ₹45.4 cr (+78%), flavours +63%, gross margins stable. Net debt ₹864 cr after capacity spending and a deliberate inventory build. 2026 −24%; −58% from its 2024 peak.</td></tr>
+    <tr><td>Oriental Aromatics (~₹1,720 cr)</td><td>Formerly Camphor &amp; Allied Products. Camphor (including USFDA- and WHO-GMP-approved pharma grade), terpene aroma chemicals, specialty aroma chemicals and fragrance/flavour compounds. A new plant at Mahad.</td><td>Revenue ₹260 cr (+15%), profit ₹2.5 cr, EBITDA margin 7.6% (8.0% a year ago). Alpha-pinene +70–80% in five months; domestic camphor overcapacity, though Indian camphor powder prices rose by double digits. Mahad has started commercial orders. 2026 +77%.</td></tr>
+    <tr><td>Sacheerome (~₹1,120 cr)</td><td>Designs and makes fragrances and flavours for FMCG and incense makers; listed June 2025.</td><td>Revenue guidance of ₹200 cr (FY27), ₹250 cr (FY28) and ₹300 cr (FY29). A high valuation for its size. 2026 +41%.</td></tr>
+    <tr><td>Gem Aromatics (~₹820 cr)</td><td>Essential oils and aroma chemicals: mint derivatives (69% of FY25 revenue), clove derivatives (eugenol) and others. New plant at Dahej. Listed August 2025 (₹318 cr issue); FY25 revenue ₹506 cr.</td><td>Standalone revenue ₹83 cr (+8.6%), profit ₹7.3 cr (+12%). Consolidated loss of ₹7.9 cr after ₹9.1 cr of depreciation on the new Dahej unit. 2026 −11%; ~53% below its post-listing high.</td></tr>
+    <tr><td>Mangalam Organics (~₹400 cr)</td><td>Describes itself as the world's largest camphor maker (CamPure consumer brand); gum rosin, turpentine, pine derivatives, sodium acetate.</td><td>Revenue ₹179 cr (+22%), profit ₹7.3 cr (−41%), EBITDA margin 12.4% (14.7%): material costs rose 58%. 2026 −7%.</td></tr>
+    <tr><td>Kanchi Karpooram (~₹170 cr)</td><td>Camphor and terpene chemicals (Tamil Nadu). Below the ₹300 cr basket threshold.</td><td>Q1 revenue ₹41.7 cr; ₹1 dividend; MD reappointed. 2026 +6%.</td></tr>
+  </tbody></table></div>
+  <p><b>Moved out (2):</b> Ambica Agarbathies (incense sticks) to Personal Care; MRC Agrotech to Edible Oils.</p>
+  <div class="box warn"><span class="tag">Classification flags for the next audit</span><p><b>Privi Speciality Chemicals</b> sits in 008 Specialty but is almost entirely an aroma-chemicals business (India's largest, built on crude sulphate turpentine, with a Givaudan joint venture). It belongs here, and would become this basket's largest member. <b>Camlin Fine Sciences</b> (vanillin, food antioxidants) is a borderline case; keep it in 008.</p></div>
+  <h3>Related names in other primers</h3>
+  <ul>
+    <li><b>Privi</b> (008): aroma chemicals from turpentine.</li>
+    <li><b>Camlin</b> (008): vanillin.</li>
+    <li><b>Atul</b> (008): para-cresol and anisole, which feed aroma molecules.</li>
+    <li><b>FMCG and incense makers</b>: the end customers (HUL, Colgate, Dabur; Cycle Pure Agarbathies is unlisted).</li>
+    <li><b>Ambica Agarbathies</b>: incense.</li>
+  </ul>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Two very different margin structures</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Layer</th><th class="num">EBITDA margin*</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Global F&amp;F houses</td><td class="num">20–25%</td><td>Recipe lock-in; briefs are contested by only a few competitors; captive ingredients</td></tr>
+    <tr><td>Indian F&amp;F houses (S H Kelkar, Sacheerome)</td><td class="num">12–18%</td><td>Smaller scale, more mass-market and regional customers</td></tr>
+    <tr><td>Camphor and terpene chemicals</td><td class="num">5–15%</td><td>Pine-resin prices, Chinese pricing, domestic overcapacity</td></tr>
+    <tr><td>Mint derivatives</td><td class="num">8–15%</td><td>Crop size; synthetic menthol sets a ceiling</td></tr>
+    <tr><td>Specialty aroma molecules</td><td class="num">15–25%</td><td>Few makers per molecule; approvals with F&amp;F houses (Privi at its best)</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges from company filings; one year can sit well outside them.</p>
+  <h3>How an F&amp;F house wins business</h3>
+  <ol>
+    <li>A brand issues a <b>brief</b> ("a fresh, marine scent for a new detergent, costing no more than X per kg").</li>
+    <li>Several houses on the brand's <b>core list</b> submit samples. Large brands keep only two to four houses on the list.</li>
+    <li>Consumer tests pick a winner, who then supplies that compound for the life of the product, often five to ten years.</li>
+    <li>Revenue grows with the brand's volumes and with new wins. Raw-material costs are passed on with a lag of one to two quarters.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>A fragrance house is like a songwriter who earns royalties every time a hit is played. A camphor maker is like a wheat farmer: good harvests (cheap resin) mean fat margins until everyone expands, and bad ones squeeze them. The songwriter's royalty doesn't care about the wheat price.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical raw materials">
+  <p class="eyebrow">6 · Critical raw materials</p>
+  <h2>What to watch on the input side</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Alpha-pinene / gum turpentine</td><td>Pine-resin tapping in China, Indonesia, Brazil, India (chir pine)</td><td>Camphor makers: Oriental, Mangalam, Kanchi</td><td>+70–80% in five months; Q2 2026 about $1,780/t in China vs ~$4,150/t delivered in India</td></tr>
+    <tr><td>Crude sulphate turpentine (CST)</td><td>Kraft pulp mills (US, Nordics)</td><td>Privi (008)</td><td>Tied to pulp output; tight</td></tr>
+    <tr><td>Mentha arvensis oil</td><td>Uttar Pradesh (Barabanki, Sambhal, Rampur, Bareilly, Moradabad)</td><td>Gem Aromatics, menthol makers, S H Kelkar</td><td>About $16/kg in Q1 2026, firm on smaller crop arrivals; UP mandi ~₹1,300/kg</td></tr>
+    <tr><td>Menthol crystals</td><td>Made from mint oil; synthetic from BASF, Symrise, Takasago</td><td>Toothpaste and pharma buyers; mint processors</td><td>₹1,160–1,305/kg in January 2026</td></tr>
+    <tr><td>Clove oil</td><td>Indonesia, Madagascar, Sri Lanka</td><td>Gem (eugenol)</td><td>Crop-dependent</td></tr>
+    <tr><td>Citrus oils</td><td>Brazil, US (Florida)</td><td>F&amp;F houses (limonene, citral)</td><td>High since 2023–24, when citrus greening and storms cut Brazilian and Florida crops</td></tr>
+    <tr><td>Petrochemical aromatics</td><td>Refineries; phenol, toluene, guaiacol (see 002, 008)</td><td>Synthetic aroma makers; vanillin</td><td>Brent $103 on 18 September</td></tr>
+    <tr><td>Natural vanilla</td><td>Madagascar (most of world supply)</td><td>Flavour houses</td><td>Volatile: over $500/kg after Cyclone Enawo in 2017, far lower since</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>For camphor makers, the spread over alpha-pinene is everything. When pine-resin prices jump, the first quarter is painful (Oriental's 7.6% margin), and the next quarters depend on whether camphor prices catch up (they rose by double digits in 2026) or overcapacity blocks it. F&amp;F houses feel the same inputs a quarter or two later and pass them on.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Crops and festivals</h2>
+  <ul>
+    <li><b>Mint:</b> planted January–March and distilled May–July in Uttar Pradesh. Prices move when the crop size becomes clear (June–August), and a weak monsoon start hurts yields.</li>
+    <li><b>Pine resin:</b> tapped in the warm months in China, Indonesia and Brazil. Chinese export pricing sets world turpentine prices, with a lag.</li>
+    <li><b>Camphor:</b> demand peaks around Navratri, Diwali and the South Indian temple seasons (Sabarimala, November–January). Stock-building happens in August–October.</li>
+    <li><b>FMCG:</b> briefs and launches run all year; summer lifts deodorants and drinks flavours; winter lifts balms and rubs (menthol, camphor).</li>
+    <li><b>Global F&amp;F:</b> results come half-yearly (Givaudan) or quarterly (IFF, Symrise). Their volume comments are the best read on global FMCG demand.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 5 names (S H Kelkar and Company Ltd, Oriental Aromatics Ltd., Sacheerome Limited, Gem Aromatics Limited, Mangalam Organics Ltd), equal-weighted, monthly from Jan 2014, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +13.6 pts (beat in 11 of 13 years); Jul +6.5 pts (beat in 9 of 13 years); Sep +4.5 pts (beat in 10 of 12 years).</li><li><b>Weakest months:</b> Feb -5.3 pts (beat in 4 of 13 years); May -5.0 pts (beat in 3 of 13 years); Mar -3.4 pts (beat in 5 of 13 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 2 of 13 years (median -10.6 pts); Apr–Jul beat the Nifty in 9 of 13 years (median +26.2 pts); Aug–Sep beat the Nifty in 7 of 12 years (median +3.0 pts); Oct–Dec beat the Nifty in 6 of 12 years (median -2.7 pts); Sep–Nov beat the Nifty in 7 of 12 years (median +8.7 pts); Jan–Mar beat the Nifty in 4 of 13 years (median -10.2 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +10.6 points.</p><p><b>Reading it:</b> April is strong (+13.6 points, 11 of 13 years), and so is September (10 of 12). February (4 of 13), May (3 of 13) and June (4 of 13) are weak, and February–March beat the Nifty in only 2 of 13 years. Until 2025 the basket held only two or three stocks, all small caps, so remove about 3 points of April for the general small-cap effect and treat the rest as indicative, not proven. Camphor's festive-season demand peak (September–November) fits the firm September, but the sample is too small to be sure.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April misses: 2018 (−6.7) and 2019 (−0.3).</b> 2018 was the small-cap sell-off after the LTCG tax and fund reclassification; 2019 was the camphor downcycle and small-cap bear market. The best Aprils were 2021 (+29.9), 2015 (+29.8) and 2024 (+22.1).</li>
+    <li><b>April–July failures: 2017 (−3.6), 2018 (−19.4), 2019 (−24.1), 2022 (−16.9).</b> 2018–19 were the camphor bust plus the small-cap bear market; 2022 was raw-material inflation. 2017 was only a pause in a +106% year. The biggest runs were 2025 (+46.5) and 2021 (+46.0).</li>
+    <li><b>February–March</b> beat the Nifty only in 2014 (+5.2) and 2017 (+4.5). The worst were 2023 (−19.9) and 2016 and 2025 (about −16 each).</li>
+    <li><b>October–December</b> splits 6 of 12, with huge outliers: 2015 (+60.1) and 2017 (+54.1), both camphor-margin surges, against 2019 (−24.1) and 2022 (−14.6).</li>
+    <li><b>Sample warning:</b> until 2025 the basket held two or three stocks, so one company's results can flip a month. Treat every pattern here as a hypothesis.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The consistent message, across a small sample, is weak February–March and strong April and September. For a stock picker the calendar matters less than the layer and the input spread: in 2026 the best stock rose 77% and the worst fell 24%, and they moved against their own quarterly profits.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Seven drivers</h2>
+  <ol>
+    <li><b>Natural raw-material prices:</b> alpha-pinene and turpentine for camphor, mint oil for menthol, clove oil, citrus oils. These are weather- and crop-driven and hard to hedge.</li>
+    <li><b>Chinese pricing and capacity:</b> China is the largest maker of camphor, terpene chemicals and many synthetic aroma molecules. Its environmental drives (2017) and export pricing set the ceiling.</li>
+    <li><b>Domestic camphor capacity:</b> too many Indian plants chasing a festival-driven market repeatedly compresses margins (2019, 2023, 2026).</li>
+    <li><b>FMCG volumes:</b> soaps, detergents, oral care and packaged foods in India and emerging markets. Rural down-trading in 2022–23 hurt; recovery lifts F&amp;F volumes.</li>
+    <li><b>Synthetic substitutes:</b> synthetic menthol (BASF from citral, Symrise from m-cresol, Takasago via asymmetric catalysis) caps natural mint prices; lab-made vanillin caps vanilla.</li>
+    <li><b>Regulation and "natural" demand:</b> the EU's expanded allergen-labelling rules, IFRA standards, and brands' push for natural and traceable ingredients.</li>
+    <li><b>Balance sheets and capex:</b> new plants (Oriental's Mahad, Gem's Dahej, S H Kelkar's expansions) add depreciation and debt before they add profit.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2014 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of names with ₹300 cr+ market cap (2 in 2014–15, 3 in 2016–25, 5 in 2026; monthly returns capped at ±50%), price only; 2026 is to 18 September. Kanchi Karpooram is below the threshold and appears only in the notes. There is no free daily series for alpha-pinene or mint oil on TradingView (MCX mentha futures are not accessible), so the notes carry the input story.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a camphor cycle</h3>
+  <ol>
+    <li><b>Spread widens:</b> cheap pine resin, or Chinese supply cut (2017), while temple and pharma demand stays steady. Camphor makers' margins double and stocks rise severalfold (2017: Mangalam +373%, Kanchi +387%).</li>
+    <li><b>Everyone expands:</b> new Indian capacity arrives within two years.</li>
+    <li><b>Spread collapses:</b> camphor prices fall or resin rises. Stocks fall 35–50% (2019, 2022).</li>
+    <li><b>Diversify:</b> companies move into fragrance compounds, pharma-grade camphor and specialty aromas to escape the cycle (Oriental's Mahad plant).</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>F&amp;F houses are steadier than ingredient makers</b> in profit, but not always in price: S H Kelkar fell 42% in 2018 and 27% in 2025.</li>
+    <li><b>Stock moves often contradict the quarter.</b> In 2026 Oriental rose 77% on a ₹2.5 cr profit, while S H Kelkar fell 24% on a 78% profit jump. The market pays for expected spread recovery and punishes debt.</li>
+    <li><b>New listings arrive near good times:</b> Sacheerome and Gem listed in 2025 after two strong years. Gem is ~53% below its post-listing high.</li>
+    <li><b>Pandemics and hygiene scares help</b> (2020: pine-oil disinfectants, soaps).</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A Swiss–European oligopoly, Asian ingredients</h2>
+  <p>Modern perfumery was born in Grasse (France) with natural extracts. It became an industry when chemists learned to make aroma molecules: coumarin (1868), vanillin (1874) and aldehydes, famous in Chanel No. 5 (1921). Consolidation over the last 30 years left four houses controlling most of the market. The ingredients have moved to Asia: China for terpenes and many synthetics, India for mint, some terpenes and a growing share of specialty molecules.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player / region</th><th>Strength</th><th>2026 position</th></tr></thead><tbody>
+    <tr><td>Givaudan (Switzerland)</td><td>World #1; Fragrance &amp; Beauty and Taste &amp; Wellbeing</td><td>H1 2026 sales CHF 3.8 bn, +3.6% like-for-like (Fragrance &amp; Beauty +6.5%); adjusted EBITDA −5.2% in francs; net income −19.8% on legal costs, geopolitics and currency</td></tr>
+    <tr><td>DSM-Firmenich (Netherlands/Switzerland)</td><td>Merged in May 2023; perfumery, taste and ingredients</td><td>Refocusing on consumer businesses</td></tr>
+    <tr><td>IFF (US)</td><td>Fragrance, taste, food ingredients</td><td>Missed Q2 2026 expectations and cut guidance</td></tr>
+    <tr><td>Symrise (Germany)</td><td>Fragrance, flavour, aroma molecules (including synthetic menthol)</td><td>H1 2026 organic growth 2.0%, accelerating to 4.5% in Q2</td></tr>
+    <tr><td>Japan (Takasago, T. Hasegawa)</td><td>Menthol by asymmetric synthesis; Asian flavours</td><td>Steady</td></tr>
+    <tr><td>China</td><td>Largest maker of camphor, terpene chemicals and many synthetics; big pine-resin producer</td><td>Sets ingredient prices</td></tr>
+    <tr><td>India</td><td>~80% of natural mint oil; camphor; S H Kelkar; Privi in terpenes</td><td>Ingredient base; F&amp;F houses growing with FMCG</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Natural → synthetic (1870s–1950s):</b> chemistry made smells cheaper than farming them.</li>
+    <li><b>Many houses → four (1990s–2023):</b> scale in R&amp;D and customer coverage. Givaudan's purchase of Quest (2007) and the DSM–Firmenich merger (2023) are examples.</li>
+    <li><b>Europe → Asia for ingredients (2000s):</b> cost and environment. China took terpenes and many synthetics; India kept mint and built camphor and specialty aromas.</li>
+    <li><b>Natural mint → synthetic menthol, partly (2012 onwards):</b> BASF's large synthetic-menthol plant and Symrise and Takasago capacity now cap natural mint prices after crop failures.</li>
+    <li><b>Supply shocks shift business:</b> BASF's citral plant fire (October 2017) created a global citral and vitamin shortage in 2017–18 and pushed buyers to diversify suppliers.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Biotech (fermentation) ingredients:</b> microbes brewing vanillin, nootkatone (grapefruit), patchoulol and ambergris-type notes (Givaudan's Ambrofix). This is a threat to crop-based ingredients and an opening for anyone who licenses the strains.</li>
+    <li><b>AI-assisted perfumery:</b> Givaudan's Carto and Symrise's Philyra (built with IBM) suggest formulas and speed up briefs, which strengthens the big houses' scale advantage.</li>
+    <li><b>Upcycled and green chemistry:</b> aroma chemicals from paper-mill turpentine, citrus peel and other waste streams; the base of Privi's model.</li>
+    <li><b>Encapsulation:</b> fragrance in microcapsules that burst on rubbing (long-lasting laundry scent). It adds value but faces microplastic rules in the EU.</li>
+    <li><b>Headspace capture:</b> analysing the air around a flower or a food to recreate its smell exactly.</li>
+    <li><b>Pharma-grade and specialty camphor:</b> the camphor makers' way out of the commodity cycle (Oriental's USFDA-approved grade).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>EU allergen labelling (Regulation 2023/1545)</td><td>About 80 fragrance allergens must be named on labels (up from 26); new products from 31 July 2026, all products by 31 July 2028</td><td>Reformulation work for F&amp;F houses; pressure on some naturals</td></tr>
+    <tr><td>IFRA standards</td><td>Industry self-regulation limiting or banning ingredients; updated in amendments</td><td>Sets which molecules can be used, and how much</td></tr>
+    <tr><td>EU CMR bans</td><td>Lilial banned in cosmetics from March 2022</td><td>Sudden demand loss for specific molecules</td></tr>
+    <tr><td>Antitrust probe</td><td>EU, UK, Swiss and US authorities raided the big four in March 2023 over alleged collusion</td><td>Legal costs and risk to the oligopoly's pricing</td></tr>
+    <tr><td>FSSAI and flavour rules</td><td>Indian approval lists for flavourings; "natural" labelling rules</td><td>Compliance cost for flavour suppliers</td></tr>
+    <tr><td>Mint and farm policy</td><td>No minimum support price; mint is a cash crop competing with paddy and maize</td><td>Farmers switch crops when prices fall, which amplifies the cycle</td></tr>
+    <tr><td>Import duties on camphor and turpentine</td><td>Changed from time to time</td><td>Protect or expose domestic camphor makers</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: costly inputs, split fortunes</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Camphor</td><td>Input squeeze, prices catching up</td><td>Alpha-pinene +70–80%; Oriental's margin 7.6%, Mangalam's profit −41%; camphor powder prices up by double digits</td></tr>
+    <tr><td>Mint</td><td>Firm</td><td>Mint oil ~$16/kg on lower arrivals</td></tr>
+    <tr><td>F&amp;F houses (India)</td><td>Strong</td><td>S H Kelkar's profit +78%, flavours +63%</td></tr>
+    <tr><td>F&amp;F houses (global)</td><td>Modest growth, margin pressure</td><td>Givaudan +3.6% like-for-like; Symrise accelerating; IFF cut guidance</td></tr>
+    <tr><td>New plants</td><td>Ramp-up phase</td><td>Oriental's Mahad and Gem's Dahej (a ₹9.1 cr depreciation hit)</td></tr>
+    <tr><td>Stocks</td><td>Driven by expectations</td><td>Oriental +77%, Sacheerome +41%; S H Kelkar −24%, Gem −11%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The camphor spread is in the painful first phase of an input spike. The upside case for Oriental is that camphor prices keep catching up while Mahad fills. The risk is that domestic overcapacity stops the pass-through. S H Kelkar's fundamentals are the best in the group; its debt and inventory build explain the discount. Gem needs Dahej volumes before its consolidated profit turns.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Alpha-pinene and gum turpentine prices</td><td>Chinese price services, IMARC, ChemAnalyst; monthly</td><td>Camphor makers' cost</td></tr>
+    <tr><td>Camphor powder and tablet prices</td><td>Trade reports, company commentary</td><td>Whether pass-through is happening</td></tr>
+    <tr><td>Mentha oil and menthol prices; UP crop arrivals</td><td>MCX mentha oil futures, Sambhal and Barabanki mandis; May–August</td><td>Gem's margins, menthol pricing</td></tr>
+    <tr><td>Givaudan, Symrise and IFF organic growth</td><td>Half-yearly and quarterly results</td><td>Global FMCG demand for F&amp;F</td></tr>
+    <tr><td>HUL, Colgate and Dabur volume growth</td><td>Quarterly results</td><td>Indian F&amp;F demand</td></tr>
+    <tr><td>S H Kelkar net debt and inventory</td><td>Quarterly</td><td>Whether the inventory build unwinds into cash</td></tr>
+    <tr><td>Utilisation of the Mahad and Dahej plants</td><td>Company calls</td><td>Operating leverage</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the cycle shows up</h2>
+  <ul>
+    <li><b>FMCG</b> (personal care, home care, packaged foods): the customers; their volumes lead F&amp;F demand.</li>
+    <li><b>Incense and puja products</b> (Ambica Agarbathies; Cycle Pure is unlisted): camphor and fragrance buyers.</li>
+    <li><b>Specialty chemicals</b> (008): Privi, Camlin, Atul's aroma intermediates.</li>
+    <li><b>Paper and pulp</b>: crude sulphate turpentine comes from kraft pulp mills.</li>
+    <li><b>Agriculture</b> (UP mint belt): mint competes with paddy and maize for land.</li>
+    <li><b>Pharma OTC</b> (balms, cough drops): menthol and camphor buyers.</li>
+    <li><b>Petrochemicals</b> (002): feedstocks for synthetic aromas.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of revenue is compounds (fragrance and flavour) versus ingredients? How is that changing?</li>
+    <li>(Camphor makers) What is today's spread over alpha-pinene versus the five-year average? How quickly are camphor prices catching up?</li>
+    <li>How many months of raw-material inventory do you hold, and at what cost?</li>
+    <li>Which customers are on your core list, and how many briefs did you win this year?</li>
+    <li>What is the payback plan for the new plant (Mahad, Dahej): utilisation and margin targets, and when?</li>
+    <li>(S H Kelkar) When does the inventory build unwind, and what is the net-debt target?</li>
+    <li>(Gem) How much of mint-derivative demand comes from pharma, oral care and tobacco? How exposed are you to synthetic menthol?</li>
+    <li>How much of your portfolio is affected by the EU allergen rules or IFRA amendments?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Rising inventory with flat sales.</li>
+    <li>Consolidated losses hidden behind standalone profits.</li>
+    <li>Rising debt at an F&amp;F house (the model should be cash-generative).</li>
+    <li>Stock rallies when margins are falling.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Indian F&amp;F houses will re-rate towards Givaudan multiples."</td><td>Only with Givaudan-like margins and cash flow. S H Kelkar's profit rose 78%, but net debt is ₹864 cr and margins are below global peers.</td></tr>
+    <tr><td>"Camphor is a steady religious-demand business."</td><td>Demand is steady; margins are not. Spreads over pine resin swing hugely, and domestic overcapacity recurs (2019, 2023, 2026).</td></tr>
+    <tr><td>"India's mint dominance is a moat."</td><td>Only up to the price where synthetic menthol takes over. Crop failures lift prices, but buyers switch.</td></tr>
+    <tr><td>"Natural beats synthetic."</td><td>Naturals are growing, but biotech (fermentation) molecules labelled "natural" may displace crop-based suppliers rather than help them.</td></tr>
+    <tr><td>"Oriental's 77% rally reflects results."</td><td>It reflects expectations: Q1 FY27 profit was ₹2.5 cr at a 7.6% margin. The bet is on camphor prices catching up and Mahad filling.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. menthol, brief" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Business terms</h3><dl>
+    <dt>F&amp;F</dt><dd>Flavours and fragrances; the compound-design business.</dd>
+    <dt>Fragrance / flavour house</dt><dd>A company that designs and supplies compounds to brands.</dd>
+    <dt>Compound</dt><dd>A finished blend of many ingredients, sold to a brand.</dd>
+    <dt>Brief</dt><dd>A brand's request for a new fragrance or flavour, contested by several houses.</dd>
+    <dt>Core list</dt><dd>The short list of houses a brand invites to its briefs.</dd>
+    <dt>Perfumer / flavourist</dt><dd>The creators of compounds; trained for years, and the industry's scarce talent.</dd>
+    <dt>Fine fragrance</dt><dd>Perfumes (the premium end).</dd>
+    <dt>Consumer fragrance</dt><dd>Scents for soaps, detergents and home care (the volume end).</dd>
+    <dt>Like-for-like (LFL) / organic growth</dt><dd>Growth excluding currency and acquisitions.</dd>
+    <dt>Spread</dt><dd>Selling price minus raw-material cost; for camphor, over alpha-pinene (see 002 for the general idea).</dd>
+    <dt>Standalone vs consolidated</dt><dd>See 005; Gem's standalone profit vs consolidated loss is the example here.</dd>
+  </dl>
+  <h3>Chemistry and crops</h3><dl>
+    <dt>Aroma chemical</dt><dd>A single molecule with a smell, used as an ingredient.</dd>
+    <dt>Essential oil</dt><dd>Oil distilled or pressed from plants (mint, clove, citrus).</dd>
+    <dt>Mentha arvensis</dt><dd>Corn mint, the mint species grown in UP for menthol.</dd>
+    <dt>Menthol</dt><dd>The cooling molecule; crystallised from mint oil or made synthetically.</dd>
+    <dt>Dementholised mint oil (DMO)</dt><dd>Mint oil after menthol crystals are removed; sold for flavours.</dd>
+    <dt>Synthetic menthol</dt><dd>Menthol made from citral (BASF), m-cresol (Symrise) or myrcene (Takasago).</dd>
+    <dt>Gum turpentine</dt><dd>The liquid from tapped pine resin; rich in alpha-pinene.</dd>
+    <dt>Crude sulphate turpentine (CST)</dt><dd>Turpentine recovered from kraft paper mills.</dd>
+    <dt>Gum rosin</dt><dd>The solid left after distilling pine resin; used in inks, adhesives, paper sizing.</dd>
+    <dt>Alpha-pinene</dt><dd>The main turpentine molecule; feedstock for camphor and terpineol.</dd>
+    <dt>Camphene / isoborneol</dt><dd>The intermediates between alpha-pinene and camphor.</dd>
+    <dt>Terpene / terpineol</dt><dd>A family of plant molecules; terpineol is the pine smell in cleaners.</dd>
+    <dt>Dihydromyrcenol</dt><dd>A fresh, citrus-woody aroma chemical from turpentine, big in detergents.</dd>
+    <dt>Eugenol</dt><dd>The clove molecule; used in dental care and flavours.</dd>
+    <dt>Limonene / citral</dt><dd>Citrus molecules; citral is also a vitamin A and E precursor.</dd>
+    <dt>Vanillin</dt><dd>The vanilla molecule; natural, synthetic from guaiacol, or from lignin (see 008).</dd>
+    <dt>Nature-identical</dt><dd>A synthetic molecule identical to one found in nature.</dd>
+    <dt>Musks (macrocyclic, polycyclic)</dt><dd>Long-lasting base notes; older nitro musks are banned.</dd>
+    <dt>Top / middle / base notes</dt><dd>What you smell first, in the middle, and last.</dd>
+    <dt>Fixative</dt><dd>An ingredient that slows evaporation so a scent lasts.</dd>
+    <dt>Encapsulation</dt><dd>Trapping fragrance in microcapsules for slow release.</dd>
+    <dt>Headspace</dt><dd>Capturing and analysing the air around a flower or food to recreate its smell.</dd>
+    <dt>Fermentation-derived</dt><dd>A molecule made by engineered microbes; may be labelled natural.</dd>
+    <dt>Pharma-grade camphor</dt><dd>Camphor made under GMP for medicines; a premium segment.</dd>
+  </dl>
+  <h3>Regulation</h3><dl>
+    <dt>IFRA</dt><dd>International Fragrance Association; sets use limits and bans for ingredients.</dd>
+    <dt>Allergen labelling</dt><dd>The EU requirement to name fragrance allergens on labels; expanded by Regulation 2023/1545.</dd>
+    <dt>CMR</dt><dd>Carcinogenic, mutagenic or toxic to reproduction; such substances are banned in EU cosmetics (for example, Lilial).</dd>
+    <dt>FSSAI</dt><dd>India's food regulator, which approves flavourings.</dd>
+    <dt>GMP / WHO-GMP</dt><dd>Good manufacturing practice standards for pharma-grade products.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Benzene / toluene (aromatics)</dt><dd>See 002 Petrochemicals.</dd>
+    <dt>Phenol, guaiacol, para-cresol</dt><dd>See 008 Specialty Chemicals.</dd>
+    <dt>Sodium acetate / acetic acid</dt><dd>See 005 Alcohol &amp; Solvents.</dd>
+    <dt>China+1 / destocking</dt><dd>See 008.</dd>
+    <dt>IPO / SME platform</dt><dd>See 008.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why do F&amp;F houses earn higher, steadier margins than ingredient makers?</summary><p>Their recipes are locked into brands through briefs, and switching is risky for the brand; ingredient makers sell molecules at global prices.</p></details>
+  <details class="q"><summary>2. How is synthetic camphor made?</summary><p>From alpha-pinene (in turpentine) via camphene and isoborneol to camphor.</p></details>
+  <details class="q"><summary>3. What squeezed camphor makers in 2026?</summary><p>Alpha-pinene rose 70–80% in five months, and domestic overcapacity slowed the pass-through to camphor prices.</p></details>
+  <details class="q"><summary>4. Why did S H Kelkar's stock fall 24% despite a 78% profit jump?</summary><p>Net debt rose to ₹864 cr on capacity spending and a deliberate inventory build; the market worries about cash conversion.</p></details>
+  <details class="q"><summary>5. What caps natural mint prices when the UP crop fails?</summary><p>Synthetic menthol from BASF, Symrise and Takasago; buyers switch when natural becomes too expensive.</p></details>
+  <details class="q"><summary>6. What drove the 2017 camphor boom?</summary><p>China's environmental inspections cut Chinese terpene and camphor supply while Indian demand held; Mangalam rose 373% and Kanchi 387%.</p></details>
+  <details class="q"><summary>7. Why did Gem Aromatics report a consolidated loss while its standalone business made a profit?</summary><p>Depreciation of ₹9.1 cr on the new Dahej facility, before it reached scale.</p></details>
+  <details class="q"><summary>8. What EU rule changes F&amp;F labels from July 2026?</summary><p>Regulation 2023/1545 expands mandatory allergen labelling from 26 to about 80 substances (new products from July 2026, all by July 2028).</p></details>
+  <details class="q"><summary>9. Which company in another primer arguably belongs in this one, and why?</summary><p>Privi Speciality (in 008), because it is almost entirely aroma chemicals from turpentine, with a Givaudan joint venture.</p></details>
+  <details class="q"><summary>10. Why should you distrust this basket's seasonal pattern?</summary><p>Until 2025 it held only two or three small caps, so single-company events drive monthly results.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members with at least ₹300 cr market cap vs NSE:NIFTY; individual stock returns for the year notes.</li>
+    <li>S H Kelkar: <a href="https://www.business-standard.com/markets/capital-market-news/s-h-kelkar-soars-after-q1-pat-climbs-76-yoy-to-rs-45-cr-126072900344_1.html">Q1 FY27 profit</a>; <a href="https://www.whalesbook.com/corporate-news/English/consumer-products/S-H-Kelkar-Q1-FY27-Revenue-Rises-137percent-to-indian-rupee660-Crore-Net-Debt-at-indian-rupee864-Crore/6a4e2220adc106bd16f7f2c8">business update and net debt</a>; <a href="https://tradebrains.in/s-h-kelkar-shares-surge-12-on-strong-q1-earnings-63-flavour-segment-growth/">flavour growth</a>.</li>
+    <li>Oriental Aromatics: <a href="https://ca.finance.yahoo.com/news/oriental-aromatics-ltd-bom-500078-030040547.html">Q1 FY27 call (alpha-pinene, camphor)</a>; <a href="https://www.sahi.com/news/oriental-aromatics-q1-net-profit-jumps-to-2-5-crore-revenue-reaches-260-crore-52-PE1_CORPO">Q1 FY27 results</a>; <a href="https://www.icra.in/Rating/ShowRationalReportFilePdf/76004">ICRA rating note</a>.</li>
+    <li>Gem, Mangalam, Kanchi, Sacheerome: <a href="https://www.sahi.com/news/gem-aromatics-q1-standalone-net-profit-rises-to-7-3-crore-revenue-reaches-83-crore-yoy-4267195-PE1_">Gem Q1 standalone</a>; <a href="https://www.whalesbook.com/corporate-news/English/chemicals/Gem-Aromatics-Posts-Standalone-Profit-Consolidated-Loss-Amid-New-Facility-Ramp-Up/6a86a29c6817e697e7d312f5">Gem consolidated loss</a>; <a href="https://www.equitybulls.com/category.php?id=373633">Mangalam Q1 FY27</a>; <a href="https://www.screener.in/company/538896/">Kanchi Karpooram</a>; <a href="https://www.multibagg.ai/stocks/sacheerome-ltd-MBEQU3614">Sacheerome</a>.</li>
+    <li>Inputs: <a href="https://www.imarcgroup.com/alpha-pinene-pricing-report">alpha-pinene prices</a>; <a href="https://www.chemtradeasia.com/market-insights/gum-turpentine-oil-price-forecast-2026-pine-resin-supply">gum turpentine 2026</a>; <a href="https://www.imarcgroup.com/News/mentha-oil-price-index">mentha oil Q1 2026</a>; <a href="https://www.procurementresource.com/resource-center/mentha-oil-price-trends">mentha oil price trend</a>.</li>
+    <li>Global houses: <a href="https://www.givaudan.com/media/media-releases/2026/2026-half-year-results">Givaudan H1 2026</a>; <a href="https://www.freshlybottled.com/news-2/germany-symrise-reports-solid-h1-2026-performance-with-accelerating-growth-momentum-in-q2">Symrise H1 2026</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/international-flavors-fragrances-nyse-iff-214841531.html">IFF Q2 2026</a>; <a href="https://www.perfumerflavorist.com/fragrance/trends/article/22965550/fragrance-leaders-newsmakers-2026-the-great-resetleadership-shifts-and-the-4-forces-driving-the-industrys-future">industry leadership 2026</a>.</li>
+    <li>Regulation and history (EU allergen regulation 2023/1545, Lilial ban, the March 2023 antitrust raids, BASF's 2017 citral fire, Cyclone Enawo's vanilla spike): public regulatory texts and contemporaneous reporting, known before this session and not re-verified today.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2014, "v": 5.2}, {"y": 2015, "v": -10.7}, {"y": 2016, "v": -15.8}, {"y": 2017, "v": 4.5}, {"y": 2018, "v": -4.6}, {"y": 2019, "v": -11.9}, {"y": 2020, "v": -2.4}, {"y": 2021, "v": -10.6}, {"y": 2022, "v": -9.7}, {"y": 2023, "v": -19.9}, {"y": 2024, "v": -13.7}, {"y": 2025, "v": -15.9}, {"y": 2026, "v": -7.1}], "AprJul": [{"y": 2014, "v": 40.1}, {"y": 2015, "v": 33.2}, {"y": 2016, "v": 13.5}, {"y": 2017, "v": -3.6}, {"y": 2018, "v": -19.4}, {"y": 2019, "v": -24.1}, {"y": 2020, "v": 38.5}, {"y": 2021, "v": 46.0}, {"y": 2022, "v": -16.9}, {"y": 2023, "v": 13.1}, {"y": 2024, "v": 26.2}, {"y": 2025, "v": 46.5}, {"y": 2026, "v": 40.5}], "AugSep": [{"y": 2014, "v": 17.1}, {"y": 2015, "v": -16.4}, {"y": 2016, "v": 40.1}, {"y": 2017, "v": 1.1}, {"y": 2018, "v": 23.8}, {"y": 2019, "v": 15.4}, {"y": 2020, "v": 4.9}, {"y": 2021, "v": -15.1}, {"y": 2022, "v": -4.8}, {"y": 2023, "v": -0.4}, {"y": 2024, "v": 21.0}, {"y": 2025, "v": -3.8}], "OctDec": [{"y": 2014, "v": -16.5}, {"y": 2015, "v": 60.1}, {"y": 2016, "v": 2.1}, {"y": 2017, "v": 54.1}, {"y": 2018, "v": 14.9}, {"y": 2019, "v": -24.1}, {"y": 2020, "v": 10.6}, {"y": 2021, "v": 9.7}, {"y": 2022, "v": -14.6}, {"y": 2023, "v": -8.4}, {"y": 2024, "v": -7.6}, {"y": 2025, "v": -7.9}], "SepNov": [{"y": 2014, "v": 6.7}, {"y": 2015, "v": 45.5}, {"y": 2016, "v": 19.9}, {"y": 2017, "v": 42.1}, {"y": 2018, "v": 11.5}, {"y": 2019, "v": -12.2}, {"y": 2020, "v": 23.4}, {"y": 2021, "v": 10.7}, {"y": 2022, "v": -12.3}, {"y": 2023, "v": -11.8}, {"y": 2024, "v": -1.2}, {"y": 2025, "v": -13.3}], "JanMar": [{"y": 2014, "v": 21.5}, {"y": 2015, "v": -11.1}, {"y": 2016, "v": -17.6}, {"y": 2017, "v": 10.2}, {"y": 2018, "v": -6.2}, {"y": 2019, "v": -13.6}, {"y": 2020, "v": 1.2}, {"y": 2021, "v": 2.8}, {"y": 2022, "v": -10.2}, {"y": 2023, "v": -23.2}, {"y": 2024, "v": -9.9}, {"y": 2025, "v": -25.7}, {"y": 2026, "v": -10.7}]}, "my": {"1": {"2014": 14.3, "2015": 0.4, "2016": -2.9, "2017": 4.9, "2018": -1.6, "2019": -1.8, "2020": 5.1, "2021": 13.5, "2022": -0.5, "2023": -4.9, "2024": 4.3, "2025": -11.9, "2026": -4.7}, "2": {"2014": 2.8, "2015": -16.3, "2016": -4.6, "2017": 11.4, "2018": 0.2, "2019": -13.4, "2020": -15.5, "2021": -6.5, "2022": -10.3, "2023": -11.5, "2024": -1.9, "2025": -8.3, "2026": 4.8}, "3": {"2014": 2.1, "2015": 5.7, "2016": -12.2, "2017": -6.4, "2018": -5.0, "2019": 3.0, "2020": 12.1, "2021": -4.1, "2022": 1.3, "2023": -9.6, "2024": -11.9, "2025": -8.2, "2026": -10.9}, "4": {"2014": 14.9, "2015": 29.8, "2016": 14.7, "2017": 14.0, "2018": -6.7, "2019": -0.3, "2020": 3.7, "2021": 29.9, "2022": 2.5, "2023": 21.1, "2024": 22.1, "2025": 12.2, "2026": 18.3}, "5": {"2014": -9.2, "2015": -10.6, "2016": -9.2, "2017": -13.8, "2018": -3.4, "2019": -12.6, "2020": -3.2, "2021": 8.0, "2022": -20.3, "2023": -11.5, "2024": -7.7, "2025": 23.3, "2026": 4.6}, "6": {"2014": 11.2, "2015": -4.1, "2016": -1.7, "2017": 5.2, "2018": -4.9, "2019": -3.4, "2020": 8.2, "2021": -1.9, "2022": 6.7, "2023": -3.4, "2024": -3.0, "2025": -2.3, "2026": -0.5}, "7": {"2014": 16.1, "2015": 18.6, "2016": 9.7, "2017": -7.2, "2018": -4.2, "2019": -10.7, "2020": 22.5, "2021": 4.2, "2022": -5.1, "2023": 8.2, "2024": 13.4, "2025": 7.0, "2026": 12.7}, "8": {"2014": -0.0, "2015": -17.5, "2016": 16.3, "2017": -3.2, "2018": 21.9, "2019": 1.5, "2020": 4.2, "2021": -17.4, "2022": -7.6, "2023": 7.2, "2024": 19.1, "2025": 1.0, "2026": 4.9}, "9": {"2014": 16.6, "2015": 1.4, "2016": 20.5, "2017": 4.5, "2018": 2.7, "2019": 13.7, "2020": 0.7, "2021": 3.0, "2022": 2.6, "2023": -7.4, "2024": 1.1, "2025": -4.9}, "10": {"2014": -12.6, "2015": 12.9, "2016": 4.3, "2017": 21.6, "2018": 9.0, "2019": -9.7, "2020": 9.3, "2021": -0.2, "2022": -11.4, "2023": -2.2, "2024": 8.6, "2025": -3.3}, "11": {"2014": 3.7, "2015": 27.0, "2016": -3.7, "2017": 11.6, "2018": -0.2, "2019": -13.6, "2020": 10.9, "2021": 7.5, "2022": -3.6, "2023": -2.2, "2024": -10.5, "2025": -5.0}, "12": {"2014": -7.4, "2015": 11.4, "2016": 1.9, "2017": 11.9, "2018": 5.2, "2019": -1.5, "2020": -10.1, "2021": 2.0, "2022": 0.1, "2023": -3.6, "2024": -6.0, "2025": 0.6}}, "basket": ["S H Kelkar and Company Ltd", "Oriental Aromatics Ltd.", "Sacheerome Limited", "Gem Aromatics Limited", "Mangalam Organics Ltd"], "nbasket": 5, "start": "Jan 2014", "monthly": [{"m": 1, "abs": 0.8, "rel": 1.1, "hit": 6, "n": 13}, {"m": 2, "abs": -6.5, "rel": -5.3, "hit": 4, "n": 13}, {"m": 3, "abs": -3.5, "rel": -3.4, "hit": 5, "n": 13}, {"m": 4, "abs": 16.2, "rel": 13.6, "hit": 11, "n": 13}, {"m": 5, "abs": -3.3, "rel": -5.0, "hit": 3, "n": 13}, {"m": 6, "abs": 2.2, "rel": 0.5, "hit": 4, "n": 13}, {"m": 7, "abs": 9.3, "rel": 6.5, "hit": 9, "n": 13}, {"m": 8, "abs": 3.1, "rel": 2.3, "hit": 8, "n": 13}, {"m": 9, "abs": 4.3, "rel": 4.5, "hit": 10, "n": 12}, {"m": 10, "abs": 3.5, "rel": 2.2, "hit": 6, "n": 12}, {"m": 11, "abs": 3.6, "rel": 1.8, "hit": 5, "n": 12}, {"m": 12, "abs": 1.4, "rel": 0.4, "hit": 7, "n": 12}], "cy": [{"y": 2014, "b": 108.8, "n": 31.4, "rel": 77.4, "partial": false}, {"y": 2015, "b": 50.1, "n": -4.1, "rel": 54.2, "partial": false}, {"y": 2016, "b": 35.7, "n": 3.0, "rel": 32.7, "partial": false}, {"y": 2017, "b": 106.4, "n": 28.6, "rel": 77.7, "partial": false}, {"y": 2018, "b": 14.6, "n": 3.2, "rel": 11.4, "partial": false}, {"y": 2019, "b": -35.0, "n": 12.0, "rel": -47.0, "partial": false}, {"y": 2020, "b": 72.5, "n": 14.9, "rel": 57.6, "partial": false}, {"y": 2021, "b": 72.9, "n": 24.1, "rel": 48.8, "partial": false}, {"y": 2022, "b": -36.3, "n": 4.3, "rel": -40.6, "partial": false}, {"y": 2023, "b": -6.6, "n": 20.0, "rel": -26.6, "partial": false}, {"y": 2024, "b": 33.9, "n": 8.8, "rel": 25.1, "partial": false}, {"y": 2025, "b": 5.1, "n": 10.5, "rel": -5.4, "partial": false}, {"y": 2026, "b": 15.9, "n": -10.7, "rel": 26.6, "partial": true}], "dd": [{"co": "S H Kelkar and Company", "peak": "Oct 2024", "fp": -58, "y1": -46}, {"co": "Oriental Aromatics", "peak": "Sep 2021", "fp": -51, "y1": 51}, {"co": "Sacheerome", "peak": "Dec 2025", "fp": 28, "y1": 135}, {"co": "Gem Aromatics", "peak": "Aug 2025", "fp": -53, "y1": -46}, {"co": "Mangalam Organics", "peak": "Nov 2021", "fp": -63, "y1": -19}, {"co": "Kanchi Karpooram", "peak": "Jun 2021", "fp": -70, "y1": -4}], "win": {"FebMar": {"mean": -8.7, "median": -10.6, "hit": 2, "n": 13}, "AprJul": {"mean": 18.0, "median": 26.2, "hit": 9, "n": 13}, "AugSep": {"mean": 6.9, "median": 3.0, "hit": 7, "n": 12}, "OctDec": {"mean": 6.0, "median": -2.7, "hit": 6, "n": 12}, "SepNov": {"mean": 9.1, "median": 8.7, "hit": 7, "n": 12}, "JanMar": {"mean": -7.1, "median": -10.2, "hit": 4, "n": 13}}, "ytd": {"b": 15.9, "n": -10.7}, "notes": {"2014": "Only two stocks qualified. Indian chemicals re-rated (see 008) and camphor spreads were healthy: Camphor &amp; Allied Products (now Oriental Aromatics) +122%, Mangalam +83%.", "2015": "Oriental Aromatics +111% as the camphor maker combined with the promoters' fragrance business; Mangalam \u221210%. S H Kelkar listed in November.", "2016": "The first year with three names: Mangalam +49%, S H Kelkar +23%, Oriental +20%, with steady FMCG demand and cheap crude-linked aroma chemicals.", "2017": "China's environmental inspections (see 009) squeezed Chinese terpene and camphor supply and Indian camphor spreads widened: Mangalam +373%, Oriental +76%, and Kanchi Karpooram (outside the basket) +387%. S H Kelkar \u22124%.", "2018": "A split year. Mangalam rose another 172% on camphor margins, while S H Kelkar fell 42% as raw-material costs squeezed fragrance margins. The median stock fell 4%.", "2019": "New camphor capacity and falling camphor prices ended the boom, and the small-cap bear market did the rest: all three fell 36\u201338%.", "2020": "The pandemic lifted hygiene and home-care demand, including pine-oil disinfectants made from turpentine: Oriental +214%, Mangalam +41%, S H Kelkar +9%.", "2021": "The small-cap boom and firm demand: Mangalam +154%, Oriental +38%, S H Kelkar +29%. The basket rose 73%.", "2022": "Raw-material inflation (turpentine, citrus oils, petrochemicals) and FMCG down-trading crushed ingredient makers: Mangalam \u221251%, Oriental \u221246%. S H Kelkar held up better (\u22128%).", "2023": "Camphor overcapacity kept margins thin: Mangalam \u221227%, Oriental \u22124%, S H Kelkar +2%, against a Nifty up 20%.", "2024": "S H Kelkar rose 70% as fragrance margins recovered; Mangalam +16%, Oriental +2%.", "2025": "The +5% average hides a \u221227% median: S H Kelkar \u221227% and Oriental \u221229% on weak camphor pricing and US tariffs, Mangalam +12%. Sacheerome (June) and Gem Aromatics (August) listed.", "2026": "Alpha-pinene rose 70\u201380% in five months and camphor prices followed. Oriental +77% as its Mahad plant began orders; Sacheerome +41%. S H Kelkar \u221224% despite a 78% profit jump, and Gem \u221211% as its Dahej plant swung consolidated accounts to a loss."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

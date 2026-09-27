@@ -1,0 +1,605 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boilers Turbines and Power Equipment Primer</title>
+<meta name="description" content="Industry 41 of 278: the makers of boilers, turbines, generators and gas turbines. The return of coal-plant ordering after a lost decade, BHEL&#x27;s record ₹2.6 lakh cr order book, why execution rather than orders now decides returns, and the 14 listed companies — several of which make furnaces, not power equipment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Boilers, Turbines &amp; Power Equipment · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 41 of 278 · Power family, part 6</div>
+  <h1>Boilers, Turbines &amp; Power Equipment</h1>
+  <p class="lede">The heavy machinery inside a power station: boilers the size of office buildings, steam turbines, generators, gas turbines and the balance of plant around them. For a decade this industry had almost no customers — nobody was ordering coal plants. Now the government plans at least 80 GW of new coal capacity by 2032, and the question has flipped from where the orders will come from to whether anyone can build them on time.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 14 listed (several misclassified)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Transformers</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹2,60,255 cr</div><div class="l">BHEL's order book, the largest in its history, up 27%</div></div>
+    <div class="stat"><div class="n">80 GW</div><div class="l">Minimum new coal capacity planned by 2031–32 — about ₹10.8 trillion of commitment</div></div>
+    <div class="stat"><div class="n">18.2 GW</div><div class="l">Fresh thermal capacity awarded by states in FY25–26, at ₹13–14 cr a megawatt</div></div>
+    <div class="stat"><div class="n">₹91 cr</div><div class="l">The single project overrun that cut Thermax's quarterly profit 83% — execution risk, made concrete</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The orders came back; now comes the hard part</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A coal power station is really a giant kettle. The boiler burns coal to turn water into very hot, high-pressure steam; the steam spins a turbine like wind spins a pinwheel; the turbine turns a generator, which makes electricity. These companies build those kettles, pinwheels and generators — some weighing hundreds of tonnes, each designed for one particular plant. For about ten years almost nobody in India ordered new coal power stations, so these companies nearly ran out of work. Now the country needs much more electricity in the evenings when the sun is not shining, so the orders have come back in a rush. The new challenge is building all of them on time without losing money.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>A capital-goods upcycle that has moved from the order phase to the execution phase.</p>
+    <ul>
+      <li><b>The demand is policy-driven and large:</b> at least 80 GW of new coal capacity by 2031–32; required coal and lignite capacity of 283 GW against 217.5 GW installed; 18.2 GW already awarded by states in two years.</li>
+      <li><b>BHEL is the main beneficiary:</b> order book ₹2,60,255 cr (+27%), Q1 FY27 inflows ₹26,745 cr, revenue +40% to about ₹7,700 cr and a swing to a profit of about ₹380–400 cr from a ₹460 cr loss.</li>
+      <li><b>Gas turbines and grid equipment are the other engine:</b> Siemens Energy India's revenue rose 39% and profit 68%, at a 21.9% operating margin.</li>
+      <li><b>Execution is the risk:</b> Thermax booked a ₹91 cr overrun on a legacy project and its profit fell 83%; BHEL's history is one of slow execution on a large book.</li>
+      <li><b>The section is polluted:</b> several members make induction furnaces for steel, not power equipment, and one of them — Electrotherm — produced the sector's headline returns in 2023 and 2024.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>The machinery of a power station</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Equipment</th><th>What it does</th><th>Who makes it (listed)</th></tr></thead><tbody>
+    <tr><td>Boiler (steam generator)</td><td>Burns coal to raise high-pressure, high-temperature steam</td><td>BHEL; Thermax and ISGEC in industrial sizes</td></tr>
+    <tr><td>Steam turbine</td><td>Converts steam into rotation</td><td>BHEL at utility scale; Triveni Turbine in industrial sizes</td></tr>
+    <tr><td>Generator</td><td>Converts rotation into electricity</td><td>BHEL, GE Power India</td></tr>
+    <tr><td>Gas turbine</td><td>Burns gas directly to spin a generator; fast-starting, used for peaks</td><td>Siemens Energy India (service and packages)</td></tr>
+    <tr><td>Balance of plant</td><td>Coal handling, ash handling, cooling towers, water treatment</td><td>Multiple contractors (see 048)</td></tr>
+    <tr><td>Emission control</td><td>Flue-gas desulphurisation and electrostatic precipitators</td><td>BHEL, GE Power India, Thermax</td></tr>
+    <tr><td>Industrial boilers and heat recovery</td><td>Process steam and waste-heat power for factories</td><td>Thermax, ISGEC</td></tr>
+    <tr><td>Services and upgrades</td><td>Overhauls, spares and life extension for existing plants</td><td>GE Power India, BHEL, Siemens Energy India</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Building a power station is like building a ship: each one is custom, it takes four to six years, and the shipyard is paid in instalments as it reaches milestones. A shipyard with a record order book is not rich — it is committed. Whether it makes money depends on building each ship for what it quoted, and the history of this industry is full of yards that won the orders and lost on the steel.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a policy target to a commissioned unit</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Capacity planning</h4><div class="an">Why build</div>Resource-adequacy plans identify the firm capacity the grid will need.<div class="who">Central Electricity Authority</div><div class="m">80 GW of coal by 2032</div></div>
+    <div class="stage"><div class="no">02</div><h4>Project award</h4><div class="an">Who buys</div>State and central generators award plants, often as full EPC packages.<div class="who">NTPC, state gencos, private generators (see 037)</div><div class="m">18.2 GW awarded in FY25–26</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Equipment and EPC</h4><div class="an">The order</div>Boiler, turbine and generator packages, or the whole plant turnkey.<div class="who">BHEL, GE Power India, Siemens Energy India</div><div class="m">₹13–14 cr per megawatt of plant cost</div></div>
+    <div class="stage"><div class="no">04</div><h4>Manufacturing</h4><div class="an">Building it</div>Forgings, castings, pressure parts, rotors and stators.<div class="who">In-house factories and suppliers</div><div class="m">Capacity and supply chain are now the constraint</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Erection and commissioning</h4><div class="an">Putting it up</div>Site erection, testing and synchronisation over four to six years.<div class="who">The EPC contractor</div><div class="m">Where overruns and delays live</div></div>
+    <div class="stage"><div class="no">06</div><h4>Service</h4><div class="an">The annuity</div>Spares, overhauls, upgrades and life extension for decades.<div class="who">Original equipment makers</div><div class="m">The high-margin, steady part</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Planning:</b> the government works out how much reliable power the country will need in ten years.</li>
+    <li><b>Award:</b> a power company decides to build a plant and picks a builder.</li>
+    <li><b>Equipment:</b> the builder designs the boiler, turbine and generator for that plant.</li>
+    <li><b>Manufacturing:</b> enormous steel parts are forged and machined in factories.</li>
+    <li><b>Erection:</b> everything is carried to site and assembled — a job of several years.</li>
+    <li><b>Service:</b> for the next thirty years, the maker supplies spare parts and repairs.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The order book is the easy number and the least useful one. What decides returns in heavy engineering is <b>execution</b> — how quickly the book converts to revenue and at what margin — and <b>contract risk</b>, meaning who bears cost escalation on a fixed-price, multi-year job. BHEL has a ₹2.6 lakh cr book and a long history of converting it slowly; Thermax has a ₹14,045 cr book and just lost ₹91 cr on one legacy project. The right metrics are revenue as a share of the opening order book, margin on recently booked work, and working capital, because heavy-equipment contracts consume cash long before they generate it. The improvement in BHEL's free cash flow — ₹5,240 cr against ₹1,890 cr — is the most encouraging number in the section for exactly that reason.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 14 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Bharat Heavy Electricals (~₹1.43 lakh cr)</td><td>India's national power-equipment maker, supplying boilers, turbines and generators for most of the country's coal fleet, plus nuclear, hydro, transmission, defence and rail.</td><td>Order book ₹2,60,255 cr, up 27% and the largest in its history, after record FY26 inflows of ₹75,916 cr; Q1 FY27 inflows ₹26,745 cr, of which power ₹22,625 cr, including a ₹21,000 cr EPC contract for a 3×800 MW plant. About ₹70,000 cr of the book is non-thermal — nuclear ₹12,000 cr, transmission ₹14,000 cr, coal gasification ₹8,000 cr, defence ₹7,000 cr, hydro ₹5,500 cr. Revenue about ₹7,700 cr (+40%) and a profit of roughly ₹380–400 cr against a ₹460 cr loss a year earlier; free cash flow ₹5,240 cr against ₹1,890 cr. Stock +53%, at an all-time high.</td></tr>
+    <tr><td>Siemens Energy India (~₹1.07 lakh cr)</td><td>Demerged from Siemens Ltd and listed in June 2025: gas and steam turbine services, generators, transmission equipment and grid technology.</td><td>June 2026 quarter revenue ₹2,486 cr (+39.3%), profit ₹441 cr (+67.8%), operating margin 21.9% (+430 bps) on operating leverage and exports. Order backlog ₹19,331 cr (+16.4%). Nine months to June: revenue ₹6,791 cr (+31%), profit ₹1,128 cr (+52%). Stock +26.1%.</td></tr>
+    <tr><td>Thermax (~₹42,200 cr)</td><td>Industrial boilers, heat recovery, water treatment and clean-energy solutions, largely for industry rather than utilities.</td><td>Revenue ₹2,303 cr (+7%) but profit ₹25.2 cr (−83%); pre-tax margin 1.8% against 9.8%, after a ₹91 cr overrun on a legacy government infrastructure project, shipping delays and losses in green solutions and bio-CNG. Order booking ₹2,809 cr (+2%), order balance ₹14,045 cr (+23%), including an order above ₹400 cr for boiler pressure parts for a US data-centre project. Management targets double-digit margins for FY27. Stock +17.5%, −37% from its July 2024 peak.</td></tr>
+    <tr><td>Triveni Turbine (~₹17,200 cr)</td><td>A leading maker of industrial steam turbines up to about 100 MW, with a large export and aftermarket business.</td><td>No usable price series in this dataset — a data gap, not a classification problem. It belongs in this section and should be added to the basket when the series is restored.</td></tr>
+    <tr><td>ISGEC Heavy Engineering (~₹5,600 cr)</td><td>Boilers, pressure vessels and EPC for industrial and sugar plants.</td><td>−13.7% in 2026 and −51% from its December 2024 peak.</td></tr>
+    <tr><td>GE Power India (~₹4,100 cr)</td><td>The listed Indian arm of GE's steam power business: boiler and turbine services, upgrades and emission-control equipment.</td><td>Rose 66% in six sessions in February 2026 and was locked at its upper circuit on 18 September; +104% for the year. Recent orders include ₹40.3 cr from Madhya Pradesh's generator and ₹13.75 cr from NTPC. A scheme to transfer its Durgapur manufacturing facility to JSW Energy went to shareholders in July 2026. Still −38% from its June 2026 peak.</td></tr>
+    <tr><td>Electrotherm (India) (~₹1,200 cr)</td><td><b>Flagged.</b> Induction furnaces and steel — a supplier to the steel industry, not the power sector.</td><td>+6% in 2026 after +241% in 2023 and +409% in 2024 — returns that distort every average in this section.</td></tr>
+    <tr><td>Megatherm Induction (~₹500 cr)</td><td><b>Flagged.</b> Induction melting furnaces for steel.</td><td>+10.3%; listed February 2024.</td></tr>
+    <tr><td>Anawil Wire &amp; Engineering (~₹1,050 cr)</td><td>Metal fabrication and engineering; listed August 2026.</td><td>Too new to judge.</td></tr>
+    <tr><td>Globus Power, Garg Furnace, EMA India, Inducto Steel, Sterling Powergensys</td><td><b>Flagged.</b> Classified variously as a financial conglomerate, steel, industrial machinery and semiconductors; none is a power-equipment maker of any scale.</td><td>Micro caps from ₹13 cr to ₹153 cr, several 50–83% below their peaks. Recommend removing from this section.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Audit note: two industries share this bucket</span><p>This section mixes genuine power-equipment makers — BHEL, Siemens Energy India, Thermax, Triveni Turbine, ISGEC, GE Power India — with <b>induction-furnace makers that supply the steel industry</b>: Electrotherm, Megatherm, Garg Furnace and Inducto Steel. The two groups have different customers and different cycles, and the furnace makers produced the basket's most spectacular numbers: Electrotherm rose 241% in 2023 and 409% in 2024, which is a large part of why the basket shows +116% and +81% in those years. Recommend moving the furnace makers to steel equipment, moving the financial and semiconductor misclassifications out entirely, and restoring Triveni Turbine's price series so the one missing genuine member is counted.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Milestone payments, fixed prices and a long tail of service</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Revenue line</th><th>How it works</th><th>Margin character</th></tr></thead><tbody>
+    <tr><td>New equipment and EPC</td><td>Fixed-price contracts paid in milestones over four to six years</td><td>Thin and fragile; one overrun can erase a quarter</td></tr>
+    <tr><td>Services, spares and upgrades</td><td>Recurring maintenance on the installed fleet</td><td>High and stable — the reason GE Power India and Siemens Energy India value their installed bases</td></tr>
+    <tr><td>Emission-control retrofits</td><td>Flue-gas desulphurisation and precipitators on existing plants</td><td>Policy-driven, lumpy</td></tr>
+    <tr><td>Exports</td><td>Equipment and parts to overseas projects</td><td>Often better margin; Siemens Energy India cites exports as a driver</td></tr>
+    <tr><td>Industrial products</td><td>Boilers and heat recovery for factories and data centres</td><td>Shorter cycle; Thermax's US data-centre order is an example</td></tr>
+  </tbody></table></div>
+  <h3>Why a record order book is not the same as record profits</h3>
+  <p>A heavy-equipment contract is priced years before it is delivered. Steel, forgings, labour and logistics costs move in the meantime, and unless the contract carries escalation clauses the contractor absorbs the difference. Execution delays add to it, because overheads continue while milestones slip. That is the arithmetic behind Thermax's quarter: revenue up 7%, one ₹91 cr overrun on an old government project, and profit down 83%. BHEL's recovery is the mirror image — after years in which a shrinking book could not cover fixed costs, a 40% revenue increase on a larger book is producing operating leverage, and the swing from a ₹460 cr loss to a profit of roughly ₹380–400 cr is mostly fixed costs being spread over more work. The test for the next three years is whether margins hold as the book is executed, because this industry's history is that the orders arrive first and the problems a few years later.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A heavy-equipment maker is a builder who quotes a fixed price for a house to be finished in five years. When the order book fills, the builder feels rich; the profit, or the loss, only becomes visible when the houses are handed over and the steel bills are totalled.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Special steels and alloys</td><td>High-temperature boiler tubes and turbine components</td><td>Largely imported grades; price and availability risk</td></tr>
+    <tr><td>Forgings and castings</td><td>Rotors, shafts and casings — long-lead items</td><td>Global capacity is tight as gas-turbine demand also rises</td></tr>
+    <tr><td>Manufacturing capacity</td><td>Shop floors sized for the pre-2012 ordering boom</td><td>Being reactivated after a decade of low utilisation</td></tr>
+    <tr><td>Skilled erection crews</td><td>Site erection of utility-scale units</td><td>A decade of low ordering thinned the workforce</td></tr>
+    <tr><td>Contract terms</td><td>Escalation and liquidated-damages clauses decide who bears risk</td><td>The difference between Thermax's quarter and BHEL's</td></tr>
+    <tr><td>Working capital</td><td>Milestone payments trail costs incurred</td><td>BHEL's free cash flow improved to ₹5,240 cr</td></tr>
+    <tr><td>Customer finance and approvals</td><td>Generators need coal linkages, land and clearances before orders convert</td><td>Construction must begin by 2026–27 to meet the 2032 target</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Orders in spring, deliveries at year-end</h2>
+  <ul>
+    <li><b>April–July:</b> the new financial year releases budgets and state and central generators place orders — historically the best window for these stocks (median +11.4).</li>
+    <li><b>July–September:</b> monsoon slows site erection; July is the weakest single month.</li>
+    <li><b>October–December:</b> the construction season resumes and milestone billing picks up.</li>
+    <li><b>January–March:</b> the year-end billing push, followed historically by weak share prices.</li>
+    <li><b>Award cycle:</b> large thermal awards are lumpy; a single 3×800 MW contract worth ₹21,000 cr can move a quarter's inflows by most of its total.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 7 names (Bharat Heavy Electricals Limited, Siemens Energy India Limited, Thermax Limited., ISGEC Heavy Engineering Ltd., GE Power India Ltd., Electrotherm (India) Limited, Megatherm Induction Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.0 pts (beat in 11 of 15 years); May +3.3 pts (beat in 10 of 15 years); Jun +2.4 pts (beat in 8 of 15 years).</li><li><b>Weakest months:</b> Jul -2.7 pts (beat in 4 of 16 years); Mar -2.5 pts (beat in 3 of 15 years); Aug -2.1 pts (beat in 5 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -5.0 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +11.4 pts); Aug–Sep beat the Nifty in 5 of 14 years (median -3.0 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +2.4 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +1.0 pts); Jan–Mar beat the Nifty in 7 of 15 years (median -5.6 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.0 points.</p><p><b>Reading it:</b> a clear April–July pattern with a physical cause. April is the best month (11 of 15 years, +7.0 points) and April–July works 9 of 15 with a strong median of +11.4, as state utilities and central generators place orders at the start of the financial year. The weak stretches are February–March (4 of 15, median −5.0), January–March (7 of 15, median −5.6) and August–September (5 of 14), with July the worst single month (4 of 16).</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July worked in 9 of 15 years (median +11.4)</b>; the failures were 2018 (−14.4), 2020 (−7.5), 2012 and 2013 (−4.7 each) and 2022 (−4.3) — each a year when ordering was weak or the market was risk-averse.</li>
+    <li><b>The best runs were 2024 (+43.8) and 2023 (+36.4)</b>, the ordering revival — though both are inflated by the furnace makers in the basket.</li>
+    <li><b>January–March fails more than it works</b> (7 of 15, median −5.6), with 2013 (−24.3), 2025 (−19.9) and 2022 (−17.4) the worst.</li>
+    <li><b>July is the weakest month</b> (4 of 16), and 2026's July was among the worst at −12.3.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The April–July pattern has a real cause — ordering follows budget releases at the start of the financial year — and a strong median. But the basket includes induction-furnace makers whose 2023–24 returns were driven by the steel cycle, so the magnitudes overstate what the power-equipment makers did. Use the window as a tilt for the genuine names, and track the award calendar directly: large thermal EPC awards are public and move these stocks more than any month does.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Thermal capacity awards:</b> 18.2 GW in FY25–26; at least 80 GW needed by 2032.</li>
+    <li><b>Execution speed:</b> revenue conversion of the book, the main determinant of profit growth.</li>
+    <li><b>Contract risk:</b> escalation clauses and liquidated damages decide who absorbs cost inflation.</li>
+    <li><b>Raw-material costs:</b> special steels and forgings, priced years after the contract.</li>
+    <li><b>Diversification:</b> BHEL's ₹70,000 cr of non-thermal work — nuclear, transmission, defence, gasification, hydro.</li>
+    <li><b>Gas turbine demand:</b> peaking capacity and data centres, where Siemens Energy India is positioned.</li>
+    <li><b>Service and upgrade demand:</b> an ageing coal fleet needing life extension and emission retrofits.</li>
+    <li><b>Working capital:</b> milestone timing, advances and retention money.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of section members with sufficient history and scale — BHEL, Thermax, GE Power India and Electrotherm through most of the period, with ISGEC from 2022, Megatherm from 2024 and Siemens Energy India from 2025. Monthly returns capped at ±50%, price only; 2026 to 18 September. Triveni Turbine has no usable series and is missing; Electrotherm and Megatherm are furnace makers and inflate 2023–24.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a heavy-equipment cycle</h3>
+  <ol>
+    <li><b>A capacity boom</b> fills order books — India's 2008–2011 thermal ordering wave.</li>
+    <li><b>Orders stop abruptly</b> when the customers overbuild; backlogs run off for a decade and fixed costs are carried on shrinking revenue — 2012 to 2020, with BHEL at its low in 2019.</li>
+    <li><b>A shortage revives ordering</b>, and the stocks re-rate long before the revenue arrives — 2023 and 2024.</li>
+    <li><b>Execution determines whether the re-rating is earned.</b> 2026 is the first year of that test, and the early evidence is split between BHEL's operating leverage and Thermax's overrun.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The share prices anticipate orders by years</b> — BHEL re-rated in 2023 on the expectation of thermal ordering that is only now reaching revenue.</li>
+    <li><b>Orders arrive before problems.</b> The ordering boom of 2008–11 produced the stressed plants and slow execution of the 2010s.</li>
+    <li><b>Services protect the downside:</b> GE Power India and Siemens Energy India lean on installed-base work that continues in any cycle.</li>
+    <li><b>Mixed-industry baskets mislead:</b> the furnace makers' 2023–24 surge came from steel, not power.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Two booms at once: coal in India, gas turbines everywhere</h2>
+  <p>Globally, the heavy power-equipment industry is enjoying its strongest demand in two decades, but for different reasons in different places. In the United States and Europe, data-centre electricity demand and grid reliability concerns have created a shortage of gas turbines and transformers, with delivery slots stretching years ahead — which is why Siemens Energy's global business and its Indian arm are both reporting sharply higher margins, and why Thermax won a boiler order for an American data-centre project. In India, the driver is the evening peak: renewables cannot yet meet demand after sunset, so the government has returned to coal, targeting at least 80 GW of new capacity by 2031–32 and requiring 283 GW of coal and lignite capacity against 217.5 GW installed. Chinese equipment, which took share at the bottom of the Indian market in the last cycle, faces restrictions this time, which favours domestic makers.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>Siemens Energy, GE Vernova, Mitsubishi Power</td><td>The global gas-turbine oligopoly, sold out for years</td><td>Siemens Energy India and GE Power India are their listed Indian arms</td></tr>
+    <tr><td>Chinese boiler and turbine makers</td><td>Low-cost suppliers that took Indian share in the 2000s</td><td>Now restricted, leaving domestic makers the market</td></tr>
+    <tr><td>BHEL</td><td>One of the few non-Chinese makers able to deliver utility coal units at scale</td><td>The primary domestic supplier for the 80 GW programme</td></tr>
+    <tr><td>US and European data-centre operators</td><td>A new, price-insensitive buyer of generation equipment</td><td>An export channel for Indian suppliers</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From BHEL monopoly to Chinese competition (2000s):</b> private developers bought cheaper imported equipment, eroding BHEL's share and later leaving poorly performing plants.</li>
+    <li><b>From a thermal drought to a revival (2012–2023):</b> a decade of almost no coal ordering, ended by the evening-peak problem that renewables created.</li>
+    <li><b>From coal to gas turbines globally:</b> data-centre demand has made gas turbines the scarcest item in power equipment, a structural positive for the Siemens and GE affiliates.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Supercritical and ultra-supercritical units:</b> higher-efficiency coal plants, the standard for new Indian capacity (see 037).</li>
+    <li><b>Advanced ultra-supercritical technology:</b> still higher temperatures and efficiency, requiring new alloys.</li>
+    <li><b>Flexible operation:</b> coal plants designed to ramp around solar output, which changes boiler and turbine design.</li>
+    <li><b>Nuclear components:</b> BHEL's ₹12,000 cr of nuclear orders as India's nuclear programme expands.</li>
+    <li><b>Coal gasification equipment:</b> ₹8,000 cr in BHEL's book, tied to policy support for gasification (see 036).</li>
+    <li><b>Hydrogen-ready and co-firing systems:</b> gas turbines and boilers able to burn hydrogen or biomass blends.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Thermal capacity plan</td><td>At least 80 GW of new coal capacity by 2031–32; construction must begin by 2026–27</td><td>The demand pipeline for the whole industry</td></tr>
+    <tr><td>National resource adequacy plan</td><td>2026–27 to 2035–36, published March 2026</td><td>Sets the firm capacity the grid needs</td></tr>
+    <tr><td>Restrictions on Chinese equipment</td><td>In force for power-sector procurement</td><td>Hands the domestic market to Indian and allied makers</td></tr>
+    <tr><td>Emission norms</td><td>Flue-gas desulphurisation and particulate standards for coal plants</td><td>A retrofit market for BHEL, GE Power India and Thermax</td></tr>
+    <tr><td>Nuclear programme expansion</td><td>Policy moves to widen participation (see 037)</td><td>A long-dated equipment market</td></tr>
+    <tr><td>Coal gasification incentives</td><td>Policy support for gasification projects</td><td>New equipment category</td></tr>
+    <tr><td>Public procurement preference</td><td>Local-content rules in government tenders</td><td>Favours domestic manufacturing</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: from orders to execution</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Order books</td><td>Records</td><td>BHEL ₹2,60,255 cr (+27%); Siemens Energy India ₹19,331 cr (+16%); Thermax ₹14,045 cr (+23%)</td></tr>
+    <tr><td>Revenue conversion</td><td>Accelerating at BHEL</td><td>Revenue +40% and a swing to profit</td></tr>
+    <tr><td>Margins</td><td>Split</td><td>Siemens Energy India 21.9%; Thermax's pre-tax margin 1.8% after a ₹91 cr overrun</td></tr>
+    <tr><td>Cash</td><td>Improving</td><td>BHEL free cash flow ₹5,240 cr against ₹1,890 cr</td></tr>
+    <tr><td>Pipeline</td><td>Large</td><td>18.2 GW awarded; 80 GW targeted by 2032, about ₹10.8 trillion of commitment</td></tr>
+    <tr><td>Stocks</td><td>Strong</td><td>Basket +28%, median +18%; BHEL at an all-time high, GE Power India +104%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is a genuine upcycle with a policy anchor — the grid needs firm evening capacity and the government has committed to coal to provide it — and the order books prove the demand is real. The investment question has moved on from whether orders arrive to whether they are executed profitably, and the industry's own record is the reason for caution: the last ordering boom produced a decade of slow execution and stressed plants. BHEL's quarter is the best evidence yet that this time can be different, because revenue grew 40% and free cash flow nearly tripled. Thermax's quarter is the reminder of what a single legacy contract can do. The cleanest exposure to the global side of the cycle is Siemens Energy India, whose margins reflect a worldwide shortage of gas turbines and grid equipment rather than an Indian policy decision. And any sector statistic here should be discounted for the furnace makers in the basket, which have nothing to do with power.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Thermal EPC awards</td><td>Company announcements, state tenders</td><td>The demand pipeline</td></tr>
+    <tr><td>Revenue as a share of opening order book</td><td>Quarterly</td><td>Execution speed</td></tr>
+    <tr><td>Margin on execution</td><td>Quarterly</td><td>Whether contracts were priced well</td></tr>
+    <tr><td>Free cash flow and working capital days</td><td>Half-yearly</td><td>Heavy engineering consumes cash before earning it</td></tr>
+    <tr><td>Special steel and forging prices</td><td>Monthly</td><td>The cost side of fixed-price contracts</td></tr>
+    <tr><td>Commissioning of awarded units</td><td>Central Electricity Authority reports</td><td>The eventual proof of execution</td></tr>
+    <tr><td>Global gas-turbine lead times</td><td>Industry reports</td><td>Siemens Energy India's pricing environment</td></tr>
+    <tr><td>Non-thermal order share</td><td>Quarterly</td><td>Diversification as coal ordering eventually peaks</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power generation</b> (037): the customer, and the source of the 80 GW plan.</li>
+    <li><b>Coal &amp; coke</b> (036): the fuel for every boiler ordered.</li>
+    <li><b>Transformers</b> (042) and <b>switchgear</b> (043): the electrical side of the same power-station orders.</li>
+    <li><b>Power T&amp;D EPC</b> (048): the contractors for balance of plant and evacuation.</li>
+    <li><b>Oil &amp; gas EPC</b> (030): the other heavy-project contracting model, with the same execution risk.</li>
+    <li><b>Steel and forgings:</b> the supply chain, and the true industry of the furnace makers in this bucket.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of the order book is fixed-price, and what share carries escalation protection?</li>
+    <li>What margin has been built into orders booked in the last two years?</li>
+    <li>What revenue is expected from the book this year and next, and what constrains conversion?</li>
+    <li>What manufacturing capacity is available, and what bottlenecks exist in forgings and castings?</li>
+    <li>What legacy contracts remain, and what further overrun provisions might be needed?</li>
+    <li>What are working capital days and advances received against the book?</li>
+    <li>What proportion of the book is non-thermal, and how fast is it growing?</li>
+    <li>(Siemens Energy India, GE Power India) What share of revenue is service and upgrade work?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Order book growth far outpacing revenue growth for several years.</li>
+    <li>Repeated one-off overruns labelled as legacy.</li>
+    <li>Receivables and contract assets rising faster than revenue.</li>
+    <li>Guidance that assumes every awarded plant receives its approvals on time.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"A record order book means record profits."</td><td>Thermax has a record order balance of ₹14,045 cr and its quarterly profit fell 83% on one overrun.</td></tr>
+    <tr><td>"Coal is dead, so thermal equipment has no future."</td><td>India plans at least 80 GW of new coal by 2032, and states awarded 18.2 GW in two years. The evening peak needs firm capacity.</td></tr>
+    <tr><td>"BHEL cannot execute."</td><td>Its history supports the doubt; its latest quarter — revenue +40%, free cash flow ₹5,240 cr — is the strongest counter-evidence in a decade.</td></tr>
+    <tr><td>"The sector rose 116% and 81% in 2023–24."</td><td>A large part of that was induction-furnace makers supplying the steel industry, not power-equipment companies.</td></tr>
+    <tr><td>"Gas turbines are irrelevant in India."</td><td>For Indian generation, largely; for the global business of Siemens Energy and GE, they are the scarcest and most profitable equipment in power today.</td></tr>
+    <tr><td>"Chinese competition will return."</td><td>Procurement restrictions currently exclude it, which is a structural change from the last cycle.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. BTG, supercritical" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Equipment</h3><dl>
+    <dt>BTG</dt><dd>Boiler, turbine and generator — the core package of a thermal power station.</dd>
+    <dt>Boiler (steam generator)</dt><dd>Burns fuel to produce high-pressure steam.</dd>
+    <dt>Steam turbine</dt><dd>Converts steam energy into rotation.</dd>
+    <dt>Generator (turbo-generator)</dt><dd>Converts rotation into electricity.</dd>
+    <dt>Gas turbine</dt><dd>Burns gas directly to spin a generator; quick to start, used for peaks.</dd>
+    <dt>Combined cycle</dt><dd>A gas turbine whose exhaust heat raises steam for a second turbine, raising efficiency.</dd>
+    <dt>Balance of plant (BoP)</dt><dd>Everything else — coal and ash handling, cooling, water treatment (see 048).</dd>
+    <dt>Pressure parts</dt><dd>Boiler tubes and headers carrying steam under pressure; Thermax won a data-centre order for them.</dd>
+    <dt>Flue-gas desulphurisation (FGD)</dt><dd>Equipment removing sulphur dioxide from exhaust; a retrofit market.</dd>
+    <dt>Electrostatic precipitator</dt><dd>Equipment removing ash particles from flue gas.</dd>
+    <dt>Heat recovery steam generator</dt><dd>A boiler that uses waste heat from a turbine or process.</dd>
+    <dt>Industrial turbine</dt><dd>Smaller turbines for factories and captive plants — Triveni Turbine's market.</dd>
+    <dt>Induction furnace</dt><dd>An electric furnace for melting steel — the product of several misclassified members of this section.</dd>
+    <dt>Rotor and stator</dt><dd>The rotating and stationary parts of a turbine or generator.</dd>
+    <dt>Forging</dt><dd>Shaping hot metal under pressure; rotors and shafts are long-lead forgings.</dd>
+  </dl>
+  <h3>Technology</h3><dl>
+    <dt>Subcritical, supercritical, ultra-supercritical</dt><dd>Increasing steam temperatures and pressures, each more efficient than the last (see 037).</dd>
+    <dt>Advanced ultra-supercritical</dt><dd>The next step, requiring nickel-based alloys.</dd>
+    <dt>Unit size</dt><dd>The capacity of one boiler-turbine set; 800 MW is the modern Indian standard.</dd>
+    <dt>Heat rate</dt><dd>Fuel energy per unit of electricity; the efficiency measure equipment makers compete on (see 037).</dd>
+    <dt>Life extension</dt><dd>Refurbishing an ageing unit to run another decade or two.</dd>
+    <dt>Coal gasification</dt><dd>Converting coal to syngas rather than burning it (see 036).</dd>
+    <dt>Co-firing</dt><dd>Burning biomass or ammonia alongside coal to cut emissions.</dd>
+    <dt>Minimum technical load</dt><dd>The lowest output at which a coal unit can run stably; lowering it is the core of flexible operation.</dd>
+    <dt>Boiler efficiency</dt><dd>The share of fuel energy that becomes steam; a guaranteed performance parameter in contracts.</dd>
+    <dt>Performance guarantee test</dt><dd>The acceptance test proving a unit meets its contracted output and efficiency, which releases retention money.</dd>
+  </dl>
+  <h3>Commercial</h3><dl>
+    <dt>EPC contract</dt><dd>Engineering, procurement and construction of a whole plant (see 030).</dd>
+    <dt>Order book and order inflow</dt><dd>Contracted work outstanding, and new orders won in a period (see 029).</dd>
+    <dt>Book-to-bill ratio</dt><dd>Order inflows divided by revenue; above one means the book is growing.</dd>
+    <dt>Execution cycle</dt><dd>The four to six years from award to commissioning.</dd>
+    <dt>Milestone billing</dt><dd>Payment tied to completion stages, which trails costs incurred.</dd>
+    <dt>Price escalation clause</dt><dd>A term adjusting contract price for input-cost inflation.</dd>
+    <dt>Liquidated damages</dt><dd>Penalties for late delivery (see 039).</dd>
+    <dt>Cost overrun</dt><dd>Costs above the contracted price, borne by the contractor — ₹91 cr at Thermax this quarter.</dd>
+    <dt>Contract assets</dt><dd>Revenue recognised but not yet billed — a working-capital warning sign when it grows fast.</dd>
+    <dt>Retention money</dt><dd>A share of billing held back until performance guarantees are met (see 030).</dd>
+    <dt>Installed base</dt><dd>Equipment already in service, which generates service revenue for decades.</dd>
+    <dt>Free cash flow</dt><dd>Operating cash after capital spending — ₹5,240 cr at BHEL.</dd>
+    <dt>Demerger</dt><dd>Separation of a business into a new listed company; Siemens Energy India listed this way in June 2025 (see 028).</dd>
+    <dt>Scheme of arrangement</dt><dd>A court-approved restructuring, such as GE Power India's transfer of its Durgapur facility.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Plant load factor, merchant power, regulated return</dt><dd>See 037.</dd>
+    <dt>Order book conversion</dt><dd>See 030.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why is India ordering coal plants again?</summary><p>Renewables cannot meet the evening peak, so the grid needs firm capacity: at least 80 GW of new coal by 2031–32, with 283 GW of coal and lignite required against 217.5 GW installed.</p></details>
+  <details class="q"><summary>2. How large is BHEL's order book?</summary><p>₹2,60,255 cr, up 27% and the largest in its history, with about ₹70,000 cr of it non-thermal.</p></details>
+  <details class="q"><summary>3. Why did BHEL swing to profit?</summary><p>Revenue rose 40% on a larger book, spreading fixed costs; free cash flow rose to ₹5,240 cr from ₹1,890 cr.</p></details>
+  <details class="q"><summary>4. What happened to Thermax's profit, and why?</summary><p>It fell 83% to ₹25.2 cr after a ₹91 cr overrun on a legacy government project, shipping delays and losses in green businesses.</p></details>
+  <details class="q"><summary>5. What is driving Siemens Energy India?</summary><p>A worldwide shortage of gas turbines and grid equipment: revenue +39%, profit +68%, a 21.9% operating margin and a ₹19,331 cr backlog.</p></details>
+  <details class="q"><summary>6. Why should the 2023–24 basket returns be discounted?</summary><p>Induction-furnace makers that supply the steel industry — Electrotherm rose 241% and 409% — are in the basket and inflate the averages.</p></details>
+  <details class="q"><summary>7. What is the key risk now that orders are in?</summary><p>Execution: fixed-price contracts priced years ahead, with overruns and delays borne by the contractor.</p></details>
+  <details class="q"><summary>8. Which seasonal window works, and why?</summary><p>April–July, 9 of 15 years with a median of +11.4: ordering follows budget releases at the start of the financial year.</p></details>
+  <details class="q"><summary>9. What changed about competition since the last cycle?</summary><p>Chinese equipment, which took share in the 2000s, is now restricted in power-sector procurement.</p></details>
+  <details class="q"><summary>10. Which genuine member is missing from the data?</summary><p>Triveni Turbine, an industrial steam-turbine maker worth about ₹17,200 cr, has no usable price series in this dataset.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of section members with sufficient history and scale versus NSE:NIFTY, 2012 to 18 September 2026. Triveni Turbine has no usable series; the furnace makers in the basket are flagged in section 4.</li>
+    <li>BHEL: <a href="https://www.icicidirect.com/research/equity/trending-news/bhel-q1fy27-revenue-surges-40-to-7-698-cr-company-swings-to-382-cr-net-profit-on-power-boom">Q1 FY27 revenue and swing to profit</a>; <a href="https://www.business-standard.com/markets/news/bhel-s-robust-outlook-reflected-in-valuations-after-strong-q1-turnaround-126071701231_1.html">the order book composition and free cash flow</a>; <a href="https://www.business-standard.com/amp/markets/news/bhel-share-price-hits-all-time-high-zooms-86-from-april-low-on-fpi-buying-strong-q1-126071700194_1.html">the all-time high</a>; <a href="https://marketsmithin.substack.com/p/bhel">the record order book and large EPC wins</a>; <a href="https://www.business-standard.com/markets/news/strong-order-inflows-boost-bhel-outlook-but-execution-remains-the-key-risk-126060901152_1.html">execution as the key risk</a>.</li>
+    <li>Siemens Energy India: <a href="https://energetica-india.net/news/siemens-energy-q3-fy26-revenue-rises-393-percent-to-inr-2486-crore-pat-jumps-678-percent">June 2026 quarter results</a>; <a href="https://solarquarter.com/2026/08/07/siemens-energy-india-reports-inr-2486-crore-q3-fy2026-revenue-pat-surges-67-8-to-inr-441-crore/">margin, backlog and nine-month figures</a>.</li>
+    <li>Thermax and GE Power India: <a href="https://www.equitybulls.com/category.php?id=373708">Thermax's Q1 FY27 results and the ₹91 cr overrun</a>; <a href="https://www.investywise.com/thermax-limited-investor-presentation-for-q1-fy-2026-27/">order booking, order balance and the data-centre order</a>; <a href="https://www.business-standard.com/markets/news/ge-power-india-shares-extend-rally-zoom-66-in-4-days-on-huge-volume-126021700709_1.html">GE Power India's February rally</a>; <a href="https://www.marketsmojo.com/news/stocks-in-action/ge-power-india-ltd-surges-to-upper-circuit-on-robust-buying-pressure-4197473">its September upper circuit</a>.</li>
+    <li>Policy and demand: <a href="https://www.business-standard.com/industry/news/thermal-power-contracts-to-attract-2-4-trn-amid-re-constraints-report-126091701237_1.html">thermal awards in FY25–26 and the capital required</a>; <a href="https://powermin.gov.in/sites/default/files/uploads/RS05082024_Eng.pdf">the 80 GW coal capacity requirement</a>; <a href="https://cea.nic.in/wp-content/uploads/notification/2026/04/Long_term_National_Resource_Adeqaucy_Plan2026_27_to_2035_36.pdf">the national resource adequacy plan</a>; <a href="https://solarquarter.com/2026/03/31/ministry-of-power-india-capacity-hits-524-gw-targets-874-gw-by-2032/">total capacity and the 2032 target</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -8.4}, {"y": 2013, "v": -10.5}, {"y": 2014, "v": -1.7}, {"y": 2015, "v": -8.0}, {"y": 2016, "v": -8.7}, {"y": 2017, "v": -1.3}, {"y": 2018, "v": -2.8}, {"y": 2019, "v": 0.2}, {"y": 2020, "v": -9.1}, {"y": 2021, "v": 12.4}, {"y": 2022, "v": -19.9}, {"y": 2023, "v": -5.6}, {"y": 2024, "v": 7.9}, {"y": 2025, "v": -5.0}, {"y": 2026, "v": 11.8}], "AprJul": [{"y": 2012, "v": -4.7}, {"y": 2013, "v": -4.7}, {"y": 2014, "v": 11.4}, {"y": 2015, "v": 11.4}, {"y": 2016, "v": 16.5}, {"y": 2017, "v": -0.1}, {"y": 2018, "v": -14.4}, {"y": 2019, "v": 3.8}, {"y": 2020, "v": -7.5}, {"y": 2021, "v": 22.1}, {"y": 2022, "v": -4.3}, {"y": 2023, "v": 36.4}, {"y": 2024, "v": 43.8}, {"y": 2025, "v": 12.5}, {"y": 2026, "v": 33.2}], "AugSep": [{"y": 2012, "v": 2.0}, {"y": 2013, "v": -8.1}, {"y": 2014, "v": -6.0}, {"y": 2015, "v": 2.2}, {"y": 2016, "v": 9.8}, {"y": 2017, "v": -1.0}, {"y": 2018, "v": -1.7}, {"y": 2019, "v": -13.8}, {"y": 2020, "v": -9.2}, {"y": 2021, "v": -18.2}, {"y": 2022, "v": 6.5}, {"y": 2023, "v": 17.0}, {"y": 2024, "v": -10.1}, {"y": 2025, "v": -4.4}], "OctDec": [{"y": 2012, "v": -5.3}, {"y": 2013, "v": 13.0}, {"y": 2014, "v": 14.9}, {"y": 2015, "v": 2.1}, {"y": 2016, "v": 3.6}, {"y": 2017, "v": -4.0}, {"y": 2018, "v": 8.6}, {"y": 2019, "v": -12.2}, {"y": 2020, "v": -14.7}, {"y": 2021, "v": 2.8}, {"y": 2022, "v": -5.9}, {"y": 2023, "v": 28.8}, {"y": 2024, "v": 4.9}, {"y": 2025, "v": -11.0}], "SepNov": [{"y": 2012, "v": 1.0}, {"y": 2013, "v": 8.9}, {"y": 2014, "v": 11.7}, {"y": 2015, "v": 0.9}, {"y": 2016, "v": 8.4}, {"y": 2017, "v": -3.8}, {"y": 2018, "v": 2.2}, {"y": 2019, "v": -13.4}, {"y": 2020, "v": -23.9}, {"y": 2021, "v": -4.3}, {"y": 2022, "v": -1.3}, {"y": 2023, "v": 24.2}, {"y": 2024, "v": 3.5}, {"y": 2025, "v": -9.4}], "JanMar": [{"y": 2012, "v": -10.1}, {"y": 2013, "v": -24.3}, {"y": 2014, "v": 4.3}, {"y": 2015, "v": 2.0}, {"y": 2016, "v": -12.7}, {"y": 2017, "v": 6.5}, {"y": 2018, "v": 0.9}, {"y": 2019, "v": -5.6}, {"y": 2020, "v": -7.5}, {"y": 2021, "v": 14.7}, {"y": 2022, "v": -17.4}, {"y": 2023, "v": -7.4}, {"y": 2024, "v": 26.7}, {"y": 2025, "v": -19.9}, {"y": 2026, "v": 5.8}]}, "my": {"1": {"2012": -0.7, "2013": -16.2, "2014": 5.5, "2015": 11.8, "2016": -4.7, "2017": 7.4, "2018": 4.3, "2019": -5.3, "2020": 2.3, "2021": 2.2, "2022": 3.0, "2023": -2.1, "2024": 17.0, "2025": -15.6, "2026": -5.6}, "2": {"2012": 6.5, "2013": -5.1, "2014": -1.4, "2015": -9.7, "2016": -6.1, "2017": 0.5, "2018": -3.0, "2019": 2.2, "2020": -5.1, "2021": 13.7, "2022": -15.4, "2023": -2.8, "2024": 10.5, "2025": -8.1, "2026": 13.3}, "3": {"2012": -13.5, "2013": -6.1, "2014": -0.2, "2015": 1.4, "2016": -2.2, "2017": -1.7, "2018": 0.1, "2019": -2.2, "2020": -5.9, "2021": -1.2, "2022": -4.7, "2023": -2.9, "2024": -2.5, "2025": 4.2, "2026": -0.1}, "4": {"2012": -4.2, "2013": 1.8, "2014": 7.5, "2015": 4.0, "2016": 14.2, "2017": 6.7, "2018": -1.8, "2019": 10.3, "2020": -13.6, "2021": -0.3, "2022": 11.6, "2023": 9.7, "2024": 23.5, "2025": 4.4, "2026": 30.8}, "5": {"2012": 6.4, "2013": -2.8, "2014": 20.0, "2015": -3.0, "2016": -12.4, "2017": -4.3, "2018": 0.7, "2019": 5.8, "2020": 3.4, "2021": 9.3, "2022": -4.2, "2023": 12.2, "2024": 2.4, "2025": 3.7, "2026": 12.6}, "6": {"2012": -3.9, "2013": -1.5, "2014": -5.8, "2015": 3.5, "2016": 14.7, "2017": -0.4, "2018": -11.5, "2019": -3.3, "2020": 14.0, "2021": 18.5, "2022": -4.8, "2023": 2.8, "2024": 7.3, "2025": 4.6, "2026": 2.1}, "7": {"2011": 0.6, "2012": -3.4, "2013": -2.1, "2014": -8.8, "2015": 6.6, "2016": -0.1, "2017": -1.9, "2018": -0.4, "2019": -7.2, "2020": -9.3, "2021": -6.0, "2022": -6.4, "2023": 5.3, "2024": 3.3, "2025": -0.9, "2026": -12.3}, "8": {"2011": -4.3, "2012": -2.2, "2013": -9.2, "2014": -10.0, "2015": -0.5, "2016": 8.2, "2017": -1.6, "2018": 1.0, "2019": -8.8, "2020": 2.6, "2021": -16.3, "2022": 4.0, "2023": 16.8, "2024": -8.3, "2025": -4.2, "2026": -1.2}, "9": {"2011": 3.1, "2012": 4.5, "2013": 1.8, "2014": 4.3, "2015": 2.8, "2016": 1.6, "2017": 0.6, "2018": -2.5, "2019": -5.1, "2020": -11.2, "2021": -1.6, "2022": 2.5, "2023": -0.2, "2024": -1.8, "2025": -0.2}, "10": {"2011": -0.3, "2012": -2.5, "2013": -6.3, "2014": -0.5, "2015": -0.9, "2016": 11.3, "2017": -1.4, "2018": 8.3, "2019": 1.0, "2020": -18.4, "2021": -1.1, "2022": -3.2, "2023": 0.3, "2024": -0.5, "2025": -6.0}, "11": {"2011": -6.9, "2012": -0.6, "2013": 12.3, "2014": 7.0, "2015": -0.9, "2016": -3.4, "2017": -2.9, "2018": -3.4, "2019": -8.7, "2020": 9.3, "2021": -1.7, "2022": -0.8, "2023": 24.2, "2024": 6.0, "2025": -3.1}, "12": {"2011": -18.3, "2012": -2.1, "2013": 5.5, "2014": 7.3, "2015": 4.0, "2016": -3.3, "2017": 0.6, "2018": 3.3, "2019": -4.1, "2020": -1.1, "2021": 5.9, "2022": -1.9, "2023": 2.3, "2024": -0.2, "2025": -1.9}}, "basket": ["Bharat Heavy Electricals Limited", "Siemens Energy India Limited", "Thermax Limited.", "ISGEC Heavy Engineering Ltd.", "GE Power India Ltd.", "Electrotherm (India) Limited", "Megatherm Induction Limited"], "nbasket": 7, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.0, "rel": 0.2, "hit": 8, "n": 15}, {"m": 2, "abs": -1.8, "rel": -0.7, "hit": 6, "n": 15}, {"m": 3, "abs": -2.7, "rel": -2.5, "hit": 3, "n": 15}, {"m": 4, "abs": 9.5, "rel": 7.0, "hit": 11, "n": 15}, {"m": 5, "abs": 4.5, "rel": 3.3, "hit": 10, "n": 15}, {"m": 6, "abs": 4.2, "rel": 2.4, "hit": 8, "n": 15}, {"m": 7, "abs": -0.8, "rel": -2.7, "hit": 4, "n": 16}, {"m": 8, "abs": -2.3, "rel": -2.1, "hit": 5, "n": 16}, {"m": 9, "abs": 0.5, "rel": -0.1, "hit": 8, "n": 15}, {"m": 10, "abs": 0.7, "rel": -1.3, "hit": 4, "n": 15}, {"m": 11, "abs": 2.7, "rel": 1.8, "hit": 5, "n": 15}, {"m": 12, "abs": 0.4, "rel": -0.3, "hit": 7, "n": 15}], "cy": [{"y": 2012, "b": 7.1, "n": 27.7, "rel": -20.6, "partial": false}, {"y": 2013, "b": -21.8, "n": 6.8, "rel": -28.6, "partial": false}, {"y": 2014, "b": 61.7, "n": 31.4, "rel": 30.4, "partial": false}, {"y": 2015, "b": 13.8, "n": -4.1, "rel": 17.9, "partial": false}, {"y": 2016, "b": 17.2, "n": 3.0, "rel": 14.1, "partial": false}, {"y": 2017, "b": 29.6, "n": 28.6, "rel": 0.9, "partial": false}, {"y": 2018, "b": -3.1, "n": 3.2, "rel": -6.2, "partial": false}, {"y": 2019, "b": -15.3, "n": 12.0, "rel": -27.4, "partial": false}, {"y": 2020, "b": -22.5, "n": 14.9, "rel": -37.4, "partial": false}, {"y": 2021, "b": 46.9, "n": 24.1, "rel": 22.7, "partial": false}, {"y": 2022, "b": -17.0, "n": 4.3, "rel": -21.3, "partial": false}, {"y": 2023, "b": 115.9, "n": 20.0, "rel": 95.8, "partial": false}, {"y": 2024, "b": 81.3, "n": 8.8, "rel": 72.5, "partial": false}, {"y": 2025, "b": -15.2, "n": 10.5, "rel": -25.7, "partial": false}, {"y": 2026, "b": 27.9, "n": -10.7, "rel": 38.5, "partial": true}], "dd": [{"co": "Bharat Heavy Electricals", "peak": "Jul 2024", "fp": 32, "y1": 88}, {"co": "Siemens Energy India", "peak": "Sep 2025", "fp": -10, "y1": -7}, {"co": "Thermax.", "peak": "Jul 2024", "fp": -37, "y1": 7}, {"co": "ISGEC Heavy Engineering", "peak": "Dec 2024", "fp": -51, "y1": -20}, {"co": "GE Power India", "peak": "Feb 2020", "fp": -19, "y1": 79}, {"co": "Electrotherm (India)", "peak": "Dec 2024", "fp": -35, "y1": -13}, {"co": "Megatherm Induction", "peak": "Jul 2024", "fp": -45, "y1": -16}, {"co": "Globus Power Generation", "peak": "Oct 2021", "fp": -83, "y1": 8}, {"co": "Garg Furnace", "peak": "Sep 2024", "fp": -52, "y1": 7}, {"co": "EMA India", "peak": "Dec 2025", "fp": 37, "y1": 185}, {"co": "Inducto Steel", "peak": "Jul 2024", "fp": -54, "y1": -16}, {"co": "Sterling Powergensys", "peak": "Nov 2024", "fp": -74, "y1": -29}], "win": {"FebMar": {"mean": -3.3, "median": -5.0, "hit": 4, "n": 15}, "AprJul": {"mean": 10.4, "median": 11.4, "hit": 9, "n": 15}, "AugSep": {"mean": -2.5, "median": -3.0, "hit": 5, "n": 14}, "OctDec": {"mean": 1.8, "median": 2.4, "hit": 8, "n": 14}, "SepNov": {"mean": 0.3, "median": 1.0, "hit": 8, "n": 14}, "JanMar": {"mean": -2.9, "median": -5.6, "hit": 7, "n": 15}}, "ytd": {"b": 27.9, "n": -10.7}, "notes": {"2012": "+7.1% against the Nifty's +27.7%. The start of the lost decade: private power developers stopped ordering as their plants became stranded, and imported Chinese equipment had taken share at the bottom of the market.", "2013": "\u221221.8% versus +6.8%. BHEL's order inflows collapsed and the industry's backlog began to run off.", "2014": "+61.7% versus +31.4%. The reform rally priced in a revival of power ordering that did not arrive for another eight years.", "2015": "+13.8% versus \u22124.1%. A relief bounce in a falling market, without new orders to support it.", "2016": "+17.2% versus +3.0%. Renewables began displacing coal from new-capacity plans, which was bad news for thermal equipment makers.", "2017": "+29.6% versus +28.6%. In line with a strong market; the thermal pipeline stayed thin.", "2018": "\u22123.1% versus +3.2%. BHEL \u221221% as its backlog shrank; GE Power India +15%.", "2019": "\u221215.3% versus +12.0%. BHEL \u221241% \u2014 the low point of the thermal ordering drought.", "2020": "\u221222.5% versus +14.9%. GE Power India \u221261% on losses and restructuring; the sector's worst year.", "2021": "+46.9% versus +24.1%. Thermax +97% on industrial and clean-energy orders; BHEL +64% as the market began to anticipate a coal revival.", "2022": "\u221217.0% versus +4.3%. The coal-power crisis of 2021\u201322 had not yet become orders; induction-furnace makers Electrotherm (\u221249%) dragged the basket.", "2023": "+115.9% versus +20.0%. The re-rating: BHEL +144% as thermal ordering returned, ISGEC +105% \u2014 and Electrotherm, a furnace maker, +241%.", "2024": "+81.3% versus +8.8%, with a median of +47%. Electrotherm +409% flattered the basket; the power-equipment names rose 19\u201366%.", "2025": "\u221215.2% versus +10.5%, median \u221227%. Execution worries and profit-taking; Siemens Energy India demerged and listed in June. Only BHEL (+25%) rose.", "2026": "+27.9% against a Nifty \u221210.7%, median +18%. GE Power India +104%, BHEL +53% to an all-time high on a record \u20b92.6 lakh cr order book and a return to profit, Siemens Energy India +26%; ISGEC \u221214% and Thermax's quarter hit by a \u20b991 cr overrun."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

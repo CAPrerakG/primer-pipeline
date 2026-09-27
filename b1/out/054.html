@@ -1,0 +1,631 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electronic Equipment Primer</title>
+<meta name="description" content="Industry 54 of 278: the instruments that test, measure, observe and monitor — test and measurement systems for defence, scientific instruments for laboratories, medical monitors for hospitals — plus the distributors who sell electronics. A small, mixed section of micro-caps, and why the global leaders are all foreign.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Electronic Equipment · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#closer">Three businesses up close</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#defencetm">The defence test opportunity</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 54 of 278 · Electronics &amp; EMS family, part 5</div>
+  <h1>Electronic Equipment</h1>
+  <p class="lede">This section gathers companies that make or sell electronic instruments: systems that test radar and missile electronics, laboratory instruments that measure light and materials, hospital monitors that watch a patient's heart, and distributors that bring electronics brands to Indian shops. The listed companies are all small. Understanding them means understanding a large market — test and measurement, scientific and medical instruments — in which India still imports most of what it uses.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 5 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Electric Meters</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹1,600 cr</div><div class="l">Creative Newtech, the section's largest company by market value</div></div>
+    <div class="stat"><div class="n">₹35.89 cr</div><div class="l">Creative Newtech's smart-warehousing order from the Food Corporation of India for 150 depots</div></div>
+    <div class="stat"><div class="n">+66%</div><div class="l">Maestros' FY26 profit growth, on medical monitors and telemedicine</div></div>
+    <div class="stat"><div class="n">Jan 2026</div><div class="l">Digilogic Systems, a defence test-and-measurement firm, listed on the SME platform</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Measuring things precisely is a valuable, specialised business</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Before a missile, a phone or a hospital machine can be trusted, someone has to check that its electronics work exactly right. That needs special measuring machines — like a doctor's stethoscope, but for circuits. Scientists need other machines to measure light, colour and tiny movements in their experiments. Hospitals need screens that show a patient's heartbeat and oxygen all the time. These machines are hard to make, so a few companies around the world make most of them. India has some small companies that make them, and some that sell other companies' electronics in shops.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>A small, mixed section whose listed companies are micro-caps, but whose end-markets — defence, science, healthcare — are growing and import-dependent.</p>
+    <ul>
+      <li><b>Creative Newtech</b> (the largest): IT and electronics distribution plus own brands and surveillance projects; revenue +21%, profit +32% in Q1 FY27; stock +55%.</li>
+      <li><b>Digilogic Systems:</b> test, measurement and simulation systems for defence and aerospace; listed January 2026; FY25 revenue +40%.</li>
+      <li><b>Holmarc:</b> scientific and teaching instruments from Kochi; stock +14% after −47% in 2025.</li>
+      <li><b>Maestros:</b> patient monitors, ECG machines and telemedicine; FY26 profit +66%.</li>
+      <li><b>Big picture:</b> global leaders (Keysight, Rohde &amp; Schwarz, Thermo Fisher, Philips, GE HealthCare) dominate Indian demand; defence indigenisation is the main opening for Indian makers.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Four quite different businesses</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>Products</th><th>Customers</th><th>Listed player here</th><th>Global leaders</th></tr></thead><tbody>
+    <tr><td>Test and measurement</td><td>Automated test equipment, simulators, signal and data-acquisition systems</td><td>Defence labs, DPSUs, aerospace, electronics makers</td><td>Digilogic Systems</td><td>Keysight, Rohde &amp; Schwarz, Tektronix, National Instruments (Emerson)</td></tr>
+    <tr><td>Scientific and teaching instruments</td><td>Spectrometers, optical benches, lab instruments</td><td>Universities, research labs, industry</td><td>Holmarc Opto-Mechatronics</td><td>Thermo Fisher, Agilent, Shimadzu, Horiba</td></tr>
+    <tr><td>Medical electronics</td><td>Patient monitors, ECG machines, defibrillators, fetal monitors, telemedicine</td><td>Hospitals, clinics, government health programmes</td><td>Maestros Electronics</td><td>Philips, GE HealthCare, Siemens Healthineers, Mindray</td></tr>
+    <tr><td>Electronics distribution and own brands</td><td>IT peripherals, imaging and consumer electronics, surveillance and smart-warehouse systems</td><td>Retailers, businesses, government</td><td>Creative Newtech</td><td>Redington, Ingram Micro (distribution)</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>These businesses are the referees, laboratory scales and thermometers of the electronics world. Nobody buys a thermometer for its own sake — but no hospital runs without one, and the most trusted brands charge far more than their cost of manufacture because being wrong is so expensive.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a measurement problem to a qualified instrument</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Components</h4><div class="an">The parts</div>Precision chips, sensors, optics, displays, power supplies.<div class="who">Mostly imported (050, 051)</div><div class="m">High-grade parts, small volumes</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Design and software</h4><div class="an">The know-how</div>Measurement science, signal processing, application software.<div class="who">Digilogic, Holmarc, Maestros; global leaders</div><div class="m">The moat</div></div>
+    <div class="stage"><div class="no">03</div><h4>Manufacture and calibration</h4><div class="an">Building it right</div>Assembly, calibration against standards, certification.<div class="who">Instrument makers</div><div class="m">Accuracy must be proven</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Approval</h4><div class="an">Being allowed to sell</div>Defence qualification, medical-device registration, university tenders.<div class="who">DRDO labs, CDSCO, GeM tenders</div><div class="m">Slow and valuable</div></div>
+    <div class="stage"><div class="no">05</div><h4>Distribution and integration</h4><div class="an">Getting it to users</div>Distributors, system integrators, service partners.<div class="who">Creative Newtech; global distributors</div><div class="m">Thin margins, working capital</div></div>
+    <div class="stage"><div class="no">06</div><h4>Service and calibration</h4><div class="an">Keeping it accurate</div>Annual calibration, repairs, software updates.<div class="who">Makers and service partners</div><div class="m">Recurring revenue</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Parts:</b> special chips, sensors and lenses, most bought from abroad.</li>
+    <li><b>Design:</b> clever engineering and software decide how well it measures.</li>
+    <li><b>Building:</b> each instrument is built and checked against a known standard.</li>
+    <li><b>Approval:</b> the army, hospitals or universities must approve it before buying.</li>
+    <li><b>Selling:</b> shops and distributors bring it to customers.</li>
+    <li><b>Upkeep:</b> it is re-checked every year so it stays accurate.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical question in instruments is whether a company owns a measurement franchise or is simply assembling or distributing. Franchises — defence test systems qualified with DRDO labs, medical devices registered and installed in hospitals, laboratory instruments specified in university curricula — earn steady margins and recurring service income. Distribution businesses earn thin margins on large revenue and need working capital. This section contains both, so its average statistics mean little; each company has to be judged on its own model.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 5 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Creative Newtech (~₹1,600 cr)</td><td>Formerly Creative Peripherals and Distribution, Mumbai: distribution of IT, imaging and consumer-electronics brands, a growing own-brand portfolio, and technology projects in surveillance and smart warehousing.</td><td>Q1 FY27 consolidated revenue ₹476 cr (+21%), profit ₹13.5 cr (+32%); standalone revenue ₹448 cr (+27%), profit ₹9.0 cr (+70%); EBITDA margin about 5%. A ₹35.89 cr Food Corporation of India order for smart warehousing across 150 depots. Stock +55.2% in 2026 and 7% above its December 2024 peak.</td></tr>
+    <tr><td>Digilogic Systems (~₹542 cr)</td><td>Design, integration and support of test, measurement and simulation systems for defence and aerospace; BSE SME listing in January 2026 (price band ₹98–104).</td><td>FY25 revenue ₹72 cr (+40%) with a PAT margin of about 11%. Too short a price record for the statistics.</td></tr>
+    <tr><td>Holmarc Opto-Mechatronics (~₹111 cr)</td><td>Kochi-based maker (since 1993) of scientific and engineering instruments — optics, spectroscopy and laboratory equipment — for research, industry and education; NSE SME listing September 2023.</td><td>Trailing revenue about ₹42 cr and profit about ₹4 cr. Stock +14.4% in 2026 after −47% in 2025; 47% below its November 2024 peak.</td></tr>
+    <tr><td>Maestros Electronics &amp; Telecommunications (market value not reported)</td><td>Navi Mumbai-based maker of patient monitors, ECG machines, defibrillators, pulse oximeters, fetal monitors and stress-test systems, plus telemedicine.</td><td>FY26 revenue ₹39.4 cr (+36%), profit ₹7.25 cr (+66%). Stock +24.3% in 2026. Traded too thinly to include in the basket.</td></tr>
+    <tr><td>Novateor Research Laboratories</td><td>Oral-care products (SmiloShine teeth-whitening, tongue cleaners) — misclassified.</td><td>FY25 revenue about ₹3 cr. Excluded.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">What is missing, and why it matters</span><p>India's largest instrument businesses are either foreign subsidiaries (Keysight, Rohde &amp; Schwarz, Thermo Fisher, Philips, GE HealthCare, Siemens Healthineers — mostly unlisted in India) or divisions of larger listed groups: BEL and Data Patterns build defence test and electronic systems (058), Tata Advanced Systems is unlisted, and medical-device makers such as Poly Medicure sit in healthcare sections. Distribution peers Redington and Rashi Peripherals sit in IT hardware. This section is a small, unrepresentative sample of a large industry.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Franchise margins versus distribution margins</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th>Typical margin</th><th>What drives it</th><th>Example here</th></tr></thead><tbody>
+    <tr><td>Defence test and simulation systems</td><td>Double-digit net margins possible</td><td>Qualification, engineering content, repeat orders from labs and DPSUs</td><td>Digilogic (about 11% PAT margin in FY25)</td></tr>
+    <tr><td>Scientific instruments</td><td>Moderate to good</td><td>Niche products, education and research budgets</td><td>Holmarc (about 10% net)</td></tr>
+    <tr><td>Medical electronics</td><td>Good when registered and installed</td><td>Hospital and government procurement, service contracts</td><td>Maestros (about 18% net in FY26)</td></tr>
+    <tr><td>Electronics distribution</td><td>Low single digits</td><td>Volume, credit terms, brand relationships</td><td>Creative Newtech (about 5% EBITDA)</td></tr>
+    <tr><td>Own brands and projects</td><td>Higher than distribution</td><td>Product selection, government projects</td><td>Creative Newtech's strategic shift</td></tr>
+  </tbody></table></div>
+  <h3>The service tail</h3>
+  <p>Instruments must be calibrated regularly to stay accurate, and medical and defence systems need maintenance contracts for years. For established makers this installed-base income can become a large and stable share of revenue — the model that makes global instrument companies so valuable. For India's small makers it is still modest, because their installed bases are small; building it is one of the clearest routes to better quality of earnings.</p>
+  <h3>Rough valuations, and what they imply</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Market value (₹ cr)</th><th>Profit basis</th><th class="num">Approximate multiple</th></tr></thead><tbody>
+    <tr><td>Creative Newtech</td><td class="num">1,600</td><td>Q1 FY27 profit of ₹13.5 cr, annualised</td><td class="num">~30×</td></tr>
+    <tr><td>Holmarc</td><td class="num">111</td><td>Trailing profit of about ₹4 cr</td><td class="num">~28×</td></tr>
+    <tr><td>Digilogic Systems</td><td class="num">542</td><td>FY25 profit of about ₹8 cr (11% of ₹72 cr revenue)</td><td class="num">~67× (on older profit)</td></tr>
+  </tbody></table></div>
+  <p class="note">A crude screen only: annualised or trailing profits, no adjustment for growth, cash or working capital. Maestros' market value is not reported in the dataset.</p>
+  <p>The comparison makes a useful point. A distributor with a 5% operating margin trading near 30 times profit is being valued as though its shift to own brands and projects will lift margins; a defence test-system company trading on a much higher multiple of its last reported profit is being valued on expected programme wins. In both cases the price embeds a change in the business, so the company's next few results matter more than its history.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>An instrument maker is like a lift company: selling the lift is competitive, but the maintenance contract that follows runs for decades and is where much of the profit sits.</p></div>
+</section>
+
+<section id="closer" data-toc="Three businesses up close">
+  <p class="eyebrow">5b · A closer look</p>
+  <h2>Three businesses up close</h2>
+  <h3>How a defence test system is won and delivered</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Stage</th><th>What happens</th><th>Typical duration</th><th>What the supplier earns</th></tr></thead><tbody>
+    <tr><td>Requirement</td><td>A DRDO laboratory or defence company needs to test a radar, missile seeker or electronic-warfare system</td><td>—</td><td>Nothing yet; relationships matter</td></tr>
+    <tr><td>Development contract</td><td>The supplier designs a custom test or simulation system</td><td>One to two years</td><td>Development fees, often at thin margins</td></tr>
+    <tr><td>Qualification</td><td>The system is validated against the platform it tests</td><td>Months to a year</td><td>Little; costs are front-loaded</td></tr>
+    <tr><td>Production orders</td><td>Further units for production lines, depots and other laboratories</td><td>Years, as the platform is produced</td><td>The profitable phase</td></tr>
+    <tr><td>Support and upgrades</td><td>Maintenance, software updates, recalibration</td><td>The platform's service life</td><td>Recurring, high-margin revenue</td></tr>
+  </tbody></table></div>
+  <p>The model rewards patience: a test-system supplier that is designed into a missile or radar programme early can earn from it for a decade or more, because re-qualifying a different supplier's test equipment is costly and slow. This is why defence test companies such as Digilogic describe their growth in terms of programmes won rather than quarterly orders.</p>
+  <h3>The patient-monitor market in India</h3>
+  <p>Critical-care monitoring has grown with the number of intensive-care and high-dependency beds in private and government hospitals. The top end is dominated by Philips, GE HealthCare and Mindray; Indian makers — Maestros among the listed ones, and unlisted firms such as BPL Medical Technologies and Skanray — compete for cost-conscious private hospitals, smaller towns and government programmes. Registration under the Medical Devices Rules, service networks and clinical trust decide who wins. Telemedicine has added a new layer: monitors that transmit data so specialists can supervise patients remotely.</p>
+  <h3>Distribution economics, in one illustration</h3>
+  <p>For an electronics distributor, a typical rupee of sales might carry a gross margin in the high single digits, most of which is spent on warehousing, logistics, sales staff and credit to retailers, leaving an operating margin of a few per cent — Creative Newtech's EBITDA margin is about 5%. Profit therefore depends on volume, inventory turns and how quickly customers pay. Moving into own brands and technology projects raises gross margins, which is why the market has rewarded Creative Newtech's shift: its standalone profit grew 70% on 27% revenue growth in Q1 FY27. The figures here are illustrative of the model, not a breakdown of any company's accounts.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What instrument makers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>India's position</th></tr></thead><tbody>
+    <tr><td>High-precision chips (ADCs, FPGAs, RF components)</td><td>Decide accuracy and speed</td><td>Imported; some are export-controlled</td></tr>
+    <tr><td>Optics and sensors</td><td>Scientific and medical measurement</td><td>Partly imported; Holmarc makes some optics</td></tr>
+    <tr><td>Software and algorithms</td><td>Signal processing and analysis</td><td>A strength of Indian engineering</td></tr>
+    <tr><td>Calibration standards</td><td>Traceability of measurements</td><td>National labs and NABL-accredited facilities</td></tr>
+    <tr><td>Regulatory approvals</td><td>Medical-device registration, defence qualification</td><td>Slow but improving</td></tr>
+    <tr><td>Working capital</td><td>Government customers pay slowly</td><td>A constraint for small firms</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Budgets, academic years and festivals</h2>
+  <ul>
+    <li><b>January–March:</b> government and defence year-end purchasing; laboratories spend remaining budgets.</li>
+    <li><b>April–June:</b> new budgets released; academic procurement for the coming year.</li>
+    <li><b>July–September:</b> university and research tenders; monsoon season for projects.</li>
+    <li><b>October–December:</b> festive demand for consumer electronics at distributors.</li>
+    <li><b>Defence programmes:</b> test-system orders follow platform development milestones rather than seasons.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the basket (Creative Newtech, joined by Holmarc from 2024) minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 2 names (Creative Newtech Limited, Holmarc Opto-Mechatronics Ltd.), equal-weighted, monthly from Sep 2019, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Oct +17.7 pts (beat in 6 of 7 years); Jun +10.2 pts (beat in 5 of 7 years); Aug +8.4 pts (beat in 4 of 7 years).</li><li><b>Weakest months:</b> Sep -6.7 pts (beat in 1 of 7 years); May -6.0 pts (beat in 3 of 7 years); Mar -5.1 pts (beat in 2 of 7 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 2 of 7 years (median -16.8 pts); Apr–Jul beat the Nifty in 4 of 7 years (median +10.8 pts); Aug–Sep beat the Nifty in 2 of 6 years (median -5.0 pts); Oct–Dec beat the Nifty in 5 of 7 years (median +24.4 pts); Sep–Nov beat the Nifty in 4 of 7 years (median +1.1 pts); Jan–Mar beat the Nifty in 2 of 7 years (median -14.2 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about -3.3 points.</p><p><b>Reading it:</b> only seven years of data and a two-stock basket, so treat this as anecdote rather than evidence. October has been the best month (6 of 7 years, +17.7 points on average) and October–December the best window (5 of 7, median +24.4). January–March has been weak (2 of 7, median −14.2), as has February–March (2 of 7, median −16.8). The October strength is consistent with festive-season electronics demand at Creative Newtech, which dominates the record.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="OctDec" viewBox="0 0 720 280" role="img" aria-label="October to December return minus Nifty by year"></svg><figcaption>October–December return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>How to read it</h3>
+  <ul>
+    <li><b>October–December failed only in 2020 (−33.3) and 2025 (−3.6)</b>; its best was 2021 (+85.0).</li>
+    <li><b>January–March failed in five of seven years</b>, including every year from 2023 to 2026.</li>
+    <li><b>2021 dominates:</b> Creative Newtech rose 315% that year.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Seven years of one or two illiquid stocks is not enough to trade on. The record mainly shows how volatile micro-cap electronics names are — a 177% basket gain in 2021, a 35% loss in 2025. Use company fundamentals and liquidity, not the calendar.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Defence indigenisation:</b> test and simulation systems for Indian-made radars, missiles and electronic warfare (see 058).</li>
+    <li><b>Electronics manufacturing growth:</b> factories need test equipment (052).</li>
+    <li><b>Research and education budgets:</b> university and lab spending.</li>
+    <li><b>Healthcare expansion:</b> hospitals, critical care beds and government health schemes.</li>
+    <li><b>Consumer electronics demand:</b> for distributors like Creative Newtech.</li>
+    <li><b>Government technology projects:</b> smart warehousing, surveillance, e-governance.</li>
+    <li><b>Import substitution policies:</b> preference for Indian-made products in public procurement.</li>
+    <li><b>Component supply:</b> access to high-grade imported chips and optics.</li>
+  </ol>
+</section>
+
+<section id="defencetm" data-toc="The defence test opportunity">
+  <p class="eyebrow">9b · The largest opportunity</p>
+  <h2>Why defence test and simulation matters most</h2>
+  <p>Every weapon system India now designs and builds at home — radars, missiles, electronic-warfare suites, communication systems, avionics — needs test equipment and simulators during development, on the production line and in maintenance depots. Historically much of that equipment was imported alongside the platform. As more platforms are designed in India, their test systems increasingly are too, and procurement rules that favour domestic suppliers reinforce the shift. This creates a steady, engineering-heavy market for specialist companies. Digilogic is the listed pure-play in this section; larger defence-electronics companies such as Data Patterns and BEL (see 058) also build test and simulation systems as part of their work. The attraction is the long life of each programme and the recurring support revenue; the risk is lumpy ordering tied to government budgets and the pace of platform development.</p>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A short history</p>
+  <h2>2020 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: Creative Newtech from September 2019, joined by Holmarc after its September 2023 listing. Maestros is excluded because it trades too thinly for monthly returns, and Novateor as misclassified; Digilogic is too recent. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>What the record shows</h3>
+  <ol>
+    <li><b>The pandemic electronics boom</b> (2021): home working and learning drove IT and electronics demand; Creative Newtech +315%.</li>
+    <li><b>The small-cap boom</b> (2023–2024): SME listings such as Holmarc re-rated sharply.</li>
+    <li><b>The sell-off</b> (2025): micro-caps fell 22–47%.</li>
+    <li><b>Selective recovery</b> (2026): results-driven gains at Creative Newtech.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Micro-cap electronics names swing far more than their businesses.</b></li>
+    <li><b>Distribution businesses re-rate when they add own brands and projects.</b></li>
+    <li><b>SME listings often peak within a year or two of listing.</b></li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A few global leaders, very high margins</h2>
+  <p>Test and measurement is dominated by Keysight (spun out of Agilent, originally Hewlett-Packard's instrument business), Rohde &amp; Schwarz, Tektronix (Fortive), Anritsu and National Instruments (now part of Emerson). Scientific instruments are led by Thermo Fisher, Agilent, Shimadzu, Horiba and Bruker; patient monitoring by Philips, GE HealthCare, Mindray and Nihon Kohden. These companies earn high margins because accuracy, reliability and software ecosystems create switching costs, and because customers value a trusted name more than a lower price. China has built strong domestic instrument makers, notably in medical monitoring. India's opportunity is narrower: defence, where indigenisation policies favour domestic suppliers; cost-sensitive education and research markets; and mid-range medical devices.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>Global leaders</th><th>Where Indian firms can compete</th></tr></thead><tbody>
+    <tr><td>Test and measurement</td><td>Keysight, Rohde &amp; Schwarz, Tektronix, Anritsu</td><td>Customised defence test systems, simulators</td></tr>
+    <tr><td>Scientific instruments</td><td>Thermo Fisher, Agilent, Shimadzu, Horiba</td><td>Teaching and mid-range laboratory instruments</td></tr>
+    <tr><td>Patient monitoring</td><td>Philips, GE HealthCare, Mindray, Nihon Kohden</td><td>Cost-effective monitors for smaller hospitals and government programmes</td></tr>
+  </tbody></table></div>
+  <p>For Indian buyers this concentration has practical consequences: long lead times for imported instruments, service that depends on a foreign company's local office, and exposure to export controls on advanced equipment. Those frictions are exactly what give domestic suppliers an opening in defence and government markets, even where their products are less sophisticated than the global leaders'.</p>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From hardware to software:</b> instruments increasingly defined by software and data analysis.</li>
+    <li><b>From Western to Chinese mid-range suppliers</b> in medical devices and general instruments.</li>
+    <li><b>From imports to local defence suppliers</b> in India, driven by procurement policy.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Software-defined instruments:</b> modular hardware with analysis in software.</li>
+    <li><b>Hardware-in-the-loop simulation:</b> testing weapons and vehicle electronics against simulated environments.</li>
+    <li><b>Remote and connected monitoring:</b> telemedicine and cloud-linked patient monitors.</li>
+    <li><b>AI-assisted analysis:</b> automated interpretation of ECGs and test results.</li>
+    <li><b>Higher frequencies:</b> 5G, satellite and radar testing at millimetre-wave frequencies.</li>
+    <li><b>IoT-based monitoring for logistics:</b> smart warehouses, cold chains and surveillance.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Defence procurement preferences for Indian suppliers</td><td>Positive indigenisation lists, domestic-sourcing categories</td><td>Opportunity for Indian test-system makers (see 058)</td></tr>
+    <tr><td>Medical Devices Rules, 2017</td><td>Risk-based licensing for all devices</td><td>Raises the bar for new entrants</td></tr>
+    <tr><td>Public procurement (Make in India) orders</td><td>Preference for local content</td><td>Helps domestic instrument makers in tenders</td></tr>
+    <tr><td>Government e-Marketplace (GeM)</td><td>Online public procurement</td><td>Access to government customers for small firms</td></tr>
+    <tr><td>Export controls abroad</td><td>On advanced instruments and components</td><td>Limits access to some technologies</td></tr>
+    <tr><td>Health infrastructure schemes</td><td>Expansion of critical-care and district hospitals</td><td>Demand for monitors and diagnostic equipment</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: small companies, growing niches</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Distribution and projects</td><td>Growing</td><td>Creative Newtech revenue +21%, FCI order</td></tr>
+    <tr><td>Defence test systems</td><td>Expanding</td><td>Digilogic listed; defence electronics orders rising (058)</td></tr>
+    <tr><td>Scientific instruments</td><td>Recovering</td><td>Holmarc +14% after a 47% fall</td></tr>
+    <tr><td>Medical electronics</td><td>Growing</td><td>Maestros FY26 profit +66%</td></tr>
+    <tr><td>Stocks</td><td>Volatile</td><td>Basket +34% in 2026 after −35% in 2025</td></tr>
+  </tbody></table></div>
+  <h3>What each company has to prove next</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>The case rests on</th><th>What would confirm it</th><th>What would break it</th></tr></thead><tbody>
+    <tr><td>Creative Newtech</td><td>Own brands and government technology projects lifting margins above distribution levels</td><td>Rising share of own-brand revenue; more project wins like the FCI order</td><td>Margins slipping back to pure-distribution levels; slow government payments</td></tr>
+    <tr><td>Digilogic Systems</td><td>Being designed into Indian defence programmes as a test and simulation supplier</td><td>Repeat production orders and a growing order book</td><td>Lumpy orders and delays in defence programmes</td></tr>
+    <tr><td>Holmarc</td><td>Niche scientific and teaching instruments with steady education demand</td><td>Revenue growth with stable margins; new product lines</td><td>Dependence on a few tenders; small scale</td></tr>
+    <tr><td>Maestros</td><td>Affordable medical monitoring and telemedicine</td><td>Continued profit growth and wider hospital adoption</td><td>Competition from global and Chinese brands; illiquid shares</td></tr>
+  </tbody></table></div>
+  <h3>A note on liquidity</h3>
+  <p>Liquidity deserves as much attention as fundamentals here. Three of the five companies are SME or thinly traded listings, where a few large orders can move the price by several per cent in a day and where exiting a position can take weeks. The price record reflects this: the basket rose 177% in 2021 and fell 35% in 2025 while the underlying businesses changed far less. For a portfolio, that argues for small positions sized to daily trading volumes, patience on entry, and a preference for the companies whose results are audited and disclosed quarterly rather than half-yearly. It also means that index-style statistics for this section should be read as descriptions of what happened to a few illiquid shares, not as evidence about the instrument industry.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>This section is too small and too mixed to be an investable sector in its own right. Each company should be judged individually, with liquidity as a first-order concern. The genuine long-term opportunity is in defence test and simulation, where Indian procurement policy is creating demand for domestic suppliers, and in affordable medical devices. The listed exposure to both is thin here and deeper in the defence-electronics section that follows in this series.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Defence electronics order flow</td><td>DRDO, DPSU tenders</td><td>Test-system demand</td></tr>
+    <tr><td>Own-brand share of revenue</td><td>Creative Newtech disclosures</td><td>Margin quality</td></tr>
+    <tr><td>Government technology project awards</td><td>FCI, state agencies</td><td>Project revenue</td></tr>
+    <tr><td>University and research budgets</td><td>Union and state budgets</td><td>Scientific-instrument demand</td></tr>
+    <tr><td>Hospital capacity additions</td><td>Health ministry data</td><td>Medical-electronics demand</td></tr>
+    <tr><td>Receivables and working capital</td><td>Half-yearly balance sheets</td><td>Cash strain from government customers</td></tr>
+    <tr><td>Trading volumes</td><td>Exchange data</td><td>Whether positions can be exited</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Defence electronics</b> (058): BEL and Data Patterns build test and electronic systems.</li>
+    <li><b>Electronics manufacturing services</b> (052): customers for test equipment.</li>
+    <li><b>Security and surveillance equipment</b> (056): Creative Newtech's project work overlaps.</li>
+    <li><b>IT hardware and distribution</b> (a later primer): Redington, Rashi Peripherals.</li>
+    <li><b>Medical devices</b> (a later primer): larger device makers.</li>
+    <li><b>Industrial automation and instrumentation</b> (a later primer): process instruments.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of revenue is from own products versus distribution or trading?</li>
+    <li>What is the order book, and from which customers?</li>
+    <li>How much revenue is recurring service and calibration?</li>
+    <li>What approvals and qualifications do your products hold?</li>
+    <li>How dependent are you on imported components, and are any export-controlled?</li>
+    <li>What are receivable days on government orders?</li>
+    <li>What is the R&amp;D spend and product pipeline?</li>
+    <li>How will you fund growth without diluting shareholders?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Revenue dominated by low-margin trading presented as manufacturing.</li>
+    <li>Receivables growing faster than revenue.</li>
+    <li>Frequent preferential issues at rising prices.</li>
+    <li>Very low trading volumes relative to market value.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"This section is India's instrument industry."</td><td>It is five micro-caps; the large players are foreign subsidiaries or divisions of bigger groups.</td></tr>
+    <tr><td>"Distribution is a bad business."</td><td>Low margins, but Creative Newtech's profit grew faster than revenue as it added own brands and projects.</td></tr>
+    <tr><td>"Defence indigenisation guarantees orders."</td><td>It opens tenders; qualification and execution still decide winners.</td></tr>
+    <tr><td>"Small instrument makers can't compete globally."</td><td>They compete in niches — customised defence systems and teaching instruments — rather than head-on.</td></tr>
+    <tr><td>"The basket's 2026 gain shows sector strength."</td><td>It is mostly one company's result.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. oscilloscope, ECG" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Test and measurement</h3><dl>
+    <dt>Test and measurement (T&amp;M)</dt><dd>Instruments that verify electronic systems work correctly.</dd>
+    <dt>Oscilloscope</dt><dd>Displays electrical signals over time.</dd>
+    <dt>Spectrum analyser</dt><dd>Shows the frequencies present in a signal.</dd>
+    <dt>Signal generator</dt><dd>Produces test signals of set frequency and shape.</dd>
+    <dt>Network analyser</dt><dd>Measures how components respond to radio-frequency signals.</dd>
+    <dt>Multimeter</dt><dd>Measures voltage, current and resistance.</dd>
+    <dt>Data acquisition (DAQ)</dt><dd>Collecting measurements from sensors into a computer.</dd>
+    <dt>Automated test equipment (ATE)</dt><dd>Systems that test products automatically on a production line or in a lab.</dd>
+    <dt>Hardware-in-the-loop (HIL)</dt><dd>Testing real electronics against a simulated environment.</dd>
+    <dt>Simulator</dt><dd>A system that imitates real conditions — for example radar targets for testing.</dd>
+    <dt>RF and microwave</dt><dd>High-frequency signals used in radar and communications.</dd>
+    <dt>Calibration</dt><dd>Checking and adjusting an instrument against a known standard.</dd>
+    <dt>NABL accreditation</dt><dd>Recognition that a laboratory's testing and calibration meet standards.</dd>
+    <dt>Measurement traceability</dt><dd>An unbroken chain of calibrations back to national standards.</dd>
+  </dl>
+  <h3>Scientific and medical instruments</h3><dl>
+    <dt>Spectrometer</dt><dd>Measures how light is absorbed or emitted to identify materials.</dd>
+    <dt>Spectrophotometer</dt><dd>Measures how much light a sample absorbs at each wavelength.</dd>
+    <dt>Interferometer</dt><dd>Uses interference of light to measure tiny distances.</dd>
+    <dt>Optical bench</dt><dd>A rigid base for arranging optical experiments.</dd>
+    <dt>Monochromator</dt><dd>Selects a single wavelength of light.</dd>
+    <dt>Photodetector</dt><dd>A sensor that converts light into an electrical signal.</dd>
+    <dt>Patient monitor</dt><dd>Continuously displays heart rate, oxygen, blood pressure and other vital signs.</dd>
+    <dt>ECG (electrocardiograph)</dt><dd>Records the heart's electrical activity.</dd>
+    <dt>Defibrillator</dt><dd>Delivers a shock to restore a normal heart rhythm.</dd>
+    <dt>Pulse oximeter</dt><dd>Measures blood oxygen through the skin.</dd>
+    <dt>Fetal monitor</dt><dd>Tracks a baby's heart rate during pregnancy and labour.</dd>
+    <dt>Stress-test system</dt><dd>Records the heart while a patient exercises.</dd>
+    <dt>Telemedicine</dt><dd>Remote diagnosis and monitoring over communication links.</dd>
+    <dt>Medical Devices Rules, 2017</dt><dd>India's framework for licensing medical devices by risk class.</dd>
+    <dt>Device risk class (A–D)</dt><dd>The classification that sets how strictly a device is regulated.</dd>
+    <dt>CDSCO</dt><dd>Central Drugs Standard Control Organisation, India's device regulator.</dd>
+  </dl>
+  <h3>Commercial</h3><dl>
+    <dt>Distributor</dt><dd>A company that buys from brands and sells to retailers or businesses.</dd>
+    <dt>Value-added reseller</dt><dd>A distributor that adds integration, software or services.</dd>
+    <dt>System integrator</dt><dd>A company that combines equipment from many suppliers into a working system.</dd>
+    <dt>Own brand</dt><dd>Products sold under the distributor's own name, usually at higher margins.</dd>
+    <dt>Smart warehousing</dt><dd>Warehouses fitted with sensors, cameras and software for monitoring stock.</dd>
+    <dt>Government e-Marketplace (GeM)</dt><dd>India's online platform for public procurement.</dd>
+    <dt>DRDO and DPSU</dt><dd>India's defence research organisation and state-owned defence companies — key customers for test systems.</dd>
+    <dt>Installed base</dt><dd>Instruments already in use, which generate service revenue.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>SME platform, stock split</dt><dd>See 047.</dd>
+    <dt>Thinly traded, preferential allotment</dt><dd>See 051.</dd>
+    <dt>Drawdown from peak</dt><dd>See 029.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What four businesses sit in this section?</summary><p>Test and measurement, scientific instruments, medical electronics, and electronics distribution with own brands.</p></details>
+  <details class="q"><summary>2. Why do global instrument makers earn high margins?</summary><p>Accuracy, reliability and software ecosystems create switching costs, and customers value trusted names.</p></details>
+  <details class="q"><summary>3. What did Creative Newtech report in Q1 FY27?</summary><p>Revenue +21% to ₹476 cr and profit +32% to ₹13.5 cr, plus a ₹35.89 cr smart-warehousing order from FCI.</p></details>
+  <details class="q"><summary>4. What does Digilogic Systems do?</summary><p>Test, measurement and simulation systems for defence and aerospace; it listed in January 2026.</p></details>
+  <details class="q"><summary>5. Why is Maestros excluded from the basket?</summary><p>It trades too thinly for reliable monthly returns.</p></details>
+  <details class="q"><summary>6. What is calibration, and why does it create recurring revenue?</summary><p>Checking instruments against standards; it must be repeated regularly, so makers earn service income.</p></details>
+  <details class="q"><summary>7. What is hardware-in-the-loop testing?</summary><p>Testing real electronics against a simulated environment, common in defence and automotive.</p></details>
+  <details class="q"><summary>8. Where is India's best opening in instruments?</summary><p>Defence test systems, teaching instruments and affordable medical devices.</p></details>
+  <details class="q"><summary>9. Which window has been strongest?</summary><p>October–December, 5 of 7 years, median +24.4 points — but on a two-stock record.</p></details>
+  <details class="q"><summary>10. Why is Novateor excluded?</summary><p>It makes oral-care products, not electronic equipment.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; basket of Creative Newtech and Holmarc versus NSE:NIFTY, 2020 to 18 September 2026.</li>
+    <li>Creative Newtech: <a href="https://www.sahi.com/news/creative-newtech-reports-q1-revenue-of-4-76b-rupees-net-profit-rises-to-135m-rupees-4586-PE1_COR">Q1 FY27 consolidated results</a>; <a href="https://www.whalesbook.com/corporate-news/English/stock-investment-ideas/Creative-Newtech-Q1-FY27-Revenue-Up-2688percent-to-indian-rupee44751-Cr-Profit-Jumps-6968percent/6a71984710bce1fd203bb09a">standalone results</a>; <a href="https://scanx.trade/stock-market-news/companies/creative-newtech-reports-strong-q1-performance-with-revenue-at-4-76b-rupees-and-ebitda-margin-expanding-to-5-1/47375808">margins</a>; <a href="https://www.marketsmojo.com/news/stocks-in-action/creative-newtech-ltd-reports-positive-quarterly-growth-amid-margin-pressures-4136643">quarterly trend</a>.</li>
+    <li>Digilogic Systems: <a href="https://www.chanakyanipothi.com/sme-ipo-watch/digilogic-systems-ipo/">IPO details</a>; <a href="https://www.jmfinancialservices.in/blogs-and-articles/digilogic-systems-ipo">financials</a>; <a href="https://scanx.trade/stock-market-news/stocks/digilogic-systems-limited-files-investor-presentation-highlighting-defence-aerospace-growth-strategy/31145145">defence and aerospace strategy</a>.</li>
+    <li>Further context: <a href="https://simplywall.st/stocks/in/capital-goods/nse-cnl/creative-newtech-shares">Creative Newtech analysis</a>; <a href="https://www.valueresearchonline.com/ipo/376070/digilogic-systems-ltd/">Digilogic IPO record</a>; <a href="https://www.indiamart.com/maestros-electr-and-teleco-systems-ltd/aboutus.html">Maestros products</a>.</li>
+    <li>Holmarc, Maestros, Novateor: <a href="https://www.holmarc.com/">Holmarc</a>; <a href="https://www.screener.in/company/HOLMARC/">Holmarc financials</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Maestros-Electronics-FY26-Profit-Soars-to-indian-rupee725-Crore-Revenue-Jumps-to-indian-rupee3943-Crore/6a19cd330bfba3b2539d1be6">Maestros FY26</a>; <a href="https://finance.yahoo.com/quote/METSL.BO/">Maestros profile</a>; <a href="https://www.screener.in/company/542771/">Novateor</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2020, "v": 5.7}, {"y": 2021, "v": -9.5}, {"y": 2022, "v": 11.7}, {"y": 2023, "v": -16.8}, {"y": 2024, "v": -23.7}, {"y": 2025, "v": -19.0}, {"y": 2026, "v": -17.2}], "AprJul": [{"y": 2020, "v": -13.1}, {"y": 2021, "v": 44.5}, {"y": 2022, "v": -31.5}, {"y": 2023, "v": 15.0}, {"y": 2024, "v": 10.8}, {"y": 2025, "v": -17.8}, {"y": 2026, "v": 66.3}], "AugSep": [{"y": 2020, "v": 30.7}, {"y": 2021, "v": -7.9}, {"y": 2022, "v": -6.8}, {"y": 2023, "v": -3.2}, {"y": 2024, "v": 6.3}, {"y": 2025, "v": -7.9}], "OctDec": [{"y": 2019, "v": 63.3}, {"y": 2020, "v": -33.3}, {"y": 2021, "v": 85.0}, {"y": 2022, "v": 19.1}, {"y": 2023, "v": 24.4}, {"y": 2024, "v": 35.8}, {"y": 2025, "v": -3.6}], "SepNov": [{"y": 2019, "v": -2.6}, {"y": 2020, "v": -21.1}, {"y": 2021, "v": 40.8}, {"y": 2022, "v": 1.1}, {"y": 2023, "v": 27.7}, {"y": 2024, "v": 37.2}, {"y": 2025, "v": -11.1}], "JanMar": [{"y": 2020, "v": 4.2}, {"y": 2021, "v": -9.4}, {"y": 2022, "v": 60.0}, {"y": 2023, "v": -19.8}, {"y": 2024, "v": -14.2}, {"y": 2025, "v": -20.1}, {"y": 2026, "v": -17.6}]}, "my": {"1": {"2020": -1.9, "2021": -0.2, "2022": 43.0, "2023": -4.2, "2024": 12.0, "2025": -1.4, "2026": -1.3}, "2": {"2020": 30.7, "2021": 0.5, "2022": -9.9, "2023": -18.1, "2024": -10.2, "2025": -12.5, "2026": 0.1}, "3": {"2020": -14.4, "2021": -9.3, "2022": 25.3, "2023": 1.7, "2024": -14.6, "2025": -7.0, "2026": -17.4}, "4": {"2020": -6.4, "2021": -3.0, "2022": -11.8, "2023": -15.4, "2024": 17.6, "2025": -8.9, "2026": 25.8}, "5": {"2020": -10.3, "2021": -21.1, "2022": -13.6, "2023": 3.0, "2024": -7.9, "2025": 1.4, "2026": 6.2}, "6": {"2020": -3.9, "2021": 49.1, "2022": 7.2, "2023": 20.4, "2024": 5.8, "2025": -9.7, "2026": 2.7}, "7": {"2020": 11.1, "2021": 22.5, "2022": -17.9, "2023": 8.1, "2024": -4.0, "2025": -1.0, "2026": 19.2}, "8": {"2020": 36.2, "2021": 2.2, "2022": -2.3, "2023": 10.0, "2024": -1.3, "2025": -1.9, "2026": 16.0}, "9": {"2019": -18.7, "2020": -3.7, "2021": -9.2, "2022": -4.5, "2023": -12.5, "2024": 7.7, "2025": -6.2}, "10": {"2019": 1.3, "2020": 9.4, "2021": 49.7, "2022": -3.3, "2023": 31.4, "2024": 32.8, "2025": 2.3}, "11": {"2019": 17.8, "2020": -25.0, "2021": 3.5, "2022": 9.8, "2023": 9.5, "2024": -4.3, "2025": -6.7}, "12": {"2019": 34.5, "2020": -14.5, "2021": 20.7, "2022": 10.9, "2023": -16.6, "2024": 7.6, "2025": 1.2}}, "basket": ["Creative Newtech Limited", "Holmarc Opto-Mechatronics Ltd."], "nbasket": 2, "start": "Sep 2019", "monthly": [{"m": 1, "abs": 5.1, "rel": 6.6, "hit": 2, "n": 7}, {"m": 2, "abs": -4.2, "rel": -2.8, "hit": 3, "n": 7}, {"m": 3, "abs": -8.1, "rel": -5.1, "hit": 2, "n": 7}, {"m": 4, "abs": 3.8, "rel": -0.3, "hit": 2, "n": 7}, {"m": 5, "abs": -5.6, "rel": -6.0, "hit": 3, "n": 7}, {"m": 6, "abs": 12.8, "rel": 10.2, "hit": 5, "n": 7}, {"m": 7, "abs": 8.6, "rel": 5.4, "hit": 4, "n": 7}, {"m": 8, "abs": 10.0, "rel": 8.4, "hit": 4, "n": 7}, {"m": 9, "abs": -5.7, "rel": -6.7, "hit": 1, "n": 7}, {"m": 10, "abs": 18.8, "rel": 17.7, "hit": 6, "n": 7}, {"m": 11, "abs": 3.6, "rel": 0.7, "hit": 4, "n": 7}, {"m": 12, "abs": 8.1, "rel": 6.3, "hit": 5, "n": 7}], "cy": [{"y": 2020, "b": 4.1, "n": 14.9, "rel": -10.8, "partial": false}, {"y": 2021, "b": 177.0, "n": 24.1, "rel": 152.8, "partial": false}, {"y": 2022, "b": 24.4, "n": 4.3, "rel": 20.1, "partial": false}, {"y": 2023, "b": 27.3, "n": 20.0, "rel": 7.3, "partial": false}, {"y": 2024, "b": 51.7, "n": 8.8, "rel": 42.9, "partial": false}, {"y": 2025, "b": -34.7, "n": 10.5, "rel": -45.2, "partial": false}, {"y": 2026, "b": 33.8, "n": -10.7, "rel": 44.5, "partial": true}], "dd": [{"co": "Creative Newtech", "peak": "Dec 2024", "fp": 7, "y1": 79}, {"co": "Holmarc Opto-Mechatronics", "peak": "Nov 2024", "fp": -47, "y1": -12}, {"co": "Maestros Electronics & Telecommunications Systems", "peak": "Jan 2025", "fp": -34, "y1": 14}, {"co": "Novateor Research Laboratories", "peak": "May 2025", "fp": -39, "y1": 21}], "win": {"FebMar": {"mean": -9.8, "median": -16.8, "hit": 2, "n": 7}, "AprJul": {"mean": 10.6, "median": 10.8, "hit": 4, "n": 7}, "AugSep": {"mean": 1.9, "median": -5.0, "hit": 2, "n": 6}, "OctDec": {"mean": 27.3, "median": 24.4, "hit": 5, "n": 7}, "SepNov": {"mean": 10.3, "median": 1.1, "hit": 4, "n": 7}, "JanMar": {"mean": -2.4, "median": -14.2, "hit": 2, "n": 7}}, "ytd": {"b": 33.8, "n": -10.7}, "notes": {"2020": "+4.1% against +14.9%, on Creative Newtech alone (+4%).", "2021": "+177.0% against +24.1%. Creative Newtech +315% as demand for IT and home electronics surged during the pandemic.", "2022": "+24.4% against +4.3%. Creative Newtech +24%.", "2023": "+27.3% against +20.0%. Creative Newtech +35%; Holmarc listed on the SME platform in September.", "2024": "+51.7% against +8.8%. Holmarc +85%, Creative Newtech +23% in the small-cap boom.", "2025": "\u221234.7% against +10.5%. Holmarc \u221247%, Creative Newtech \u221222% in the small-cap sell-off.", "2026": "+33.8% against a Nifty \u221210.7%. Creative Newtech +55% on own brands and smart-warehousing projects; Holmarc +14%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

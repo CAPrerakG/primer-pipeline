@@ -1,0 +1,25 @@
+BASKET 3 names
+2012: basket +45 nifty +28 rel +17 | n=2 median +52 | TOP Sunshield Chemical +87, NOCIL Limited +17 | BOTTOM 
+2013: basket +14 nifty +7 rel +7 | n=2 median +15 | TOP Sunshield Chemical +46, NOCIL Limited -16 | BOTTOM 
+2014: basket +144 nifty +31 rel +112 | n=2 median +144 | TOP Sunshield Chemical +152, NOCIL Limited +136 | BOTTOM 
+2015: basket +91 nifty -4 rel +95 | n=2 median +83 | TOP Sunshield Chemical +101, NOCIL Limited +64 | BOTTOM 
+2016: basket -11 nifty +3 rel -14 | n=2 median -9 | TOP NOCIL Limited +16, Sunshield Chemical -34 | BOTTOM 
+2017: basket +84 nifty +29 rel +55 | n=2 median +92 | TOP NOCIL Limited +171, Sunshield Chemical +14 | BOTTOM 
+2018: basket -30 nifty +3 rel -34 | n=2 median -29 | TOP NOCIL Limited -9, Sunshield Chemical -49 | BOTTOM 
+2019: basket -35 nifty +12 rel -47 | n=2 median -37 | TOP Sunshield Chemical -35, NOCIL Limited -39 | BOTTOM 
+2020: basket +54 nifty +15 rel +39 | n=2 median +62 | TOP Sunshield Chemical +83, NOCIL Limited +41 | BOTTOM 
+2021: basket +103 nifty +24 rel +79 | n=2 median +99 | TOP Sunshield Chemical +136, NOCIL Limited +62 | BOTTOM 
+2022: basket +8 nifty +4 rel +4 | n=2 median +4 | TOP Sunshield Chemical +8, NOCIL Limited +0 | BOTTOM 
+2023: basket +38 nifty +20 rel +18 | n=2 median +35 | TOP Sunshield Chemical +53, NOCIL Limited +17 | BOTTOM 
+2024: basket +8 nifty +9 rel -1 | n=2 median -3 | TOP Sunshield Chemical +6, NOCIL Limited -11 | BOTTOM 
+2025: basket -11 nifty +10 rel -22 | n=3 median -2 | TOP Sunshield Chemical +3, OCCL Limited -2, NOCIL Limited -37 | BOTTOM 
+2026: basket +42 nifty -11 rel +53 | n=3 median +38 | TOP OCCL Limited +52, Sunshield Chemical +38, NOCIL Limited +26 | BOTTOM 
+MONTH 4 avg +8.3 (12/15): worst years [('2019', -8.1), ('2023', -0.7), ('2025', -0.5)] best years [('2020', 19.7), ('2014', 19.8), ('2021', 21.2)]
+MONTH 7 avg +6.8 (12/16): worst years [('2019', -11.9), ('2012', -11.8), ('2013', -6.8)] best years [('2015', 19.6), ('2021', 20.2), ('2020', 27.0)]
+MONTH 2 avg -3.9 (5/15): worst years [('2025', -17.6), ('2016', -16.0), ('2019', -13.6)] best years [('2022', 1.6), ('2026', 1.8), ('2021', 4.6)]
+WIN FebMar: hit 5/15 median -1.9 | negative years [(2012, -17.6), (2013, -10.7), (2015, -1.9), (2016, -15.3), (2018, -0.7), (2019, -10.0), (2020, -10.5), (2023, -0.7), (2024, -9.6), (2025, -17.3)] | biggest [(2022, 25.3), (2014, 19.9)]
+WIN AprJul: hit 11/15 median +19.5 | negative years [(2013, -7.3), (2018, -20.2), (2019, -25.1), (2022, -2.9)] | biggest [(2021, 62.1), (2020, 54.7)]
+WIN AugSep: hit 6/14 median -0.6 | negative years [(2013, -7.8), (2017, -6.7), (2018, -9.8), (2021, -9.3), (2022, -0.3), (2023, -0.9), (2024, -15.7), (2025, -7.9)] | biggest [(2014, 38.3), (2012, 16.1)]
+WIN OctDec: hit 7/14 median -0.6 | negative years [(2014, -12.8), (2016, -2.6), (2018, -5.1), (2019, -12.8), (2020, -2.0), (2022, -8.5), (2025, -16.1)] | biggest [(2013, 55.7), (2017, 29.4)]
+WIN SepNov: hit 8/14 median +1.4 | negative years [(2014, -7.1), (2018, -15.9), (2021, -5.6), (2022, -6.5), (2023, -9.1), (2025, -14.1)] | biggest [(2013, 24.7), (2017, 23.7)]
+WIN JanMar: hit 7/15 median -3.5 | negative years [(2012, -18.1), (2013, -16.7), (2016, -23.3), (2018, -3.5), (2019, -17.6), (2020, -9.0), (2024, -8.2), (2025, -24.0)] | biggest [(2015, 17.3), (2014, 16.9)]

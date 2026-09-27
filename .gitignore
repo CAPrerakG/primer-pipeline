@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.log
+b1/prices.json

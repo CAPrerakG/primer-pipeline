@@ -1,0 +1,21 @@
+BASKET 3 names
+2012: basket -80 nifty +24 rel -104 | n=1 median -85 | TOP Mercury Ev-Tech Li -85 | BOTTOM 
+2014: basket -50 nifty +27 rel -77 | n=1 median -13 | TOP Mercury Ev-Tech Li -13 | BOTTOM 
+2018: basket -44 nifty +3 rel -47 | n=2 median -22 | TOP Mercury Ev-Tech Li +0, Servotech Renewabl -43 | BOTTOM 
+2019: basket -57 nifty +12 rel -69 | n=2 median -35 | TOP Mercury Ev-Tech Li -3, Servotech Renewabl -68 | BOTTOM 
+2020: basket +166 nifty +15 rel +151 | n=2 median +141 | TOP Servotech Renewabl +195, Mercury Ev-Tech Li +87 | BOTTOM 
+2021: basket +73 nifty +24 rel +48 | n=2 median +139 | TOP Servotech Renewabl +247, Mercury Ev-Tech Li +31 | BOTTOM 
+2022: basket +154 nifty +4 rel +149 | n=2 median +705 | TOP Mercury Ev-Tech Li +1301, Servotech Renewabl +110 | BOTTOM 
+2023: basket +406 nifty +20 rel +386 | n=2 median +640 | TOP Mercury Ev-Tech Li +897, Servotech Renewabl +382 | BOTTOM 
+2024: basket +27 nifty +9 rel +18 | n=2 median +47 | TOP Servotech Renewabl +117, Mercury Ev-Tech Li -24 | BOTTOM 
+2025: basket -53 nifty +10 rel -63 | n=3 median -52 | TOP Exicom Tele-System -51, Servotech Renewabl -52, Mercury Ev-Tech Li -59 | BOTTOM 
+2026: basket +15 nifty -11 rel +25 | n=3 median +8 | TOP Exicom Tele-System +39, Mercury Ev-Tech Li +8, Servotech Renewabl -8 | BOTTOM 
+MONTH 9 avg +9.4 (7/10): worst years [('2025', -3.2), ('2018', -1.9), ('2021', -0.7)] best years [('2024', 17.8), ('2022', 23.0), ('2017', 26.3)]
+MONTH 12 avg +4.6 (5/10): worst years [('2019', -14.2), ('2020', -8.7), ('2024', -6.4)] best years [('2018', 14.6), ('2021', 25.2), ('2022', 26.9)]
+MONTH 3 avg -12.4 (2/12): worst years [('2012', -42.8), ('2014', -24.0), ('2019', -20.5)] best years [('2025', -4.7), ('2021', 2.7), ('2018', 16.7)]
+WIN FebMar: hit 2/11 median -18.9 | negative years [(2012, -56.4), (2013, -19.3), (2019, -33.7), (2021, -2.2), (2022, -6.1), (2023, -31.5), (2024, -18.9), (2025, -27.8), (2026, -10.7)] | biggest [(2020, 21.4), (2018, 8.4)]
+WIN AprJul: hit 5/11 median -1.3 | negative years [(2012, -33.0), (2014, -52.3), (2018, -33.4), (2019, -5.1), (2022, -6.4), (2025, -1.3)] | biggest [(2023, 179.5), (2020, 67.7)]
+WIN AugSep: hit 5/9 median +6.1 | negative years [(2018, -4.6), (2019, -22.0), (2021, -12.8), (2025, -8.4)] | biggest [(2022, 79.2), (2023, 23.9)]
+WIN OctDec: hit 3/9 median -11.5 | negative years [(2017, -3.7), (2018, -16.1), (2019, -27.2), (2020, -20.5), (2024, -11.5), (2025, -31.2)] | biggest [(2021, 58.9), (2023, 29.1)]
+WIN SepNov: hit 5/9 median +9.1 | negative years [(2018, -26.5), (2019, -10.6), (2020, -8.6), (2025, -29.7)] | biggest [(2023, 39.0), (2021, 27.1)]
+WIN JanMar: hit 3/11 median -17.9 | negative years [(2012, -87.0), (2013, -21.6), (2018, -2.1), (2019, -32.8), (2021, -1.9), (2024, -18.1), (2025, -33.0), (2026, -17.9)] | biggest [(2020, 42.8), (2022, 13.9)]

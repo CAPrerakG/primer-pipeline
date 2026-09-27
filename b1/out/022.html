@@ -1,0 +1,602 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Mobility and Charging Primer</title>
+<meta name="description" content="Industry 22 of 278: EV chargers, charging networks and electric-mobility suppliers. How a charging station actually earns money, the four listed companies, PM E-DRIVE&#x27;s 72,300-station plan, and why this basket rose 406% in 2023 and fell 53% in 2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Electric Mobility &amp; Charging · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 22 of 278 · Auto family</div>
+  <h1>Electric Mobility &amp; Charging</h1>
+  <p class="lede">The plumbing of the electric-vehicle shift: the chargers on the wall and the highway, the power electronics inside them, and the networks that operate them. India has crossed 27,000 public charging points and has a government plan for 72,300 more. The listed companies here are small, volatile and, so far, better at raising expectations than profits.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 4 (Mercury EV-Tech moved in from Auto Electricals)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Auto Components</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">72,300</div><div class="l">Public charging stations planned under PM E-DRIVE with ₹2,000 cr of support, by March 2028</div></div>
+    <div class="stat"><div class="n">27,000+</div><div class="l">Public charging points already installed in India by 2026</div></div>
+    <div class="stat"><div class="n">₹8–15 lakh</div><div class="l">Cost of installing one 30–50 kW DC fast charger, including grid connection</div></div>
+    <div class="stat"><div class="n">+406% → −53%</div><div class="l">The basket's 2023 mania and 2025 reckoning: the cycle this primer is really about</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Selling the petrol pump of the electric age</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>An electric car needs a plug the way a petrol car needs a pump. Some plugs are slow and cheap, like the one at home that fills the battery overnight. Some are fast and expensive, like the ones on highways that fill it in half an hour. Somebody has to make those machines, and somebody else has to own them, plug them into the electricity grid, and charge drivers for the power. Making the machine is a factory business. Owning the plug is a property business: it only makes money if lots of cars use it every day.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>There are three different businesses in this bucket, and they should not be valued the same way.</p>
+    <ul>
+      <li><b>Charger manufacturers</b> (Exicom, Servotech, Ampvolts) sell hardware to carmakers, fleets, oil companies and charge-point operators. It is an equipment business with order books, tenders and price competition.</li>
+      <li><b>Charge-point operators</b> (Tata Power, Statiq, ChargeZone, Jio-bp, none listed here) own the stations. Their economics are all about utilisation: a 50 kW charger idle 20 hours a day loses money; the same charger at 60% is profitable.</li>
+      <li><b>EV component and vehicle makers</b> (Mercury EV-Tech) sit closer to 018 and 023.</li>
+    </ul>
+    <p>Policy is generous: PM E-DRIVE funds 72,300 stations with ₹2,000 cr and subsidies of 70–100% on upstream infrastructure at qualifying sites. The trap is that generous subsidies attract crowded bidding, and the listed names have thin margins, negative group-level profits (Exicom) or tender dependence (Servotech). The stocks moved 406% in 2023 and −53% in 2025 on the same underlying reality.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From a wall socket to a highway hub</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Type</th><th>Power</th><th>Where it goes</th><th>Cost and economics</th></tr></thead><tbody>
+    <tr><td>AC slow chargers (3.3–7.4 kW)</td><td>Low</td><td>Homes, offices, apartment parking; sold with cars</td><td>₹50,000–2 lakh installed; cheap, high volume, low margin</td></tr>
+    <tr><td>AC public chargers (7.4–22 kW)</td><td>Low-medium</td><td>Malls, offices, parking lots</td><td>Modest revenue per unit; often a site-owner amenity</td></tr>
+    <tr><td>DC fast chargers (30–60 kW)</td><td>Medium</td><td>Urban hubs, fuel stations, fleet depots</td><td>₹8–15 lakh installed; the workhorse of public charging</td></tr>
+    <tr><td>DC ultra-fast (120–400 kW)</td><td>High</td><td>Highway corridors, bus and truck depots</td><td>Much costlier, needs a dedicated transformer; used by long-distance and commercial traffic</td></tr>
+    <tr><td>Bus and truck charging</td><td>Very high</td><td>State transport depots, logistics hubs</td><td>Tied to electric-bus contracts (see 019)</td></tr>
+    <tr><td>Battery swapping</td><td>—</td><td>Two- and three-wheelers, delivery fleets</td><td>Swaps in minutes; needs standardised packs</td></tr>
+    <tr><td>Power electronics and EV components</td><td>—</td><td>Inside chargers and vehicles: converters, controllers, chargers on board</td><td>Exicom's telecom-power heritage; Mercury's components</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A charger maker is like a company that builds petrol pumps: it sells machines to whoever is opening a station. A charge-point operator is like the person who owns the petrol pump: the machine matters less than the corner it stands on. The best corner in a city earns many times what an identical machine earns on a quiet road.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The 7.4 kW box in an apartment parking bay that came free with a Nexon EV. The four DC chargers behind a highway dhaba where three cars wait on a Sunday evening. The row of 120 kW units at a city bus depot charging overnight. The swapping kiosk where a delivery rider changes a battery in two minutes instead of waiting an hour.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From semiconductors to a charging session</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Components</h4><div class="an">The electronics</div>Power semiconductors (IGBT, silicon carbide), transformers, connectors, cables, cooling, software.<div class="who">Global semiconductor makers; Indian cable and connector suppliers</div><div class="m">Imported content is high</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Charger manufacturing</h4><div class="an">The machine</div>AC and DC chargers, power modules, testing and certification.<div class="who">Exicom, Servotech, Ampvolts, Delta, ABB, Tata Power's own units</div><div class="m">Tender-driven; price competitive</div></div>
+    <div class="stage"><div class="no">03</div><h4>Site development</h4><div class="an">The corner</div>Land or parking rights, grid connection, transformer, civil work, approvals.<div class="who">Oil marketing companies, malls, highway operators, municipalities</div><div class="m">Grid connection is the bottleneck</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Charge-point operation</h4><div class="an">The pump owner</div>Owning and running chargers, apps, payments, uptime, electricity contracts.<div class="who">Tata Power EZ Charge, Statiq, ChargeZone, Jio-bp pulse, Zeon</div><div class="m">Utilisation decides returns</div></div>
+    <div class="stage"><div class="no">05</div><h4>Electricity supply</h4><div class="an">The fuel</div>Distribution companies, special EV tariffs, solar and storage add-ons.<div class="who">Discoms; solar and BESS suppliers</div><div class="m">Tariff and demand charges</div></div>
+    <div class="stage"><div class="no">06</div><h4>Drivers and fleets</h4><div class="an">The customer</div>Car owners, taxi and delivery fleets, buses and trucks.<div class="who">EV owners; fleet operators</div><div class="m">Fleets charge daily; private cars rarely</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Components:</b> a fast charger is mostly a big power converter, turning grid AC into the DC a battery wants, using expensive semiconductors.</li>
+    <li><b>Manufacturing:</b> companies assemble those modules into a weatherproof box with a screen, a cable and software.</li>
+    <li><b>Site:</b> the hardest part is not the box but getting enough electricity to the spot, which needs a transformer and permission.</li>
+    <li><b>Operating:</b> whoever owns the charger sells electricity by the unit, plus a margin, through an app.</li>
+    <li><b>Customers:</b> fleets are the good customers because they charge every day; private cars mostly charge at home, cheaply.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The money in this chain is unevenly distributed. Hardware is competitive and increasingly commoditised, with Chinese and global suppliers setting prices. Operating is a real-estate and utilisation business that needs patient capital. The one durable position is being designed into a carmaker's or fleet's platform (Exicom's sole-supplier AC contract) or winning repeat public-sector tenders (Servotech). Order books are worth watching, but ask what margin sits inside them.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The four listed companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it does</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Exicom Tele-Systems (~₹2,260 cr)</td><td>Two businesses: EV chargers (AC and DC, India and overseas) and critical power systems for telecom and data centres, its older and steadier base. Listed March 2024; bought Australia's Tritium, a high-power charger maker, out of administration in 2024.</td><td>Standalone revenue ₹237 cr (+57%), EBITDA ₹21 cr (8.8% margin); consolidated revenue ₹331 cr (+61%) with the group EBITDA loss narrowing to ₹22 cr from ₹39 cr. Order book ₹1,400 cr. India EV revenue +15%; sole supplier of 7.4 kW AC chargers to a leading carmaker; Tritium bookings doubled to $20 mn. 2026 +39%; −67% from its July 2024 peak.</td></tr>
+    <tr><td>Servotech Renewable Power (~₹1,650 cr)</td><td>Formerly Servotech Power Systems: solar, battery storage and EV chargers, heavily tender-led into public-sector and oil-company sites.</td><td>Standalone revenue ₹208 cr (+66%), EBITDA ₹23 cr (+63%), profit ₹11 cr (+47%); consolidated profit +74.5%. Claims 67% of recent PSU and oil-company DC fast-charger tenders, including 375 units of 60 kW and 48 of 120 kW. 2026 −8%; −64% from its September 2024 peak.</td></tr>
+    <tr><td>Mercury EV-Tech (~₹740 cr)</td><td>Gujarat-based maker of electric vehicles and components (batteries, motors, three-wheelers and small commercial EVs); moved in from Auto Electricals.</td><td>FY26 consolidated revenue ₹102 cr, profit ₹4.4 cr; Q1 FY27 income ₹33.7 cr, profit ₹1.65 cr (+30%); a group merger completed. 2026 +8%; −71% from its December 2023 peak.</td></tr>
+    <tr><td>Ampvolts (tiny)</td><td>Vadodara-based maker of residential and commercial AC chargers and DC fast chargers.</td><td>2026 +10%; −66% from its January 2025 peak. Too small and illiquid to analyse.</td></tr>
+  </tbody></table></div>
+  <h3>The bigger players, listed elsewhere or private</h3>
+  <ul>
+    <li><b>Tata Power</b> (utilities): EZ Charge, one of India's largest networks.</li>
+    <li><b>Jio-bp pulse</b> (Reliance–BP): chargers at fuel stations and mobility hubs.</li>
+    <li><b>ChargeZone, Statiq, Zeon:</b> private charge-point operators.</li>
+    <li><b>ABB, Delta, Siemens:</b> global charger makers competing in Indian tenders.</li>
+    <li><b>Vehicle makers</b> (017, 018, 019): Tata, Mahindra, Ather, Ola and Olectra all install their own charging networks.</li>
+  </ul>
+  <div class="box warn"><span class="tag">Classification notes</span><p><b>Exicom</b> earns a large share of revenue from telecom and data-centre power, so it is only partly an EV play; <b>Servotech</b> is largely a solar and storage company with an EV-charger line; <b>Mercury EV-Tech</b> is a vehicle and component maker that fits 018 or 023 better. The honest label for this section is "EV-adjacent small caps". None of India's largest charging networks is listed here, which is the single most important thing to know before using this basket as an EV-infrastructure proxy.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>The charging-station arithmetic</h2>
+  <p>Take one 60 kW DC charger costing about ₹12 lakh installed. Suppose it delivers power for four hours a day at an average 40 kW, which is 160 units a day, and the operator earns a spread of ₹6 per unit after electricity and demand charges. That is roughly ₹960 a day, or ₹3.5 lakh a year, before rent, maintenance, payment fees and downtime. Payback lands in the range of four to five years. Double the usage and payback halves; halve it and the asset never pays for itself.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th class="num">Margin profile*</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>Charger manufacturing (India)</td><td class="num">5–12% EBITDA</td><td>Tender pricing, component costs, scale; Exicom's standalone margin was 8.8% in Q1 FY27</td></tr>
+    <tr><td>High-power chargers (export)</td><td class="num">Loss-making to mid-teens</td><td>Volumes and service; Tritium's turnaround is the swing factor for Exicom's group numbers</td></tr>
+    <tr><td>Charge-point operation</td><td class="num">Utilisation-driven</td><td>Location, fleet contracts, electricity tariffs, uptime</td></tr>
+    <tr><td>Solar and storage adjacent (Servotech)</td><td class="num">8–12%</td><td>Government schemes and project execution</td></tr>
+    <tr><td>EV components and vehicles (Mercury)</td><td class="num">Low single digits</td><td>Small scale; competition from larger makers</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative, from company filings and disclosed quarters.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A charging network is a chain of tiny petrol pumps where the fuel margin is thin and the rent is real. The winner is not whoever installs the most machines but whoever installs them where cars already stop: fleet depots, highways with food, malls with long dwell times.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Power semiconductors (IGBT, silicon carbide)</td><td>Global makers; imported</td><td>All charger makers</td><td>Available; cost and lead times matter for margins</td></tr>
+    <tr><td>Transformers and switchgear</td><td>Indian electrical equipment makers</td><td>Site developers</td><td>Long lead times during the power-equipment boom</td></tr>
+    <tr><td>Grid connection and load sanction</td><td>Discoms</td><td>Charge-point operators</td><td>The single biggest bottleneck to new sites</td></tr>
+    <tr><td>Electricity tariffs and demand charges</td><td>State regulators</td><td>Operators</td><td>Special EV tariffs in many states; demand charges hurt low-utilisation sites</td></tr>
+    <tr><td>Land and site rights</td><td>Oil companies, malls, municipalities</td><td>Operators</td><td>Revenue-share models are standard</td></tr>
+    <tr><td>Battery cells (for swapping and storage)</td><td>China, Korea</td><td>Swapping and BESS players</td><td>Imported; prices easing</td></tr>
+    <tr><td>Subsidy disbursement</td><td>PM E-DRIVE and state schemes</td><td>Tender-led suppliers</td><td>₹2,000 cr allocated; disbursement pace is the risk</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Tenders, budgets and the March rush</h2>
+  <ul>
+    <li><b>January–March:</b> government and public-sector buyers push to spend allocated budgets, so order announcements cluster before the financial year ends.</li>
+    <li><b>April–June:</b> new scheme allocations and fresh tender cycles begin.</li>
+    <li><b>Monsoon:</b> civil work and installations slow, which pushes revenue recognition into later quarters.</li>
+    <li><b>Festive quarter:</b> EV sales peak, which lifts home-charger volumes sold with vehicles.</li>
+    <li><b>Scheme deadlines:</b> PM E-DRIVE runs to March 2028, so the pace of approvals and disbursement sets the order flow.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty. The history is short and patchy.</figcaption></figure>
+  <div><p><b>Basket:</b> 3 names (Exicom Tele-Systems Ltd., Servotech Renewable Power System Ltd, Mercury Ev-Tech Limited), equal-weighted, monthly from Jan 2012, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Sep +9.4 pts (beat in 7 of 10 years); Dec +4.6 pts (beat in 5 of 10 years); Jun +4.3 pts (beat in 8 of 13 years).</li><li><b>Weakest months:</b> Mar -12.4 pts (beat in 2 of 12 years); Oct -6.3 pts (beat in 3 of 9 years); Feb -3.9 pts (beat in 3 of 11 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 2 of 11 years (median -18.9 pts); Apr–Jul beat the Nifty in 5 of 11 years (median -1.3 pts); Aug–Sep beat the Nifty in 5 of 9 years (median +6.1 pts); Oct–Dec beat the Nifty in 3 of 9 years (median -11.5 pts); Sep–Nov beat the Nifty in 5 of 9 years (median +9.1 pts); Jan–Mar beat the Nifty in 3 of 11 years (median -17.9 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about 0.0 points.</p><p><b>Reading it:</b> be careful. The basket has only a few years of usable history (gaps before 2018, when these companies were dormant or differently named) and three thinly traded members. Within that, March is consistently bad (2 of 12, average −12.4 points) and September good (7 of 10, +9.4). April–July shows a median of −1.3 but a mean of +19.8, which tells you the distribution is driven by a few explosive years (2023: +179.5 points). Treat every number here as micro-cap behaviour, not an industry signal.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>The mean and median disagree,</b> which is the most useful fact here. April–July has a mean of +19.8 points but a median of −1.3, because 2023 (+179.5) and 2020 (+67.7) dominate the average. In a basket like this, the median is the honest number.</li>
+    <li><b>March is reliably bad</b> (2 of 12, average −12.4), the classic micro-cap year-end pattern seen in 021.</li>
+    <li><b>September is the best month</b> (7 of 10, +9.4), which coincides with the festive EV build and second-half tender awards.</li>
+    <li><b>October–December has been poor</b> (3 of 9, median −11.5), including −31.2 in 2025 as the EV-infrastructure story de-rated.</li>
+    <li><b>Pre-2018 data is unusable:</b> the companies were dormant or under different names, which is why several years are missing from the table.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Don't trade this basket on the calendar. Trade it, if at all, on order flow and disbursement: tender awards, PM E-DRIVE approvals and the gap between order book and revenue. The 2023 to 2025 round trip shows what happens when a policy narrative outruns cash flows.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>EV sales:</b> about 6% of cars and 6% of two-wheelers in 2026 (see 017, 018). Charging demand follows the installed fleet, not the annual sales number.</li>
+    <li><b>Fleet electrification:</b> taxis, delivery fleets and buses charge daily and are the anchor customers for public charging.</li>
+    <li><b>PM E-DRIVE and state schemes:</b> ₹2,000 cr for 72,300 stations, with 70–100% subsidies on upstream infrastructure at qualifying sites.</li>
+    <li><b>Grid access:</b> transformer availability and load sanction decide how fast sites open.</li>
+    <li><b>Tender pricing:</b> aggressive bidding compresses hardware margins; Servotech's tender share is a double-edged achievement.</li>
+    <li><b>Component costs:</b> power semiconductors and imported modules.</li>
+    <li><b>Export demand:</b> Exicom's Tritium exposes it to global high-power charger demand and its price war.</li>
+    <li><b>Standards:</b> connector and communication standards, and any move to standardised swappable batteries.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of the members with usable price history (one stock before 2018, two from 2018, three from 2025 with Exicom), monthly returns capped at ±50%, price only; 2026 is to 18 September. Years with no usable data are omitted, which is itself the lesson: this industry barely existed as a listed group before 2018.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a policy-narrative cycle</h3>
+  <ol>
+    <li><b>A scheme is announced</b> (FAME-II, state EV policies, PM E-DRIVE). Every company with a charger product re-rates, regardless of its share of the market.</li>
+    <li><b>Order announcements</b> arrive, often without disclosed margins or delivery schedules. Prices run far ahead of revenue (2022–23).</li>
+    <li><b>Execution reality:</b> grid connections are slow, tenders are priced aggressively, and revenue converts more slowly than announced. Margins disappoint.</li>
+    <li><b>De-rating</b> (2025), after which the genuine businesses keep growing revenue (Exicom +61%, Servotech +66%) while the market ignores them for a while.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Order book announcements move prices more than profits do.</b></li>
+    <li><b>The largest operators are not listed here,</b> so the basket rarely reflects actual charging growth.</li>
+    <li><b>Revenue growth is real but low-margin:</b> 60%+ growth with single-digit margins and group-level losses.</li>
+    <li><b>Drawdowns are brutal:</b> all four members are 64–71% below their peaks even after 2026's recovery.</li>
+  </ul>
+  <h3>Drawdowns from each stock's peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>China built it first, and cheapest</h2>
+  <p>China has more public charging points than the rest of the world combined, built through utility and state-backed rollouts alongside its EV boom. Europe mandates charging coverage along major roads. The United States is consolidating around Tesla's connector after other makers adopted it. India is early: more than 27,000 public points for a fleet that is still small, with the market forecast to grow from about $0.71 bn in 2025 to $2.48 bn by 2030.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Approach</th><th>Lesson for India</th></tr></thead><tbody>
+    <tr><td>China</td><td>State-led rollout, huge scale, very low hardware prices</td><td>Hardware becomes a commodity fast</td></tr>
+    <tr><td>Europe</td><td>Mandated coverage on highways; high electricity prices</td><td>Regulation can force build-out, but utilisation still decides profit</td></tr>
+    <tr><td>United States</td><td>Tesla's network opened to others; standard consolidation</td><td>Standards matter more than machines</td></tr>
+    <tr><td>India</td><td>Subsidy-led (PM E-DRIVE), oil companies and utilities as site owners</td><td>The site owner, not the charger maker, captures the long-term rent</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Start-ups to incumbents:</b> the earliest Indian networks were start-ups; the largest are now Tata Power and Jio-bp, which own sites and capital.</li>
+    <li><b>Hardware to service:</b> as charger prices fall, value moves to uptime, software and site rights.</li>
+    <li><b>Distress creates bargains:</b> Exicom bought Tritium out of administration in 2024, buying global high-power technology cheaply, and is still working through its losses.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Higher power:</b> 120–400 kW units for cars and megawatt-class charging for trucks and buses.</li>
+    <li><b>Battery swapping</b> for two- and three-wheelers and delivery fleets, where downtime is the real cost.</li>
+    <li><b>Charging plus storage:</b> pairing chargers with batteries to avoid demand charges and grid upgrades; Servotech's storage line points this way.</li>
+    <li><b>Smart charging and V2G:</b> scheduling charging to cheap hours, and eventually feeding power back to the grid.</li>
+    <li><b>Plug-and-charge:</b> the car authenticates and pays automatically, removing app friction.</li>
+    <li><b>Standardisation:</b> connector and communication standards, and the possibility of standard swappable packs mandated for small vehicles.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>PM E-DRIVE charging component</td><td>₹2,000 cr for 72,300 public stations to March 2028; 100% subsidy on upstream infrastructure at government, residential, hospital and education sites with free public access; 70% at public-sector fuel outlets, ports, toll plazas and highway amenities</td><td>The main demand driver for charger makers</td></tr>
+    <tr><td>Charging guidelines</td><td>Public charging is a de-licensed activity; anyone may set up a station meeting standards</td><td>Low entry barriers, many small operators</td></tr>
+    <tr><td>Electricity tariffs for charging</td><td>Special EV tariffs and concessional demand charges in many states</td><td>Directly sets operator margins</td></tr>
+    <tr><td>GST</td><td>5% on EVs (see 017); charging services taxed as a service</td><td>Affordability and operator pricing</td></tr>
+    <tr><td>BIS and AIS standards</td><td>Connector, safety and metering standards for chargers</td><td>Quality floor; certification cost</td></tr>
+    <tr><td>State EV policies</td><td>Capital subsidies, land at concessional rates, targets per city</td><td>Local demand pockets</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: revenue arriving, profits still thin</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Orders</td><td>Strong</td><td>Exicom's ₹1,400 cr book; Servotech's claimed 67% share of recent public-sector fast-charger tenders</td></tr>
+    <tr><td>Revenue</td><td>Growing fast</td><td>Exicom consolidated +61%, Servotech standalone +66%</td></tr>
+    <tr><td>Profitability</td><td>Thin or negative</td><td>Exicom group EBITDA still −₹22 cr; Servotech profit ₹11 cr on ₹208 cr</td></tr>
+    <tr><td>Infrastructure</td><td>Expanding</td><td>27,000+ public points; 72,300 more planned by March 2028</td></tr>
+    <tr><td>Stocks</td><td>Recovering from a crash</td><td>+15% in 2026 after −53% in 2025; still 64–71% below peaks</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The industry is finally converting policy into orders and orders into revenue, which is genuine progress. What is missing is profit: group-level losses at Exicom and single-digit margins at Servotech. The question for the next four quarters is whether growth at these prices can carry fixed costs, and whether Tritium stops consuming cash. If you want exposure to India's charging build-out with less volatility, the site owners (Tata Power, and the oil marketing companies) capture more of the long-term economics than the box makers do.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>PM E-DRIVE approvals and disbursement</td><td>Heavy industries ministry</td><td>Converts policy into orders</td></tr>
+    <tr><td>Public charging point count</td><td>Ministry and industry trackers</td><td>Build-out pace</td></tr>
+    <tr><td>EV registrations (cars, two-wheelers, buses)</td><td>Vahan, monthly</td><td>The charging demand base</td></tr>
+    <tr><td>Order book to revenue conversion</td><td>Quarterly results</td><td>The gap that caused the 2025 de-rating</td></tr>
+    <tr><td>Exicom's Tritium losses</td><td>Quarterly</td><td>The swing factor in group profitability</td></tr>
+    <tr><td>Tender prices per kW</td><td>Tender documents</td><td>Margin pressure</td></tr>
+    <tr><td>State EV tariffs and demand charges</td><td>Regulatory orders</td><td>Operator economics</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the EV build-out shows up</h2>
+  <ul>
+    <li><b>017, 018, 019:</b> the vehicle makers whose EVs create charging demand.</li>
+    <li><b>Power utilities and discoms:</b> Tata Power's charging network; grid upgrades.</li>
+    <li><b>Oil marketing companies:</b> forecourts converting to charging hubs.</li>
+    <li><b>Electrical equipment:</b> transformers, switchgear and cables.</li>
+    <li><b>Auto components</b> (023, 024): on-board chargers, motors and controllers.</li>
+    <li><b>Battery makers and storage:</b> cells for swapping and site storage.</li>
+    <li><b>Elantas and insulation materials</b> (013): the electrical chain behind motors and transformers.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the order book, and what gross margin is embedded in it?</li>
+    <li>How long does an order take to convert into revenue, and what delays it?</li>
+    <li>What share of revenue is EV charging versus other businesses (telecom power, solar, storage)?</li>
+    <li>What are realisations per kW, and how have tender prices moved?</li>
+    <li>(Exicom) When does Tritium break even, and what is the cash burn until then?</li>
+    <li>(Servotech) How dependent is the order pipeline on a few public-sector buyers?</li>
+    <li>How much of the subsidy is received directly versus by the customer?</li>
+    <li>What is the working-capital cycle on government orders?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Order announcements without value, margin or timeline.</li>
+    <li>Revenue growth with falling gross margins.</li>
+    <li>Receivables from government buyers stretching beyond a year.</li>
+    <li>Equity issuance to fund working capital at low margins.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Charging is the picks-and-shovels play on EVs."</td><td>Only if you own the shovels people actually use. Hardware is commoditising, and the largest Indian networks are not in this basket.</td></tr>
+    <tr><td>"The 72,300-station plan guarantees demand."</td><td>It funds infrastructure, but the tenders are competitive and disbursement is slow; margins, not volumes, are the constraint.</td></tr>
+    <tr><td>"These companies grew revenue 60%, so the stocks are cheap."</td><td>Exicom's group EBITDA is still negative and Servotech's net margin is about 5%. Growth without margin is not earnings.</td></tr>
+    <tr><td>"Battery swapping will make charging obsolete."</td><td>Swapping works for small vehicles and fleets with standard packs; cars, buses and trucks will still need high-power charging.</td></tr>
+    <tr><td>"Public charging is where EV owners charge."</td><td>Most private cars charge at home overnight. Public charging is driven by fleets and long-distance travel, which is why depot and highway sites matter most.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. CPO, utilisation" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Hardware and technology</h3><dl>
+    <dt>AC charger</dt><dd>A slow charger that feeds alternating current to the car's on-board charger; cheap, used at homes and offices.</dd>
+    <dt>DC fast charger</dt><dd>A charger that converts AC to DC itself and feeds the battery directly; far faster and costlier.</dd>
+    <dt>kW (kilowatt)</dt><dd>The power rating; roughly, how fast a charger fills a battery.</dd>
+    <dt>kWh (unit)</dt><dd>The energy delivered; what the driver actually pays for.</dd>
+    <dt>On-board charger</dt><dd>The converter inside the vehicle used for AC charging.</dd>
+    <dt>Power module</dt><dd>The building block of a DC charger; several combine to reach higher power.</dd>
+    <dt>IGBT / silicon carbide</dt><dd>Power semiconductors that switch high currents; the costliest components.</dd>
+    <dt>Connector standard</dt><dd>The plug type and communication protocol a charger uses.</dd>
+    <dt>Plug-and-charge</dt><dd>Automatic authentication and payment when the cable is plugged in.</dd>
+    <dt>Battery swapping</dt><dd>Exchanging a depleted pack for a charged one (see 018).</dd>
+    <dt>V2G (vehicle-to-grid)</dt><dd>Letting a parked EV feed power back to the grid.</dd>
+    <dt>BESS</dt><dd>Battery energy storage system; used at charging sites to avoid grid upgrades.</dd>
+    <dt>Megawatt charging</dt><dd>Very high-power charging being developed for trucks and buses.</dd>
+  </dl>
+  <h3>Business and operations</h3><dl>
+    <dt>CPO (charge point operator)</dt><dd>The company that owns and runs chargers.</dd>
+    <dt>EMSP</dt><dd>E-mobility service provider: the app or account through which a driver pays, sometimes separate from the CPO.</dd>
+    <dt>Utilisation</dt><dd>The share of the day a charger is actually delivering power; the key profit driver.</dd>
+    <dt>Dwell time</dt><dd>How long a driver stays at a location; long dwell suits slower chargers.</dd>
+    <dt>Demand charge</dt><dd>A fixed electricity charge based on peak load, which punishes low-utilisation sites.</dd>
+    <dt>Load sanction</dt><dd>Permission from the distribution company for the site's electrical load.</dd>
+    <dt>Revenue-share model</dt><dd>Paying a site owner a share of charging revenue instead of rent.</dd>
+    <dt>Uptime</dt><dd>The share of time chargers work; the main complaint of EV drivers.</dd>
+    <dt>Site host</dt><dd>The owner of the land or parking where a charger sits; usually paid rent or a revenue share.</dd>
+    <dt>Depot charging</dt><dd>Charging a fleet overnight at its own yard; the most profitable and predictable use case.</dd>
+    <dt>Opportunity charging</dt><dd>Short top-ups while a vehicle is parked during the day, common for buses and taxis.</dd>
+    <dt>kWh throughput</dt><dd>Units of electricity a charger delivers in a period; the revenue driver an operator tracks daily.</dd>
+    <dt>Tariff spread</dt><dd>The margin between what the operator pays the discom and charges the driver.</dd>
+    <dt>Roaming / interoperability</dt><dd>Using one app or card across different operators' networks.</dd>
+    <dt>Range anxiety</dt><dd>The fear of running out of charge; what public charging density is meant to cure.</dd>
+    <dt>Grid connection</dt><dd>The physical and contractual link to the distribution network; usually the longest step in opening a site.</dd>
+    <dt>Order book</dt><dd>Confirmed orders yet to be delivered (see 019).</dd>
+    <dt>Tender-led business</dt><dd>Revenue won through competitive public bidding; volume at thin margins.</dd>
+    <dt>Upstream infrastructure</dt><dd>The transformer, cabling and civil work behind the charger; what PM E-DRIVE mostly subsidises.</dd>
+  </dl>
+  <h3>Policy</h3><dl>
+    <dt>PM E-DRIVE</dt><dd>The current central EV scheme, including ₹2,000 cr for public charging (see 018).</dd>
+    <dt>FAME-II</dt><dd>The earlier scheme that funded the first charging stations (see 018).</dd>
+    <dt>De-licensed activity</dt><dd>A business anyone may enter without a licence; public charging is one.</dd>
+    <dt>EV tariff</dt><dd>A special, usually lower, electricity tariff for charging stations.</dd>
+    <dt>AIS / BIS standards</dt><dd>Indian automotive and product standards for chargers (see 018, 021).</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>EV penetration</dt><dd>See 017 and 018.</dd>
+    <dt>Electric buses and gross-cost contracts</dt><dd>See 019.</dd>
+    <dt>Story stock / order book risk</dt><dd>See 021 and 016.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What are the three different businesses inside this section?</summary><p>Charger manufacturing, charge-point operation, and EV components or vehicles. Only the first and third are listed here.</p></details>
+  <details class="q"><summary>2. What decides whether a charging station makes money?</summary><p>Utilisation: a 60 kW charger used four hours a day pays back in four to five years; idle, it never does.</p></details>
+  <details class="q"><summary>3. What does PM E-DRIVE fund?</summary><p>72,300 public charging stations with ₹2,000 cr, subsidising 70–100% of upstream infrastructure at qualifying sites, to March 2028.</p></details>
+  <details class="q"><summary>4. Why did the basket rise 406% in 2023 and fall 53% in 2025?</summary><p>A policy narrative and order announcements re-rated every EV-adjacent small cap; execution, margins and disbursement then disappointed.</p></details>
+  <details class="q"><summary>5. What is Exicom's non-EV business, and why does it matter?</summary><p>Critical power systems for telecom and data centres, its older, steadier base; the EV business alone would not support the company.</p></details>
+  <details class="q"><summary>6. What is the risk in Servotech's tender success?</summary><p>Tenders are won on price, so a high share of public-sector awards can mean thin margins and concentrated receivables.</p></details>
+  <details class="q"><summary>7. Why is the median more useful than the mean in this basket's seasonality?</summary><p>Because a couple of explosive years (April–July 2023 at +179.5 points) drag the average far above the typical year.</p></details>
+  <details class="q"><summary>8. Where do most private EV owners charge?</summary><p>At home, overnight. Public charging demand comes mainly from fleets and long-distance travel.</p></details>
+  <details class="q"><summary>9. What did Exicom buy in 2024, and why?</summary><p>Tritium, an Australian high-power charger maker, out of administration, acquiring global technology cheaply; it is still loss-making.</p></details>
+  <details class="q"><summary>10. Who captures the long-term economics of charging?</summary><p>Site owners and operators with high-utilisation locations, not the makers of the hardware, which is commoditising.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket vs NSE:NIFTY, monthly returns capped at ±50%; years without usable data are omitted.</li>
+    <li>Companies: <a href="https://www.business-standard.com/content/press-releases-ani/exicom-opens-fy27-with-order-wins-across-both-businesses-as-revenue-grows-sharply-year-on-year-126081001157_1.html">Exicom Q1 FY27 and order book</a>; <a href="https://scanx.trade/stock-market-news/companies/exicom-tele-systems-q1-results-revenue-rises-to-3-3b-net-loss-narrows-yoy/47897433">Exicom results summary</a>; <a href="https://ipocentral.in/servotech-renewable-q1-fy27-results-performance/">Servotech Q1 FY27</a>; <a href="https://solarquarter.com/2026/07/22/servotech-renewable-power-reports-58-consolidated-revenue-growth-in-q1-fy27-driven-by-clean-energy-business/">Servotech consolidated growth</a>; <a href="https://www.whalesbook.com/corporate-news/English/auto/Mercury-EV-Tech-Reports-FY26-Audited-Results-Consolidated-Net-Profit-Rs-439-Cr/6a1b2f29de28c5c0a9137857">Mercury EV-Tech FY26</a>; <a href="https://www.business-standard.com/amp/markets/capital-market-news/mercury-ev-tech-consolidated-net-profit-rises-29-92-in-the-june-2026-quarter-126081400413_1.html">Mercury Q1 FY27</a>; <a href="https://ampvolts.com/">Ampvolts</a>.</li>
+    <li>Policy and infrastructure: <a href="https://www.newsonair.gov.in/centre-issues-guidelines-for-rollout-of-72300-ev-charging-stations-under-pm-e-drive/">PM E-DRIVE charging guidelines</a>; <a href="https://www.outlookbusiness.com/ampstories/industry/centre-launches-guidelines-for-72300-ev-charging-stations-under-pm-e-drive-scheme-details-here">subsidy structure</a>; <a href="https://www.meraev.com/blog/rs-503-crore-for-4874-new-ev-chargers-where-indias-charging-network-actually-stands-in-mid-2026">where the network stands in 2026</a>; <a href="https://www.meraev.com/blog/india-27000-ev-charging-stations-2026-network-map">27,000+ stations</a>.</li>
+    <li>Market and economics: <a href="https://www.mordorintelligence.com/industry-reports/india-electric-vehicle-charging-station-market">market size and growth</a>; <a href="https://globalsblog.com/auto/ev-charging-station-business-india-2026">charger costs and utilisation economics</a>; <a href="https://chargingstationlocator.com/top-10-ev-charging-companies-in-india-2026/">the main charge-point operators</a>.</li>
+    <li>Further reading: <a href="https://www.nexdigm.com/market-research/insights/blog/india-ev-charging-infrastructure-industry/">India's charging infrastructure industry</a>; <a href="https://bolt.earth/blog/government-incentives-for-ev-charging-infrastructure-in-india">government incentives for charging</a>.</li>
+    <li>Cross-references: EV penetration and subsidy schemes from 017 and 018; electric buses from 019.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -56.4}, {"y": 2013, "v": -19.3}, {"y": 2018, "v": 8.4}, {"y": 2019, "v": -33.7}, {"y": 2020, "v": 21.4}, {"y": 2021, "v": -2.2}, {"y": 2022, "v": -6.1}, {"y": 2023, "v": -31.5}, {"y": 2024, "v": -18.9}, {"y": 2025, "v": -27.8}, {"y": 2026, "v": -10.7}], "AprJul": [{"y": 2012, "v": -33.0}, {"y": 2014, "v": -52.3}, {"y": 2018, "v": -33.4}, {"y": 2019, "v": -5.1}, {"y": 2020, "v": 67.7}, {"y": 2021, "v": 0.0}, {"y": 2022, "v": -6.4}, {"y": 2023, "v": 179.5}, {"y": 2024, "v": 41.3}, {"y": 2025, "v": -1.3}, {"y": 2026, "v": 60.3}], "AugSep": [{"y": 2012, "v": 6.1}, {"y": 2018, "v": -4.6}, {"y": 2019, "v": -22.0}, {"y": 2020, "v": 13.5}, {"y": 2021, "v": -12.8}, {"y": 2022, "v": 79.2}, {"y": 2023, "v": 23.9}, {"y": 2024, "v": 18.8}, {"y": 2025, "v": -8.4}], "OctDec": [{"y": 2017, "v": -3.7}, {"y": 2018, "v": -16.1}, {"y": 2019, "v": -27.2}, {"y": 2020, "v": -20.5}, {"y": 2021, "v": 58.9}, {"y": 2022, "v": 29.0}, {"y": 2023, "v": 29.1}, {"y": 2024, "v": -11.5}, {"y": 2025, "v": -31.2}], "SepNov": [{"y": 2017, "v": 9.1}, {"y": 2018, "v": -26.5}, {"y": 2019, "v": -10.6}, {"y": 2020, "v": -8.6}, {"y": 2021, "v": 27.1}, {"y": 2022, "v": 24.7}, {"y": 2023, "v": 39.0}, {"y": 2024, "v": 9.5}, {"y": 2025, "v": -29.7}], "JanMar": [{"y": 2012, "v": -87.0}, {"y": 2013, "v": -21.6}, {"y": 2018, "v": -2.1}, {"y": 2019, "v": -32.8}, {"y": 2020, "v": 42.8}, {"y": 2021, "v": -1.9}, {"y": 2022, "v": 13.9}, {"y": 2023, "v": 4.3}, {"y": 2024, "v": -18.1}, {"y": 2025, "v": -33.0}, {"y": 2026, "v": -17.9}]}, "my": {"1": {"2012": -52.0, "2013": -2.6, "2018": -10.9, "2019": 1.2, "2020": 23.3, "2021": 0.3, "2022": 21.2, "2023": 52.4, "2024": 1.0, "2025": -7.4, "2026": -9.8}, "2": {"2012": -21.8, "2013": -2.6, "2018": -6.6, "2019": -15.2, "2020": 56.4, "2021": -5.0, "2022": 1.3, "2023": -26.5, "2024": -3.1, "2025": -22.9, "2026": 3.3}, "3": {"2012": -42.8, "2013": -18.2, "2014": -24.0, "2018": 16.7, "2019": -20.5, "2020": -14.6, "2021": 2.7, "2022": -7.6, "2023": -6.9, "2024": -16.1, "2025": -4.7, "2026": -13.2}, "4": {"2012": -30.3, "2013": -4.4, "2014": -10.8, "2015": -1.3, "2018": 7.7, "2019": 1.9, "2020": -29.0, "2021": -0.6, "2022": -1.9, "2023": 45.9, "2024": 18.3, "2025": 0.6, "2026": 42.5}, "5": {"2012": 1.2, "2014": -21.6, "2015": -3.1, "2018": -9.3, "2019": -21.5, "2020": 22.0, "2021": -1.5, "2022": -23.4, "2023": 24.5, "2024": -4.0, "2025": 2.3, "2026": 19.4}, "6": {"2012": -6.5, "2014": -14.9, "2015": 0.8, "2016": 2.6, "2018": -18.4, "2019": -4.9, "2020": 42.5, "2021": -6.3, "2022": 11.8, "2023": 30.8, "2024": 12.3, "2025": 5.9, "2026": 0.6}, "7": {"2012": 0.8, "2014": -11.1, "2018": -12.2, "2019": 22.8, "2020": 20.8, "2021": 8.9, "2022": 12.9, "2023": 11.6, "2024": 8.8, "2025": -8.9, "2026": -7.8}, "8": {"2012": -5.5, "2014": -7.9, "2018": -2.9, "2019": -24.5, "2020": 11.7, "2021": -11.8, "2022": 46.5, "2023": 8.7, "2024": 0.6, "2025": -5.3, "2026": 4.2}, "9": {"2012": 12.6, "2017": 26.3, "2018": -1.9, "2019": 4.6, "2020": 1.7, "2021": -0.7, "2022": 23.0, "2023": 14.1, "2024": 17.8, "2025": -3.2}, "10": {"2017": -15.6, "2018": -8.7, "2019": -9.5, "2020": 1.3, "2021": -1.5, "2022": -18.0, "2023": 1.8, "2024": 2.6, "2025": -8.9}, "11": {"2015": 11.6, "2017": 0.8, "2018": -20.5, "2019": -4.9, "2020": -11.4, "2021": 28.9, "2022": 21.0, "2023": 19.4, "2024": -8.9, "2025": -18.7}, "12": {"2012": -4.0, "2017": 12.7, "2018": 14.6, "2019": -14.2, "2020": -8.7, "2021": 25.2, "2022": 26.9, "2023": 5.1, "2024": -6.4, "2025": -5.5}}, "basket": ["Exicom Tele-Systems Ltd.", "Servotech Renewable Power System Ltd", "Mercury Ev-Tech Limited"], "nbasket": 3, "start": "Jan 2012", "monthly": [{"m": 1, "abs": 2.3, "rel": 1.5, "hit": 6, "n": 11}, {"m": 2, "abs": -5.5, "rel": -3.9, "hit": 3, "n": 11}, {"m": 3, "abs": -13.4, "rel": -12.4, "hit": 2, "n": 12}, {"m": 4, "abs": 5.7, "rel": 3.0, "hit": 6, "n": 13}, {"m": 5, "abs": -0.5, "rel": -1.3, "hit": 5, "n": 12}, {"m": 6, "abs": 6.6, "rel": 4.3, "hit": 8, "n": 13}, {"m": 7, "abs": 6.4, "rel": 4.2, "hit": 7, "n": 11}, {"m": 8, "abs": 2.8, "rel": 1.3, "hit": 5, "n": 11}, {"m": 9, "abs": 10.2, "rel": 9.4, "hit": 7, "n": 10}, {"m": 10, "abs": -5.3, "rel": -6.3, "hit": 3, "n": 9}, {"m": 11, "abs": 4.0, "rel": 1.7, "hit": 5, "n": 10}, {"m": 12, "abs": 6.2, "rel": 4.6, "hit": 5, "n": 10}], "cy": [{"y": 2012, "b": -80.0, "n": 23.9, "rel": -103.8, "partial": false}, {"y": 2014, "b": -50.5, "n": 26.7, "rel": -77.2, "partial": false}, {"y": 2018, "b": -43.5, "n": 3.2, "rel": -46.6, "partial": false}, {"y": 2019, "b": -57.0, "n": 12.0, "rel": -69.0, "partial": false}, {"y": 2020, "b": 166.2, "n": 14.9, "rel": 151.3, "partial": false}, {"y": 2021, "b": 72.6, "n": 24.1, "rel": 48.4, "partial": false}, {"y": 2022, "b": 153.7, "n": 4.3, "rel": 149.3, "partial": false}, {"y": 2023, "b": 406.4, "n": 20.0, "rel": 386.4, "partial": false}, {"y": 2024, "b": 26.9, "n": 8.8, "rel": 18.1, "partial": false}, {"y": 2025, "b": -52.8, "n": 10.5, "rel": -63.3, "partial": false}, {"y": 2026, "b": 14.8, "n": -10.7, "rel": 25.4, "partial": true}], "dd": [{"co": "Exicom Tele-Systems", "peak": "Jul 2024", "fp": -67, "y1": 13}, {"co": "Servotech Renewable Power System", "peak": "Sep 2024", "fp": -64, "y1": -45}, {"co": "Mercury Ev-Tech", "peak": "Dec 2023", "fp": -71, "y1": -22}, {"co": "Ampvolts", "peak": "Jan 2025", "fp": -66, "y1": 3}], "win": {"FebMar": {"mean": -16.1, "median": -18.9, "hit": 2, "n": 11}, "AprJul": {"mean": 19.8, "median": -1.3, "hit": 5, "n": 11}, "AugSep": {"mean": 10.4, "median": 6.1, "hit": 5, "n": 9}, "OctDec": {"mean": 0.7, "median": -11.5, "hit": 3, "n": 9}, "SepNov": {"mean": 3.8, "median": 9.1, "hit": 5, "n": 9}, "JanMar": {"mean": -13.9, "median": -17.9, "hit": 3, "n": 11}}, "ytd": {"b": 14.8, "n": -10.7}, "notes": {"2012": "Only one member existed as a listed shell (later renamed Mercury EV-Tech) and it fell 85%. The EV industry did not exist yet.", "2014": "Still a single dormant company (\u221213%); India had almost no electric vehicles on sale.", "2018": "Servotech listed on the SME platform and fell 43%; the first FAME scheme was running but volumes were tiny.", "2019": "\u221257%: FAME-II arrived with charging-infrastructure funds, but the small caps were in a bear market.", "2020": "+166%: the COVID micro-cap rally met the first serious EV policy push. Servotech +195%, Mercury +87%.", "2021": "+73%: state EV policies, charging-station targets and the start of the EV narrative. Servotech +247%.", "2022": "+154%: the speculative phase began in earnest. Mercury +1,301% on EV announcements, Servotech +110%.", "2023": "+406%, the mania year: Mercury +897% and Servotech +382% as every EV-adjacent listing re-rated. Fundamentals lagged far behind.", "2024": "+27%: Exicom listed in March and bought Australia's Tritium out of administration; Servotech +117%, Mercury \u221224% as the froth started to come off.", "2025": "\u221253%: the reckoning. Charger orders were slower and more competitive than the stories implied, and all three members fell 51\u201359%.", "2026": "+15% against a Nifty down 11%. Exicom +39% on a \u20b91,400 cr order book and 61% revenue growth; Servotech \u22128% despite 47% profit growth; Mercury +8%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

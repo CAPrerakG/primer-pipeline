@@ -1,0 +1,586 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alco-Chemicals Primer</title>
+<meta name="description" content="Industry 5 of 278: chemicals made from ethanol and methanol (acetic acid, ethyl acetate, formaldehyde, pentaerythritol, hexamine), why fuel-ethanol policy and imported methanol decide margins, and Kanoria&#x27;s reinvention.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Alcohol &amp; Solvent Chemicals · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 5 of 278 · Chemicals family</div>
+  <h1>Alcohol &amp; Solvent Chemicals</h1>
+  <p class="lede">Two small chains that sit beside the petrochemical giants. Ethanol becomes acetic acid, ethyl acetate and acetaldehyde. Methanol becomes formaldehyde, pentaerythritol and hexamine: the glue in plywood, the resin in paint, the solvent in ink.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 1 after the audit (Vijay Solvex out, Kanoria Chemicals in)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Industrial Gases</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~98%</div><div class="l">Share of India's methanol that is imported</div></div>
+    <div class="stat"><div class="n">¥2,999/t</div><div class="l">Chinese methanol futures on 18 Sep 2026 (TradingView), the highest since the 2018 peak year</div></div>
+    <div class="stat"><div class="n">$215/t</div><div class="l">Ethyl acetate spread in Q1 FY27, a 12-year high (Laxmi Organic)</div></div>
+    <div class="stat"><div class="n">1,400 TPD</div><div class="l">Kanoria's formaldehyde capacity after its September 2024 expansion</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Chemistry from two simple alcohols</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>There are two simple alcohols. Ethanol comes from sugarcane or grain; methanol mostly comes from natural gas or coal, and India buys almost all of it from abroad. Chemical makers turn ethanol into nail-polish-remover-type solvents (ethyl acetate) and vinegar acid (acetic acid). They turn methanol into formaldehyde, which becomes the glue that holds plywood together and the resin in paint. The trouble: cars now run on ethanol mixed into petrol, so chemical makers must compete with oil companies for it. And the methanol has to cross the sea, so a war in the Gulf can make it suddenly expensive. In 2026 both things happened, and the companies that could pass the higher cost on made a lot of money.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Alco-chemicals are conversion businesses priced off two volatile feedstocks. Ethanol costs are set largely by India's fuel-blending programme: E20 made oil companies the biggest buyer at administered prices (1,059 crore litres contracted for the 2025–26 supply year). Methanol is ~98% imported, so Gulf supply and freight decide it; the 2026 war pushed Indian methanol up ~22% between January and March, and Chinese methanol futures reached ¥2,999/t in September. Products (ethyl acetate, acetic acid, formaldehyde, pentaerythritol) are commodities competing with Chinese and Middle Eastern imports, so margins are spreads. Q1 FY27 was a spread windfall: ethyl acetate hit a 12-year-high spread (Laxmi's profit tripled), GNFC's acetic acid rose to ₹63,000/t, and Kanoria swung to a standalone profit. Kanoria Chemicals is the only listed name left in this bucket after the audit, and it is reinventing itself by selling its loss-making car-electronics arm (APAG). The bigger acetyls names (Laxmi Organic, Jubilant Ingrevia, GNFC) sit in other watchlists.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Two trees of products</h2>
+  <div class="two">
+    <div><h3>Ethanol tree (alco-chemicals)</h3><ul>
+      <li><b>Acetaldehyde</b> → acetic acid, pyridines, pentaerythritol (with formaldehyde).</li>
+      <li><b>Acetic acid</b> → PTA (polyester), vinyl acetate, acetic anhydride (pharma, cellulose acetate), esters. Also made from methanol and CO (the dominant global route).</li>
+      <li><b>Ethyl acetate</b> (ethanol + acetic acid) → solvent for inks, coatings, adhesives, flexible packaging and pharma.</li>
+      <li><b>Butyl acetate and other esters</b> → paints and coatings.</li>
+      <li><b>Diketene derivatives</b> (Laxmi) → pharma and agro intermediates.</li>
+      <li><b>Bio-MEG and bio-ethylene</b> from ethanol (India Glycols) → "green" polyester.</li>
+    </ul></div>
+    <div><h3>Methanol tree</h3><ul>
+      <li><b>Formaldehyde</b> (37% formalin) → urea-, phenol- and melamine-formaldehyde resins for plywood, laminates, MDF and adhesives.</li>
+      <li><b>Pentaerythritol</b> (formaldehyde + acetaldehyde) → alkyd resins in paints, synthetic lubricants, explosives (PETN).</li>
+      <li><b>Hexamine</b> (formaldehyde + ammonia) → resins, rubber curing, fuel tablets, explosives.</li>
+      <li><b>Paraformaldehyde</b> → agrochem (glyphosate) and resins.</li>
+      <li>Methanol also goes to acetic acid (GNFC), MTBE, solvents, pharma and formic acid directly.</li>
+    </ul></div>
+  </div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The plywood of your wardrobe is held together with formaldehyde resin; the quick-drying printing ink on a chips packet uses ethyl acetate; the oil paint on a steel gate has alkyd resin made with pentaerythritol; the "solid fuel" tablets campers light are hexamine; the paracetamol tablet in your cupboard was made using acetic anhydride.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From cane fields and gas fields to plywood glue</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Feedstock</h4><div class="an">The raw crop</div>Molasses, cane juice, maize and rice → ethanol; natural gas or coal → methanol.<div class="who">Sugar mills and grain distillers; Gulf, Chinese and Asian methanol plants</div><div class="m">Sets 60–80% of product cost</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Alcohol supply</h4><div class="an">The market for the raw crop</div>Ethanol allocated between fuel blending (oil companies), potable liquor and industry; methanol imported.<div class="who">OMCs (the dominant ethanol buyer), importers</div><div class="m">Policy and freight decide price</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Primary conversion</h4><div class="an">The kitchen</div>Oxidation, esterification, carbonylation, formox or silver process.<div class="who">Kanoria, Laxmi Organic, Jubilant Ingrevia, GNFC, Ashok Alco-chem, Somaiya (unlisted)</div><div class="m">Conversion spread</div></div>
+    <div class="stage"><div class="no">04</div><h4>Derivatives</h4><div class="an">Plated dishes</div>Pentaerythritol, hexamine, anhydrides, diketene and specialty esters.<div class="who">Kanoria (pentaerythritol, hexamine), Jubilant, Laxmi</div><div class="m">Better margin than bulk</div></div>
+    <div class="stage"><div class="no">05</div><h4>Resin and formulation users</h4><div class="an">Restaurants</div>Resin makers, paint and ink makers, packaging converters, pharma.<div class="who">Plywood and laminate makers, paint majors, ink makers</div><div class="m">Pass-through with a lag</div></div>
+    <div class="stage"><div class="no">06</div><h4>End demand</h4><div class="an">Diners</div>Housing and interiors, packaging, automotive paint, pharma.<div class="who">Real estate, FMCG, autos</div><div class="m">Cyclical with construction</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Feedstock:</b> ethanol is like fruit juice fermented from sugarcane or maize; methanol is made in giant gas plants far away.</li>
+    <li><b>Alcohol supply:</b> imagine a shop with limited juice where the government says car fuel gets first pick; chemical makers get what's left, at a higher price.</li>
+    <li><b>Conversion:</b> heating the alcohol with a catalyst (a helper chemical) to change it into a new chemical, like baking dough into bread.</li>
+    <li><b>Derivatives:</b> combining two of these chemicals to make something more special, like pentaerythritol, which paint makers pay more for.</li>
+  </ul>
+  <h3>Critical inputs and choke points</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Methanol</td><td>~98% imported: Gulf (Iran, Saudi Arabia, Oman, Qatar), China, South-East Asia</td><td>Kanoria (formaldehyde), GNFC (acetic acid), all formaldehyde and resin makers</td><td>Middle East share of India's imports fell from ~88% to ~51% (March–May); Indian methanol ₹28.7 → ₹35.1/kg (January → March); Chinese futures ¥2,999 on 18 September</td></tr>
+    <tr><td>Ethanol</td><td>Sugar-mill and grain distilleries</td><td>Laxmi, Jubilant, Kanoria (acetaldehyde)</td><td>E20 absorbs supply: 515 crore litres delivered in the first half of the 2025–26 supply year; maize is now the largest single feedstock</td></tr>
+    <tr><td>Acetic acid</td><td>GNFC, imports (China)</td><td>Ethyl acetate and anhydride makers</td><td>₹63,000/t in Q1 FY27 vs ₹44,000 in Q4 FY26; GNFC shut its acetic acid plant in Q1 and restarted in August</td></tr>
+    <tr><td>Ammonia</td><td>Imports, fertiliser plants</td><td>Hexamine makers</td><td>Gulf supply disrupted</td></tr>
+    <tr><td>Natural gas</td><td>LNG imports</td><td>GNFC (methanol and acetic acid)</td><td>High costs forced plant shutdowns in Q1 FY27</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>These are feedstock-spread businesses without a feedstock advantage: most Indian producers buy ethanol and methanol at market prices. Edge comes from integration (making both acetaldehyde and formaldehyde for pentaerythritol), location next to customers (formaldehyde is shipped as a liquid, 37% strength, so it travels badly), and specialty derivatives with approvals. In shortage years (2021, 2026) spreads explode because Chinese supply dries up; in normal years they're thin.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>One listed name here, several elsewhere</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What to know</th></tr></thead><tbody>
+    <tr><td>Kanoria Chemicals &amp; Industries <span class="tk">KANORICHEM</span> (moved in from Chlor-Alkali)</td><td><b>Chemicals (the core):</b> alco-chemicals at Ankleshwar (Gujarat) and formaldehyde plants across sites (1,400 TPD after a 345 TPD addition in September 2024); an 18 TPD hexamine plant (September 2024); pentaerythritol (the first plant to use membrane technology for it) and resins, both expanded in 2026. It sold its chlor-alkali business in 2011.<br><b>APAG (being exited):</b> APAG Holding AG, a Swiss-German car-electronics group, became a wholly owned subsidiary in 2014. It contributed ~50% of consolidated income but lost money (₹9.7 cr segment loss and a ₹10.6 cr impairment in Q1 FY26). In September 2025 new investors agreed to inject $19.4 m for 63%, cutting Kanoria to 14.3%, with the remaining stake to be transferred in FY2029–30; 99.98% of votes approved.<br><b>Results:</b> FY26 standalone profit ₹34 cr (a loss in FY25); Q1 FY27 standalone profit ₹26 cr vs a ₹4.7 cr loss a year earlier. Also holds an Ethiopian subsidiary.</td></tr>
+  </tbody></table></div>
+  <p><b>Moved out:</b> Vijay Solvex. "Solvex" means solvent extraction of oilseeds; it's an edible-oil company (Edible Oils primer).</p>
+  <h3>The rest of the industry, in other watchlists</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27</th></tr></thead><tbody>
+    <tr><td>Laxmi Organic Industries (Specialty, 008)</td><td>India's leading ethyl acetate maker; diketene derivatives; fluorination</td><td>Revenue ₹968 cr (+40%), EBITDA ₹114 cr (+272%), profit ₹68 cr (+216%); ethyl acetate spreads at a 12-year high ($215/t); new ethyl acetate capacity at Lote; Dahej phase II in FY28. Shares fell 8% on results.</td></tr>
+    <tr><td>Jubilant Ingrevia (Specialty, 008)</td><td>Acetic anhydride, ethyl acetate, pyridines, vitamin B3</td><td>Revenue ₹1,300 cr (+25%); chemical intermediates ₹524 cr (+38%) with EBITDA up 240% on anhydride and ethyl acetate; FY27 EBITDA guidance ₹750–800 cr.</td></tr>
+    <tr><td>GNFC (Fertilizers, 014)</td><td>Methanol, acetic acid, ethyl acetate, formic acid, TDI, plus urea</td><td>Profit ₹310 cr, its second-best quarter ever; acetic acid, ethyl acetate and TDI plants were shut on cost in Q1 and restarted in August; acetic acid at ₹63,000/t.</td></tr>
+    <tr><td>India Glycols (Specialty, 008)</td><td>Ethanol-based MEG, glycols, ethoxylates, guar, potable spirits</td><td>—</td></tr>
+    <tr><td>Godavari Biorefineries (Sugar &amp; Ethanol)</td><td>Ethanol-based chemicals from cane</td><td>—</td></tr>
+    <tr><td>Ashok Alco-chem (BSE)</td><td>Ethyl acetate</td><td>—</td></tr>
+    <tr><td>Deepak Nitrite, Balaji Amines (Specialty)</td><td>Methanol-based amines and derivatives</td><td>—</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens: how to think about Kanoria now</span><p>For a decade Kanoria's consolidated numbers mixed two unrelated businesses: a profitable-in-good-years formaldehyde and alco-chemicals franchise, and a loss-making European car-electronics group that made up about half of income. Once APAG is deconsolidated, the company should be judged like any other Indian formaldehyde and pentaerythritol maker: capacity utilisation of the new 345 TPD formaldehyde and hexamine plants, the spread over methanol, and the share of specialty derivatives (pentaerythritol, resins). The residual 14.3% APAG stake (to be transferred in FY2029–30) is a small option, not a driver. The risks are the usual ones for spread businesses: the 2026 windfall came with expensive methanol and scarce Chinese supply, and both can reverse. The stock at ₹190 is still below its 2021 peak, so the market is pricing a better company, not a new super-cycle.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Spreads over alcohol</h2>
+  <p>About 0.5 t of methanol makes 1 t of 37% formalin, so formaldehyde margins are a methanol spread plus freight savings (it's made near customers). Ethyl acetate needs ethanol and acetic acid; when OMCs pay more for fuel ethanol, the industrial price follows. Pentaerythritol uses both formaldehyde and acetaldehyde and sells into paints and lubricants, the highest-value outlet in this family.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>Main cost</th><th class="num">Typical EBITDA*</th><th>Price-setter</th></tr></thead><tbody>
+    <tr><td>Formaldehyde</td><td>Methanol</td><td class="num">5–12%</td><td>Local supply-demand (liquid, short-haul); ₹25.9–26.2/kg in Q1 2026</td></tr>
+    <tr><td>Ethyl acetate / acetic acid</td><td>Ethanol, acetic acid, methanol</td><td class="num">5–15% (higher in 2026)</td><td>Imports from China and South-East Asia</td></tr>
+    <tr><td>Pentaerythritol, hexamine</td><td>Formaldehyde, acetaldehyde, ammonia</td><td class="num">10–20%</td><td>Global (China, Europe)</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges from company filings; highly cyclical.</p>
+  <h3>Where the formaldehyde goes</h3>
+  <p>Most Indian formaldehyde ends up as urea- or phenol-formaldehyde resin inside plywood, block boards, particle boards, MDF and decorative laminates. India's plywood industry is clustered: Yamunanagar in Haryana (the largest hub), Perumbavoor in Kerala, the Gandhidham–Kandla belt in Gujarat (built around imported timber), and clusters around Kolkata and in Punjab and Uttar Pradesh. Large panel makers run their own resin kitchens and buy formaldehyde or methanol; thousands of small plywood units buy ready resin. So formaldehyde demand tracks home-building, office interiors and furniture, and it dips in the monsoon. Because formalin is mostly water, a plant earns best selling within a few hundred kilometres, which is why formaldehyde makers put plants next to plywood clusters and why national market share matters less than local share.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A formaldehyde plant is like a neighbourhood ice factory: ice (formalin, mostly water) is too heavy to ship far, so each town has its own. When the cost of the electricity (methanol) jumps, every factory raises its price together, and the one with the newest, most efficient machines earns the most.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">6 · The business calendar</p>
+  <h2>Sugar season decides ethanol, construction decides formaldehyde</h2>
+  <ul>
+    <li><b>Sugar crushing (November–April)</b> produces molasses and cane ethanol; grain distilleries run year-round. The ethanol supply year for fuel blending runs November–October, with OMC tenders and allocations set before it starts.</li>
+    <li><b>Monsoon (June–September)</b> slows construction, and with it plywood, laminates and formaldehyde demand; post-monsoon and festive interiors lift it.</li>
+    <li><b>Paint season:</b> pre-Diwali repainting (September–November) lifts pentaerythritol and solvent demand.</li>
+    <li><b>Chinese New Year</b> affects import prices of acetic acid and ethyl acetate.</li>
+    <li><b>Methanol:</b> Iranian gas curtailments in winter (December–February) often cut methanol exports and raise prices.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">7 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of Kanoria minus the Nifty, in percentage points; the label under each month is how many years the stock beat the Nifty that month.</figcaption></figure>
+  <div><p><b>Basket:</b> the single listed company (Kanoria Chemicals &amp; Industries Ltd), monthly from Jul 2011, compared with the Nifty 50. With one stock, these statistics describe that company, not an industry.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +11.4 pts (beat in 12 of 15 years); Jun +3.2 pts (beat in 8 of 15 years); Dec +3.0 pts (beat in 8 of 15 years).</li><li><b>Weakest months:</b> Nov -5.3 pts (beat in 3 of 15 years); Mar -3.5 pts (beat in 5 of 15 years); Feb -3.0 pts (beat in 4 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -11.7 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +12.4 pts); Aug–Sep beat the Nifty in 7 of 14 years (median -0.8 pts); Oct–Dec beat the Nifty in 7 of 14 years (median -2.3 pts); Sep–Nov beat the Nifty in 5 of 14 years (median -4.1 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -14.2 pts).</li></ul><p><b>Reading it:</b> with one company, these are Kanoria's statistics, not an industry's. The strong April (12 of 15) and weak November (3 of 15) and February–March (4 of 15) match the broader small-cap chemicals pattern. The two giant April–July runs (2021: +98 pts; 2026: +134 pts) came in the two years when Kanoria's own story changed: the 2021 chemical price spike and the 2026 turnaround and exit from auto electronics.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of Kanoria minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>Biggest Aprils (2026: +42.5 pts; 2021: +36.5; 2020: +17.4).</b> 2026: the turnaround re-rating after the Hormuz crash; 2021: the chemical price boom; 2020: the COVID rebound.</li>
+    <li><b>April misses (2022: −5.8; 2019: −5.2; 2013: −5.0).</b> High methanol in 2022, APAG's slump in 2019, the rupee crisis in 2013.</li>
+    <li><b>April–July failures (2018: −17.4; 2019: −25.9).</b> Methanol's 2018 peak, then the European auto downturn hitting APAG.</li>
+    <li><b>November is the worst month (3 of 15).</b> The deepest were 2014 (−23.9), 2022 (−16.9) and 2016 (−15.7): post-results sell-offs in years when spreads were fading.</li>
+    <li><b>January–March rarely works</b> (4 of 15); the exceptions were 2021 (+70.1, the price boom) and 2015 (+15.4, collapsing methanol).</li>
+  </ul>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">8 · What moves demand and margins</p>
+  <h2>Policy on one side, the Gulf on the other</h2>
+  <ul>
+    <li><b>Ethanol blending policy:</b> India reached E20 in 2025; OMCs buy at administered prices, so industrial ethanol competes for the same supply. Rules on grain and cane diversion change the pool every season. In the first half of the 2025–26 supply year, grain distilleries supplied ~333 of 515 crore litres, and maize alone ~182 crore litres, the largest single feedstock. That shift ties ethanol costs to maize prices and the monsoon as much as to sugar.</li>
+    <li><b>Methanol imports:</b> ~98% imported. After the war began, India cut its Middle East share from ~88% to ~51% (March–May 2026) and bought more from China. Indian spot methanol rose from ~₹28.7/kg (January) to ~₹35.1/kg (March 2026).</li>
+    <li><b>Chinese export prices</b> of acetic acid and ethyl acetate; Chinese plant closures created the 2026 ethyl acetate spread.</li>
+    <li><b>Gas prices:</b> for GNFC's methanol and acetic acid, gas costs decide whether plants run at all.</li>
+    <li><b>Construction and interiors demand</b> for formaldehyde resins (plywood market ~₹248 bn in 2025, growing ~5% a year).</li>
+    <li><b>Paint and coatings demand</b> for pentaerythritol and solvents.</li>
+    <li><b>Company-specific:</b> for Kanoria, the APAG exit removes the biggest source of losses and volatility.</li>
+  </ul>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">9 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year (Kanoria)</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">China methanol avg (¥/t)</th><th>What happened</th><th class="num">Kanoria</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">China methanol: calendar-year average of Zhengzhou methanol continuous futures (TradingView ZCE:MA1!), from 2014; 2026 is to 18 September. Kanoria: calendar-year price return.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of Kanoria minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of an alco-chemicals cycle</h3>
+  <ol>
+    <li><b>Feedstock shock or Chinese supply cut</b> (2021 energy curbs; 2026 Hormuz) → product prices jump faster than costs.</li>
+    <li><b>Spread windfall</b> → record quarters (Laxmi, Jubilant, GNFC and Kanoria in Q1 FY27).</li>
+    <li><b>New capacity and Chinese restarts</b> → spreads compress (2022–24).</li>
+    <li><b>Feedstock squeeze</b> (high methanol, E20 ethanol) with weak product prices → losses and shutdowns (GNFC shut its acetic acid plant in Q1 FY27 on cost).</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Cheap methanol helps formaldehyde makers, but only if product prices hold.</b> 2015 and 2020 (falling methanol) were good; 2018 and 2022 (high methanol) were bad.</li>
+    <li><b>Diversifications away from the core destroyed value.</b> Kanoria's 2014 APAG purchase dragged the stock for a decade; its exit sparked the 2026 re-rating.</li>
+    <li><b>The biggest years come in shortages</b> (2021: +225%; 2026: +138%), and they fade when supply returns.</li>
+  </ul>
+  <h3>Drawdown from Kanoria's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">10 · The global picture</p>
+  <h2>Who makes what</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>Leaders</th><th>India's position</th></tr></thead><tbody>
+    <tr><td>Methanol</td><td>Middle East (Iran, Saudi Arabia, Oman, Qatar) on cheap gas; China on coal; Trinidad, the US. China is the largest consumer (methanol-to-olefins).</td><td>Imports ~98%</td></tr>
+    <tr><td>Acetic acid</td><td>Methanol carbonylation: Celanese, INEOS, Chinese producers; China dominates capacity.</td><td>GNFC plus imports</td></tr>
+    <tr><td>Ethyl acetate</td><td>China and India are the largest producers.</td><td>A significant exporter (Laxmi, Jubilant)</td></tr>
+    <tr><td>Pentaerythritol</td><td>Perstorp (Europe), Chinese producers, Kanoria and a few Indian plants.</td><td>Small but self-sufficient producers</td></tr>
+  </tbody></table></div>
+  <p><b>Country leadership shift:</b> Europe and the US invented these chemistries; China now sets the price for most of them. India's route to relevance is bio-based ethanol chemistry, since it produces ethanol from cane and grain at scale.</p>
+  <p><b>Methanol trade after the war:</b> the Gulf's cheap gas made it India's natural supplier (~88% of imports before the conflict). In March–May 2026 that fell to ~51% as buyers switched to Chinese and South-East Asian cargoes, and Iran's share dropped below 3%. Chinese coal-based methanol costs more than Gulf gas-based methanol, so a lasting shift raises India's structural feedstock cost for formaldehyde, acetic acid and amines.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">11 · Where technology is going</p>
+  <h2>Five shifts</h2>
+  <ul>
+    <li><b>Bio-based chemicals:</b> ethanol → bio-ethylene, bio-MEG and bio-acetic acid for brand owners seeking lower carbon; Laxmi's ethyl acetate earned a USDA biobased label.</li>
+    <li><b>Green methanol</b> (from biomass or hydrogen plus CO₂) for shipping fuel, which could compete for methanol supply.</li>
+    <li><b>Low-emission resins:</b> E0/E1 formaldehyde-emission standards for plywood and furniture, and formaldehyde-free binders.</li>
+    <li><b>Membrane and process efficiency</b> in pentaerythritol and formaldehyde (silver vs metal-oxide catalysts).</li>
+    <li><b>Grain ethanol:</b> maize and rice distilleries make more ethanol available beyond sugar seasons.</li>
+  </ul>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">12 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Ethanol blending (E20 and beyond)</td><td>E20 achieved in 2025; 1,059 crore litres contracted for 2025–26</td><td>Raises the cost and limits the availability of industrial ethanol</td></tr>
+    <tr><td>State excise and molasses control</td><td>State-level rules on alcohol movement</td><td>Can restrict or tax industrial alcohol</td></tr>
+    <tr><td>Import duties and anti-dumping cases on acetyls</td><td>Product-specific</td><td>Protect domestic ethyl acetate and acetic acid</td></tr>
+    <tr><td>BIS quality-control orders</td><td>Many chemical and polymer orders withdrawn in November 2025</td><td>Easier imports</td></tr>
+    <tr><td>Formaldehyde emission norms (wood panels)</td><td>BIS standards</td><td>Shift toward low-emission resins</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">13 · Where the cycle stands now</p>
+  <h2>September 2026: a feedstock-driven windfall</h2>
+  <div class="sig">
+    <div class="sg"><div class="t">Methanol <span class="chip ch-bad">Expensive, volatile</span></div>Chinese futures ¥2,999 (18 September); India shifted imports toward China.</div>
+    <div class="sg"><div class="t">Ethanol <span class="chip ch-mid">Policy-tight</span></div>E20 absorbs supply; industrial buyers pay up.</div>
+    <div class="sg"><div class="t">Spreads <span class="chip ch-good">Unusually wide</span></div>Ethyl acetate spread at a 12-year high; acetic acid ₹63,000/t.</div>
+    <div class="sg"><div class="t">Kanoria <span class="chip ch-good">Turning around</span></div>Standalone profit back; APAG being sold.</div>
+  </div>
+  <h3>What would break the story</h3>
+  <ul>
+    <li><b>Hormuz reopens and Gulf methanol returns:</b> methanol falls, and formaldehyde prices fall with it; the spread may hold, but revenue and inventory gains shrink.</li>
+    <li><b>Chinese acetyls restart:</b> ethyl acetate spreads fall from their 12-year high, as Laxmi's investors already fear.</li>
+    <li><b>A weak housing and interiors year:</b> plywood demand drives formaldehyde volumes.</li>
+    <li><b>APAG exit delays or new obligations:</b> any claw-back would reopen the consolidated-loss question for Kanoria.</li>
+  </ul>
+  <p id="now-stocks">Stocks: the basket is +127.7% this year vs -10.7% for the Nifty (to 18 Sep 2026). Kanoria has risen ~135% in six months to a 52-week high of ₹190.45 (17 September). Unlike a pure momentum move, it has fundamentals behind it: standalone profit returned, the loss-making auto-electronics subsidiary is being sold, and pentaerythritol and resin capacity was expanded. The stock is still 14% below its September 2021 peak.</p>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">14 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Methanol: CFR India, spot Kandla, Chinese futures</td><td>Trackers weekly; TradingView ZCE:MA1! daily</td><td>Formaldehyde cost</td></tr>
+    <tr><td>OMC ethanol procurement prices and allocations</td><td>Petroleum Ministry, per ethanol supply year</td><td>Ethanol cost</td></tr>
+    <tr><td>Ethyl acetate and acetic acid prices and spreads</td><td>Weekly price reports; Laxmi and GNFC commentary</td><td>Product realisations</td></tr>
+    <tr><td>Plywood and laminate volumes</td><td>Century, Greenply and Greenpanel results</td><td>Formaldehyde demand</td></tr>
+    <tr><td>Paint volumes</td><td>Paint makers' results</td><td>Pentaerythritol and solvent demand</td></tr>
+    <tr><td>APAG divestment milestones</td><td>Kanoria filings</td><td>Removal of consolidated losses</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">15 · Adjacent industries and proxies</p>
+  <h2>Who else feels these prices</h2>
+  <ul>
+    <li><b>Sugar &amp; Integrated Ethanol:</b> the ethanol supply side.</li>
+    <li><b>Plywood, Laminates &amp; Boards:</b> formaldehyde resin users.</li>
+    <li><b>Paints, Coatings &amp; Adhesives</b> (013): pentaerythritol and solvent users.</li>
+    <li><b>Flexible Packaging:</b> ethyl acetate for printing inks and laminating adhesives.</li>
+    <li><b>Specialty Chemicals</b> (008): Laxmi, Jubilant, India Glycols, Balaji Amines.</li>
+    <li><b>Fertilizers</b> (014): GNFC's chemicals business.</li>
+    <li><b>Petrochemicals</b> (002): ARCL Organics makes formaldehyde-based resins.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">16 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <div class="two"><div><ol>
+    <li>Where do you source methanol and ethanol, on what contract terms, and how many days of stock do you hold?</li>
+    <li>What is the spread per tonne over methanol and ethanol vs the five-year average?</li>
+    <li>What share of volume is specialty derivatives (pentaerythritol, hexamine) vs bulk formaldehyde?</li>
+    <li>What is the demand split by end market (plywood, paints, pharma)?</li>
+    <li>What is utilisation of the new capacity?</li>
+    <li>(Kanoria) What are the remaining obligations to APAG, and when does it leave the consolidated accounts?</li>
+  </ol></div><div><h3>Red flags</h3><ul>
+    <li>Margins that depend on cheap feedstock inventory.</li>
+    <li>Capacity added in bulk products facing Chinese exports.</li>
+    <li>Heavy dependence on one resin customer.</li>
+    <li>Diversification into unrelated businesses (APAG's lesson).</li>
+  </ul></div></div>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">17 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"The ethanol boom helps alco-chemical makers."</td><td>The reverse: fuel blending competes for the same ethanol and raises its cost.</td></tr>
+    <tr><td>"Formaldehyde is a boring, safe business."</td><td>Margins depend on imported methanol, and 2026 showed how fast that can move.</td></tr>
+    <tr><td>"Kanoria's rally is pure momentum."</td><td>Partly, but there are real changes: a standalone profit, the APAG exit and new pentaerythritol capacity. The stock is still below its 2021 peak.</td></tr>
+    <tr><td>"Q1 FY27 spreads are the new normal."</td><td>Laxmi's shares fell 8% on results because investors doubt the 12-year-high spread will last; GNFC had to shut plants on costs in the same quarter.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">18 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. formalin, E20" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Feedstocks and policy</h3><dl>
+    <dt>Alco-chemicals</dt><dd>Chemicals made from ethanol (acetic acid, ethyl acetate, acetaldehyde).</dd>
+    <dt>Ethanol (ENA, RS)</dt><dd>Ethyl alcohol; extra-neutral alcohol and rectified spirit are purity grades.</dd>
+    <dt>B-heavy / C-heavy molasses</dt><dd>Molasses grades by remaining sugar; B-heavy yields more ethanol.</dd>
+    <dt>Grain ethanol</dt><dd>Ethanol distilled from maize or rice rather than cane.</dd>
+    <dt>E20</dt><dd>20% ethanol blended into petrol.</dd>
+    <dt>ESY</dt><dd>Ethanol supply year for OMC blending (November–October).</dd>
+    <dt>OMC</dt><dd>Oil marketing company (IOC, BPCL, HPCL), the dominant ethanol buyer.</dd>
+    <dt>Methanol</dt><dd>Methyl alcohol from gas or coal; ~98% imported by India.</dd>
+    <dt>Methanol-to-olefins (MTO)</dt><dd>A Chinese route that turns methanol into plastics feedstock; a big source of methanol demand.</dd>
+    <dt>Green methanol</dt><dd>Methanol from biomass or from hydrogen plus captured CO₂.</dd>
+    <dt>ZCE methanol futures</dt><dd>Zhengzhou Commodity Exchange contract; the most visible methanol price.</dd>
+  </dl>
+  <h3>Products and processes</h3><dl>
+    <dt>Formaldehyde / formalin</dt><dd>HCHO; sold as a 37% water solution (formalin).</dd>
+    <dt>UF / PF / MF resins</dt><dd>Urea-, phenol- and melamine-formaldehyde resins: plywood, laminates, adhesives.</dd>
+    <dt>Pentaerythritol (penta)</dt><dd>A polyol for alkyd resins, lubricants and PETN.</dd>
+    <dt>Alkyd resin</dt><dd>An oil-modified polyester resin used in enamel paints.</dd>
+    <dt>Hexamine</dt><dd>Hexamethylenetetramine: resins, rubber curing, fuel tablets.</dd>
+    <dt>Paraformaldehyde</dt><dd>A solid form of formaldehyde.</dd>
+    <dt>Acetaldehyde</dt><dd>An ethanol derivative; an intermediate for acetic acid, penta and pyridines.</dd>
+    <dt>Acetic acid</dt><dd>CH₃COOH; for PTA, vinyl acetate and esters.</dd>
+    <dt>Ethyl acetate</dt><dd>A fast-drying solvent for inks, coatings and pharma.</dd>
+    <dt>Butyl acetate</dt><dd>A slower-drying solvent for paints.</dd>
+    <dt>Acetic anhydride</dt><dd>Used in pharma (paracetamol) and cellulose acetate.</dd>
+    <dt>Diketene</dt><dd>A reactive acetyl building block for pharma and agro intermediates (Laxmi).</dd>
+    <dt>Formic acid</dt><dd>A methanol derivative used in leather, textiles and feed (GNFC).</dd>
+    <dt>Carbonylation</dt><dd>Methanol + CO → acetic acid; the dominant global route.</dd>
+    <dt>Esterification</dt><dd>Reacting an alcohol with an acid to make an ester such as ethyl acetate.</dd>
+    <dt>Formox / silver process</dt><dd>The two formaldehyde technologies (metal-oxide vs silver catalyst).</dd>
+    <dt>E0 / E1</dt><dd>Formaldehyde-emission classes for wood panels.</dd>
+    <dt>PETN</dt><dd>An explosive made from pentaerythritol.</dd>
+    <dt>Molasses</dt><dd>The thick syrup left after sugar extraction; a traditional ethanol feedstock.</dd>
+    <dt>MDF / particle board</dt><dd>Engineered wood panels made from fibres or chips bound with formaldehyde resin.</dd>
+    <dt>Decorative laminate (HPL)</dt><dd>High-pressure laminate sheets for furniture surfaces, made with phenol- and melamine-formaldehyde resins.</dd>
+    <dt>Veneer</dt><dd>Thin wood sheets glued in layers with resin to make plywood.</dd>
+    <dt>Resin kitchen</dt><dd>An in-house unit where a plywood maker cooks its own formaldehyde resin.</dd>
+  </dl>
+  <h3>Business terms</h3><dl>
+    <dt>Spread</dt><dd>Product price minus feedstock cost per tonne.</dd>
+    <dt>TPD</dt><dd>Tonnes per day, the unit of plant capacity.</dd>
+    <dt>Standalone vs consolidated</dt><dd>The parent company's own results vs the group including subsidiaries (APAG).</dd>
+    <dt>Impairment</dt><dd>A write-down of an investment's value (Kanoria wrote down APAG).</dd>
+    <dt>Divestment</dt><dd>Selling or diluting a business; Kanoria's APAG exit happens in two tranches.</dd>
+    <dt>Biobased label</dt><dd>Certification that a product is made from renewable carbon (USDA BioPreferred).</dd>
+    <dt>Postal ballot</dt><dd>A shareholder vote held by mail or e-voting, used for Kanoria's APAG resolution.</dd>
+    <dt>52-week high</dt><dd>The highest price in the past year; Kanoria's was ₹190.45 on 17 September 2026.</dd>
+  </dl>
+  <p class="note" id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">19 · Test yourself</p>
+  <h2>Eleven questions; answers hidden</h2>
+  <details class="q"><summary>1. Why did E20 hurt alco-chemical makers?</summary><p>Oil companies became the dominant ethanol buyer at administered prices, tightening supply and raising costs for industrial users.</p></details>
+  <details class="q"><summary>2. Why did the Iran war matter for formaldehyde?</summary><p>India imports ~98% of its methanol, much of it from the Gulf; supply disruption raised methanol prices sharply.</p></details>
+  <details class="q"><summary>3. Why is formaldehyde made near its customers?</summary><p>It's shipped as a 37% water solution, so freight per useful tonne is high.</p></details>
+  <details class="q"><summary>4. Which end market links this industry to housing?</summary><p>Plywood, laminates and MDF, through formaldehyde resins.</p></details>
+  <details class="q"><summary>5. What was Vijay Solvex, and why did it move?</summary><p>An edible-oil company: "Solvex" refers to solvent extraction of oilseeds, not solvent chemicals.</p></details>
+  <details class="q"><summary>6. What is APAG, and why does its exit matter for Kanoria?</summary><p>A Swiss-German car-electronics group Kanoria owned from 2014; it made ~half of consolidated income but lost money. Selling it leaves Kanoria as a pure chemicals company.</p></details>
+  <details class="q"><summary>7. What drove Laxmi Organic's profit to triple in Q1 FY27?</summary><p>Ethyl acetate spreads at a 12-year high ($215/t) plus new capacity at Lote.</p></details>
+  <details class="q"><summary>8. Why did GNFC shut its acetic acid plant in Q1 FY27?</summary><p>Gas and input costs made production uneconomic; it restarted in August.</p></details>
+  <details class="q"><summary>9. When have Kanoria's best years come?</summary><p>In shortage years with falling or manageable methanol costs and rising product prices: 2015, 2021 and 2026.</p></details>
+  <details class="q"><summary>10. Why do formaldehyde makers put plants next to plywood clusters such as Yamunanagar?</summary><p>Formalin is mostly water, so freight eats the margin beyond a few hundred kilometres; local share matters more than national share.</p></details>
+  <details class="q"><summary>11. Which feedstock supplied the most fuel ethanol in the first half of the 2025–26 supply year?</summary><p>Maize (~182 of 515 crore litres); grain overall supplied ~333 crore litres.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">20 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes for Kanoria Chemicals vs NSE:NIFTY; Chinese methanol futures (ZCE:MA1!) yearly averages.</li>
+    <li><a href="https://www.business-standard.com/amp/industry/news/india-shifts-methanol-imports-to-china-amid-west-asia-conflict-crisil-126072901685_1.html">Business Standard/Crisil: methanol import shift</a>; <a href="https://www.procurementresource.com/resource-center/methanol-price-trends">methanol prices</a>; <a href="https://www.spglobal.com/energy/en/news-research/latest-news/chemicals/032026-global-methanol-prices-soar-in-response-to-middle-east-war">S&amp;P: methanol and the Middle East war</a>; <a href="https://gtaic.ai/market-reports/methanol-market-india-analysis-in-2026">India methanol market</a>; <a href="https://www.procurementresource.com/resource-center/formaldehyde-price-trends">formaldehyde prices</a>.</li>
+    <li><a href="https://www.ofbusiness.com/news/chemicals-weekly-report-2026-w17/92642517?categorySlug=chemicals">India chemicals price report (April 2026)</a>; <a href="https://www.custommarketinsights.com/report/india-ethyl-acetate-market/">India ethyl acetate market</a>; <a href="https://nexizo.ai/daily-report/domestic-ethyl-acetate-producers-hike-prices-amid-feedstock-shortage-and-shutdowns">ethyl acetate producers</a>.</li>
+    <li><a href="https://www.autocarpro.in/news/india-records-515-crore-litres-of-ethanol-supply-in-first-half-of-2025-26-supply-year-132531">Ethanol supply 2025–26</a>; <a href="https://www.imarcgroup.com/indian-plywood-market">India plywood market</a>.</li>
+    <li>Kanoria: <a href="https://www.kanoriachem.com/">company website</a> (capacities); <a href="https://www.sahi.com/news/kanoria-chemicals-q1-standalone-net-profit-at-264m-rupees-vs-47m-loss-364-PE1_CORP">Q1 FY27 results</a>; <a href="https://scanx.trade/stock-market-news/corporate-actions/kanoria-chemicals-shareholders-overwhelmingly-approve-divestment-of-material-subsidiary/18530652">APAG divestment approval</a>; <a href="https://www.business-standard.com/content/b2b-chemicals/apag-holding-becomes-kanoria-chemicals-wholly-owned-subsidiary-114070300673_1.html">APAG becomes a subsidiary (2014)</a>; <a href="https://www.marketsmojo.com/news/stocks-in-action/kanoria-chemicals-industries-ltd-hits-new-52-week-high-at-rs19045-4195936">2026 price move and capacity expansions</a>.</li>
+    <li>Related companies: <a href="https://www.investing.com/news/company-news/laxmi-organic-q1-fy27-slides-show-strong-recovery-shares-fall-8-93CH-4823018">Laxmi Organic Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/jubilant-ingrevia-q1-fy27-slides-record-revenue-ebitda-growth-93CH-4808964">Jubilant Ingrevia Q1 FY27</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/gujarat-narmada-valley-fertilizers-chemicals-030404530.html">GNFC Q1 FY27 call</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 5.5}, {"y": 2013, "v": -11.7}, {"y": 2014, "v": 8.7}, {"y": 2015, "v": 18.0}, {"y": 2016, "v": -23.1}, {"y": 2017, "v": -11.1}, {"y": 2018, "v": -16.4}, {"y": 2019, "v": -15.0}, {"y": 2020, "v": -15.3}, {"y": 2021, "v": 52.5}, {"y": 2022, "v": -11.0}, {"y": 2023, "v": -16.5}, {"y": 2024, "v": -20.2}, {"y": 2025, "v": -28.9}, {"y": 2026, "v": -7.3}], "AprJul": [{"y": 2012, "v": -7.3}, {"y": 2013, "v": -7.3}, {"y": 2014, "v": 24.9}, {"y": 2015, "v": 26.1}, {"y": 2016, "v": 16.0}, {"y": 2017, "v": 17.2}, {"y": 2018, "v": -17.4}, {"y": 2019, "v": -25.9}, {"y": 2020, "v": 12.4}, {"y": 2021, "v": 97.9}, {"y": 2022, "v": 2.2}, {"y": 2023, "v": -0.5}, {"y": 2024, "v": 9.6}, {"y": 2025, "v": 14.8}, {"y": 2026, "v": 133.7}], "AugSep": [{"y": 2012, "v": 11.8}, {"y": 2013, "v": -19.4}, {"y": 2014, "v": 14.3}, {"y": 2015, "v": -6.5}, {"y": 2016, "v": -7.0}, {"y": 2017, "v": -3.1}, {"y": 2018, "v": 1.1}, {"y": 2019, "v": -2.7}, {"y": 2020, "v": 23.2}, {"y": 2021, "v": -6.1}, {"y": 2022, "v": 5.2}, {"y": 2023, "v": 16.2}, {"y": 2024, "v": 4.9}, {"y": 2025, "v": -9.9}], "OctDec": [{"y": 2012, "v": 5.9}, {"y": 2013, "v": 0.6}, {"y": 2014, "v": -31.3}, {"y": 2015, "v": 69.0}, {"y": 2016, "v": 8.4}, {"y": 2017, "v": 9.3}, {"y": 2018, "v": 11.9}, {"y": 2019, "v": -12.0}, {"y": 2020, "v": -5.3}, {"y": 2021, "v": -17.2}, {"y": 2022, "v": 4.5}, {"y": 2023, "v": -14.4}, {"y": 2024, "v": -12.9}, {"y": 2025, "v": -10.0}], "SepNov": [{"y": 2012, "v": -3.3}, {"y": 2013, "v": -22.5}, {"y": 2014, "v": -22.1}, {"y": 2015, "v": 43.7}, {"y": 2016, "v": 7.7}, {"y": 2017, "v": 30.8}, {"y": 2018, "v": -7.6}, {"y": 2019, "v": -12.6}, {"y": 2020, "v": -4.8}, {"y": 2021, "v": 6.9}, {"y": 2022, "v": -14.3}, {"y": 2023, "v": 0.4}, {"y": 2024, "v": -1.3}, {"y": 2025, "v": -16.0}], "JanMar": [{"y": 2012, "v": 12.5}, {"y": 2013, "v": -14.2}, {"y": 2014, "v": 2.6}, {"y": 2015, "v": 15.4}, {"y": 2016, "v": -26.6}, {"y": 2017, "v": -6.2}, {"y": 2018, "v": -28.0}, {"y": 2019, "v": -15.5}, {"y": 2020, "v": -13.4}, {"y": 2021, "v": 70.1}, {"y": 2022, "v": -15.4}, {"y": 2023, "v": -28.8}, {"y": 2024, "v": -21.5}, {"y": 2025, "v": -33.1}, {"y": 2026, "v": -13.0}]}, "my": {"1": {"2012": 5.9, "2013": -2.7, "2014": -4.8, "2015": -3.2, "2016": -5.8, "2017": 5.6, "2018": -14.4, "2019": -0.6, "2020": 2.8, "2021": 11.8, "2022": -4.9, "2023": -15.6, "2024": -1.5, "2025": -6.2, "2026": -7.3}, "2": {"2012": -1.2, "2013": 2.3, "2014": 3.0, "2015": 3.8, "2016": -20.7, "2017": -7.4, "2018": -8.3, "2019": -12.1, "2020": -1.3, "2021": 43.4, "2022": -15.5, "2023": -3.0, "2024": -7.1, "2025": -20.3, "2026": -0.6}, "3": {"2012": 6.5, "2013": -14.5, "2014": 5.1, "2015": 13.6, "2016": -0.2, "2017": -3.5, "2018": -9.7, "2019": -2.3, "2020": -15.4, "2021": 5.7, "2022": 6.3, "2023": -14.2, "2024": -13.8, "2025": -9.8, "2026": -6.8}, "4": {"2012": 4.5, "2013": -5.0, "2014": 12.7, "2015": 9.5, "2016": 16.5, "2017": 8.2, "2018": 8.4, "2019": -5.2, "2020": 17.4, "2021": 36.5, "2022": -5.8, "2023": 6.3, "2024": 10.9, "2025": 13.4, "2026": 42.5}, "5": {"2012": -0.3, "2013": -11.6, "2014": 34.3, "2015": -13.0, "2016": -8.3, "2017": -13.2, "2018": -9.6, "2019": 8.6, "2020": -4.2, "2021": -3.7, "2022": 6.9, "2023": -8.6, "2024": -8.5, "2025": 5.5, "2026": 14.0}, "6": {"2012": -5.8, "2013": 3.5, "2014": -3.6, "2015": 0.3, "2016": 8.2, "2017": 15.2, "2018": -5.7, "2019": -13.4, "2020": 7.5, "2021": 14.5, "2022": -8.3, "2023": -3.9, "2024": 5.2, "2025": -0.6, "2026": 34.6}, "7": {"2011": -16.6, "2012": -6.0, "2013": 6.2, "2014": -15.5, "2015": 31.4, "2016": -1.2, "2017": 6.7, "2018": -8.6, "2019": -17.0, "2020": -7.5, "2021": 26.8, "2022": 12.1, "2023": 6.7, "2024": 2.2, "2025": -3.5, "2026": 4.1}, "8": {"2011": -2.8, "2012": 16.6, "2013": -7.0, "2014": 8.9, "2015": -3.2, "2016": 1.4, "2017": -12.9, "2018": 12.5, "2019": -6.3, "2020": 13.6, "2021": -28.9, "2022": 1.6, "2023": 2.7, "2024": -6.5, "2025": -7.0, "2026": 13.0}, "9": {"2011": -9.1, "2012": -5.3, "2013": -13.7, "2014": 4.8, "2015": -3.7, "2016": -8.1, "2017": 11.3, "2018": -9.3, "2019": 4.1, "2020": 8.5, "2021": 29.5, "2022": 3.5, "2023": 13.4, "2024": 12.2, "2025": -3.0}, "10": {"2011": -4.6, "2012": 5.8, "2013": -8.4, "2014": -1.4, "2015": 46.9, "2016": 41.3, "2017": -0.9, "2018": 2.0, "2019": -2.8, "2020": -13.8, "2021": -12.5, "2022": -0.4, "2023": -7.2, "2024": -6.3, "2025": -6.5}, "11": {"2011": -6.6, "2012": -3.8, "2013": -0.3, "2014": -23.9, "2015": 2.1, "2016": -15.7, "2017": 17.2, "2018": -0.2, "2019": -12.6, "2020": 1.9, "2021": -4.8, "2022": -16.9, "2023": -4.4, "2024": -5.5, "2025": -6.6}, "12": {"2011": -4.2, "2012": 3.6, "2013": 9.4, "2014": -7.6, "2015": 13.2, "2016": -7.7, "2017": -6.9, "2018": 9.9, "2019": 4.2, "2020": 9.3, "2021": -0.8, "2022": 24.0, "2023": -2.1, "2024": -2.5, "2025": 3.3}}, "basket": ["Kanoria Chemicals & Industries Ltd"], "nbasket": 1, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -2.0, "rel": -2.7, "hit": 4, "n": 15}, {"m": 2, "abs": -4.2, "rel": -3.0, "hit": 4, "n": 15}, {"m": 3, "abs": -3.7, "rel": -3.5, "hit": 5, "n": 15}, {"m": 4, "abs": 13.9, "rel": 11.4, "hit": 12, "n": 15}, {"m": 5, "abs": 0.4, "rel": -0.8, "hit": 5, "n": 15}, {"m": 6, "abs": 5.0, "rel": 3.2, "hit": 8, "n": 15}, {"m": 7, "abs": 3.2, "rel": 1.3, "hit": 8, "n": 16}, {"m": 8, "abs": -0.5, "rel": -0.3, "hit": 8, "n": 16}, {"m": 9, "abs": 3.0, "rel": 2.3, "hit": 8, "n": 15}, {"m": 10, "abs": 4.2, "rel": 2.1, "hit": 4, "n": 15}, {"m": 11, "abs": -4.4, "rel": -5.3, "hit": 3, "n": 15}, {"m": 12, "abs": 3.7, "rel": 3.0, "hit": 8, "n": 15}], "cy": [{"y": 2012, "b": 53.5, "n": 27.7, "rel": 25.8, "partial": false}, {"y": 2013, "b": -31.5, "n": 6.8, "rel": -38.3, "partial": false}, {"y": 2014, "b": 30.3, "n": 31.4, "rel": -1.1, "partial": false}, {"y": 2015, "b": 118.5, "n": -4.1, "rel": 122.6, "partial": false}, {"y": 2016, "b": -13.3, "n": 3.0, "rel": -16.3, "partial": false}, {"y": 2017, "b": 47.9, "n": 28.6, "rel": 19.3, "partial": false}, {"y": 2018, "b": -30.1, "n": 3.2, "rel": -33.2, "partial": false}, {"y": 2019, "b": -39.7, "n": 12.0, "rel": -51.7, "partial": false}, {"y": 2020, "b": 20.0, "n": 14.9, "rel": 5.1, "partial": false}, {"y": 2021, "b": 208.4, "n": 24.1, "rel": 184.3, "partial": false}, {"y": 2022, "b": -0.9, "n": 4.3, "rel": -5.2, "partial": false}, {"y": 2023, "b": -15.4, "n": 20.0, "rel": -35.5, "partial": false}, {"y": 2024, "b": -16.0, "n": 8.8, "rel": -24.8, "partial": false}, {"y": 2025, "b": -31.4, "n": 10.5, "rel": -41.9, "partial": false}, {"y": 2026, "b": 127.7, "n": -10.7, "rel": 138.3, "partial": true}], "dd": [{"co": "Kanoria Chemicals & Industries", "peak": "Sep 2021", "fp": -14, "y1": 120}], "win": {"FebMar": {"mean": -6.1, "median": -11.7, "hit": 4, "n": 15}, "AprJul": {"mean": 19.8, "median": 12.4, "hit": 10, "n": 15}, "AugSep": {"mean": 1.6, "median": -0.8, "hit": 7, "n": 14}, "OctDec": {"mean": 0.5, "median": -2.3, "hit": 7, "n": 14}, "SepNov": {"mean": -1.1, "median": -4.1, "hit": 5, "n": 14}, "JanMar": {"mean": -7.7, "median": -14.2, "hit": 4, "n": 15}}, "ytd": {"b": 127.7, "n": -10.7}, "hx": {"label": "China methanol", "v": {"2014": "\u00a52,618", "2015": "\u00a52,169", "2016": "\u00a52,062", "2017": "\u00a52,659", "2018": "\u00a52,871", "2019": "\u00a52,308", "2020": "\u00a51,971", "2021": "\u00a52,657", "2022": "\u00a52,698", "2023": "\u00a52,414", "2024": "\u00a52,508", "2025": "\u00a52,360", "2026": "\u00a52,695"}}, "notes": {"2012": "+54%. The first full year after Kanoria sold its chlor-alkali business (2011) and became a formaldehyde and alco-chemicals company; a small-cap rally helped.", "2013": "\u221232%. The rupee crash raised the cost of imported methanol while plywood and construction demand slowed.", "2014": "+30%, in line with a strong market. APAG Holding (Swiss-German car electronics) became a wholly owned subsidiary in July; investors were lukewarm about the diversification.", "2015": "+119%. Methanol fell sharply (\u00a52,618 \u2192 \u00a52,169 average), widening formaldehyde and pentaerythritol spreads, in a small-cap rally.", "2016": "\u221213%. Methanol stayed low, but the spread gains were priced in and APAG's integration costs weighed.", "2017": "+48%. Methanol rebounded (\u00a52,659), but so did product prices; the small-cap mania year.", "2018": "\u221230%. Methanol peaked (\u00a52,871 average) and squeezed spreads; the small-cap sell-off hit.", "2019": "\u221240%. European car production slumped, hurting APAG; the worst relative year (\u221252 points vs the Nifty).", "2020": "+20%. Methanol hit its low (\u00a51,971); formaldehyde spreads widened, offset by COVID disruption at APAG.", "2021": "+225%, the biggest year. China's energy curbs sent pentaerythritol, formaldehyde and hexamine prices to records; the stock peaked in September.", "2022": "\u22121%. Methanol stayed high (\u00a52,698) and chemical prices normalised.", "2023": "\u221215%. Weaker chemical spreads and continuing APAG losses.", "2024": "\u221216%. A new 345 TPD formaldehyde plant and an 18 TPD hexamine plant (September) added capacity into a soft market.", "2025": "\u221231%. APAG losses and impairments; in September Kanoria agreed to cut its APAG stake to 14.3%, with the rest to follow in FY30.", "2026": "+138%. Standalone profit returned, APAG is leaving the group, and the Hormuz methanol shock lifted formaldehyde prices; pentaerythritol and resin capacity was expanded. The biggest relative year (+138 points)."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>
