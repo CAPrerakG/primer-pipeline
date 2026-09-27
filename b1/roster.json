@@ -8354,5 +8354,259 @@
    "BSE:COCHINM",
    "BSE:ASIIL"
   ]
+ },
+ "080": {
+  "ind": "Forgings",
+  "members": [
+   {
+    "sym": "NSE:BHARATFORG",
+    "co": "Bharat Forge Ltd",
+    "mcap": 903563569783,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE465A01025"
+   },
+   {
+    "sym": "NSE:PTCIL",
+    "co": "PTC Industries Ltd",
+    "mcap": 337927543688,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE596F01018"
+   },
+   {
+    "sym": "NSE:HAPPYFORGE",
+    "co": "Happy Forging Limited",
+    "mcap": 203574922279,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE330T01021"
+   },
+   {
+    "sym": "NSE:AZAD",
+    "co": "Azad Engineering Limited",
+    "mcap": 166543397703,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE02IJ01035"
+   },
+   {
+    "sym": "NSE:CIEINDIA",
+    "co": "CIE Automotive India Ltd",
+    "mcap": 142355727737,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE536H01010"
+   },
+   {
+    "sym": "NSE:RKFORGE",
+    "co": "Ramkrishna Forgings Ltd",
+    "mcap": 125478703025,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE399G01023"
+   },
+   {
+    "sym": "NSE:BALUFORGE",
+    "co": "Balu Forge Industries Ltd",
+    "mcap": 56881949061,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in",
+    "isin": "INE011E01029"
+   },
+   {
+    "sym": "NSE:MMFL",
+    "co": "MM Forgings Limited",
+    "mcap": 29290034396,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE227C01017"
+   },
+   {
+    "sym": "NSE:TALBROAUTO",
+    "co": "Talbros Automotive Components Limited",
+    "mcap": 25848662567,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "isin": "INE187D01029"
+   },
+   {
+    "sym": "BSE:AMIC",
+    "co": "Amic Forging Limited",
+    "mcap": 24685774615,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE0P9J01013"
+   },
+   {
+    "sym": "NSE:RICOAUTO",
+    "co": "Rico Auto Industries Limited",
+    "mcap": 17032380246,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE209B01025"
+   },
+   {
+    "sym": "NSE:KROSS",
+    "co": "Kross Limited",
+    "mcap": 14550100397,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE0O6601022"
+   },
+   {
+    "sym": "NSE:TIRUPATIFL",
+    "co": "Tirupati Forge Ltd.",
+    "mcap": 8346183583,
+    "basic": "Industrial Conglomerates",
+    "status": "in",
+    "isin": "INE319Y01024"
+   },
+   {
+    "sym": "NSE:PRADPME",
+    "co": "Pradeep Metals Limited",
+    "mcap": 7754230206,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE770A01010"
+   },
+   {
+    "sym": "NSE:KALYANIFRG",
+    "co": "Kalyani Forge Limited",
+    "mcap": 3610533156,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE314G01014"
+   },
+   {
+    "sym": "NSE:OMAXAUTO",
+    "co": "Omax Autos Limited",
+    "mcap": 3577178491,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE090B01011"
+   },
+   {
+    "sym": "NSE:METALIC",
+    "co": "Metalic TechnoForge Limited",
+    "mcap": 3429769200,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE1II801013"
+   },
+   {
+    "sym": "BSE:HIMTEK",
+    "co": "Him Teknoforge Ltd.",
+    "mcap": 2863240907,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE705G01021"
+   },
+   {
+    "sym": "NSE:MUNISH",
+    "co": "Munish Forge Ltd.",
+    "mcap": 2221685274.9,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "isin": "INE1K8Y01018"
+   },
+   {
+    "sym": "NSE:SHIVAMAUTO",
+    "co": "Shivam Autotech Limited",
+    "mcap": 2153891659,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE637H01024"
+   },
+   {
+    "sym": "BSE:MAIDEN",
+    "co": "Maiden Forgings Ltd.",
+    "mcap": 1463836000,
+    "basic": "Steel",
+    "status": "in",
+    "isin": "INE0O1T01010"
+   },
+   {
+    "sym": "BSE:KVFORGE",
+    "co": "Krishanveer Forge Limited",
+    "mcap": 1433061488,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE013J01016"
+   },
+   {
+    "sym": "BSE:LGBFORGE",
+    "co": "LGB Forge Limited",
+    "mcap": 1274383186,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE201J01017"
+   },
+   {
+    "sym": "BSE:SAMRATFORG",
+    "co": "Samrat Forgings Limited",
+    "mcap": 1085000000,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "isin": "INE412J01010"
+   },
+   {
+    "sym": "NSE:HILTON",
+    "co": "Hilton Metal Forging Limited",
+    "mcap": 904781926,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE788H01017"
+   },
+   {
+    "sym": "BSE:KRANTI",
+    "co": "Kranti Industries Ltd.",
+    "mcap": 565796172,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE911T01010"
+   },
+   {
+    "sym": "NSE:GANGAFORGE",
+    "co": "Ganga Forging Limited",
+    "mcap": 535838842,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE691Z01023"
+   },
+   {
+    "sym": "BSE:ELFORGE",
+    "co": "EL Forge Ltd.",
+    "mcap": 342667788,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE158F01017"
+   },
+   {
+    "sym": "BSE:PRIMAIN",
+    "co": "Prima Industries Ltd.",
+    "mcap": 190908728,
+    "basic": "Food: Specialty/Candy",
+    "status": "in",
+    "isin": "INE723N01012"
+   },
+   {
+    "sym": "BSE:AMFORG",
+    "co": "Amforge Industries Limited",
+    "mcap": 79849028,
+    "basic": "Metal Fabrication",
+    "status": "in",
+    "isin": "INE991A01020"
+   },
+   {
+    "sym": "BSE:GSAUTO",
+    "co": "G.S. Auto International Ltd.",
+    "mcap": null,
+    "basic": "Auto Parts: OEM",
+    "status": "in",
+    "isin": "INE736H01024"
+   }
+  ],
+  "moved_out": []
  }
 }
