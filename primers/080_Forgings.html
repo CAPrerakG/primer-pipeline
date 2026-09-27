@@ -1,0 +1,711 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forgings Primer</title>
+<meta name="description" content="Industry 80 of 278, part 2 of the Engineering family: hammering and pressing hot steel into crankshafts, axle beams, flanges, shells and turbine parts. Why the same process earns a 31% EBITDA margin at one company and 12% at another, what US tariffs and the Class 8 truck cycle do to India&#x27;s export forgers, how defence and aerospace are changing the largest names, and why April has beaten the Nifty in 13 of 15 years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Forgings · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#exports">The export engine</a></li>
+<li><a href="#defence">From trucks to shells and turbines</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 80 of 278 · Engineering family, part 2</div>
+  <h1>Forgings</h1>
+  <p class="lede">A forging is metal that has been heated until it glows and then squeezed or hammered into shape — a crankshaft, a front axle beam, a steering knuckle, a pipeline flange, an artillery shell body, a turbine disc. Squeezing the metal lines up its grain along the shape of the part, which is why anything that must not break under repeated load is forged rather than cast. India is now the <a href="https://www.themanufacturingfrontier.com/aifi-highlights-indias-emergence-as-the-worlds-second-largest-producer-of-forgings-at-ifc-2025/">world's second-largest producer</a>, and its listed forgers are one of the market's best-performing groups in 2026. This primer explains why the same process earns a 31% EBITDA margin at Happy Forgings and 12% at Kalyani Forge, what US tariffs and the American truck cycle mean for the exporters, and how defence and aerospace are changing what the biggest names are.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 31 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Metal Fabrication &amp; Engineering</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">+42% vs −11%</div><div class="l">The seven-stock forgings basket against the Nifty in 2026, to 18 September</div></div>
+    <div class="stat"><div class="n">13 of 15</div><div class="l">Years April has beaten the Nifty — second only to castings (078) in this project</div></div>
+    <div class="stat"><div class="n">31.3% vs 15.9%</div><div class="l">Q1 FY27 EBITDA margin at Happy Forgings against Kalyani Forge — same process, different weight class</div></div>
+    <div class="stat"><div class="n">₹11,196 cr</div><div class="l">Bharat Forge's outstanding defence order book, about two-thirds of a year's consolidated revenue</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The parts that must not break</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Think of modelling clay. If you pour liquid clay into a mould and let it dry, you get a shape, but it can crack along any line. If instead you take a warm lump and squash it hard into shape, the clay packs tightly and bends before it breaks. A forging company does the squashing, but with steel heated to over 1,000 °C and presses as heavy as a building. The parts it makes are the ones in a truck, a tractor or a gun that take the biggest knocks — the crankshaft that turns the engine, the beam that holds the front wheels. Because a broken part could cause a crash, customers test a forger for a long time before buying, and then tend to stay with it for years.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Thirty-one names, seven with a long enough record for a basket, and the best relative year since 2014.</p>
+    <ul>
+      <li><b>The leader — Bharat Forge (~₹90,356 cr):</b> Q1 FY27 revenue ₹4,640 cr (+18.7%), but a <b>consolidated loss of ₹90 cr</b> after a ₹358 cr restructuring charge at its German subsidiary. Standalone profit ₹321 cr. Defence order book ₹11,196 cr.</li>
+      <li><b>The margin champion — Happy Forgings (~₹20,357 cr):</b> revenue ₹449 cr (+27%), EBITDA margin 31.3%, volume +23%, on heavy crankshafts and industrial parts up to 3,000 kg.</li>
+      <li><b>The recovering exporter — Ramkrishna Forgings (~₹12,548 cr):</b> revenue ₹1,217 cr (+19.8%), margin back to 18.0%, profit ₹47 cr, a year after a ₹220 cr inventory overstatement forced a restatement.</li>
+      <li><b>The mid-cap auto forgers — CIE Automotive India, MM Forgings, Kalyani Forge:</b> growth in the low to high teens and margins of 15–18%.</li>
+      <li><b>The drivers:</b> Indian truck and tractor demand, the US Class 8 truck cycle, US tariffs, steel prices, and the new defence and aerospace orders.</li>
+      <li><b>The calendar:</b> April has beaten the Nifty in 13 of 15 years; March only 6 of 15.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Sorted by how heavy the part is and who buys it</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it does</th><th>Typical weight</th><th>Main buyers</th><th>Listed makers here</th></tr></thead><tbody>
+    <tr><td>Crankshafts</td><td>Turn the pistons' up-and-down motion into rotation</td><td>10 kg (cars) to over 1,000 kg (gensets, locomotives, ships)</td><td>Engine makers, truck and tractor OEMs, generator makers</td><td>Bharat Forge, Happy Forgings, Balu Forge</td></tr>
+    <tr><td>Front axle beams and steering knuckles</td><td>Carry the front of a truck and let the wheels steer</td><td>40–200 kg</td><td>Truck makers and axle suppliers in India and North America</td><td>Bharat Forge, Ramkrishna, Kross</td></tr>
+    <tr><td>Gears, shafts and transmission parts</td><td>Transmit power through the gearbox and driveline</td><td>Under 1 kg to 50 kg</td><td>Gearbox and axle makers, two-wheeler and car makers</td><td>CIE, MM Forgings, Kalyani Forge, Him Teknoforge, Shivam Autotech</td></tr>
+    <tr><td>Connecting rods, rocker arms, small engine parts</td><td>Link pistons to the crankshaft</td><td>Under 5 kg</td><td>Car and two-wheeler engine makers</td><td>CIE, MM Forgings</td></tr>
+    <tr><td>Flanges, valve bodies and fittings</td><td>Join and seal pipes and valves under pressure</td><td>1 kg to several tonnes</td><td>Oil and gas, refineries, chemical plants, valve makers</td><td>Pradeep Metals, Tirupati Forge, Hilton, Krishanveer, Munish</td></tr>
+    <tr><td>Rolled rings and seamless parts</td><td>Bearing races, gear blanks, flanges for wind towers</td><td>1 kg to several tonnes</td><td>Bearing, wind and heavy equipment makers</td><td>Ramkrishna, Amic</td></tr>
+    <tr><td>Shell bodies and gun parts</td><td>Artillery shells, barrels, breech blocks</td><td>40–50 kg per 155 mm shell body</td><td>Army, ordnance factories, export buyers</td><td>Bharat Forge (KSSL), Balu Forge, Munish</td></tr>
+    <tr><td>Aerospace and turbine parts</td><td>Discs, rings, blades and structural parts in titanium and superalloys</td><td>Grams to hundreds of kg</td><td>Aero-engine, airframe and power-turbine makers</td><td>Bharat Forge, Azad Engineering; PTC (castings)</td></tr>
+    <tr><td>Railway wheels and axles</td><td>Wheels and axles for coaches and locomotives</td><td>300–1,000 kg</td><td>Indian Railways</td><td>Ramkrishna (with Titagarh), Hilton</td></tr>
+  </tbody></table></div>
+  <p>Three facts about the product decide almost everything else in this primer. <b>Weight class</b> sets the press a forger needs and the customers it can serve: a 16,000-tonne press shop making 500 kg crankshafts competes with a handful of companies worldwide, while a 1,000-tonne hammer shop making 2 kg gears competes with hundreds. <b>Machining depth</b> — whether the part leaves as a rough forging or fully finished and ready to bolt in — can double the revenue per kilogram. And <b>safety criticality</b> sets how long a customer takes to approve a new supplier, which is the main barrier to entry in the business.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a steel bar to a part on the assembly line</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Special steel</h4><div class="an">The bar</div>Alloy and micro-alloy steel bars (SBQ) with tight chemistry and cleanliness.<div class="who">Steel mills (see 066, 075)</div><div class="m">Roughly half of revenue; passed through with a lag</div></div>
+    <div class="stage"><div class="no">02</div><h4>Cutting and heating</h4><div class="an">The warm-up</div>Bars cut to billets and heated in induction furnaces to 1,100–1,250 °C.<div class="who">Every forger</div><div class="m">Power is the second-largest cost</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Forging</h4><div class="an">The squeeze</div>Closed-die pressing or hammering, or open-die forging and ring rolling.<div class="who">Bharat Forge, Happy, Ramkrishna, CIE, MM Forgings</div><div class="m">Press tonnage sets the weight class</div></div>
+    <div class="stage"><div class="no">04</div><h4>Heat treatment</h4><div class="an">The toughening</div>Quenching and tempering to reach the specified hardness and strength.<div class="who">In-house at most large forgers</div><div class="m">Where metallurgical failures start</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Machining</h4><div class="an">The finishing</div>Turning, milling, grinding and balancing to final dimensions.<div class="who">Happy, Kalyani Forge, Bharat Forge</div><div class="m">Can double revenue per kilogram</div></div>
+    <div class="stage"><div class="no">06</div><h4>Validation and supply</h4><div class="an">The approval</div>Testing, PPAP approval and just-in-time delivery to the customer.<div class="who">OEMs and tier-one suppliers</div><div class="m">Approval takes one to three years</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Buy</b> a bar of special steel with the right chemistry.</li>
+    <li><b>Heat</b> it until it glows orange.</li>
+    <li><b>Squeeze</b> it into shape in a die under thousands of tonnes.</li>
+    <li><b>Toughen</b> it by heating and cooling it in a controlled way.</li>
+    <li><b>Machine</b> it to a finish measured in microns.</li>
+    <li><b>Prove</b> it to the customer, then deliver it every week for the life of the model.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Castings (078) set the Engineering family's first test: <b>who writes the specification, and does the part wear out?</b> Forgings add a second. Almost every forging is made to the customer's drawing, so the forger rarely owns the design — but it does own the <b>press</b> and the <b>approval</b>. The margin therefore follows two things: the weight class (fewer competitors can make a 1,000 kg crankshaft than a 1 kg gear) and the depth of machining (a finished, balanced part is worth far more per kilogram than a rough forging). Happy Forgings earns ₹79 of EBITDA per kilogram on a ₹253 realisation because it has moved up both ladders. Tonnage growth without either is a much lower-quality kind of growth.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 31 companies</h2>
+  <h3>The large and mid-sized forgers</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Bharat Forge (~₹90,356 cr)</td><td>India's largest forger and one of the world's largest: truck and car forgings for exports and India, industrial parts for engines and oil and gas, and — through Kalyani Strategic Systems (KSSL) — artillery, armoured vehicles and ammunition. Plants in India, Germany, Sweden, France and the US.</td><td>Q1 FY27 consolidated revenue ₹4,640 cr (+18.7%), a <b>net loss of ₹90 cr</b> against a ₹284 cr profit, after a <b>₹358 cr exceptional restructuring provision</b> for Bharat Forge CDP GmbH in Germany. Standalone revenue ₹2,347 cr (+11.5%), EBITDA ₹614 cr at 26.2%, profit ₹321 cr (−5%). Exports ₹1,205 cr (+12%), of which the Americas ₹797 cr (+15%). European plants: revenue ₹1,074 cr at a 2.8% EBITDA margin; US plants ₹462 cr at −0.8%. KSSL revenue ₹423 cr at a 17.2% margin (6.9% a year earlier). Defence order book ₹11,196 cr, including 12 marine gas-turbine sets. Board approved a fund-raise of up to ₹2,500 cr and ₹1,800 cr of capex. Stock ₹1,962, +33% in 2026 and 13% below its 7 August high. In the basket.</td></tr>
+    <tr><td>PTC Industries (~₹33,793 cr)</td><td>Investment and titanium castings for aerospace, defence, oil and gas; its subsidiary Aerolloy makes titanium and superalloy materials and components.</td><td>Q1 FY27 revenue ₹197 cr (+83%), EBITDA ₹54 cr at 27.5%, profit ₹29 cr. Aerolloy revenue ₹74 cr at a 45% margin. Signed a development, qualification and supply agreement with Airbus for titanium castings on 6 August 2026. Trades at about 260 times trailing earnings on Screener. Stock ₹22,805, +23% in 2026. <b>Excluded: a castings and materials company, not a forger (see 078).</b></td></tr>
+    <tr><td>Happy Forgings (~₹20,357 cr)</td><td>A Ludhiana forger of heavy crankshafts, front axles and industrial parts from 10 kg to 3,000 kg, heavily machined in-house.</td><td>Q1 FY27 revenue ₹449 cr (+27%), <b>EBITDA margin 31.3%</b>, profit ₹91 cr (+39%). Finished-goods volume 17,793 t (+23%), realisation ₹253/kg, EBITDA ₹79/kg. Mix: commercial vehicles 33%, farm equipment 32%, industrial 16%, passenger vehicles 8%; exports 28%. Forging capacity 152,000 t at 59% utilisation; ~35,000 t more by FY28, including an 8,000-tonne vertical upsetter. Order book about ₹950 cr. Stock ₹2,148, +87% in 2026. <b>Excluded: IPO in December 2023.</b></td></tr>
+    <tr><td>Azad Engineering (~₹16,654 cr)</td><td>Precision-machined airfoils and components for energy turbines and aero engines, from Hyderabad.</td><td>Q1 FY27 revenue ₹171 cr (+26.8%), EBITDA ₹64 cr at 37.6%, profit ₹36 cr (+21%). Order book above ₹6,500 cr; guides to over 25% annual growth. Stock ₹2,790, +69% in 2026. <b>Excluded: IPO in December 2023, and a precision-engineering business more than a forge.</b></td></tr>
+    <tr><td>CIE Automotive India (~₹14,236 cr)</td><td>Indian arm of Spain's CIE Automotive (formerly Mahindra Forgings and Mahindra CIE): forgings, castings, stampings, gears and aluminium parts in India, plus forging plants in Germany and Lithuania. Reports on a calendar year.</td><td>Q2 CY26 revenue ₹2,621 cr, profit ₹236 cr. India revenue +13% at a 16.7% EBITDA margin (17.5% a year earlier); Europe +7% in rupees (−3% in euros) with the margin up to 15.9% from 12.5%. CY25 revenue ₹9,406 cr, profit ₹828 cr. Trades at about 16 times earnings, the cheapest large name here. Stock ₹387, −9% in 2026 and 37% below its July 2024 high. In the basket.</td></tr>
+    <tr><td>Ramkrishna Forgings (~₹12,548 cr)</td><td>A Jamshedpur forger of truck parts, rolled rings and oil-and-gas and rail components; a major exporter to North American truck makers. Building railway wheels with Titagarh.</td><td>Q1 FY27 revenue ₹1,217 cr (+19.8%), EBITDA ₹218 cr at <b>17.96%</b> (14.6% a year earlier) as material costs fell to 46% of revenue; profit ₹47 cr against ₹12 cr. FY26 profit was only ₹72 cr: interest ₹212 cr and depreciation ₹333 cr absorbed most of the ₹627 cr of operating profit. Borrowings ₹2,449 cr. ₹170 cr of new capex for car parts and a 4,000-tonne press line. Stock ₹724, +38% in 2026 and 31% below its October 2024 high. In the basket.</td></tr>
+    <tr><td>Balu Forge (~₹5,688 cr)</td><td>Crankshafts and chassis forgings, now moving into artillery shells and aerospace.</td><td>Q1 FY27 revenue ₹301 cr (+29%), EBITDA ₹85 cr at 28.2%, profit ₹66 cr (+16%). Defence, aerospace and rail are about half the order book and 14% of sales; a 360,000-shell-a-year defence plant has been commissioned. Board approved a $60 m foreign-currency convertible bond. Stock ₹522, −14% in 2026 and 39% below its September 2024 high. <b>Excluded: trading record only from October 2020.</b></td></tr>
+    <tr><td>MM Forgings (~₹2,929 cr)</td><td>A Chennai forger of carbon, alloy and stainless forgings for trucks, cars and exports, from raw to fully machined.</td><td>Q1 FY27 revenue ₹420 cr, EBITDA margin 18%, profit ₹90 cr — <b>including a ₹56.25 cr post-tax gain on selling land near Oragadam</b>. Excluding it, profit was about ₹34 cr. FY26 revenue ₹1,590 cr, profit ₹99 cr. Management targets a 1 lakh-tonne run rate. Stock ₹629, +73% in 2026. In the basket.</td></tr>
+    <tr><td>Talbros Automotive (~₹2,585 cr)</td><td>Gaskets, heat shields, forgings, chassis systems and hoses — forging is one division of several.</td><td>Q1 FY27 revenue ₹238 cr, profit ₹30 cr; FY26 revenue ₹870 cr, profit ₹104 cr including ₹40 cr of other income. Stock ₹477, +73% in 2026, at an all-time high. <b>Excluded: a diversified component maker, not a forger.</b></td></tr>
+    <tr><td>Amic Forging (~₹2,469 cr)</td><td>Steel forgings and heavy machined parts — rounds, shafts, blanks.</td><td>FY26 revenue ₹141 cr, operating profit ₹46 cr, profit ₹28 cr; about 90 times earnings. Stock +51% in 2026. <b>Excluded: SME listing in December 2023.</b></td></tr>
+    <tr><td>Kross (~₹1,455 cr)</td><td>Trailer axles, suspension assemblies and forged and machined truck and tractor parts, from Jamshedpur.</td><td>FY26 revenue ₹673 cr, profit ₹55 cr; Q1 FY27 revenue ₹184 cr, profit ₹13 cr. Stock ₹239, +29% in 2026 but still below its September 2024 listing-day high. <b>Excluded: IPO in September 2024.</b></td></tr>
+    <tr><td>Pradeep Metals (~₹775 cr)</td><td>Closed-die stainless, alloy and carbon steel forgings for oil and gas, valves, instrumentation and petrochemicals, mostly exported.</td><td>Q1 FY27 revenue ₹93.7 cr (+20.9%), profit ₹8.4 cr (+50%); FY26 revenue ₹338 cr, profit ₹30 cr. Announced a ₹250 cr greenfield defence plant. Stock ₹454, +55% in 2026. In the basket (history spliced from BSE).</td></tr>
+    <tr><td>Kalyani Forge (~₹361 cr)</td><td>A Pune forger and machinist of engine, driveline and axle parts; part of the wider Kalyani family but separately listed and not a Bharat Forge subsidiary.</td><td>Q1 FY27 revenue ₹66.8 cr, EBITDA margin 15.9%, profit ₹4.5 cr. Margin has risen from 4% in FY23 to 12% in FY26 on revenue that has stayed near ₹235 cr. Stock ₹975, +54% in 2026. In the basket.</td></tr>
+    <tr><td>Him Teknoforge (~₹286 cr)</td><td>Tractor and auto gears and transmission parts under the KAG brand, for OEMs and the aftermarket.</td><td>FY26 revenue ₹435 cr, operating profit ₹44 cr, profit ₹13 cr. Stock ₹274, +26% in 2026 and still 26% below its 2018 high. In the basket.</td></tr>
+  </tbody></table></div>
+  <h3>The small, misclassified and inactive names</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Why it is outside the basket</th></tr></thead><tbody>
+    <tr><td>Rico Auto (~₹1,703 cr)</td><td>Aluminium and ferrous die-cast and machined parts</td><td>A castings company (see 078). Q1 FY27: revenue ₹755 cr but operating margin 4.6% and a ₹3.4 cr loss.</td></tr>
+    <tr><td>Tirupati Forge (~₹835 cr)</td><td>Carbon-steel forged flanges</td><td>Listed from 2017; FY26 profit ₹6 cr on revenue of ₹162 cr, about 167 times earnings.</td></tr>
+    <tr><td>Omax Autos (~₹358 cr)</td><td>Sheet-metal components and chassis frames</td><td>Not a forger — belongs in Metal Fabrication (next).</td></tr>
+    <tr><td>Metalic Technoforge (~₹343 cr)</td><td>Closed-die forged and machined components</td><td>IPO in July 2026.</td></tr>
+    <tr><td>Munish Forge (~₹222 cr)</td><td>Flanges, scaffolding, tank tracks and shells</td><td>Listed October 2025.</td></tr>
+    <tr><td>Shivam Autotech (~₹215 cr)</td><td>Near-net-shape transmission gears and shafts</td><td>Losses in each of the last four years (₹81 cr in FY26); 80% below its 2017 high.</td></tr>
+    <tr><td>Maiden Forgings (~₹146 cr)</td><td>Bright steel bars and wires</td><td>A steel-products maker, classified by its name.</td></tr>
+    <tr><td>Krishanveer Forge, Samrat Forgings, LGB Forge, Hilton Metal Forging, Kranti Industries (₹57–143 cr)</td><td>Open-die forgings, small closed-die forgings, flanges, machined parts</td><td>Size and liquidity; LGB and Hilton are 77% and 89% below their highs.</td></tr>
+    <tr><td>Ganga Forging, EL Forge (₹34–54 cr)</td><td>Small forgers</td><td>Gaps in trading (2020–21 and 2015–23) and losses or one-off profits.</td></tr>
+    <tr><td>Prima Industries (~₹19 cr)</td><td>Solvent extraction, edible oil and cattle feed</td><td>Nothing to do with forging.</td></tr>
+    <tr><td>Amforge Industries (~₹8 cr), G.S. Auto International</td><td>A former forger with no revenue; a component maker with no filed results since FY17</td><td>Shells with no price discovery.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The audit</span>
+    <p><b>Seven of 31 names form the basket:</b> Bharat Forge, CIE Automotive India, Ramkrishna Forgings, MM Forgings, Pradeep Metals, Kalyani Forge and Him Teknoforge, equal-weighted monthly from July 2011. Him Teknoforge is just below the ₹300 cr market-value threshold but is kept for its twenty-year record as a working gear forger.</p>
+    <p><b>Three of the six largest names are excluded for being too new.</b> Happy Forgings and Azad Engineering listed in December 2023, Kross in September 2024 and Amic Forging on the SME platform in December 2023. Their strong records since listing are real but cover only one part of one cycle. Balu Forge's usable record starts in October 2020.</p>
+    <p><b>Five are misclassified.</b> PTC Industries is a castings and titanium-materials company; Rico Auto a die-caster; Omax a sheet-metal fabricator; Maiden a bright-bar maker; and Prima Industries makes edible oil and cattle feed. Talbros forges, but gaskets and other systems are most of its business. <b>All six are worth reclassifying in the source file.</b></p>
+    <p><b>Series repaired.</b> NSE histories that start late were spliced with BSE history, scaled at the first overlapping day: PTC Industries from June 2015 (×0.998), Balu Forge from October 2020 (×1.000) and Pradeep Metals from August 2005 (×1.010). Every member was scanned for one-day moves of −30% or +50%. Three flags: Ganga Forging's 2020–21 trading gap, EL Forge's 2015–23 gap, and Amforge's −90% step in June 2006. None affects the basket.</p>
+    <p><b>Profit that is not operations.</b> MM Forgings' Q1 FY27 profit of ₹90 cr includes a ₹56.25 cr post-tax gain on selling land. Bharat Forge's Q1 loss is a ₹358 cr one-off restructuring charge on an operating business that grew 19%. Ramkrishna's FY25 profit of ₹415 cr was flattered by a tax credit (Screener shows an effective tax rate of −80%); FY26's ₹72 cr is the truer picture of a business carrying ₹2,449 cr of debt.</p>
+    <p><b>An accounting failure.</b> In April 2025 Ramkrishna disclosed that production had been overstated and rejections under-reported. The <a href="https://www.autocarpro.in/news/investigation-confirms-discrepancies-at-ramkrishna-forgings-company-to-take-corrective-action-127006">investigation</a> valued the discrepancy at ₹220.52 cr as of March 2025, with a ₹202.06 cr hit to net worth, and FY25 and FY24 were restated. The stock fell 41% in 2025.</p>
+    <p><b>Two unit traps.</b> One widely syndicated summary printed Balu Forge's quarterly profit as "₹661 crore"; the correct figure is ₹66.1 cr (₹661 million). Another printed Bharat Forge's standalone revenue as "INR 23,474 crore"; it is ₹2,347 cr. Both are million-versus-crore errors. Always check profit against EPS × shares.</p>
+  </div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Weight class, machining depth and utilisation</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company (latest quarter)</th><th>EBITDA margin</th><th>What explains it</th></tr></thead><tbody>
+    <tr><td>Azad Engineering</td><td>37.6%</td><td>Aerospace and turbine precision parts; long qualification</td></tr>
+    <tr><td>Happy Forgings</td><td>31.3%</td><td>Heavy crankshafts and industrial parts, deep machining, 28% exports</td></tr>
+    <tr><td>Balu Forge</td><td>28.2%</td><td>Crankshafts and shells; a young, fast-growing mix</td></tr>
+    <tr><td>PTC Industries</td><td>27.5%</td><td>Titanium castings for aerospace (a castings business)</td></tr>
+    <tr><td>Bharat Forge (standalone)</td><td>26.2%</td><td>The Indian plants; exports and defence</td></tr>
+    <tr><td>MM Forgings</td><td>18%</td><td>Mid-weight automotive forgings</td></tr>
+    <tr><td>Ramkrishna Forgings</td><td>18.0%</td><td>Truck parts and rings; heavy interest and depreciation below EBITDA</td></tr>
+    <tr><td>CIE Automotive India</td><td>about 15%</td><td>Many processes, small parts, European plants</td></tr>
+    <tr><td>Kalyani Forge</td><td>15.9%</td><td>Small automotive parts; margin recovering</td></tr>
+    <tr><td>Bharat Forge (consolidated)</td><td>about 15%</td><td>Indian margins diluted by European and US plants at 3% and below zero</td></tr>
+    <tr><td>Pradeep Metals</td><td>14.7%</td><td>Oil-and-gas forgings; small scale</td></tr>
+  </tbody></table></div>
+  <h3>The levers</h3>
+  <ol>
+    <li><b>Weight class and press tonnage.</b> A heavier part needs a bigger press, and fewer companies own one. Happy Forgings' 8,000-tonne upsetter and its 3,000 kg parts put it in a smaller competitive set than a 5 kg gear maker.</li>
+    <li><b>Machining depth.</b> A fully machined, balanced crankshaft sells for a multiple of a rough forging of the same weight. More than half of Kalyani Forge's FY25 revenue came from value-added machining, which is why its margin tripled on flat revenue.</li>
+    <li><b>Utilisation.</b> Presses, furnaces and machining lines are fixed costs. Happy's forging lines run at 59%, leaving room to grow without capex; Ramkrishna's heavy capex years left it paying ₹333 cr of depreciation a year.</li>
+    <li><b>Steel pass-through.</b> Most contracts pass steel price changes to customers with a lag of one to three months. When steel falls, margins widen for a quarter; when it rises, they narrow. Ramkrishna's Q1 FY27 margin jump came partly from material costs falling to 46% of revenue.</li>
+    <li><b>Currency.</b> Exports are priced in dollars and euros; a weaker rupee lifts rupee revenue and margins.</li>
+    <li><b>Customer concentration.</b> A few truck makers can be a third or more of revenue; losing a programme at model change is the main operating risk.</li>
+  </ol>
+  <div class="box pm"><span class="tag">The test to apply</span><p>Ask of any forger: <b>how many other companies in the world could make this part to this approval, at this weight?</b> If the answer is five, as for a 1,000 kg locomotive crankshaft or an aero-engine disc, the margin is protected. If it is five hundred, as for a small car gear, it is not, and growth will come with thin margins however fast the tonnes rise. The answer explains most of the spread in the table above.</p></div>
+</section>
+
+<section id="exports" data-toc="The export engine">
+  <p class="eyebrow">5b · The export engine</p>
+  <h2>American trucks, American tariffs</h2>
+  <p>India's forging industry produces about <a href="https://www.themanufacturingfrontier.com/aifi-highlights-indias-emergence-as-the-worlds-second-largest-producer-of-forgings-at-ifc-2025/">2.9 million tonnes a year from 4.8 million tonnes of capacity</a>, with investment of about $3.8 bn and more than 300,000 workers, according to the <a href="https://indianforging.org/">Association of Indian Forging Industry</a>. Nearly 30% is exported. For the listed leaders the share is higher: Bharat Forge's standalone exports are more than half its revenue, Happy Forgings' 28%, and Ramkrishna and Pradeep are built around export customers. The largest single export market is North America, and within it one product line: <b>Class 8 trucks</b>, the heavy tractors that pull US freight.</p>
+  <h3>The Class 8 cycle</h3>
+  <p>US heavy-truck demand runs in pronounced cycles of three to four years, and in 2026 it is being lifted by an emissions deadline. The EPA's 2027 nitrogen-oxide standard makes new trucks more expensive, so fleets bought early. <a href="https://www.ttnews.com/articles/class-8-orders-june-2026">June 2026 orders jumped 231% to 31,400 units</a>; July was 22,562 (+71%); and <a href="https://www.fleetowner.com/equipment/news/55402914/august-2026-class-8-truck-orders-dip-as-2027-prebuy-reaches-limit">August slipped to 16,800 (+31%)</a> as the pre-buy reached the limit of OEM production capacity. Orders for the year to August were 111% ahead of 2025. The pattern after a pre-buy is well known: a strong build year, followed by a gap while the market digests it. For forgers exporting truck axles and crankshafts, this is the swing factor of FY27 and FY28.</p>
+  <h3>The tariff layer</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Measure</th><th>What it does</th><th>Effect on Indian forgers</th></tr></thead><tbody>
+    <tr><td><a href="https://www.congress.gov/crs-product/IN12545">Section 232 auto tariffs</a></td><td>25% on imported vehicles and listed auto parts since 2025</td><td>Covers much of India's auto-part exports to the US</td></tr>
+    <tr><td>Steel and aluminium derivatives</td><td>Tariffs on steel and aluminium content, raised to 50% in 2025</td><td>Forgings and castings are steel derivatives; aluminium tariffs also hit Bharat Forge's US aluminium plant through its Canadian metal</td></tr>
+    <tr><td>Country tariff on India</td><td>Doubled from 25% to 50% in August 2025 for goods outside Section 232</td><td>Hits forgings sold as industrial parts rather than listed auto parts</td></tr>
+    <tr><td><a href="https://www.businesstoday.in/auto/story/us-targets-indias-6-billion-auto-component-exports-with-twin-probes-into-labour-practices-overcapacity-541593-2026-07-07">Two new US probes (2026)</a></td><td>Labour practices and overcapacity in Indian auto components</td><td>The first ended in a 12.5% tariff not stacked on Section 232; the overcapacity probe is open</td></tr>
+  </tbody></table></div>
+  <p>The striking fact is how little the tariffs have dented volumes so far. India's auto-component exports to the US were roughly flat at about $6.2 bn in FY26, and the US still takes about 27% of the industry's exports. Bharat Forge's Americas exports grew 15% in Q1 FY27. Three things explain it. Many forgings have no quick alternative supplier, because re-approving a safety-critical part takes one to three years. Competing suppliers in Europe and China face tariffs too. And customers have often absorbed part of the duty. Where the tariffs bite is in <b>margins at US plants</b>: Bharat Forge's US operations ran at a −0.8% EBITDA margin in Q1 FY27, hurt by a press breakdown and by aluminium tariffs on Canadian metal.</p>
+  <div class="box pm"><span class="tag">How to use this</span><p>Separate three things when an exporter reports. <b>Volume</b> follows the Class 8 cycle, which is at a pre-buy peak and has begun to cool. <b>Price</b> follows steel pass-through and currency. <b>Tariffs</b> so far change who absorbs the cost more than how many parts are shipped — but the open overcapacity probe is a live risk, and a tariff aimed squarely at Indian components would change that. The export forgers were up sharply in 2026 on the pre-buy; the question for 2027 is how deep the post-pre-buy gap is.</p></div>
+</section>
+
+<section id="defence" data-toc="From trucks to shells and turbines">
+  <p class="eyebrow">5c · From trucks to shells and turbines</p>
+  <h2>The diversification that is re-rating the leaders</h2>
+  <p>A decade ago Indian forging stocks traded as truck-cycle stocks. In 2026 the largest are priced partly as defence and aerospace companies, and the evidence for that shift is now in the order books rather than the presentations.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>New business</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Bharat Forge</td><td>Artillery, armoured vehicles, ammunition, marine gas turbines (KSSL); aerospace forgings</td><td>Defence order book ₹11,196 cr; ₹681 cr of new defence orders in Q1 FY27; KSSL margin 17.2% against 6.9%, with 22–23% targeted; aerospace revenue about ₹400 cr, to double in two years</td></tr>
+    <tr><td>Balu Forge</td><td>152 mm and 155 mm artillery shells; first aerospace order</td><td>Defence, aerospace and rail about half the order book; 360,000-shell-a-year plant commissioned; inducted into a NATO supply chain</td></tr>
+    <tr><td>Pradeep Metals</td><td>Defence forgings</td><td>₹250 cr greenfield defence plant announced</td></tr>
+    <tr><td>Ramkrishna Forgings</td><td>Railway wheels (with Titagarh); non-ferrous forgings for aerospace and semiconductors</td><td>Plans and capex; revenue still mainly trucks</td></tr>
+    <tr><td>PTC Industries, Azad Engineering</td><td>Titanium castings; turbine and aero-engine parts</td><td>PTC's Airbus agreement (August 2026); Azad's order book above ₹6,500 cr</td></tr>
+  </tbody></table></div>
+  <p>Two cautions keep this in proportion. First, <b>defence revenue is lumpy</b>: shells and guns are bought in large tranches, and a year without a big export order can halve a segment's revenue. KSSL's margin jump from 6.9% to 17.2% shows how much mix and execution matter. Second, <b>aerospace qualification is slow and small at first</b>. Bharat Forge's aerospace revenue of about ₹400 cr is under 3% of consolidated revenue, and PTC's Airbus agreement starts with development and qualification. These businesses deserve a higher multiple than truck forgings because the approvals are harder to win and harder to lose — but not before they are a meaningful share of profit.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>The defence and aerospace story is real, and it is best evidenced at Bharat Forge, where it is already profitable at scale. For the smaller names it is mainly an option. The market in 2026 has paid for both — PTC trades at about 260 times earnings and Azad at about 127 — which leaves little room for delays in qualification or orders.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What forgers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Special bar quality (SBQ) steel</td><td>The raw material — roughly half of revenue (46% at Ramkrishna in Q1 FY27)</td><td><b>The critical input.</b> Price moves pass through with a lag; quality problems become field failures</td></tr>
+    <tr><td>Electricity and gas</td><td>Induction heating and heat-treatment furnaces</td><td>The second-largest cost; European energy prices are why Bharat Forge's German plants struggle</td></tr>
+    <tr><td>Dies and tooling</td><td>Every part needs its own die, which wears out</td><td>Die cost and life decide small-batch economics</td></tr>
+    <tr><td>Presses and hammers</td><td>The core asset; large presses take years to buy and install</td><td>A breakdown stops output — as at Bharat Forge's US steel plant in Q1 FY27</td></tr>
+    <tr><td>CNC machining capacity</td><td>Turns rough forgings into finished parts</td><td>The bottleneck for value addition</td></tr>
+    <tr><td>Titanium and nickel alloys</td><td>Aerospace and turbine parts</td><td>Scarce, expensive and qualification-bound</td></tr>
+    <tr><td>Skilled labour</td><td>Die design, heat treatment, metallurgy</td><td>India's cost advantage; also the subject of a US labour-practices probe</td></tr>
+    <tr><td>Customer approvals (PPAP, AS9100, IATF 16949)</td><td>The licence to supply</td><td>Takes one to three years to win; can be lost after a quality escape</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Truck schedules, tractor seasons and the fiscal year</h2>
+  <ul>
+    <li><b>April:</b> Indian truck, tractor and component makers set annual schedules and price resets; steel contracts are renegotiated. April has beaten the Nifty in <b>13 of 15 years</b>.</li>
+    <li><b>April–June:</b> the tractor pre-monsoon season and the start of the truck year; forgers run at their highest utilisation.</li>
+    <li><b>July–September:</b> the monsoon slows construction trucks; tractor demand depends on the rains. In the US, the order season for next year's Class 8 trucks opens in the autumn.</li>
+    <li><b>October–December:</b> festive truck and tractor buying in India; US Class 8 orders for the next year are placed.</li>
+    <li><b>January–March:</b> fiscal year-end pushes in India, but European plants shut for Christmas and US build schedules reset. March has beaten the Nifty in only 6 of 15 years.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the seven-stock forgings basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 7 names (Bharat Forge Ltd, CIE Automotive India Ltd, Ramkrishna Forgings Ltd, MM Forgings Limited, Pradeep Metals Limited, Kalyani Forge Limited, Him Teknoforge Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +5.8 pts (beat in 13 of 15 years); Jun +3.0 pts (beat in 9 of 15 years); Aug +2.4 pts (beat in 9 of 16 years).</li><li><b>Weakest months:</b> Mar -3.3 pts (beat in 6 of 15 years); May -0.3 pts (beat in 7 of 15 years); Oct -0.3 pts (beat in 7 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 6 of 15 years (median -4.7 pts); Apr–Jul beat the Nifty in 11 of 15 years (median +7.6 pts); Aug–Sep beat the Nifty in 7 of 14 years (median +0.2 pts); Oct–Dec beat the Nifty in 10 of 14 years (median +4.4 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +1.4 pts); Jan–Mar beat the Nifty in 7 of 15 years (median -9.5 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +2.8 points.</p><p><b>Reading it:</b> seven companies with long histories — Bharat Forge, CIE Automotive India, Ramkrishna Forgings, MM Forgings, Pradeep Metals, Kalyani Forge and Him Teknoforge — equal-weighted monthly from July 2011. <b>April has beaten the Nifty in 13 of 15 years</b>, averaging +5.8 points, and April–July in 11 of 15 (median +7.6). The weak stretch is the first calendar quarter: <b>March has beaten the Nifty in only 6 of 15 years</b> (−3.3 points on average) and January–March has a median of −9.5 points. The mechanism is the customer's year, as in castings (078): Indian truck and tractor makers set annual schedules from April, and forgers run hardest in the first half of the fiscal year. Four of the seven are small caps, so part of the April edge is the market-wide small-cap April effect — say so when using it.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points; 11 of 15 positive, median +7.6.</figcaption></figure>
+  <h3>The exceptions, and why they matter</h3>
+  <ul>
+    <li><b>April–July failed in 2019 (−26.8), 2018 (−12.6), 2016 (−9.7) and 2012 (−2.3).</b> 2019 was the Indian truck collapse; 2016 and 2018 were US truck downturns and a small-cap unwind. Its best were 2014 (+61.9) and 2021 (+48.3), both years of a truck recovery meeting a small-cap rally.</li>
+    <li><b>April itself failed only in 2019 (−5.7) and 2025 (−2.7).</b> Its best were 2022 (+14.6) and 2024 (+12.9).</li>
+    <li><b>January–March was worst in 2013 (−20.4), 2025 (−18.3) and 2020 (−17.2)</b>, and best in 2014 (+28.2), 2017 (+17.0) and 2026 (+15.5). 2026 is the exception that matters now: the first quarter worked because US Class 8 pre-buy orders and Indian truck demand arrived together.</li>
+  </ul>
+  <figure><svg data-chart="win" data-win="JanMar" viewBox="0 0 720 280" role="img" aria-label="January to March return minus Nifty by year"></svg><figcaption>January–March return of the basket minus the Nifty, by year, in percentage points; median −9.5.</figcaption></figure>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is the Engineering family's April effect again, a little weaker than castings (078, 14 of 15) and with the same mechanism: annual schedules and price resets in the Indian fiscal year. Two cautions. <b>Four of the seven are small caps</b>, so part of the April edge is the market's own small-cap April. And the basket is dominated by truck exposure, so a truck downturn overrides the calendar entirely — as in 2019. Use the calendar to time decisions already made on the truck cycle, not the other way round.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Nine drivers</h2>
+  <ol>
+    <li><b>US Class 8 truck build rates.</b> The largest export driver; in a pre-buy peak in 2026.</li>
+    <li><b>Indian medium and heavy truck sales.</b> Retail truck sales rose <a href="https://trucks.tractorjunction.com/en/news/fada-cv-sales-april-2026-commercial-vehicle-sales-india">15% in April 2026</a> and Ashok Leyland's domestic heavy trucks <a href="https://trucks.cardekho.com/en/news/detail/ashok-leyland-reports-44-yoy-growth-with-overall-mhcv-truck-sales-of-9616-units-in-june-2026-3750.html">44% in June</a>.</li>
+    <li><b>Tractors and farm equipment.</b> A third of Happy Forgings' revenue; driven by the monsoon.</li>
+    <li><b>Passenger vehicles.</b> India's car sales rose <a href="https://www.autoguideindia.com/reports/india-auto-sales-record-q1-fy27-siam-passenger-vehicle-growth/">25.9% in Q1 FY27</a> on lower GST; a growing share for Happy, Ramkrishna and CIE.</li>
+    <li><b>Steel prices.</b> Passed through with a lag; a falling-steel quarter widens margins.</li>
+    <li><b>Energy costs.</b> Decisive for European plants.</li>
+    <li><b>Currency.</b> A weaker rupee lifts export revenue and margins.</li>
+    <li><b>Defence orders.</b> Lumpy, high-value and increasingly large for Bharat Forge and Balu.</li>
+    <li><b>Interest and depreciation.</b> For Ramkrishna, the difference between ₹627 cr of operating profit and ₹72 cr of net profit.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Bharat Forge, CIE Automotive India, Ramkrishna Forgings, MM Forgings, Pradeep Metals, Kalyani Forge and Him Teknoforge, equal-weighted monthly from July 2011. Excluded: Happy Forgings, Azad Engineering, Kross, Amic, Metalic, Munish and Balu Forge (short records); PTC Industries, Rico, Omax, Talbros, Maiden and Prima (misclassified or not mainly forging); Shivam Autotech (persistent losses); the micro-caps and inactive names listed above. Pradeep Metals' history is spliced from BSE. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The 2014 re-rating</b> (2012–2015): a truck recovery and the election rally re-priced Indian engineering; the basket rose 232% in 2014, with a median member up 188%.</li>
+    <li><b>The US truck dip and the small-cap boom</b> (2016–2017): −15% in 2016, then +96% in 2017.</li>
+    <li><b>The double downturn</b> (2018–2019): the small-cap unwind, then India's truck collapse and the US Class 8 peak. The basket fell 39% in 2019 while the Nifty rose 12%.</li>
+    <li><b>Recovery and exports</b> (2020–2023): four winning years, led by Ramkrishna's export growth.</li>
+    <li><b>Defence and the pre-buy</b> (2024–2026): a pause in 2025, when Ramkrishna's accounting problem and weak Europe dragged, then 2026's broad rally on Indian trucks, the EPA 2027 pre-buy and defence orders.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The basket is a truck-cycle basket.</b> Its worst years — 2013, 2016, 2019 — are the years Indian or US truck demand fell.</li>
+    <li><b>Bharat Forge is the low-beta member.</b> It fell only 5% in 2019 and rose in 2013 and 2025 when the rest fell, because defence and industrial parts offset trucks.</li>
+    <li><b>Ramkrishna is the high-beta one.</b> +285% (2014), +204% (2017), +176% (2023), but −46% (2016), −38% (2018) and −41% (2025). Leverage amplifies both directions.</li>
+    <li><b>Small forgers fall hardest in downturns.</b> Him Teknoforge fell 72% in 2019 and Kalyani Forge 46%; utilisation drops, and fixed costs do not.</li>
+  </ul>
+  <h3>Drawdowns and one-year returns, 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>From Germany and Japan to India</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Position</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>China</td><td>The world's largest forging producer</td><td>The main price competitor in commodity forgings; tariffs on China have helped India in the US</td></tr>
+    <tr><td>India</td><td>Second-largest producer, about 2.9 Mt a year</td><td>A cost and engineering-talent advantage in machined, safety-critical parts</td></tr>
+    <tr><td>Germany</td><td>Europe's forging centre, supplying its truck and car makers</td><td>High energy costs and a <a href="https://www.steelorbis.com/steel-news/latest-news/german-industry-faces-stagnation-in-2026-amid-high-energy-costs-and-structural-challenges-1449549.htm">stagnant industrial base</a>; the reason for Bharat Forge's CDP restructuring</td></tr>
+    <tr><td>Japan and Korea</td><td>Captive forging inside vehicle groups</td><td>Less open to Indian suppliers</td></tr>
+    <tr><td>United States</td><td>A large buyer with a shrinking domestic forge base; tariffs to rebuild it</td><td>India's largest export market for truck forgings</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From captive to outsourced forging</b> (1990s–2000s): vehicle makers closed in-house forge shops and bought from specialists.</li>
+    <li><b>From Europe and the US to India and China</b> (2000s–2020s): cost, and engineering talent that could machine to tight tolerances.</li>
+    <li><b>From China to India for Western customers</b> (2018–2026): tariffs and "China plus one" sourcing.</li>
+    <li><b>From automotive to defence and aerospace</b> (2020s): Indian forgers moving into higher-barrier work.</li>
+  </ul>
+  <p>Bharat Forge's history is the clearest case study of the second shift. It bought forging plants in Germany and Sweden in the 2000s to get close to European customers and technology. Two decades later the German plants are a drag — Q1 FY27 European EBITDA was 2.8% of revenue with a pre-tax loss — and the company is restructuring the largest of them, while its Indian plants earn 26%. The capability moved to India; the European plants kept the energy costs.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Electric vehicles.</b> An electric car has no crankshaft, connecting rods or most gearbox parts. It still needs knuckles, control arms, axle shafts and motor shafts. Forgers exposed to engine parts in passenger cars face the largest loss; heavy trucks and tractors are much further from electrification.</li>
+    <li><b>Lightweighting.</b> Aluminium forgings replacing steel in suspension parts — the product of Bharat Forge's US aluminium plant.</li>
+    <li><b>Near-net-shape and warm forging.</b> Parts forged closer to final shape need less machining and less steel.</li>
+    <li><b>Titanium and superalloy forging.</b> For aero engines, airframes and turbines; the high-barrier end of the business.</li>
+    <li><b>Automation and simulation.</b> Robotic press lines and die-design software reduce scrap and labour.</li>
+    <li><b>Larger presses.</b> 8,000–16,000-tonne presses and upsetters for heavy industrial and defence parts.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>Tariffs abroad, procurement at home</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>US Section 232 and country tariffs</td><td>25–50% on Indian auto parts and forgings</td><td>Margin pressure; volumes so far resilient</td></tr>
+    <tr><td>US overcapacity probe (2026)</td><td>Investigates Indian auto components</td><td>An open risk of further tariffs</td></tr>
+    <tr><td>Defence Acquisition Procedure, positive indigenisation lists</td><td>Favours Indian-designed and Indian-made equipment</td><td>The foundation of KSSL's and Balu's defence growth</td></tr>
+    <tr><td>Defence export promotion</td><td>Licensing support for artillery and ammunition exports</td><td>Export orders for shells and guns</td></tr>
+    <tr><td>GST cut on vehicles (2025)</td><td>Lower prices for cars and trucks</td><td>Lifted Indian vehicle demand in FY27</td></tr>
+    <tr><td>Emission norms (BS-VI in India, EPA 2027 in the US)</td><td>Change engine designs and trigger pre-buys</td><td>Pull demand forward, then leave a gap</td></tr>
+    <tr><td>PLI scheme for auto components</td><td>Incentives for advanced technology components</td><td>Marginal for conventional forgings</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: a pre-buy peak with a defence floor</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Indian trucks and cars</td><td>Strong</td><td>Truck retail +15% (April); Ashok Leyland heavy trucks +44% (June); cars +25.9% in Q1</td></tr>
+    <tr><td>US trucks</td><td>Peaking</td><td>Class 8 orders +111% year to date, but August cooling as the EPA 2027 pre-buy ends</td></tr>
+    <tr><td>Europe</td><td>Weak</td><td>CIE's European sales −3% in euros; Bharat Forge's German restructuring</td></tr>
+    <tr><td>Margins</td><td>Up at Indian plants</td><td>Ramkrishna 18.0% from 14.6%; Happy 31.3%; but Bharat Forge standalone 26.2% from 27.9%</td></tr>
+    <tr><td>Defence</td><td>Growing</td><td>Bharat Forge ₹11,196 cr order book; Balu's shell plant</td></tr>
+    <tr><td>Capital raising</td><td>Active</td><td>Bharat Forge up to ₹2,500 cr; Balu $60 m; Ramkrishna and Happy adding presses</td></tr>
+  </tbody></table></div>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>Bharat Forge</td><td class="num">₹1,962</td><td>₹2,265 (7 Aug 2026)</td><td class="num">−13%</td><td class="num">+33%</td></tr>
+    <tr><td>PTC Industries</td><td class="num">₹22,805</td><td>₹23,830 (4 Sep 2026)</td><td class="num">−4%</td><td class="num">+23%</td></tr>
+    <tr><td>Happy Forgings</td><td class="num">₹2,148</td><td>₹2,420 (1 Sep 2026)</td><td class="num">−11%</td><td class="num">+87%</td></tr>
+    <tr><td>Azad Engineering</td><td class="num">₹2,790</td><td>₹2,900 (17 Aug 2026)</td><td class="num">−4%</td><td class="num">+69%</td></tr>
+    <tr><td>CIE Automotive India</td><td class="num">₹387</td><td>₹619 (9 Jul 2024)</td><td class="num">−37%</td><td class="num">−9%</td></tr>
+    <tr><td>Ramkrishna Forgings</td><td class="num">₹724</td><td>₹1,048 (15 Oct 2024)</td><td class="num">−31%</td><td class="num">+38%</td></tr>
+    <tr><td>Balu Forge</td><td class="num">₹522</td><td>₹854 (9 Sep 2024)</td><td class="num">−39%</td><td class="num">−14%</td></tr>
+    <tr><td>MM Forgings</td><td class="num">₹629</td><td>₹694 (15 Jul 2024)</td><td class="num">−9%</td><td class="num">+73%</td></tr>
+    <tr><td>Pradeep Metals</td><td class="num">₹454</td><td>₹590 (29 Jun 2026)</td><td class="num">−23%</td><td class="num">+55%</td></tr>
+    <tr><td>Kalyani Forge</td><td class="num">₹975</td><td>₹1,125 (3 Sep 2026)</td><td class="num">−13%</td><td class="num">+54%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p><b>For Bharat Forge, the defence story more than the truck cycle.</b> At ₹1,962 the stock is about 97 times trailing consolidated earnings on Screener — a figure distorted by the one-off German charge, but high on any measure. The market is paying for the ₹11,196 cr defence order book, KSSL's margin reaching its 22–23% target and aerospace doubling. The truck business is at a pre-buy peak in the US and strong in India. The risk is the order of events: if US truck volumes fall in 2027 before defence revenue grows enough to offset them, reported earnings could disappoint for a year even if the strategy is right.</p>
+  <p><b>For Happy Forgings, a clean compounder at a full price.</b> Volume +23%, margin above 30% for four quarters, 59% utilisation and a ₹950 cr order book. At about 60 times earnings, the price assumes the high-teens volume guidance is exceeded for years.</p>
+  <p><b>For Ramkrishna and CIE, a discount with reasons.</b> Ramkrishna's margin recovery to 18% is real, but net profit is still thin after interest and depreciation, and the 2025 accounting failure will weigh on its multiple until several clean years pass. CIE, at about 16 times earnings, is the cheapest large name because its European half is growing only in rupee terms.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>The forgings basket has had its best relative year since 2014, and the reasons are good ones: Indian trucks and cars strong at once, a US pre-buy, and defence orders turning into revenue. But two of those three are cyclical peaks. <b>Treat the section as a truck-cycle group with a growing defence and aerospace floor, not the reverse.</b> The names whose margins rest on weight class and machining depth — Happy Forgings, Bharat Forge's Indian plants — should hold up best when the US cycle turns. The names whose 2026 gains rest on volume alone, or on one-off gains such as MM Forgings' land sale, have the most to give back.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>US Class 8 net orders and backlog</td><td>The export volume driver; the post-pre-buy gap</td><td>ACT Research and FTR, monthly</td></tr>
+    <tr><td>Indian medium and heavy truck sales</td><td>Domestic volume</td><td>SIAM and FADA, monthly</td></tr>
+    <tr><td>Tractor sales and the monsoon</td><td>Farm-equipment forgings</td><td>Tractor makers' monthly sales, IMD</td></tr>
+    <tr><td>SBQ steel prices</td><td>Pass-through margin swings</td><td>Steel mill price lists, JPC data</td></tr>
+    <tr><td>Defence order announcements</td><td>Lumpy but large</td><td>Company filings, Ministry of Defence</td></tr>
+    <tr><td>US tariff decisions</td><td>The open overcapacity probe</td><td>USTR and Commerce Department notices</td></tr>
+    <tr><td>Rupee against dollar and euro</td><td>Export margins</td><td>RBI reference rates</td></tr>
+    <tr><td>Utilisation and capex announcements</td><td>Operating leverage and supply</td><td>Quarterly presentations</td></tr>
+    <tr><td>Bharat Forge's German restructuring</td><td>Whether the ₹358 cr charge is the last</td><td>Quarterly results</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Castings (078):</b> the competing process; PTC Industries and Rico Auto belong there.</li>
+    <li><b>Metal Fabrication &amp; Engineering (081, next):</b> sheet metal and fabricated structures; Omax belongs there.</li>
+    <li><b>Steel (066) and special steel (075):</b> the SBQ bars forgers buy.</li>
+    <li><b>Commercial vehicles (019) and tractors (020):</b> the main customers.</li>
+    <li><b>Auto components (023):</b> CIE, Talbros and Kross sit between the two.</li>
+    <li><b>Aerospace and defence manufacturing (057) and explosives (060):</b> the new customers for Bharat Forge, Balu and Pradeep.</li>
+    <li><b>Oil and gas equipment (028–035):</b> the market for Pradeep Metals' flanges and valve parts.</li>
+    <li><b>Global proxies:</b> American Axle, Dana and Meritor-Cummins for truck driveline; Howmet and Precision Castparts for aerospace forgings; thyssenkrupp's forging units in Europe.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What tonnage did you ship, at what realisation and EBITDA per kilogram?</li>
+    <li>What is utilisation by press line, and how much volume can you add without capex?</li>
+    <li>What share of revenue is fully machined, and at what margin?</li>
+    <li>What share of exports goes to US Class 8 trucks, and what do customers' schedules show after the EPA 2027 pre-buy?</li>
+    <li>Who pays the US tariffs on your parts — you or the customer — and what happens if the overcapacity probe ends in a new tariff?</li>
+    <li>What is the lag in steel pass-through, and how much of this quarter's margin came from steel timing?</li>
+    <li>How many new part approvals did you win this year, and how long does a typical approval take?</li>
+    <li>What is the defence order book, its delivery schedule, and its margin?</li>
+    <li>What are interest and depreciation as a share of EBITDA, and when does new capacity reach full utilisation?</li>
+    <li>For exporters with overseas plants: what is the plan for loss-making subsidiaries, and are further restructuring charges expected?</li>
+    <li>How are inventory counts and rejections verified after Ramkrishna's 2025 experience?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"US tariffs will kill Indian forging exports"</td><td>Exports to the US flat at about $6.2 bn in FY26; Bharat Forge's Americas exports +15% in Q1 FY27</td><td>Tariffs have moved costs more than volumes — so far</td></tr>
+    <tr><td>"Forging is a commodity"</td><td>Margins range from 12% to 31% in the same quarter</td><td>Weight class and machining depth make the difference</td></tr>
+    <tr><td>"Defence has made Bharat Forge a defence stock"</td><td>Defence order book ₹11,196 cr; KSSL revenue ₹423 cr in a ₹4,640 cr quarter</td><td>Still mainly a forging company with a large, growing defence arm</td></tr>
+    <tr><td>"Electric vehicles will end forging"</td><td>EVs lose crankshafts and gearbox parts but keep chassis, steering and axle forgings; trucks and tractors are far from electric</td><td>A real threat to car engine parts, not to the industry</td></tr>
+    <tr><td>"Record profit means record operations"</td><td>MM Forgings' ₹90 cr quarter included a ₹56 cr land gain; Bharat Forge's loss was a one-off charge</td><td>Read the exceptional line first</td></tr>
+    <tr><td>"The 2026 rally is about defence"</td><td>The best 2026 performers — MM Forgings, Pradeep, Kalyani Forge — are mainly automotive and oil-and-gas forgers</td><td>The rally is mostly the truck cycle</td></tr>
+    <tr><td>"Owning plants abroad protects exporters from tariffs"</td><td>Bharat Forge's US plants ran at −0.8% EBITDA; European plants at 2.8%</td><td>Local plants carry local costs, and tariffs on imported metal</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. closed-die, SBQ, Class 8" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Process</h3><dl>
+    <dt>Forging</dt><dd>Shaping hot or cold metal by pressing or hammering it, which aligns its grain and makes it stronger than a casting of the same shape.</dd>
+    <dt>Closed-die forging</dt><dd>Pressing a billet between two shaped dies that enclose the part; used for most automotive forgings.</dd>
+    <dt>Open-die forging</dt><dd>Shaping metal between flat or simple dies without enclosing it; used for large shafts and blocks.</dd>
+    <dt>Ring rolling</dt><dd>Forming seamless rings by rolling a pierced blank; used for bearings, flanges and wind-tower parts.</dd>
+    <dt>Hot, warm and cold forging</dt><dd>Forging above, around or below the metal's recrystallisation temperature; colder forging gives closer tolerances on smaller parts.</dd>
+    <dt>Upsetting</dt><dd>Increasing a bar's diameter by compressing its length; an upsetter is the machine.</dd>
+    <dt>Press tonnage</dt><dd>The force a forging press can apply; it sets the largest part a plant can make.</dd>
+    <dt>Hammer</dt><dd>A forging machine that shapes metal by repeated blows rather than steady pressure.</dd>
+    <dt>Billet</dt><dd>A cut length of steel bar ready for heating and forging.</dd>
+    <dt>Die</dt><dd>The hardened steel tool that gives a forging its shape; it wears out and must be replaced.</dd>
+    <dt>Flash</dt><dd>Excess metal squeezed out between the dies, trimmed off after forging.</dd>
+    <dt>Heat treatment</dt><dd>Controlled heating and cooling — quenching and tempering — to give a forging its specified strength.</dd>
+    <dt>Near-net shape</dt><dd>Forging a part close to its final dimensions so less machining is needed.</dd>
+    <dt>Machining</dt><dd>Turning, milling and grinding a forging to final size.</dd>
+    <dt>Grain flow</dt><dd>The direction of the metal's internal structure, which forging aligns with the part's shape.</dd>
+  </dl>
+  <h3>Products and materials</h3><dl>
+    <dt>Crankshaft</dt><dd>The engine shaft that turns the pistons' reciprocating motion into rotation.</dd>
+    <dt>Front axle beam</dt><dd>The forged beam that carries the front of a truck.</dd>
+    <dt>Steering knuckle</dt><dd>The part that holds the wheel hub and pivots for steering.</dd>
+    <dt>Connecting rod</dt><dd>Links a piston to the crankshaft.</dd>
+    <dt>Flange</dt><dd>A ring used to bolt pipes and valves together.</dd>
+    <dt>SBQ steel</dt><dd>Special bar quality steel — alloy bars with tight chemistry for forging.</dd>
+    <dt>Micro-alloy steel</dt><dd>Steel with small additions of vanadium or niobium that reach strength without separate heat treatment.</dd>
+    <dt>Superalloy</dt><dd>A nickel- or cobalt-based alloy that keeps its strength at very high temperatures; used in turbines.</dd>
+    <dt>Titanium alloy</dt><dd>A light, strong, corrosion-resistant metal used in aircraft structures and engines.</dd>
+    <dt>Airfoil</dt><dd>A blade or vane in a turbine or compressor.</dd>
+    <dt>Shell body</dt><dd>The forged steel casing of an artillery round.</dd>
+  </dl>
+  <h3>Business and markets</h3><dl>
+    <dt>Class 8 truck</dt><dd>The heaviest US truck class, above 33,000 lb gross weight; the main export market for Indian truck forgings.</dd>
+    <dt>Pre-buy</dt><dd>Customers buying early to avoid a coming price rise, such as new emission rules; followed by a demand gap.</dd>
+    <dt>EPA 2027</dt><dd>The US Environmental Protection Agency's 2027 nitrogen-oxide standard for heavy trucks.</dd>
+    <dt>M&amp;HCV</dt><dd>Medium and heavy commercial vehicles — India's truck and bus market.</dd>
+    <dt>OEM</dt><dd>Original equipment manufacturer — the vehicle or engine maker.</dd>
+    <dt>Tier-one supplier</dt><dd>A supplier selling directly to an OEM, often a systems maker that buys forgings.</dd>
+    <dt>Build to print</dt><dd>Making a part to the customer's drawing, without owning its design.</dd>
+    <dt>PPAP</dt><dd>Production part approval process — the automotive procedure for approving a new part and supplier.</dd>
+    <dt>IATF 16949</dt><dd>The automotive quality-management standard.</dd>
+    <dt>AS9100</dt><dd>The aerospace quality-management standard.</dd>
+    <dt>Realisation per kilogram</dt><dd>Revenue per kilogram shipped; rises with machining depth and mix.</dd>
+    <dt>EBITDA per kilogram</dt><dd>Operating profit per kilogram shipped; Happy Forgings' ₹79 is the benchmark here.</dd>
+    <dt>Utilisation</dt><dd>Output as a share of capacity; the driver of operating leverage.</dd>
+    <dt>Steel pass-through</dt><dd>Contract terms that move steel price changes to the customer, usually with a lag.</dd>
+    <dt>Section 232</dt><dd>The US law used to impose tariffs on grounds of national security, including on autos and parts.</dd>
+    <dt>Exceptional item</dt><dd>A one-off gain or charge reported separately, such as Bharat Forge's ₹358 cr restructuring provision.</dd>
+    <dt>FCCB</dt><dd>Foreign-currency convertible bond — the instrument Balu Forge plans for its $60 m raise.</dd>
+    <dt>QIP</dt><dd>Qualified institutional placement — a share sale to institutions, one route for Bharat Forge's raise.</dd>
+    <dt>SME platform</dt><dd>The exchanges' small and medium enterprise board, with lighter listing rules.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Castings, investment casting</dt><dd>See 078.</dd>
+    <dt>Special steel, alloy steel</dt><dd>See 075.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why are safety-critical parts forged rather than cast?</summary><p>Forging aligns the metal's grain with the part's shape, making it tougher and more resistant to fatigue.</p></details>
+  <details class="q"><summary>2. Why does Happy Forgings earn a 31% margin while Kalyani Forge earns 16%?</summary><p>Weight class and machining depth: heavy, fully machined crankshafts and industrial parts face far fewer competitors than small automotive forgings.</p></details>
+  <details class="q"><summary>3. Why did Bharat Forge report a loss in Q1 FY27?</summary><p>A ₹358 cr exceptional restructuring provision for its German subsidiary; the underlying business grew 19%.</p></details>
+  <details class="q"><summary>4. What is a pre-buy, and why does it matter now?</summary><p>Fleets buying early to avoid costlier EPA 2027 trucks; it lifted 2026 orders but is followed by a gap.</p></details>
+  <details class="q"><summary>5. How have US tariffs affected Indian forging exports so far?</summary><p>Volumes have held up — exports to the US were flat at about $6.2 bn in FY26 — but margins at US plants have suffered.</p></details>
+  <details class="q"><summary>6. What went wrong at Ramkrishna Forgings in 2025?</summary><p>Production was overstated and rejections under-reported; the ₹220.52 cr discrepancy forced a restatement and cut net worth by ₹202.06 cr.</p></details>
+  <details class="q"><summary>7. Why is MM Forgings' Q1 FY27 profit not a guide to its earnings?</summary><p>It includes a ₹56.25 cr post-tax gain on selling land.</p></details>
+  <details class="q"><summary>8. What is the strongest calendar signal for this basket?</summary><p>April, which has beaten the Nifty in 13 of 15 years.</p></details>
+  <details class="q"><summary>9. Which forgings does an electric car still need?</summary><p>Steering knuckles, control arms, axle shafts and motor shafts — but not crankshafts, connecting rods or most gearbox parts.</p></details>
+  <details class="q"><summary>10. Why is PTC Industries outside the forgings basket?</summary><p>It is a castings and titanium-materials company; it belongs with castings (078).</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, trimmed to 18 September 2026, against NSE:NIFTY; BSE history spliced for PTC Industries, Balu Forge and Pradeep Metals. Company financials not otherwise cited are from <a href="https://www.screener.in/company/BHARATFORG/consolidated/">Screener</a> quarterly and annual tables, cross-checked against EPS and share count.</li>
+    <li>Bharat Forge: <a href="https://upstox.com/news/market-news/earnings/bharat-forge-q1-fy-27-result-firm-reports-net-loss-of-90-crore-yo-y-board-gives-nod-to-raise-funds-of-up-to-2-500-crore/article-198401/">Q1 FY27 loss and German restructuring</a>; <a href="https://www.kotakneo.com/news/stocks/bharat-forge-q1-fy27-results-exceptional-loss-shares-falls/">exceptional charge, orders and guidance</a>; <a href="https://www.investing.com/news/company-news/bharat-forge-q1-fy27-slides-revenue-up-19-margins-pressured-93CH-4848857">results slides — segments, overseas plants, KSSL</a>; <a href="https://www.business-standard.com/markets/capital-market-news/bharat-forge-slips-after-recording-loss-of-rs-89-crore-for-q1-fy27-126081100702_1.html">Business Standard</a>.</li>
+    <li>Ramkrishna Forgings: <a href="https://www.autocarpro.in/news/ramkrishna-forgings-q1-profit-surges-to-rs-47-crore-outlines-rs-170-crore-capex-133764">Q1 FY27 results and capex</a>; <a href="https://www.autocarpro.in/news/investigation-confirms-discrepancies-at-ramkrishna-forgings-company-to-take-corrective-action-127006">the inventory investigation</a>; <a href="https://www.business-standard.com/markets/capital-market-news/ramkrishna-forgings-drops-after-discrepancies-found-in-inventory-audit-125042800977_1.html">market reaction</a>.</li>
+    <li>Happy Forgings: <a href="https://www.investing.com/news/company-news/happy-forgings-q1-fy27-slides-record-profit-31-ebitda-margin-93CH-4836420">Q1 FY27 slides — mix, capacity, order book</a>; <a href="https://www.sahi.com/news/happy-forgings-expects-strong-volume-growth-with-ebitda-margins-steady-at-fy-2026-levels-3470-PE1_COR">guidance</a>.</li>
+    <li>PTC Industries and Azad Engineering: <a href="https://www.investywise.com/ptc-industries-investor-presentation-for-q1fy27/">PTC Q1 FY27 and Airbus agreement</a>; <a href="https://www.sahi.com/news/azad-engineering-standalone-ebitda-margin-increases-to-37-6-in-q1-fy27-with-25-growth-expectation-5575-PE1_COR">Azad Q1 FY27</a>; <a href="https://www.investywise.com/azad-investor-presentation-for-q1-fy27/">Azad order book</a>.</li>
+    <li>CIE Automotive India: <a href="https://www.gurufocus.com/news/8976505/cie-automotive-india-ltd-bom532756-q2-2026-earnings-call-highlights-strong-european-growth-amidst-indian-market-challenges?mobile=true">Q2 CY26 call — India and Europe</a>; <a href="https://www.icicidirect.com/research/equity/trending-news/cie-automotive-q2-revenue-2-620cr-11-ebitda-390cr-16">revenue and EBITDA</a>.</li>
+    <li>MM Forgings, Balu Forge, Pradeep Metals, Kalyani Forge: <a href="https://www.tipranks.com/news/company-announcements/mm-forgings-clarifies-56-25-crore-exceptional-gain-from-oragadam-land-sale">MM Forgings land-sale gain</a>; <a href="https://scanx.trade/stock-market-news/companies/mm-forgings-q1-results-net-profit-up-83-yoy-354-million/48266693">MM Forgings run-rate target</a>; <a href="https://tradebrains.in/balu-forge-industries-q1-fy27-net-profit-rises-15-9-yoy-board-approves-60-million-fundraise/">Balu Forge Q1 FY27 and FCCB</a>; <a href="https://www.investywise.com/balu-forge-earnings-release-for-q1-fy27/">Balu Forge defence order book</a>; the misprinted Balu summary at <a href="https://scanx.trade/stock-market-news/companies/balu-forge-q1-results-net-profit-up-16-yoy-revenue-grows-29/48104349">ScanX</a>; <a href="https://www.sahi.com/news/pradeep-metals-posts-q1-consolidated-net-profit-of-84m-rupees-revenue-at-937m-1368-PE1_COR">Pradeep Metals Q1 FY27</a>; <a href="https://kalyaniforge.com/kfl-company/executive-chairperson/">Kalyani Forge management</a>.</li>
+    <li>Industry and exports: <a href="https://www.themanufacturingfrontier.com/aifi-highlights-indias-emergence-as-the-worlds-second-largest-producer-of-forgings-at-ifc-2025/">AIFI at the International Forging Congress 2025</a>; <a href="https://indianforging.org/">Association of Indian Forging Industry</a>; <a href="https://www.businesstoday.in/auto/story/us-targets-indias-6-billion-auto-component-exports-with-twin-probes-into-labour-practices-overcapacity-541593-2026-07-07">US probes into Indian auto components</a>; <a href="https://www.congress.gov/crs-product/IN12545">CRS on Section 232 auto tariffs</a>; <a href="https://www.autocarpro.in/news/tariffs-trade-tailwinds-indian-auto-components-at-an-inflection-point-125952">Autocar Professional on tariffs and China plus one</a>.</li>
+    <li>Truck and vehicle demand: <a href="https://www.ttnews.com/articles/class-8-orders-june-2026">June 2026 Class 8 orders</a>; <a href="https://www.fleetowner.com/equipment/news/55402914/august-2026-class-8-truck-orders-dip-as-2027-prebuy-reaches-limit">August orders and the end of the pre-buy</a>; <a href="https://trucks.tractorjunction.com/en/news/fada-cv-sales-april-2026-commercial-vehicle-sales-india">FADA truck retail, April 2026</a>; <a href="https://trucks.cardekho.com/en/news/detail/ashok-leyland-reports-44-yoy-growth-with-overall-mhcv-truck-sales-of-9616-units-in-june-2026-3750.html">Ashok Leyland June 2026</a>; <a href="https://www.autoguideindia.com/reports/india-auto-sales-record-q1-fy27-siam-passenger-vehicle-growth/">SIAM Q1 FY27</a>; <a href="https://www.steelorbis.com/steel-news/latest-news/german-industry-faces-stagnation-in-2026-amid-high-energy-costs-and-structural-challenges-1449549.htm">German industry in 2026</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 14.8}, {"y": 2013, "v": -15.1}, {"y": 2014, "v": 15.0}, {"y": 2015, "v": 1.5}, {"y": 2016, "v": -12.8}, {"y": 2017, "v": 9.5}, {"y": 2018, "v": 0.9}, {"y": 2019, "v": -4.6}, {"y": 2020, "v": -22.3}, {"y": 2021, "v": -5.0}, {"y": 2022, "v": -13.0}, {"y": 2023, "v": -4.7}, {"y": 2024, "v": -12.4}, {"y": 2025, "v": -13.4}, {"y": 2026, "v": 13.6}], "AprJul": [{"y": 2012, "v": -2.3}, {"y": 2013, "v": 1.3}, {"y": 2014, "v": 61.9}, {"y": 2015, "v": 18.3}, {"y": 2016, "v": -9.7}, {"y": 2017, "v": 1.6}, {"y": 2018, "v": -12.6}, {"y": 2019, "v": -26.8}, {"y": 2020, "v": 1.0}, {"y": 2021, "v": 48.3}, {"y": 2022, "v": 18.0}, {"y": 2023, "v": 21.7}, {"y": 2024, "v": 29.8}, {"y": 2025, "v": 7.6}, {"y": 2026, "v": 21.3}], "AugSep": [{"y": 2012, "v": -0.7}, {"y": 2013, "v": 8.7}, {"y": 2014, "v": 24.9}, {"y": 2015, "v": -3.0}, {"y": 2016, "v": 2.8}, {"y": 2017, "v": 3.3}, {"y": 2018, "v": -4.4}, {"y": 2019, "v": -5.5}, {"y": 2020, "v": 36.0}, {"y": 2021, "v": -10.4}, {"y": 2022, "v": 1.1}, {"y": 2023, "v": 12.0}, {"y": 2024, "v": -2.8}, {"y": 2025, "v": -8.6}], "OctDec": [{"y": 2012, "v": -4.5}, {"y": 2013, "v": -0.9}, {"y": 2014, "v": 5.0}, {"y": 2015, "v": -0.1}, {"y": 2016, "v": 5.2}, {"y": 2017, "v": 27.8}, {"y": 2018, "v": 1.3}, {"y": 2019, "v": -7.0}, {"y": 2020, "v": 8.9}, {"y": 2021, "v": 4.8}, {"y": 2022, "v": 14.5}, {"y": 2023, "v": 4.1}, {"y": 2024, "v": 1.9}, {"y": 2025, "v": 5.5}], "SepNov": [{"y": 2012, "v": -1.9}, {"y": 2013, "v": -5.6}, {"y": 2014, "v": 23.2}, {"y": 2015, "v": -6.8}, {"y": 2016, "v": 4.8}, {"y": 2017, "v": 24.4}, {"y": 2018, "v": 2.0}, {"y": 2019, "v": -6.8}, {"y": 2020, "v": 5.7}, {"y": 2021, "v": 0.8}, {"y": 2022, "v": 8.3}, {"y": 2023, "v": 4.0}, {"y": 2024, "v": -0.5}, {"y": 2025, "v": 0.7}], "JanMar": [{"y": 2012, "v": 15.6}, {"y": 2013, "v": -20.4}, {"y": 2014, "v": 28.2}, {"y": 2015, "v": 4.7}, {"y": 2016, "v": -16.0}, {"y": 2017, "v": 17.0}, {"y": 2018, "v": -9.5}, {"y": 2019, "v": -16.0}, {"y": 2020, "v": -17.2}, {"y": 2021, "v": 0.0}, {"y": 2022, "v": -12.1}, {"y": 2023, "v": 4.4}, {"y": 2024, "v": -10.4}, {"y": 2025, "v": -18.3}, {"y": 2026, "v": 15.5}]}, "my": {"1": {"2012": -0.9, "2013": -6.3, "2014": 10.9, "2015": 3.2, "2016": -4.3, "2017": 6.1, "2018": -11.3, "2019": -11.1, "2020": 9.6, "2021": 4.7, "2022": 0.9, "2023": 9.5, "2024": 2.1, "2025": -5.7, "2026": 2.3}, "2": {"2012": 11.0, "2013": -4.9, "2014": 12.5, "2015": 1.3, "2016": -12.0, "2017": 2.9, "2018": 5.3, "2019": -2.6, "2020": -10.8, "2021": 6.2, "2022": -6.8, "2023": -1.7, "2024": -3.7, "2025": -12.2, "2026": 12.2}, "3": {"2012": 3.5, "2013": -11.4, "2014": 1.5, "2015": 0.2, "2016": 0.6, "2017": 6.1, "2018": -4.2, "2019": -1.8, "2020": -17.0, "2021": -9.9, "2022": -6.5, "2023": -3.1, "2024": -8.8, "2025": -0.6, "2026": 2.5}, "4": {"2012": 7.7, "2013": 3.2, "2014": 9.8, "2015": 6.2, "2016": 4.3, "2017": 10.2, "2018": 3.6, "2019": -5.7, "2020": 7.9, "2021": 1.7, "2022": 14.6, "2023": 4.9, "2024": 12.9, "2025": -2.7, "2026": 7.8}, "5": {"2012": -0.7, "2013": -1.5, "2014": 5.1, "2015": 1.8, "2016": -9.8, "2017": -7.6, "2018": -4.6, "2019": -7.1, "2020": -0.1, "2021": 9.4, "2022": -4.4, "2023": 1.6, "2024": 1.5, "2025": 8.5, "2026": 2.7}, "6": {"2012": -10.3, "2013": 0.4, "2014": 25.2, "2015": -2.4, "2016": -0.2, "2017": -0.0, "2018": -6.0, "2019": -7.9, "2020": 4.2, "2021": 14.9, "2022": 3.5, "2023": 7.2, "2024": 10.5, "2025": 3.3, "2026": 3.1}, "7": {"2011": 10.3, "2012": 1.1, "2013": -0.7, "2014": 7.9, "2015": 12.1, "2016": -3.2, "2017": -0.5, "2018": -4.5, "2019": -10.3, "2020": -9.8, "2021": 14.3, "2022": 4.4, "2023": 4.8, "2024": 0.8, "2025": -1.5, "2026": 5.3}, "8": {"2011": -7.2, "2012": -1.1, "2013": 7.5, "2014": 6.4, "2015": 0.6, "2016": 3.8, "2017": -0.5, "2018": -4.2, "2019": -8.6, "2020": 29.0, "2021": -8.1, "2022": 0.3, "2023": 14.7, "2024": 0.8, "2025": -7.4, "2026": 11.5}, "9": {"2011": 2.8, "2012": 0.4, "2013": 0.8, "2014": 16.8, "2015": -3.9, "2016": -0.8, "2017": 3.9, "2018": -0.5, "2019": 3.8, "2020": 5.6, "2021": -2.1, "2022": 0.8, "2023": -2.7, "2024": -3.6, "2025": -1.2}, "10": {"2011": -4.9, "2012": 0.2, "2013": -5.4, "2014": -7.0, "2015": -1.5, "2016": 4.9, "2017": 8.2, "2018": 4.8, "2019": -7.3, "2020": -2.6, "2021": 2.1, "2022": 7.6, "2023": -2.7, "2024": -2.3, "2025": 1.7}, "11": {"2011": 0.9, "2012": -2.4, "2013": -0.8, "2014": 11.8, "2015": -1.6, "2016": 1.0, "2017": 10.2, "2018": -2.4, "2019": -2.6, "2020": 2.3, "2021": 0.7, "2022": -0.2, "2023": 10.2, "2024": 5.7, "2025": 0.3}, "12": {"2011": -4.0, "2012": -2.3, "2013": 5.3, "2014": 0.8, "2015": 3.0, "2016": -0.5, "2017": 6.0, "2018": -1.3, "2019": 3.2, "2020": 8.4, "2021": 2.0, "2022": 6.1, "2023": -3.0, "2024": -1.0, "2025": 3.2}}, "basket": ["Bharat Forge Ltd", "CIE Automotive India Ltd", "Ramkrishna Forgings Ltd", "MM Forgings Limited", "Pradeep Metals Limited", "Kalyani Forge Limited", "Him Teknoforge Ltd."], "nbasket": 7, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.4, "rel": 0.7, "hit": 9, "n": 15}, {"m": 2, "abs": -1.4, "rel": -0.2, "hit": 7, "n": 15}, {"m": 3, "abs": -3.4, "rel": -3.3, "hit": 6, "n": 15}, {"m": 4, "abs": 8.3, "rel": 5.8, "hit": 13, "n": 15}, {"m": 5, "abs": 0.8, "rel": -0.3, "hit": 7, "n": 15}, {"m": 6, "abs": 4.8, "rel": 3.0, "hit": 9, "n": 15}, {"m": 7, "abs": 3.8, "rel": 1.9, "hit": 9, "n": 16}, {"m": 8, "abs": 2.1, "rel": 2.4, "hit": 9, "n": 16}, {"m": 9, "abs": 2.0, "rel": 1.3, "hit": 8, "n": 15}, {"m": 10, "abs": 1.8, "rel": -0.3, "hit": 7, "n": 15}, {"m": 11, "abs": 3.2, "rel": 2.2, "hit": 9, "n": 15}, {"m": 12, "abs": 2.4, "rel": 1.7, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": 34.7, "n": 27.7, "rel": 7.0, "partial": false}, {"y": 2013, "b": -8.1, "n": 6.8, "rel": -14.9, "partial": false}, {"y": 2014, "b": 232.5, "n": 31.4, "rel": 201.1, "partial": false}, {"y": 2015, "b": 14.7, "n": -4.1, "rel": 18.7, "partial": false}, {"y": 2016, "b": -14.7, "n": 3.0, "rel": -17.7, "partial": false}, {"y": 2017, "b": 95.8, "n": 28.6, "rel": 67.1, "partial": false}, {"y": 2018, "b": -20.3, "n": 3.2, "rel": -23.4, "partial": false}, {"y": 2019, "b": -39.4, "n": 12.0, "rel": -51.4, "partial": false}, {"y": 2020, "b": 27.1, "n": 14.9, "rel": 12.2, "partial": false}, {"y": 2021, "b": 71.1, "n": 24.1, "rel": 47.0, "partial": false}, {"y": 2022, "b": 24.8, "n": 4.3, "rel": 20.5, "partial": false}, {"y": 2023, "b": 73.6, "n": 20.0, "rel": 53.6, "partial": false}, {"y": 2024, "b": 22.9, "n": 8.8, "rel": 14.1, "partial": false}, {"y": 2025, "b": -7.1, "n": 10.5, "rel": -17.7, "partial": false}, {"y": 2026, "b": 42.4, "n": -10.7, "rel": 53.1, "partial": true}], "dd": [{"co": "Bharat Forge", "peak": "Jun 2024", "fp": 10, "y1": 55}, {"co": "PTC Industries", "peak": "Dec 2025", "fp": 19, "y1": 47}, {"co": "Happy Forging", "peak": "Jul 2024", "fp": 68, "y1": 122}, {"co": "Azad Engineering", "peak": "Jun 2024", "fp": 41, "y1": 70}, {"co": "CIE Automotive India", "peak": "Jul 2024", "fp": -37, "y1": -11}, {"co": "Ramkrishna Forgings", "peak": "Oct 2024", "fp": -31, "y1": 25}, {"co": "Balu Forge Industries", "peak": "Sep 2024", "fp": -39, "y1": -22}, {"co": "MM Forgings", "peak": "Jul 2024", "fp": -9, "y1": 88}, {"co": "Talbros Automotive Components", "peak": "Jul 2024", "fp": 22, "y1": 62}, {"co": "Amic Forging", "peak": "Aug 2024", "fp": 32, "y1": 55}, {"co": "Rico Auto Industries", "peak": "Apr 2024", "fp": -14, "y1": 24}, {"co": "Kross", "peak": "Sep 2024", "fp": -8, "y1": 4}, {"co": "Tirupati Forge", "peak": "Dec 2024", "fp": -7, "y1": 76}, {"co": "Pradeep Metals", "peak": "Jul 2025", "fp": 26, "y1": 99}, {"co": "Kalyani Forge", "peak": "May 2025", "fp": 15, "y1": 41}, {"co": "Omax Autos", "peak": "Jul 2025", "fp": 13, "y1": 26}, {"co": "Him Teknoforge", "peak": "Nov 2024", "fp": 3, "y1": 33}], "win": {"FebMar": {"mean": -3.2, "median": -4.7, "hit": 6, "n": 15}, "AprJul": {"mean": 12.0, "median": 7.6, "hit": 11, "n": 15}, "AugSep": {"mean": 3.8, "median": 0.2, "hit": 7, "n": 14}, "OctDec": {"mean": 4.7, "median": 4.4, "hit": 10, "n": 14}, "SepNov": {"mean": 3.7, "median": 1.4, "hit": 9, "n": 14}, "JanMar": {"mean": -2.3, "median": -9.5, "hit": 7, "n": 15}}, "ytd": {"b": 42.4, "n": -10.7}, "notes": {"2012": "+34.7% against +27.7%. Him Teknoforge +75%, Pradeep Metals +48%, Ramkrishna +30%; Bharat Forge flat.", "2013": "\u22128.1% against +6.8%, median \u221220%. The truck downturn: Kalyani Forge \u221239%, Pradeep \u221223%, Him Teknoforge \u221222%. Bharat Forge +30% was the exception on its export and non-auto push.", "2014": "+232.5% against +31.4%, median +188%. The great re-rating of Indian engineering: MM Forgings +497%, CIE (then Mahindra Forgings) +330%, Ramkrishna +285%; even the laggard, Him Teknoforge, rose 70%.", "2015": "+14.7% against \u22124.1%. Ramkrishna +58% and Pradeep +28%; Him Teknoforge \u221225%.", "2016": "\u221214.7% against +3.0%. Ramkrishna \u221246% and CIE \u221227% as US truck orders fell; Bharat Forge +2%.", "2017": "+95.8% against +28.6%. The small-cap boom and an Indian truck recovery: Ramkrishna +204%, MM Forgings +167%, Him Teknoforge +108%.", "2018": "\u221220.3% against +3.2%. The small-cap unwind: Him Teknoforge \u221254%, Ramkrishna \u221238%, Bharat Forge \u221230%; MM Forgings +10%.", "2019": "\u221239.4% against +12.0%, median \u221241%. India's truck slump after the 2018 axle-load norms and the NBFC credit squeeze, as the US Class 8 cycle peaked: Him Teknoforge \u221272%, Pradeep \u221250%, Kalyani Forge \u221246%.", "2020": "+27.1% against +14.9%. The post-Covid rebound: Pradeep +47%, Him Teknoforge +34%, Ramkrishna +26%; Kalyani Forge \u22122%.", "2021": "+71.1% against +24.1%. Ramkrishna and Pradeep +98% each, Him Teknoforge +94%, on recovering trucks and exports.", "2022": "+24.8% against +4.3%. CIE +47%, Ramkrishna +38%, Kalyani Forge +37%; Him Teknoforge \u221225%.", "2023": "+73.6% against +20.0%. Ramkrishna +176% on export growth and its rail-wheel plans; Him Teknoforge +100%, Kalyani Forge +65%, Bharat Forge +41%.", "2024": "+22.9% against +8.8%. Kalyani Forge +65%, Pradeep +27%; Bharat Forge +5%, CIE flat, MM Forgings \u22124% as European demand weakened.", "2025": "\u22127.1% against +10.5%. Ramkrishna \u221241% after its inventory discrepancy; MM Forgings \u221222%, CIE \u221210%. Bharat Forge +13% on defence.", "2026": "+42.4% against a Nifty \u221210.7%, to 18 September; median +38%. MM Forgings +73%, Pradeep +55%, Kalyani Forge +54%, Ramkrishna +38%, Bharat Forge +33%, Him Teknoforge +26%; CIE \u22129%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

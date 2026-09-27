@@ -46,10 +46,15 @@ projects, not revenue, for every listed name here.
 what a company makes — it is who writes the specification, and whether the part wears out.** AIA Engineering
 (mining consumable sold on wear life, 36% EBITDA margin) vs Alicon Castalloy (tier-one castings to a customer's
 drawing, 9.5%) in the same section. Apply the same test to bearings, pumps, valves, machine tools.
+Forgings (080) add a second test: **margin follows the weight class of the part and the depth of machining, not the
+tonnes.** Happy Forgings (heavy crankshafts to 3,000 kg, deep machining) 31.3% EBITDA vs Kalyani Forge (small
+automotive parts) 15.9% in the same quarter. The forgings basket is a truck-cycle basket (worst years 2013, 2016, 2019)
+with a growing defence floor (Bharat Forge defence order book ₹11,196 cr); 2026's +42% rode the US EPA 2027 pre-buy.
 
 ## Calendar findings worth echoing
 
 - Castings (078): April beat the Nifty in 14 of 15 years — the strongest monthly record in the project.
+- Forgings (080): April 13 of 15; March only 6 of 15; January–March median −9.5, but 2026 was an exception (+15.5).
 - Metal Recycling (076): April 13 of 15. Specialty metals (075): April 12 of 15. Small-cap fiscal-year behaviour
   is part of this — say so when an April signal comes from a small-cap basket.
 - Industrial minerals (079): February–March beat the Nifty in only 3 of 15 years (median −6.9) — the weakest
@@ -90,3 +95,13 @@ drawing, 9.5%) in the same section. Apply the same test to bearings, pumps, valv
   (e.g. Lux +2.3% not +7.1%). Corrected and republished 27 Sep 2026 with Prerak's approval: basket −13.3%,
   median −14%, 22 per-name figures re-cut at 18-Sep closes (verified against fresh TradingView pulls).** Never hand-edit a data_NNN.json
   without noting it here, since a rerun of compute_stats will overwrite it.
+- **Million-vs-crore misprints (080):** ScanX printed Balu Forge Q1 FY27 profit as "₹661 crore" (correct ₹66.1 cr);
+  a call summary printed Bharat Forge standalone revenue as "INR 23,474 crore" (correct ₹2,347 cr).
+- **Exceptional items (080):** MM Forgings Q1 FY27 profit ₹90 cr includes ₹56.25 cr post-tax land-sale gain; Bharat Forge's
+  Q1 FY27 loss is a ₹358 cr German restructuring provision; Ramkrishna FY25 profit flattered by a −80% effective tax
+  rate. Screener folds exceptionals into "Other Income" — always check it.
+- **Misclassified in Forgings (080):** PTC Industries (castings/titanium — belongs with 078), Rico Auto (die-casting),
+  Omax Autos (sheet metal — belongs in 081), Maiden Forgings (bright bars), Prima Industries (edible oil), Talbros
+  (mainly gaskets).
+- **Pipeline (27 Sep 2026):** mkindex.py uses same-quote nesting inside an f-string, which needs Python 3.12+; in the
+  cloud container run it with `python3.12` (the default `python` is 3.11).
