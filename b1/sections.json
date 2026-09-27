@@ -823,10 +823,10 @@
   "section": "INDUSTRIAL MINERALS & MINING",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 16,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "079",
   "family": "Metals - gap to close",
-  "order": 1,
+  "order": null,
   "note": "Missed when Metals was marked complete; do this first."
  },
  {

@@ -35,8 +35,12 @@ integrated smelters with captive power and bauxite (072), low-cost orebodies (07
 smelters on negative treatment charges and a state trading agency did badly. Also: power cost as the structural
 aluminium story (AI data centres bidding $115/MWh vs smelters' $40); the first-calendar-quarter weakness that
 appears in almost every metals basket (Chinese New Year + fiscal year-end destocking); October–December strength
-in copper (12/14) and aluminium (11/14). **Not actually complete:** Industrial Minerals & Mining (16 names) was
-missed and is first in the queue.
+in copper (12/14) and aluminium (11/14). **Gap closed with 079 Industrial Minerals & Mining** (27 Sep 2026): the
+section is five different businesses — lignite rent (GMDC), Guinea bauxite logistics (Ashapura, ~84% of revenue),
+mineral processing (20 Microns), titanium chemistry (Cochin Minerals & Rutile) and stone (ASI, Midwest). Lesson: the
+word "mining" says nothing about where profit comes from; a lease is a political asset (Cochin lost captive ilmenite
+to the 2019 atomic-minerals order), processing skill lasts longer. Critical-minerals/rare-earth theme is policy and
+projects, not revenue, for every listed name here.
 
 **Engineering & Capital Goods (078–).** Opening principle, stated on 078: **in engineering the question is never
 what a company makes — it is who writes the specification, and whether the part wears out.** AIA Engineering
@@ -48,6 +52,8 @@ drawing, 9.5%) in the same section. Apply the same test to bearings, pumps, valv
 - Castings (078): April beat the Nifty in 14 of 15 years — the strongest monthly record in the project.
 - Metal Recycling (076): April 13 of 15. Specialty metals (075): April 12 of 15. Small-cap fiscal-year behaviour
   is part of this — say so when an April signal comes from a small-cap basket.
+- Industrial minerals (079): February–March beat the Nifty in only 3 of 15 years (median −6.9) — the weakest
+  first-quarter record in the Metals family; April 13 of 15.
 - Zinc (074): no usable seasonal signal at all — report that plainly rather than manufacturing a pattern.
 
 ## Data traps already found (do not repeat)
@@ -66,5 +72,12 @@ drawing, 9.5%) in the same section. Apply the same test to bearings, pumps, valv
   revenue.
 - **Profit that isn't operations:** Maithan (treasury income), Welspun (PAT > EBITDA), IFGL (end of goodwill
   amortisation), MMTC (other income ₹145 cr vs ₹0.68 cr operating revenue).
+  GMDC (079): trailing other income ₹945 cr vs operating profit ₹465 cr, incl. ₹522.65 cr exceptional GST credit
+  in FY26; ASI Industries other income ≈ operating profit.
+- **Tenfold misprint:** ScanX printed GMDC Q1 FY27 revenue ₹9,066.4 cr / PAT ₹1,634.3 cr (correct ₹906.64 cr /
+  ₹163.43 cr). Check PAT against EPS × shares.
+- **Name-based misclassification:** Garnet International (an NBFC, not garnet), D & H India (welding electrodes),
+  International Combustion (mining equipment) sat in Industrial Minerals (079). Neelkanth Rockminerals: nil revenue
+  since FY21, +226% in 2026 on a takeover.
 - **Pipeline bug fixed 26 Sep 2026:** artifact URLs for 069–078 had been saved as bare ids, breaking their index
   links. urls.json must hold full https URLs; mkchecklist.py now refuses to run otherwise.

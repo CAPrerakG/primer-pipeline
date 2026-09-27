@@ -8213,5 +8213,146 @@
    "BSE:MAGNAELQ",
    "BSE:NITINCAST"
   ]
+ },
+ "079": {
+  "ind": "Industrial Minerals & Mining",
+  "members": [
+   {
+    "sym": "NSE:GMDCLTD",
+    "co": "Gujarat Mineral Development Corporation Limited",
+    "mcap": 172801207764,
+    "basic": "Wholesale Distributors",
+    "status": "in",
+    "isin": "INE131A01031"
+   },
+   {
+    "sym": "NSE:CMPDI",
+    "co": "Central Mine Planning & Design Institute Limited",
+    "mcap": 145120500000,
+    "basic": "Miscellaneous Commercial Services",
+    "status": "in",
+    "isin": "INE05HV01027"
+   },
+   {
+    "sym": "NSE:ASHAPURMIN",
+    "co": "Ashapura Minechem Ltd",
+    "mcap": 49291467682,
+    "basic": "Other Metals/Minerals",
+    "status": "in",
+    "isin": "INE348A01023"
+   },
+   {
+    "sym": "NSE:MIDWESTLTD",
+    "co": "Midwest Limited",
+    "mcap": 35359853231,
+    "basic": "Construction Materials",
+    "status": "in",
+    "isin": "INE0XAD01024"
+   },
+   {
+    "sym": "NSE:20MICRONS",
+    "co": "20 Microns Limited",
+    "mcap": 7168452836,
+    "basic": "Chemicals: Specialty",
+    "status": "in",
+    "isin": "INE144J01027"
+   },
+   {
+    "sym": "NSE:VISHNUINFR",
+    "co": "Vishnusurya Projects & Infra Limited",
+    "mcap": 3813268366.5,
+    "basic": "Construction Materials",
+    "status": "in",
+    "isin": "INE0PQ001012"
+   },
+   {
+    "sym": "BSE:COCHINM",
+    "co": "Cochin Minerals & Rutile Ltd.",
+    "mcap": 2429648881,
+    "basic": "Other Metals/Minerals",
+    "status": "in",
+    "isin": "INE105D01013"
+   },
+   {
+    "sym": "BSE:ASIIL",
+    "co": "ASI Industries Ltd.",
+    "mcap": 2106851982.0000002,
+    "basic": "Construction Materials",
+    "status": "in",
+    "isin": "INE443A01030"
+   },
+   {
+    "sym": "BSE:DHINDIA",
+    "co": "D & H India Ltd",
+    "mcap": 1867375656,
+    "basic": "Industrial Specialties",
+    "status": "in",
+    "isin": "INE589D01018"
+   },
+   {
+    "sym": "BSE:INTLCOMBQ",
+    "co": "International Combustion (India) Ltd",
+    "mcap": 1179242657,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in",
+    "isin": "INE403C01014"
+   },
+   {
+    "sym": "BSE:GARNETINT",
+    "co": "Garnet International Limited",
+    "mcap": 1121551192,
+    "basic": "Textiles",
+    "status": "in",
+    "isin": "INE590B01010"
+   },
+   {
+    "sym": "NSE:MGSL",
+    "co": "Matrix Geo Solutions Ltd.",
+    "mcap": 963859095.1999999,
+    "basic": "Engineering & Construction",
+    "status": "in",
+    "isin": "INE132901013"
+   },
+   {
+    "sym": "BSE:NEELKAN",
+    "co": "Neelkanth Rockminerals Ltd.",
+    "mcap": 295863454,
+    "basic": "Construction Materials",
+    "status": "in",
+    "isin": "INE741D01015"
+   },
+   {
+    "sym": "BSE:RAWEDGE",
+    "co": "Raw Edge Industrial Solutions Ltd.",
+    "mcap": 140717016,
+    "basic": "Wholesale Distributors",
+    "status": "in",
+    "isin": "INE960Z01014"
+   },
+   {
+    "sym": "BSE:KACHCHH",
+    "co": "Kachchh Minerals Limited",
+    "mcap": 135968083,
+    "basic": "Other Metals/Minerals",
+    "status": "in",
+    "isin": "INE059E01010"
+   },
+   {
+    "sym": "NSE:ARENTERP",
+    "co": "Rajdarshan Industries Limited",
+    "mcap": 93621998,
+    "basic": "Construction Materials",
+    "status": "in",
+    "isin": "INE610C01014"
+   }
+  ],
+  "moved_out": [],
+  "basket_syms": [
+   "NSE:GMDCLTD",
+   "NSE:ASHAPURMIN",
+   "NSE:20MICRONS",
+   "BSE:COCHINM",
+   "BSE:ASIIL"
+  ]
  }
 }
