@@ -843,10 +843,10 @@
   "section": "METAL FABRICATION & ENGINEERING",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 23,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "081",
   "family": "Engineering & Capital Goods",
-  "order": 3,
+  "order": null,
   "note": ""
  },
  {

@@ -50,10 +50,25 @@ Forgings (080) add a second test: **margin follows the weight class of the part 
 tonnes.** Happy Forgings (heavy crankshafts to 3,000 kg, deep machining) 31.3% EBITDA vs Kalyani Forge (small
 automotive parts) 15.9% in the same quarter. The forgings basket is a truck-cycle basket (worst years 2013, 2016, 2019)
 with a growing defence floor (Bharat Forge defence order book ₹11,196 cr); 2026's +42% rode the US EPA 2027 pre-buy.
+Metal Fabrication (081) adds a third, and it subsumes the other two: **who carries the price of steel between the quote
+and the delivery?** Steel is 55-70% of revenue here, the highest in the family. Where the customer fixes the price first
+(PEB tender, reverse auction, annual OEM price letter) margins are 3-11%; where the customer must qualify the supplier
+first (nuclear, aerospace, semiconductor equipment) they are 19-29%. Omnitech 29.0% vs SM Auto Stamping 3.1% in the same
+section. 2026 split the section in two: MTAR +198% and Sansera +154% against Interarch -26%, Epack Prefab -17%,
+M&B -34% and Salasar -45%, with Mumbai HRC at a four-year high of ₹63,900/t in the week of the 18-Sep data date.
+**Do not own the average of a fabrication basket** - 081 is at least four industries (precision engineering, PEB,
+auto sheet metal, structural/process fabrication) sharing a process and nothing else. Also: India's largest structural
+fabricators (L&T Construction, Tata Projects, Tata BlueScope, JSW Severfield, KEC) are **not** in the section; Pennar is
+filed in 066. The listed section is the residue.
 
 ## Calendar findings worth echoing
 
-- Castings (078): April beat the Nifty in 14 of 15 years — the strongest monthly record in the project.
+- **April, corrected:** three baskets share the project record of 14 of 15 — specialty chemicals (008, +8.7 pts),
+  castings (078, +5.4) and metal fabrication (081, +8.3). No basket has managed 15 of 15. The earlier note calling 078
+  "the strongest monthly record in the project" was wrong on both counts; check `data_*.json` before claiming a record.
+- Metal fabrication (081): April 14 of 15 at +8.3 pts, failing only in 2019; **March 2 of 15**, Jan-Mar median -13.8
+  (weakest multi-company first quarter after salt, 015). Mechanism: orders are placed against the client's April capital
+  budget, and the fabricator's own Jan-Mar is when it books cost overruns and steel losses on jobs quoted a year earlier.
 - Forgings (080): April 13 of 15; March only 6 of 15; January–March median −9.5, but 2026 was an exception (+15.5).
 - Metal Recycling (076): April 13 of 15. Specialty metals (075): April 12 of 15. Small-cap fiscal-year behaviour
   is part of this — say so when an April signal comes from a small-cap basket.
@@ -105,3 +120,26 @@ with a growing defence floor (Bharat Forge defence order book ₹11,196 cr); 202
   (mainly gaskets).
 - **Pipeline (27 Sep 2026):** mkindex.py uses same-quote nesting inside an f-string, which needs Python 3.12+; in the
   cloud container run it with `python3.12` (the default `python` is 3.11).
+- **Basket choice that moves a headline (081):** including IST Ltd would have made April read **15 of 15** instead of
+  14 of 15. IST was excluded because it is an investment and property company - Q1 FY27 other income ₹87 cr against
+  ₹35 cr of revenue, ₹1,449 cr of investments against a ₹746 cr market value. State the excluded alternative on the page
+  when an exclusion changes a headline number.
+- **Same-group names (081), both ISIN-checked:** Pritika Engineering Components (NSE:PRITIKA, INE0MJQ01020) is a 70.8%
+  subsidiary of Pritika Auto Industries (NSE:PRITIKAUTO, INE583R01029), which the source file puts in Castings (078).
+  Brady & Morris Engineering (BSE:BRADYM, INE856A01017) is 72.7% owned by W H Brady & Co (NSE:WHBRADY, INE855A01019) -
+  the ISINs differ by one character.
+- **Face value, not a bad price (081):** Salasar Techno trades at ₹4.89 because its face value is ₹1 and it has ~175 cr
+  shares. Check shares = mcap/price before calling a low price a data error. Its -86% drawdown is continuous, not a
+  corporate action.
+- **No price discovery without a suspension (081):** Pattech Fitwell's TradingView series ends 9-Jun-2026 at ₹114.85 and
+  Screener quotes the same price in late September; the company is filing normally (AGM 18-Sep). Illiquidity, not a feed
+  break - verify with the company's announcements before blaming the data.
+- **Million-vs-crore, third occurrence (081):** ScanX printed Sansera's Q1 FY27 profit as "₹866 crore" (correct ₹86.6 cr).
+  Same source as the Balu Forge and GMDC misprints. Always check profit against EPS x shares.
+- **Screener column labels drift in fetched summaries (081):** asking a page summariser for "the last N quarters" returned
+  columns shifted by one or two for MTAR, Aequs and ACGL. Ask explicitly for the **rightmost column's header date** and
+  the same quarter a year earlier, then reconcile the four quarters against the annual row.
+- **Pipeline bug found 29 Sep 2026 (not yet fixed):** `build_primer.py` inserts `now_note` only where the fragment
+  contains `<p id="now-stocks"></p>`. Fragments **070-080 all define a now_note and none contains the hook**, so eleven
+  primers silently dropped that paragraph (the basket-vs-Nifty line). 081 includes the hook. Fixing 070-080 means adding
+  one line to each fragment, rebuilding and republishing to the same URLs - Prerak's call.
