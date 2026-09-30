@@ -291,3 +291,28 @@ clarification distinguishes undiffused from imported diffused wafers. No post18S
 
 Build/gate/verify086 passed; verify081 passed.16,012words149links88terms12questions6PMboxes4glossarygroups.
 No prior primer page changed. Next087 suggestedmergeValves+FlexibleHoses&Piping.
+
+## 087 — Valves, Flexible Hoses & Piping Systems
+
+Eight researched/sevenbasket; excludeAeroflexEnterprises65.47%groupinterestinAeroflexIndustries.
+Merge disclosed. Allend18Sep; Nov2019startchangingmembership; Chemtech2014–15gapspre-basket.
+YTD36.2%vsNifty−10.7%; valve-only−3.6%; withoutDEE17.0%,withoutAero19.6%. April6/7;
+withoutChem5/6losesearlyyear, notcleanimprovement. No15yearsmallcapcontrolsubtractedfrom7yearsample.
+
+Familyapplication:078specification/replacementvalue,080retainedprocessing,081input/acceptancelag.
+Qualificationcreatesaccess; acceptedorders, recurringownerprofitandcollectionsdemonstrateeconomics.
+Criticalproductdoesnotautomaticallyproducehighreturnoncapital. ComponentOEMscopeisnotfinalvalvebrand.
+
+Accounting: QuestARPDF113loss465.1639cr/otherexpense474.4907vsoriginalexchange4.2823/13.6091;
+sameEPS−4.21cannotreconcileAR. Useexchangequalified; weightedsharesunresolved. Ordinaryother7.8767
+includes7.3436capitalgain,exception2.5908andassociate−3.4443separate. JashannualEPSnoteuses75.5159group
+not76.1817owner; DEE77.1671groupnot77.3567owner. Jash5.6tariffrefundreducesconsumption,notOtherIncome.
+Chemtechbasic2.80weightedvs2.72summary; diluted2.99usesSMALLERsharecount unresolved. Atamprimaryannual
+sales47.2929vs46.98summary. SBH2EPS6.36vsdeck5.27copiedprior; annualrupeenoteconvertedcorrectly.
+AeroflexIndustriesannual4.28weightedvs4.20summary. ParentMROsale227.42considerationnotgain; disposal
+dominatesJuneOtherIncome144.1661and48.45%deckEBITDAmargin. Parentexcludedpricebutfullycovered.
+
+Cash: DEEconsolCFO19.5484vsstandalone−44.5003; receivables135.8141absorption. SB18.6767CFOincludes
+9.9132payableincrease; capex17.9729. ChemtechCFO−10.4556. AtamCFO.463. Notallprofitiscustomer cash.
+APIQ1qualityregistrationdistinctfromproductMonogram. Old2024Atam/Questcallsexcludedfromcurrentguidance.
+Jash10Sepupdate937book/86negotiatedpendingPO keptseparate. No earlierprimerpagechanged.

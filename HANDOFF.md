@@ -1,5 +1,26 @@
 # Handoff — industry primer series
 
+## Latest state: after 087 (30 Sep 2026)
+
+087 Valves, Flexible Hoses & Piping Systems is published at
+https://caprerakg.github.io/primer-pipeline/087.html. Explicit merge of five valve and three hose/piping
+names; eight researched, seven basket. Parent Aeroflex Enterprises excluded for 65.47% group interest
+in Aeroflex Industries. All endpoints18Sep2026. 16,033words154links88terms12questions6PMboxes4groups.
+Build/gate/verify087 exit0 (five Chemtech2014–15gaps beforeNov2019basket); verify081 exit0.
+Browser search/no-match/reset, threecharts/sevenannualrows and390px layout pass, noJSerrors.
+
+Audit: Quest annual-report P&L prints loss465.1639cr versus exchange4.2823cr withsameEPS−4.21;
+printed other-expense conflict visually checked, no invented repair. Jash/DEE annualEPS notes usegroup
+profit despite separateownerfigures. Jash5.6crtariffrefund is in consumption. Chemtechdilutedshares
+smallerthanbasic unresolved; ordinaryotherincome supportsPAT. SBdeckH2EPS repeatsprior5.27; actual6.36.
+Atam annualsummarysales46.98 versus primary47.2929. ParentMROdisposalnotrecurringhoseprofit.
+YTD36.2%; valve-only−3.6%. Smallcap15yearcontrol notsubtractedfrom7yearsample; optionalbuilder
+control_noteadded, defaultoldbehaviourunchanged. No earlierprimerHTMLedited.
+
+Next088: Compressors(order14,3names)+IndustrialEngines(order15,4names), queue-suggestedmerge.
+Prerak authorises continuation until approximately50%weeklyallowanceremains. Latestcheck45%used/55%remaining.
+Preserve085Veljanprice repair when fetching/packing. Auditledger,recon,source manifest,sensitivities retained.
+
 ## Latest state: after 086 (30 Sep 2026)
 
 086 Pumps & Pumping Systems is published at https://caprerakg.github.io/primer-pipeline/086.html.

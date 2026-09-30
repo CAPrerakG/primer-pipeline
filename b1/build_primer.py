@@ -18,7 +18,9 @@ def build(no):
             W=data.get('win',{}); lab={'JanMar':'Jan–Mar','FebMar':'Feb–Mar','AprJul':'Apr–Jul','AugSep':'Aug–Sep','SepNov':'Sep–Nov','OctDec':'Oct–Dec'}
             h+="<li><b>Windows:</b> "+"; ".join(f"{lab[k]} beat the Nifty in {v['hit']} of {v['n']} years (median {sg(v['median'])} pts)" for k,v in W.items() if k in lab)+".</li></ul>"
             apr=next((m for m in mo if m['m']==4),None)
-            if apr and not one:
+            if meta.get('control_note'):
+                h+=meta['control_note']
+            elif apr and not one:
                 ex=round(apr['rel']-3.0,1)
                 h+=f"<p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about {sg(ex)} points.</p>"
             h+=meta.get('season_note','')

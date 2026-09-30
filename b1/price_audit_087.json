@@ -1,0 +1,79 @@
+{
+  "NSE:AEROENTER": {
+    "bars": 4992,
+    "first": "2006-02-20",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  },
+  "NSE:AEROFLEX": {
+    "bars": 757,
+    "first": "2023-08-31",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  },
+  "NSE:DEEDEV": {
+    "bars": 555,
+    "first": "2024-06-26",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  },
+  "NSE:ATAM": {
+    "bars": 1215,
+    "first": "2020-10-06",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  },
+  "BSE:CHEMTECH": {
+    "bars": 1908,
+    "first": "2014-01-31",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": [
+      {
+        "date": "2014-04-11",
+        "days": 50
+      },
+      {
+        "date": "2014-05-27",
+        "days": 46
+      },
+      {
+        "date": "2014-08-14",
+        "days": 51
+      },
+      {
+        "date": "2015-02-28",
+        "days": 80
+      },
+      {
+        "date": "2015-06-29",
+        "days": 121
+      }
+    ]
+  },
+  "NSE:JASH": {
+    "bars": 1711,
+    "first": "2019-10-30",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  },
+  "BSE:QUESTFLOW": {
+    "bars": 740,
+    "first": "2023-09-21",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  },
+  "BSE:SBVCL": {
+    "bars": 639,
+    "first": "2024-01-03",
+    "last": "2026-09-18",
+    "jumps": [],
+    "gaps": []
+  }
+}

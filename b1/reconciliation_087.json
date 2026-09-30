@@ -1,0 +1,354 @@
+{
+  "NSE:AEROENTER": {
+    "url": "https://www.screener.in/company/AEROENTER/consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_earlier_header": "Jun 2025",
+    "periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          134.0,
+          172.0,
+          191.0,
+          200.0
+        ],
+        "sum": 697.0,
+        "annual_summary": 697.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "period_values": [
+          8.0,
+          8.0,
+          5.0,
+          7.0
+        ],
+        "sum": 28.0,
+        "annual_summary": 27.0,
+        "difference": 1.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          14.0,
+          20.0,
+          25.0,
+          26.0
+        ],
+        "sum": 85.0,
+        "annual_summary": 85.0,
+        "difference": 0.0
+      }
+    }
+  },
+  "NSE:AEROFLEX": {
+    "url": "https://www.screener.in/company/AEROFLEX/consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_earlier_header": "Jun 2025",
+    "periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          84.0,
+          111.0,
+          121.0,
+          126.0
+        ],
+        "sum": 442.0,
+        "annual_summary": 442.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "period_values": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "sum": 1.0,
+        "annual_summary": 1.0,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          7.0,
+          14.0,
+          16.0,
+          18.0
+        ],
+        "sum": 55.0,
+        "annual_summary": 56.0,
+        "difference": -1.0
+      }
+    }
+  },
+  "NSE:DEEDEV": {
+    "url": "https://www.screener.in/company/DEEDEV/consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_earlier_header": "Jun 2025",
+    "periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          224.0,
+          270.0,
+          287.0,
+          362.0
+        ],
+        "sum": 1143.0,
+        "annual_summary": 1142.0,
+        "difference": 1.0
+      },
+      "Other Income +": {
+        "period_values": [
+          4.0,
+          5.0,
+          1.0,
+          4.0
+        ],
+        "sum": 14.0,
+        "annual_summary": 15.0,
+        "difference": -1.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          13.0,
+          18.0,
+          19.0,
+          28.0
+        ],
+        "sum": 78.0,
+        "annual_summary": 77.0,
+        "difference": 1.0
+      }
+    }
+  },
+  "NSE:ATAM": {
+    "url": "https://www.screener.in/company/ATAM/",
+    "rightmost_header": "Jun 2026",
+    "year_earlier_header": "Jun 2025",
+    "periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          12.37,
+          11.41,
+          10.41,
+          13.1
+        ],
+        "sum": 47.29,
+        "annual_summary": 46.98,
+        "difference": 0.31
+      },
+      "Other Income +": {
+        "period_values": [
+          0.0,
+          0.0,
+          0.01,
+          0.0
+        ],
+        "sum": 0.01,
+        "annual_summary": 0.01,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          1.24,
+          0.9,
+          -0.58,
+          0.86
+        ],
+        "sum": 2.42,
+        "annual_summary": 2.42,
+        "difference": 0.0
+      }
+    }
+  },
+  "BSE:CHEMTECH": {
+    "url": "https://www.screener.in/company/537326/",
+    "rightmost_header": "Jun 2026",
+    "year_earlier_header": "Jun 2025",
+    "periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          9.57,
+          5.1,
+          5.44,
+          10.07
+        ],
+        "sum": 30.18,
+        "annual_summary": 30.17,
+        "difference": 0.01
+      },
+      "Other Income +": {
+        "period_values": [
+          1.49,
+          1.38,
+          1.29,
+          1.22
+        ],
+        "sum": 5.38,
+        "annual_summary": 5.38,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          3.01,
+          1.23,
+          0.19,
+          0.6
+        ],
+        "sum": 5.03,
+        "annual_summary": 5.02,
+        "difference": 0.01
+      }
+    }
+  },
+  "NSE:JASH": {
+    "url": "https://www.screener.in/company/JASH/consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_earlier_header": "Jun 2025",
+    "periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          127.61,
+          157.54,
+          160.5,
+          290.54
+        ],
+        "sum": 736.19,
+        "annual_summary": 736.0,
+        "difference": 0.19
+      },
+      "Other Income +": {
+        "period_values": [
+          5.33,
+          2.11,
+          4.08,
+          9.05
+        ],
+        "sum": 20.57,
+        "annual_summary": 20.0,
+        "difference": 0.57
+      },
+      "Net Profit +": {
+        "period_values": [
+          -5.17,
+          10.96,
+          13.06,
+          56.65
+        ],
+        "sum": 75.5,
+        "annual_summary": 76.0,
+        "difference": -0.5
+      }
+    }
+  },
+  "BSE:QUESTFLOW": {
+    "url": "https://www.screener.in/company/543982/consolidated/",
+    "rightmost_header": "Mar 2026",
+    "year_earlier_header": "Mar 2025",
+    "periods": [
+      "Sep 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          26.22,
+          36.14
+        ],
+        "sum": 62.36,
+        "annual_summary": 62.36,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "period_values": [
+          -2.32,
+          7.61
+        ],
+        "sum": 5.29,
+        "annual_summary": 5.29,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          1.12,
+          -5.4
+        ],
+        "sum": -4.28,
+        "annual_summary": -4.28,
+        "difference": 0.0
+      }
+    }
+  },
+  "BSE:SBVCL": {
+    "url": "https://www.screener.in/company/544074/",
+    "rightmost_header": "Mar 2026",
+    "year_earlier_header": "Mar 2025",
+    "periods": [
+      "Sep 2025",
+      "Mar 2026"
+    ],
+    "rows": {
+      "Sales +": {
+        "period_values": [
+          41.35,
+          55.46
+        ],
+        "sum": 96.81,
+        "annual_summary": 96.81,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "period_values": [
+          0.62,
+          0.91
+        ],
+        "sum": 1.53,
+        "annual_summary": 1.53,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "period_values": [
+          3.37,
+          5.19
+        ],
+        "sum": 8.56,
+        "annual_summary": 8.56,
+        "difference": 0.0
+      }
+    }
+  }
+}

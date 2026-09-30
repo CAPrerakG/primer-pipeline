@@ -1,0 +1,65 @@
+{
+  "all": {
+    "ytd": 36.18,
+    "april_hits": 6,
+    "april_n": 7,
+    "april_mean_relative": 14.42,
+    "AprJul_hits": 6,
+    "AprJul_n": 7,
+    "AprJul_median": 39.68
+  },
+  "without_DEE": {
+    "ytd": 17.03,
+    "april_hits": 6,
+    "april_n": 7,
+    "april_mean_relative": 14.62,
+    "AprJul_hits": 6,
+    "AprJul_n": 7,
+    "AprJul_median": 37.44
+  },
+  "without_Aeroflex": {
+    "ytd": 19.56,
+    "april_hits": 6,
+    "april_n": 7,
+    "april_mean_relative": 15.04,
+    "AprJul_hits": 6,
+    "AprJul_n": 7,
+    "AprJul_median": 41.52
+  },
+  "valves_only": {
+    "ytd": -3.55,
+    "april_hits": 6,
+    "april_n": 7,
+    "april_mean_relative": 15.37,
+    "AprJul_hits": 6,
+    "AprJul_n": 7,
+    "AprJul_median": 38.63
+  },
+  "with_parent": {
+    "ytd": 39.32,
+    "april_hits": 6,
+    "april_n": 7,
+    "april_mean_relative": 12.83,
+    "AprJul_hits": 6,
+    "AprJul_n": 7,
+    "AprJul_median": 35.05
+  },
+  "without_Chemtech": {
+    "ytd": 49.19,
+    "april_hits": 5,
+    "april_n": 6,
+    "april_mean_relative": 15.68,
+    "AprJul_hits": 6,
+    "AprJul_n": 6,
+    "AprJul_median": 34.28
+  },
+  "individual_ytd": {
+    "NSE:AEROFLEX": 164.58,
+    "NSE:DEEDEV": 219.06,
+    "NSE:ATAM": -30.46,
+    "BSE:CHEMTECH": -26.68,
+    "NSE:JASH": 18.46,
+    "BSE:QUESTFLOW": 8.55,
+    "BSE:SBVCL": 38.41
+  }
+}
