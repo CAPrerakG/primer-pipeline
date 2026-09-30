@@ -1,0 +1,20 @@
+{
+  "NSE:BATLIBOI": {
+    "source": "BSE:BATLIBOI",
+    "same_isin": true,
+    "factor": 1.000351474273055,
+    "overlap": 1302,
+    "recent_ratio_min": 0.9820075757575757,
+    "recent_ratio_max": 1.010228640192539,
+    "bars": 5000
+  },
+  "NSE:KENNAMET": {
+    "source": "BSE:KENNAMET",
+    "same_isin": true,
+    "factor": 1.0008543219579282,
+    "overlap": 4386,
+    "recent_ratio_min": 0.9899177644020359,
+    "recent_ratio_max": 1.0154911940539666,
+    "bars": 5000
+  }
+}

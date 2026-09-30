@@ -1,0 +1,342 @@
+[
+  {
+    "sym": "NSE:BATLIBOI",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      -2.44,
+      6.1,
+      -1.83,
+      4.71
+    ],
+    "locator_sum": 6.539999999999999,
+    "primary_annual_pat": 6.5367,
+    "difference": 0.0032999999999994145,
+    "locator_url": "https://www.screener.in/company/BATLIBOI/consolidated/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:EMKAYTOOLS",
+    "rightmost_header": "Mar 2026",
+    "prior_comparable_header": "Mar 2025",
+    "annual_periods": [
+      "Sep 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      2.34,
+      5.78
+    ],
+    "locator_sum": 8.120000000000001,
+    "primary_annual_pat": 8.1131,
+    "difference": 0.0069000000000016826,
+    "locator_url": "https://www.screener.in/company/EMKAYTOOLS/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "BSE:HITTCO",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      -0.29,
+      -0.25,
+      -0.26,
+      0.12
+    ],
+    "locator_sum": -0.6799999999999999,
+    "primary_annual_pat": -0.7073,
+    "difference": 0.027300000000000102,
+    "locator_url": "https://www.screener.in/company/531661/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:HMT",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      -28.0,
+      -39.0,
+      -27.0,
+      -37.0
+    ],
+    "locator_sum": -131.0,
+    "primary_annual_pat": -131.54,
+    "difference": 0.539999999999992,
+    "locator_url": "https://www.screener.in/company/HMT/consolidated/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "BSE:JAINEX",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      0.45,
+      0.35,
+      0.06,
+      0.52
+    ],
+    "locator_sum": 1.38,
+    "primary_annual_pat": 1.3915,
+    "difference": -0.011500000000000066,
+    "locator_url": "https://www.screener.in/company/505212/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:JYOTICNC",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      71.0,
+      86.0,
+      89.0,
+      91.0
+    ],
+    "locator_sum": 337.0,
+    "primary_annual_pat": 336.0,
+    "difference": 1.0,
+    "locator_url": "https://www.screener.in/company/JYOTICNC/consolidated/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:KENNAMET",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026",
+      "Jun 2026"
+    ],
+    "locator_pat_values": [
+      31.0,
+      24.0,
+      51.0,
+      89.0
+    ],
+    "locator_sum": 195.0,
+    "primary_annual_pat": 196.0,
+    "difference": -1.0,
+    "locator_url": "https://www.screener.in/company/KENNAMET/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:LOKESHMACH",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      0.46,
+      0.63,
+      0.63,
+      2.15
+    ],
+    "locator_sum": 3.87,
+    "primary_annual_pat": 3.8615,
+    "difference": 0.008500000000000174,
+    "locator_url": "https://www.screener.in/company/LOKESHMACH/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:MACPOWER",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      4.56,
+      9.38,
+      9.79,
+      10.15
+    ],
+    "locator_sum": 33.88,
+    "primary_annual_pat": 33.8708,
+    "difference": 0.009199999999999875,
+    "locator_url": "https://www.screener.in/company/MACPOWER/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "BSE:MIVENMACH",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      -0.17,
+      -0.15,
+      -0.15,
+      0.03
+    ],
+    "locator_sum": -0.44,
+    "primary_annual_pat": -0.4393,
+    "difference": -0.0006999999999999784,
+    "locator_url": "https://www.screener.in/company/522036/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:PREMIER",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      -1.94,
+      -0.42,
+      -1.75,
+      -1.76
+    ],
+    "locator_sum": -5.87,
+    "primary_annual_pat": -5.87,
+    "difference": 0.0,
+    "locator_url": "https://www.screener.in/company/PREMIER/consolidated/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "BSE:RAPICUT",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      -1.41,
+      1.25,
+      1.57,
+      0.65
+    ],
+    "locator_sum": 2.06,
+    "primary_annual_pat": 2.0612,
+    "difference": -0.0011999999999998678,
+    "locator_url": "https://www.screener.in/company/500360/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "NSE:SCML",
+    "rightmost_header": "Mar 2026",
+    "prior_comparable_header": "Mar 2025",
+    "annual_periods": [
+      "Sep 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      6.0,
+      3.0
+    ],
+    "locator_sum": 9.0,
+    "primary_annual_pat": 9.1901,
+    "difference": -0.19009999999999927,
+    "locator_url": "https://www.screener.in/company/SCML/",
+    "notes": "Half-year locator; filed half-year/annual rows also differ. See unresolved discrepancies below."
+  },
+  {
+    "sym": "BSE:SOLIMAC",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      0.04,
+      0.29,
+      0.33,
+      0.68
+    ],
+    "locator_sum": 1.34,
+    "primary_annual_pat": 1.3451,
+    "difference": -0.005099999999999882,
+    "locator_url": "https://www.screener.in/company/522152/",
+    "notes": "Rounded locator values; primary annual row governs."
+  },
+  {
+    "sym": "BSE:SUNITATOOL",
+    "rightmost_header": "Mar 2026",
+    "prior_comparable_header": "Mar 2025",
+    "annual_periods": [
+      "Sep 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      2.88,
+      3.26
+    ],
+    "locator_sum": 6.14,
+    "primary_annual_pat": 6.1891,
+    "difference": -0.049100000000000144,
+    "locator_url": "https://www.screener.in/company/544001/consolidated/",
+    "notes": "Half-year locator; filed half-year/annual rows also differ. See unresolved discrepancies below."
+  },
+  {
+    "sym": "NSE:UNIMECH",
+    "rightmost_header": "Jun 2026",
+    "prior_comparable_header": "Jun 2025",
+    "annual_periods": [
+      "Jun 2025",
+      "Sep 2025",
+      "Dec 2025",
+      "Mar 2026"
+    ],
+    "locator_pat_values": [
+      19.0,
+      16.0,
+      2.0,
+      26.0
+    ],
+    "locator_sum": 63.0,
+    "primary_annual_pat": 63.283,
+    "difference": -0.28300000000000125,
+    "locator_url": "https://www.screener.in/company/UNIMECH/consolidated/",
+    "notes": "Rounded locator values; primary annual row governs."
+  }
+]

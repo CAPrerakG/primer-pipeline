@@ -1,8 +1,10 @@
 # AGENTS.md — operating contract for this repository
 
 This repo builds Prerak's industry primer series: one self-contained HTML primer per industry
-section in his TradingView watchlists (278 sections, Indian listed universe). **088 is published;
-the next queued primer is 089, Machine Tools (16 names).**
+section in his TradingView watchlists (278 sections, Indian listed universe). **089 is published;
+the next queued primer is 090, Industrial Machinery (28 names), with the suggested
+Foundry & Metal Processing Equipment (1 name) merge. Prerak has instructed us to stop
+after 089; do not start 090 until he resumes.**
 
 Read in this order before doing anything: this file → `HANDOFF.md` →
 `.claude/skills/industry-primer/SKILL.md` (the full pipeline spec) → `CHECKLIST.md` (what is done

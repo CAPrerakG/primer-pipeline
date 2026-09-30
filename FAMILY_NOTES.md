@@ -350,3 +350,53 @@ ScanFY25PAT.5728 vscomprehensive.5851; narrativeconfuseslatterwithprofit. FY26ru
 IRIndiaisnotglobalIngersollRandbuyerof087MROtransaction. Sanandlow-volumeproductionnotmatureutilisation.
 CPCBscopeupto800kWgrossmechanicalgensetengines; certificationdistinctfromsiteoperatingpermission.
 No earlierprimerpagechanged. Build/gate/verify088and081exit0; browsertoolsandmobilechecked.
+
+
+## 089 — Machine Tools
+
+Sixteen names, eight in the basket: Batliboi, HMT, Jyoti CNC, Kennametal, Lokesh,
+Macpower, Rapicut and Sharp. HMT retained despite loss-making operations; Sharp retained
+with SME/mixed-product sensitivity. Exclusions: Emkay demerger and stale endpoint;
+Hittco unresolved2014 price step/sparse history; Jainex gaps; Miven negligible operations/no PPE;
+Premier CIRP/nil operations; Solitaire stale17Sep quote; Sunita component/tooling and proposed
+defence perimeter; Unimech young listing and precision-component/tooling economics.
+All included endpoints18Sep2026. HMT2008 and Lokesh2010 gaps predate backtest.
+
+NSE histories at Batliboi and Kennametal were internally broken, not merely short.
+Complete same-ISIN BSE histories substituted at constant median overlap scales1.000351474273055
+and1.0008543219579282. The earlier Kennametal prehistory-only splice left908days missing and
+was superseded. No pre-existing cached series changed; sixteen new series added.
+
+Other-income-first and correct-perimeter checks remain critical. Batliboi June groupPAT.4910cr,
+owners1.0410cr, minority−.55cr; printedEPS.10 follows group whereas owner arithmetic≈.22.
+Sunita annualEPS10.02 ×61,78,071 weighted shares follows groupPAT6.1891cr rather than owner6.3320cr.
+Sharp annualEPS7.09 ×1,29,70,293 weighted shares approximately reconciles9.1901cr; latest half-year
+EPS2.42 and half-year PAT sum8.2794cr versus annual9.1901cr remain unresolved. Sunita half-year
+PAT sum6.1397cr versus annual6.1891cr also differs. Hittco annual EPS notes contain unit and
+numerator/denominator concerns; latest-quarter EPS reconciles. These are disclosed, not repaired.
+Lokesh13lakh June-quarter shares and5lakh July conversions must not be conflated. Current filed
+EPS.49 is not a closing-share.47 calculation; implied weighted shares are not independent proof.
+
+Kennametal consolidated Screener page stopsSep2022; Solitaire consolidated page stopsDec2019.
+Use current standalone filings. Kennametal closes its year inJune; Emkay/Sharp/Sunita report
+half-years. Explicit RIGHTMOST header and year-ago header checks plus annual-row reconciliation
+are retained. Emkay transferred manufacturing to Emkay Tools Limited; investment-heavy surviving
+listed entity cannot inherit the old business or a synthetic combined demerger price return.
+
+Jyoti FY26 groupCFO54.39cr vsPAT336cr; MacpowerCFO14.029cr vsPAT33.8708cr; LokeshCFO−13.3893cr;
+Kennametal June-yearCFO18.3cr vsPAT196cr, with313.9cr inventory absorption. Capacity and order
+book require accepted-output/cash bridges. Management adjusted EBITDA is not the common
+PBT+interest+depreciation−other-income operating proxy.
+
+Primary GazetteS.O.239(E),dated14Jan2026,published16Jan, rescinded the2024 machinery safetyOTR.
+Do not describe the superseded implementation timetable as current. Huron investigation/interim
+measures are not a final conviction. Lokesh delisting chronology is explicitly issuer-attributed.
+
+April13/15,+7.1pts; February–March2/15,median−5.6pts; April–July10/15,median+7.9pts.
+YTD45.6% vsNifty−10.7%. WithoutHMT/Sharp YTD67.6%,April12/15. OEMsubset74.4%,April6/6 but
+onlysix observations with changing membership; not a fifteen-year three-OEM record.
+Carry078specification/replacement,080processing-depth,081quoted-input tests by cross-reference.
+The new question is whether the promised machine performance survives acceptance and converts
+to cash after funding inventory. No earlier primer research or numbers were rewritten.
+
+Prerak instructed stop after089; do not start090 without renewed instruction.

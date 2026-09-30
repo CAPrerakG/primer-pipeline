@@ -1,5 +1,32 @@
 # Handoff — industry primer series
 
+## Latest state: after 089 (30 Sep 2026)
+
+089 Machine Tools is published at https://caprerakg.github.io/primer-pipeline/089.html.
+Sixteen source names, eight basket members, all included series ending 18 Sep 2026.
+13,967 words, 23 sections, 20 tables, 43 distinct primary-source documents, 66 glossary terms in four groups,
+five analytical boxes, four charts, fifteen annual rows and eight basket drawdown rows.
+Build/gate/verify089 and regression verify081 exit0. Known historical gaps and excluded-name
+corporate-action warnings are disclosed; no FAIL is waived. Browser search/no-match/reset and
+390px layout checked. Financial source discrepancies remain explicit, not silently repaired.
+
+New findings: Batliboi and Sunita printed EPS follow group rather than owner profit;
+Sharp half-year rows and EPS do not reconcile to its annual statement, whose weighted-share
+EPS does reconcile. Lokesh June issues require weighted shares, separate from July conversions.
+Emkay transferred toolmaking; stale consolidated screens at Kennametal/Solitaire are rejected.
+Batliboi/Kennametal broken NSE histories replaced with same-ISIN complete scaled BSE histories.
+No previously cached series changed; the prior085 Veljan correction is preserved.
+The January2026 Gazette withdrew the machinery safety omnibus order; do not repeat its old
+implementation timetable as a current catalyst. Jyoti and Kennametal cash absorption is material.
+
+**Prerak's latest instruction: stop after 089. Do not begin090 until he asks to resume.**
+The earlier30%weekly-remaining continuous-run instruction is superseded by this stop instruction.
+Next090 would be Industrial Machinery(28) + Foundry & Metal Processing Equipment(1), suggested merge.
+Audit files: price_audit_089.json, price_repairs_089.json, annual_reconciliation_089.json,
+eps_reconciliation_089.json, source_manifest_089.json, sensitivity_089.json and browser_audit_089.json.
+After re-running compute_stats089, run audit_089.py to reproduce sensitivities and retain only
+basket members in the drawdown table. No earlier primer content was changed for089.
+
 ## Latest state: after 088 (30 Sep 2026)
 
 088 Compressors & Industrial Engines is published at
