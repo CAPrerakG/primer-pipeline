@@ -1,0 +1,112 @@
+{
+  "official_rows": [
+    {
+      "url": "https://www.bseindia.com/download/BhavCopy/Equity/EQ210524_CSV.ZIP",
+      "SC_CODE": "505232",
+      "SC_NAME": "VELJAN      ",
+      "SC_GROUP": "X ",
+      "SC_TYPE": "Q",
+      "OPEN": "4085.00",
+      "HIGH": "4085.00",
+      "LOW": "3930.00",
+      "CLOSE": "3955.50",
+      "LAST": "3930.00",
+      "PREVCLOSE": "4013.70",
+      "NO_TRADES": "301",
+      "NO_OF_SHRS": "1539",
+      "NET_TURNOV": "6146084.00",
+      "TDCLOINDI": ""
+    },
+    {
+      "url": "https://www.bseindia.com/download/BhavCopy/Equity/EQ220524_CSV.ZIP",
+      "SC_CODE": "505232",
+      "SC_NAME": "VELJAN      ",
+      "SC_GROUP": "X ",
+      "SC_TYPE": "Q",
+      "OPEN": "3749.90",
+      "HIGH": "3972.80",
+      "LOW": "3749.90",
+      "CLOSE": "3837.65",
+      "LAST": "3859.00",
+      "PREVCLOSE": "3955.50",
+      "NO_TRADES": "259",
+      "NO_OF_SHRS": "1625",
+      "NET_TURNOV": "6230841.00",
+      "TDCLOINDI": ""
+    },
+    {
+      "url": "https://www.bseindia.com/download/BhavCopy/Equity/EQ230524_CSV.ZIP",
+      "SC_CODE": "505232",
+      "SC_NAME": "VELJAN      ",
+      "SC_GROUP": "X ",
+      "SC_TYPE": "Q",
+      "OPEN": "3929.90",
+      "HIGH": "3929.90",
+      "LOW": "3677.00",
+      "CLOSE": "3770.30",
+      "LAST": "3759.95",
+      "PREVCLOSE": "3837.65",
+      "NO_TRADES": "209",
+      "NO_OF_SHRS": "1303",
+      "NET_TURNOV": "4970817.00",
+      "TDCLOINDI": ""
+    },
+    {
+      "url": "https://www.bseindia.com/download/BhavCopy/Equity/EQ290524_CSV.ZIP",
+      "SC_CODE": "505232",
+      "SC_NAME": "VELJAN      ",
+      "SC_GROUP": "X ",
+      "SC_TYPE": "Q",
+      "OPEN": "2004.00",
+      "HIGH": "2014.15",
+      "LOW": "1912.20",
+      "CLOSE": "1933.70",
+      "LAST": "1942.00",
+      "PREVCLOSE": "3872.35",
+      "NO_TRADES": "351",
+      "NO_OF_SHRS": "2673",
+      "NET_TURNOV": "5227193.00",
+      "TDCLOINDI": ""
+    }
+  ],
+  "cached_before": [
+    [
+      1716263100.0,
+      2003.4324386503067
+    ],
+    [
+      1716349500.0,
+      971.8711032540899
+    ],
+    [
+      1716435900.0,
+      1909.629964212679
+    ],
+    [
+      1716522300.0,
+      1919.126705010225
+    ],
+    [
+      1716781500.0,
+      1989.7571319018405
+    ],
+    [
+      1716867900.0,
+      1961.3176094427404
+    ],
+    [
+      1716954300.0,
+      1958.8104192229039
+    ],
+    [
+      1717040700.0,
+      1937.0818762781184
+    ]
+  ],
+  "repair": {
+    "timestamp": 1716349500.0,
+    "before": 971.8711032540899,
+    "after": 1943.7422065081798,
+    "method": "Remove one duplicated 1:1 bonus adjustment. Official closes May21=3955.50,May22=3837.65,May23=3770.30. Adjacent cache/BSE scale equals 0.506492588459; May22 erroneously half that. May29 BSE ex-bonus close1933.70 vs previous3872.35 supports actual later adjustment date. Month-end returns unchanged."
+  }
+}

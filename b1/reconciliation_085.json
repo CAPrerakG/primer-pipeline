@@ -1,0 +1,460 @@
+{
+  "NSE:ITL": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          41.41,
+          48.61,
+          51.08,
+          61.93
+        ],
+        "sum": 203.03,
+        "summary_annual": 203.0,
+        "difference": 0.03
+      },
+      "Other Income +": {
+        "quarters": [
+          0.43,
+          0.45,
+          0.3,
+          1.49
+        ],
+        "sum": 2.67,
+        "summary_annual": 3.0,
+        "difference": -0.33
+      },
+      "Net Profit +": {
+        "quarters": [
+          2.29,
+          2.53,
+          2.72,
+          1.96
+        ],
+        "sum": 9.5,
+        "summary_annual": 10.0,
+        "difference": -0.5
+      }
+    }
+  },
+  "NSE:HTEL": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {}
+  },
+  "BSE:AGVENTURES": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          21.0,
+          30.0,
+          31.0,
+          25.0
+        ],
+        "sum": 107.0,
+        "summary_annual": 108.0,
+        "difference": -1.0
+      },
+      "Other Income +": {
+        "quarters": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "sum": 4.0,
+        "summary_annual": 3.0,
+        "difference": 1.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          4.0,
+          1.0,
+          2.0,
+          1.0
+        ],
+        "sum": 8.0,
+        "summary_annual": 8.0,
+        "difference": 0.0
+      }
+    }
+  },
+  "BSE:BEMHY": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          11.71,
+          22.33,
+          25.43,
+          37.67
+        ],
+        "sum": 97.14,
+        "summary_annual": 97.0,
+        "difference": 0.14
+      },
+      "Other Income +": {
+        "quarters": [
+          0.52,
+          0.39,
+          0.31,
+          0.17
+        ],
+        "sum": 1.39,
+        "summary_annual": 1.0,
+        "difference": 0.39
+      },
+      "Net Profit +": {
+        "quarters": [
+          1.44,
+          4.02,
+          3.99,
+          5.42
+        ],
+        "sum": 14.87,
+        "summary_annual": 15.0,
+        "difference": -0.13
+      }
+    }
+  },
+  "BSE:KPT": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          38.77,
+          43.89,
+          41.04,
+          50.07
+        ],
+        "sum": 173.77,
+        "summary_annual": 174.0,
+        "difference": -0.23
+      },
+      "Other Income +": {
+        "quarters": [
+          0.12,
+          0.13,
+          -0.43,
+          0.16
+        ],
+        "sum": -0.02,
+        "summary_annual": -0.0,
+        "difference": -0.02
+      },
+      "Net Profit +": {
+        "quarters": [
+          3.07,
+          3.6,
+          2.57,
+          2.83
+        ],
+        "sum": 12.07,
+        "summary_annual": 12.0,
+        "difference": 0.07
+      }
+    }
+  },
+  "BSE:UVDRHOR": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "unavailable",
+    "annual": "Mar 2026",
+    "rows": {}
+  },
+  "NSE:ELECON": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          491.0,
+          578.0,
+          552.0,
+          746.0
+        ],
+        "sum": 2367.0,
+        "summary_annual": 2366.0,
+        "difference": 1.0
+      },
+      "Other Income +": {
+        "quarters": [
+          108.0,
+          18.0,
+          19.0,
+          -84.0
+        ],
+        "sum": 61.0,
+        "summary_annual": 60.0,
+        "difference": 1.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          175.0,
+          88.0,
+          72.0,
+          6.0
+        ],
+        "sum": 341.0,
+        "summary_annual": 341.0,
+        "difference": 0.0
+      }
+    }
+  },
+  "BSE:FLUIDOM": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          12.39,
+          16.4,
+          14.43,
+          29.24
+        ],
+        "sum": 72.46,
+        "summary_annual": 72.0,
+        "difference": 0.46
+      },
+      "Other Income +": {
+        "quarters": [
+          0.79,
+          1.63,
+          0.81,
+          0.91
+        ],
+        "sum": 4.14,
+        "summary_annual": 4.0,
+        "difference": 0.14
+      },
+      "Net Profit +": {
+        "quarters": [
+          2.68,
+          4.84,
+          2.28,
+          10.27
+        ],
+        "sum": 20.07,
+        "summary_annual": 20.0,
+        "difference": 0.07
+      }
+    }
+  },
+  "NSE:VELJAN": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          42.62,
+          38.63,
+          36.92,
+          45.91
+        ],
+        "sum": 164.08,
+        "summary_annual": 164.0,
+        "difference": 0.08
+      },
+      "Other Income +": {
+        "quarters": [
+          0.73,
+          0.75,
+          0.76,
+          0.87
+        ],
+        "sum": 3.11,
+        "summary_annual": 3.0,
+        "difference": 0.11
+      },
+      "Net Profit +": {
+        "quarters": [
+          7.33,
+          6.65,
+          5.06,
+          6.79
+        ],
+        "sum": 25.83,
+        "summary_annual": 26.0,
+        "difference": -0.17
+      }
+    }
+  },
+  "BSE:CENLUB": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          13.98,
+          21.12,
+          15.93,
+          23.09
+        ],
+        "sum": 74.12,
+        "summary_annual": 74.13,
+        "difference": -0.01
+      },
+      "Other Income +": {
+        "quarters": [
+          0.6,
+          0.5,
+          0.6,
+          0.95
+        ],
+        "sum": 2.65,
+        "summary_annual": 2.65,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          1.52,
+          1.96,
+          1.07,
+          3.37
+        ],
+        "sum": 7.92,
+        "summary_annual": 7.93,
+        "difference": -0.01
+      }
+    }
+  },
+  "NSE:YUKEN": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          104.55,
+          112.53,
+          111.99,
+          133.1
+        ],
+        "sum": 462.17,
+        "summary_annual": 462.0,
+        "difference": 0.17
+      },
+      "Other Income +": {
+        "quarters": [
+          0.9,
+          0.97,
+          1.4,
+          0.82
+        ],
+        "sum": 4.09,
+        "summary_annual": 4.0,
+        "difference": 0.09
+      },
+      "Net Profit +": {
+        "quarters": [
+          4.04,
+          5.12,
+          -0.58,
+          5.8
+        ],
+        "sum": 14.38,
+        "summary_annual": 14.0,
+        "difference": 0.38
+      }
+    }
+  },
+  "NSE:SHANTIGEAR": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          134.89,
+          131.91,
+          116.82,
+          135.1
+        ],
+        "sum": 518.72,
+        "summary_annual": 519.0,
+        "difference": -0.28
+      },
+      "Other Income +": {
+        "quarters": [
+          3.77,
+          5.94,
+          2.51,
+          2.63
+        ],
+        "sum": 14.85,
+        "summary_annual": 15.0,
+        "difference": -0.15
+      },
+      "Net Profit +": {
+        "quarters": [
+          22.69,
+          21.51,
+          16.19,
+          16.27
+        ],
+        "sum": 76.66,
+        "summary_annual": 77.0,
+        "difference": -0.34
+      }
+    }
+  },
+  "BSE:INLCM": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {}
+  },
+  "NSE:PIXTRANS": {
+    "rightmost": "Jun 2026",
+    "prior_comparator": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          122.0,
+          139.0,
+          151.0,
+          171.0
+        ],
+        "sum": 583.0,
+        "summary_annual": 582.0,
+        "difference": 1.0
+      },
+      "Other Income +": {
+        "quarters": [
+          14.0,
+          5.0,
+          9.0,
+          6.0
+        ],
+        "sum": 34.0,
+        "summary_annual": 17.0,
+        "difference": 17.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          28.0,
+          24.0,
+          35.0,
+          20.0
+        ],
+        "sum": 107.0,
+        "summary_annual": 107.0,
+        "difference": 0.0
+      }
+    }
+  }
+}

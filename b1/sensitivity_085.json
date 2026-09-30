@@ -1,0 +1,43 @@
+{
+  "selected": {
+    "April_hit": 12,
+    "April_n": 15,
+    "April_relative_mean": 7.6,
+    "ytd": 21.1
+  },
+  "without_Bemco": {
+    "April_hit": 12,
+    "April_n": 15,
+    "April_relative_mean": 7.0,
+    "ytd": 22.6
+  },
+  "without_Veljan": {
+    "April_hit": 12,
+    "April_n": 15,
+    "April_relative_mean": 7.7,
+    "ytd": 15.7
+  },
+  "without_ITL": {
+    "April_hit": 13,
+    "April_n": 15,
+    "April_relative_mean": 7.7,
+    "ytd": 20.0
+  },
+  "including_AG": {
+    "April_hit": 13,
+    "April_n": 15,
+    "April_relative_mean": 7.4,
+    "ytd": 17.8
+  },
+  "individual_ytd": {
+    "BSE:BEMHY": 4.2,
+    "NSE:ITL": 17.0,
+    "NSE:VELJAN": 59.7,
+    "NSE:YUKEN": 23.9,
+    "BSE:CENLUB": -24.4,
+    "NSE:ELECON": -12.5,
+    "BSE:FLUIDOM": 9.1,
+    "NSE:PIXTRANS": 23.0,
+    "NSE:SHANTIGEAR": 48.8
+  }
+}

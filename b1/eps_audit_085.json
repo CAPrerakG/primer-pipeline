@@ -1,0 +1,142 @@
+[
+  {
+    "company": "Elecon",
+    "pat_basis": 70.35,
+    "eps": 3.14,
+    "shares_cr": 22.44,
+    "eps_times_shares": 70.4616,
+    "difference": -0.1116,
+    "rounding_tolerance": 0.1123,
+    "note": "Prior PAT175.44 includes80.47 net exceptional reclassification; prior arbitration revenue25.29 and other9.75. FY26 goodwill impairment101.77."
+  },
+  {
+    "company": "PIX",
+    "pat_basis": 52.7477,
+    "eps": 38.71,
+    "shares_cr": 1.36241,
+    "eps_times_shares": 52.738891,
+    "difference": 0.008809,
+    "rounding_tolerance": 0.006912,
+    "note": "Other includes25.2949 FVTPL investment gain. March other expenses contain22.5229 investment loss. FY26 net investment loss8.5901 in expenses; quarterly other-income classifications do not add to annual unchanged."
+  },
+  {
+    "company": "AG Ventures",
+    "pat_basis": 20.7389,
+    "eps": 20.76,
+    "shares_cr": 0.99901,
+    "eps_times_shares": 20.739448,
+    "difference": -0.000548,
+    "rounding_tolerance": 0.005095,
+    "note": "Owner20.7389 afterminority0.4662. Investment segment PBIT24.5534; engineering0.5096. Owns50.01%Duncan Engineering, covered023."
+  },
+  {
+    "company": "Bemco",
+    "pat_basis": 2.724,
+    "eps": 0.62,
+    "shares_cr": 4.3801,
+    "eps_times_shares": 2.715662,
+    "difference": 0.008338,
+    "rounding_tolerance": 0.022,
+    "note": "Restated postcorporate-action shares. FY26 PAT14.8676/EPS3.40."
+  },
+  {
+    "company": "Yuken",
+    "pat_basis": 5.218,
+    "eps": 3.84,
+    "shares_cr": 1.3584,
+    "eps_times_shares": 5.216256,
+    "difference": 0.001744,
+    "rounding_tolerance": 0.006892,
+    "note": "Owner5.2180, minorityloss0.0106. Associate loss0.3034 separate. FY26 owner14.4731/EPS10.81 weighted1.33888; closing-denominator summary10.65 wrong basis."
+  },
+  {
+    "company": "Veljan",
+    "pat_basis": 7.6779,
+    "eps": 17.06,
+    "shares_cr": 0.45,
+    "eps_times_shares": 7.677,
+    "difference": 0.0009,
+    "rounding_tolerance": 0.00235,
+    "note": "FY26 PAT25.8370/EPS57.42."
+  },
+  {
+    "company": "ITL",
+    "pat_basis": 3.0002,
+    "eps": 9.36,
+    "shares_cr": 0.32043,
+    "eps_times_shares": 2.999225,
+    "difference": 0.000975,
+    "rounding_tolerance": 0.001702,
+    "note": "Standalone after20Mar2026 MM Metals sale. FY26 PAT9.5005/EPS29.65. Segment income includes other income; cannot add gross segments as net sales."
+  },
+  {
+    "company": "Cenlub",
+    "pat_basis": 1.6706,
+    "eps": 3.58,
+    "shares_cr": 0.46629,
+    "eps_times_shares": 1.669318,
+    "difference": 0.001282,
+    "rounding_tolerance": 0.002431,
+    "note": "FY26 PAT7.9313/EPS17.01. March tax credits affect PAT."
+  },
+  {
+    "company": "Fluidomat",
+    "pat_basis": 2.2251,
+    "eps": 4.52,
+    "shares_cr": 0.4927,
+    "eps_times_shares": 2.227004,
+    "difference": -0.001904,
+    "rounding_tolerance": 0.002563,
+    "note": "FY26 PAT20.0618/EPS40.72. June mutual-fund fair-value1.7220 in OCI, not PAT. Deck EBITDA25.67 differs from statutory operating bridge; unresolved definition, do not silently substitute."
+  },
+  {
+    "company": "UV",
+    "pat_basis": 1.1313,
+    "eps": 0.16,
+    "shares_cr": 6.8944,
+    "eps_times_shares": 1.103104,
+    "difference": 0.028196,
+    "rounding_tolerance": 0.034572,
+    "note": "Associate0.0071 separate. FY26 PAT5.2303/EPS0.76; FY26 CFO0.0750. Consolidated comparatives incomplete."
+  },
+  {
+    "company": "KPT",
+    "pat_basis": 2.8841,
+    "eps": 8.48,
+    "shares_cr": 0.34,
+    "eps_times_shares": 2.8832,
+    "difference": 0.0009,
+    "rounding_tolerance": 0.0018,
+    "note": "FY26 PAT12.0679/EPS35.49; labour charge0.5504."
+  },
+  {
+    "company": "HTEL",
+    "pat_basis": 4.598,
+    "eps": 0.55,
+    "shares_cr": 8.3532,
+    "eps_times_shares": 4.59426,
+    "difference": 0.00374,
+    "rounding_tolerance": 0.041866,
+    "note": "PreIPO June share basis. Filing18Sep18:17 afterclose. FY26 EPS2.70 printed versus~2.706 arithmetic; noexact-denominator claim. Postcutoff21Sepdeck/25Septranscript excluded."
+  },
+  {
+    "company": "RRP/INLCM",
+    "pat_basis": -0.0699,
+    "eps": -0.26,
+    "shares_cr": 0.2675,
+    "eps_times_shares": -0.06955,
+    "difference": -0.00035,
+    "rounding_tolerance": 0.001438,
+    "note": "Oldchainlabel obsolete. Prior capital0.05crshares. Annual weightedEPS\u22121.24 not closing-share summary\u22120.79; exact weighted denominator not yet independently confirmed."
+  },
+  {
+    "company": "Shanthi",
+    "pat_basis": 9.85,
+    "eps": 1.28,
+    "shares_cr": 7.67,
+    "eps_times_shares": 9.8176,
+    "difference": 0.0324,
+    "rounding_tolerance": 0.03845,
+    "note": "Prior revenue134.89 PAT22.69/EPS2.96. FY26 PAT76.66/EPS9.99; ordinaryother19.63 lesslabour4.78=summary14.85. OCRannual76.56 was wrong; visualprimary76.66."
+  }
+]

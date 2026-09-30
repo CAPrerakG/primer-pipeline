@@ -1,5 +1,26 @@
 # Handoff — industry primer series
 
+## Latest state: after 085 (30 Sep 2026)
+
+085 Industrial Gears, Transmission & Hydraulics is published at
+https://caprerakg.github.io/primer-pipeline/085.html. Two sections merged, fourteen names reviewed,
+nine-stock basket. 16,280 words, 89 links, 88 glossary terms, twelve questions, four glossary groups,
+six analytical boxes and 23 sections. Build/gate/verify085 passed; verify081 also exit0.
+Desktop/mobile browser checks confirm glossary search, no-match state, history rows and charts.
+
+Important: Veljan22May2024 cached daily close had a duplicated bonus adjustment. Corrected against
+BSE official daily closes; full proof in b1/veljan_085_bhavcopy.json. Do not overwrite the repaired
+cache with an unreviewed re-splice. Monthly endpoints and returns were unaffected by this repair.
+All fourteen endpoints18Sep2026. Basket+21.1%; April12/15, changes13/15 withoutITL or with excludedAG.
+
+Accounting: Elecon exceptionals/arbitration; PIX investment FVTPL and small printed EPS discrepancy;
+Yuken ownerprofit/weightedshares; AG investment segment and50.01%Duncan holding; ITL standalone after
+subsidiary sale; KPT tools classification; Indian Link Chain renamedRRP withnil operating sales;
+UV cash absorption and unusable historical gaps; HTEL13bars and18Sep evening filing. Fluidomat
+company EBITDA definition remains unreconciled and explicitly disclosed. Audit and source manifest saved.
+No earlier primer page changed during085. Next queued086 is Pumps & Pumping Systems.
+Prerak authorises continuing until weekly allowance reaches approximately50% remaining.
+
 ## Latest state: after 084 (30 Sep 2026)
 
 084 Bearings is published at `https://caprerakg.github.io/primer-pipeline/084.html`: 16,163 words, 86 links,

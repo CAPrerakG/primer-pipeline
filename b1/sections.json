@@ -903,8 +903,8 @@
   "section": "INDUSTRIAL GEARS & TRANSMISSION",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 6,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "085",
   "family": "Engineering & Capital Goods",
   "order": 9,
   "note": "Suggest merging with Hydraulics & Motion Control."
@@ -913,8 +913,8 @@
   "section": "HYDRAULICS & MOTION CONTROL",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 8,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "085",
   "family": "Engineering & Capital Goods",
   "order": 10,
   "note": "Suggest merging into Industrial Gears."

@@ -235,3 +235,32 @@ filed in 066. The listed section is the residue.
 - Draft bearing QCO has blank notification number/date; not proof of enacted blanket protection.
 - Page dependencies: .gl class is required by glossary JS; SVG viewBox is required before charts, table
   and glossary can initialise. Both now guarded in verify.py; 081 remains exit0. No older page changed.
+
+
+## 085 — Industrial Gears, Transmission & Hydraulics
+
+- Merge of gears/transmission6 and hydraulics/motion8; all14 covered, nine-stock basket.
+  AG excluded for investment-led holding-company perimeter, KPT tools/blowers classification,
+  RRP(formerIndianLinkChain) niloperating sales, HTEL13bars, UV historical gap/adjustment.
+  ITL retained as explicitly mixed machine-manufacturing and hydraulics-trading exposure.
+- Veljan22May2024 corrected from971.8711032541 to1943.7422065082: duplicated bonus adjustment.
+  BSE21/22/23May closes3955.50/3837.65/3770.30 confirm consistent adjacent scale. Evidence saved.
+  Repair does not alter month-end returns. Packed cache carries it; avoid unreviewed re-splice.
+- Every member endpoint18Sep2026. Basket+21.1% versusNifty−10.7%; April12/15,+7.6points.
+  NoITL13/15; includingexcludedAG13/15; noBemco12/15; noVeljan12/15 andYTD15.7%.
+  Bemco110day2011gap disclosed. February–March4/15; October–December12/14,not universal rule.
+- Elecon priorJune80.47netexceptionalEimco gain plus arbitration revenue25.29/other9.75;
+  FY26March goodwillimpairment101.77. Operating bridge separate fromstatutoryPATgrowth.
+- PIX JuneOtherIncome27.4226 includes25.2949FVTPLgain; MarchOtherExpenses22.5229FVTPLloss;
+  annualnetloss8.5901. Quarterlyotherincome cannot be naively summed under annual netclassification.
+  PrintedJuneEPS38.71 vs PAT/share38.7165(normalround38.72) explicitly disclosed small difference.
+- Yuken annualownerPAT14.4731/EPS10.81 usesweighted1.33888crshares,notclosing1.3584.
+  AG owns50.01%Duncan(023); investmentsegmentPBIT24.5534 vsengineering0.5096.
+  A lowOtherIncome line does not exclude financial activity booked assegment revenue.
+- Shanthi Juneoperating decline despite48.8%YTDshare rise. FY26PAT76.66 verifiedvisually;
+  ordinaryother19.63 lesslabourcharge4.78 explains expandedsummary14.85.
+- UV FY26CFO0.075 vsPAT5.2303 dueworkingcapitalabsorption. Fluidomat deckEBITDAdefinition
+  differsstatutoryoperatingbridge; statedunresolved. HTEL18Sepafterclosefiling notusedtoexplainclose;
+  21Sepdeck/latercall excluded. HTELannualEPSprecision andRRPweighteddenominator caveats retained.
+- Apply078/080/081tests at product/customer/contract level; installedbase is an opportunity for
+  repeatservice cash,not proofit exists. Separate industrial profit from capital-allocation returns.
