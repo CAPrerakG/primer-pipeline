@@ -1,4 +1,19 @@
-# Handoff — resuming the industry primer series at 082
+# Handoff — industry primer series
+
+## Latest state: after 083 (30 Sep 2026)
+
+The next queued primer is **084, Bearings (15 names)**. Primer 083, Welding & Cutting Equipment, covers all eight
+watchlist names and is published at `https://caprerakg.github.io/primer-pipeline/083.html`. It has 13,966 words,
+91 links, 86 glossary terms, 12 questions, four headed glossary groups and six analytical `box pm` asides.
+Its six-stock price basket excludes Rasandik (auto components) and Technocrats (only 20 listed price bars).
+The primary source and EPS audit is in `b1/audit_083.md`; company tables are preserved in
+`b1/research_083_screener.json`. `verify.py 083` passed with three warnings for GEE price gaps in 2004–06,
+before the July 2011 backtest. The same fixed price date, 18 September 2026, continues to apply.
+
+Prerak has authorized continuing successive primers until the weekly Codex allowance reaches approximately 50%
+remaining. Check the current account usage after each completed primer. Do not start another when the remaining
+allowance is at or below that threshold. The remainder of this file preserves the original 081→082 handoff and
+contains older status statements; use `AGENTS.md`, `CHECKLIST.md` and this latest block for current status.
 
 _Written 30 Sep 2026, after primer 081 (Metal Fabrication & Engineering) was published and pushed._
 _Updated 30 Sep 2026: the series is moving to **ChatGPT Codex / agent mode**. Publishing no longer depends

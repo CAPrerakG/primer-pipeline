@@ -1,8 +1,8 @@
 # AGENTS.md — operating contract for this repository
 
 This repo builds Prerak's industry primer series: one self-contained HTML primer per industry
-section in his TradingView watchlists (278 sections, Indian listed universe). **81 are published.
-The next is 082.**
+section in his TradingView watchlists (278 sections, Indian listed universe). **083 is published;
+the next queued primer is 084, Bearings.**
 
 Read in this order before doing anything: this file → `HANDOFF.md` →
 `.claude/skills/industry-primer/SKILL.md` (the full pipeline spec) → `CHECKLIST.md` (what is done
@@ -103,7 +103,7 @@ If a primer's page does not appear at its URL within a couple of minutes of push
 2. **Other income.** In low-margin industries it routinely decides the sign of the bottom line. Read
    Screener's "Other Income" line before the profit line, every time.
 
-## The Engineering family's three tests (carry these into 082)
+## The Engineering family's three tests (carry these into subsequent Engineering primers)
 
 - **078 Castings:** who writes the specification, and does the part wear out?
 - **080 Forgings:** margin follows the weight class and the depth of machining, not the tonnes.

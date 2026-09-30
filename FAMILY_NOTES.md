@@ -166,3 +166,41 @@ filed in 066. The listed section is the residue.
   May 2025; CUMI remains sole promoter at 37.5%, so the old continuing-50:50-JV description is stale.
 - `verify.py` had a leaderboard display/ranking bug for months with 16 rather than 15 observations. Corrected during
   082 to print the actual denominator and compare hit rates. No earlier primer page was edited during this run.
+
+## 083 — Welding & Cutting Equipment
+
+- Eight roster names; six-stock price basket. Ador, ESAB, GEE and Rasi supply the long history from July 2011;
+  Diffusion joins after its October 2024 listing, Classic after August 2025. Rasandik uses welding to make auto
+  stampings/body assemblies and vehicles, so it is a product mismatch. Technocrats makes relevant plasma/cutting
+  equipment but listed only on 21 August 2026 and has 20 bars. All eight trimmed series end on 18 September 2026.
+- **The fourth Engineering question is economic, not another generic label:** does a qualified consumable create
+  repeat profit after alloy, testing, channel credit and inventory? A machine sale is different unless installed units
+  produce observable service, spare or filler revenue. Cross-reference the 078 specification/wear, 080 depth-of-work
+  and 081 quote-to-delivery steel-risk tests rather than repeating their company material.
+- **GEE's Other Income trap:** June 2026 statutory Other Income is only ₹0.3089 cr. A separate ₹3.6955 cr gain from
+  selling two properties is folded into Screener's expanded line at about ₹4.00 cr. Reported PAT ₹6.8455 cr;
+  management's “adjusted PAT” ₹3.15 cr subtracts the pre-tax gain directly from after-tax PAT without a tax bridge.
+  Its Thane development-rights value is a multi-year management scenario, not cash collected for electrodes.
+- **Diffusion's perimeter trap:** June consolidated Other Income about ₹4.10 cr plus about ₹4.46 cr share of associates
+  appear together near ₹9 cr in a summary. Consolidated PAT ₹16.677 cr; company diluted EPS ₹4.47, versus ₹4.44 in
+  one summary display. The exact weighted-share/owner-profit bridge needs the statutory denominator; issued shares
+  give an approximate cross-check within 0.3%. Prior-year standalone PAT included a ₹5.067 cr subsidiary dividend,
+  explaining much of the apparent parent profit decline. Of ₹209.66 cr June order book, ₹159.02 cr was heavy
+  engineering and only ₹24.22 cr welding consumables; do not model the whole book as recurring wire.
+- **ESAB's FY26 exceptional pair:** ₹30.91 cr September land-sale gain and ₹13.65 cr December labour-code charge.
+  Screener's expanded Other Income line places the two around +₹33 cr and −₹13 cr. June 2026 ordinary Other Income
+  was only ₹1.78 cr and the latest quarter's profit improvement was mainly operational.
+- **Ador:** FY26 included ₹24.8 cr provision for a delayed process-equipment job and ₹14.1 cr reversal after collection
+  of an old Kuwait receivable. June 2026 sales ₹309.46 cr and PAT ₹27.60 cr reconcile with EPS ₹15.86 × 1.74 cr
+  shares; compare with the weak June 2025 loss, not an extrapolated normal quarter.
+- **Rasi:** FY26 revenue fell to ₹72.02 cr while Other Income rose to ₹1.79 cr and PAT ₹3.52 cr; cash from operations
+  ₹6.43 cr benefited from working-capital release. **Classic:** H2 income +20.7%, EBITDA only +2.7%, so its new
+  flux-cored product has not yet lifted aggregate margin. **Technocrats:** FY26 report is in ₹ thousands; revenue
+  ₹131.31 cr and PAT ₹14.94 cr reconcile to EPS ₹11.63 × about 1.284 cr weighted shares. Its FY25 EPS denominator
+  is inconsistently formatted in the annual report.
+- **Annual check:** four FY26 quarters reconcile to annual PAT for all quarterly reporters within rounding. Rasandik's
+  quarterly sales sum ₹67.68 cr versus annual ₹67.44 cr; the ₹0.24 cr difference remains unresolved and is disclosed.
+  GEE's three historical price gaps (339, 195, 218 days) occur in 2004–06, before the July 2011 backtest.
+- **Price calendar:** Feb–Mar beat the Nifty in only 3/15 years, median −6.7 points; April–July only 8/15, median
+  +6.1. December beat 11/15. There is no robust universal Engineering April effect. The current basket gained
+  19.0% to 18 September 2026 versus Nifty −10.7%, but three of six individual stocks were negative.
