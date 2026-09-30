@@ -140,6 +140,20 @@ else:
         fail('no <p id="now-stocks"></p> hook - the now_note will be silently dropped')
     else:
         ok('now-stocks hook present')
+    # Glossary search is optional in base.js, so a missing input otherwise
+    # produces no visible error. Inspect the rendered markup, not JavaScript.
+    body = re.sub(r'<(?:script|style)\b[^>]*>.*?</(?:script|style)>', '', h, flags=re.S | re.I)
+    glossary = re.search(r'<section\b[^>]*id="glossary"[^>]*>.*?</section>', body, re.S)
+    for element_id in ('gq', 'gcount', 'gnone'):
+        if glossary is None or f'id="{element_id}"' not in glossary.group():
+            fail(f'glossary search missing id="{element_id}"')
+        else:
+            ok(f'glossary search id="{element_id}" present')
+    groups = len(re.findall(r'<h3\b[^>]*>.*?</h3>\s*<dl\b', glossary.group(), re.S)) if glossary else 0
+    fail(f'glossary has only {groups} headed groups - use <h3> followed by <dl>') if groups < 2 else ok(f'glossary has {groups} headed groups')
+    classes = re.findall(r'<(?:div|aside)\b[^>]*\bclass="([^"]+)"', body)
+    pm_boxes = sum({'box', 'pm'} <= set(value.split()) for value in classes)
+    fail(f'only {pm_boxes} box pm analytical boxes - need at least 4') if pm_boxes < 4 else ok(f'{pm_boxes} box pm analytical boxes')
 
 print(f'\n=== {no}: {len(fails)} FAIL, {len(warns)} warn ===')
 sys.exit(1 if fails else 0)

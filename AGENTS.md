@@ -76,6 +76,10 @@ If a primer's page does not appear at its URL within a couple of minutes of push
 - **No compromise on depth.** 001 Agrochemicals is the bar. Fix a gate failure by adding substance — a
   new sourced section, real glossary terms — never padding. Recent word counts: 078 6,589 · 080 9,256 ·
   081 13,603.
+- **Keep the series' reading tools and analytical voice.** Every primer carries the glossary search
+  block (`gq`, `gcount`, `gnone`) and at least four `box pm` analytical boxes. Group glossary terms under
+  `<h3>` headings with a separate `<dl>` for each group, rather than one flat list. `verify.py` checks
+  these structures in the built page.
 - **Order is Prerak's.** Follow the `CHECKLIST.md` queue. Financials, insurance, pharma, healthcare,
   hospitals and hotels are deferred until every other section is done.
 - **No duplication.** Cross-reference as "see NNN" and check the number against `CHECKLIST.md`
