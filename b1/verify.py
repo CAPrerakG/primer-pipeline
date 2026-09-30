@@ -107,20 +107,22 @@ for f in sorted(glob.glob(os.path.join(B, 'data_*.json'))):
     n2 = os.path.basename(f)[5:-5]
     for m in dd.get('monthly', []):
         if m['n'] >= 14:
-            allm.setdefault(m['m'], []).append((m['hit'], m['rel'], n2))
+            allm.setdefault(m['m'], []).append((m['hit'], m['n'], m['rel'], n2))
 for m in sorted(allm):
-    rows = sorted(allm[m], key=lambda x: (-x[0], -x[1]))
-    mine = [r for r in rows if r[2] == no]
+    # Some month histories begin in 2011 and have 16 observations. Rank by hit
+    # rate, and print the real denominator, rather than presenting 13/16 as 13/15.
+    rows = sorted(allm[m], key=lambda x: (-x[0] / x[1], -x[2]))
+    mine = [r for r in rows if r[3] == no]
     if not mine:
         continue
     rank = rows.index(mine[0]) + 1
     top = rows[0]
-    tie = [r[2] for r in rows if r[0] == mine[0][0]]
-    line = (f'{MN[m-1]}: {no} is {mine[0][0]}/15 at {mine[0][1]:+.1f} pts, rank {rank} of {len(rows)}'
-            f'  (best: {top[2]} {top[0]}/15 at {top[1]:+.1f})')
+    tie = [r[3] for r in rows if r[0] / r[1] == mine[0][0] / mine[0][1]]
+    line = (f'{MN[m-1]}: {no} is {mine[0][0]}/{mine[0][1]} at {mine[0][2]:+.1f} pts, rank {rank} of {len(rows)}'
+            f'  (best: {top[3]} {top[0]}/{top[1]} at {top[2]:+.1f})')
     if rank == 1 and len(tie) == 1:
         print('  BEST  ' + line)
-    elif mine[0][0] == rows[0][0]:
+    elif mine[0][0] / mine[0][1] == rows[0][0] / rows[0][1]:
         print('  tied  ' + line + f'  tied with {", ".join(x for x in tie if x != no)}')
     else:
         print('        ' + line)

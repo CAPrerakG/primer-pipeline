@@ -143,3 +143,26 @@ filed in 066. The listed section is the residue.
   contains `<p id="now-stocks"></p>`. Fragments **070-080 all define a now_note and none contains the hook**, so eleven
   primers silently dropped that paragraph (the basket-vs-Nifty line). 081 includes the hook. Fixing 070-080 means adding
   one line to each fragment, rebuilding and republishing to the same URLs - Prerak's call.
+
+## 082 — Fasteners, Industrial Tools & Abrasives (three sections merged)
+
+- All twelve roster price series end at the fixed 18-Sep-2026 cut. The eight-stock basket has six long-history operating
+  names; De Neers enters after its 2023 listing and Gala after its 2024 listing. Taparia (only 146 sparse observations,
+  ex-dividend steps), Auto Pins (mainly suspension springs, trading gaps), Lakshmi Precision (stale accounts/insolvency)
+  and Sparc (almost no current sales) remain visible but are outside the return basket.
+- The three Engineering tests from 078, 080 and 081 give different answers within each product label. The most useful
+  question is how much owner profit comes from repeat, qualified parts or consumables **after** the cash needed to hold
+  inventory and extend channel credit. A commodity wheel can be weaker than a qualified bolt; the category alone is not
+  the moat.
+- **April is weaker here:** 11/15 years beating Nifty, +4.6 points on average; Jan–Mar only 3/15, median −6.2 points.
+  August is 13/16 at +2.8 points, but is dominated by the six established names. No universal Engineering-April claim.
+- **CUMI:** June-quarter abrasive segment PBIT ₹39.61 cr includes a ₹25.18 cr leasehold-property gain, leaving about
+  ₹14.43 cr against ₹609.78 cr abrasive revenue after that identified adjustment. Group PAT ₹80.34 cr includes ₹3.94 cr
+  minority interest; EPS reconciles to ₹76.40 cr owner profit, not group profit. Russian cash ~₹360.90 cr is restricted.
+- **Sterling:** June fastener-parent PAT ₹16.4 cr versus consolidated PAT ₹5.9 cr because EV subsidiaries drag the
+  group. **De Neers:** audited reporting segment is wholesale trading of hardware and tools, and FY26 CFO ₹11.49 cr
+  trails PAT ₹25.29 cr. **Taparia:** June PAT ₹47.7576 cr reconciles with EPS ₹31.46 × 1.51788 cr shares; the operating
+  company is real, but its last print is an unsafe investable valuation. **Wendt:** Wendt GmbH sold its 37.5% holding in
+  May 2025; CUMI remains sole promoter at 37.5%, so the old continuing-50:50-JV description is stale.
+- `verify.py` had a leaderboard display/ranking bug for months with 16 rather than 15 observations. Corrected during
+  082 to print the actual denominator and compare hit rates. No earlier primer page was edited during this run.

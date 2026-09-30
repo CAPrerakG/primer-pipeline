@@ -853,31 +853,31 @@
   "section": "FASTENERS",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 6,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "082",
   "family": "Engineering & Capital Goods",
   "order": 4,
-  "note": "Suggest merging with Industrial Tools and Abrasives."
+  "note": "Merged in one 12-name primer; original section shown on page."
  },
  {
   "section": "INDUSTRIAL TOOLS",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 3,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "082",
   "family": "Engineering & Capital Goods",
   "order": 5,
-  "note": "Suggest merging into Fasteners."
+  "note": "Merged in one 12-name primer; original section shown on page."
  },
  {
   "section": "ABRASIVES",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 3,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "082",
   "family": "Engineering & Capital Goods",
   "order": 6,
-  "note": "Suggest merging into Fasteners."
+  "note": "Merged in one 12-name primer; original section shown on page."
  },
  {
   "section": "WELDING & CUTTING EQUIPMENT",
