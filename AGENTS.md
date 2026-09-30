@@ -67,6 +67,13 @@ If a primer's page does not appear at its URL within a couple of minutes of push
 
 ## Non-negotiables
 
+- **Render the evidence.** Every primer renders the month, year and window charts plus the `cy`
+  and `dd` tables. The roster and margin sections use comparison tables, not prose alone; each
+  listed company has a roster row with its business, latest reported evidence and basket treatment.
+  Keep at least eight tables and 25 distinct external sources, with no source URL cited more than
+  four times. From 089 onward, target **11,000–14,000 words: density over volume**. Verification
+  fails on missing displays, insufficient tables/sources or excessive URL repetition, and warns
+  below 9,000 or above 14,000 total page words, including the rendered history notes.
 - **Data correctness is a hard requirement.** Never invent a number. Every figure comes from price data
   or a cited source. **Cross-check every profit against EPS × shares** — three million-vs-crore
   misprints have already been caught that way.

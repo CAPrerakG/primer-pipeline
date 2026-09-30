@@ -5,6 +5,44 @@ Every check here exists because the corresponding mistake was actually made at
 least once in primers 001-081. FAIL blocks publishing; WARN needs a human look.
 """
 import datetime, glob, io, json, os, re, sys
+from collections import Counter
+from html.parser import HTMLParser
+from urllib.parse import urlsplit, urlunsplit
+
+
+class PageMarkup(HTMLParser):
+    """Read actual elements and visible words, excluding comments and scripts."""
+    def __init__(self, markup):
+        super().__init__(convert_charrefs=True)
+        self.elements, self.text, self.urls = [], [], []
+        self.hidden = 0
+        self.feed(markup)
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('script', 'style'):
+            self.hidden += 1
+        if self.hidden:
+            return
+        attrs = dict(attrs)
+        self.elements.append((tag, attrs))
+        if tag == 'a':
+            url = urlsplit(attrs.get('href') or '')
+            if url.scheme.lower() in ('http', 'https') and url.netloc:
+                # PDF page anchors do not turn one source into several sources.
+                self.urls.append(urlunsplit((url.scheme.lower(), url.netloc.lower(),
+                                            url.path, url.query, '')))
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        if tag in ('script', 'style') and self.hidden:
+            self.hidden -= 1
+
+    def handle_data(self, text):
+        if not self.hidden:
+            self.text.append(text)
 
 B = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(B)
@@ -129,11 +167,44 @@ for m in sorted(allm):
 
 # 8. built page structure ----------------------------------------------------
 print('\n[8] built page')
+fragment_markup = PageMarkup(frag)
+table_count = sum(tag == 'table' for tag, attrs in fragment_markup.elements)
+fail(f'fragment has only {table_count} tables - need at least 8') if table_count < 8 else ok(f'fragment has {table_count} tables')
+source_counts = Counter(fragment_markup.urls)
+fail(f'fragment has only {len(source_counts)} distinct external sources - need at least 25') if len(source_counts) < 25 else ok(f'{len(source_counts)} distinct external sources')
+for url, count in source_counts.items():
+    if count > 4:
+        fail(f'external URL cited {count} times - maximum 4: {url}')
+if not any(count > 4 for count in source_counts.values()):
+    ok('no external URL cited more than four times')
+for section_id in ('players', 'money'):
+    section = re.search(r'<section\b[^>]*\bid="' + section_id + r'"[^>]*>.*?</section>', frag, re.S)
+    has_table = section and any(tag == 'table' for tag, attrs in PageMarkup(section.group()).elements)
+    fail(f'{section_id} section needs a comparison table') if not has_table else ok(f'{section_id} comparison table present')
 outp = os.path.join(B, 'out', f'{no}.html')
 if not os.path.exists(outp):
     warn('not built yet - run build_primer.py')
 else:
     h = io.open(outp, encoding='utf-8').read()
+    built_markup = PageMarkup(h)
+    # Include history notes inserted by base.js, as gate.py does; exclude code.
+    word_count = len(' '.join(built_markup.text).split()) + sum(
+        len(' '.join(PageMarkup(note).text).split()) for note in notes.values())
+    if word_count < 9000 or word_count > 14000:
+        warn(f'{word_count:,} total words including history notes - outside 9,000-14,000 review range; target 11,000-14,000')
+    else:
+        ok(f'{word_count:,} total words including history notes')
+    for tag, attribute, value in (('svg', 'data-chart', 'month'),
+                                  ('svg', 'data-chart', 'year'),
+                                  ('svg', 'data-chart', 'win'),
+                                  ('tbody', 'data-table', 'cy'),
+                                  ('tbody', 'data-table', 'dd')):
+        present = any(t == tag and attrs.get(attribute) == value
+                      for t, attrs in built_markup.elements)
+        if present:
+            ok(f'{tag} {attribute}="{value}" present')
+        else:
+            fail(f'missing {tag} {attribute}="{value}" - computed data will be invisible')
     secs = len(re.findall(r'<section id="', h))
     fail(f'only {secs} sections - fragment is truncated') if secs < 21 else ok(f'{secs} sections')
     if '<p id="now-stocks">' not in h:
