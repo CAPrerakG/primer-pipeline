@@ -1,0 +1,607 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oil and Gas Exploration Primer</title>
+<meta name="description" content="Industry 28 of 278, and the first of the Oil &amp; Gas family: upstream exploration and production. Why India produces less oil every year while importing 90% of its crude, how realisations, royalties and the old subsidy regime decide profits, the six listed producers including two new 2026 listings, and a year-by-year record against Brent from 2012.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Oil &amp; Gas Exploration · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 28 of 278 · Oil &amp; Gas family, part 1 of 9</div>
+  <h1>Oil &amp; Gas Exploration</h1>
+  <p class="lede">The business of finding hydrocarbons underground and lifting them to the surface. It is the most capital-intensive, most politically exposed and least controllable business in the market: a producer decides how much it spends and roughly how much it lifts, and a global price it cannot influence decides what that is worth. India's particular problem is that it imports close to 90% of its crude and its own output has been shrinking by about 1.1% a year for a decade.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 6 (2 listed in 2026)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Oilfield &amp; Drilling Services</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">$99.45</div><div class="l">ONGC's nomination crude realisation in Q1 FY27, against $66.13 a year earlier</div></div>
+    <div class="stat"><div class="n">−5.5%</div><div class="l">The fall in ONGC's crude output in the same quarter — the problem money cannot fix quickly</div></div>
+    <div class="stat"><div class="n">~90%</div><div class="l">Share of India's crude requirement that is imported; imports reached a record 4.9 million barrels a day</div></div>
+    <div class="stat"><div class="n">₹17,034 cr</div><div class="l">ONGC's Q1 FY27 standalone net profit, up 112%, with a record pre-tax profit of ₹22,848 cr</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A price-taker with a depletion problem</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Oil is not a lake underground. It sits inside rock, the way water sits inside a sponge, hundreds of metres below the surface. To get it you first guess where the sponge is — by bouncing sound waves off the rock and reading the echoes — then you drill an expensive hole to find out if you guessed right. Most holes are disappointing. If you do find oil, you can sell every drop, but at a price decided in London and New York, not by you. And the sponge slowly empties: an old field gives less every year, so you have to keep drilling just to stand still. India's sponges are mostly old, which is why the country has to buy nine of every ten barrels it uses from abroad.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Upstream is the purest commodity exposure in the Indian market, wrapped in policy.</p>
+    <ul>
+      <li><b>The price is global, the politics are local.</b> Producers keep their realisation only to the extent the government lets them: through royalty and cess, through the old subsidy-sharing regime, and briefly through the windfall levy of 2022–24.</li>
+      <li><b>2026 has been a windfall year for earnings.</b> Brent has averaged $88 and traded above $100 in September; ONGC's profit more than doubled to ₹17,034 cr and Oil India's standalone profit more than tripled to a record ₹2,870 cr.</li>
+      <li><b>Volumes are the problem.</b> ONGC's crude output fell 5.5% and gas about 2% in the June quarter. The market has noticed: ONGC is down 3% this year despite those earnings.</li>
+      <li><b>The section has changed shape in 2026:</b> Vedanta Oil and Gas — the old Cairn business, anchored on the Barmer field in Rajasthan — listed on 15 June, and Gujarat Natural Resources in April.</li>
+      <li><b>The policy direction is genuinely more open</b>: the Oilfields Amendment Act of 2025, successive Open Acreage rounds, a deep-water exploration mission and international majors returning to Indian acreage.</li>
+    </ul>
+    <p>Own it for the price, but underwrite the reserves. A producer with falling output in a high-price year is liquidating, not compounding.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Three products and four ways of being paid</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>How it is priced in India</th></tr></thead><tbody>
+    <tr><td>Crude oil</td><td>Liquid hydrocarbons sold to refiners (see 031)</td><td>Benchmarked to international crude, adjusted for quality and freight; ONGC realised $99.45 a barrel in Q1 FY27</td></tr>
+    <tr><td>Natural gas</td><td>Sold to city gas, power, fertiliser and industry</td><td>Administered formula for nomination fields, with a floor and ceiling; new wells enjoy pricing freedom — ONGC realised $13.31 per mmbtu on new-well gas against $8.24 a year earlier</td></tr>
+    <tr><td>Condensate and LPG</td><td>Liquids stripped from gas</td><td>Linked to product markets</td></tr>
+  </tbody></table></div>
+  <h3>The four contract regimes, which matter more than the geology</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Regime</th><th>How it works</th><th>Who is on it</th></tr></thead><tbody>
+    <tr><td>Nomination blocks</td><td>Acreage handed to the state producers before liberalisation; royalty and cess payable, output historically subject to subsidy sharing</td><td>ONGC and Oil India's legacy fields</td></tr>
+    <tr><td>Production sharing contracts (PSC)</td><td>Costs recovered first, then profit petroleum shared with the government on a sliding scale</td><td>The 1990s–2000s blocks, including Barmer</td></tr>
+    <tr><td>Revenue sharing (HELP/OALP)</td><td>The bidder offers the government a share of revenue, not profit; no cost audit, uniform licence for all hydrocarbons</td><td>All acreage awarded since 2016</td></tr>
+    <tr><td>Discovered small fields (DSF)</td><td>Small, already-discovered fields auctioned to smaller players on simple terms</td><td>Antelopus Selan and other independents</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Think of acreage as a rented orchard. Under nomination, you were given the orchard free but must hand over a share of the fruit and, in bad years, feed the village. Under production sharing, you recover the cost of the ladder before splitting the fruit — which gives you an incentive to buy a very expensive ladder, and gives the government an incentive to audit it. Under revenue sharing, you simply promise a percentage of everything you pick and nobody argues about the ladder. That shift, in 2016, is the single most important structural change in Indian upstream.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a seismic line to a sales invoice</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Acreage</h4><div class="an">The right to look</div>Blocks won in bid rounds: OALP, DSF or legacy nomination.<div class="who">Government, through the DGH</div><div class="m">OALP XI offered 21 blocks over ~80,000 sq km</div></div>
+    <div class="stage"><div class="no">02</div><h4>Seismic and G&amp;G</h4><div class="an">Listening to rock</div>Sound waves bounced off subsurface layers and processed into images.<div class="who">Seismic contractors (see 029)</div><div class="m">Cheap relative to drilling, and it narrows the guess</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Exploration drilling</h4><div class="an">The expensive question</div>A well that either finds hydrocarbons or does not.<div class="who">Drilling contractors (see 029)</div><div class="m">Most of the risk in the whole business</div></div>
+    <div class="stage"><div class="no">04</div><h4>Appraisal and development</h4><div class="an">How big, and is it worth it</div>More wells, platforms, pipelines and processing to bring a discovery on stream.<div class="who">EPC contractors (see 030)</div><div class="m">Years of spending before a rupee of revenue; ONGC is putting over ₹40,000 cr into Western Offshore</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Production</h4><div class="an">Lifting</div>Wells, pumps, water injection and gas lift, then separation and treatment.<div class="who">The operator</div><div class="m">Where depletion has to be fought every year</div></div>
+    <div class="stage"><div class="no">06</div><h4>Sale</h4><div class="an">Getting paid</div>Crude to refiners, gas to pipelines and customers.<div class="who">031, 033, 034</div><div class="m">Price global, formula local</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Acreage:</b> the government auctions the right to search a patch of land or seabed.</li>
+    <li><b>Seismic:</b> you thump the ground or fire air guns at sea and listen to the echoes to draw a picture of the rock.</li>
+    <li><b>Exploration drilling:</b> you drill to find out. This costs a fortune and usually finds nothing.</li>
+    <li><b>Development:</b> if you do find something, you spend several years and much more money building the wells and pipes to get it out.</li>
+    <li><b>Production:</b> oil flows, but less each year, so you keep drilling and pushing water into the rock to keep the pressure up.</li>
+    <li><b>Sale:</b> you sell at the world price, minus what the government takes in royalty and cess.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Three numbers decide an upstream company, and none of them is profit. <b>Production growth</b>, because a high price on a falling volume is a melting ice cube. <b>Reserve replacement</b>, meaning whether this year's discoveries at least match this year's production. And <b>the government take</b> — royalty, cess, profit petroleum and any levy of the moment — because that is what stands between the realisation and the shareholder. ONGC in Q1 FY27 is the case study: a record pre-tax profit of ₹22,848 cr, and a share price down for the year, because crude oil output fell 5.5%.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 6 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>ONGC (~₹2.98 lakh cr)</td><td>India's largest producer by far, operating the legacy nomination acreage including Mumbai High, plus overseas assets through ONGC Videsh and a downstream arm in HPCL and MRPL.</td><td>Standalone gross revenue ₹46,460 cr (+45.2%), net profit ₹17,034 cr (+112%), record pre-tax profit ₹22,848 cr. Nomination crude realised $99.45/bbl (from $66.13); joint-venture crude $103.34. New-well gas at $13.31/mmbtu (from $8.24), contributing ₹3,998 cr. But crude output fell 5.5% and gas about 2% on reservoir complexity and offshore conditions; FY27 target is 42.5 MMTOE standalone, with over ₹40,000 cr going into Western Offshore including the Daman Upside Development Project, which lifts output only from FY28. Stock −3.2% in 2026 and −32% from its August 2024 peak.</td></tr>
+    <tr><td>Oil India (~₹79,400 cr)</td><td>The second state producer, concentrated in Assam and the north-east, with the Numaligarh refinery as a large subsidiary — which makes it part upstream, part refiner.</td><td>Standalone profit a record ₹2,870 cr, more than tripled; consolidated about ₹4,027 cr (+97%). Crude output 0.950 million tonnes (+11%) with a record day of 10,921 tonnes on 27 June 2026; realisation $98.73/bbl. Numaligarh's profit rose 167% to ₹1,305 cr on a gross refining margin of $35.95/bbl against $5.02 — an exceptional number that will not repeat. Numaligarh is expanding from 3 to 9 MMTPA and the Numaligarh–Siliguri products pipeline from 1.72 to 5.5 MMTPA; the company has set out a path towards 10 MMTOE of production. Stock +12.1%, −36% from its August 2024 peak.</td></tr>
+    <tr><td>Vedanta Oil and Gas (~₹13,700 cr)</td><td>The upstream arm of the Vedanta group — the business the market still calls Cairn — anchored on the Barmer block in Rajasthan, India's largest onshore oil producer.</td><td>Listed 15 June 2026 in the Vedanta demerger, one VOGL share for each Vedanta share, debuting at ₹39 on the BSE. Promoters hold 56.38%. Three months of listed history; already −23% from its July peak. Too early for a record, and the reserve and decline profile of Barmer is the whole investment question.</td></tr>
+    <tr><td>Antelopus Selan Energy (~₹4,100 cr)</td><td>The listed independent: the old Selan Exploration Technology, amalgamated with Antelopus Energy, now running nine contract areas across the Cambay, Mumbai Offshore, Mahanadi, Assam and Krishna-Godavari basins.</td><td>Q1 FY27 net profit ₹54.3 cr, up 384%. Won two onshore blocks in the fourth Discovered Small Fields round, in the Cambay and Krishna-Godavari basins. The stock is +169% in 2026 and the entire reason this section's basket looks spectacular. A ₹4,100 cr company should not be read as the industry.</td></tr>
+    <tr><td>Hindustan Oil Exploration (~₹2,400 cr)</td><td>A long-listed small producer with onshore and offshore interests, historically the most volatile name in the section.</td><td>+15.5% in 2026, −37% from its August 2024 peak. Its record includes −61% (2013) and +112% (2021) — position size accordingly.</td></tr>
+    <tr><td>Gujarat Natural Resources (~₹1,500 cr)</td><td>A small exploration company; new to the listed record in this dataset from April 2026.</td><td>−14% from its August 2026 peak; too little history to judge.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Read this before using the section</span><p>This section is two industries in one basket. ONGC and Oil India are ₹80,000 cr-plus state enterprises whose profits are a function of crude, gas formulas and government take. Antelopus Selan, Hindustan Oil Exploration and Gujarat Natural Resources are small independents whose share prices are driven by individual wells, block awards and, frequently, liquidity. The 2026 basket return of +40% against a median of +14% is exactly that distortion: one ₹4,100 cr stock up 169% pulls the average away from what the industry actually did. Use the median, and read the two groups separately.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Realisation minus cost minus the state's share</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Line</th><th>What it is</th><th>Why it matters</th></tr></thead><tbody>
+    <tr><td>Gross realisation</td><td>The international price adjusted for crude quality and location</td><td>The only line that moves violently: $66 to $99 a barrel in twelve months</td></tr>
+    <tr><td>Royalty</td><td>A percentage of the value of production paid to the government</td><td>Payable whether or not the field is profitable</td></tr>
+    <tr><td>Cess</td><td>A levy per tonne on nomination crude</td><td>A fixed-rupee charge that hurts most when prices are low</td></tr>
+    <tr><td>Profit petroleum / revenue share</td><td>The government's share under PSC or HELP terms</td><td>Rises as a field becomes more profitable</td></tr>
+    <tr><td>Operating cost per barrel</td><td>Lifting, water handling, offshore logistics, maintenance</td><td>Rises as a field ages and water cut increases</td></tr>
+    <tr><td>Depletion, depreciation and amortisation</td><td>Capitalised exploration and development written off against production</td><td>Makes reported profit a poor guide to cash</td></tr>
+    <tr><td>Exploration write-offs</td><td>Dry holes expensed</td><td>The cost of trying; lumpy and easily missed</td></tr>
+  </tbody></table></div>
+  <h3>The subsidy years, and why they still matter</h3>
+  <p>For most of the decade before 2014, Indian upstream did not enjoy high crude prices; it paid for them. Petrol, diesel, kerosene and cooking gas were sold below cost by the state refiners, and the resulting under-recovery was shared between the government and the upstream producers through discounts that were decided after the fact. That is why the basket rose just 15% in 2012 with Brent at $112, and why deregulation — petrol in 2010, diesel in October 2014 — mattered more to these shares than the oil price did. The windfall levy of July 2022, withdrawn in December 2024, was a smaller echo of the same idea: when crude spikes, the state has repeatedly found a way to take a share of it. Any model of an Indian producer must therefore include a political variable, not just a price deck.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Owning an Indian producer is like owning a farm where the crop price is set globally but the government may declare, in a bumper year, that a share of the harvest belongs to the nation's kitchen. The farm is still worth owning; it is simply worth less at the very top of the price cycle than the arithmetic suggests.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Drilling rigs and crews</td><td>No rig, no well; offshore rigs are scarce and globally mobile</td><td>Tight, and the reason the services sector (029) is having a strong year</td></tr>
+    <tr><td>Oilfield services</td><td>Logging, cementing, completion, workovers</td><td>See 029</td></tr>
+    <tr><td>Seismic acquisition and processing</td><td>Reduces the odds of drilling a dry hole</td><td>Demand rising with new acreage awards</td></tr>
+    <tr><td>Offshore support vessels</td><td>Everything offshore reaches the platform by boat</td><td>Rates linked to global activity</td></tr>
+    <tr><td>Steel: casing, tubing and line pipe</td><td>Every well and pipeline consumes it</td><td>Cost-linked to steel prices</td></tr>
+    <tr><td>Capital</td><td>Multi-year spending before revenue</td><td>State producers fund from cash flow; ONGC is committing over ₹40,000 cr to Western Offshore</td></tr>
+    <tr><td>Acreage</td><td>The raw material of the whole industry</td><td>OALP XI offered 21 blocks over about 80,234 sq km in March 2026</td></tr>
+    <tr><td>Skilled reservoir and drilling engineers</td><td>Decades of experience in mature-field management</td><td>A quiet constraint as the state producers' cohort retires</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Weather, formulas and auctions</h2>
+  <ul>
+    <li><b>The monsoon (June–September):</b> offshore activity in the Arabian Sea and Bay of Bengal is constrained; ONGC cited adverse offshore conditions in the June quarter.</li>
+    <li><b>Gas price resets:</b> the administered formula is revised half-yearly, on 1 April and 1 October, which moves gas revenue in steps rather than continuously.</li>
+    <li><b>Bid rounds:</b> OALP and DSF rounds run on their own calendar and have repeatedly been extended — Round X was deferred four times.</li>
+    <li><b>OPEC+ meetings and geopolitics:</b> the single biggest source of price news, and entirely outside the industry's control.</li>
+    <li><b>Budget day:</b> cess, royalty and levy changes are announced here, which is why February can be an anxious month for the sector.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (Oil &amp; Natural Gas Corp. Ltd., Oil India Limited, Antelopus Selan Energy Ltd, Hindustan Oil Exploration Co., Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +4.5 pts (beat in 11 of 15 years); Jan +2.7 pts (beat in 9 of 15 years); Jun +1.3 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Nov -3.4 pts (beat in 5 of 15 years); Jul -1.5 pts (beat in 5 of 16 years); Feb -1.4 pts (beat in 7 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 6 of 15 years (median -1.4 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +3.8 pts); Aug–Sep beat the Nifty in 7 of 14 years (median +0.5 pts); Oct–Dec beat the Nifty in 5 of 14 years (median -2.7 pts); Sep–Nov beat the Nifty in 5 of 14 years (median -4.6 pts); Jan–Mar beat the Nifty in 7 of 15 years (median -3.2 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +1.5 points.</p><p><b>Reading it:</b> weaker and noisier than the industrial sections, because the real driver is a global price nobody in India sets. April is the one dependable month (11 of 15 years, +4.5 points) and January the second (9 of 15). The negatives cluster in the last quarter: November is the worst month (5 of 15, −3.4), October–December beat the Nifty in 5 of 14 years (median −2.7) and September–November in 5 of 14 (median −4.6). April–July works 9 of 15 with a median of +3.8, but its failures are severe (2017 −17.7, 2013 −15.4, 2022 −13.6). Treat all of it as secondary to the crude price and the policy calendar.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed in six of fifteen years</b>, and the failures are large: 2017 (−17.7), 2013 (−15.4), 2022 (−13.6), 2019 (−9.3), 2018 (−7.9). This is a weaker seasonal than anything in the Auto family, because a single OPEC decision can overwhelm it.</li>
+    <li><b>The best April–July runs were 2024 (+38.0) and 2023 (+26.7)</b>, both years of state-enterprise re-rating rather than crude strength.</li>
+    <li><b>The fourth quarter is consistently poor:</b> November alone has beaten the Nifty in 5 of 15 years, with 2014 (−18.0), 2018 (−15.4) and 2025 (−13.4) the worst — all three were quarters in which crude fell sharply.</li>
+    <li><b>January is unexpectedly good</b> (9 of 15, +2.7 points), with 2026 (+19.6), 2022 (+19.2) and 2024 (+11.6) the standouts — in each case a crude or policy story that ran into the new year.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Lightly. With four names in the basket and two of them state enterprises whose re-ratings dominate whole years, the monthly pattern here is far more fragile than in an industry with twenty independent companies. The honest use is as a tiebreaker: if you like the crude view and the valuation, April–July is a better entry window than October–December. Nothing in this table should override the crude price, the production trend or the policy calendar.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Crude prices:</b> Brent averaged $88 in 2026 against $68 in 2025; every dollar drops almost straight to pre-tax profit.</li>
+    <li><b>The rupee:</b> revenue is dollar-linked and much of the cost base is not, so a weak rupee helps producers.</li>
+    <li><b>Production volumes:</b> the discipline that separates a compounder from a liquidation.</li>
+    <li><b>Administered gas pricing:</b> the formula, its floor and ceiling, and the separate freedom given to new-well gas.</li>
+    <li><b>Government take:</b> royalty, cess, profit petroleum and the ever-present possibility of a levy.</li>
+    <li><b>Exploration success and reserve replacement:</b> the only source of long-term value.</li>
+    <li><b>Capital-expenditure cycles:</b> ONGC's ₹40,000 cr-plus Western Offshore programme lifts output only from FY28.</li>
+    <li><b>Policy openness:</b> bid rounds, the 2025 Oilfields Amendment Act and the return of international majors to Indian acreage.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, against Brent</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of the four members with sufficient history and scale — ONGC, Oil India, Antelopus Selan and Hindustan Oil Exploration. Monthly returns capped at ±50%, price only; 2026 to 18 September. Vedanta Oil and Gas (June 2026) and Gujarat Natural Resources (April 2026) are too new to be included. The Brent column is the calendar-year average of the front-month price.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of an upstream cycle</h3>
+  <ol>
+    <li><b>Crude rises</b> for reasons outside India — a supply cut, a war, a demand surprise.</li>
+    <li><b>Earnings explode</b>, because costs are largely fixed and realisation is not.</li>
+    <li><b>The state's share is revisited</b> — historically through subsidy sharing, in 2022 through a windfall levy — which caps the re-rating.</li>
+    <li><b>Crude falls back</b>, earnings deflate and the stocks give up most of the gain, unless production has genuinely grown in the meantime. It rarely has.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The correlation with Brent is strong but asymmetric.</b> Compare 2012 (Brent $112, basket +15% against a Nifty +28%) with 2021 (Brent $71, basket +63%): what mattered was not the level but who was allowed to keep it.</li>
+    <li><b>The best years were policy years, not price years:</b> 2023 and 2024 were driven by the gas pricing reform and the re-rating of state enterprises.</li>
+    <li><b>Peaks cluster:</b> ONGC, Oil India and Hindustan Oil Exploration all peaked in August 2024 and are 32–37% below those levels, even with crude above $100 in September 2026.</li>
+    <li><b>The small independents swing four to five times as hard</b> in both directions — Antelopus Selan: +104% (2023), −50% (2025), +169% (2026).</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>India is a buyer in a market set elsewhere</h2>
+  <p>World oil prices are set by the balance between OPEC+ supply decisions, American shale's response to price, and demand. India, the third-largest consumer, is a price-taker on all of it: it imports close to 90% of its crude, and its import bill reached a record of about 4.9 million barrels a day. Domestic production has been falling roughly 1.1% a year for a decade, on mature fields, delayed monetisation of discoveries and fewer new finds. The policy response has been to make the acreage terms progressively more attractive, and it is beginning to draw international interest back — including BP taking exploration acreage in India.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Role</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>OPEC+</td><td>The marginal supplier and the price manager</td><td>Its meetings move these stocks more than any Indian announcement</td></tr>
+    <tr><td>US shale</td><td>The fast-cycle swing producer</td><td>Caps sustained price spikes</td></tr>
+    <tr><td>West Asia</td><td>India's principal supply source</td><td>The 2026 conflict is the reason Brent is at $103 in September</td></tr>
+    <tr><td>International majors</td><td>Deep-water and enhanced-recovery technology</td><td>Returning selectively under the new licensing terms; BP has taken acreage</td></tr>
+    <tr><td>Russia</td><td>Discounted crude since 2022</td><td>A refiner benefit (031) rather than a producer one</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From state monopoly to licensing rounds (1999 onwards):</b> NELP opened acreage, and Cairn's Barmer discovery in 2004 became the country's largest onshore find.</li>
+    <li><b>From profit sharing to revenue sharing (2016):</b> HELP and OALP removed the cost-recovery audit that had made the earlier regime litigious.</li>
+    <li><b>From offshore shallow water to deep water (2020s):</b> the National Deep Water Exploration Mission and the 2025 Oilfields Amendment Act are aimed squarely at the acreage India has never properly drilled.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Enhanced and improved oil recovery:</b> polymer, gas and chemical injection to raise the fraction of oil recovered from mature fields — the highest-value technology in a country of old reservoirs.</li>
+    <li><b>Deep-water and ultra-deep-water drilling:</b> the acreage where India's remaining large prizes probably sit, and where it lacks domestic capability.</li>
+    <li><b>Advanced seismic and reservoir modelling:</b> better images and simulation to cut the dry-hole rate.</li>
+    <li><b>Horizontal and multi-lateral wells:</b> more reservoir contact per well, the standard answer to declining fields.</li>
+    <li><b>Digital field management:</b> continuous monitoring and predictive maintenance to reduce downtime, which is where a 5% output decline is often lost.</li>
+    <li><b>Gas-focused development:</b> the transition fuel, and the reason new-well gas pricing freedom matters — it is what makes a marginal gas well worth drilling.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Oilfields (Regulation and Development) Amendment Act, 2025</td><td>In force since April 2025</td><td>Modernises the 1948 statute: a single petroleum lease covering all hydrocarbons, clearer contract stability and dispute resolution</td></tr>
+    <tr><td>HELP and OALP</td><td>Round X's 25 blocks were deferred four times and extended to 18 February; Round XI launched 30 March 2026 with 21 blocks over ~80,234 sq km</td><td>The pipeline of new acreage; the deferrals show how hard the demand side is</td></tr>
+    <tr><td>Discovered Small Fields rounds</td><td>Round IV awarded; Antelopus Selan won two onshore blocks</td><td>How independents get scale</td></tr>
+    <tr><td>National Deep Water Exploration Mission</td><td>Announced alongside the 2025 amendments</td><td>Targets the under-explored deep-water acreage</td></tr>
+    <tr><td>Administered gas pricing</td><td>Crude-linked formula with a floor and ceiling; separate freedom for new-well gas</td><td>ONGC's new-well gas realised $13.31/mmbtu against $8.24 a year earlier</td></tr>
+    <tr><td>Royalty and cess</td><td>Ongoing, with a revised royalty framework under the new rules</td><td>The permanent part of the government take</td></tr>
+    <tr><td>Windfall levy</td><td>Introduced July 2022, withdrawn December 2024; re-imposed from 27 March 2026 on exports of petrol, diesel and ATF only, not on domestic crude (see 031)</td><td>The precedent that matters: the state has already brought it back for refiners, and could extend it to crude if prices stay high</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: record profits, falling barrels</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Prices</td><td>High</td><td>Brent averaging $88 for the year and trading $103 on 18 September; ONGC realising $99.45 and Oil India $98.73 a barrel</td></tr>
+    <tr><td>Earnings</td><td>Records</td><td>ONGC profit +112% to ₹17,034 cr with a record ₹22,848 cr pre-tax; Oil India standalone profit a record ₹2,870 cr</td></tr>
+    <tr><td>Production</td><td>The weak point</td><td>ONGC crude −5.5% and gas about −2%; Oil India is the exception with crude up 11%</td></tr>
+    <tr><td>Refining subsidiary effects</td><td>Flattering</td><td>Numaligarh's gross refining margin of $35.95/bbl against $5.02 — exceptional and not a run-rate</td></tr>
+    <tr><td>Structure</td><td>Changed</td><td>Vedanta Oil and Gas listed 15 June; Gujarat Natural Resources in April</td></tr>
+    <tr><td>Stocks</td><td>Not re-rating</td><td>Basket +40% but median +14%; ONGC −3%; the majors remain 32–36% below their August 2024 peaks</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is what a commodity top usually looks like from the inside: the best earnings in the sector's history, and share prices that refuse to follow. The market is making a defensible judgement — that $100 crude in a West Asia conflict is not a base case, that a 5.5% production decline is, and that when crude is this high the government's willingness to take a share of it has historical form. The interesting subset is therefore not the majors but the companies where volume is actually growing: Oil India, lifting 11% more crude with a refinery expanding from 3 to 9 MMTPA, and the small independents adding fields through the Discovered Small Fields route. Antelopus Selan's 169% is not a sector signal, and the section's +40% headline should never be quoted without the +14% median beside it.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Brent and the Indian crude basket</td><td>Daily</td><td>The primary driver of every number here</td></tr>
+    <tr><td>Monthly production data</td><td>Petroleum ministry, monthly</td><td>Whether decline is being arrested</td></tr>
+    <tr><td>Administered gas price notifications</td><td>1 April and 1 October</td><td>Steps up or down in gas revenue</td></tr>
+    <tr><td>Reserve replacement ratio</td><td>Annual report</td><td>Whether the business is a going concern or a wasting asset</td></tr>
+    <tr><td>Bid-round awards and block wins</td><td>OALP and DSF announcements</td><td>Future production, especially for independents</td></tr>
+    <tr><td>Capital expenditure versus guidance</td><td>Quarterly</td><td>Spending today is volume in three years</td></tr>
+    <tr><td>Levy and cess announcements</td><td>Budget and ad hoc</td><td>The share of the windfall shareholders keep</td></tr>
+    <tr><td>Rig availability and day rates</td><td>See 029</td><td>The cost and feasibility of drilling</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>The rest of this family</h2>
+  <ul>
+    <li><b>Oilfield &amp; drilling services</b> (029): the contractors who do the physical work; they benefit from upstream capital expenditure without taking price risk on the barrel.</li>
+    <li><b>Oil &amp; gas EPC</b> (030): the builders of pipelines and facilities.</li>
+    <li><b>Oil refining &amp; marketing</b> (031): the buyers of this industry's output, whose margins move inversely to crude.</li>
+    <li><b>Gas transmission &amp; LNG</b> (033) and <b>city gas distribution</b> (034): the route domestic gas takes to a customer.</li>
+    <li><b>Petroleum products &amp; trading</b> (032) and <b>lubricants</b> (035): the specialty end of the barrel.</li>
+    <li><b>Petrochemicals &amp; polymers</b> (036): the molecules that do not become fuel.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What was production by field this quarter, and what is the natural decline rate being fought?</li>
+    <li>What is the reserve replacement ratio for the year, and how much came from revisions rather than new discoveries?</li>
+    <li>What is the operating cost per barrel, and how has water cut changed it?</li>
+    <li>What is the realisation net of royalty, cess and profit petroleum — the number that actually reaches shareholders?</li>
+    <li>What share of gas is sold under the administered formula and what share at new-well prices?</li>
+    <li>What is the capital expenditure plan by project, and when does each add barrels?</li>
+    <li>(ONGC) What specifically is being done about the 5.5% crude decline before the Daman project arrives in FY28?</li>
+    <li>(Oil India) What is a sustainable gross refining margin at Numaligarh once the current cycle normalises?</li>
+    <li>(Independents) What is the work programme commitment on new blocks, and how is it funded?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Profit growth celebrated while production falls.</li>
+    <li>Reserve additions that come from re-estimating old fields rather than drilling new ones.</li>
+    <li>Capital expenditure cut in a high-price year to protect dividends.</li>
+    <li>A small producer whose share price has moved far ahead of any announced reserve addition.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"High crude means these stocks go up."</td><td>Not reliably. Brent averaged $112 in 2012 and the basket underperformed by 13 points; 2026 has $88 crude, record profits and ONGC down 3%.</td></tr>
+    <tr><td>"The sector is cheap on earnings."</td><td>It is cheap on peak-cycle earnings, with declining volumes and a history of the state taking a share when prices spike. Those are reasons for a low multiple, not an anomaly.</td></tr>
+    <tr><td>"India can drill its way to energy independence."</td><td>Output has fallen about 1.1% a year for a decade and imports are at a record 4.9 million barrels a day. New acreage and deep-water exploration change the trajectory over a decade, not a cycle.</td></tr>
+    <tr><td>"The energy transition makes upstream uninvestable."</td><td>India's oil demand is still growing, and gas is explicitly a transition fuel. The nearer risk is a government take on high prices, not demand disappearing.</td></tr>
+    <tr><td>"The sector is up 40% this year."</td><td>The equal-weighted basket is. The median stock is up 14%, and one ₹4,100 cr company up 169% accounts for the difference.</td></tr>
+    <tr><td>"Vedanta Oil and Gas is a cheap way to buy Cairn."</td><td>It is the same asset base with three months of listed history and a demerger overhang. The decline profile of Barmer and the capital plan are what decide it, and neither is visible in a share price yet.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. OALP, water cut" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Geology and operations</h3><dl>
+    <dt>Upstream</dt><dd>Exploration and production, as opposed to refining (midstream and downstream).</dd>
+    <dt>Reservoir</dt><dd>The porous rock holding hydrocarbons; oil sits in the pores, not in a cavern.</dd>
+    <dt>Seismic survey</dt><dd>Bouncing sound waves off subsurface layers to image the rock before drilling.</dd>
+    <dt>Exploration well</dt><dd>A well drilled to test whether hydrocarbons are present. Most are unsuccessful.</dd>
+    <dt>Dry hole</dt><dd>A well that finds nothing commercial; its cost is written off.</dd>
+    <dt>Appraisal well</dt><dd>A well drilled after a discovery to size it.</dd>
+    <dt>Development well</dt><dd>A well drilled to produce from a proven field.</dd>
+    <dt>Workover</dt><dd>Maintenance intervention on an existing well to restore or raise its output.</dd>
+    <dt>Decline rate</dt><dd>The annual percentage fall in a field's output without intervention.</dd>
+    <dt>Water cut</dt><dd>The share of water in what a well lifts; it rises as a field ages and raises cost per barrel.</dd>
+    <dt>Enhanced oil recovery (EOR)</dt><dd>Injecting polymer, gas or chemicals to recover more of the oil in place.</dd>
+    <dt>Water injection / gas lift</dt><dd>Techniques to maintain reservoir pressure or help fluids to surface.</dd>
+    <dt>Deep water / ultra-deep water</dt><dd>Offshore acreage in great water depths; technically demanding and largely undrilled in India.</dd>
+    <dt>MMTOE</dt><dd>Million metric tonnes of oil equivalent, the common unit for combined oil and gas output. ONGC targets 42.5 for FY27.</dd>
+    <dt>mmbtu</dt><dd>Million British thermal units, the unit in which gas is priced.</dd>
+    <dt>Condensate</dt><dd>Light liquid hydrocarbons that separate out of produced gas.</dd>
+    <dt>Reserves and resources</dt><dd>Quantities judged commercially recoverable, versus those merely believed present.</dd>
+    <dt>Reserve replacement ratio</dt><dd>New reserves added divided by production in the same year; below one means the business is shrinking.</dd>
+  </dl>
+  <h3>Contracts and policy</h3><dl>
+    <dt>Nomination block</dt><dd>Acreage granted to the state producers before liberalisation.</dd>
+    <dt>Production sharing contract (PSC)</dt><dd>Costs recovered first, then profit petroleum shared with the government.</dd>
+    <dt>Cost recovery</dt><dd>The mechanism under a PSC allowing a contractor to recoup spending before sharing profit — the source of most historical disputes.</dd>
+    <dt>Profit petroleum</dt><dd>The government's share of production after cost recovery.</dd>
+    <dt>HELP</dt><dd>The Hydrocarbon Exploration and Licensing Policy of 2016: revenue sharing, a uniform licence and marketing freedom.</dd>
+    <dt>OALP</dt><dd>Open Acreage Licensing Programme, under which companies can nominate blocks they want auctioned; Round XI opened in March 2026.</dd>
+    <dt>DSF</dt><dd>Discovered Small Fields rounds, auctioning already-discovered small fields on simple terms.</dd>
+    <dt>DGH</dt><dd>The Directorate General of Hydrocarbons, the upstream regulator.</dd>
+    <dt>Royalty</dt><dd>A percentage of production value paid to the government regardless of profitability.</dd>
+    <dt>Cess</dt><dd>A per-tonne levy on nomination crude.</dd>
+    <dt>Windfall levy</dt><dd>The special additional excise duty on crude, introduced in July 2022 and withdrawn in December 2024. It returned in March 2026 on fuel exports only, not on crude (see 031).</dd>
+    <dt>Subsidy sharing / under-recovery</dt><dd>The pre-2014 system in which upstream producers funded part of the loss state refiners made selling fuel below cost.</dd>
+    <dt>Administered price mechanism (APM)</dt><dd>The formula pricing gas from nomination fields, with a floor and a ceiling.</dd>
+    <dt>New-well gas pricing</dt><dd>The pricing freedom given to gas from newly drilled wells; ONGC realised $13.31/mmbtu on it.</dd>
+    <dt>Oilfields (Regulation and Development) Act</dt><dd>The governing statute of 1948, substantially amended in 2025.</dd>
+    <dt>Demerger</dt><dd>Splitting a business into separately listed entities; Vedanta Oil and Gas listed this way on 15 June 2026 (see 021 for the reverse case).</dd>
+  </dl>
+  <h3>Market terms</h3><dl>
+    <dt>Brent</dt><dd>The North Sea benchmark against which most Indian crude is referenced.</dd>
+    <dt>Indian crude basket</dt><dd>The weighted average price of the crude India actually imports.</dd>
+    <dt>Realisation</dt><dd>What a producer actually receives per barrel after adjustments and discounts.</dd>
+    <dt>OPEC+</dt><dd>The producer group whose supply decisions set the marginal price.</dd>
+    <dt>Price-taker</dt><dd>A seller with no influence on the price it receives — the defining condition of this industry.</dd>
+    <dt>Gross refining margin</dt><dd>The difference between the value of products and the cost of crude, per barrel; relevant here through Oil India's Numaligarh subsidiary (see 031).</dd>
+    <dt>DD&amp;A</dt><dd>Depletion, depreciation and amortisation — how capitalised exploration and development costs are charged against production.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why did high crude prices not help Indian producers before 2014?</summary><p>Subsidy sharing: upstream producers funded part of the under-recovery on fuels sold below cost. In 2012, with Brent at $112, the basket underperformed the Nifty by 13 points.</p></details>
+  <details class="q"><summary>2. What is the single most important number in an upstream result?</summary><p>Production, not profit. ONGC posted a record pre-tax profit of ₹22,848 cr while crude output fell 5.5%, and the stock is down for the year.</p></details>
+  <details class="q"><summary>3. What changed in 2016 with HELP and OALP?</summary><p>The move from profit sharing with cost recovery to straightforward revenue sharing, with a uniform licence for all hydrocarbons and the ability to nominate acreage for auction.</p></details>
+  <details class="q"><summary>4. What did ONGC and Oil India realise per barrel in Q1 FY27?</summary><p>$99.45 for ONGC's nomination crude (from $66.13) and $98.73 for Oil India.</p></details>
+  <details class="q"><summary>5. Why is Oil India partly a refining stock?</summary><p>Numaligarh Refinery is a large subsidiary; its profit rose 167% to ₹1,305 cr on a gross refining margin of $35.95 a barrel, and it is expanding from 3 to 9 MMTPA.</p></details>
+  <details class="q"><summary>6. What is the section's 2026 return, properly stated?</summary><p>The basket is +40% against a Nifty −11%, but the median stock is +14%; Antelopus Selan's +169% accounts for the gap.</p></details>
+  <details class="q"><summary>7. What arrived on the exchanges on 15 June 2026?</summary><p>Vedanta Oil and Gas — the old Cairn business, anchored on the Barmer block — demerged from Vedanta, one share for each Vedanta share, debuting at ₹39.</p></details>
+  <details class="q"><summary>8. What is the windfall levy, and why does it still matter?</summary><p>A special additional excise duty on crude introduced in July 2022 and withdrawn in December 2024. It returned in March 2026 on exports of petrol, diesel and ATF, but not on crude. It is the precedent showing the state will take a share when prices spike.</p></details>
+  <details class="q"><summary>9. How dependent is India on imported crude?</summary><p>About 90% of requirements, with imports at a record of roughly 4.9 million barrels a day, while domestic output has fallen about 1.1% a year for a decade.</p></details>
+  <details class="q"><summary>10. Which seasonal window is worst for this basket?</summary><p>The fourth quarter: October–December has beaten the Nifty in 5 of 14 years (median −2.7) and September–November in 5 of 14 (median −4.6).</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of ONGC, Oil India, Antelopus Selan and Hindustan Oil Exploration versus NSE:NIFTY. Brent column: TVC:UKOIL calendar-year averages.</li>
+    <li>ONGC: <a href="https://indianpsu.com/ongc-q1-fy27-results-net-profit-surges-112-percent-highest-ever-quarterly-pbt/">Q1 FY27 profit, revenue and realisations</a>; <a href="https://www.business-standard.com/companies/quarterly-results/ongc-q1-profit-more-than-doubles-to-17-034-cr-on-higher-crude-prices-126080401670_1.html">profit on higher crude prices</a>; <a href="https://www.kotakneo.com/news/stocks/ongc-q1-fy-27-results-pat-17034-crore/">production decline and the FY27 target</a>; <a href="https://www.exhibitionshowcase.com/ongc-delivers-record-q1-fy27-performance-as-higher-crude-prices-propel-profitability/">new-well gas and the Western Offshore programme</a>.</li>
+    <li>Oil India: <a href="https://www.businessworld.in/article/oil-india-q1-profit-jumps-97-to-rs-4-027-cr-on-higher-crude-output-618491">consolidated profit and output</a>; <a href="https://www.business-standard.com/markets/capital-market-news/oil-india-jumps-after-q1-pat-surges-over-3-fold-to-rs-2-870-cr-126081000560_1.html">standalone record and Numaligarh's contribution</a>; <a href="https://www.whalesbook.com/corporate-news/English/energy/Oil-India-Q1-Net-Profit-Hits-Record-indian-rupee2870-Crore-Production-Up/6aabc24cf2017017ae6c3a4a">record daily production</a>; <a href="https://www.investywise.com/oil-india-limited-outlines-growth-roadmap-and-offshore-exploration-strategy">the 10 MMTOE roadmap and refinery expansion</a>.</li>
+    <li>New listings: <a href="https://www.businessworld.in/article/vedanta-oil-gas-to-begin-trading-on-nse-bse-from-june-15-610612">Vedanta Oil and Gas listing date</a>; <a href="https://upstox.com/news/market-news/stocks/vedanta-demerger-vedanta-oil-and-gas-to-list-on-june-15-key-details-shareholders-need-to-know/article-195281/">demerger ratio and structure</a>; <a href="https://www.multibagg.ai/market-pulse/articles/vedanta-oil-gas-listing-demerger-cmqhe3dvut5xhnv0jgv2kaep2">debut price</a>; <a href="https://www.screener.in/company/VOGL/consolidated/">financial history</a>.</li>
+    <li>Independents: <a href="https://www.sahi.com/news/antelopus-selan-energy-wins-two-onshore-blocks-in-andhra-pradesh-and-gujarat-1924-PE1_COR">Antelopus Selan's DSF Round IV wins</a>; <a href="https://antelopusenergy.com/about-us/">its portfolio of contract areas</a>; <a href="https://www.screener.in/company/ANTELOPUS/">its results history</a>.</li>
+    <li>Policy and market structure: <a href="https://practiceguides.chambers.com/practice-guides/oil-gas-2026/india/trends-and-developments">the 2025 Oilfields Amendment Act and the deep-water mission</a>; <a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2771511-india-defers-upstream-hopes-into-2026">OALP Round X deferrals and the output decline</a>; <a href="https://discoveryalert.com/india-oalp-x-extension-regulatory-adaptation-2026/">Round XI's 21 blocks</a>; <a href="https://ciiblog.in/securing-indias-energy-future-the-role-of-domestic-upstream-oil-gas-in-reducing-import-dependence/">import dependence</a>; <a href="https://spglobal.com/commodity-insights/en/news-research/latest-news/crude-oil/041625-bps-maiden-exploration-license-in-india-to-whet-appetite-of-global-oil-majors">BP's Indian exploration licence</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -1.4}, {"y": 2013, "v": -15.2}, {"y": 2014, "v": 10.7}, {"y": 2015, "v": -3.6}, {"y": 2016, "v": -10.0}, {"y": 2017, "v": -7.4}, {"y": 2018, "v": -4.2}, {"y": 2019, "v": 4.2}, {"y": 2020, "v": -19.9}, {"y": 2021, "v": 6.3}, {"y": 2022, "v": 4.5}, {"y": 2023, "v": -0.9}, {"y": 2024, "v": 3.4}, {"y": 2025, "v": -11.3}, {"y": 2026, "v": 6.1}], "AprJul": [{"y": 2012, "v": 3.8}, {"y": 2013, "v": -15.4}, {"y": 2014, "v": 1.5}, {"y": 2015, "v": 3.8}, {"y": 2016, "v": 4.2}, {"y": 2017, "v": -17.7}, {"y": 2018, "v": -7.9}, {"y": 2019, "v": -9.3}, {"y": 2020, "v": 13.2}, {"y": 2021, "v": 14.0}, {"y": 2022, "v": -13.6}, {"y": 2023, "v": 26.7}, {"y": 2024, "v": 38.0}, {"y": 2025, "v": -0.7}, {"y": 2026, "v": 4.9}], "AugSep": [{"y": 2012, "v": -4.2}, {"y": 2013, "v": 2.1}, {"y": 2014, "v": -0.1}, {"y": 2015, "v": -8.4}, {"y": 2016, "v": 12.9}, {"y": 2017, "v": 16.0}, {"y": 2018, "v": 7.7}, {"y": 2019, "v": -11.6}, {"y": 2020, "v": -2.7}, {"y": 2021, "v": 26.3}, {"y": 2022, "v": 3.4}, {"y": 2023, "v": 1.0}, {"y": 2024, "v": -6.6}, {"y": 2025, "v": -2.3}], "OctDec": [{"y": 2012, "v": -11.0}, {"y": 2013, "v": 4.3}, {"y": 2014, "v": -28.0}, {"y": 2015, "v": 0.8}, {"y": 2016, "v": 16.9}, {"y": 2017, "v": 18.2}, {"y": 2018, "v": -10.7}, {"y": 2019, "v": -4.1}, {"y": 2020, "v": -1.2}, {"y": 2021, "v": -11.4}, {"y": 2022, "v": -0.5}, {"y": 2023, "v": 3.8}, {"y": 2024, "v": -8.8}, {"y": 2025, "v": -13.5}], "SepNov": [{"y": 2012, "v": -14.7}, {"y": 2013, "v": 3.1}, {"y": 2014, "v": -21.8}, {"y": 2015, "v": -1.8}, {"y": 2016, "v": 20.2}, {"y": 2017, "v": 24.5}, {"y": 2018, "v": -13.5}, {"y": 2019, "v": -6.4}, {"y": 2020, "v": -11.2}, {"y": 2021, "v": 5.5}, {"y": 2022, "v": -2.8}, {"y": 2023, "v": 9.5}, {"y": 2024, "v": -18.8}, {"y": 2025, "v": -14.2}], "JanMar": [{"y": 2012, "v": 0.9}, {"y": 2013, "v": -8.5}, {"y": 2014, "v": 18.3}, {"y": 2015, "v": -17.3}, {"y": 2016, "v": -11.8}, {"y": 2017, "v": -9.0}, {"y": 2018, "v": -10.1}, {"y": 2019, "v": -3.2}, {"y": 2020, "v": -22.3}, {"y": 2021, "v": 6.6}, {"y": 2022, "v": 24.7}, {"y": 2023, "v": 7.2}, {"y": 2024, "v": 15.7}, {"y": 2025, "v": -10.8}, {"y": 2026, "v": 24.4}]}, "my": {"1": {"2012": 2.5, "2013": 8.9, "2014": 6.6, "2015": -14.6, "2016": -2.4, "2017": -1.3, "2018": -6.5, "2019": -6.6, "2020": -5.2, "2021": 0.4, "2022": 19.2, "2023": 8.2, "2024": 11.6, "2025": 0.4, "2026": 19.6}, "2": {"2012": 4.7, "2013": -11.3, "2014": 0.6, "2015": 6.4, "2016": -8.3, "2017": -4.0, "2018": -1.0, "2019": 3.5, "2020": -13.8, "2021": 10.3, "2022": -3.1, "2023": 4.9, "2024": 6.1, "2025": -11.1, "2026": -5.4}, "3": {"2012": -5.6, "2013": -4.7, "2014": 9.7, "2015": -9.0, "2016": -0.9, "2017": -3.3, "2018": -3.5, "2019": 0.5, "2020": -11.7, "2021": -3.6, "2022": 8.2, "2023": -5.6, "2024": -2.6, "2025": 0.7, "2026": 11.6}, "4": {"2012": -0.1, "2013": 3.1, "2014": -1.7, "2015": 7.5, "2016": 8.6, "2017": 1.3, "2018": 8.6, "2019": -1.1, "2020": 4.8, "2021": 2.4, "2022": 1.2, "2023": 9.2, "2024": 16.6, "2025": -1.8, "2026": 8.6}, "5": {"2012": -0.4, "2013": -2.5, "2014": 13.7, "2015": -0.8, "2016": -6.6, "2017": -11.7, "2018": -7.3, "2019": -1.0, "2020": 7.8, "2021": -0.8, "2022": -2.0, "2023": -0.3, "2024": -6.0, "2025": -1.6, "2026": 1.6}, "6": {"2012": 7.9, "2013": -9.1, "2014": -1.5, "2015": 2.2, "2016": 4.1, "2017": -7.9, "2018": -3.5, "2019": -1.1, "2020": 5.9, "2021": 11.4, "2022": 5.6, "2023": 3.4, "2024": 5.3, "2025": 3.9, "2026": -6.7}, "7": {"2011": 7.6, "2012": -2.7, "2013": -6.9, "2014": -7.3, "2015": -5.3, "2016": -1.9, "2017": 1.6, "2018": -4.1, "2019": -6.3, "2020": -7.6, "2021": -0.1, "2022": -19.5, "2023": 10.5, "2024": 17.3, "2025": -1.0, "2026": 2.1}, "8": {"2011": -3.7, "2012": -3.1, "2013": 2.0, "2014": -1.4, "2015": -3.9, "2016": 7.2, "2017": 7.3, "2018": 10.8, "2019": -10.8, "2020": 3.9, "2021": 1.9, "2022": 6.0, "2023": -6.1, "2024": 11.8, "2025": -5.2, "2026": 0.5}, "9": {"2011": 0.7, "2012": -1.0, "2013": 0.0, "2014": 1.3, "2015": -5.0, "2016": 5.3, "2017": 8.3, "2018": -2.1, "2019": -0.3, "2020": -6.2, "2021": 22.0, "2022": -2.2, "2023": 7.9, "2024": -16.6, "2025": 3.1}, "10": {"2011": -5.4, "2012": -4.2, "2013": 0.5, "2014": -4.7, "2015": 3.8, "2016": 12.8, "2017": 7.3, "2018": 2.5, "2019": 3.1, "2020": -10.1, "2021": -9.2, "2022": 0.2, "2023": 2.9, "2024": -2.3, "2025": -3.3}, "11": {"2011": 2.8, "2012": -8.9, "2013": 2.2, "2014": -18.0, "2015": -0.4, "2016": 2.2, "2017": 6.6, "2018": -15.4, "2019": -8.4, "2020": 7.4, "2021": -4.1, "2022": -0.5, "2023": -1.7, "2024": -1.8, "2025": -13.4}, "12": {"2011": -5.2, "2012": 2.1, "2013": 1.2, "2014": -7.0, "2015": -2.5, "2016": 2.1, "2017": 2.5, "2018": 2.0, "2019": 1.8, "2020": 3.1, "2021": 1.8, "2022": -0.1, "2023": 2.3, "2024": -5.6, "2025": 3.7}}, "basket": ["Oil & Natural Gas Corp. Ltd.", "Oil India Limited", "Antelopus Selan Energy Ltd", "Hindustan Oil Exploration Co., Ltd."], "nbasket": 4, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 3.5, "rel": 2.7, "hit": 9, "n": 15}, {"m": 2, "abs": -2.6, "rel": -1.4, "hit": 7, "n": 15}, {"m": 3, "abs": -1.5, "rel": -1.3, "hit": 5, "n": 15}, {"m": 4, "abs": 7.0, "rel": 4.5, "hit": 11, "n": 15}, {"m": 5, "abs": -0.0, "rel": -1.2, "hit": 3, "n": 15}, {"m": 6, "abs": 3.1, "rel": 1.3, "hit": 9, "n": 15}, {"m": 7, "abs": 0.4, "rel": -1.5, "hit": 5, "n": 16}, {"m": 8, "abs": 0.9, "rel": 1.1, "hit": 9, "n": 16}, {"m": 9, "abs": 1.6, "rel": 1.0, "hit": 8, "n": 15}, {"m": 10, "abs": 1.7, "rel": -0.4, "hit": 8, "n": 15}, {"m": 11, "abs": -2.5, "rel": -3.4, "hit": 5, "n": 15}, {"m": 12, "abs": 0.8, "rel": 0.1, "hit": 10, "n": 15}], "cy": [{"y": 2012, "b": 14.9, "n": 27.7, "rel": -12.8, "partial": false}, {"y": 2013, "b": -12.5, "n": 6.8, "rel": -19.2, "partial": false}, {"y": 2014, "b": 13.9, "n": 31.4, "rel": -17.5, "partial": false}, {"y": 2015, "b": -24.1, "n": -4.1, "rel": -20.1, "partial": false}, {"y": 2016, "b": 25.0, "n": 3.0, "rel": 22.0, "partial": false}, {"y": 2017, "b": 35.1, "n": 28.6, "rel": 6.5, "partial": false}, {"y": 2018, "b": -17.3, "n": 3.2, "rel": -20.5, "partial": false}, {"y": 2019, "b": -16.3, "n": 12.0, "rel": -28.3, "partial": false}, {"y": 2020, "b": -16.4, "n": 14.9, "rel": -31.3, "partial": false}, {"y": 2021, "b": 62.9, "n": 24.1, "rel": 38.8, "partial": false}, {"y": 2022, "b": 15.2, "n": 4.3, "rel": 10.8, "partial": false}, {"y": 2023, "b": 66.6, "n": 20.0, "rel": 46.5, "partial": false}, {"y": 2024, "b": 42.2, "n": 8.8, "rel": 33.4, "partial": false}, {"y": 2025, "b": -16.6, "n": 10.5, "rel": -27.1, "partial": false}, {"y": 2026, "b": 40.3, "n": -10.7, "rel": 51.0, "partial": true}], "dd": [{"co": "Oil & Natural Gas Corp.", "peak": "Aug 2024", "fp": -32, "y1": -1}, {"co": "Oil India", "peak": "Aug 2024", "fp": -36, "y1": 19}, {"co": "Antelopus Selan Energy", "peak": "Aug 2024", "fp": 8, "y1": 91}, {"co": "Hindustan Oil Exploration Co.,", "peak": "Aug 2024", "fp": -37, "y1": 0}], "win": {"FebMar": {"mean": -2.6, "median": -1.4, "hit": 6, "n": 15}, "AprJul": {"mean": 3.0, "median": 3.8, "hit": 9, "n": 15}, "AugSep": {"mean": 2.4, "median": 0.5, "hit": 7, "n": 14}, "OctDec": {"mean": -3.2, "median": -2.7, "hit": 5, "n": 14}, "SepNov": {"mean": -3.0, "median": -4.6, "hit": 5, "n": 14}, "JanMar": {"mean": 0.3, "median": -3.2, "hit": 7, "n": 15}}, "ytd": {"b": 40.3, "n": -10.7}, "hx": {"label": "Brent avg $/bbl", "v": {"2012": "112", "2013": "109", "2014": "99", "2015": "54", "2016": "45", "2017": "55", "2018": "72", "2019": "64", "2020": "43", "2021": "71", "2022": "99", "2023": "82", "2024": "80", "2025": "68", "2026": "88 (YTD)"}}, "notes": {"2012": "+15% against the Nifty's +28%. Brent averaged $112 and the producers saw very little of it: under the subsidy-sharing regime, ONGC and Oil India funded a large share of the fuel under-recoveries of the state refiners. High crude was a cost to them, not a windfall.", "2013": "\u221212% versus +7%. The rupee crash raised the rupee crude price and with it the subsidy burden, and the sharing formula was never fixed in advance. Hindustan Oil Exploration \u221261% on its own difficulties.", "2014": "+14% versus +31%. Brent collapsed from about $115 in June to under $60 by December. Upstream fell far less than crude did, because diesel was deregulated in October and the subsidy burden began to lift \u2014 the first good structural news the sector had in a decade.", "2015": "\u221224% versus \u22124%. Brent averaged $54. With the subsidy relief already priced, the pure price effect took over; the median stock fell 31%.", "2016": "+25% versus +3%. Brent bottomed near $27 in January and doubled by year-end. Hindustan Oil Exploration +80%.", "2017": "+35% versus +29%. OPEC production cuts lifted crude through the year; Hindustan Oil Exploration +105% and Antelopus Selan (then Selan Exploration) +27%.", "2018": "\u221217% versus +3%. Brent spiked to $86 in October, and instead of helping, it revived the fear that producers would be asked to share the burden again. The crude crash in the December quarter finished the year off.", "2019": "\u221216% versus +12%. Soft crude, soft gas prices, and a sector the market had stopped believing in. All four names fell.", "2020": "\u221216% versus +15%. The pandemic year: Brent averaged $43, demand collapsed and administered gas prices were cut to record lows. ONGC \u221228%, Oil India \u221230%.", "2021": "+63% versus +24%, the first great recovery year. Brent averaged $71 and gas prices turned. Hindustan Oil Exploration +112%, Oil India +85%, ONGC +53%.", "2022": "+15% versus +4%. Brent averaged $99 after the invasion of Ukraine, but a windfall levy introduced in July capped what producers could keep. Antelopus Selan +86% was the exception.", "2023": "+67% versus +20%. A re-rating year driven as much by policy as by price: the April 2023 reform gave administered gas a crude-linked formula with a floor and ceiling, and the state producers were re-priced. Antelopus Selan +104%, Oil India +79%, ONGC +40%.", "2024": "+42% versus +9%. The peak of the state-enterprise re-rating: Oil India +74%, Antelopus Selan +66%. ONGC, Oil India and Hindustan Oil Exploration all set their multi-year highs in August 2024, and have not regained them since.", "2025": "\u221217% versus +10%. Brent fell back to a $68 average and the re-rating unwound. Antelopus Selan \u221250% gave back half of two years of gains.", "2026": "+40% against a Nifty \u221211%, but the median stock is +14% and the basket is carried by Antelopus Selan's +169%. Brent has averaged $88 and traded $103 in September on the West Asia conflict; ONGC realised $99.45 a barrel and more than doubled its quarterly profit, yet the stock is \u22123% because output fell 5.5%. Two new listings arrived: Gujarat Natural Resources in April and Vedanta Oil and Gas \u2014 the old Cairn business \u2014 on 15 June."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

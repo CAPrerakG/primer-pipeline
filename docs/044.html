@@ -1,0 +1,641 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wires, Cables and Conductors Primer</title>
+<meta name="description" content="Industry 44 of 278: the copper and aluminium arteries of the economy — house wires, power cables, overhead conductors, winding wire and optical fibre. Copper at a record, a +88% year for the basket, two conglomerates entering, and the 33 listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Wires, Cables &amp; Conductors · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 44 of 278 · Power family, part 9</div>
+  <h1>Wires, Cables &amp; Conductors</h1>
+  <p class="lede">Everything that carries electricity or signals from one place to another: the wire inside your wall, the heavy cable buried under a city street, the conductor strung between transmission towers, the fine enamelled copper wound inside every motor and transformer, and the optical fibre carrying the internet. It is the most copper-intensive industry in the market, and in 2026 it produced the strongest returns in the Power family — with the two largest companies left behind.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 33 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Solar Cells &amp; Modules</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">$6.86/lb</div><div class="l">Copper's record on 8 September 2026 — up 19% this year after 42% in 2025</div></div>
+    <div class="stat"><div class="n">+88%</div><div class="l">Basket return in 2026 against a Nifty down 11%</div></div>
+    <div class="stat"><div class="n">~₹1 lakh cr</div><div class="l">Size of the Indian wires and cables market, about ₹80,000 cr of it organised</div></div>
+    <div class="stat"><div class="n">₹1,800 cr</div><div class="l">UltraTech's investment in Ultravolt, on sale since 3 September 2026</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A copper business that makes its money on conversion, brand and reach</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Electricity needs a road to travel on, and that road is metal — usually copper or aluminium. A wire is a thin road for a house; a cable is a thick, well-protected road that can go underground; a conductor is a bare road hung high between towers. Inside every fan and transformer there is also a long, thin, coated copper wire wound round and round like thread on a spool. Companies buy big rods of copper and aluminium, stretch them thinner, twist them together and wrap them in plastic. The metal itself is most of the cost. What the company earns is the "stretching and wrapping" fee — plus a little extra if people trust its name.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>2026 has been a boom year for this sector, but the returns have gone to the smaller companies rather than the leaders.</p>
+    <ul>
+      <li><b>Copper at a record:</b> $6.86/lb on 8 September; the ICSG expects a 150,000-tonne deficit in 2026 after a surplus in 2025, and US tariffs on refined copper are under discussion.</li>
+      <li><b>Results are excellent:</b> Polycab revenue +39%, RR Kabel +54%, Finolex +44%, KEI +23% with margin +247 bps, APAR profit +78%, Diamond Power sales +128%.</li>
+      <li><b>Part of the growth is copper:</b> revenue rises when metal prices rise, even at flat volumes. Volume was strong too — cable demand from transmission, data centres, solar and exports.</li>
+      <li><b>New competitors:</b> UltraTech's ₹1,800 cr Ultravolt went on sale on 3 September; Adani's cables arm is expected around the end of 2026. Polycab (+10%) and KEI (+4%) have lagged as a result.</li>
+      <li><b>The smaller names ran:</b> V-Marc +205%, Birla Cable +199%, Diamond Power +166%, APAR +125%; Diamond Power is valued at ₹23,600 cr on quarterly profit of ₹58 cr.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Five businesses under one label</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>What it is</th><th>Customer</th><th>Economics</th><th>Listed makers</th></tr></thead><tbody>
+    <tr><td>Building wires (house wires)</td><td>Insulated copper wires inside homes and offices</td><td>Retail — through dealers and electricians</td><td>Brand and distribution; the highest-margin part</td><td>Polycab, RR Kabel, Finolex, KEI, V-Marc, Plaza</td></tr>
+    <tr><td>Power cables (LT, HT, EHV)</td><td>Insulated, armoured cables for industry, cities and grids — up to 220–400 kV</td><td>Utilities, EPC contractors, industry, data centres</td><td>Tenders and technical approval; EHV is the premium</td><td>KEI, Polycab, APAR, Diamond Power, Universal, Dynamic, Paramount</td></tr>
+    <tr><td>Overhead conductors</td><td>Bare aluminium strands on transmission towers (see 039)</td><td>Transmission utilities, exports</td><td>Near-commodity, except premium HTLS conductors</td><td>APAR, Diamond Power, Dynamic, Laser Power</td></tr>
+    <tr><td>Winding (magnet) wire</td><td>Enamelled copper or paper-covered conductors for motors and transformers</td><td>Motor, fan, transformer and appliance makers</td><td>Pure conversion; margins around 5%</td><td>Precision Wires, Ram Ratna, KSH International, Vidya Wires, Shera, Divine Power</td></tr>
+    <tr><td>Telecom and optical fibre cable</td><td>Copper telecom cable and fibre-optic cable</td><td>Telecom operators, BharatNet, data centres</td><td>Boom-and-bust with telecom capex</td><td>Birla Cable, Vindhya Telelinks, Tamilnadu Telecom</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>The industry is like a bakery that buys flour at whatever the market price is and sells bread. When flour prices rise, the price of bread rises too and the bakery's sales grow — but that is not the same as selling more loaves. What matters is the fee for baking (the conversion margin), how many loaves go out (volume), and whether customers ask for the bakery by name (brand). Every result in this industry has to be read in those three parts.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From copper cathode to a dealer's shelf</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Metal</h4><div class="an">The flour</div>Copper cathode and rod, aluminium ingot and rod. Priced off the LME.<div class="who">Hindalco, Vedanta, Adani (Kutch Copper), imports</div><div class="m">60–75% of product cost</div></div>
+    <div class="stage"><div class="no">02</div><h4>Drawing and stranding</h4><div class="an">Stretching</div>Rod pulled through dies into fine wire, annealed and twisted into strands.<div class="who">All makers; Precision Wires now trial-producing cathode</div><div class="m">Scale and yield</div></div>
+    <div class="stage"><div class="no">03</div><h4>Insulation and sheathing</h4><div class="an">The wrapping</div>PVC, XLPE, fire-retardant and halogen-free compounds extruded over the conductor; armour for buried cables.<div class="who">All cable makers</div><div class="m">Compound costs are crude-linked (see 002)</div></div>
+    <div class="stage"><div class="no">04</div><h4>Testing and approval</h4><div class="an">The seal of quality</div>BIS certification for wires; type tests and utility approval for HT and EHV cables.<div class="who">Leaders and qualified specialists</div><div class="m">EHV approval is a real barrier</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Distribution</h4><div class="an">Reaching the electrician</div>Distributors, dealers and electrician loyalty programmes.<div class="who">Polycab, Havells, RR Kabel, Finolex, KEI</div><div class="m">The moat — and UltraTech's entry point</div></div>
+    <div class="stage hot"><div class="no">06</div><h4>Projects and exports</h4><div class="an">The big orders</div>Transmission, data centres, renewables, railways, and export to the US, Europe and the Middle East.<div class="who">APAR, KEI, Polycab, Diamond Power</div><div class="m">Where volume grew fastest</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Metal:</b> big companies make pure copper and aluminium; cable makers buy it at the world price.</li>
+    <li><b>Drawing:</b> thick rods are pulled through smaller and smaller holes until they are as thin as needed.</li>
+    <li><b>Wrapping:</b> plastic is melted around the metal so it is safe to touch.</li>
+    <li><b>Testing:</b> every drum is checked; big cables for power companies need special approval.</li>
+    <li><b>Shops:</b> electricians choose which brand to buy for your house, so companies reward electricians.</li>
+    <li><b>Big projects:</b> power grids, data centres and foreign customers buy cable by the kilometre.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical question for any company in this section is where it earns its margin. Building wires sold through dealers earn the highest margin because the electrician's choice of brand protects price — that is what UltraTech and Adani are now attacking with their existing cement and building-materials distribution. Power cables earn margin through technical approvals, especially at extra-high voltage. Conductors and winding wire earn a thin conversion fee on a large metal cost, so their revenue swings with copper and aluminium but their profit per tonne barely moves. A company's valuation should follow its mix: Polycab and Havells deserve a brand multiple; Precision Wires, at a 4.8% EBITDA margin, does not, however fast its revenue grows.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 33 companies</h2>
+  <h3>The leaders: branded wires and power cables</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Polycab India (~₹1.23 lakh cr)</td><td>India's largest wire and cable maker, with about 26–27% of the organised market, plus fans, lights, switches and solar products (FMEG) and an EPC arm.</td><td>Revenue ₹8,210 cr (+39%), EBITDA ₹1,136 cr (+32%) at 13.8% (−70 bps), profit ₹797 cr (+33%); FMEG +71% with solar products more than doubling; EPC −11%. Stock +10.3%.</td></tr>
+    <tr><td>KEI Industries (~₹43,125 cr)</td><td>Power cables up to EHV, plus house wires through a retail network; historically an institutional and export business.</td><td>Revenue ₹3,185 cr (+23%), profit ₹274 cr (+40%), EBITDA margin 12.43% (+247 bps). Domestic cable and wire sales ₹2,784 cr (+29%); exports ₹308 cr (−7%); EHV cable ₹186 cr (+48%). Stock +4.3%, still 4% below its June 2024 peak.</td></tr>
+    <tr><td>RR Kabel (~₹27,122 cr)</td><td>Building wires and cables, plus fans and lights; listed September 2023.</td><td>Revenue ₹3,168 cr (+54%), profit ₹205 cr (+129%); wires and cables ₹2,880 cr (+57%) with segment margin 9.9% against 7.6%. Stock +68.7%.</td></tr>
+    <tr><td>Finolex Cables (~₹20,840 cr)</td><td>Building wires, auto and industrial cables, and optical fibre; a strong retail brand in western India.</td><td>Revenue ₹2,013 cr (+44%), electrical cables ₹1,767 cr (+47%) on copper pass-through and volume in auto, industrial, agriculture and solar. Net profit up 53–59% depending on the measure (₹221–249 cr). Stock +88.2% after −37% in 2025.</td></tr>
+  </tbody></table></div>
+  <h3>Conductors, power cables and exports</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>APAR Industries (~₹71,477 cr)</td><td>One of the world's largest conductor makers, plus power and telecom cables and specialty oils (see 035).</td><td>Record quarter: revenue ₹6,591 cr (+29%), EBITDA ₹814 cr (+63%) at 12.4%, profit ₹467 cr (+78%). Conductors ₹3,338 cr (+20%), cables ₹1,838 cr (+30%), oils ₹1,701 cr with EBITDA +214%. Export order book a record ₹5,245 cr; a UK subsidiary and Brazil investment approved. Stock +125.4%.</td></tr>
+    <tr><td>Diamond Power Infrastructure (~₹23,612 cr)</td><td>Conductors and aluminium power cables from Gujarat; emerged from insolvency and resumed trading in September 2023.</td><td>Sales ₹690 cr (+129%), profit ₹58 cr (+256%); order book ₹3,688 cr (conductors 51%, MV cables 29%, data centres 12%, LT and solar 8%). Stock +165.7% after +861% in 2024. At roughly 100 times annualised Q1 profit, the valuation assumes years of execution.</td></tr>
+    <tr><td>Universal Cables (~₹4,896 cr)</td><td>MP Birla group maker of power cables up to EHV and capacitors.</td><td>No TradingView price series under this symbol, so excluded from the statistics.</td></tr>
+    <tr><td>Laser Power &amp; Infra (~₹3,803 cr)</td><td>Cables and conductors from eastern India; listed July 2026.</td><td>Too short a record for the statistics.</td></tr>
+    <tr><td>Dynamic Cables (~₹2,102 cr)</td><td>Power cables and conductors for utilities, from Jaipur.</td><td>+36.9%, 14% below its December 2024 peak.</td></tr>
+    <tr><td>Paramount Communications (~₹1,989 cr)</td><td>Power, railway and telecom cables.</td><td>+56.3% after −52% in 2025; still 46% below its January 2024 peak.</td></tr>
+    <tr><td>Delton Cables (~₹617 cr)</td><td>Cables and wires, Delhi.</td><td>+11.9%; 46% below its December 2024 peak after +286% and +303% in 2023–24.</td></tr>
+    <tr><td>Cords Cable (~₹452 cr)</td><td>Control and instrumentation cables for industry.</td><td>+95.6%.</td></tr>
+    <tr><td>Marco Cables &amp; Conductors (~₹56 cr)</td><td>SME cable maker.</td><td>−21.8%.</td></tr>
+  </tbody></table></div>
+  <h3>Winding wire — the pure copper converters</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>2026</th></tr></thead><tbody>
+    <tr><td>Precision Wires India (~₹8,047 cr)</td><td>India's largest enamelled copper winding-wire maker.</td><td>Revenue about ₹1,770 cr (+60%), profit ₹46 cr (+72%), EBITDA margin 4.8% against 5.3%; board approval to raise ₹150 cr through convertible debentures for Silvassa capacity; began trial production of copper cathode at its Gujarat units in September. Stock +101.8%.</td></tr>
+    <tr><td>KSH International (~₹7,185 cr)</td><td>Magnet and winding wire; listed December 2025.</td><td>+192.8% from its listing.</td></tr>
+    <tr><td>Ram Ratna Wires (~₹4,922 cr)</td><td>Enamelled copper wire; a sister company of RR Kabel.</td><td>+80.3%.</td></tr>
+    <tr><td>Vidya Wires (~₹1,808 cr)</td><td>Winding wires and strips; listed December 2025.</td><td>+74.6%.</td></tr>
+    <tr><td>Divine Power Energy (~₹1,347 cr)</td><td>Copper and aluminium winding conductors for transformers; SME listing July 2024.</td><td>+144.0%, after +95% in 2025.</td></tr>
+    <tr><td>Shera Energy (~₹446 cr)</td><td>Winding wires and strips, Jaipur.</td><td>+43.0%.</td></tr>
+  </tbody></table></div>
+  <h3>Telecom cable, regional wires and the tail</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>2026</th></tr></thead><tbody>
+    <tr><td>V-Marc India (~₹4,862 cr)</td><td>Wires and cables from Gujarat.</td><td>+204.5%, +372% over one year.</td></tr>
+    <tr><td>Vindhya Telelinks (~₹3,069 cr)</td><td>MP Birla group: telecom cables and network EPC.</td><td>+89.6%.</td></tr>
+    <tr><td>Birla Cable (~₹1,149 cr)</td><td>MP Birla group: optical fibre and copper telecom cables.</td><td>Revenue ₹267 cr (+51%), profit ₹30.7 cr against about ₹1.4 cr a year earlier. Stock +199.1%.</td></tr>
+    <tr><td>Plaza Wires, Prime Cable, DCG Cables, Ultracab, Bonlon</td><td>Small building-wire and cable makers, mostly SME listings.</td><td>Plaza +46%, Prime +93%, DCG +18%, Ultracab +4%; Bonlon too recent.</td></tr>
+    <tr><td>Tamilnadu Telecommunications, SGN Telecoms, Jigar Cables, Relicab</td><td>Dormant or micro-cap.</td><td>Not investable.</td></tr>
+    <tr><td>Steelman Telecom (~₹70 cr)</td><td>Telecom infrastructure services — a classification check.</td><td>−30.8%.</td></tr>
+    <tr><td>Pacific Industries (~₹95 cr)</td><td>Classified by TradingView as construction materials; appears misclassified here.</td><td>Listed on NSE in August 2026.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Missing and misclassified</span><p>Havells India, one of the three largest wire makers, sits in another watchlist section, as do UltraTech (cement) and the Adani companies, which are the new entrants. Universal Cables has no price series and Laser Power, Pacific Industries and Bonlon are too recent. Steelman Telecom and Pacific Industries should be reviewed for reclassification.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Price pass-through, inventory and the brand premium</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>Typical EBITDA margin</th><th>How copper affects it</th></tr></thead><tbody>
+    <tr><td>Branded building wires</td><td>Low to mid-teens</td><td>Prices are revised every few weeks; rising copper often brings dealer stocking and inventory gains</td></tr>
+    <tr><td>Power cables (LT, HT)</td><td>About 10–13%</td><td>Price-variation clauses in most contracts; fixed-price orders lose when copper jumps</td></tr>
+    <tr><td>EHV cables and exports</td><td>Higher</td><td>Technical barrier; pricing largely indexed</td></tr>
+    <tr><td>Conductors</td><td>Single digits to low teens (premium HTLS higher)</td><td>Aluminium-indexed contracts</td></tr>
+    <tr><td>Winding wire</td><td>About 4–6%</td><td>Pure pass-through; revenue follows copper almost exactly</td></tr>
+  </tbody></table></div>
+  <h3>How to read a cable company's quarter</h3>
+  <ol>
+    <li><b>Separate volume from price.</b> With copper up about 40% year on year, a 40% revenue increase can mean zero volume growth. Managements usually disclose volume growth; use it.</li>
+    <li><b>Look at EBITDA per unit, not margin percentage.</b> When the metal price rises, margin percentage falls even if profit per kilometre is unchanged — Polycab's 70 bps decline and Precision's 4.8% against 5.3% are largely this effect.</li>
+    <li><b>Strip out inventory gains.</b> Metal bought cheaper and sold after a price rise produces a one-off gain; it reverses when copper falls.</li>
+    <li><b>Watch working capital.</b> Higher metal prices lock more cash in inventory and receivables.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>A petrol pump owner who filled the tank last month and sells at today's higher price looks very profitable this month — but only once. Cable makers in a rising copper market are partly in that position; the question for 2027 is how much of this year's profit was the tank, and how much was the pump.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>Copper, aluminium and polymers</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Copper</td><td>The conductor in wires, most cables and all winding wire; the largest cost</td><td>Record $6.86/lb on 8 September; LME touched $14,617/t. ICSG expects a 150,000 t deficit in 2026 after a 178,000 t surplus in 2025; mine output fell 1.1% in the first half; China restricted sulphuric-acid exports, a smelting input; US tariffs on refined copper of 15% from 2027 rising to 30% in 2028 are under discussion.</td></tr>
+    <tr><td>Aluminium</td><td>Conductors and many power cables</td><td>About $3,300/t on average in 2026 against $2,620 in 2025</td></tr>
+    <tr><td>PVC and XLPE compounds</td><td>Insulation and sheathing</td><td>Crude- and ethylene-linked (see 002, 033)</td></tr>
+    <tr><td>Steel wire and tape</td><td>Armour on buried cables; the core of ACSR conductors</td><td>Steady</td></tr>
+    <tr><td>Enamel and insulating varnish</td><td>Winding wire coating</td><td>Specialty chemical input</td></tr>
+    <tr><td>Optical fibre and preform</td><td>Fibre-optic cable</td><td>Global oversupply eased with data-centre demand</td></tr>
+  </tbody></table></div>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September). Compare with the copper column in the table in section 10: the best years for the stocks (2014, 2017, 2023) were not the best years for copper.</figcaption></figure>
+  <div class="box pm"><span class="tag">Copper is not the driver of the stocks</span><p>Copper fell 17% in 2014 and the basket rose 162%; copper rose 42% in 2025 and the basket fell 6.5%. Over this record the stocks have been driven by volume — construction, transmission, GST formalisation, exports — and by competition, not by the metal price. Copper matters for reported revenue, working capital and quarterly inventory gains; it is a poor guide to share prices.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Construction season, dealer stocking and utility tenders</h2>
+  <ul>
+    <li><b>April–June:</b> the peak of the construction season before the monsoon; new-year utility ordering; dealers restock.</li>
+    <li><b>July–September:</b> monsoon slows site work and house wiring; project cable dispatches continue.</li>
+    <li><b>October–December:</b> the festive and post-monsoon construction season; the strongest quarter for retail wires.</li>
+    <li><b>January–March:</b> year-end project billing is high, but dealers destock before March, and the stocks have historically been weak.</li>
+    <li><b>Copper price revisions:</b> list prices for wires are revised several times a quarter when copper moves sharply.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 17 names (Polycab India Ltd., APAR Industries Limited, KEI Industries Limited, RR Kabel Ltd., Diamond Power Infrastructure Limited, Finolex Cables Limited, Precision Wires India Limited, Ram Ratna Wires Limited, V-Marc India Limited, Vindhya Telelinks Limited, Dynamic Cables Ltd., Paramount Communications Limited, Divine Power Energy Ltd., Birla Cable Limited, Delton Cables Limited, Cords Cable Industries Limited, Shera Energy Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +8.6 pts (beat in 13 of 15 years); Dec +4.6 pts (beat in 11 of 15 years); Jun +4.5 pts (beat in 10 of 15 years).</li><li><b>Weakest months:</b> Mar -3.1 pts (beat in 2 of 15 years); Feb -2.7 pts (beat in 4 of 15 years); Jan -0.6 pts (beat in 8 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -4.4 pts); Apr–Jul beat the Nifty in 11 of 15 years (median +21.1 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +0.2 pts); Oct–Dec beat the Nifty in 12 of 14 years (median +12.7 pts); Sep–Nov beat the Nifty in 13 of 14 years (median +7.0 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -6.9 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +5.6 points.</p><p><b>Reading it:</b> one of the most reliable seasonal patterns in the library. September–November has beaten the Nifty in 13 of 14 years (median +7.0 points; the only miss was 2020) and October–December in 12 of 14 (median +12.7). April is the best single month, 13 of 15 (+8.6 points), and April–July works 11 of 15 with a median of +21.1. The weak stretch is equally consistent: March has beaten the Nifty in only 2 of 15 years, February–March in 3 of 15 and January–March in 6 of 15 (median −6.9). The pattern follows the construction season and the year-end destocking of the dealer channel.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="SepNov" viewBox="0 0 720 280" role="img" aria-label="September to November return minus Nifty by year"></svg><figcaption>September–November return of the basket minus the Nifty, by year, in percentage points. The only red bar is 2020.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>September–November failed only in 2020</b> (−12.0), a Covid year in which the Nifty's recovery outran the cable stocks. The best years were 2017 (+31.8) and 2023 (+15.8).</li>
+    <li><b>October–December failed in 2020 (−6.3) and 2025 (−2.1)</b>; the 2025 miss came in the year of the UltraTech and Adani announcements.</li>
+    <li><b>April–July failed in 2019 (−19.3), 2013 (−9.0), 2018 (−8.0) and 2012 (−0.7)</b> — two slowdown years and two small-cap sell-offs. Its best runs were 2014 (+90.6) and 2026 (+59.0).</li>
+    <li><b>January–March succeeded in only 6 of 15 years</b>, and 2025 (−30.1) was the worst, as the UltraTech announcement in late February hit the sector. The best was 2023 (+8.0).</li>
+    <li><b>March itself beat the Nifty in only 2 of 15 years</b> (2019 and 2015), with 2020 (−9.0) and 2013 (−8.3) the worst.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is one of the most consistent calendars in the library, and it has a business logic: the dealer channel destocks before the financial year ends and restocks in April, while construction peaks before and after the monsoon. The practical rule is to add in March and let the April–July and September–December windows work, and to be wary of January–March. The caveat is that 2025 broke the October–December pattern on a structural event — new entrants — which is exactly the kind of risk a seasonal pattern cannot capture.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Construction and real estate:</b> house wires follow housing completions with a lag of about two years.</li>
+    <li><b>Power transmission and distribution:</b> conductors and HT/EHV cables, including underground cabling in cities (see 039).</li>
+    <li><b>Data centres:</b> 12% of Diamond Power's order book; a source of high-value cable demand for the leaders too.</li>
+    <li><b>Renewables and solar:</b> solar DC cable and plant cabling (see 038); Polycab's solar products more than doubled.</li>
+    <li><b>Exports:</b> APAR's record ₹5,245 cr export order book; KEI's exports fell 7% this quarter.</li>
+    <li><b>Copper and aluminium prices:</b> reported revenue, inventory gains and working capital.</li>
+    <li><b>Competitive intensity:</b> UltraTech, Adani and capacity additions by incumbents.</li>
+    <li><b>Formalisation:</b> GST, BIS certification and quality rules move share from unorganised makers to branded ones.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">Copper avg $/lb</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of section members with at least a year of history and market value above ₹300 cr — nine in 2012, rising to 17 by 2025 as Polycab (2019), RR Kabel and Diamond Power (2023) and others joined. Monthly returns capped at ±50%, price only; 2026 to 18 September. Copper: yearly average of TradingView's CAPITALCOM:COPPER series.</p>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The infrastructure re-rating</b> (2014–2017): the election, then GST, moved demand toward organised, branded makers; +162% in 2014 and +124% in 2017.</li>
+    <li><b>The small-cap and telecom bust</b> (2018–2020): three weak years as small caps crashed, optical-fibre prices collapsed and Covid shut sites.</li>
+    <li><b>The long boom</b> (2021–2024): housing, transmission, exports and renewables, with four consecutive years of outperformance (+90%, +44%, +163%, +83%).</li>
+    <li><b>The entrant shock</b> (2025): UltraTech's and Adani's announcements de-rated the sector while copper rose 42%.</li>
+    <li><b>Record copper and record results</b> (2026): +88%, led by small and mid-sized names while the leaders lag.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Volume and formalisation drive the stocks, not copper.</b></li>
+    <li><b>The small caps make the extreme moves:</b> Paramount +424% (2017), Diamond Power +861% (2024), Delton −79% (2015).</li>
+    <li><b>Telecom cable is a separate cycle</b> — up in 2018, down 49–69% in 2019 — tied to fibre prices and telecom capex.</li>
+    <li><b>New entrants cause de-ratings before they cause losses:</b> the 2025 fall happened before either entrant sold a metre of wire.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A global copper squeeze, and India as a cable exporter</h2>
+  <p>Global cable demand is being pushed up by grid reinforcement in Europe and North America, offshore wind interconnectors, data centres and electrification, while copper supply struggles: mine output fell in the first half of 2026, smelters face acid and concentrate constraints, and the possibility of US tariffs on refined copper has pulled metal into the US and tightened the rest of the market. For Indian cable makers this has two effects. Reported revenue and working capital rise with the metal price. And export demand has improved, because Western utilities and developers need suppliers outside China — APAR's export order book and its new UK and Brazilian entities are the clearest example.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>Prysmian, Nexans, NKT</td><td>Global leaders in HV and submarine cable</td><td>Set the technology frontier; long order books leave room for Indian suppliers in lower voltages</td></tr>
+    <tr><td>Chinese cable makers</td><td>The largest volume producers</td><td>Competition in third markets; limited in Indian utility tenders</td></tr>
+    <tr><td>APAR Industries</td><td>Among the largest conductor makers globally</td><td>India's main exporter of conductors and cables</td></tr>
+    <tr><td>Polycab, KEI</td><td>India's largest cable makers</td><td>Growing exports to the Middle East, US and Australia</td></tr>
+    <tr><td>Copper miners and smelters</td><td>Supply side</td><td>Hindalco and Adani's Kutch Copper are the domestic sources</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From unorganised to branded:</b> GST, BIS certification and electrician loyalty programmes moved share to the organised makers after 2017.</li>
+    <li><b>From copper to aluminium in some power cables:</b> cost pressure makes aluminium-conductor cables more attractive in distribution.</li>
+    <li><b>From domestic to exporter:</b> India's cable and conductor makers have become suppliers to Western utilities.</li>
+    <li><b>From specialists to conglomerates:</b> UltraTech and Adani bring distribution scale and backward integration into metals.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>HTLS and advanced conductors:</b> carry roughly twice the current on existing towers, useful when new corridors are hard to secure (see 039).</li>
+    <li><b>EHV underground cables:</b> 220–400 kV cable for cities and data centres; KEI's EHV sales rose 48%.</li>
+    <li><b>Fire-safe and halogen-free insulation:</b> FR, FRLS and LSZH wires are standard in modern buildings.</li>
+    <li><b>Solar and EV cables:</b> specialised DC and flexible cables for renewables and charging.</li>
+    <li><b>Backward integration into metal:</b> Precision Wires' trial cathode production; conglomerates with their own copper and aluminium.</li>
+    <li><b>Optical fibre for data centres:</b> high-fibre-count cables for AI data centres revive a depressed segment.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>BIS certification for wires and cables</td><td>Mandatory for key products</td><td>Pushes out sub-standard unorganised makers</td></tr>
+    <tr><td>GST</td><td>Since 2017</td><td>Moved share to organised makers</td></tr>
+    <tr><td>Transmission and distribution programmes</td><td>Ongoing</td><td>Conductor and cable demand (see 039)</td></tr>
+    <tr><td>Data-centre and electronics incentives</td><td>Ongoing</td><td>High-value cable demand</td></tr>
+    <tr><td>US tariffs on refined copper</td><td>Under discussion: 15% from 2027, 30% from 2028</td><td>Global copper prices and trade flows</td></tr>
+    <tr><td>Copper import duties and trade agreements</td><td>Ongoing</td><td>Domestic metal costs</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: record copper, record results, new entrants</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Copper</td><td>Record high</td><td>$6.86/lb; deficit expected</td></tr>
+    <tr><td>Volume</td><td>Strong</td><td>Construction, transmission, data centres, solar, exports</td></tr>
+    <tr><td>Margins</td><td>Mixed</td><td>KEI +247 bps, RR Kabel segment 9.9%; Polycab −70 bps, Precision 4.8%</td></tr>
+    <tr><td>Competition</td><td>Rising</td><td>Ultravolt on sale since 3 September; Adani expected around year-end</td></tr>
+    <tr><td>Valuations</td><td>Stretched in the small and mid-caps</td><td>Diamond Power ~100× annualised Q1 profit; V-Marc +372% in a year</td></tr>
+    <tr><td>Stocks</td><td>+88%, led by smaller names</td><td>Polycab +10%, KEI +4% versus V-Marc +205%, Birla Cable +199%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Operating conditions are as good as they have been: strong volumes in almost every end market and a copper price that inflates revenue and produces inventory gains. That combination flatters 2026 results, and part of it will reverse if copper falls. Meanwhile the market has done something unusual: it has de-rated the two strongest franchises, Polycab and KEI, because of the conglomerate entry, and bid up smaller companies with less brand protection and much thinner records. If UltraTech and Adani compete on price in building wires, the small branded makers are more exposed than the leaders, not less. The sector's best-placed businesses on a three-year view are those with technical barriers (EHV cable, export conductors) or a dominant brand at a sensible price; the least safe are the high-multiple small caps whose 2026 profits owe most to copper.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>LME and Comex copper, and the premium between them</td><td>Daily</td><td>Revenue, inventory gains and the US tariff effect</td></tr>
+    <tr><td>Volume growth versus value growth</td><td>Quarterly disclosures</td><td>Separates real demand from price</td></tr>
+    <tr><td>Wire list-price revisions</td><td>Dealer circulars</td><td>Pricing power and competitive intensity</td></tr>
+    <tr><td>Ultravolt and Adani pricing and dealer schemes</td><td>Trade channel checks</td><td>Whether entry becomes a price war</td></tr>
+    <tr><td>Transmission and underground cabling tenders</td><td>Utilities</td><td>Conductor and HT/EHV demand</td></tr>
+    <tr><td>Export order books</td><td>Quarterly</td><td>APAR, KEI, Polycab exports</td></tr>
+    <tr><td>Working-capital days</td><td>Half-yearly balance sheets</td><td>Cash cost of higher metal prices</td></tr>
+    <tr><td>Housing completions</td><td>Real-estate data</td><td>House-wire demand</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power transmission</b> (039): the largest buyer of conductors and EHV cable.</li>
+    <li><b>Transformers</b> (042) and <b>switchgear</b> (043): customers for winding wire, and fellow grid-equipment suppliers.</li>
+    <li><b>Lubricants &amp; specialty oils</b> (035): APAR's oil division.</li>
+    <li><b>Renewable power</b> (038) and <b>solar modules</b> (045): solar cable demand.</li>
+    <li><b>Non-ferrous metals</b> (a later primer): copper and aluminium supply.</li>
+    <li><b>Consumer electricals:</b> Havells and the FMEG businesses of Polycab and RR Kabel.</li>
+    <li><b>Cement:</b> UltraTech, the new entrant.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What was volume growth, separately from price, in wires and in cables?</li>
+    <li>How much of this quarter's margin came from inventory gains on copper?</li>
+    <li>What share of the order book is fixed-price, and what share carries price-variation clauses?</li>
+    <li>What are you seeing from Ultravolt in the dealer channel — pricing, schemes, electrician incentives?</li>
+    <li>What is the export order book, by region, and at what margin compared with domestic?</li>
+    <li>What is EHV cable capacity and utilisation?</li>
+    <li>How have working-capital days changed with copper?</li>
+    <li>What is the capex plan, and how much of it is backward integration into metal?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Revenue growth close to copper's price rise with no volume disclosure.</li>
+    <li>Margin expansion that disappears in a quarter when copper falls.</li>
+    <li>Rising receivables at small caps selling to EPC contractors.</li>
+    <li>Distributor-level price cutting in building wires.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Cable stocks are a copper play."</td><td>2014: copper −17%, basket +162%. 2025: copper +42%, basket −6.5%. The stocks follow volume and competition.</td></tr>
+    <tr><td>"Revenue growth of 40–60% means demand is booming."</td><td>Partly; copper rose about 40% over the year. Volume growth is the number to ask for.</td></tr>
+    <tr><td>"UltraTech and Adani will destroy the incumbents."</td><td>Unproven: Ultravolt has only just gone on sale. The leaders have brand, electrician networks and EHV capability; the more exposed are smaller brands.</td></tr>
+    <tr><td>"The small caps are the better way to play the cycle."</td><td>They have outperformed in 2026, but on thinner records and higher multiples, and they fell hardest in 2013, 2018 and 2025.</td></tr>
+    <tr><td>"Winding-wire makers are high-growth companies."</td><td>Their revenue follows copper; Precision Wires' EBITDA margin is 4.8%.</td></tr>
+    <tr><td>"Copper is sure to keep rising."</td><td>Part of 2026's rise reflects tariff-driven stockpiling in the US, which can reverse; the tariff has not yet been imposed.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. XLPE, HTLS" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Products and materials</h3><dl>
+    <dt>Wire</dt><dd>A single conductor or small group of conductors with light insulation, used in buildings.</dd>
+    <dt>Cable</dt><dd>One or more insulated conductors with a protective outer sheath, often armoured.</dd>
+    <dt>LT, HT and EHV cable</dt><dd>Low-tension (up to 1.1 kV), high-tension (about 3.3–33 kV) and extra-high-voltage (66–400 kV) cables.</dd>
+    <dt>Armoured cable</dt><dd>A cable wrapped in steel wire or tape for burial or rough use.</dd>
+    <dt>Control and instrumentation cable</dt><dd>Low-voltage cables carrying signals in factories and plants.</dd>
+    <dt>Flexible cable</dt><dd>Cable made of many fine strands so it can bend — for appliances and machines.</dd>
+    <dt>Solar DC cable</dt><dd>UV- and weather-resistant cable for solar plants.</dd>
+    <dt>ACSR</dt><dd>Aluminium conductor steel reinforced — the standard overhead conductor.</dd>
+    <dt>AAAC</dt><dd>All-aluminium alloy conductor — lighter, corrosion-resistant.</dd>
+    <dt>HTLS conductor</dt><dd>High-temperature, low-sag conductor carrying roughly twice the current of ACSR on the same towers.</dd>
+    <dt>OPGW</dt><dd>Optical ground wire: the top wire on a transmission line with optical fibres inside.</dd>
+    <dt>Winding (magnet) wire</dt><dd>Enamel- or paper-insulated copper or aluminium wire wound in motors and transformers.</dd>
+    <dt>Enamelled wire</dt><dd>Copper wire coated with a thin insulating enamel.</dd>
+    <dt>Paper-insulated copper conductor (PICC)</dt><dd>Winding conductor for large transformers.</dd>
+    <dt>Continuously transposed conductor (CTC)</dt><dd>A bundle of insulated strands for large power-transformer windings.</dd>
+    <dt>Optical fibre cable (OFC)</dt><dd>Glass fibres carrying light signals; used in telecom and data centres.</dd>
+    <dt>XLPE</dt><dd>Cross-linked polyethylene, the standard insulation for HT and EHV cable.</dd>
+    <dt>PVC</dt><dd>Polyvinyl chloride, the most common insulation for building wires (see 002).</dd>
+    <dt>FR, FRLS, LSZH</dt><dd>Fire-retardant, fire-retardant low-smoke, and low-smoke zero-halogen insulation grades.</dd>
+    <dt>Copper cathode</dt><dd>Refined copper plates of about 99.99% purity; the starting metal.</dd>
+    <dt>Copper rod</dt><dd>Continuous-cast copper rod, usually 8 mm, that wire makers draw down.</dd>
+    <dt>Wire drawing</dt><dd>Pulling rod through progressively smaller dies to reduce its diameter.</dd>
+    <dt>Annealing</dt><dd>Heating drawn wire to make it soft and conductive again.</dd>
+    <dt>Stranding</dt><dd>Twisting several wires together into one conductor.</dd>
+    <dt>Extrusion</dt><dd>Melting insulation compound and forming it around the conductor.</dd>
+    <dt>Square millimetre (sq mm)</dt><dd>The cross-section of a conductor, which sets how much current it can carry.</dd>
+    <dt>Copper-clad aluminium</dt><dd>Aluminium wire with a copper coating, a cheaper substitute in some uses.</dd>
+  </dl>
+  <h3>Commercial and market</h3><dl>
+    <dt>LME</dt><dd>London Metal Exchange, the global price reference for copper and aluminium.</dd>
+    <dt>Comex</dt><dd>The US copper futures market; its premium to the LME has widened on tariff expectations.</dd>
+    <dt>Conversion margin</dt><dd>What a maker earns over the metal cost for processing it.</dd>
+    <dt>Price-variation clause (PVC)</dt><dd>A contract term passing metal-price changes to the customer.</dd>
+    <dt>Inventory gain</dt><dd>Profit from metal bought at a lower price and sold after a price rise.</dd>
+    <dt>Channel stocking</dt><dd>Dealers buying ahead of expected price rises, which boosts a quarter's sales.</dd>
+    <dt>List-price revision</dt><dd>A change in the published dealer price of wires, made several times a quarter when copper moves.</dd>
+    <dt>Electrician loyalty programme</dt><dd>Rewards for electricians who choose a brand — the retail moat.</dd>
+    <dt>Organised market</dt><dd>Branded, tax-compliant makers, about ₹80,000 cr of a ₹1 lakh cr market.</dd>
+    <dt>FMEG</dt><dd>Fast-moving electrical goods — fans, lights, switches, solar products.</dd>
+    <dt>BIS certification</dt><dd>The Bureau of Indian Standards mark required on many wires and cables.</dd>
+    <dt>Type test</dt><dd>Certification testing of a cable design, required by utilities (see 042).</dd>
+    <dt>Volume versus value growth</dt><dd>Growth in kilometres or tonnes versus growth in rupees.</dd>
+    <dt>Working-capital days</dt><dd>How many days of sales are locked in inventory and receivables net of payables.</dd>
+    <dt>ICSG</dt><dd>International Copper Study Group, which publishes supply-demand balances.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Conductor, transmission, HVDC</dt><dd>See 039.</dd>
+    <dt>Switchgear and voltage classes</dt><dd>See 043.</dd>
+    <dt>Drawdown from peak</dt><dd>See 029.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why can a cable company's revenue rise 40% without it selling more?</summary><p>Because copper is most of the product cost and is passed through in the price; copper rose about 40% over the year.</p></details>
+  <details class="q"><summary>2. Which part of the industry earns the highest margin, and why?</summary><p>Branded building wires, because electricians' brand preference protects price.</p></details>
+  <details class="q"><summary>3. Why did Polycab and KEI lag in 2026 despite strong results?</summary><p>UltraTech's Ultravolt went on sale on 3 September and Adani's entry is expected around year-end, raising fears of competition in building wires.</p></details>
+  <details class="q"><summary>4. What is the evidence that copper does not drive the stocks?</summary><p>2014: copper −17%, basket +162%. 2025: copper +42%, basket −6.5%.</p></details>
+  <details class="q"><summary>5. What margin does a winding-wire maker earn?</summary><p>About 4–6%; Precision Wires reported 4.8% against 5.3%.</p></details>
+  <details class="q"><summary>6. What made APAR's quarter a record?</summary><p>Revenue +29%, EBITDA +63%, profit +78%, with oils EBITDA +214% and a record ₹5,245 cr export order book.</p></details>
+  <details class="q"><summary>7. What is HTLS conductor?</summary><p>High-temperature, low-sag conductor carrying roughly twice the current of standard ACSR on existing towers.</p></details>
+  <details class="q"><summary>8. Which is the most reliable seasonal window?</summary><p>September–November: 13 of 14 years, median +7.0 points; the only miss was 2020.</p></details>
+  <details class="q"><summary>9. Which month is weakest?</summary><p>March: the basket beat the Nifty in only 2 of 15 years, as dealers destock before the financial year ends.</p></details>
+  <details class="q"><summary>10. What is an inventory gain, and why does it matter now?</summary><p>Profit on metal bought cheaper and sold after a price rise; with copper at a record, part of 2026's margins may not repeat.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket versus NSE:NIFTY, 2012 to 18 September 2026; copper from CAPITALCOM:COPPER, aluminium from CAPITALCOM:ALUMINUM.</li>
+    <li>Copper market: <a href="https://www.bloomberg.com/news/articles/2026-09-08/copper-ascends-to-new-heights-on-tight-supply-and-tariff-fears">the September 2026 record</a>; <a href="https://www.mining.com/copper-price-sets-fresh-record-as-us-tariff-threat-wipes-out-global-surplus/">tariffs and the global balance</a>; <a href="https://www.iea.org/commentaries/copper-prices-have-hit-record-highs-but-smelters-face-mounting-strategic-pressures">smelter pressures</a>.</li>
+    <li>Polycab: <a href="https://www.investing.com/news/company-news/polycab-q1-fy27-slides-39-revenue-jump-fmeg-hits-record-high-93CH-4795617">Q1 FY27</a>; <a href="https://www.business-standard.com/amp/markets/capital-market-news/polycab-india-posts-33-yoy-increase-in-q1-pat-126071700505_1.html">profit</a>.</li>
+    <li>KEI Industries: <a href="https://www.investing.com/news/company-news/kei-industries-q1-fy27-slides-margins-expand-as-domestic-demand-surges-93CH-4833061">Q1 FY27 margins</a>; <a href="https://www.zeebiz.com/market-news/news-kei-industries-q1-results-pat-rises-40-revenue-climbs-22-ebitda-margin-improves-399840">results</a>.</li>
+    <li>APAR Industries: <a href="https://www.business-standard.com/markets/capital-market-news/apar-inds-rises-as-q1-pat-rises-80-yoy-to-rs-467-cr-126072400810_1.html">Q1 FY27</a>; <a href="https://insights.dsij.in/dsijarticledetail/apar-industries-has-returned-2678-in-five-years-and-125-in-the-past-year-q1-fy27-was-the-best-quarter-in-the-companys-history-id010-59392">segments and exports</a>.</li>
+    <li>RR Kabel and Finolex: <a href="https://www.investing.com/news/company-news/rr-kabel-q1-fy27-slides-revenue-jumps-54-ebitda-doubles-93CH-4814048">RR Kabel Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/rr-kabel-q1-results-net-profit-more-than-doubles-yoy-to-2b/46690770">RR Kabel segments</a>; <a href="https://www.kotakneo.com/news/stocks/finolex-q1-fy27-results-profit-rises-53-percent/">Finolex Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/finolex-cables-q1-results-net-profit-rises-59-yoy-to-221-crore/47986482">Finolex profit</a>.</li>
+    <li>Smaller companies: <a href="https://www.sahi.com/news/precision-wires-q1-net-profit-surges-71-5-to-46-45-crore-amid-150-crore-fundraise-982-PE1_CORP">Precision Wires Q1</a>; <a href="https://www.business-standard.com/markets/capital-market-news/precision-wires-commences-trial-production-of-copper-cathodes-at-gujarat-units-126091700479_1.html">Precision's cathode trial</a>; <a href="https://scanx.trade/stock-market-news/companies/diamond-power-infrastructure-q1-results-net-profit-up-268-yoy/48169631">Diamond Power Q1</a>; <a href="https://www.equitybulls.com/category.php?id=373913">Birla Cable Q1</a>.</li>
+    <li>Industry and competition: <a href="https://upstox.com/news/market-news/stocks/ultra-tech-s-1-800-crore-ultravolt-foray-polycab-rr-kabel-kei-industries-finolex-cables-in-focus/article-199787/">Ultravolt's launch</a>; <a href="https://www.thecore.in/business/adani-ultratech-india-wires-and-cables-2026-866586">Adani and UltraTech entry</a>; <a href="https://www.soic.in/blog-page/india-cables-wires-boom">market size</a>; <a href="https://www.businesstoday.in/markets/stocks/story/copper-prices-up-50-havells-polycab-shares-down-7-9-in-jan-concerns-overdone-512415-2026-01-22">copper and the leaders' margins</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -3.2}, {"y": 2013, "v": -12.2}, {"y": 2014, "v": -4.4}, {"y": 2015, "v": -4.9}, {"y": 2016, "v": -16.1}, {"y": 2017, "v": -0.5}, {"y": 2018, "v": 2.0}, {"y": 2019, "v": -2.7}, {"y": 2020, "v": -15.0}, {"y": 2021, "v": -1.5}, {"y": 2022, "v": -11.6}, {"y": 2023, "v": 1.0}, {"y": 2024, "v": -6.1}, {"y": 2025, "v": -19.0}, {"y": 2026, "v": 8.4}], "AprJul": [{"y": 2012, "v": -0.7}, {"y": 2013, "v": -9.0}, {"y": 2014, "v": 90.6}, {"y": 2015, "v": 23.9}, {"y": 2016, "v": 18.3}, {"y": 2017, "v": 21.1}, {"y": 2018, "v": -8.0}, {"y": 2019, "v": -19.3}, {"y": 2020, "v": 6.6}, {"y": 2021, "v": 39.4}, {"y": 2022, "v": 11.1}, {"y": 2023, "v": 52.0}, {"y": 2024, "v": 41.5}, {"y": 2025, "v": 29.2}, {"y": 2026, "v": 59.0}], "AugSep": [{"y": 2012, "v": 2.2}, {"y": 2013, "v": -4.8}, {"y": 2014, "v": 0.3}, {"y": 2015, "v": -2.1}, {"y": 2016, "v": -4.1}, {"y": 2017, "v": 8.6}, {"y": 2018, "v": 0.2}, {"y": 2019, "v": 2.3}, {"y": 2020, "v": 5.3}, {"y": 2021, "v": -17.0}, {"y": 2022, "v": 17.3}, {"y": 2023, "v": 23.4}, {"y": 2024, "v": -0.4}, {"y": 2025, "v": -3.1}], "OctDec": [{"y": 2012, "v": 6.5}, {"y": 2013, "v": 27.3}, {"y": 2014, "v": 11.6}, {"y": 2015, "v": 27.3}, {"y": 2016, "v": 11.8}, {"y": 2017, "v": 29.3}, {"y": 2018, "v": 10.1}, {"y": 2019, "v": 4.8}, {"y": 2020, "v": -6.3}, {"y": 2021, "v": 24.2}, {"y": 2022, "v": 14.0}, {"y": 2023, "v": 13.5}, {"y": 2024, "v": 15.6}, {"y": 2025, "v": -2.1}], "SepNov": [{"y": 2012, "v": 5.5}, {"y": 2013, "v": 6.1}, {"y": 2014, "v": 2.4}, {"y": 2015, "v": 10.7}, {"y": 2016, "v": 11.0}, {"y": 2017, "v": 31.8}, {"y": 2018, "v": 6.7}, {"y": 2019, "v": 8.2}, {"y": 2020, "v": -12.0}, {"y": 2021, "v": 6.2}, {"y": 2022, "v": 10.7}, {"y": 2023, "v": 15.8}, {"y": 2024, "v": 7.3}, {"y": 2025, "v": 3.6}], "JanMar": [{"y": 2012, "v": -0.3}, {"y": 2013, "v": -18.3}, {"y": 2014, "v": 0.1}, {"y": 2015, "v": -11.2}, {"y": 2016, "v": -19.6}, {"y": 2017, "v": 6.0}, {"y": 2018, "v": -11.0}, {"y": 2019, "v": -11.4}, {"y": 2020, "v": -11.8}, {"y": 2021, "v": 6.6}, {"y": 2022, "v": -6.9}, {"y": 2023, "v": 8.0}, {"y": 2024, "v": 5.3}, {"y": 2025, "v": -30.1}, {"y": 2026, "v": 3.4}]}, "my": {"1": {"2012": 3.4, "2013": -7.2, "2014": 4.2, "2015": -6.5, "2016": -4.9, "2017": 6.1, "2018": -14.0, "2019": -8.3, "2020": 5.3, "2021": 7.5, "2022": 5.3, "2023": 7.0, "2024": 11.8, "2025": -13.9, "2026": -5.0}, "2": {"2012": -1.1, "2013": -4.8, "2014": -3.3, "2015": -8.4, "2016": -12.3, "2017": 2.2, "2018": 7.4, "2019": -3.6, "2020": -9.7, "2021": -0.6, "2022": -5.7, "2023": 1.1, "2024": -0.6, "2025": -14.0, "2026": 12.6}, "3": {"2012": -2.0, "2013": -8.3, "2014": -0.9, "2015": 3.4, "2016": -3.1, "2017": -2.6, "2018": -5.0, "2019": 1.3, "2020": -9.0, "2021": -0.8, "2022": -6.2, "2023": -0.1, "2024": -5.5, "2025": -5.1, "2026": -2.4}, "4": {"2012": -1.0, "2013": 1.3, "2014": 20.8, "2015": 8.0, "2016": 3.9, "2017": 11.6, "2018": 10.0, "2019": -3.5, "2020": 5.2, "2021": 3.2, "2022": 9.3, "2023": 12.1, "2024": 19.4, "2025": 0.8, "2026": 27.7}, "5": {"2012": 3.6, "2013": -5.9, "2014": 12.8, "2015": -2.3, "2016": 2.3, "2017": -4.7, "2018": -3.0, "2019": 0.1, "2020": -3.2, "2021": 12.2, "2022": -4.1, "2023": 8.9, "2024": 6.5, "2025": 21.5, "2026": 19.1}, "6": {"2012": -5.2, "2013": -3.9, "2014": 26.7, "2015": 4.0, "2016": 10.3, "2017": 5.0, "2018": -12.3, "2019": -6.8, "2020": 18.3, "2021": 17.5, "2022": 2.6, "2023": 8.1, "2024": 1.4, "2025": -1.1, "2026": 2.3}, "7": {"2011": 4.6, "2012": 1.6, "2013": -0.4, "2014": 5.6, "2015": 12.7, "2016": -0.5, "2017": 7.0, "2018": -0.2, "2019": -10.7, "2020": -12.0, "2021": 1.3, "2022": 3.6, "2023": 11.8, "2024": 6.9, "2025": 5.6, "2026": 0.3}, "8": {"2011": -9.2, "2012": 1.8, "2013": -0.3, "2014": -3.0, "2015": -1.6, "2016": -5.5, "2017": 0.7, "2018": 6.7, "2019": -3.4, "2020": 11.7, "2021": -16.6, "2022": 12.0, "2023": 21.2, "2024": 3.6, "2025": -5.6, "2026": 23.2}, "9": {"2011": 0.7, "2012": 0.3, "2013": -4.7, "2014": 3.2, "2015": -0.5, "2016": 1.4, "2017": 8.0, "2018": -5.5, "2019": 6.1, "2020": -5.5, "2021": 0.1, "2022": 5.0, "2023": 1.5, "2024": -3.9, "2025": 2.6}, "10": {"2011": -7.5, "2012": 3.5, "2013": -1.0, "2014": -0.2, "2015": 2.5, "2016": 11.0, "2017": 7.9, "2018": 7.6, "2019": 4.3, "2020": -4.2, "2021": 0.2, "2022": 3.2, "2023": 6.0, "2024": 8.0, "2025": 1.4}, "11": {"2011": -4.2, "2012": 1.1, "2013": 11.2, "2014": -0.8, "2015": 8.5, "2016": -0.7, "2017": 12.5, "2018": 5.7, "2019": -2.6, "2020": -1.3, "2021": 5.8, "2022": 1.8, "2023": 7.2, "2024": 3.1, "2025": -0.6}, "12": {"2011": -5.3, "2012": 1.6, "2013": 13.4, "2014": 11.8, "2015": 14.4, "2016": 2.0, "2017": 5.3, "2018": -3.2, "2019": 2.9, "2020": 0.2, "2021": 17.7, "2022": 7.8, "2023": -1.2, "2024": 4.5, "2025": -2.7}}, "basket": ["Polycab India Ltd.", "APAR Industries Limited", "KEI Industries Limited", "RR Kabel Ltd.", "Diamond Power Infrastructure Limited", "Finolex Cables Limited", "Precision Wires India Limited", "Ram Ratna Wires Limited", "V-Marc India Limited", "Vindhya Telelinks Limited", "Dynamic Cables Ltd.", "Paramount Communications Limited", "Divine Power Energy Ltd.", "Birla Cable Limited", "Delton Cables Limited", "Cords Cable Industries Limited", "Shera Energy Limited"], "nbasket": 17, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 0.2, "rel": -0.6, "hit": 8, "n": 15}, {"m": 2, "abs": -3.9, "rel": -2.7, "hit": 4, "n": 15}, {"m": 3, "abs": -3.3, "rel": -3.1, "hit": 2, "n": 15}, {"m": 4, "abs": 11.1, "rel": 8.6, "hit": 13, "n": 15}, {"m": 5, "abs": 5.4, "rel": 4.2, "hit": 9, "n": 15}, {"m": 6, "abs": 6.2, "rel": 4.5, "hit": 10, "n": 15}, {"m": 7, "abs": 4.3, "rel": 2.3, "hit": 11, "n": 16}, {"m": 8, "abs": 2.0, "rel": 2.2, "hit": 8, "n": 16}, {"m": 9, "abs": 1.2, "rel": 0.6, "hit": 10, "n": 15}, {"m": 10, "abs": 4.9, "rel": 2.8, "hit": 11, "n": 15}, {"m": 11, "abs": 4.0, "rel": 3.1, "hit": 9, "n": 15}, {"m": 12, "abs": 5.3, "rel": 4.6, "hit": 11, "n": 15}], "cy": [{"y": 2012, "b": 37.2, "n": 27.7, "rel": 9.5, "partial": false}, {"y": 2013, "b": -6.4, "n": 6.8, "rel": -13.2, "partial": false}, {"y": 2014, "b": 162.0, "n": 31.4, "rel": 130.6, "partial": false}, {"y": 2015, "b": 31.7, "n": -4.1, "rel": 35.8, "partial": false}, {"y": 2016, "b": 3.3, "n": 3.0, "rel": 0.3, "partial": false}, {"y": 2017, "b": 123.8, "n": 28.6, "rel": 95.1, "partial": false}, {"y": 2018, "b": -6.2, "n": 3.2, "rel": -9.4, "partial": false}, {"y": 2019, "b": -14.6, "n": 12.0, "rel": -26.7, "partial": false}, {"y": 2020, "b": 0.5, "n": 14.9, "rel": -14.4, "partial": false}, {"y": 2021, "b": 90.5, "n": 24.1, "rel": 66.3, "partial": false}, {"y": 2022, "b": 43.8, "n": 4.3, "rel": 39.5, "partial": false}, {"y": 2023, "b": 162.7, "n": 20.0, "rel": 142.7, "partial": false}, {"y": 2024, "b": 82.8, "n": 8.8, "rel": 74.0, "partial": false}, {"y": 2025, "b": -6.5, "n": 10.5, "rel": -17.1, "partial": false}, {"y": 2026, "b": 88.1, "n": -10.7, "rel": 98.7, "partial": true}], "dd": [{"co": "Polycab India", "peak": "Oct 2025", "fp": 7, "y1": 13}, {"co": "APAR Industries", "peak": "Jan 2025", "fp": 62, "y1": 111}, {"co": "KEI Industries", "peak": "Jun 2024", "fp": -4, "y1": 12}, {"co": "RR Kabel", "peak": "Jul 2024", "fp": 34, "y1": 96}, {"co": "Diamond Power Infrastructure", "peak": "Oct 2024", "fp": 99, "y1": 142}, {"co": "Finolex Cables", "peak": "Jul 2024", "fp": -15, "y1": 67}, {"co": "Precision Wires India", "peak": "Nov 2025", "fp": 76, "y1": 162}, {"co": "KSH International", "peak": "Dec 2025", "fp": 193, "y1": 0}, {"co": "Ram Ratna Wires", "peak": "Jul 2025", "fp": 43, "y1": 62}, {"co": "V-Marc India", "peak": "Nov 2025", "fp": 166, "y1": 372}, {"co": "Vindhya Telelinks", "peak": "Jul 2024", "fp": -15, "y1": 77}, {"co": "Dynamic Cables", "peak": "Dec 2024", "fp": -14, "y1": 6}, {"co": "Paramount Communications", "peak": "Jan 2024", "fp": -46, "y1": 29}, {"co": "Vidya Wires", "peak": "Dec 2025", "fp": 63, "y1": 0}, {"co": "Divine Power Energy", "peak": "Nov 2025", "fp": 112, "y1": 165}, {"co": "Birla Cable", "peak": "Sep 2023", "fp": -3, "y1": 137}, {"co": "Delton Cables", "peak": "Dec 2024", "fp": -46, "y1": 6}], "win": {"FebMar": {"mean": -5.7, "median": -4.4, "hit": 3, "n": 15}, "AprJul": {"mean": 23.7, "median": 21.1, "hit": 11, "n": 15}, "AugSep": {"mean": 2.0, "median": 0.2, "hit": 8, "n": 14}, "OctDec": {"mean": 13.4, "median": 12.7, "hit": 12, "n": 14}, "SepNov": {"mean": 8.1, "median": 7.0, "hit": 13, "n": 14}, "JanMar": {"mean": -6.1, "median": -6.9, "hit": 6, "n": 15}}, "ytd": {"b": 88.1, "n": -10.7}, "hx": {"label": "Copper, avg $/lb", "v": {"2012": "3.6", "2013": "3.3", "2014": "3.1", "2015": "2.5", "2016": "2.2", "2017": "2.8", "2018": "2.9", "2019": "2.7", "2020": "2.8", "2021": "4.2", "2022": "4.0", "2023": "3.9", "2024": "4.2", "2025": "4.9", "2026": "6.2"}}, "notes": {"2012": "+37.2% versus +27.7%. Finolex Cables +89%, Birla Cable +65%, APAR +43% in a post-2011 recovery; Cords Cable \u22125% and Paramount \u22123% lagged.", "2013": "\u22126.4% versus +6.8%, median \u221220%. The rupee crisis and an investment slump: Cords \u221245%, Delton \u221234%, KEI \u221230%. Only Finolex (+44%) and Birla Cable (+32%) rose.", "2014": "+162.0% versus +31.4%, the section's best year. KEI +311%, Birla Cable +247%, Finolex +217% as the election re-rated every infrastructure and housing proxy \u2014 even though copper fell 17% that year.", "2015": "+31.7% against a falling Nifty. KEI +149%, Cords +121%, Paramount +102%; Delton \u221279% was the outlier.", "2016": "+3.3%, level with the Nifty. Finolex +64%, while the telecom-cable names each fell about 30% (Vindhya, Birla Cable, Paramount).", "2017": "+123.8% versus +28.6%. Paramount Communications +424%, KEI +204%, Precision Wires +155%: GST moved share from unorganised makers to branded ones, and small caps boomed.", "2018": "\u22126.2% versus +3.2%, median \u221221%. The small-cap crash: Cords \u221248%, Delton \u221245%, Finolex \u221236%. Birla Cable +202% was an optical-fibre story.", "2019": "\u221214.6% versus +12.0%, median \u221234%. Birla Cable \u221269% and Vindhya \u221249% as optical-fibre prices collapsed; APAR \u221241%. Delton +196% was the exception. Polycab listed in April.", "2020": "+0.5% versus +14.9%, median \u22127%. Covid shut construction sites; Polycab and KEI each +4%, Delton \u221233%.", "2021": "+90.5% versus +24.1%. KEI +145%, Polycab +138%, Precision Wires +129% as housing recovered and copper rose 27%, lifting reported revenue.", "2022": "+43.8% versus +4.3%. Paramount +150% and APAR +130% on export conductors and cables; Polycab and Finolex each only +4%.", "2023": "+162.7% versus +20.0%. Delton +286%, V-Marc +249%, APAR +238%: transmission, renewables and exports together, with the weakest member still up 36%.", "2024": "+82.8% versus +8.8%, median +39%. Diamond Power +861% after emerging from insolvency, Delton +303%, Dynamic Cables +123%; RR Kabel \u22128% and Birla Cable \u221226%.", "2025": "\u22126.5% versus +10.5%, median \u221211%. UltraTech (February) and Adani (March) announced entry; Paramount \u221252%, Delton \u221239%, Finolex \u221237%. Divine Power +95% and V-Marc +78% were the exceptions, while copper rose 42%.", "2026": "+88.1% against a Nifty \u221210.7%, median +88%. V-Marc +205%, Birla Cable +199%, Diamond Power +166%, APAR +125% on record results; the incumbents lag, Polycab +10% and KEI +4%, as Ultravolt launched."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

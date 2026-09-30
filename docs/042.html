@@ -1,0 +1,601 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformers Primer</title>
+<meta name="description" content="Industry 42 of 278: power and distribution transformer makers. A global shortage, record order books, the CRGO steel bottleneck that sets their costs, two years of +235% and +218% followed by −35%, and the 13 listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Transformers · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 42 of 278 · Power family, part 7</div>
+  <h1>Transformers</h1>
+  <p class="lede">Every unit of electricity passes through several transformers between the power station and your socket — stepped up to travel, stepped down to be used. The world does not have enough of them. Grid expansion, renewables and data centres have created a global shortage with lead times measured in years, and Indian makers are filling order books at home and abroad. The limit on their profits is a single imported material: the special steel at the heart of every transformer.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 13 listed (several listed since 2024)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Switchgear &amp; Grid Equipment</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹6,630 cr</div><div class="l">Transformers &amp; Rectifiers' record order book, with ₹23,000 cr of enquiries under negotiation</div></div>
+    <div class="stat"><div class="n">~90%</div><div class="l">Share of India's CRGO electrical steel that is imported — a 30% supply shortfall</div></div>
+    <div class="stat"><div class="n">30–35%</div><div class="l">CRGO's share of a power transformer's cost: the margin, decided abroad</div></div>
+    <div class="stat"><div class="n">+235% / +218%</div><div class="l">The basket's 2023 and 2024 returns, followed by −35% in 2025</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A global shortage, built from imported steel</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Electricity travels long distances at very high voltage because that loses less energy — but high voltage is dangerous, so before it reaches your house it has to be turned down, several times. A transformer is the box that does that: two coils of copper wire wrapped around a core of special steel, sitting in a tank of oil. There is one on the pole outside your street and huge ones, as big as a bus, at every substation. Right now the whole world is building new power lines and solar farms and data centres, and every one needs transformers, so there are not enough to go round. Indian factories have more orders than ever. Their problem is that the special steel for the core mostly comes from abroad, and it has become expensive and scarce.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Demand is secular and global; margins are hostage to one imported input.</p>
+    <ul>
+      <li><b>Order books are at records:</b> Transformers &amp; Rectifiers ₹6,630 cr (+26%) with a ₹1,000 cr-plus Power Grid order and ₹23,000 cr of enquiries; Atlanta Electricals ₹3,117 cr after record inflows of ₹972 cr in a quarter.</li>
+      <li><b>Revenue is growing fast:</b> Atlanta +48%, Indo Tech +39%, Voltamp +28%.</li>
+      <li><b>Margins are being squeezed by steel:</b> Voltamp's EBITDA margin fell to 14.77% from 17.15% on input costs. India imports about 90% of its CRGO steel, a 30% shortfall, and an anti-dumping investigation into CRGO imports opened on 22 June 2026 — protection for domestic steel that raises transformer makers' costs.</li>
+      <li><b>Capacity is the other constraint:</b> Voltamp's new 6,000 MVA plant slipped to October 2026 on equipment delays; Transformers &amp; Rectifiers' output was held back by its own expansion.</li>
+      <li><b>The stocks have been violent:</b> +235% and +218% in 2023–24, −35% in 2025, +16% so far in 2026 with a median of +24%.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From the pole to the substation</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Type</th><th>What it does</th><th>Scale and value</th><th>Listed makers</th></tr></thead><tbody>
+    <tr><td>Power transformer (EHV)</td><td>Steps voltage up or down at transmission substations — 220 kV to 765 kV</td><td>Very large, custom, the highest value per unit</td><td>Transformers &amp; Rectifiers, Voltamp, Atlanta Electricals</td></tr>
+    <tr><td>Generator step-up transformer</td><td>Raises a power station's output to transmission voltage</td><td>Large, custom, tied to plant orders (see 041)</td><td>Transformers &amp; Rectifiers</td></tr>
+    <tr><td>Distribution transformer</td><td>Steps down to household voltage on poles and in neighbourhoods</td><td>High volume, standardised, price-competitive</td><td>Indo Tech, Danish Power, Supreme Power, many small makers</td></tr>
+    <tr><td>Renewable and inverter-duty transformer</td><td>Connects solar and wind farms to the grid</td><td>Fast-growing segment (see 038)</td><td>Danish Power, Atlanta Electricals</td></tr>
+    <tr><td>Dry-type transformer</td><td>Oil-free units for buildings, data centres and metros</td><td>Premium, safety-driven</td><td>Voltamp (new 2,300 MVA facility planned)</td></tr>
+    <tr><td>Furnace and special transformers</td><td>Feed industrial furnaces, railways and rectifier loads</td><td>Niche, engineered</td><td>Transformers &amp; Rectifiers</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A transformer is a gearbox for electricity. High voltage is a high gear — efficient for the motorway — and low voltage is a low gear for the last few streets. Just as every road trip needs gear changes, every unit of electricity needs several transformers, which is why grid expansion multiplies transformer demand rather than merely adding to it.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From electrical steel to a substation</h2>
+  <div class="chain">
+    <div class="stage hot"><div class="no">01</div><h4>CRGO steel</h4><div class="an">The core</div>Cold-rolled grain-oriented electrical steel, cut and stacked into the magnetic core.<div class="who">Imports from China, Japan, Korea; JSW-JFE capacity coming</div><div class="m">30–35% of cost; ~90% imported</div></div>
+    <div class="stage"><div class="no">02</div><h4>Copper and insulation</h4><div class="an">The windings</div>Copper conductors (including continuously transposed cable), insulating paper, pressboard and oil.<div class="who">Copper suppliers, insulation makers</div><div class="m">Copper prices are the second cost swing</div></div>
+    <div class="stage"><div class="no">03</div><h4>Design and manufacture</h4><div class="an">The factory</div>Core building, winding, drying, assembly and testing.<div class="who">The listed makers</div><div class="m">Capacity measured in MVA a year</div></div>
+    <div class="stage"><div class="no">04</div><h4>Testing and certification</h4><div class="an">Proving it</div>Routine and type tests, often witnessed by the customer.<div class="who">Makers, utilities, test labs</div><div class="m">Type-test approvals are a barrier to entry</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>The customers</h4><div class="an">Who buys</div>Transmission utilities, distribution companies, renewable developers, industry, exporters.<div class="who">Power Grid (039), state utilities, developers (038), US buyers</div><div class="m">A global shortage</div></div>
+    <div class="stage"><div class="no">06</div><h4>Installation and service</h4><div class="an">Life of 30–40 years</div>Erection at substations, maintenance and refurbishment.<div class="who">EPC contractors (048), makers</div><div class="m">A long service tail</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Steel core:</b> thin sheets of special steel that make magnetism work efficiently, stacked into a frame. Most of it comes from abroad.</li>
+    <li><b>Copper windings:</b> thick copper wire wound in coils around the core.</li>
+    <li><b>Factory:</b> the pieces are assembled, dried and sealed in a tank of oil.</li>
+    <li><b>Testing:</b> every unit is tested with very high voltage before it leaves.</li>
+    <li><b>Customers:</b> power companies, solar farms, factories, and now buyers in America who cannot get enough.</li>
+    <li><b>Service:</b> a transformer works for thirty to forty years, with checks along the way.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Two numbers decide a transformer maker: <b>capacity utilisation</b> and <b>the spread between contract price and CRGO cost</b>. In a shortage, capacity is sold out, so growth depends on how fast new MVA comes on line — and both Voltamp and Transformers &amp; Rectifiers have seen expansions delay output. Meanwhile CRGO is 30–35% of cost and 90% imported, so a steel-price move lands straight on the margin unless contracts carry price-variation clauses. Order books and enquiry pipelines are impressive across the section, but the margin trajectory in 2026 — Voltamp down 238 basis points — says the steel side is winning for now. Watch price-variation clause coverage and the timing of new capacity more closely than order intake.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 13 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Atlanta Electricals (~₹12,700 cr)</td><td>Power, auto and inverter-duty transformers; listed September 2025.</td><td>Revenue ₹466.3 cr (+48%), profit ₹46.8 cr (+50%); order book ₹3,116.6 cr after record quarterly inflows of ₹972.4 cr; IPO proceeds nearly fully deployed. Stock +89.5% in 2026.</td></tr>
+    <tr><td>Voltamp Transformers (~₹10,600 cr)</td><td>A long-established maker of power and distribution transformers with a strong balance sheet.</td><td>Revenue ₹543.8 cr (+28.4%), profit ₹91.2 cr (+14.7%), but EBITDA margin 14.77% against 17.15% — down 238 bps on input costs. Began FY27 with a backlog of about ₹1,200 cr (10,270 MVA) and added ₹310 cr (2,107 MVA) in April. A 6,000 MVA extra-high-voltage plant slipped to October 2026 on equipment delays; ₹90 cr committed to a 2,300 MVA dry-type facility by FY28. FY26 revenue was a record ₹2,153.7 cr. Stock +38.6%, −25% from its August 2024 peak.</td></tr>
+    <tr><td>Transformers &amp; Rectifiers (~₹8,300 cr)</td><td>The largest listed maker of high-voltage power and specialty transformers.</td><td>Revenue ₹572.3 cr (+8%), EBITDA ₹109.7 cr at a 19.16% margin, profit ₹64.3 cr. Order book a record ₹6,630 cr (+26%) after inflows of ₹2,114 cr, including a ₹1,000 cr-plus Power Grid order; ₹23,000 cr of enquiries under negotiation. Output held back by expansion work at its Changodar plant. Stock −1.9% and −55% from its January 2025 peak.</td></tr>
+    <tr><td>Shilchar Technologies (~₹4,600 cr)</td><td>Power and distribution transformers with a strong export business.</td><td>Its NSE price series only begins in November 2025 after a move from BSE-only trading, so it is excluded from the basket here — a data limitation rather than a judgement. +6.3% on the NSE series in 2026.</td></tr>
+    <tr><td>Indo Tech Transformers (~₹3,600 cr)</td><td>Power and distribution transformers, with capacity additions under way.</td><td>Revenue ₹227.9 cr against ₹163.9 cr (+39%), profit ₹25.7 cr (+34%), EBITDA margin 13.95% against 14.64%. Stock +117.6% in 2026, the best of the established names.</td></tr>
+    <tr><td>Marsons (~₹2,100 cr)</td><td>Distribution and power transformers; relisted with a new series from March 2026.</td><td>−25% from its May 2026 peak; too little history for the basket.</td></tr>
+    <tr><td>Danish Power (~₹1,800 cr)</td><td>Transformers for renewable energy and distribution; listed October 2024.</td><td>+57.7% in 2026.</td></tr>
+    <tr><td>Mangal Electrical Industries (~₹740 cr)</td><td>CRGO processing and transformer components as well as transformers; listed August 2025.</td><td>−26.9% in 2026, −51% from its September 2025 peak.</td></tr>
+    <tr><td>Supreme Power Equipment (~₹510 cr)</td><td>Distribution and power transformers; listed December 2023.</td><td>+9.2%, −47% from its July 2024 peak.</td></tr>
+    <tr><td>Star Delta, RTS Power, ALFA Transformers, Tarapur Transformers</td><td>Micro-cap transformer makers.</td><td>Between ₹25 cr and ₹131 cr; Tarapur −56% and ALFA −80% from their peaks. Not investable at scale.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Data notes</span><p>This is a genuinely coherent section — every name makes transformers or their components — but its price record has two gaps. <b>Shilchar Technologies</b>, one of the best performers of the upcycle, has only a short NSE series in this dataset because it traded on BSE alone until 2025; it is excluded from the basket and should be added once its BSE history is joined. <b>Several makers listed during the boom</b> — Supreme Power (2023), Danish Power (2024), Atlanta and Mangal (2025), Marsons (2026) — so the long record rests on three companies. Figures for Indo Tech were reported in rupees million by one outlet as though they were crore; the numbers used here are the internally consistent ones.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Selling MVA, buying steel</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Element</th><th>What it is</th><th>Where it stands</th></tr></thead><tbody>
+    <tr><td>Capacity (MVA a year)</td><td>How much transformer rating a factory can build</td><td>Sold out; new capacity is the growth constraint</td></tr>
+    <tr><td>Realisation per MVA</td><td>Price per unit of rating</td><td>Elevated by the global shortage, especially for high-voltage units</td></tr>
+    <tr><td>CRGO cost</td><td>30–35% of a power transformer's cost</td><td>Scarce and rising; anti-dumping probe opened June 2026</td></tr>
+    <tr><td>Copper cost</td><td>The windings</td><td>A second commodity exposure</td></tr>
+    <tr><td>Price-variation clauses</td><td>Contract terms passing commodity changes to the buyer</td><td>The key protection — utilities often cap or exclude them</td></tr>
+    <tr><td>Export mix</td><td>Share sold overseas</td><td>A margin lever given US shortages</td></tr>
+  </tbody></table></div>
+  <h3>Why margins fell while orders boomed</h3>
+  <p>A transformer is ordered, priced and then built over months — often more than a year for a large power unit. If CRGO steel and copper rise between the bid and the build, and the contract lacks a full price-variation clause, the maker absorbs the difference. That is the story of 2026: demand is extraordinary, but the core steel is 90% imported, India's supply is about 30% short of consumption, and the government has opened an anti-dumping investigation into imports from China, Japan, South Korea and Russia, which protects future domestic producers at the cost of today's buyers. Voltamp's 238 basis-point margin decline with 28% revenue growth is the result in miniature. Relief is expected when JSW-JFE's 350,000-tonne CRGO capacity is fully commissioned, which is targeted for FY2028; until then India depends on imports for more than 85% of its needs.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A transformer maker in 2026 is a bakery with a queue round the block and a flour shortage. It can sell every loaf it bakes at a good price — but the flour comes from abroad, costs more each month, and a new tariff may be put on it. The queue does not guarantee a profit; the flour contract does.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>CRGO electrical steel</td><td>The magnetic core, 30–35% of a power transformer's cost</td><td>Consumption 400,000–450,000 tonnes against domestic output of 40,000–50,000; ~90% imported; a 30% shortfall</td></tr>
+    <tr><td>Anti-dumping action on CRGO</td><td>Import duties would raise costs further</td><td>A fresh investigation opened 22 June 2026 into China, Japan, South Korea and Russia</td></tr>
+    <tr><td>BIS certification for CRGO</td><td>Imports require certification</td><td>Slow licence renewals tighten supply further</td></tr>
+    <tr><td>Domestic CRGO capacity</td><td>The long-term fix</td><td>JSW-JFE's 350,000 TPA targeted for full commissioning in FY2028</td></tr>
+    <tr><td>Copper and continuously transposed cable</td><td>Windings for large units</td><td>Another bottleneck item for high-voltage transformers</td></tr>
+    <tr><td>Manufacturing capacity</td><td>Sold out across the industry</td><td>Voltamp's 6,000 MVA plant delayed to October 2026 by equipment delivery</td></tr>
+    <tr><td>Test bay capacity</td><td>Large units must be tested before dispatch</td><td>A hidden constraint on high-voltage output</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Order in spring, dispatch in winter</h2>
+  <ul>
+    <li><b>April–July:</b> utilities release budgets and tenders; order announcements cluster — April is among the strongest months in the series.</li>
+    <li><b>August–September:</b> the monsoon slows site installation and dispatch; the weakest window (3 of 14 years).</li>
+    <li><b>October–December:</b> the dispatch and commissioning season before the financial year-end — the best window in the Power family, 12 of 14 years.</li>
+    <li><b>January–March:</b> year-end billing, followed by weak share prices in most years.</li>
+    <li><b>Steel contract cycles:</b> CRGO is bought on contracts that reset periodically, which is when margin pressure appears in results.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 6 names (Voltamp Transformers Limited, Transformers and Rectifiers (India) Limited, Indo Tech Transformers Ltd., Danish Power Ltd., Mangal Electrical Industries Limited, Supreme Power Equipment Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +9.9 pts (beat in 12 of 15 years); Dec +7.5 pts (beat in 10 of 15 years); Jun +5.4 pts (beat in 10 of 15 years).</li><li><b>Weakest months:</b> Feb -4.4 pts (beat in 5 of 15 years); Aug -3.7 pts (beat in 4 of 16 years); Jul -2.9 pts (beat in 6 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -5.6 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +11.1 pts); Aug–Sep beat the Nifty in 3 of 14 years (median -7.5 pts); Oct–Dec beat the Nifty in 12 of 14 years (median +15.3 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +6.9 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -5.1 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +6.9 points.</p><p><b>Reading it:</b> the strongest seasonal pattern in the whole Power family. October–December has beaten the Nifty in 12 of 14 years with a median of +15.3 points, and April in 12 of 15 (+9.9 points); April–July works 10 of 15 with a median of +11.1. The weak windows are equally clear: August–September 3 of 14 (median −7.5), February–March 3 of 15 and January–March 4 of 15. The pattern tracks the ordering and dispatch calendar of transmission utilities, but note that a small basket of fast-moving small caps makes the magnitudes large.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="OctDec" viewBox="0 0 720 280" role="img" aria-label="October to December return minus Nifty by year"></svg><figcaption>October–December return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>October–December failed only twice in fourteen years</b>: 2025 (−20.3), the de-rating year, and 2022 (−11.4). The best were 2015 (+45.3) and 2024 (+43.6).</li>
+    <li><b>April–July works 10 of 15 (median +11.1)</b>, with failures in 2018 (−26.4), 2019 (−16.6), 2017 (−13.1), 2013 (−11.4) and 2012 (−4.1) — the years before the upcycle.</li>
+    <li><b>August–September is reliably poor</b>: 3 of 14 years, median −7.5, with 2021 at −30.6 and 2018 at −22.0.</li>
+    <li><b>January–March has failed 11 times in 15</b>, the worst being 2013 (−29.9) and 2025 (−28.3).</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is the strongest and most consistent calendar pattern found in the Power family: own into October–December, avoid August–September and the first quarter. It has a plausible cause in the utility ordering and dispatch cycle. The caveats are the usual ones for a small, volatile basket — three stocks for most of the record, all small caps, with magnitudes that reflect liquidity as much as fundamentals. Use it as a timing tilt on a position justified by the order book and the CRGO outlook, not as a reason to own the sector.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Transmission and distribution capex:</b> India's grid plan to 2032 more than doubles transformation capacity (see 039).</li>
+    <li><b>Renewable additions:</b> every solar and wind farm needs step-up transformers (see 038).</li>
+    <li><b>Export demand:</b> the United States and other markets face severe transformer shortages.</li>
+    <li><b>CRGO steel prices and availability:</b> 30–35% of cost, 90% imported, under anti-dumping review.</li>
+    <li><b>Copper prices:</b> the second commodity exposure.</li>
+    <li><b>Capacity commissioning:</b> sold-out factories grow only as fast as new MVA comes on line.</li>
+    <li><b>Price-variation clauses:</b> decide who bears the commodity risk.</li>
+    <li><b>Data-centre and industrial demand:</b> dry-type and specialty units at premium prices.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of Voltamp, Transformers &amp; Rectifiers and Indo Tech through 2023, adding Supreme Power, Danish Power and Mangal Electrical as they listed. Monthly returns capped at ±50%, price only; 2026 to 18 September. Shilchar, Atlanta and Marsons are excluded for short series.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of this cycle</h3>
+  <ol>
+    <li><b>A decade of thin margins</b> (2012–2019): utilities were the only customers, price was everything, and the listed makers traded as distressed small caps.</li>
+    <li><b>The global shortage</b> (2021–2024): grid expansion, renewables and data centres met capacity that had not been built for years. Lead times stretched, prices rose, and the stocks returned +235% and +218% in consecutive years.</li>
+    <li><b>New supply and new costs</b> (2025): capacity announcements, new listings and rising CRGO prices triggered a 35% fall.</li>
+    <li><b>Demand outlasts the de-rating</b> (2026): record order books and export demand, with margins now set by steel.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Small caps in a shortage re-rate spectacularly</b> — and give back a third when supply and costs catch up.</li>
+    <li><b>New listings cluster at the top:</b> five makers listed between December 2023 and March 2026.</li>
+    <li><b>The commodity input decides the margin</b>, not the order book: the same lesson as tyres (025) and helmets (026).</li>
+    <li><b>The calendar is unusually consistent</b>, with October–December working in 12 of 14 years.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>A worldwide shortage India can supply</h2>
+  <p>The transformer shortage is a global phenomenon. The United States faces severe supply constraints, with lead times for large power transformers running to years, as grid replacement, renewables and data centres all compete for the same limited factory capacity; European utilities report similar queues. Transformer manufacturing is capital-intensive and slow to expand, and the grain-oriented steel it depends on comes from a handful of producers in China, Japan, South Korea and Russia. India's makers are well placed to export — they are cost-competitive and many already have international type-test approvals — but they share the world's dependence on imported CRGO, and India's own plan to more than double transformation capacity by 2032 competes for the same factories.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Position</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>United States</td><td>Severe shortage; multi-year lead times</td><td>The largest export opportunity</td></tr>
+    <tr><td>Europe</td><td>Grid replacement and offshore wind demand</td><td>A second export market</td></tr>
+    <tr><td>China, Japan, South Korea, Russia</td><td>Dominant CRGO steel producers</td><td>The source of 90% of India's core steel, and the target of the anti-dumping probe</td></tr>
+    <tr><td>Global majors (Hitachi Energy, Siemens Energy, GE Vernova)</td><td>Premium high-voltage makers, capacity sold out</td><td>Competitors and partners; several have Indian factories</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From surplus to shortage (2021 onwards):</b> a decade of underinvestment in capacity met a synchronised global demand surge.</li>
+    <li><b>From domestic to export-led growth:</b> Indian makers winning overseas orders as foreign utilities look beyond their own sold-out suppliers.</li>
+    <li><b>From imported to domestic CRGO (in progress):</b> JSW-JFE's capacity, targeted for FY2028, is the first serious attempt to end the import dependence.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Higher voltage ratings:</b> 765 kV and HVDC converter transformers for long-distance transmission (see 039).</li>
+    <li><b>Amorphous-core distribution transformers:</b> lower no-load losses, mandated in some efficiency programmes.</li>
+    <li><b>Dry-type and ester-filled units:</b> safer and more environmentally friendly, for cities and data centres (see 035).</li>
+    <li><b>Smart transformers and monitoring:</b> sensors for temperature, dissolved gas and load, enabling predictive maintenance.</li>
+    <li><b>Renewable-specific designs:</b> inverter-duty transformers built for the harmonics and cycling of solar farms.</li>
+    <li><b>Domestic CRGO production:</b> the supply-side technology shift that decides the industry's margins after FY2028.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>National grid plan to 2032</td><td>Roughly ₹9.15 lakh cr of transmission investment; transformation capacity to more than double to 2,342 GVA</td><td>The domestic demand pipeline</td></tr>
+    <tr><td>Anti-dumping investigation on CRGO</td><td>Opened 22 June 2026 into imports from China, Japan, South Korea and Russia</td><td>Protects future domestic steelmakers; raises transformer makers' costs</td></tr>
+    <tr><td>BIS certification on CRGO imports</td><td>Mandatory</td><td>Licence delays further tighten supply</td></tr>
+    <tr><td>Energy efficiency standards</td><td>Star ratings and loss limits for distribution transformers</td><td>Raises the specification bar for small makers</td></tr>
+    <tr><td>Restrictions on Chinese equipment</td><td>Apply to grid procurement</td><td>Favours domestic makers (see 041)</td></tr>
+    <tr><td>Distribution reform schemes</td><td>Funding for distribution network upgrades</td><td>Volume for distribution transformer makers</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: sold-out factories, squeezed by steel</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Orders</td><td>Records</td><td>Transformers &amp; Rectifiers ₹6,630 cr (+26%), ₹23,000 cr of enquiries; Atlanta ₹3,117 cr after record inflows</td></tr>
+    <tr><td>Revenue</td><td>Growing fast</td><td>Atlanta +48%, Indo Tech +39%, Voltamp +28%</td></tr>
+    <tr><td>Margins</td><td>Under pressure</td><td>Voltamp −238 bps to 14.77%; Indo Tech 13.95% against 14.64%</td></tr>
+    <tr><td>Steel</td><td>The constraint</td><td>~90% imported, a 30% shortfall, anti-dumping probe opened</td></tr>
+    <tr><td>Capacity</td><td>Delayed</td><td>Voltamp's 6,000 MVA plant to October 2026; Transformers &amp; Rectifiers held back by expansion work</td></tr>
+    <tr><td>Stocks</td><td>Recovering</td><td>Basket +16%, median +24%, after −35% in 2025</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The demand case for transformers is as strong as for anything in the market: a domestic grid plan that more than doubles transformation capacity, renewables that each need step-up units, and an export market where American buyers wait years for supply. The weakness is that the profit is set by a material India mostly cannot make, and the policy response — an anti-dumping probe — will raise its cost before domestic supply arrives in FY2028. That is why 2026 shows record orders alongside falling margins. The makers best placed are those with price-variation protection, export access and new capacity arriving on time; the order book alone tells you little. After two years of +235% and +218%, a 35% fall, and a partial recovery, valuations already assume the shortage lasts — so the question worth underwriting is whether margins recover when CRGO supply does.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>CRGO import prices and availability</td><td>Monthly trade data</td><td>30–35% of cost</td></tr>
+    <tr><td>Outcome of the CRGO anti-dumping probe</td><td>DGTR findings</td><td>A step change in cost</td></tr>
+    <tr><td>JSW-JFE CRGO commissioning</td><td>Company updates</td><td>The end of import dependence, targeted FY2028</td></tr>
+    <tr><td>Order inflows and enquiry pipelines</td><td>Quarterly</td><td>Demand visibility</td></tr>
+    <tr><td>EBITDA margin trend</td><td>Quarterly</td><td>Whether steel or pricing is winning</td></tr>
+    <tr><td>New capacity commissioning</td><td>Company announcements</td><td>Growth in a sold-out industry</td></tr>
+    <tr><td>Export share of orders</td><td>Quarterly</td><td>Access to the higher-priced US market</td></tr>
+    <tr><td>Transmission tendering (see 039)</td><td>Ongoing</td><td>The domestic demand pipeline</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power transmission utilities</b> (039): the largest domestic buyer.</li>
+    <li><b>Renewable power generation</b> (038): step-up transformers for every solar and wind farm.</li>
+    <li><b>Switchgear &amp; grid equipment</b> (043): sold into the same substations.</li>
+    <li><b>Wires, cables &amp; conductors</b> (044): the copper supply chain and transmission build-out.</li>
+    <li><b>Boilers, turbines &amp; power equipment</b> (041): generator step-up transformers for new plants.</li>
+    <li><b>Steel:</b> the CRGO supply chain that decides this industry's margin.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of the order book carries price-variation clauses for CRGO and copper?</li>
+    <li>How much CRGO is contracted, at what price, and for how long?</li>
+    <li>What would the anti-dumping outcome do to input costs?</li>
+    <li>What is capacity utilisation, and when does new MVA come on line?</li>
+    <li>What is the export share of orders, and at what margin relative to domestic?</li>
+    <li>What is the enquiry-to-order conversion rate?</li>
+    <li>What is the high-voltage versus distribution mix, and where is it moving?</li>
+    <li>What test-bay capacity constrains high-voltage output?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Orders booked at fixed prices while CRGO is rising.</li>
+    <li>Margins falling for several consecutive quarters despite price increases.</li>
+    <li>Capacity announcements timed to the top of the cycle.</li>
+    <li>Heavy dependence on a single domestic utility customer.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"A global shortage means rising margins."</td><td>Voltamp's margin fell 238 basis points on 28% revenue growth, because CRGO steel rose faster than prices.</td></tr>
+    <tr><td>"The 2025 fall ended the transformer story."</td><td>Order books are at records and the median stock is up 24% in 2026. The fall ended the valuation excess, not the demand.</td></tr>
+    <tr><td>"Protecting domestic CRGO helps the transformer industry."</td><td>Eventually, when JSW-JFE capacity arrives around FY2028. Before that, an anti-dumping duty raises costs on 90% imported supply.</td></tr>
+    <tr><td>"Any transformer maker is a good way to play the grid."</td><td>Price-variation protection, export access and capacity timing vary widely; so do outcomes, from Indo Tech +118% to Mangal −27% this year.</td></tr>
+    <tr><td>"The sector returned over 200% twice, so it is a compounder."</td><td>It is a small-cap cyclical that also fell 46% in 2018 and 35% in 2025.</td></tr>
+    <tr><td>"New listings prove the opportunity."</td><td>Five makers listed between late 2023 and 2026, which is also what cycles look like near their peaks.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. CRGO, MVA" autocomplete="off"><span id="gcount"></span></div>
+  <h3>The product</h3><dl>
+    <dt>Transformer</dt><dd>A device that changes voltage using electromagnetic induction between two windings on a steel core.</dd>
+    <dt>Power transformer</dt><dd>A large unit at a transmission substation, typically 66 kV and above.</dd>
+    <dt>Distribution transformer</dt><dd>A smaller unit that steps voltage down to the level used by consumers.</dd>
+    <dt>Extra-high voltage (EHV)</dt><dd>220 kV and above; the most demanding and highest-value transformers.</dd>
+    <dt>Generator step-up transformer</dt><dd>Raises a power station's output to transmission voltage (see 041).</dd>
+    <dt>Inverter-duty transformer</dt><dd>Designed for solar inverters' output and cycling (see 038).</dd>
+    <dt>Dry-type transformer</dt><dd>An oil-free design used indoors, in buildings, metros and data centres.</dd>
+    <dt>Converter transformer</dt><dd>Used in HVDC stations to convert between AC and DC (see 039).</dd>
+    <dt>MVA</dt><dd>Megavolt-amperes: the unit of a transformer's rating, and of factory capacity. Voltamp's backlog was 10,270 MVA.</dd>
+    <dt>GVA</dt><dd>Gigavolt-amperes; India's transformation capacity is planned to reach 2,342 GVA by 2032.</dd>
+    <dt>Core</dt><dd>The stacked electrical-steel frame that carries the magnetic field.</dd>
+    <dt>Winding</dt><dd>The copper coils; high-voltage and low-voltage windings on the same core.</dd>
+    <dt>Transformer oil</dt><dd>Insulating and cooling oil in the tank (see 035).</dd>
+    <dt>Bushing</dt><dd>The insulated terminal carrying a conductor through the tank wall.</dd>
+    <dt>Tap changer</dt><dd>A mechanism adjusting the turns ratio to regulate voltage.</dd>
+    <dt>No-load and load losses</dt><dd>Energy lost in the core at all times, and in the windings under load; efficiency standards limit both.</dd>
+    <dt>Amorphous core</dt><dd>A non-crystalline steel core with lower no-load losses.</dd>
+  </dl>
+  <h3>Materials and manufacturing</h3><dl>
+    <dt>CRGO</dt><dd>Cold-rolled grain-oriented electrical steel — the core material, 30–35% of a power transformer's cost and about 90% imported.</dd>
+    <dt>CRNGO</dt><dd>Cold-rolled non-grain-oriented steel, used in motors rather than transformers.</dd>
+    <dt>Continuously transposed conductor (CTC)</dt><dd>A specialised copper conductor for large windings; another bottleneck input.</dd>
+    <dt>Core building</dt><dd>Cutting and stacking CRGO laminations; precision reduces losses.</dd>
+    <dt>Vapour-phase drying</dt><dd>Removing moisture from insulation before filling with oil.</dd>
+    <dt>Type test</dt><dd>A one-time test proving a design meets its specification; a qualification barrier for new makers.</dd>
+    <dt>Routine test</dt><dd>Tests performed on every unit before dispatch.</dd>
+    <dt>Test bay</dt><dd>The facility for high-voltage testing; limited bays cap large-unit output.</dd>
+  </dl>
+  <h3>Commercial and policy</h3><dl>
+    <dt>Price-variation clause (PVC)</dt><dd>A contract term adjusting price for changes in steel and copper costs.</dd>
+    <dt>Anti-dumping duty</dt><dd>A duty on imports sold below fair value; a CRGO investigation opened on 22 June 2026 (see 025).</dd>
+    <dt>DGTR</dt><dd>The Directorate General of Trade Remedies, which conducts anti-dumping investigations.</dd>
+    <dt>BIS certification</dt><dd>Mandatory quality certification, required for CRGO imports (see 026).</dd>
+    <dt>Enquiry pipeline</dt><dd>Tenders and requests under negotiation — ₹23,000 cr at Transformers &amp; Rectifiers.</dd>
+    <dt>Lead time</dt><dd>The time from order to delivery; measured in years for large units in the United States.</dd>
+    <dt>Energy efficiency star rating</dt><dd>The loss-based rating for distribution transformers.</dd>
+    <dt>Capitalised loss evaluation</dt><dd>Utilities' practice of adding the present value of a transformer's lifetime losses to its bid price, which rewards more efficient designs.</dd>
+    <dt>Liquidated damages for delay</dt><dd>Penalties for late delivery, material when lead times stretch (see 039).</dd>
+    <dt>Dissolved gas analysis</dt><dd>Testing a transformer's oil for gases that signal internal faults; the basis of condition monitoring.</dd>
+    <dt>Refurbishment and retrofit</dt><dd>Rewinding or upgrading an ageing unit instead of replacing it — a service market as the installed base ages.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Order book, book-to-bill</dt><dd>See 029, 041.</dd>
+    <dt>Substation, circuit kilometre</dt><dd>See 039.</dd>
+    <dt>Pass-through lag</dt><dd>See 025.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What is CRGO, and why does it matter?</summary><p>Cold-rolled grain-oriented electrical steel for the transformer core — 30–35% of a power transformer's cost, about 90% imported, with a 30% supply shortfall in India.</p></details>
+  <details class="q"><summary>2. Why did Voltamp's margin fall while revenue rose 28%?</summary><p>Input costs, chiefly steel, rose faster than prices; EBITDA margin fell 238 basis points to 14.77%.</p></details>
+  <details class="q"><summary>3. How large is Transformers &amp; Rectifiers' order book?</summary><p>A record ₹6,630 cr (+26%), with ₹2,114 cr of inflows in the quarter and ₹23,000 cr of enquiries under negotiation.</p></details>
+  <details class="q"><summary>4. What happened on 22 June 2026?</summary><p>An anti-dumping investigation opened into CRGO imports from China, Japan, South Korea and Russia — protection that will raise transformer makers' costs before domestic supply arrives.</p></details>
+  <details class="q"><summary>5. When does domestic CRGO supply arrive at scale?</summary><p>JSW-JFE's 350,000 TPA capacity is targeted for full commissioning in FY2028; until then more than 85% is imported.</p></details>
+  <details class="q"><summary>6. What were the basket's returns in 2023, 2024 and 2025?</summary><p>+235%, +218% and −35% — a small-cap shortage re-rating followed by a de-rating.</p></details>
+  <details class="q"><summary>7. Which seasonal window is the strongest in the Power family?</summary><p>October–December for transformers: 12 of 14 years, median +15.3 points.</p></details>
+  <details class="q"><summary>8. Why is the United States relevant to Indian transformer makers?</summary><p>It faces severe shortages and multi-year lead times, creating a large export opportunity.</p></details>
+  <details class="q"><summary>9. What is a price-variation clause?</summary><p>A contract term passing changes in steel and copper costs to the buyer — the key protection in a rising-input market.</p></details>
+  <details class="q"><summary>10. Why is Shilchar excluded from the basket?</summary><p>Its NSE price series only begins in November 2025, after it moved from BSE-only trading; its longer history needs to be joined from BSE.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of section members with sufficient history versus NSE:NIFTY, 2012 to 18 September 2026. Shilchar, Atlanta and Marsons are excluded for short series.</li>
+    <li>Voltamp: <a href="https://www.business-standard.com/markets/capital-market-news/voltamp-transformers-spurts-after-recording-pat-of-rs-91-crore-in-q1-fy27-126073100827_1.html">Q1 FY27 profit</a>; <a href="https://cofacto.ai/market-news/voltamp-q1-fy27-results-analysis">revenue growth and margin compression</a>; <a href="https://www.angelone.in/news/stocks/voltamp-transformers-share-price-gains-over-9-after-q1-fy27-earnings-results-total-income-up-27-5-yoy">total income, backlog and capacity plans</a>; <a href="https://powerpeakdigest.com/voltamp-fy26-revenue-2153-crore/">FY26 record revenue</a>.</li>
+    <li>Transformers &amp; Rectifiers: <a href="https://solarquarter.com/2026/07/21/transformers-rectifiers-india-reports-8-q1-fy27-revenue-growth-order-book-reaches-record-inr-6630-crore/">Q1 FY27 revenue and record order book</a>; <a href="https://www.energetica-india.net/news/transformers--rectifiers-india-reports-q1-fy27-revenue-growth-order-book-hits-record-high">order inflows, the Power Grid order and enquiries</a>; <a href="https://www.icicidirect.com/research/equity/trending-news/transformers-rectifiers-q1-pat-dips-47-but-order-book-hits-record-6-630-crore">profit and margin</a>.</li>
+    <li>Atlanta Electricals and Indo Tech: <a href="https://www.equitybulls.com/category.php?id=373246">Atlanta's Q1 FY27 results and order backlog</a>; <a href="https://transformer-magazine.com/news/atlanta-electricals-order-book-surges/">its order book growth</a>; <a href="https://scanx.trade/stock-market-news/companies/indo-tech-transformers-q1-results-net-profit-rises-to-257m-rupees-yoy/48026474">Indo Tech's Q1 FY27 results</a> — note that one outlet reported Indo Tech's rupee-million figures as crore; the figures here are the consistent ones.</li>
+    <li>CRGO and industry: <a href="https://www.smsteels.org/post/india-crgo-steel-supply-crisis-2026-transformer-manufacturers">India's CRGO shortage, import share and the anti-dumping probe</a>; <a href="https://www.deccanherald.com/business/transformer-steel-shortage-could-impact-indias-energy-ambitions-global-trade-research-initiative-3251784">GTRI's warning on transformer costs</a>; <a href="https://www.onemint.in/articles/india-transformer-grid-equipment-2026">the grid plan and transformation capacity to 2032</a>; <a href="https://www.pv-magazine-india.com/2026/05/12/u-s-transformer-market-faces-severe-supply-constraints/">US transformer supply constraints</a>; <a href="https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/">the global shortage</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -5.6}, {"y": 2013, "v": -20.0}, {"y": 2014, "v": 8.7}, {"y": 2015, "v": -2.7}, {"y": 2016, "v": -10.2}, {"y": 2017, "v": -5.2}, {"y": 2018, "v": -5.7}, {"y": 2019, "v": 1.6}, {"y": 2020, "v": -6.8}, {"y": 2021, "v": -15.1}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": -11.0}, {"y": 2024, "v": -2.1}, {"y": 2025, "v": -10.2}, {"y": 2026, "v": 8.3}], "AprJul": [{"y": 2012, "v": -4.1}, {"y": 2013, "v": -11.4}, {"y": 2014, "v": 81.1}, {"y": 2015, "v": 9.2}, {"y": 2016, "v": 14.0}, {"y": 2017, "v": -13.1}, {"y": 2018, "v": -26.4}, {"y": 2019, "v": -16.6}, {"y": 2020, "v": 0.6}, {"y": 2021, "v": 78.5}, {"y": 2022, "v": 21.8}, {"y": 2023, "v": 68.6}, {"y": 2024, "v": 75.5}, {"y": 2025, "v": 11.1}, {"y": 2026, "v": 27.2}], "AugSep": [{"y": 2012, "v": -7.3}, {"y": 2013, "v": -14.6}, {"y": 2014, "v": -1.1}, {"y": 2015, "v": -11.4}, {"y": 2016, "v": -11.1}, {"y": 2017, "v": 1.9}, {"y": 2018, "v": -22.0}, {"y": 2019, "v": -1.3}, {"y": 2020, "v": -6.3}, {"y": 2021, "v": -30.6}, {"y": 2022, "v": 19.0}, {"y": 2023, "v": 27.3}, {"y": 2024, "v": -14.6}, {"y": 2025, "v": -7.7}], "OctDec": [{"y": 2012, "v": 9.1}, {"y": 2013, "v": 26.8}, {"y": 2014, "v": 12.4}, {"y": 2015, "v": 45.3}, {"y": 2016, "v": 18.1}, {"y": 2017, "v": 6.3}, {"y": 2018, "v": 11.6}, {"y": 2019, "v": 1.2}, {"y": 2020, "v": 18.5}, {"y": 2021, "v": 40.9}, {"y": 2022, "v": -11.4}, {"y": 2023, "v": 34.2}, {"y": 2024, "v": 43.6}, {"y": 2025, "v": -20.3}], "SepNov": [{"y": 2012, "v": 12.0}, {"y": 2013, "v": 17.7}, {"y": 2014, "v": -0.1}, {"y": 2015, "v": 2.9}, {"y": 2016, "v": 22.9}, {"y": 2017, "v": -2.4}, {"y": 2018, "v": -6.6}, {"y": 2019, "v": -5.8}, {"y": 2020, "v": -11.1}, {"y": 2021, "v": 11.0}, {"y": 2022, "v": 12.3}, {"y": 2023, "v": 24.7}, {"y": 2024, "v": 16.1}, {"y": 2025, "v": -21.0}], "JanMar": [{"y": 2012, "v": 0.7}, {"y": 2013, "v": -29.9}, {"y": 2014, "v": -2.7}, {"y": 2015, "v": -11.2}, {"y": 2016, "v": -10.5}, {"y": 2017, "v": -0.5}, {"y": 2018, "v": -19.7}, {"y": 2019, "v": -6.7}, {"y": 2020, "v": 1.0}, {"y": 2021, "v": -23.7}, {"y": 2022, "v": -5.1}, {"y": 2023, "v": 4.3}, {"y": 2024, "v": 38.8}, {"y": 2025, "v": -28.3}, {"y": 2026, "v": -3.4}]}, "my": {"1": {"2012": 7.3, "2013": -12.8, "2014": -9.3, "2015": -8.9, "2016": -0.8, "2017": 4.9, "2018": -16.0, "2019": -7.6, "2020": 11.8, "2021": -9.7, "2022": -1.0, "2023": 17.2, "2024": 40.6, "2025": -20.2, "2026": -11.8}, "2": {"2012": 2.4, "2013": -16.3, "2014": -0.9, "2015": -11.4, "2016": -16.0, "2017": -5.8, "2018": 1.3, "2019": -4.1, "2020": 1.1, "2021": -6.5, "2022": 1.8, "2023": -6.5, "2024": -1.6, "2025": -14.9, "2026": 12.1}, "3": {"2012": -7.5, "2013": -4.7, "2014": 9.5, "2015": 9.2, "2016": 9.9, "2017": 0.8, "2018": -7.2, "2019": 6.3, "2020": -8.1, "2021": -8.5, "2022": -6.1, "2023": -4.9, "2024": -0.4, "2025": 7.2, "2026": -2.2}, "4": {"2012": -1.1, "2013": 15.7, "2014": 20.5, "2015": 1.9, "2016": 15.6, "2017": 6.5, "2018": 0.2, "2019": -6.0, "2020": -3.7, "2021": 9.0, "2022": 3.5, "2023": 11.9, "2024": 38.1, "2025": 0.6, "2026": 35.9}, "5": {"2012": -0.9, "2013": -9.7, "2014": 24.7, "2015": 3.9, "2016": 5.1, "2017": -7.6, "2018": -9.5, "2019": 5.2, "2020": 0.3, "2021": 19.2, "2022": 1.8, "2023": 34.9, "2024": 7.7, "2025": 6.9, "2026": -3.6}, "6": {"2012": -4.6, "2013": -6.7, "2014": 20.7, "2015": 6.6, "2016": 0.9, "2017": -5.3, "2018": -12.0, "2019": -9.4, "2020": 25.2, "2021": 27.5, "2022": 7.8, "2023": 6.5, "2024": 4.8, "2025": 9.5, "2026": 9.6}, "7": {"2011": 3.9, "2012": 2.2, "2013": -8.2, "2014": -3.9, "2015": -3.5, "2016": -8.2, "2017": -6.0, "2018": -4.3, "2019": -7.2, "2020": -17.3, "2021": 5.7, "2022": 7.7, "2023": 1.1, "2024": 8.4, "2025": -5.6, "2026": -11.5}, "8": {"2011": -1.7, "2012": -8.2, "2013": -6.9, "2014": 1.3, "2015": -8.9, "2016": -10.8, "2017": -3.2, "2018": -7.8, "2019": -3.0, "2020": 3.0, "2021": -26.4, "2022": -5.8, "2023": 20.1, "2024": -4.9, "2025": -2.0, "2026": 6.6}, "9": {"2011": 0.2, "2012": 1.7, "2013": -8.3, "2014": -2.4, "2015": -3.0, "2016": -0.5, "2017": 5.2, "2018": -15.5, "2019": 1.8, "2020": -8.7, "2021": -4.2, "2022": 25.1, "2023": 5.8, "2024": -10.0, "2025": -5.9}, "10": {"2011": -2.2, "2012": 16.1, "2013": 1.2, "2014": -4.6, "2015": 2.8, "2016": 12.8, "2017": -6.1, "2018": 3.6, "2019": -4.1, "2020": -5.9, "2021": 2.6, "2022": -1.4, "2023": 10.4, "2024": 16.2, "2025": -4.8}, "11": {"2011": -7.2, "2012": -6.6, "2013": 23.8, "2014": 7.3, "2015": 3.3, "2016": 10.5, "2017": -1.5, "2018": 7.7, "2019": -3.1, "2020": 5.6, "2021": 12.4, "2022": -10.7, "2023": 5.9, "2024": 10.4, "2025": -10.6}, "12": {"2011": -13.3, "2012": -0.2, "2013": -1.0, "2014": 9.0, "2015": 37.0, "2016": -4.9, "2017": 14.6, "2018": 0.3, "2019": 8.8, "2020": 17.4, "2021": 22.7, "2022": 0.8, "2023": 12.8, "2024": 13.7, "2025": -5.4}}, "basket": ["Voltamp Transformers Limited", "Transformers and Rectifiers (India) Limited", "Indo Tech Transformers Ltd.", "Danish Power Ltd.", "Mangal Electrical Industries Limited", "Supreme Power Equipment Ltd."], "nbasket": 6, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -0.3, "rel": -1.1, "hit": 5, "n": 15}, {"m": 2, "abs": -5.5, "rel": -4.4, "hit": 5, "n": 15}, {"m": 3, "abs": -0.6, "rel": -0.5, "hit": 6, "n": 15}, {"m": 4, "abs": 12.5, "rel": 9.9, "hit": 12, "n": 15}, {"m": 5, "abs": 6.4, "rel": 5.2, "hit": 10, "n": 15}, {"m": 6, "abs": 7.2, "rel": 5.4, "hit": 10, "n": 15}, {"m": 7, "abs": -1.0, "rel": -2.9, "hit": 6, "n": 16}, {"m": 8, "abs": -3.9, "rel": -3.7, "hit": 4, "n": 16}, {"m": 9, "abs": -0.6, "rel": -1.2, "hit": 6, "n": 15}, {"m": 10, "abs": 4.5, "rel": 2.4, "hit": 8, "n": 15}, {"m": 11, "abs": 4.1, "rel": 3.1, "hit": 9, "n": 15}, {"m": 12, "abs": 8.2, "rel": 7.5, "hit": 10, "n": 15}], "cy": [{"y": 2012, "b": 25.0, "n": 27.7, "rel": -2.7, "partial": false}, {"y": 2013, "b": -30.6, "n": 6.8, "rel": -37.4, "partial": false}, {"y": 2014, "b": 141.5, "n": 31.4, "rel": 110.1, "partial": false}, {"y": 2015, "b": 18.9, "n": -4.1, "rel": 23.0, "partial": false}, {"y": 2016, "b": 9.6, "n": 3.0, "rel": 6.6, "partial": false}, {"y": 2017, "b": 21.8, "n": 28.6, "rel": -6.9, "partial": false}, {"y": 2018, "b": -46.0, "n": 3.2, "rel": -49.2, "partial": false}, {"y": 2019, "b": -13.3, "n": 12.0, "rel": -25.4, "partial": false}, {"y": 2020, "b": 26.2, "n": 14.9, "rel": 11.3, "partial": false}, {"y": 2021, "b": 71.0, "n": 24.1, "rel": 46.8, "partial": false}, {"y": 2022, "b": 28.7, "n": 4.3, "rel": 24.3, "partial": false}, {"y": 2023, "b": 235.3, "n": 20.0, "rel": 215.3, "partial": false}, {"y": 2024, "b": 218.2, "n": 8.8, "rel": 209.4, "partial": false}, {"y": 2025, "b": -34.8, "n": 10.5, "rel": -45.3, "partial": false}, {"y": 2026, "b": 16.5, "n": -10.7, "rel": 27.2, "partial": true}], "dd": [{"co": "Atlanta Electricals", "peak": "Nov 2025", "fp": 54, "y1": 0}, {"co": "Voltamp Transformers", "peak": "Aug 2024", "fp": -25, "y1": 47}, {"co": "Transformers and Rectifiers (India)", "peak": "Jan 2025", "fp": -55, "y1": -46}, {"co": "Shilchar Technologies", "peak": "Nov 2025", "fp": -3, "y1": 0}, {"co": "Indo Tech Transformers", "peak": "Jan 2025", "fp": -6, "y1": 92}, {"co": "Danish Power", "peak": "Dec 2024", "fp": -18, "y1": 16}, {"co": "Mangal Electrical Industries", "peak": "Sep 2025", "fp": -51, "y1": -45}, {"co": "Supreme Power Equipment", "peak": "Jul 2024", "fp": -47, "y1": -7}, {"co": "Star Delta Transformers", "peak": "Apr 2024", "fp": -65, "y1": -26}, {"co": "ALFA Transformers", "peak": "Nov 2024", "fp": -80, "y1": -49}, {"co": "Tarapur Transformers", "peak": "Jan 2025", "fp": -75, "y1": -55}], "win": {"FebMar": {"mean": -5.3, "median": -5.6, "hit": 3, "n": 15}, "AprJul": {"mean": 21.1, "median": 11.1, "hit": 10, "n": 15}, "AugSep": {"mean": -5.7, "median": -7.5, "hit": 3, "n": 14}, "OctDec": {"mean": 16.9, "median": 15.3, "hit": 12, "n": 14}, "SepNov": {"mean": 5.2, "median": 6.9, "hit": 8, "n": 14}, "JanMar": {"mean": -6.4, "median": -5.1, "hit": 4, "n": 15}}, "ytd": {"b": 16.5, "n": -10.7}, "notes": {"2012": "+25.0% against the Nifty's +27.7%, on a three-stock basket of Voltamp, Transformers &amp; Rectifiers and Indo Tech. Transformer demand followed the tail end of the power capacity boom.", "2013": "\u221230.6% versus +6.8%. Utility ordering collapsed with the power sector's stress, and the rupee's fall raised imported steel costs.", "2014": "+141.5% versus +31.4%. The reform rally priced a grid build-out that took years to arrive.", "2015": "+18.9% versus \u22124.1%. Rural electrification and transmission tenders kept small makers busy.", "2016": "+9.6% versus +3.0%. A quiet year of thin margins and price competition.", "2017": "+21.8% versus +28.6%. Utility ordering improved but margins stayed thin.", "2018": "\u221246.0% versus +3.2%, the worst year in the record. Transformers &amp; Rectifiers \u221268% and Indo Tech \u221254% as the small-cap collapse met a weak order environment; Voltamp \u22123%.", "2019": "\u221213.3% versus +12.0%, median +3%. Transformers &amp; Rectifiers \u221246% again on losses; the others were flat.", "2020": "+26.2% versus +14.9%. Transformers &amp; Rectifiers +183% from a very low base as order books began to rebuild.", "2021": "+71.0% versus +24.1%. Indo Tech +100%, Transformers &amp; Rectifiers +75%, Voltamp +60% \u2014 the first leg of the grid upcycle.", "2022": "+28.7% versus +4.3%. Transformers &amp; Rectifiers +58%; the global transformer shortage was beginning to show in lead times.", "2023": "+235.3% versus +20.0%, one of the largest annual gains anywhere in this series. Transformers &amp; Rectifiers +314%, Indo Tech +267%, Voltamp +135%, on record orders and a worldwide shortage.", "2024": "+218.2% versus +8.8%. Transformers &amp; Rectifiers +393%, Indo Tech +338%, Supreme Power Equipment +135%. The shortage story reached peak enthusiasm, and several new makers listed.", "2025": "\u221234.8% versus +10.5%. The unwinding: Transformers &amp; Rectifiers \u221250%, Indo Tech \u221246%, as valuations met rising CRGO costs and new capacity announcements. Atlanta Electricals listed in September.", "2026": "+16.5% against a Nifty \u221210.7%, median +24%. Indo Tech +118%, Danish Power +58%, Voltamp +39%; Mangal Electrical \u221227%. Record order books and export demand against a 30% CRGO steel shortfall."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

@@ -1,0 +1,622 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apparel and Footwear Retail Primer</title>
+<meta name="description" content="Industry 49 of 278, returning to watchlist order: the brands and retailers that sell clothes, innerwear, ethnic wear and shoes to Indians. Value fashion beating premium, like-for-like growth in low single digits, a GST reset, a two-year de-rating, and the 42 listed companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Apparel &amp; Footwear Retail · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">The segments</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 49 of 278 · Consumer family, part 1</div>
+  <h1>Apparel &amp; Footwear Retail</h1>
+  <p class="lede">The companies that design, source and sell clothes and shoes in India: value chains like Zudio, premium brand houses like Louis Philippe and Van Heusen, ethnic-wear specialists like Manyavar, innerwear makers like Jockey's licensee, and footwear retailers from Bata to Metro. It is a business of stores, brands and inventory — and in 2026, of slow like-for-like growth after a long valuation boom.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 42 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Cement</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">982</div><div class="l">Zudio stores (including seven in the UAE) — the fastest-growing chain in Indian fashion</div></div>
+    <div class="stat"><div class="n">Low single digits</div><div class="l">Trent's like-for-like growth in Q1 FY27, despite revenue +19%</div></div>
+    <div class="stat"><div class="n">5% / 18%</div><div class="l">GST on apparel and footwear up to / above ₹2,500 since September 2025</div></div>
+    <div class="stat"><div class="n">−49% to −78%</div><div class="l">Trent, Bata, Manyavar and Go Fashion from their peaks</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Growth from new stores, not from existing ones</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A clothes company is part designer, part shopkeeper. It decides what shirts, kurtas or shoes people will want months from now, gets factories to make them, and puts them in shops. If it guesses right, everything sells at full price. If it guesses wrong, the clothes sit on shelves until the end-of-season sale, when they are sold cheaply. Some companies sell very cheap, trendy clothes to lots of people; others sell expensive brands to fewer people. Right now in India, the cheap-and-trendy shops are opening new stores everywhere, while people are not buying much more in each existing shop than they did last year.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian apparel and footwear retail is growing through store expansion while demand per store is flat to slightly positive.</p>
+    <ul>
+      <li><b>Value fashion leads:</b> Trent's revenue +19% to ₹5,666 cr with EBITDA +36%, on 982 Zudio stores — but like-for-like growth only in low single digits.</li>
+      <li><b>Premium and ethnic are slow:</b> Manyavar revenue +7% (same-store +3.8%), ABLBL +11%, Page +7.9% with volume +5.7%, Bata +4%.</li>
+      <li><b>Margins are being defended:</b> Manyavar at 44.6% EBITDA, Metro at 29.8%, Bata's profit +23% on premiumisation; ABFRL still loses money.</li>
+      <li><b>GST reset:</b> since September 2025, apparel and footwear up to ₹2,500 attract 5% GST and above that 18%, helping value retail and hurting premium price points.</li>
+      <li><b>The stocks have de-rated:</b> the basket is down in 2025 and 2026; most leaders are 30–78% below their peaks.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="The segments">
+  <p class="eyebrow">2 · The segments</p>
+  <h2>Six businesses with different economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>What it sells</th><th>Economics</th><th>Listed players</th></tr></thead><tbody>
+    <tr><td>Value fashion retail</td><td>Trend clothing at ₹300–1,000 in own stores</td><td>Low price, high volume, fast stock turns; store expansion drives growth</td><td>Trent (Zudio), Sai Silks (value lines), Cantabil, Go Fashion</td></tr>
+    <tr><td>Premium and mid-premium brands</td><td>Branded menswear, womenswear, casuals</td><td>Brand-led; sold through own stores, department stores and online</td><td>ABLBL (Louis Philippe, Van Heusen, Allen Solly, Peter England), Arvind Fashions, Raymond Lifestyle, Trent (Westside), Credo (Mufti)</td></tr>
+    <tr><td>Ethnic and wedding wear</td><td>Kurtas, sherwanis, sarees, lehengas</td><td>Very high gross margins; wedding-calendar driven</td><td>Vedant Fashions (Manyavar, Mohey), Sai Silks (Kalamandir), Purple Style Labs (Pernia's Pop-Up)</td></tr>
+    <tr><td>Innerwear and athleisure</td><td>Briefs, vests, bras, loungewear, T-shirts</td><td>Replenishment demand; distribution through dealers</td><td>Page (Jockey, Speedo licences), Lux, Dollar, Rupa, Lovable</td></tr>
+    <tr><td>Footwear</td><td>Shoes and sandals, own brands and multi-brand</td><td>Retail margins; BIS quality rules have raised the bar for imports</td><td>Bata, Metro Brands, Redtape, Sreeleathers</td></tr>
+    <tr><td>Wholesale brands and kidswear</td><td>Denim, winterwear, kidswear sold to dealers</td><td>Seasonal; working-capital heavy</td><td>Kewal Kiran, Monte Carlo, Iris, Karnika, Thomas Scott, Zodiac</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Think of a restaurant chain versus a single famous restaurant. The chain (Zudio) grows by opening another outlet every few days and keeping each one busy; the famous restaurant (a premium brand) grows by raising prices and filling tables at special occasions. Both can be excellent businesses, but in a year when fewer people eat out, the chain still grows because it opens new outlets — while the famous restaurant sees the slowdown immediately.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From fibre to the fitting room</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Fibre and fabric</h4><div class="an">The cloth</div>Cotton, polyester, viscose; spinning, weaving, knitting, dyeing.<div class="who">Textile mills (a later primer)</div><div class="m">Cotton and polyester prices set costs</div></div>
+    <div class="stage"><div class="no">02</div><h4>Design and sourcing</h4><div class="an">Choosing what to make</div>Deciding styles and quantities months ahead; contracting factories.<div class="who">Every brand; Trent's in-house design</div><div class="m">Forecasting errors become markdowns</div></div>
+    <div class="stage"><div class="no">03</div><h4>Manufacturing</h4><div class="an">The sewing</div>Cut-make-trim in own or contract factories.<div class="who">Page and innerwear makers own plants; most brands outsource</div><div class="m">Labour-intensive, low margin</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Brand</h4><div class="an">The name on the label</div>Marketing, licences and pricing power.<div class="who">Manyavar, Jockey (Page), Louis Philippe, Bata</div><div class="m">Where gross margin is earned</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Retail and distribution</h4><div class="an">The shop</div>Own stores, franchise stores, department stores, dealers, e-commerce.<div class="who">Trent, Metro, Bata, ABLBL, Page (dealers)</div><div class="m">Rent and staff are the big costs</div></div>
+    <div class="stage"><div class="no">06</div><h4>Customer</h4><div class="an">The wardrobe</div>Buys at festivals, weddings, the start of seasons and in sales.<div class="who">Urban and increasingly small-town India</div><div class="m">Discretionary: first cut when budgets tighten</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>The cloth:</b> cotton and polyester are spun and woven into fabric.</li>
+    <li><b>Choosing:</b> designers decide what styles to make, long before the season.</li>
+    <li><b>Sewing:</b> factories cut and stitch the clothes.</li>
+    <li><b>The name:</b> a brand makes people trust the clothes and pay more.</li>
+    <li><b>The shop:</b> the clothes go to shops, dealers and websites.</li>
+    <li><b>You:</b> people buy most at festivals, weddings and sales.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical number in fashion retail is like-for-like (same-store) growth, because it separates demand from expansion. A retailer opening stores can report 19% revenue growth while each store sells little more than last year, as Trent did this quarter. That growth is real, but it depends on finding new catchments and consumes capital in fit-outs, rent deposits and inventory. When like-for-like growth turns negative the whole model is at risk, because new stores cannibalise old ones. The second number is full-price sell-through: brands that sell most of their stock before the sale season earn far higher margins than those that rely on discounting.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 42 companies</h2>
+  <h3>The large retailers and brand houses</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Trent (~₹1.48 lakh cr)</td><td>Tata group: Zudio (value fashion), Westside (mid-premium), Star (food retail, separate) and other concepts.</td><td>Revenue ₹5,666 cr (+19%), operating EBITDA ₹847 cr (+36%), profit up 22–26% depending on the measure. 1,312 stores: 301 Westside, 982 Zudio (seven in the UAE), 29 others; net additions of 1 Westside and 19 Zudio, over 80% of new Zudio stores in tier-2 and tier-3 towns. Like-for-like growth in low single digits. Stock −1.0% in 2026, −49% from its October 2024 peak.</td></tr>
+    <tr><td>Page Industries (~₹38,283 cr)</td><td>Exclusive Indian licensee of Jockey and Speedo; innerwear and athleisure through dealers and its own stores.</td><td>Revenue ₹1,420 cr (+7.9%), volume +5.7% to 61.2 mn pieces, EBITDA ₹289 cr (−1.9%) at 20.3% against 22.4%, profit −4%; blamed logistics and manpower issues during a replenishment-system rollout. Guides 19–21% margin and double-digit volume growth for FY27. Stock +1.0%, −32% from its October 2022 peak.</td></tr>
+    <tr><td>Metro Brands (~₹25,770 cr)</td><td>Multi-brand footwear retailer (Metro, Mochi and Walkway, plus Crocs and Foot Locker stores).</td><td>Revenue ₹720 cr (+14.7%), EBITDA ₹215 cr (+10.4%) at 29.8%, gross margin near 60%, profit ₹94 cr (−3.6%); 1,041 stores in 222 cities. Stock −22.1%, −32% from its August 2024 peak.</td></tr>
+    <tr><td>Vedant Fashions (~₹13,484 cr)</td><td>Manyavar and Mohey — India's leading branded wedding and celebration wear.</td><td>Revenue ₹301 cr (+7.2%), retail sales ₹420 cr, same-store growth 3.8%, gross margin 65.7%, EBITDA ₹135 cr (+10.8%) at 44.6%, profit ₹81 cr (+14.7%). Stock −6.5%, −63% from its October 2022 peak.</td></tr>
+    <tr><td>Aditya Birla Lifestyle Brands (~₹10,052 cr)</td><td>Louis Philippe, Van Heusen, Allen Solly, Peter England and others; demerged from ABFRL and listed in June 2025.</td><td>Revenue ₹2,046 cr (+11%), EBITDA ₹327 cr at 16.0%, profit ₹29 cr (+21%). Stock −36.4%, −51% from its July 2025 peak.</td></tr>
+    <tr><td>Bata India (~₹8,113 cr)</td><td>India's largest footwear brand, now more than 2,000 exclusive outlets.</td><td>Revenue ₹979 cr (+4%), profit ₹64 cr (+23%), pre-tax profit +22% on premiumisation and volume; the stock rose 9% on results. Still −32.3% in 2026 and −71% from its November 2021 peak.</td></tr>
+    <tr><td>ABFRL (~₹6,053 cr)</td><td>Pantaloons, ethnic brands (Sabyasachi, Tasva, others) and luxury retail, after the lifestyle demerger.</td><td>Revenue ₹2,026 cr (+11%), EBITDA ₹167 cr at 8.2% against 9.3%, net loss ₹249 cr (6.4% wider); added 45+ stores; luxury +30%. Stock −34.7%.</td></tr>
+  </tbody></table></div>
+  <h3>Mid-sized and small companies</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>2026</th></tr></thead><tbody>
+    <tr><td>Redtape (~₹6,484 cr)</td><td>Footwear and apparel brand with own stores; demerged from Mirza International in 2023.</td><td>−5.3%, −51% from its October 2024 peak.</td></tr>
+    <tr><td>Arvind Fashions (~₹5,565 cr)</td><td>U.S. Polo Assn., Arrow, Flying Machine and other licensed and owned brands.</td><td>−14.2%.</td></tr>
+    <tr><td>Purple Style Labs (~₹4,362 cr)</td><td>Pernia's Pop-Up Shop — designer ethnic wear; listed September 2026.</td><td>Too short a record.</td></tr>
+    <tr><td>Raymond Lifestyle (~₹4,071 cr)</td><td>Raymond suiting fabrics, Park Avenue, ColorPlus and wedding wear; demerged in 2024.</td><td>−37.8%, −77% from its September 2024 peak.</td></tr>
+    <tr><td>Lux, Dollar, Rupa, Lovable (~₹100–3,100 cr)</td><td>Mass innerwear and hosiery through dealers.</td><td>Lux +2.3%; Dollar −22.2%; Rupa −14.2%; Lovable −14.3%. Lux is 75% below its 2021 peak.</td></tr>
+    <tr><td>Kewal Kiran (~₹3,001 cr)</td><td>Killer jeans and other denim brands.</td><td>−0.8%.</td></tr>
+    <tr><td>Cantabil (~₹1,998 cr)</td><td>Value-to-mid apparel retail in north India.</td><td>−14.0%.</td></tr>
+    <tr><td>Go Fashion (~₹1,597 cr)</td><td>Go Colors women's bottom-wear stores.</td><td>−33.8%, −78% from its October 2022 peak.</td></tr>
+    <tr><td>Sai Silks (Kalamandir) (~₹1,196 cr)</td><td>South Indian saree and ethnic retail.</td><td>−50.1%, −74% from its December 2023 peak.</td></tr>
+    <tr><td>Monte Carlo (~₹1,142 cr)</td><td>Winterwear and knitwear brand.</td><td>−13.5%.</td></tr>
+    <tr><td>Iris Clothings (~₹1,107 cr)</td><td>Kidswear manufacturer.</td><td>+70.1%, the section's best.</td></tr>
+    <tr><td>Sreeleathers (~₹697 cr)</td><td>Low-price footwear retail from Kolkata.</td><td>+30.7%.</td></tr>
+    <tr><td>Credo Brands (Mufti) (~₹473 cr)</td><td>Casual menswear brand.</td><td>−27.0%.</td></tr>
+    <tr><td>Karnika, Bizotic, Thomas Scott, C P S Shapers, Zodiac Clothing, VIP Clothing, Indian Terrain, Active Clothing and others</td><td>Small brands, manufacturers and SME listings.</td><td>Bizotic rose 626% in 2025 on a ₹674 cr value; treat the tail as illiquid.</td></tr>
+    <tr><td>Future Lifestyle Fashions (~₹23 cr)</td><td>The former Central and Brand Factory owner, now in insolvency.</td><td>Not investable.</td></tr>
+    <tr><td>Saraswati Saree Depot, Brand Concepts, Filatex Fashions, Veekayem, Kamadgiri, Mafia Trends, Scarnose, Mish Designs</td><td>Wholesalers, bag makers and textile firms — several look misclassified.</td><td>Review for reclassification.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">What is missing</span><p>Several of the largest names sit in other sections or are unlisted: Reliance Retail (Trends, Yousta), Avenue Supermarts, V-Mart and V2 Retail (value department stores), Shoppers Stop, Relaxo, Campus and Liberty (footwear), and Lifestyle and Max (Landmark Group, unlisted). Online, Myntra, Meesho and Nykaa Fashion compete directly.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Gross margin, store productivity and inventory discipline</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th>Gross margin</th><th>EBITDA margin (Q1 FY27)</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>Ethnic brand (franchise-heavy)</td><td>About 66%</td><td>44.6% (Manyavar)</td><td>Brand, wedding demand, franchisees bearing store costs</td></tr>
+    <tr><td>Footwear retail</td><td>About 60%</td><td>29.8% (Metro)</td><td>Full-price selling, store productivity</td></tr>
+    <tr><td>Innerwear brand</td><td>High</td><td>20.3% (Page)</td><td>Distribution reach, replenishment</td></tr>
+    <tr><td>Premium brand house</td><td>High</td><td>16.0% (ABLBL)</td><td>Brand portfolio, channel mix</td></tr>
+    <tr><td>Value fashion retail</td><td>Lower</td><td>About 15% (Trent, operating)</td><td>Stock turns, low rents, store expansion</td></tr>
+    <tr><td>Department and multi-format</td><td>Mixed</td><td>8.2% (ABFRL)</td><td>Scale, markdowns, lease costs</td></tr>
+  </tbody></table></div>
+  <p class="note">Reported EBITDA includes the effect of lease accounting (Ind AS 116), which moves rent below EBITDA; pre-Ind AS margins are lower, especially for store-heavy retailers.</p>
+  <h3>The levers</h3>
+  <ol>
+    <li><b>Like-for-like growth:</b> sales per existing store; the demand signal.</li>
+    <li><b>Store additions:</b> the growth engine for value retail, measured in stores and square feet.</li>
+    <li><b>Full-price sell-through:</b> the share of stock sold before discounting.</li>
+    <li><b>Inventory days:</b> slower turns mean more markdowns and working capital.</li>
+    <li><b>Channel mix:</b> own stores, franchises, department stores, dealers and online have very different margins.</li>
+    <li><b>Rent and staff:</b> the fixed costs that punish weak stores.</li>
+  </ol>
+  <div class="box ana"><span class="tag">Analogy</span><p>A fashion retailer is like a bakery that must decide in the morning how many cakes to bake. Bake too few and customers leave empty-handed; bake too many and the rest are sold half-price at closing time. The best retailers bake smaller batches more often — which is essentially what Zudio's fast-fashion model does.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Consumer discretionary spending</td><td>Clothes and shoes are among the first purchases cut</td><td>Subdued; like-for-like growth low single digits</td></tr>
+    <tr><td>Retail real estate</td><td>Store locations and rent</td><td>Expansion shifting to tier-2 and tier-3 towns</td></tr>
+    <tr><td>Cotton and polyester</td><td>Fabric costs</td><td>Commodity inflation offset part of the GST benefit</td></tr>
+    <tr><td>Brand licences</td><td>Jockey, Speedo, U.S. Polo, Van Heusen and others</td><td>Long-term licences are critical assets — and risks at renewal</td></tr>
+    <tr><td>Contract manufacturing capacity</td><td>Most brands outsource</td><td>Ample</td></tr>
+    <tr><td>Design and merchandising talent</td><td>Getting trends and quantities right</td><td>The core capability of fast fashion</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Festivals, weddings and end-of-season sales</h2>
+  <ul>
+    <li><b>April–June:</b> summer season launches and the April–May wedding window; end-of-season sales from late June.</li>
+    <li><b>July–September:</b> the monsoon lull, then festive stocking begins.</li>
+    <li><b>October–December:</b> Dussehra, Diwali and the peak wedding season — the most important quarter for ethnic wear and footwear.</li>
+    <li><b>January–March:</b> winter end-of-season sales, fewer wedding dates in some years, and the weakest margins.</li>
+    <li><b>Wedding dates:</b> the number of auspicious dates in a quarter moves ethnic-wear sales sharply from year to year.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 24 names (Trent Limited, Page Industries Limited, Metro Brands Ltd., Vedant Fashions Limited, Aditya Birla Lifestyle Brands Limited, Bata India Ltd, Redtape Limited, Aditya Birla Fashion and Retail Ltd, Arvind Fashions Ltd., Raymond Lifestyle Limited, Lux Industries Ltd., Kewal Kiran Clothing Limited, Cantabil Retail India Limited, Go Fashion (India) Limited, Dollar Industries Ltd., Sai Silks (Kalamandir) Ltd., Monte Carlo Fashions Ltd., Iris Clothings Ltd., Rupa &amp; Co. Ltd., Karnika Industries Ltd., Sreeleathers Ltd., Bizotic Commercial Ltd., Credo Brands Marketing Limited, Thomas Scott (India) Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +3.0 pts (beat in 10 of 15 years); Dec +2.5 pts (beat in 12 of 15 years); Jun +2.4 pts (beat in 10 of 15 years).</li><li><b>Weakest months:</b> Jan -2.5 pts (beat in 6 of 15 years); Mar -1.7 pts (beat in 4 of 15 years); Oct -0.9 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 6 of 15 years (median -1.0 pts); Apr–Jul beat the Nifty in 11 of 15 years (median +8.3 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +0.7 pts); Oct–Dec beat the Nifty in 10 of 14 years (median +3.9 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +1.7 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -5.1 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about 0.0 points.</p><p><b>Reading it:</b> a moderate pattern that follows the Indian shopping calendar. April–July has beaten the Nifty in 11 of 15 years (median +8.3 points) and October–December in 10 of 14 (median +3.9), with December the most reliable single month (12 of 15, +2.5 points) as festive and wedding sales are reported. January–March is the weak stretch — 4 of 15 years, median −5.1 — when end-of-season sales cut margins and the winter quarter's results are digested.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed in 2019 (−19.4), 2020 (−13.8), 2018 (−9.2) and 2012 (−1.0)</b>: two small-cap sell-offs and the Covid lockdown that shut every store. The best runs were 2021 (+35.9) and 2015 (+15.7).</li>
+    <li><b>October–December failed in 2025 (−12.2), 2022 (−10.2) and 2019 (−5.0)</b> — each a year when festive demand disappointed.</li>
+    <li><b>January–March has failed in 11 of 15 years</b>, worst in 2025 (−19.9), 2026 (−11.0) and 2023 (−10.9); it worked only in 2019, 2022, 2020 and 2021.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The calendar matches the business: margins are weakest in the January–March end-of-season-sale quarter, and the festive and wedding quarter is when brands make their year. Treat January–March weakness as the more reliable half of the pattern — it has held in each of the last four years — and the April–July strength as a tendency.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Discretionary income:</b> urban wage growth, inflation and household budgets.</li>
+    <li><b>Store expansion:</b> especially value retail in smaller towns.</li>
+    <li><b>Wedding and festival calendars:</b> ethnic wear and footwear peaks.</li>
+    <li><b>GST slabs:</b> the ₹2,500 threshold now separates 5% and 18%.</li>
+    <li><b>Fabric costs:</b> cotton and polyester prices.</li>
+    <li><b>Discounting intensity:</b> online marketplaces and end-of-season sales.</li>
+    <li><b>Quick commerce and online:</b> changing where basics and footwear are bought.</li>
+    <li><b>Quality rules:</b> BIS quality-control orders for footwear favour organised makers.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of section members with at least a year of history and market value above ₹300 cr — six in 2012, 24 by 2026 as Metro, Manyavar, Redtape, ABLBL and others listed. Monthly returns capped at ±50%, price only; 2026 to 18 September. All members were checked for unadjusted splits; the ABFRL series is correctly adjusted for the 2025 demerger.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The brand re-rating</b> (2012–2017): organised brands took share from unorganised tailors and local shops, helped by GST in 2017; +70% that year.</li>
+    <li><b>The small-cap bust</b> (2018–2019): falls of 50%+ in small apparel names.</li>
+    <li><b>Covid and reopening</b> (2020–2021): stores shut, then a surge in demand and a small-cap boom (+94% in 2021).</li>
+    <li><b>The value-retail boom</b> (2022–2024): Zudio's expansion made Trent the sector's defining stock (+126% and +133%).</li>
+    <li><b>The de-rating</b> (2025–2026): weak like-for-like growth, a GST reset and stretched valuations; most leaders 30–78% below their peaks.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Store growth can mask weak demand</b> for a long time — until like-for-like growth turns.</li>
+    <li><b>High-margin franchise models re-rate furthest and fall furthest</b> (Manyavar −63% from peak).</li>
+    <li><b>Innerwear follows cotton:</b> Lux −55% in 2022 when cotton spiked.</li>
+    <li><b>IPOs arrive at peaks:</b> Go Fashion (2021), Sai Silks (2023), Credo (2023) are all well below listing-era highs.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Fast fashion won the world; India is building its own</h2>
+  <p>Globally, apparel retail has been reshaped by fast fashion — Inditex (Zara) and H&amp;M with short design-to-shelf cycles — and then by ultra-cheap online sellers such as Shein. India's version of that story is Zudio: a low-price, fast-turning chain that grows by opening stores in towns other brands overlooked. Foreign chains (Zara via a Tata partnership, H&amp;M, Uniqlo) operate in India but at higher price points. Shein returned in 2025 through a licensing arrangement with Reliance Retail. The Indian market remains more fragmented and more ethnic-wear-heavy than most, which is why specialists like Manyavar and Kalamandir exist at scale.</p>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From tailors to brands</b> (1990s–2010s): ready-made garments displaced custom tailoring.</li>
+    <li><b>From department stores to exclusive brand outlets and value chains</b> (2010s–2020s).</li>
+    <li><b>From premium to value</b> (2022–2026): Zudio's growth versus flat premium like-for-like.</li>
+    <li><b>From offline to omnichannel:</b> marketplaces, brand websites and now quick commerce for basics.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Automated replenishment:</b> Page's Advanced Retail Scheme links dealer stock to actual sales.</li>
+    <li><b>Demand forecasting and data-led design:</b> smaller batches, faster reorders.</li>
+    <li><b>Omnichannel inventory:</b> one stock pool for stores and online.</li>
+    <li><b>RFID and store analytics:</b> faster counts and fewer lost sales.</li>
+    <li><b>Quick commerce for basics:</b> innerwear, socks and slippers in minutes.</li>
+    <li><b>Social commerce:</b> Instagram-led discovery, especially for designer ethnic wear.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>GST on apparel and footwear</td><td>5% up to ₹2,500 per piece, 18% above, since September 2025</td><td>Helps value retail; raises prices above ₹2,500</td></tr>
+    <tr><td>BIS quality-control orders for footwear</td><td>In force for larger manufacturers</td><td>Raises standards; restricts cheap imports</td></tr>
+    <tr><td>Import duties on garments and footwear</td><td>Ongoing</td><td>Protects domestic brands from Chinese and Bangladeshi imports</td></tr>
+    <tr><td>Retail FDI rules</td><td>Single-brand retail open with sourcing conditions</td><td>Foreign chains enter via own stores or partnerships</td></tr>
+    <tr><td>Shops and establishments rules</td><td>State-level; longer opening hours allowed in many states</td><td>Store productivity</td></tr>
+    <tr><td>Lease accounting (Ind AS 116)</td><td>Since 2019</td><td>Changes how retailer EBITDA is reported</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: expansion without acceleration</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Like-for-like demand</td><td>Weak</td><td>Trent low single digits; Manyavar same-store +3.8%</td></tr>
+    <tr><td>Store expansion</td><td>Continuing</td><td>Zudio +19 net; Metro 1,041 stores; Bata over 2,000 outlets; ABFRL 45+ stores</td></tr>
+    <tr><td>Margins</td><td>Defended at the leaders</td><td>Manyavar 44.6%, Metro 29.8%; Page down 210 bps</td></tr>
+    <tr><td>Losses</td><td>Persisting at ABFRL</td><td>₹249 cr net loss</td></tr>
+    <tr><td>Stocks</td><td>De-rated</td><td>Basket down in 2025 and 2026; leaders 30–78% below peaks</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The sector's long re-rating assumed that rising incomes would lift spending per store for years. That has not happened in 2025–26: growth is coming from new stores and new towns, not from existing ones. The market has responded by cutting valuations across the board, including for the best operators. The businesses that deserve attention now are those that keep margins and cash flow intact while demand is flat — Metro, Manyavar and, on its turnaround, Bata — and the one that is still compounding stores at high returns, Trent, if its like-for-like growth recovers. The ones to be careful with are loss-making or highly leveraged multi-brand retailers and the illiquid small caps, several of which have fallen 70% or more.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Like-for-like / same-store growth</td><td>Quarterly disclosures</td><td>The demand signal</td></tr>
+    <tr><td>Store additions and closures</td><td>Quarterly</td><td>Growth engine and its health</td></tr>
+    <tr><td>Inventory days and markdowns</td><td>Half-yearly balance sheets</td><td>Risk of discounting</td></tr>
+    <tr><td>Wedding dates per quarter</td><td>Almanac calendars</td><td>Ethnic-wear seasonality</td></tr>
+    <tr><td>Festive-season sales commentary</td><td>October–November</td><td>The most important quarter</td></tr>
+    <tr><td>Cotton and polyester prices</td><td>Monthly</td><td>Input costs</td></tr>
+    <tr><td>Online marketplace sale events</td><td>Event calendar</td><td>Discount pressure</td></tr>
+    <tr><td>Urban consumption data</td><td>Credit-card spend, GST collections</td><td>Discretionary demand</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Textiles and garment exports:</b> the upstream mills and contract makers (a later primer).</li>
+    <li><b>E-commerce and internet retail</b> (a later primer): Myntra's and Nykaa's fashion businesses.</li>
+    <li><b>Jewellery retail</b> (a later primer): the same wedding calendar.</li>
+    <li><b>Department stores and hypermarkets:</b> V-Mart, V2 Retail, Shoppers Stop, DMart.</li>
+    <li><b>Malls and retail real estate:</b> the landlords.</li>
+    <li><b>Petrochemicals</b> (002): polyester feedstock.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What was like-for-like growth, and how did it split between transactions and ticket size?</li>
+    <li>How many stores opened and closed, and what is the payback on new stores?</li>
+    <li>What share of sales was at full price, and how did end-of-season discounting compare with last year?</li>
+    <li>What are inventory days, and how much stock is more than one season old?</li>
+    <li>How has the GST change affected sales above and below ₹2,500?</li>
+    <li>What is the pre-Ind AS EBITDA margin?</li>
+    <li>How much of growth is from tier-2 and tier-3 towns, and how do those stores perform?</li>
+    <li>(Licensees) When do key brand licences come up for renewal?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Negative like-for-like growth masked by store additions.</li>
+    <li>Inventory growing faster than sales.</li>
+    <li>Rising franchise receivables.</li>
+    <li>Repeated one-off markdown charges.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Revenue growth of 19% means demand is strong."</td><td>Trent's like-for-like growth was in low single digits; the rest was new stores.</td></tr>
+    <tr><td>"Premiumisation is India's consumption story."</td><td>In 2026 value retail is growing fastest; the GST change raised prices above ₹2,500.</td></tr>
+    <tr><td>"Great brands are always worth their multiples."</td><td>Manyavar keeps a 44.6% margin and is still 63% below its peak.</td></tr>
+    <tr><td>"Online will kill physical stores."</td><td>Store networks are still expanding fast; online is taking share mainly in basics and discounted fashion.</td></tr>
+    <tr><td>"Bata is a declining brand."</td><td>Its profit rose 23% this quarter on premiumisation and volume, though the stock is 71% below its 2021 peak.</td></tr>
+    <tr><td>"The sector is seasonal around Diwali."</td><td>October–December beats the Nifty 10 of 14 times, but the more reliable signal is January–March weakness (4 of 15).</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. LFL, EBO" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Retail</h3><dl>
+    <dt>Like-for-like (LFL) growth</dt><dd>Sales growth in stores open for a full comparable period.</dd>
+    <dt>Same-store sales growth (SSSG)</dt><dd>Another name for like-for-like growth.</dd>
+    <dt>Retail sales versus revenue</dt><dd>Sales to end-customers across all stores, versus the company's own revenue (lower where franchisees own stores).</dd>
+    <dt>EBO</dt><dd>Exclusive brand outlet — a store selling one brand.</dd>
+    <dt>MBO</dt><dd>Multi-brand outlet — an independent shop stocking several brands.</dd>
+    <dt>LFS</dt><dd>Large-format store — department stores such as Shoppers Stop or Lifestyle.</dd>
+    <dt>Shop-in-shop</dt><dd>A branded counter inside a department store.</dd>
+    <dt>COCO</dt><dd>Company-owned, company-operated store.</dd>
+    <dt>FOFO</dt><dd>Franchise-owned, franchise-operated store.</dd>
+    <dt>FOCO</dt><dd>Franchise-owned, company-operated store.</dd>
+    <dt>Catchment</dt><dd>The area a store draws customers from.</dd>
+    <dt>Revenue per square foot</dt><dd>Store productivity.</dd>
+    <dt>Store payback</dt><dd>How long a new store takes to earn back its investment.</dd>
+    <dt>Cannibalisation</dt><dd>A new store taking sales from an existing one nearby.</dd>
+    <dt>Tier-2 and tier-3 towns</dt><dd>Smaller cities, where value retail is expanding.</dd>
+    <dt>Omnichannel</dt><dd>Selling through stores, websites and apps from shared inventory.</dd>
+    <dt>D2C</dt><dd>Direct-to-consumer brands selling through their own websites.</dd>
+    <dt>Marketplace</dt><dd>An online platform where many sellers list, such as Myntra.</dd>
+    <dt>Quick commerce</dt><dd>Delivery in minutes from dark stores; growing for basics.</dd>
+  </dl>
+  <h3>Merchandise and margins</h3><dl>
+    <dt>Value fashion</dt><dd>Trend clothing at low prices, sold in high volumes.</dd>
+    <dt>Fast fashion</dt><dd>Short design-to-shelf cycles with frequent new styles.</dd>
+    <dt>Premiumisation</dt><dd>Customers trading up to pricier products.</dd>
+    <dt>Private label</dt><dd>A retailer's own brand, such as Zudio or Westside.</dd>
+    <dt>Brand licence</dt><dd>The right to use a foreign brand in India, for a royalty (Jockey, U.S. Polo).</dd>
+    <dt>Full-price sell-through</dt><dd>The share of stock sold before discounts.</dd>
+    <dt>Markdown</dt><dd>A price cut to clear stock.</dd>
+    <dt>End-of-season sale (EOSS)</dt><dd>The twice-yearly clearance sales.</dd>
+    <dt>Inventory days</dt><dd>How long stock sits before it sells.</dd>
+    <dt>Replenishment</dt><dd>Restocking best-sellers based on sales; Page's Advanced Retail Scheme is an example.</dd>
+    <dt>Primary versus secondary sales</dt><dd>Sales to dealers versus dealers' sales to customers.</dd>
+    <dt>Cut-make-trim (CMT)</dt><dd>Garment manufacturing where the brand supplies fabric and design.</dd>
+    <dt>Athleisure</dt><dd>Sports-inspired clothing worn every day.</dd>
+    <dt>Ethnic wear</dt><dd>Traditional Indian clothing — kurtas, sherwanis, sarees, lehengas.</dd>
+    <dt>Wedding dates (muhurat)</dt><dd>Auspicious dates that concentrate wedding shopping.</dd>
+    <dt>Ticket size</dt><dd>Average spend per bill.</dd>
+    <dt>Conversion rate</dt><dd>The share of store visitors who buy.</dd>
+  </dl>
+  <h3>Accounting and policy</h3><dl>
+    <dt>Ind AS 116</dt><dd>Lease accounting that moves rent below EBITDA, inflating reported margins.</dd>
+    <dt>Pre-Ind AS EBITDA</dt><dd>EBITDA after deducting rent — the comparable measure across retailers.</dd>
+    <dt>GST slab</dt><dd>The tax rate band; apparel and footwear at 5% up to ₹2,500 and 18% above.</dd>
+    <dt>BIS quality-control order</dt><dd>A mandatory quality standard, now applied to footwear.</dd>
+    <dt>Demerger</dt><dd>Splitting a business into a separately listed company — ABLBL from ABFRL, Raymond Lifestyle from Raymond (see 028).</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Drawdown from peak, book-to-bill</dt><dd>See 029.</dd>
+    <dt>Polyester and petrochemicals</dt><dd>See 002.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why can revenue grow 19% while demand is weak?</summary><p>New stores add revenue; like-for-like growth, which measures existing stores, was in low single digits at Trent.</p></details>
+  <details class="q"><summary>2. How did GST change in September 2025?</summary><p>Apparel and footwear up to ₹2,500 per piece moved to 5%; above ₹2,500 they attract 18%.</p></details>
+  <details class="q"><summary>3. Why does Manyavar have a 44.6% EBITDA margin?</summary><p>Very high gross margins on wedding wear and a franchise model in which franchisees bear most store costs.</p></details>
+  <details class="q"><summary>4. What is full-price sell-through?</summary><p>The share of inventory sold before discounting — the key to fashion margins.</p></details>
+  <details class="q"><summary>5. Why did Page's margin fall?</summary><p>Logistics and manpower disruption during its replenishment-system rollout; EBITDA margin 20.3% against 22.4%.</p></details>
+  <details class="q"><summary>6. What is the most reliable seasonal signal?</summary><p>January–March weakness: the basket beat the Nifty in only 4 of 15 years.</p></details>
+  <details class="q"><summary>7. What does Ind AS 116 do to retailer margins?</summary><p>It moves rent below EBITDA, making reported margins higher than pre-Ind AS margins.</p></details>
+  <details class="q"><summary>8. What happened to ABFRL in 2025?</summary><p>Its lifestyle brands were demerged into ABLBL; the remaining company still reported a ₹249 cr loss this quarter.</p></details>
+  <details class="q"><summary>9. Where is Zudio expanding?</summary><p>More than 80% of new stores in Q1 FY27 were in tier-2 and tier-3 towns and peripheral markets.</p></details>
+  <details class="q"><summary>10. Why did innerwear stocks fall in 2022?</summary><p>Cotton prices spiked and demand faded; Lux fell 55%.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket versus NSE:NIFTY, 2012 to 18 September 2026; members screened for unadjusted splits.</li>
+    <li>Trent: <a href="https://www.businessworld.in/article/trent-s-q1-revenue-grows-19-to-rs-5-666-cr-zudio-s-expansion-continues-613620">Q1 FY27 revenue and stores</a>; <a href="https://www.business-standard.com/amp/companies/quarterly-results/indian-fashion-retailer-trent-s-quarterly-profit-jumps-on-expansion-spree-126080601224_1.html">profit</a>; <a href="https://www.storyboard18.com/brand-makers/trent-adds-22-zudio-stores-in-q1-over-80-of-new-outlets-in-tier-ii-iii-markets-ws-l-106875.htm">tier-2 and tier-3 expansion</a>.</li>
+    <li>Page, Metro, Bata: <a href="https://www.investing.com/news/company-news/page-industries-q1-fy27-slides-revenue-up-79-margins-compress-93CH-4857607">Page Q1 FY27</a>; <a href="https://www.sahi.com/news/page-industries-targets-double-digit-full-year-volume-growth-despite-q1-5-7-growth-headwinds-2848-PE1_COR">Page guidance</a>; <a href="https://www.investing.com/news/company-news/metro-brands-q1-fy27-slides-1000-stores-reached-as-margins-compress-93CH-4837265">Metro Q1 FY27</a>; <a href="https://www.indianretailer.com/news/retail-india-news-bata-india-reports-23-pc-pat-growth-q1-fy27">Bata Q1 FY27</a>; <a href="https://upstox.com/news/market-news/stocks/bata-india-shares-rally-9-on-reporting-strong-q1-fy-27-led-by-premiumisation-volume-growth-1/article-198514/">Bata premiumisation</a>.</li>
+    <li>Vedant, ABLBL, ABFRL: <a href="https://www.investing.com/news/company-news/vedant-fashions-q1-fy27-slides-profit-surges-despite-modest-sales-93CH-4813626">Vedant Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/vedant-fashions-q1-results-net-profit-rises-14-7-to-806-crore/46635539">Vedant margins</a>; <a href="https://www.equitybulls.com/category.php?id=373904">ABLBL Q1 FY27</a>; <a href="https://www.kotakneo.com/news/stocks/abfrl-q1-fy-27-results-revenue-up-11-to-rs-2026-crore/">ABFRL Q1 FY27</a>; <a href="https://hdfcsky.com/news/abfrl-q1-fy27-loss-revenue-growth">ABFRL loss</a>.</li>
+    <li>GST and market: <a href="https://www.pinelabs.com/blog/gst-on-garments-and-fabrics-in-2026-everything-you-need-to-know">GST on garments</a>; <a href="https://textilefocus.com/6-gst-increase-delay-apparel-market-recovery-india/">effect above ₹2,500</a>; <a href="https://www.businessworld.in/article/india-online-retail-set-to-cross-90-bn-in-2026-as-quick-commerce-value-commerce-drive-growth-624395">online and quick commerce</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 2.0}, {"y": 2013, "v": -0.0}, {"y": 2014, "v": -7.3}, {"y": 2015, "v": 0.8}, {"y": 2016, "v": -11.0}, {"y": 2017, "v": 1.8}, {"y": 2018, "v": 1.6}, {"y": 2019, "v": 8.5}, {"y": 2020, "v": -1.0}, {"y": 2021, "v": 0.7}, {"y": 2022, "v": -1.5}, {"y": 2023, "v": -6.7}, {"y": 2024, "v": -8.2}, {"y": 2025, "v": -10.6}, {"y": 2026, "v": -6.9}], "AprJul": [{"y": 2012, "v": -1.0}, {"y": 2013, "v": 8.6}, {"y": 2014, "v": 8.3}, {"y": 2015, "v": 15.7}, {"y": 2016, "v": 4.3}, {"y": 2017, "v": 11.8}, {"y": 2018, "v": -9.2}, {"y": 2019, "v": -19.4}, {"y": 2020, "v": -13.8}, {"y": 2021, "v": 35.9}, {"y": 2022, "v": 6.6}, {"y": 2023, "v": 12.6}, {"y": 2024, "v": 4.9}, {"y": 2025, "v": 12.9}, {"y": 2026, "v": 9.8}], "AugSep": [{"y": 2012, "v": -3.5}, {"y": 2013, "v": -3.6}, {"y": 2014, "v": 1.4}, {"y": 2015, "v": -8.9}, {"y": 2016, "v": -0.4}, {"y": 2017, "v": 2.9}, {"y": 2018, "v": -0.4}, {"y": 2019, "v": 1.8}, {"y": 2020, "v": 8.3}, {"y": 2021, "v": -5.4}, {"y": 2022, "v": 14.9}, {"y": 2023, "v": 6.9}, {"y": 2024, "v": 2.5}, {"y": 2025, "v": 0.1}], "OctDec": [{"y": 2012, "v": 1.1}, {"y": 2013, "v": 9.4}, {"y": 2014, "v": 9.0}, {"y": 2015, "v": 12.3}, {"y": 2016, "v": 1.1}, {"y": 2017, "v": 18.0}, {"y": 2018, "v": 1.8}, {"y": 2019, "v": -5.0}, {"y": 2020, "v": 5.9}, {"y": 2021, "v": 20.5}, {"y": 2022, "v": -10.2}, {"y": 2023, "v": -0.0}, {"y": 2024, "v": 8.3}, {"y": 2025, "v": -12.2}], "SepNov": [{"y": 2012, "v": -8.5}, {"y": 2013, "v": 4.2}, {"y": 2014, "v": 4.8}, {"y": 2015, "v": 3.3}, {"y": 2016, "v": -1.6}, {"y": 2017, "v": 7.4}, {"y": 2018, "v": -4.2}, {"y": 2019, "v": -9.5}, {"y": 2020, "v": 0.2}, {"y": 2021, "v": 23.4}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": 10.6}, {"y": 2024, "v": 6.1}, {"y": 2025, "v": -7.4}], "JanMar": [{"y": 2012, "v": -2.5}, {"y": 2013, "v": -7.9}, {"y": 2014, "v": -5.1}, {"y": 2015, "v": -5.7}, {"y": 2016, "v": -8.8}, {"y": 2017, "v": -1.0}, {"y": 2018, "v": -7.2}, {"y": 2019, "v": 5.7}, {"y": 2020, "v": 2.2}, {"y": 2021, "v": 1.7}, {"y": 2022, "v": 2.7}, {"y": 2023, "v": -10.9}, {"y": 2024, "v": -5.1}, {"y": 2025, "v": -19.9}, {"y": 2026, "v": -11.0}]}, "my": {"1": {"2012": -4.5, "2013": -8.4, "2014": 1.8, "2015": -6.7, "2016": 1.8, "2017": -2.7, "2018": -9.5, "2019": -2.4, "2020": 4.5, "2021": 0.9, "2022": 4.2, "2023": -4.8, "2024": 3.4, "2025": -10.5, "2026": -5.3}, "2": {"2012": 0.9, "2013": 2.7, "2014": -0.4, "2015": -2.6, "2016": -7.2, "2017": 2.0, "2018": 1.8, "2019": 4.3, "2020": 7.7, "2021": 3.9, "2022": -5.9, "2023": -5.7, "2024": -2.3, "2025": -5.5, "2026": -4.1}, "3": {"2012": 1.1, "2013": -2.8, "2014": -6.7, "2015": 3.3, "2016": -3.6, "2017": -0.3, "2018": -0.2, "2019": 3.8, "2020": -6.8, "2021": -2.9, "2022": 5.1, "2023": -1.0, "2024": -6.0, "2025": -5.3, "2026": -3.4}, "4": {"2012": 2.2, "2013": 2.1, "2014": -0.0, "2015": 6.2, "2016": 4.7, "2017": 2.5, "2018": 1.8, "2019": -4.1, "2020": -3.3, "2021": -0.5, "2022": 10.3, "2023": 6.0, "2024": 7.0, "2025": -1.1, "2026": 10.6}, "5": {"2012": 2.2, "2013": 3.2, "2014": -1.4, "2015": 6.3, "2016": -5.2, "2017": -1.2, "2018": -3.9, "2019": -9.1, "2020": -4.9, "2021": 11.0, "2022": -4.8, "2023": 2.2, "2024": -3.4, "2025": 6.8, "2026": 1.7}, "6": {"2012": -6.2, "2013": -2.4, "2014": 11.1, "2015": -5.2, "2016": 3.2, "2017": 11.2, "2018": -5.4, "2019": 1.1, "2020": 10.6, "2021": 9.4, "2022": 0.4, "2023": 3.5, "2024": -1.5, "2025": 2.8, "2026": 2.8}, "7": {"2011": 10.1, "2012": 0.5, "2013": 5.6, "2014": -1.8, "2015": 8.2, "2016": 1.4, "2017": -1.8, "2018": -0.7, "2019": -9.2, "2020": -12.8, "2021": 11.3, "2022": 1.2, "2023": -0.5, "2024": 2.6, "2025": 3.4, "2026": -5.3}, "8": {"2011": 9.2, "2012": -1.1, "2013": -0.9, "2014": -2.5, "2015": -4.5, "2016": -1.1, "2017": 3.3, "2018": 2.5, "2019": 4.0, "2020": 8.2, "2021": -10.1, "2022": 5.6, "2023": 4.1, "2024": -0.6, "2025": -1.7, "2026": -0.3}, "9": {"2011": 0.3, "2012": -2.3, "2013": -2.8, "2014": 3.8, "2015": -5.0, "2016": 0.6, "2017": -0.4, "2018": -2.5, "2019": -2.3, "2020": 0.2, "2021": 5.1, "2022": 8.8, "2023": 2.7, "2024": 3.1, "2025": 1.8}, "10": {"2011": -8.3, "2012": -1.8, "2013": -3.8, "2014": -6.5, "2015": 3.6, "2016": 1.9, "2017": 1.1, "2018": -0.5, "2019": -3.4, "2020": -2.4, "2021": 7.3, "2022": -4.3, "2023": 3.2, "2024": 4.0, "2025": -3.4}, "11": {"2011": -2.2, "2012": -4.0, "2013": 10.2, "2014": 7.5, "2015": 4.8, "2016": -4.0, "2017": 6.4, "2018": -1.3, "2019": -3.5, "2020": 2.6, "2021": 9.4, "2022": -8.5, "2023": 4.1, "2024": -1.0, "2025": -5.5}, "12": {"2011": -6.3, "2012": 7.0, "2013": 1.8, "2014": 7.7, "2015": 3.3, "2016": 3.6, "2017": 8.8, "2018": 3.7, "2019": 2.1, "2020": 5.2, "2021": 2.7, "2022": 2.5, "2023": -7.4, "2024": 5.5, "2025": -3.2}}, "basket": ["Trent Limited", "Page Industries Limited", "Metro Brands Ltd.", "Vedant Fashions Limited", "Aditya Birla Lifestyle Brands Limited", "Bata India Ltd", "Redtape Limited", "Aditya Birla Fashion and Retail Ltd", "Arvind Fashions Ltd.", "Raymond Lifestyle Limited", "Lux Industries Ltd.", "Kewal Kiran Clothing Limited", "Cantabil Retail India Limited", "Go Fashion (India) Limited", "Dollar Industries Ltd.", "Sai Silks (Kalamandir) Ltd.", "Monte Carlo Fashions Ltd.", "Iris Clothings Ltd.", "Rupa & Co. Ltd.", "Karnika Industries Ltd.", "Sreeleathers Ltd.", "Bizotic Commercial Ltd.", "Credo Brands Marketing Limited", "Thomas Scott (India) Limited"], "nbasket": 24, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -1.8, "rel": -2.5, "hit": 6, "n": 15}, {"m": 2, "abs": -1.9, "rel": -0.7, "hit": 7, "n": 15}, {"m": 3, "abs": -1.9, "rel": -1.7, "hit": 4, "n": 15}, {"m": 4, "abs": 5.5, "rel": 3.0, "hit": 10, "n": 15}, {"m": 5, "abs": 1.1, "rel": -0.0, "hit": 7, "n": 15}, {"m": 6, "abs": 4.1, "rel": 2.4, "hit": 10, "n": 15}, {"m": 7, "abs": 2.7, "rel": 0.8, "hit": 9, "n": 16}, {"m": 8, "abs": 0.7, "rel": 0.9, "hit": 7, "n": 16}, {"m": 9, "abs": 1.4, "rel": 0.7, "hit": 9, "n": 15}, {"m": 10, "abs": 1.2, "rel": -0.9, "hit": 6, "n": 15}, {"m": 11, "abs": 1.9, "rel": 1.0, "hit": 7, "n": 15}, {"m": 12, "abs": 3.2, "rel": 2.5, "hit": 12, "n": 15}], "cy": [{"y": 2012, "b": 21.0, "n": 27.7, "rel": -6.7, "partial": false}, {"y": 2013, "b": 11.2, "n": 6.8, "rel": 4.4, "partial": false}, {"y": 2014, "b": 47.6, "n": 31.4, "rel": 16.2, "partial": false}, {"y": 2015, "b": 6.4, "n": -4.1, "rel": 10.5, "partial": false}, {"y": 2016, "b": -2.0, "n": 3.0, "rel": -5.0, "partial": false}, {"y": 2017, "b": 69.7, "n": 28.6, "rel": 41.1, "partial": false}, {"y": 2018, "b": -11.1, "n": 3.2, "rel": -14.2, "partial": false}, {"y": 2019, "b": -8.8, "n": 12.0, "rel": -20.8, "partial": false}, {"y": 2020, "b": 19.9, "n": 14.9, "rel": 5.0, "partial": false}, {"y": 2021, "b": 93.5, "n": 24.1, "rel": 69.4, "partial": false}, {"y": 2022, "b": 18.8, "n": 4.3, "rel": 14.5, "partial": false}, {"y": 2023, "b": 26.3, "n": 20.0, "rel": 6.2, "partial": false}, {"y": 2024, "b": 20.6, "n": 8.8, "rel": 11.8, "partial": false}, {"y": 2025, "b": -12.1, "n": 10.5, "rel": -22.6, "partial": false}, {"y": 2026, "b": -13.3, "n": -10.7, "rel": -2.6, "partial": true}], "dd": [{"co": "Trent", "peak": "Oct 2024", "fp": -49, "y1": -18}, {"co": "Page Industries", "peak": "Oct 2022", "fp": -32, "y1": -18}, {"co": "Metro Brands", "peak": "Aug 2024", "fp": -32, "y1": -28}, {"co": "Vedant Fashions", "peak": "Oct 2022", "fp": -63, "y1": -25}, {"co": "Aditya Birla Lifestyle Brands", "peak": "Jul 2025", "fp": -51, "y1": -44}, {"co": "Bata India", "peak": "Nov 2021", "fp": -71, "y1": -49}, {"co": "Redtape", "peak": "Oct 2024", "fp": -51, "y1": -27}, {"co": "Aditya Birla Fashion and Retail", "peak": "Nov 2022", "fp": -58, "y1": -44}, {"co": "Arvind Fashions", "peak": "Oct 2024", "fp": -32, "y1": -24}, {"co": "Raymond Lifestyle", "peak": "Sep 2024", "fp": -77, "y1": -51}, {"co": "Lux Industries", "peak": "Nov 2021", "fp": -75, "y1": -18}, {"co": "Kewal Kiran Clothing", "peak": "Nov 2023", "fp": -39, "y1": -14}, {"co": "Cantabil Retail India", "peak": "Feb 2025", "fp": -26, "y1": -8}, {"co": "Go Fashion (India)", "peak": "Oct 2022", "fp": -78, "y1": -58}, {"co": "Dollar Industries", "peak": "Jan 2022", "fp": -58, "y1": -28}, {"co": "Sai Silks (Kalamandir)", "peak": "Dec 2023", "fp": -74, "y1": -53}, {"co": "Monte Carlo Fashions", "peak": "Dec 2024", "fp": -42, "y1": -17}], "win": {"FebMar": {"mean": -2.5, "median": -1.0, "hit": 6, "n": 15}, "AprJul": {"mean": 5.9, "median": 8.3, "hit": 11, "n": 15}, "AugSep": {"mean": 1.2, "median": 0.7, "hit": 8, "n": 14}, "OctDec": {"mean": 4.3, "median": 3.9, "hit": 10, "n": 14}, "SepNov": {"mean": 1.8, "median": 1.7, "hit": 8, "n": 14}, "JanMar": {"mean": -4.9, "median": -5.1, "hit": 4, "n": 15}}, "ytd": {"b": -13.3, "n": -10.7}, "notes": {"2012": "+21.0% against +27.7%, median +36%. Bata +64%, Trent +54%, Page +43%; Rupa \u22121% and Kewal Kiran +3% lagged.", "2013": "+11.2% against +6.8%. Kewal Kiran +61%, Rupa +57%, Page +51%; Thomas Scott \u221262%.", "2014": "+47.6% against +31.4%. Page +128%, Thomas Scott +119%, Cantabil +106% in the consumer re-rating.", "2015": "+6.4% against \u22124.1%. Cantabil +64%, Rupa +34%, Trent +17%; Sreeleathers \u221249%, Bata \u221220%.", "2016": "\u22122.0% against +3.0%. Demonetisation in November hit cash-heavy apparel sales; Monte Carlo \u221222%, Rupa and Kewal Kiran \u221219%.", "2017": "+69.7% against +28.6%. Lux +105%, Rupa +94%, Sreeleathers +89% as GST favoured organised brands and innerwear re-rated.", "2018": "\u221211.1% against +3.2%, median \u221214%. The small-cap crash: Thomas Scott \u221255%, Monte Carlo \u221238%, Dollar \u221234%. Bata +52% on its turnaround.", "2019": "\u22128.8% against +12.0%. Dollar \u221254%, Thomas Scott \u221251%, Rupa \u221241%; Cantabil +122%, Bata +54%, Trent +46%.", "2020": "+19.9% against +14.9%. Covid shut stores, but innerwear held up: Dollar +71%, Rupa +57%. Arvind Fashions \u221249%, ABFRL \u221227%.", "2021": "+93.5% against +24.1%. Thomas Scott +628%, Iris +346%, Monte Carlo +137% in the reopening and small-cap boom.", "2022": "+18.8% against +4.3%. Kewal Kiran +120%, Metro +93%; Lux \u221255% as innerwear demand faded and cotton costs spiked.", "2023": "+26.3% against +20.0%, median +5%. Trent +126% as Zudio scaled; Thomas Scott +345%. Page \u221210%, ABFRL \u221222%.", "2024": "+20.6% against +8.8%. Trent +133% to its October peak; Karnika +198%, Bizotic +129%. Sai Silks \u221238%, Credo \u221240%.", "2025": "\u221212.1% against +10.5%, median \u221224%. Discretionary demand stayed weak and valuations reset: Manyavar \u221255%, Go Fashion \u221251%, Raymond Lifestyle \u221250%. Bizotic +626% was a micro-cap outlier.", "2026": "\u221213.3% against a Nifty \u221210.7%, median \u221214%. Sai Silks \u221250%, Raymond Lifestyle \u221238%, ABLBL \u221236%, ABFRL \u221235%, Bata \u221232%; Iris +70% and Sreeleathers +31% the exceptions. Trent \u22121% and Page +1%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

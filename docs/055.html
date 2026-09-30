@@ -1,0 +1,613 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Meters Primer</title>
+<meta name="description" content="Industry 55 of 278: the meters that measure every unit of electricity India sells — and the national programme to replace them with prepaid smart meters. The RDSS roll-out running years behind target, the AMISP business model, discom payment risk, and the one company that dominates the listed section.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Electric Meters · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#ground">How a roll-out works</a></li>
+<li><a href="#politics">Consumer acceptance</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 55 of 278 · Electronics &amp; EMS family, part 6</div>
+  <h1>Electric Meters</h1>
+  <p class="lede">Every unit of electricity that India's distribution companies sell is — or should be — measured by a meter. For decades those meters were read by hand, bills were estimated, and a large share of power was never paid for. Since 2021 the government has been replacing them with prepaid smart meters that report consumption automatically and let customers pay in advance. That programme has created a large, policy-driven industry, with one listed company at its centre.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 2 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Security &amp; Surveillance Equipment</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">20.33 cr</div><div class="l">Smart meters sanctioned across states under RDSS, as of August 2026</div></div>
+    <div class="stat"><div class="n">6 cr+</div><div class="l">Installed — against an original target of 25 crore by March 2025</div></div>
+    <div class="stat"><div class="n">₹24,020 cr</div><div class="l">Genus Power's order book, including its SPVs and GIC platform</div></div>
+    <div class="stat"><div class="n">1.8 cr</div><div class="l">Genus's annual meter-manufacturing capacity</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A national replacement programme, run as a long-term service</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Every house has an electricity meter that counts how much power the family uses, like a taxi meter counting kilometres. Old meters had to be read by a person who walked from house to house, and sometimes the readings were wrong or the bill was never paid. A smart meter sends its reading to the electricity company by itself, and a prepaid smart meter works like a mobile phone recharge — you pay first, then use. India is replacing hundreds of millions of old meters with these new ones, which is a huge job for the companies that make and install them.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Smart metering is one of India's largest power-sector programmes, and it is executed slowly and paid for over a decade.</p>
+    <ul>
+      <li><b>Scale:</b> 20.33 crore smart meters sanctioned; over 6 crore installed by August 2026 against an original target of 25 crore by March 2025.</li>
+      <li><b>Model:</b> an AMISP (advanced metering infrastructure service provider) installs and runs the meters and is paid per meter per month over 7–10 years.</li>
+      <li><b>Leader:</b> Genus Power — revenue +45% to ₹1,365 cr in Q1 FY27, order book about ₹24,020 cr, a target of at least 1 crore installations in FY27.</li>
+      <li><b>Pressure:</b> Genus's EBITDA margin fell to 19.1% from 21.2% on raw-material costs; discom payments can run 90–180 days.</li>
+      <li><b>Stock:</b> +3% in 2026 after −21% in 2025; 33% below its August 2024 peak.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From spinning discs to prepaid smart meters</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Generation</th><th>How it works</th><th>Problem it solved</th><th>Status in India</th></tr></thead><tbody>
+    <tr><td>Electromechanical meter</td><td>A spinning aluminium disc counts energy</td><td>Basic measurement</td><td>Largely replaced; easy to tamper with</td></tr>
+    <tr><td>Static (electronic) meter</td><td>Electronic circuits measure current and voltage</td><td>Accuracy, tamper detection</td><td>The installed base being replaced now</td></tr>
+    <tr><td>Smart meter</td><td>An electronic meter with a communication module sending readings automatically</td><td>No manual reading, real-time data, remote connect and disconnect</td><td>The RDSS standard</td></tr>
+    <tr><td>Prepaid smart meter</td><td>A smart meter with a prepaid account and remote relay</td><td>Collections: customers pay before using power</td><td>Mandated for most consumers under RDSS</td></tr>
+    <tr><td>System, feeder and transformer meters</td><td>Meters at substations, feeders and distribution transformers</td><td>Energy accounting — finding where losses happen</td><td>Part of RDSS sanctions</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>The shift is like moving from postpaid to prepaid mobile phones. Postpaid required billing, collection and chasing unpaid accounts; prepaid collects the money first. For India's financially stressed distribution companies, which lose a large share of revenue to theft, estimation and non-payment, that change matters more than the technology itself.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From components to a data centre that bills a state</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Components</h4><div class="an">The parts</div>Metering chips, shunts or current transformers, latching relays, communication modules, plastics.<div class="who">Imported chips; Shivalik and Permanent Magnets (051)</div><div class="m">Chips and relays are the costly parts</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Meter manufacture</h4><div class="an">The device</div>Design, assembly, testing and BIS certification.<div class="who">Genus, HPL (043), Secure Meters, others</div><div class="m">Capacity and certification</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>AMISP contract</h4><div class="an">The service</div>A service provider installs meters, runs communications and software, and is paid monthly per meter.<div class="who">Genus, Adani Energy Solutions (039), Intellismart and others</div><div class="m">The long-term economics</div></div>
+    <div class="stage"><div class="no">04</div><h4>Communication network</h4><div class="an">The link</div>RF mesh, cellular or power-line communication back to the head-end.<div class="who">Telecom and IoT partners</div><div class="m">Coverage and reliability</div></div>
+    <div class="stage"><div class="no">05</div><h4>Head-end and data management</h4><div class="an">The brain</div>Software that collects readings, bills customers and manages prepaid balances.<div class="who">AMISPs and software vendors</div><div class="m">Where data creates value</div></div>
+    <div class="stage"><div class="no">06</div><h4>Discom</h4><div class="an">The customer</div>Pays the AMISP; bills and collects from consumers.<div class="who">State distribution companies</div><div class="m">Payment discipline is the key risk</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Parts:</b> chips, switches and plastic cases.</li>
+    <li><b>Meters:</b> factories put them together and test each one.</li>
+    <li><b>Service company:</b> a company installs the meters in homes and looks after them for years.</li>
+    <li><b>Network:</b> the meters send readings by radio or mobile network.</li>
+    <li><b>Computers:</b> software turns readings into bills and prepaid balances.</li>
+    <li><b>Electricity company:</b> pays the service company every month.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical shift is that meter makers have become service providers. Under the AMISP model, a company like Genus no longer just sells meters; it installs, operates and maintains them for 7–10 years and is paid a monthly fee per meter. That turns a manufacturing business into something closer to an infrastructure annuity — with higher capital needs (often funded through project SPVs and partners such as GIC), long receivables, and exposure to the payment discipline of state discoms. The order book is therefore a mix of near-term manufacturing revenue and long-dated service income, and investors should separate the two.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 2 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Genus Power Infrastructures (~₹9,171 cr)</td><td>A Kailash Group company from Jaipur: India's largest listed meter maker, now primarily an AMISP, with meter-manufacturing capacity of over 1.8 crore units a year and a co-investment platform with Singapore's GIC for AMISP projects.</td><td>Q1 FY27 revenue ₹1,365 cr (+45%) on AMISP roll-outs; EBITDA ₹260 cr (+30%) at 19.1% against 21.2%; gross margin 37.0% against 39.6% on raw-material costs; profit ₹163 cr (+27%). Order book about ₹24,020 cr (including SPVs and the GIC platform) at 30 June 2026. Targets at least 1 crore installations and ₹6,000–6,500 cr of revenue in FY27. Stock +3.0% in 2026, −33% from its August 2024 peak.</td></tr>
+    <tr><td>Advance Metering Technology (~₹29 cr)</td><td>A Noida-based micro-cap: energy meters, wind power, energy audits and plastic meter parts.</td><td>Recent quarters have swung between small profits and losses (a ₹3.1 cr loss in the December 2025 quarter). Stock −32.3% in 2026, −74% from its peak. Excluded from the basket.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The rest of the industry</span><p>Other important participants sit elsewhere: HPL Electric (043) makes meters and has a large smart-meter order book; Adani Energy Solutions (039) is one of the largest AMISPs; Secure Meters, Landis+Gyr, Kimbal and Intellismart (an EESL–NIIF venture) are unlisted; and component makers such as Shivalik Bimetal and Permanent Magnets (051) supply shunts and relays. This section is therefore essentially Genus.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Manufacturing margin plus a decade of service fees</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Stream</th><th>When it is earned</th><th>Margin character</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Meter sales to discoms or other AMISPs</td><td>On delivery</td><td>Manufacturing margin; sensitive to chip and metal costs</td><td>Price competition in tenders</td></tr>
+    <tr><td>AMISP installation phase</td><td>During roll-out</td><td>Revenue recognised as meters are installed</td><td>Installation pace, site access</td></tr>
+    <tr><td>AMISP operation phase</td><td>Monthly for 7–10 years</td><td>Annuity-like</td><td>Discom payment delays</td></tr>
+    <tr><td>Software and data services</td><td>Ongoing</td><td>Potentially high</td><td>Still small</td></tr>
+  </tbody></table></div>
+  <h3>How an AMISP contract works</h3>
+  <p>Under RDSS, a discom appoints an AMISP through a tender. The AMISP funds and installs the meters, communications and software, and the discom pays a fee per meter per month over the contract life, with part of the central government's grant passed through during installation. The model moves the capital burden from the discom to the AMISP, and it gives the AMISP a long, predictable revenue stream — provided the discom pays. Where discoms pay late, receivables of 90–180 days can build up, and an AMISP's cash flow depends on how reliably the fees arrive.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>An AMISP is like a company that installs and runs water coolers in offices for a monthly rent. The upfront cost is the company's; the rent pays it back over years. It works beautifully when tenants pay on time — and becomes a financing problem when they do not.</p></div>
+</section>
+
+<section id="ground" data-toc="How a roll-out works">
+  <p class="eyebrow">5b · A closer look</p>
+  <h2>How a smart-meter roll-out works on the ground</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Step</th><th>What happens</th><th>Where it goes wrong</th></tr></thead><tbody>
+    <tr><td>1 · Survey and consumer indexing</td><td>Every consumer is mapped to a transformer and feeder, and records are cleaned</td><td>Poor discom records; missing addresses</td></tr>
+    <tr><td>2 · Installation</td><td>Old meters are replaced house by house</td><td>Access to homes, consumer objections, monsoon</td></tr>
+    <tr><td>3 · Communication commissioning</td><td>Each meter is connected to the network and head-end</td><td>Weak signal in rural or dense urban areas</td></tr>
+    <tr><td>4 · Migration to prepaid</td><td>Accounts switched to prepaid mode with recharge options</td><td>Consumer resistance, political sensitivity</td></tr>
+    <tr><td>5 · Operation and maintenance</td><td>The AMISP keeps meters and systems running for the contract life</td><td>Service levels, replacement of faulty meters</td></tr>
+    <tr><td>6 · Payment</td><td>The discom pays monthly fees against service levels</td><td>Delays of 90–180 days at some discoms</td></tr>
+  </tbody></table></div>
+  <p>The table explains why national targets slip. Manufacturing capacity is not the constraint — Genus alone can make over 1.8 crore meters a year. The constraints are on the ground: indexing millions of consumers, reaching homes, maintaining communication coverage and persuading households to accept prepaid billing. Installation speed therefore depends on each discom's administration and on state politics as much as on the contractor.</p>
+  <h3>AMISP economics, in one illustration</h3>
+  <p>The broad shape of an AMISP contract can be understood without company-specific numbers. The provider spends heavily at the start — meters, communication equipment, software and installation labour — funded by equity and debt in a project company, plus the portion of the central grant passed through during roll-out. It then receives a fixed fee per meter per month for the contract life. The return depends on four things: the fee won in the tender, the cost of each installed meter, the cost of financing, and whether the discom pays on time. A small rise in meter costs or a few months' delay in payments can erode a meaningful share of the return, because the fee is fixed for years. That is why rising component prices and slow-paying discoms matter so much to the listed company's valuation, even while its revenue grows.</p>
+  <h3>Order-book arithmetic</h3>
+  <p>Genus's order book of about ₹24,020 cr is roughly four years of revenue at its FY27 guidance of ₹6,000–6,500 cr. But part of it is long-dated service income spread over 7–10 years, which will be recognised slowly and depends on discom payments; the manufacturing and installation part converts faster. Separating the two is the most useful thing an analyst can do with the headline number.</p>
+</section>
+
+<section id="politics" data-toc="Consumer acceptance">
+  <p class="eyebrow">5c · The human factor</p>
+  <h2>Consumer acceptance and state politics</h2>
+  <p>Prepaid smart meters change the relationship between households and the electricity company. Consumers who were used to paying late, or not at all, now face disconnection when their balance runs out; others worry about faster-running meters or unfamiliar recharge systems. In several states these concerns have produced protests, slowed installations or led governments to pause prepaid conversion, particularly ahead of elections. The programme's success therefore depends on communication, grievance handling and gradual migration as much as on technology. For investors, the practical implication is that installation pace can vary sharply by state and can change with political circumstances — a risk that sits outside any contractor's control.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What meter makers depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Metering chips and microcontrollers</td><td>The measurement and processing core</td><td>Imported; the 2026 chip boom has raised some prices (050)</td></tr>
+    <tr><td>Communication modules</td><td>RF, cellular or power-line links</td><td>Largely imported chipsets</td></tr>
+    <tr><td>Shunts, current transformers and latching relays</td><td>Measurement and remote disconnection</td><td>Increasingly domestic (051)</td></tr>
+    <tr><td>Copper and plastics</td><td>Terminals, housings</td><td>Copper at a record (044); raised Genus's costs</td></tr>
+    <tr><td>Capital and funding partners</td><td>AMISP projects need upfront investment</td><td>Genus uses SPVs and its GIC platform</td></tr>
+    <tr><td>Installation workforce</td><td>Tens of millions of homes to visit</td><td>The practical bottleneck</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Tenders, budgets and installation seasons</h2>
+  <ul>
+    <li><b>April–June:</b> new fiscal-year budgets; tender awards and installation ramp-ups.</li>
+    <li><b>July–September:</b> monsoon slows door-to-door installation in many states.</li>
+    <li><b>October–March:</b> peak installation season; year-end targets for states.</li>
+    <li><b>RDSS milestones:</b> central grant releases tied to installation progress.</li>
+    <li><b>State politics:</b> consumer resistance to prepaid meters can pause roll-outs, especially before elections.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of Genus Power minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> the single listed company (Genus Power Infrastructures Limited), monthly from Jul 2011, compared with the Nifty 50. With one stock, these statistics describe that company, not an industry.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +10.6 pts (beat in 8 of 15 years); Jun +6.3 pts (beat in 6 of 15 years); Aug +3.5 pts (beat in 8 of 16 years).</li><li><b>Weakest months:</b> Feb -6.3 pts (beat in 3 of 15 years); Mar -3.2 pts (beat in 4 of 15 years); May -0.8 pts (beat in 5 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -10.8 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +14.9 pts); Aug–Sep beat the Nifty in 7 of 14 years (median +0.4 pts); Oct–Dec beat the Nifty in 7 of 14 years (median +0.3 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +4.6 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -7.8 pts).</li></ul><p><b>Reading it:</b> in practice this is Genus Power's own record, since the only other listed member is a ₹29 cr micro-cap excluded from the basket. February–March has beaten the Nifty in only 3 of 15 years (median −10.8 points) and January–March in 6 of 15 (median −7.8). April–July has worked in 10 of 15 (median +14.9), and April is the best month on average (+10.6 points). The spring strength follows the new fiscal year's tender awards and the release of discoms' capital budgets.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="FebMar" viewBox="0 0 720 280" role="img" aria-label="February to March return minus Nifty by year"></svg><figcaption>February–March return of Genus minus the Nifty, by year, in percentage points. Green bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>February–March was positive only in 2021 (+31.5), 2012 (+7.1) and 2022 (+4.2)</b>; the worst years were 2018 (−28.0), 2020 (−21.1) and 2014 (−20.1).</li>
+    <li><b>April–July failed in 2018 (−30.0), 2019 (−29.7), 2016 (−21.8), 2012 (−11.5) and 2013 (−9.7)</b>; the best runs were 2014 (+134.1) and 2023 (+102.5).</li>
+    <li><b>January–March has failed in each of 2024, 2025 and 2026.</b></li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is one company's calendar, so it reflects Genus's own reporting and order flow as much as any industry season. The February–March weakness is consistent over 15 years, and the business logic — new-year tender awards in spring, a heavy fourth-quarter billing push priced in beforehand — is plausible. Treat it as a tendency to be aware of, not a trading rule.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>RDSS sanctions and installation pace:</b> the volume engine.</li>
+    <li><b>Discom finances:</b> whether AMISP fees are paid on time.</li>
+    <li><b>Consumer acceptance:</b> resistance to prepaid meters has slowed roll-outs in some states.</li>
+    <li><b>Component costs:</b> chips, relays, copper and plastics.</li>
+    <li><b>Capital availability:</b> AMISPs need funding partners to take on more contracts.</li>
+    <li><b>Competition in tenders:</b> fee levels per meter per month.</li>
+    <li><b>Replacement cycle:</b> meters replaced after 7–10 years, creating future demand.</li>
+    <li><b>Data services:</b> analytics that could add revenue beyond metering.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Genus</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: Genus Power alone. Advance Metering Technology (₹29 cr) is excluded so equal weighting does not give it half the basket. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of Genus minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Electronic meter replacement</b> (2012–2017): states replaced electromechanical meters; UDAY focused on loss reduction; strong years in 2013, 2015 and 2017.</li>
+    <li><b>The bust</b> (2018–2019): small-cap crash and slow discom ordering; −60% and −17%.</li>
+    <li><b>The smart-meter programme</b> (2020–2024): RDSS approved in 2021; AMISP orders and the GIC platform; +175% in 2023.</li>
+    <li><b>Execution reality</b> (2025–2026): installations behind target, payment and cost worries; the stock de-rated while revenue accelerated.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Order wins move the stock; execution and payments move it back.</b></li>
+    <li><b>National targets are routinely missed</b> — 25 crore by March 2025 became about 6 crore installed by August 2026.</li>
+    <li><b>Margins compress when component costs rise</b>, because meter prices are fixed in tenders.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Smart metering everywhere, prepaid mostly in emerging markets</h2>
+  <p>Smart meters are now standard in much of Europe, the US, China and parts of Asia, where utilities use them for automated billing, time-of-day pricing and grid management. Global leaders include Landis+Gyr, Itron, Siemens, Honeywell (Elster) and large Chinese manufacturers. Prepaid metering is most common in emerging markets — South Africa, parts of Africa, Pakistan and now India — where utilities' main problem is collection rather than data. India's programme is among the largest in the world by number of meters, and its AMISP model, which puts financing and operation on private providers, is unusual.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Market</th><th>Main purpose of smart meters</th><th>Model</th></tr></thead><tbody>
+    <tr><td>Europe, US</td><td>Time-of-use pricing, grid management</td><td>Utility-owned roll-outs</td></tr>
+    <tr><td>China</td><td>Near-universal coverage, grid management</td><td>State Grid procurement from domestic makers</td></tr>
+    <tr><td>India</td><td>Loss reduction and collections via prepaid</td><td>AMISP service contracts under RDSS</td></tr>
+    <tr><td>Africa</td><td>Prepaid collections</td><td>Utility and vendor models</td></tr>
+  </tbody></table></div>
+  <p>India's choice of the AMISP model was deliberate. Many discoms could not fund a national meter replacement from their own balance sheets, and earlier meter-purchase programmes often ended with meters installed but systems poorly maintained. Paying a private provider a monthly fee tied to performance shifts both the financing and the operating responsibility, in exchange for a long-term claim on discom cash flows. Whether that bargain works depends on discoms honouring payments — the same question that has shaped every earlier reform of India's power distribution.</p>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From imported to domestic meters</b> as local manufacturing scaled.</li>
+    <li><b>From product sales to service contracts</b> under the AMISP model.</li>
+    <li><b>From meters to data:</b> the value increasingly lies in software and analytics.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Prepaid by default:</b> remote recharge and disconnection.</li>
+    <li><b>Time-of-day tariffs:</b> smart meters enable different prices at different hours.</li>
+    <li><b>Communication choices:</b> RF mesh, cellular (NB-IoT) and power-line communication.</li>
+    <li><b>Rooftop solar and net metering:</b> two-way meters for homes that export power (045).</li>
+    <li><b>Data analytics:</b> theft detection, load forecasting, outage management.</li>
+    <li><b>Domestic components:</b> localising chips, relays and communication modules (050, 051).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Revamped Distribution Sector Scheme (RDSS)</td><td>Launched July 2021; smart metering sanctioned for 45 discoms in 28 states and union territories</td><td>The demand engine</td></tr>
+    <tr><td>Smart-meter targets</td><td>25 crore originally by March 2025; 20.33 crore sanctioned and over 6 crore installed by August 2026</td><td>Years of remaining work, but slower than planned</td></tr>
+    <tr><td>AMISP standard bidding documents</td><td>Set the service model and payment terms</td><td>Define returns and risks</td></tr>
+    <tr><td>Prepaid mandate</td><td>For most consumers under RDSS</td><td>Improves discom collections</td></tr>
+    <tr><td>Late payment surcharge rules</td><td>Aim to discipline discom payments</td><td>Matters for AMISP cash flows</td></tr>
+    <tr><td>BIS standards for smart meters</td><td>Mandatory certification</td><td>A barrier to low-quality entrants</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: installations accelerating, margins slipping</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>National roll-out</td><td>Behind target, accelerating</td><td>Over 6 crore installed of 20.33 crore sanctioned</td></tr>
+    <tr><td>Genus execution</td><td>Strong</td><td>Revenue +45%; target of 1 crore installations in FY27</td></tr>
+    <tr><td>Margins</td><td>Slipping</td><td>EBITDA 19.1% against 21.2%</td></tr>
+    <tr><td>Order book</td><td>Large</td><td>About ₹24,020 cr</td></tr>
+    <tr><td>Stock</td><td>Recovering from a de-rating</td><td>+3% after −21% in 2025</td></tr>
+  </tbody></table></div>
+  <h3>What comes after RDSS</h3>
+  <p>A natural question is what happens when the programme ends. Three sources of demand outlast it. First, meters have finite lives, so the tens of crores being installed now will need replacing in the 2030s. Second, the AMISP contracts themselves run for 7–10 years, so the service income continues well after installation stops. Third, the data from smart meters enables new services — time-of-day tariffs, rooftop-solar net metering, outage management and theft analytics — that utilities may pay for. The risk is a gap between the end of the installation wave and the start of replacement, which is why the long-dated service revenue matters so much to the durability of the business.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>Genus is executing one of the country's largest infrastructure programmes and its revenue is growing fast, yet the stock sits a third below its 2024 peak. The market is weighing three questions: whether installation targets will keep slipping; whether discoms will pay AMISP fees on time over a decade; and whether component costs will keep squeezing margins on fixed-price contracts. The order book gives unusual visibility — about four years of revenue at the FY27 guidance — but its value depends on those payments. The metrics to watch are installation run-rates, receivable days and the margin trend, not new order announcements.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>National smart-meter installations</td><td>Ministry of Power, National Smart Grid Mission dashboard</td><td>Programme pace</td></tr>
+    <tr><td>Genus monthly and quarterly installations</td><td>Company disclosures</td><td>Execution against the 1-crore target</td></tr>
+    <tr><td>Receivable days and cash flow</td><td>Half-yearly balance sheets</td><td>Discom payment discipline</td></tr>
+    <tr><td>Gross margin</td><td>Quarterly</td><td>Component cost pressure</td></tr>
+    <tr><td>New AMISP tender awards and fee levels</td><td>State discoms</td><td>Competition and returns</td></tr>
+    <tr><td>Consumer resistance and state politics</td><td>News</td><td>Roll-out risk</td></tr>
+    <tr><td>Discom finances</td><td>PFC reports, state budgets</td><td>Ability to pay</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power T&amp;D utilities</b> (039): Adani Energy Solutions as an AMISP; discom economics.</li>
+    <li><b>Switchgear</b> (043): HPL Electric's meter business.</li>
+    <li><b>Components</b> (051): shunts and relays in every meter.</li>
+    <li><b>EMS</b> (052): contract manufacturers assembling meters.</li>
+    <li><b>Power T&amp;D EPC</b> (048): RDSS distribution works.</li>
+    <li><b>Telecom and IoT:</b> communication modules and networks.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>How many meters were installed this quarter, and what is the monthly run-rate?</li>
+    <li>What share of the order book is manufacturing versus long-term service fees?</li>
+    <li>What are receivable days by state, and how many discoms are paying late?</li>
+    <li>How much equity and debt does each AMISP project need, and who funds it?</li>
+    <li>What is the gross margin trend, and how are chip and copper costs hedged?</li>
+    <li>Where has consumer resistance slowed installations?</li>
+    <li>What fee per meter per month are new tenders clearing at?</li>
+    <li>What revenue do you expect from data and software services?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Rising receivables from a few large states.</li>
+    <li>Installation targets repeatedly cut.</li>
+    <li>Winning tenders at fees that do not cover financing costs.</li>
+    <li>Heavy borrowing at the SPV level not visible in the parent's headline numbers.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"The smart-meter programme is on track."</td><td>Over 6 crore installed against an original target of 25 crore by March 2025.</td></tr>
+    <tr><td>"A big order book means guaranteed profits."</td><td>Profits depend on discoms paying monthly fees for a decade and on component costs; Genus's margin fell 210 bps this quarter.</td></tr>
+    <tr><td>"Meter making is a commodity business."</td><td>The AMISP model makes it a long-term service with infrastructure-like economics — and risks.</td></tr>
+    <tr><td>"Prepaid meters will be resisted everywhere."</td><td>Resistance has slowed some states, but installations are accelerating overall.</td></tr>
+    <tr><td>"The stock follows the order book."</td><td>The order book grew while the stock fell 21% in 2025; the market is pricing execution and payment risk.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. AMISP, HES" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Meters and systems</h3><dl>
+    <dt>Electromechanical meter</dt><dd>An old meter with a spinning disc.</dd>
+    <dt>Static meter</dt><dd>An electronic meter without communication.</dd>
+    <dt>Smart meter</dt><dd>An electronic meter that communicates readings automatically (see also 039).</dd>
+    <dt>Prepaid smart meter</dt><dd>A smart meter that requires payment before use, like a phone recharge.</dd>
+    <dt>AMI</dt><dd>Advanced metering infrastructure — meters, communications and software together.</dd>
+    <dt>AMR</dt><dd>Automatic meter reading — one-way remote reading, an earlier step.</dd>
+    <dt>Head-end system (HES)</dt><dd>The software that communicates with meters.</dd>
+    <dt>Meter data management system (MDMS)</dt><dd>Stores and processes meter readings for billing and analysis.</dd>
+    <dt>RF mesh</dt><dd>A radio network in which meters relay each other's data.</dd>
+    <dt>NB-IoT</dt><dd>A cellular technology for low-power devices such as meters.</dd>
+    <dt>Power-line communication (PLC)</dt><dd>Sending data over the electricity wires themselves.</dd>
+    <dt>Feeder meter</dt><dd>A meter on a distribution feeder, used for energy accounting.</dd>
+    <dt>Distribution transformer (DT) meter</dt><dd>A meter on a local transformer, used to find losses.</dd>
+    <dt>Energy accounting</dt><dd>Comparing energy supplied with energy billed to locate losses.</dd>
+    <dt>Remote connect and disconnect</dt><dd>Switching a consumer's supply on or off from the utility's office.</dd>
+    <dt>Time-of-day (ToD) tariff</dt><dd>Different electricity prices at different times of day.</dd>
+    <dt>Net meter</dt><dd>A two-way meter for homes with rooftop solar.</dd>
+    <dt>Tamper detection</dt><dd>Features that record attempts to interfere with a meter.</dd>
+    <dt>Consumer indexing</dt><dd>Mapping each consumer to a transformer and feeder so losses can be traced.</dd>
+    <dt>Communication success rate</dt><dd>The share of meters reporting data successfully — a key service level.</dd>
+    <dt>Prepaid migration</dt><dd>Switching installed smart meters to prepaid billing.</dd>
+    <dt>Service-level agreement</dt><dd>Performance standards an AMISP must meet to be paid in full.</dd>
+    <dt>Energy audit</dt><dd>A check of where energy is lost between supply and billing.</dd>
+    <dt>O&amp;M period</dt><dd>The operation and maintenance years of an AMISP contract.</dd>
+    <dt>Gross budgetary support</dt><dd>The central government's grant share of RDSS project costs.</dd>
+    <dt>Class of accuracy</dt><dd>The standard of measurement precision a meter meets.</dd>
+    <dt>BIS certification</dt><dd>Mandatory Indian standards approval for meters.</dd>
+  </dl>
+  <h3>Programme and commercial</h3><dl>
+    <dt>RDSS</dt><dd>Revamped Distribution Sector Scheme — the national discom reform and smart-metering programme launched in 2021.</dd>
+    <dt>AMISP</dt><dd>Advanced metering infrastructure service provider — installs, runs and maintains smart meters for a monthly fee.</dd>
+    <dt>TOTEX model</dt><dd>Paying for capital and operating costs together as a service fee.</dd>
+    <dt>Per meter per month fee</dt><dd>How AMISPs are paid over the contract life.</dd>
+    <dt>SPV</dt><dd>Special purpose vehicle — a project company that holds an AMISP contract and its financing.</dd>
+    <dt>GIC platform</dt><dd>Genus's co-investment arrangement with Singapore's sovereign fund GIC to fund AMISP projects.</dd>
+    <dt>Standard bidding document</dt><dd>The template contract for AMISP tenders.</dd>
+    <dt>Collection efficiency</dt><dd>The share of billed revenue a discom actually collects.</dd>
+    <dt>ACS–ARR gap</dt><dd>The gap between a discom's average cost of supply and its average revenue realised per unit.</dd>
+    <dt>UDAY</dt><dd>The 2015 scheme to restructure discom debt and reduce losses.</dd>
+    <dt>National Smart Grid Mission</dt><dd>The government body that monitors smart-meter progress.</dd>
+    <dt>Late payment surcharge</dt><dd>Interest charged on overdue payments in the power sector.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>AT&amp;C losses, discom</dt><dd>See 039.</dd>
+    <dt>Shunt resistor, latching relay</dt><dd>See 051.</dd>
+    <dt>Drawdown from peak</dt><dd>See 029.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What is a prepaid smart meter?</summary><p>A communicating meter that requires payment before use, like a phone recharge.</p></details>
+  <details class="q"><summary>2. How many smart meters were sanctioned and installed by August 2026?</summary><p>20.33 crore sanctioned; over 6 crore installed.</p></details>
+  <details class="q"><summary>3. What was the original RDSS target?</summary><p>25 crore smart meters by March 2025.</p></details>
+  <details class="q"><summary>4. How is an AMISP paid?</summary><p>A fee per meter per month over 7–10 years, with part of the central grant passed through during installation.</p></details>
+  <details class="q"><summary>5. What did Genus report in Q1 FY27?</summary><p>Revenue +45% to ₹1,365 cr, EBITDA +30% at a 19.1% margin, profit +27% to ₹163 cr.</p></details>
+  <details class="q"><summary>6. Why did Genus's margin fall?</summary><p>Higher raw-material costs; gross margin fell to 37.0% from 39.6%.</p></details>
+  <details class="q"><summary>7. What is the main risk in the AMISP model?</summary><p>Discoms paying fees late over a long contract life.</p></details>
+  <details class="q"><summary>8. Why is Advance Metering Technology excluded from the basket?</summary><p>It is a ₹29 cr loss-making micro-cap; equal weighting would give it half the basket.</p></details>
+  <details class="q"><summary>9. Which window has been weakest for Genus?</summary><p>February–March: 3 of 15 years, median −10.8 points.</p></details>
+  <details class="q"><summary>10. Why do prepaid meters matter to discoms?</summary><p>They collect money before power is used, improving collection efficiency and cash flow.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; Genus Power versus NSE:NIFTY, 2012 to 18 September 2026.</li>
+    <li>Genus: <a href="https://www.multibagg.ai/market-pulse/articles/genus-q1fy27-98290">Q1 FY27 execution and margins</a>; <a href="https://www.tndindia.com/genus-power-targets-1-crore-smart-meter-installations-in-fy27/amp/">installation target</a>; <a href="https://www.sahi.com/news/genus-power-infra-targets-6-500-crore-revenue-by-fy27-with-30-growth-path-2000-PE1_COR">FY27 revenue guidance</a>; <a href="https://tradebrains.in/genus-power-infra-can-its-25200-cr-smart-meter-order-book-drive-75-upside-ahead/">order book</a>; <a href="https://www.bseindia.com/xml-data/corpfiling/AttachHis/3e9c33ac-b8da-4c9d-91d6-23b90eecc6d2.pdf">company filing</a>.</li>
+    <li>Programme: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2222217&amp;reg=3&amp;lang=2">RDSS installation progress (PIB)</a>; <a href="https://kimbal.io/blog/rdss-scheme-state-wise-update/">state-wise roll-out</a>; <a href="https://energy.prayaspune.org/power-perspectives/smart-metering-in-india-a-work-in-progress">Prayas on smart metering</a>; <a href="https://thedailybrief.zerodha.com/p/indias-huge-bet-on-smart-electricity">AMISP economics and payments</a>; <a href="https://recindia.nic.in/uploads/files/Guidance-NoteAMISP-System-Metering-SBDv113072022.pdf">AMISP bidding guidance</a>.</li>
+    <li>Further reading: <a href="https://www.ibef.org/research/case-study/smart-metering-deployment-in-india-policy-framework-institutional-structure-and-national-implementation-status">IBEF on the national roll-out</a>; <a href="https://www.icra.in/CommonService/OpenMedia?Key=e26d0f4d-31fb-4a27-b835-c41a7e3865be">ICRA on installations</a>; <a href="https://thesecretariat.in/article/india-s-ambitious-smart-meter-plan-falters-with-just-25-4-completion">the pace of completion</a>.</li>
+    <li>Advance Metering Technology: <a href="https://www.screener.in/company/534612/consolidated/">financials</a>; <a href="https://www.marketsmojo.com/stocks-analysis/advance-metering-technology-902181-0">recent results</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 7.1}, {"y": 2013, "v": -8.3}, {"y": 2014, "v": -20.1}, {"y": 2015, "v": -9.3}, {"y": 2016, "v": -10.0}, {"y": 2017, "v": -10.8}, {"y": 2018, "v": -28.0}, {"y": 2019, "v": -17.5}, {"y": 2020, "v": -21.1}, {"y": 2021, "v": 31.5}, {"y": 2022, "v": 4.2}, {"y": 2023, "v": -7.0}, {"y": 2024, "v": -15.7}, {"y": 2025, "v": -19.6}, {"y": 2026, "v": -12.2}], "AprJul": [{"y": 2012, "v": -11.5}, {"y": 2013, "v": -9.7}, {"y": 2014, "v": 134.1}, {"y": 2015, "v": 10.4}, {"y": 2016, "v": -21.8}, {"y": 2017, "v": 15.0}, {"y": 2018, "v": -30.0}, {"y": 2019, "v": -29.7}, {"y": 2020, "v": 14.9}, {"y": 2021, "v": 40.1}, {"y": 2022, "v": 9.3}, {"y": 2023, "v": 102.5}, {"y": 2024, "v": 52.7}, {"y": 2025, "v": 30.9}, {"y": 2026, "v": 36.3}], "AugSep": [{"y": 2012, "v": -12.7}, {"y": 2013, "v": -12.7}, {"y": 2014, "v": -0.9}, {"y": 2015, "v": 22.4}, {"y": 2016, "v": -13.0}, {"y": 2017, "v": 15.1}, {"y": 2018, "v": -20.8}, {"y": 2019, "v": 19.7}, {"y": 2020, "v": 21.9}, {"y": 2021, "v": -10.0}, {"y": 2022, "v": 4.3}, {"y": 2023, "v": 40.1}, {"y": 2024, "v": 1.7}, {"y": 2025, "v": -12.4}], "OctDec": [{"y": 2012, "v": 14.9}, {"y": 2013, "v": 89.5}, {"y": 2014, "v": -6.5}, {"y": 2015, "v": 65.7}, {"y": 2016, "v": -0.6}, {"y": 2017, "v": 24.3}, {"y": 2018, "v": -3.8}, {"y": 2019, "v": 1.2}, {"y": 2020, "v": 21.7}, {"y": 2021, "v": -2.9}, {"y": 2022, "v": -0.7}, {"y": 2023, "v": -19.9}, {"y": 2024, "v": 4.8}, {"y": 2025, "v": -8.9}], "SepNov": [{"y": 2012, "v": 20.3}, {"y": 2013, "v": 50.5}, {"y": 2014, "v": -10.1}, {"y": 2015, "v": 54.4}, {"y": 2016, "v": -7.6}, {"y": 2017, "v": 27.2}, {"y": 2018, "v": -20.6}, {"y": 2019, "v": 5.1}, {"y": 2020, "v": 4.5}, {"y": 2021, "v": 15.8}, {"y": 2022, "v": 4.7}, {"y": 2023, "v": -19.0}, {"y": 2024, "v": 1.0}, {"y": 2025, "v": -11.0}], "JanMar": [{"y": 2012, "v": 24.1}, {"y": 2013, "v": 9.7}, {"y": 2014, "v": -47.2}, {"y": 2015, "v": -12.2}, {"y": 2016, "v": 4.7}, {"y": 2017, "v": -7.8}, {"y": 2018, "v": -27.9}, {"y": 2019, "v": -11.8}, {"y": 2020, "v": -15.0}, {"y": 2021, "v": 17.1}, {"y": 2022, "v": 3.4}, {"y": 2023, "v": 4.4}, {"y": 2024, "v": -3.5}, {"y": 2025, "v": -31.3}, {"y": 2026, "v": -14.2}]}, "my": {"1": {"2012": 14.8, "2013": 21.2, "2014": -30.9, "2015": -2.6, "2016": 15.5, "2017": 3.6, "2018": 2.2, "2019": 6.2, "2020": 11.5, "2021": -9.8, "2022": -0.7, "2023": 12.3, "2024": 14.1, "2025": -14.7, "2026": -3.2}, "2": {"2012": 8.4, "2013": 5.3, "2014": -15.1, "2015": -10.5, "2016": -15.5, "2017": -9.2, "2018": -17.6, "2019": -4.8, "2020": -4.4, "2021": 3.0, "2022": -3.3, "2023": -2.1, "2024": -6.6, "2025": -15.6, "2026": -6.7}, "3": {"2012": -1.0, "2013": -13.6, "2014": -4.4, "2015": 0.9, "2016": 9.2, "2017": -1.4, "2018": -14.2, "2019": -13.0, "2020": -19.9, "2021": 26.0, "2022": 8.1, "2023": -5.2, "2024": -9.5, "2025": -3.9, "2026": -6.8}, "4": {"2012": -6.9, "2013": -7.4, "2014": 49.9, "2015": 14.7, "2016": 3.2, "2017": -3.9, "2018": -4.3, "2019": -1.4, "2020": -0.3, "2021": -3.9, "2022": 45.9, "2023": 3.1, "2024": 28.2, "2025": 5.0, "2026": 37.7}, "5": {"2012": -7.2, "2013": -11.7, "2014": 10.5, "2015": -8.4, "2016": -20.2, "2017": -0.8, "2018": -7.9, "2019": -2.2, "2020": -5.9, "2021": 9.5, "2022": -11.8, "2023": -1.6, "2024": 5.6, "2025": 37.6, "2026": 2.3}, "6": {"2012": -2.6, "2013": -7.6, "2014": 42.8, "2015": -7.4, "2016": 3.6, "2017": 19.4, "2018": -12.3, "2019": -14.8, "2020": 42.5, "2021": 28.8, "2022": -9.5, "2023": 34.4, "2024": -7.7, "2025": -8.8, "2026": -5.8}, "7": {"2011": 5.0, "2012": 5.3, "2013": 18.9, "2014": -6.5, "2015": 12.9, "2016": -6.8, "2017": -0.5, "2018": -5.8, "2019": -15.0, "2020": -15.7, "2021": 2.1, "2022": -6.3, "2023": 41.9, "2024": 18.3, "2025": -1.5, "2026": 2.3}, "8": {"2011": -7.7, "2012": -12.6, "2013": -4.8, "2014": 9.2, "2015": 22.7, "2016": -5.8, "2017": -0.2, "2018": -9.2, "2019": 9.8, "2020": 9.9, "2021": -26.0, "2022": 6.3, "2023": 43.7, "2024": 19.3, "2025": -6.7, "2026": 8.4}, "9": {"2011": -4.7, "2012": 1.1, "2013": -8.5, "2014": -9.0, "2015": -0.2, "2016": -7.6, "2017": 15.6, "2018": -13.0, "2019": 8.7, "2020": 10.7, "2021": 20.2, "2022": -1.7, "2023": -3.2, "2024": -15.0, "2025": -6.1}, "10": {"2011": -8.9, "2012": 3.1, "2013": 14.6, "2014": -7.4, "2015": 12.6, "2016": 12.9, "2017": 3.3, "2018": -4.0, "2019": 6.6, "2020": -3.3, "2021": -7.4, "2022": 5.3, "2023": -0.7, "2024": 10.4, "2025": 5.4}, "11": {"2011": -14.0, "2012": 14.1, "2013": 38.2, "2014": 7.4, "2015": 37.2, "2016": -11.2, "2017": 5.7, "2018": -5.8, "2019": -9.3, "2020": -3.5, "2021": 4.3, "2022": 1.3, "2023": -15.8, "2024": 6.6, "2025": -9.4}, "12": {"2011": -19.4, "2012": -2.2, "2013": 15.6, "2014": -5.7, "2015": 7.0, "2016": -0.3, "2017": 12.7, "2018": 6.3, "2019": 4.8, "2020": 27.2, "2021": 0.2, "2022": -6.3, "2023": -3.0, "2024": -10.9, "2025": -4.1}}, "basket": ["Genus Power Infrastructures Limited"], "nbasket": 1, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 3.4, "rel": 2.6, "hit": 9, "n": 15}, {"m": 2, "abs": -7.5, "rel": -6.3, "hit": 3, "n": 15}, {"m": 3, "abs": -3.4, "rel": -3.2, "hit": 4, "n": 15}, {"m": 4, "abs": 13.2, "rel": 10.6, "hit": 8, "n": 15}, {"m": 5, "abs": 0.4, "rel": -0.8, "hit": 5, "n": 15}, {"m": 6, "abs": 8.1, "rel": 6.3, "hit": 6, "n": 15}, {"m": 7, "abs": 5.0, "rel": 3.0, "hit": 8, "n": 16}, {"m": 8, "abs": 3.3, "rel": 3.5, "hit": 8, "n": 16}, {"m": 9, "abs": -0.2, "rel": -0.8, "hit": 5, "n": 15}, {"m": 10, "abs": 4.9, "rel": 2.8, "hit": 9, "n": 15}, {"m": 11, "abs": 4.0, "rel": 3.1, "hit": 8, "n": 15}, {"m": 12, "abs": 2.1, "rel": 1.4, "hit": 7, "n": 15}], "cy": [{"y": 2012, "b": 38.0, "n": 27.7, "rel": 10.3, "partial": false}, {"y": 2013, "b": 68.3, "n": 6.8, "rel": 61.6, "partial": false}, {"y": 2014, "b": 46.9, "n": 31.4, "rel": 15.5, "partial": false}, {"y": 2015, "b": 91.8, "n": -4.1, "rel": 95.9, "partial": false}, {"y": 2016, "b": -24.9, "n": 3.0, "rel": -27.9, "partial": false}, {"y": 2017, "b": 92.7, "n": 28.6, "rel": 64.0, "partial": false}, {"y": 2018, "b": -59.6, "n": 3.2, "rel": -62.7, "partial": false}, {"y": 2019, "b": -17.2, "n": 12.0, "rel": -29.2, "partial": false}, {"y": 2020, "b": 44.3, "n": 14.9, "rel": 29.4, "partial": false}, {"y": 2021, "b": 75.1, "n": 24.1, "rel": 50.9, "partial": false}, {"y": 2022, "b": 22.2, "n": 4.3, "rel": 17.9, "partial": false}, {"y": 2023, "b": 174.6, "n": 20.0, "rel": 154.5, "partial": false}, {"y": 2024, "b": 65.5, "n": 8.8, "rel": 56.6, "partial": false}, {"y": 2025, "b": -21.4, "n": 10.5, "rel": -31.9, "partial": false}, {"y": 2026, "b": 3.0, "n": -10.7, "rel": 13.7, "partial": true}], "dd": [{"co": "Genus Power Infrastructures", "peak": "Aug 2024", "fp": -33, "y1": -9}, {"co": "Advance Metering Technology", "peak": "Jan 2024", "fp": -74, "y1": -36}], "win": {"FebMar": {"mean": -9.1, "median": -10.8, "hit": 3, "n": 15}, "AprJul": {"mean": 22.9, "median": 14.9, "hit": 10, "n": 15}, "AugSep": {"mean": 3.1, "median": 0.4, "hit": 7, "n": 14}, "OctDec": {"mean": 12.8, "median": 0.3, "hit": 7, "n": 14}, "SepNov": {"mean": 8.2, "median": 4.6, "hit": 9, "n": 14}, "JanMar": {"mean": -7.2, "median": -7.8, "hit": 6, "n": 15}}, "ytd": {"b": 3.0, "n": -10.7}, "notes": {"2012": "+38.0% against +27.7%. Genus alone (the basket's only member throughout).", "2013": "+68.3% against +6.8%. Genus rose as utilities replaced electromechanical meters with electronic ones.", "2014": "+46.9% against +31.4%. The post-election rally in power and infrastructure names.", "2015": "+91.8% against \u22124.1%. Genus benefited from state-level meter replacement and the UDAY discom reform scheme's focus on loss reduction.", "2016": "\u221224.9% against +3.0%. A pause in utility ordering.", "2017": "+92.7% against +28.6%. Early smart-meter pilots and the small-cap boom.", "2018": "\u221259.6% against +3.2%. The small-cap crash and weak utility payments.", "2019": "\u221217.2% against +12.0%. Slow discom ordering continued.", "2020": "+44.3% against +14.9%. The smart-meter programme gathered pace despite Covid.", "2021": "+75.1% against +24.1%. RDSS was approved in July with a target of 25 crore prepaid smart meters.", "2022": "+22.2% against +4.3%. The first large AMISP tenders under RDSS.", "2023": "+174.6% against +20.0%. Genus won large AMISP orders and a co-investment platform with Singapore's GIC; order book surged.", "2024": "+65.5% against +8.8%. Record order book; the stock peaked in August.", "2025": "\u221221.4% against +10.5%. Installation delays, discom payment worries and rising costs cooled enthusiasm.", "2026": "+3.0% against a Nifty \u221210.7%. Revenue +45% in Q1 FY27 as installations accelerate, but margins slipped."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

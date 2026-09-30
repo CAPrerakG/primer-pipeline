@@ -1,0 +1,620 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defence Services Primer</title>
+<meta name="description" content="Industry 62 of 278: combat training simulators, anti-drone systems and the maintenance contracts that follow them — a one-company section built around Zen Technologies. How simulation saves ammunition and money, why anti-drone systems became urgent after 2025, the order-timing swings that make Zen&#x27;s revenue lurch, and a stock that rose tenfold, fell 62% in six weeks and rebounded 55% in a month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Defence Services · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#antidrone">Why anti-drone demand surged</a></li>
+<li><a href="#simecon">Why simulation pays</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 62 of 278 · Defence family, part 6</div>
+  <h1>Defence Services</h1>
+  <p class="lede">Armies train with simulators because live ammunition, fuel and wear on tanks and aircraft are expensive, and because some situations cannot be rehearsed safely any other way. The same company that builds a firing-range simulator can build a system that detects and knocks down drones — and then earn maintenance fees on both for years. This section contains one listed company, Zen Technologies. This primer explains what it makes, how the business earns and why its revenue swings, why anti-drone systems became urgent after 2025, and what a stock that rose more than tenfold in two years and then fell 62% in six weeks is pricing now.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 1 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Theme to be chosen</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹1,239 cr</div><div class="l">Zen's order book at 30 June 2026 — ₹921 cr equipment, ₹318 cr maintenance</div></div>
+    <div class="stat"><div class="n">₹4,000 cr</div><div class="l">Revenue Zen targets over FY27 and FY28 combined, against ₹688 cr in FY26</div></div>
+    <div class="stat"><div class="n">72.9%</div><div class="l">Zen's gross margin in Q1 FY27 — software-like economics</div></div>
+    <div class="stat"><div class="n">−62%</div><div class="l">Zen's fall from its January 2025 high to its February 2025 low, in six weeks</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>High margins, lumpy orders, one listed company</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Before a pilot flies a real plane, they practise in a flight simulator — a room that looks and moves like a cockpit, with a screen instead of a sky. Soldiers do the same: they practise driving tanks, firing rifles and handling dangerous situations in simulators, which is cheaper and safer than using real bullets. Zen Technologies builds those simulators for the Army and police. It also builds machines that spot enemy drones in the sky and stop them, a bit like a goalkeeper for the air. Once it sells these machines, Zen is also paid to look after them for many years.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Zen is a high-margin defence technology company whose revenue depends on when a few large orders are converted.</p>
+    <ul>
+      <li><b>Products:</b> training simulators (weapons, vehicles, tactics, live ranges), anti-drone systems, and new robotics such as interceptor drones and unmanned ground vehicles; plus annual maintenance contracts.</li>
+      <li><b>Economics:</b> gross margin about 73%; operating margins swing with volume.</li>
+      <li><b>The problem:</b> FY26 revenue fell 29% to ₹688 cr and adjusted profit 31% to ₹193 cr as order conversion slipped; Q1 FY27 revenue fell another 10.5%.</li>
+      <li><b>The promise:</b> order book ₹1,239 cr plus ₹177.5 cr in July; target of ₹4,000 cr revenue over FY27–FY28 and ₹2,000 cr+ of anti-drone orders.</li>
+      <li><b>The stock:</b> +331% in 2023 and +208% in 2024, −44% in 2025, +23% in 2026; about 78 times FY26 adjusted profit.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Simulators, anti-drone systems and the services that follow</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it does</th><th>Who buys it</th><th>Why it matters</th></tr></thead><tbody>
+    <tr><td>Weapon and marksmanship simulators</td><td>Trains soldiers to shoot with virtual targets and real-feel weapons</td><td>Army, paramilitary, police</td><td>Saves ammunition; trains many soldiers quickly</td></tr>
+    <tr><td>Vehicle and crew simulators</td><td>Tank, armoured-vehicle and driving training</td><td>Army</td><td>Reduces wear on expensive vehicles</td></tr>
+    <tr><td>Tactical and command trainers</td><td>Rehearses missions and decision-making</td><td>Army, special forces</td><td>Trains situations that cannot be practised live</td></tr>
+    <tr><td>Live-range and combat training systems</td><td>Instrumented ranges and laser-based "engagement" systems</td><td>Army</td><td>Makes field exercises measurable</td></tr>
+    <tr><td>Anti-drone systems</td><td>Detect, track, jam and destroy hostile drones</td><td>Army, Air Force, paramilitary, critical sites</td><td>Urgent demand since 2025</td></tr>
+    <tr><td>New robotics</td><td>Interceptor drones, unmanned ground vehicles, border systems</td><td>Army, border forces</td><td>New product lines launched in 2026</td></tr>
+    <tr><td>Annual maintenance contracts (AMC)</td><td>Keeping simulators and systems running</td><td>All customers</td><td>Recurring revenue; ₹318 cr in the order book</td></tr>
+  </tbody></table></div>
+  <p>Most of the value in a simulator is software and system design — the visual scenes, the physics, the scoring — built into hardware that is largely bought in. That is why Zen's gross margin is around 73%, closer to a software company than a manufacturer. Anti-drone systems combine radar, radio-frequency detectors, cameras and jammers (and increasingly guns or interceptor drones) with software that fuses the sensors and decides how to respond.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a game engine to a training battalion</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Hardware inputs</h4><div class="an">The body</div>Displays, projectors, computers, motion platforms, replica weapons, radars, RF sensors, cameras, jammers.<div class="who">Largely imported components; Indian suppliers in 050, 051, 058</div><div class="m">Commodity, except sensors</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Software and content</h4><div class="an">The brain</div>Simulation engines, 3D terrain and scenarios, sensor fusion, AI for threat detection.<div class="who">Zen's in-house teams; foreign partners such as AVT Simulation</div><div class="m">Where the margin is made</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>System integration</h4><div class="an">The product</div>Building, testing and installing complete simulators and anti-drone systems.<div class="who">Zen Technologies; BEL and others in anti-drone (058)</div><div class="m">Trials and qualification</div></div>
+    <div class="stage"><div class="no">04</div><h4>Procurement</h4><div class="an">The buyer's process</div>Trials, cost negotiation, contract — or fast-track and emergency routes.<div class="who">Ministry of Defence, home ministry, state police</div><div class="m">Timing is unpredictable</div></div>
+    <div class="stage"><div class="no">05</div><h4>Deployment and training</h4><div class="an">The use</div>Installing simulators at training centres; deploying anti-drone units at bases and borders.<div class="who">The forces</div><div class="m">Acceptance triggers revenue</div></div>
+    <div class="stage"><div class="no">06</div><h4>Maintenance and upgrades</h4><div class="an">The tail</div>Multi-year AMCs, software upgrades, spares.<div class="who">Zen</div><div class="m">Recurring, high-margin</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Hardware</b> is bought in.</li>
+    <li><b>Software</b> — scenarios, physics, sensor fusion — is where Zen adds value.</li>
+    <li><b>Integration and trials</b> turn it into a qualified product.</li>
+    <li><b>The forces</b> buy after long procurement processes or through fast-track routes.</li>
+    <li><b>Maintenance contracts</b> earn money for years after delivery.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical feature of this business is that almost all its cost is fixed — engineers and software — while revenue depends on when orders are converted. When a large order is delivered, margins soar (EBITDA margin was 54.7% in Q1 FY26); when deliveries slip, revenue falls but costs do not, and margins drop (40.9% in Q1 FY27, and only 27.3% excluding other income). That operating leverage explains why Zen's profits, and its share price, swing so much more than its order book.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 1 company — and its competitors elsewhere</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Zen Technologies (~₹15,009 cr)</td><td>Hyderabad; India's largest listed maker of combat-training simulators and anti-drone systems, with annual maintenance contracts and new robotics (interceptor drones, unmanned ground vehicles). Partnership with US-based AVT Simulation (December 2024) for the US market.</td><td>FY26 revenue ₹687.7 cr (FY25: ₹973.6 cr), adjusted profit ₹193.5 cr (₹280.2 cr). Q4 FY26 revenue −45%, profit −69%; the stock fell 11% on the day. Q1 FY27 revenue ₹141.6 cr (−10.5%), gross margin 72.9%, operational EBITDA ₹38.7 cr (27.3%), a ₹3.4 cr one-off loss from a fire. Order book ₹1,239 cr at 30 June, plus a ₹177.5 cr simulator order in July. Stock +23% in 2026, 35% below its December 2024 high.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Competitors and adjacent listed companies</span><p>In anti-drone systems, Zen competes with BEL (058), which supplies DRDO-designed systems, and with Paras Defence, Solar Industries (060) and many start-ups. In simulation, foreign companies such as CAE, Thales and L3Harris supply flight and naval simulators, often with Indian partners, and HAL makes some aircraft simulators. Other "defence services" — overhaul, spares, refits — sit inside HAL (057), the shipyards (059) and BEL. Zen is the only listed pure play, so this section's statistics describe one company.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Software margins, lumpy conversion</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Stream</th><th>How it is sold</th><th>Margin</th><th>Timing</th></tr></thead><tbody>
+    <tr><td>Simulator equipment</td><td>Tenders and nominated contracts; sometimes emergency purchases</td><td>High gross margin</td><td>Revenue on delivery and acceptance; lumpy</td></tr>
+    <tr><td>Anti-drone systems</td><td>Fast-track and emergency purchases; trials first</td><td>High, if volumes arrive</td><td>Very lumpy; driven by events</td></tr>
+    <tr><td>Annual maintenance contracts</td><td>Multi-year service after warranty</td><td>High</td><td>Steady</td></tr>
+    <tr><td>Exports</td><td>Foreign armies and partners</td><td>High</td><td>Irregular</td></tr>
+  </tbody></table></div>
+  <p>Zen's accounts show the pattern plainly. In FY25, when large orders converted, revenue was ₹973.6 cr and adjusted profit ₹280.2 cr. In FY26, when order conversion "extended beyond expectations", revenue fell to ₹687.7 cr and profit to ₹193.5 cr, even though the order book grew to ₹1,336 cr and Q4 alone brought ₹431 cr of new orders. Gross margin stayed around 73%; it was operating leverage — fixed engineering and staff costs spread over less revenue — that cut profit.</p>
+  <p>For investors this means two numbers matter more than any quarter's revenue: the order book and its composition, and the pace at which orders convert. Zen's order book at June 2026 was ₹920.6 cr of equipment and ₹318.4 cr of maintenance — the latter a steadier stream that cushions the swings.</p>
+  <h3>The FY27–FY28 target</h3>
+  <p>Management's target of ₹4,000 cr of revenue across FY27 and FY28 — roughly three times FY26's annual rate — depends on converting today's order book, winning the anti-drone orders it expects (at least ₹2,000 cr), and ending FY27 with an order book of about ₹2,500 cr. With Q1 FY27 revenue at ₹141.6 cr, most of the target falls in later quarters, and management has said revenue will be weighted to the second and third quarters.</p>
+</section>
+
+<section id="antidrone" data-toc="Why anti-drone demand surged">
+  <p class="eyebrow">5b · Why anti-drone demand surged</p>
+  <h2>Cheap drones, expensive targets</h2>
+  <p>Drones costing a few thousand dollars can find, film and strike tanks, radars and aircraft worth millions. The war in Ukraine made this obvious; Operation Sindoor in May 2025, when Indian air defences faced drone swarms along the western border, made it urgent for India. Zen's stock rose about 55% in the weeks after 7 May 2025 — from about ₹1,385 to ₹2,140 by 30 May — as investors bet on anti-drone orders.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Layer</th><th>What it does</th><th>Typical technology</th></tr></thead><tbody>
+    <tr><td>Detect</td><td>Find the drone</td><td>Radar, radio-frequency detectors, cameras, acoustic sensors</td></tr>
+    <tr><td>Identify and track</td><td>Tell friend from foe; follow it</td><td>Sensor fusion and AI software</td></tr>
+    <tr><td>Soft kill</td><td>Break its control or navigation</td><td>RF and GPS jamming, spoofing</td></tr>
+    <tr><td>Hard kill</td><td>Physically destroy it</td><td>Guns, lasers, interceptor drones, missiles</td></tr>
+  </tbody></table></div>
+  <p>Demand is broad: every base, airfield, border post and critical installation needs protection, and the systems must be updated as drones change. That favours suppliers with software that can be upgraded and with product families spanning detection to hard kill. It also means competition: BEL has DRDO-designed systems, start-ups are entering through iDEX, and the forces buy through fast-track routes where price and speed matter. Zen's claim of at least ₹2,000 cr in anti-drone orders is a pipeline, not a signed book.</p>
+</section>
+
+<section id="simecon" data-toc="Why simulation pays">
+  <p class="eyebrow">5c · Why simulation pays</p>
+  <h2>The customer's side of the business</h2>
+  <p>To understand why armies keep buying simulators even when budgets are tight, look at the customer's costs. A soldier learning to shoot fires hundreds of rounds; a tank crew learning gunnery fires expensive main-gun ammunition and burns fuel; every hour on a real vehicle adds wear that must later be repaired. A simulator converts much of that recurring cost into a one-time purchase plus a maintenance fee, and it allows training at night, in bad weather and in scenarios that would be too dangerous to rehearse live.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Training need</th><th>Live cost</th><th>Simulator advantage</th></tr></thead><tbody>
+    <tr><td>Marksmanship</td><td>Ammunition, range time, instructors</td><td>Unlimited repetitions; every shot scored</td></tr>
+    <tr><td>Vehicle driving and gunnery</td><td>Fuel, wear, main-gun rounds</td><td>Hours of practice without wear or ammunition</td></tr>
+    <tr><td>Tactics and command</td><td>Moving whole units to exercise areas</td><td>Rehearse missions in a classroom</td></tr>
+    <tr><td>Dangerous scenarios</td><td>Cannot be practised safely</td><td>Ambushes, casualties and failures can be simulated</td></tr>
+  </tbody></table></div>
+  <p>This is why simulators feature on India's indigenisation lists and why training budgets tend to survive even when equipment purchases are delayed. The weakness, from a supplier's point of view, is that simulators are bought in batches as new equipment enters service or training centres are upgraded, so demand comes in waves. The maintenance contracts that follow each batch — ₹318 cr of Zen's order book — are the steadier part of the business, and their share is worth watching as a sign of how recurring the company's revenue is becoming.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the business depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Source</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Engineers and software developers</td><td>The core asset</td><td>Hyderabad and wider Indian talent pool</td><td>Wage inflation; fixed cost when revenue falls</td></tr>
+    <tr><td>Radars and RF sensors</td><td>Anti-drone detection</td><td>In-house and bought-in; some imported</td><td>Performance and supply</td></tr>
+    <tr><td>Computers, displays, projectors</td><td>Simulator hardware</td><td>Imported and local</td><td>Commodity</td></tr>
+    <tr><td>Replica weapons and motion platforms</td><td>Realistic training</td><td>In-house and suppliers</td><td>Moderate</td></tr>
+    <tr><td>Electronic components</td><td>Jammers, controllers</td><td>Largely imported (see 050, 051)</td><td>The critical supply dependence for anti-drone hardware</td></tr>
+    <tr><td>Trials and certifications</td><td>Permission to sell</td><td>Army, DRDO, other testers</td><td>Long and uncertain timelines</td></tr>
+  </tbody></table></div>
+  <p>Unlike most industries in this project, the most important input here is people, not materials. That cuts both ways: the business needs little capital and earns high gross margins, but its costs do not fall when orders are delayed. The second critical input is trial success — a product that fails or is delayed in Army trials can lose a year of revenue.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Trials, fiscal year-ends and emergencies</h2>
+  <ul>
+    <li><b>January–March:</b> deliveries and acceptances bunch before the fiscal year ends; Zen's fourth quarter is often its largest, and its results in May often move the stock sharply.</li>
+    <li><b>April–June:</b> usually the smallest quarter for revenue; new orders are placed.</li>
+    <li><b>July–December:</b> trials and deliveries; management expects FY27 revenue to be weighted to the second and third quarters.</li>
+    <li><b>Event-driven:</b> border incidents and conflicts trigger emergency purchases, as after Galwan (2020) and Operation Sindoor (2025).</li>
+  </ul>
+  <p>Quarterly results are the stock's biggest events. In the last two years Zen fell 11% on Q4 FY26 results (May 2026), fell sharply after results in February 2025, and fell about 5% on Q1 FY27. Investors should expect large moves around each results date.</p>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of Zen Technologies minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> the single listed company (Zen Technologies Limited), monthly from Apr 2015, compared with the Nifty 50. With one stock, these statistics describe that company, not an industry.</p><ul><li><b>Strongest months vs the Nifty:</b> Dec +13.1 pts (beat in 7 of 11 years); Jun +6.8 pts (beat in 8 of 12 years); Aug +5.1 pts (beat in 6 of 12 years).</li><li><b>Weakest months:</b> Jan -5.2 pts (beat in 5 of 11 years); Feb -4.6 pts (beat in 5 of 11 years); Nov -1.4 pts (beat in 6 of 11 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 5 of 11 years (median -10.6 pts); Apr–Jul beat the Nifty in 7 of 12 years (median +7.9 pts); Aug–Sep beat the Nifty in 5 of 11 years (median -1.5 pts); Oct–Dec beat the Nifty in 5 of 11 years (median -6.0 pts); Sep–Nov beat the Nifty in 4 of 11 years (median -7.5 pts); Jan–Mar beat the Nifty in 3 of 11 years (median -17.5 pts).</li></ul><p><b>Reading it:</b> this is Zen Technologies' own record since April 2015. January–March has beaten the Nifty in only 3 of 11 years (median −17.5 points) — the weakest first quarter in the Defence family — and February–March in 5 of 11 (median −10.6). April–July has worked in 7 of 12 (median +7.9) and June in 8 of 12. December's large average (+13.1) comes mainly from a single year, 2017. For one stock, results dates matter more than months: Zen's worst falls came after quarterly results in February 2025 and May 2026.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="JanMar" viewBox="0 0 720 280" role="img" aria-label="January to March return minus Nifty by year"></svg><figcaption>January–March return of Zen minus the Nifty, by year, in percentage points. Green bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>January–March worked only in 2023 (+82.2), 2024 (+17.6) and 2026</b>; its worst years were 2025 (−39.0) and 2016 (−37.2).</li>
+    <li><b>April–July failed in 2018 (−38.1), 2017 (−24.2), 2019 (−22.3), 2022 (−12.7) and 2025 (−7.0)</b>; the best were 2020 (+89.5) and 2023 (+74.4).</li>
+    <li><b>October–December's high average</b> comes from 2017 (+152.6); the median year lost 6.0 points.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>With one stock, the calendar mostly reflects Zen's own results and order news. The January–March weakness is consistent with the Defence family (057–061) and with Zen's pattern of disappointing third-quarter results, but it is not a trading rule. For this company, the order book and conversion guidance matter far more than the month.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Order conversion.</b> The timing of deliveries and acceptances drives revenue.</li>
+    <li><b>Operating leverage.</b> Fixed engineering costs magnify revenue swings into profit swings.</li>
+    <li><b>Anti-drone orders.</b> The largest potential new source of revenue.</li>
+    <li><b>Maintenance contracts.</b> Steady, high-margin, a cushion in weak years.</li>
+    <li><b>Product mix.</b> Software-heavy simulators earn more than hardware-heavy systems.</li>
+    <li><b>Competition.</b> BEL and start-ups in anti-drone; foreign firms in high-end simulation.</li>
+    <li><b>Exports.</b> The AVT partnership and other markets.</li>
+    <li><b>Other income.</b> Interest on cash adds to reported EBITDA and profit.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2016 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Zen</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Zen Technologies alone, from April 2015. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of Zen minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>A global mirror: CAE</h3>
+  <p>Canada's CAE (TSX:CAE), the world's largest flight-simulation and training company for airlines and militaries, shows what a mature simulation business looks like. Calendar-year returns in Canadian dollars, price only, from TradingView.</p>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Years</th><th>CAE</th><th>What happened</th></tr></thead><tbody>
+    <tr><td class="num">2012–2015</td><td>+1.8, +34.2, +11.6, +1.8</td><td>Steady airline and defence training growth</td></tr>
+    <tr><td class="num">2016–2019</td><td>+22.3, +24.3, +7.5, +37.0</td><td>Pilot shortage and training outsourcing</td></tr>
+    <tr><td class="num">2020–2022</td><td>+2.6, −9.5, −17.9</td><td>Pandemic grounds airlines; defence contracts hit by cost overruns</td></tr>
+    <tr><td class="num">2023–2025</td><td>+9.2, +27.6, +14.4</td><td>Recovery; defence rearmament</td></tr>
+    <tr><td class="num">2026*</td><td>−21.5</td><td>31% below its January 2026 peak</td></tr>
+  </tbody></table></div>
+  <p class="note">*2026 to 18 September. CAE is up about 3.3 times since the end of 2011 — far steadier than Zen, which rose more than tenfold in 2023–24 and then fell 62% in six weeks.</p>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>A small simulator maker</b> (2015–2019): lumpy orders and two small-cap crashes; the stock fell in four of five years.</li>
+    <li><b>Anti-drone and indigenisation</b> (2020–2022): Galwan and the indigenisation lists brought new demand; gains in 2020–21, a pause in 2022.</li>
+    <li><b>The boom</b> (2023–2024): record orders and profits; the stock rose about thirteen-fold in two years to a peak of ₹2,577 on 23 December 2024.</li>
+    <li><b>The bust and rebound</b> (2025–2026): a 62% fall in six weeks, a 55% jump after Operation Sindoor, then falling revenue and a partial recovery on anti-drone hopes.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Revenue follows order conversion, not the order book.</b> FY26 revenue fell while the order book grew.</li>
+    <li><b>Operating leverage cuts both ways.</b> The same fixed costs that lifted EBITDA margin to 54.7% cut it to 40.9% (27.3% excluding other income) when revenue fell.</li>
+    <li><b>Conflicts lift the stock quickly;</b> results decide whether the gains hold.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Simulation is mature; counter-drone is new</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>Leaders</th><th>Relevance to Zen</th></tr></thead><tbody>
+    <tr><td>Flight simulation</td><td>CAE, L3Harris, Thales</td><td>Zen focuses on ground forces instead</td></tr>
+    <tr><td>Land and weapons simulation</td><td>Saab, Rheinmetall, Cubic, Elbit</td><td>Direct competitors abroad; partners possible</td></tr>
+    <tr><td>Counter-drone</td><td>Many: Anduril, DroneShield, Rafael, Elbit, European and US defence primes</td><td>A fast-growing, crowded market</td></tr>
+    <tr><td>US partnership</td><td>AVT Simulation (Florida)</td><td>Zen's route into the US</td></tr>
+  </tbody></table></div>
+  <p>The global military simulation and training market is estimated at about $15 bn in 2026, growing around 7% a year, with Asia-Pacific — including India — growing faster. Counter-drone spending is growing much faster from a smaller base, driven by Ukraine and the Middle East. For Zen, exports are a second leg: its products are cheaper than Western equivalents, and the AVT partnership aims to open US defence training, but so far exports have been irregular.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Game engines and virtual reality.</b> Cheaper, more realistic training content.</li>
+    <li><b>AI opponents and scoring.</b> Simulators that adapt to trainees and measure performance.</li>
+    <li><b>Live–virtual–constructive training.</b> Mixing real units, simulators and computer-generated forces in one exercise.</li>
+    <li><b>AI-based drone detection.</b> Telling drones from birds and classifying threats automatically.</li>
+    <li><b>Hard-kill options.</b> Lasers, interceptor drones and guns alongside jamming.</li>
+    <li><b>Robotics.</b> Unmanned ground vehicles and interceptor drones, which Zen launched in 2026.</li>
+  </ol>
+  <p>Each shift raises the importance of software and speed of development. Zen's advantage — software-heavy products with high gross margins — depends on keeping pace; anti-drone in particular is a technology race, where last year's system can be defeated by this year's drone.</p>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect on Zen</th></tr></thead><tbody>
+    <tr><td>Positive indigenisation lists</td><td>Items, including many simulators, that must be bought from Indian suppliers</td><td>Protected domestic demand</td></tr>
+    <tr><td>Fast-track and emergency procurement</td><td>Quicker buying after crises</td><td>Anti-drone opportunities after Operation Sindoor</td></tr>
+    <tr><td>Field commanders' financial powers</td><td>Units can buy more equipment directly</td><td>Smaller, faster orders</td></tr>
+    <tr><td>iDEX and start-up programmes</td><td>Support for new defence technology firms</td><td>More competition in anti-drone</td></tr>
+    <tr><td>Export promotion</td><td>Simplified licences for defence exports</td><td>Supports the export leg</td></tr>
+    <tr><td>Procurement framework (057)</td><td>DAP 2020 and domestic reservation</td><td>Domestic preference</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: waiting for orders to convert</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Revenue</td><td>Falling</td><td>FY26 −29%; Q1 FY27 −10.5%</td></tr>
+    <tr><td>Order book</td><td>Stable</td><td>₹1,239 cr plus ₹177.5 cr in July</td></tr>
+    <tr><td>Pipeline</td><td>Large, unsigned</td><td>₹2,000 cr+ anti-drone; ₹2,500 cr year-end order-book target</td></tr>
+    <tr><td>Margins</td><td>Compressed</td><td>EBITDA margin 40.9% (27.3% excluding other income) against 54.7% a year earlier</td></tr>
+    <tr><td>Stock</td><td>Recovering, expensive</td><td>+23% in 2026; about 78× FY26 adjusted profit</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +23.3% this year vs -10.7% for the Nifty (to 18 Sep 2026). Zen is up 23% against a Nifty down 11%, but 35% below its December 2024 high. Its revenue has fallen for five quarters as order conversion slipped — FY26 revenue −29% to ₹688 cr, Q1 FY27 −10.5% to ₹142 cr — while the order book has held at ₹1,239 cr (plus a ₹177.5 cr simulator order in July). Management targets ₹4,000 cr of revenue over FY27–FY28, an order book of about ₹2,500 cr by March 2027 and at least ₹2,000 cr of anti-drone orders. The stock trades at about 78 times FY26 adjusted profit.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Date</th><th class="num">Zen price</th><th>Event</th></tr></thead><tbody>
+    <tr><td>23 Dec 2024</td><td class="num">₹2,577</td><td>All-time high, after the AVT Simulation partnership</td></tr>
+    <tr><td>18 Feb 2025</td><td class="num">₹972</td><td>Low after weaker results and a small-cap sell-off (−62% in six weeks from 9 January)</td></tr>
+    <tr><td>7 May 2025</td><td class="num">₹1,385</td><td>Operation Sindoor begins</td></tr>
+    <tr><td>30 May 2025</td><td class="num">₹2,140</td><td>Up 55% in three weeks on anti-drone hopes</td></tr>
+    <tr><td>15 May 2026</td><td class="num">₹1,555</td><td>After Q4 FY26 results (profit −69%)</td></tr>
+    <tr><td>18 Sep 2026</td><td class="num">₹1,687</td><td>+23% in 2026; 35% below the high</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>At about ₹15,009 cr, Zen trades at roughly 78 times FY26 adjusted profit — a multiple that assumes the FY27–FY28 revenue target is largely met. If revenue does reach ₹4,000 cr over two years at margins near historical levels, profit would be several times FY26's, and the multiple would look reasonable. If conversion keeps slipping, the stock has shown it can fall 40–60% quickly. The next two quarters, which management expects to carry most of FY27's revenue, are the test.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>Zen has a genuinely attractive business — software-like gross margins, protected domestic demand, recurring maintenance income and a product line in the most urgent area of modern defence. Its problem is predictability: revenue depends on a few large orders whose timing it does not control. That makes the stock a bet on conversion over the next few quarters, not on the long-term story, which is not in doubt.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Quarterly revenue against the ₹4,000 cr two-year target</td><td>Tests conversion</td><td>Results</td></tr>
+    <tr><td>Anti-drone order announcements</td><td>Turns pipeline into book</td><td>Exchange filings</td></tr>
+    <tr><td>Order book, split into equipment and maintenance</td><td>Visibility and quality</td><td>Results presentations</td></tr>
+    <tr><td>Operational EBITDA margin</td><td>Shows operating leverage</td><td>Results</td></tr>
+    <tr><td>Fast-track procurement awards</td><td>Industry demand and competition</td><td>Ministry releases</td></tr>
+    <tr><td>Export orders</td><td>Second leg</td><td>Company announcements</td></tr>
+    <tr><td>Receivables</td><td>Quality of revenue</td><td>Half-yearly balance sheet</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Drones and space (061):</b> the threat Zen's anti-drone systems counter, and its own interceptor drones.</li>
+    <li><b>Defence electronics (058):</b> BEL competes in anti-drone; radar and RF suppliers.</li>
+    <li><b>Explosives (060):</b> Solar's counter-drone and loitering munitions.</li>
+    <li><b>Aerospace &amp; defence manufacturing (057):</b> procurement framework; HAL's aircraft simulators.</li>
+    <li><b>Security and surveillance (056):</b> cameras and perimeter systems.</li>
+    <li><b>Global proxies:</b> CAE for simulation; counter-drone specialists for the new segment.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>How much of the ₹4,000 cr FY27–FY28 target is already in the order book?</li>
+    <li>Which specific orders will convert in the second and third quarters, and what could delay them?</li>
+    <li>How much of the anti-drone pipeline is at contract-negotiation stage, and how much at trials?</li>
+    <li>Against whom are you competing for anti-drone orders, and on what basis are they awarded?</li>
+    <li>What is the maintenance share of revenue, and how fast is it growing?</li>
+    <li>What share of anti-drone hardware is imported, and from where?</li>
+    <li>What operational EBITDA margin do you expect at the target revenue?</li>
+    <li>What progress has the AVT partnership made in the US?</li>
+    <li>How much of reported profit is other income?</li>
+    <li>What are receivable days, and how much is overdue?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Zen is a steady compounder"</td><td>Revenue −29% in FY26; stock −62% in six weeks in 2025</td><td>Growth yes, steady no</td></tr>
+    <tr><td>"The order book guarantees revenue"</td><td>FY26 order book grew while revenue fell</td><td>Conversion timing decides</td></tr>
+    <tr><td>"Anti-drone is Zen's market"</td><td>BEL, Solar, Paras and start-ups compete</td><td>A big market, not a monopoly</td></tr>
+    <tr><td>"High gross margin means high profit"</td><td>Gross margin ~73% but operational EBITDA fell to 27%</td><td>Only at scale</td></tr>
+    <tr><td>"Conflict news is a buy signal"</td><td>+55% after Operation Sindoor, then profits fell</td><td>Orders, not headlines, sustain prices</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. AMC, C-UAS" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Simulation and training</h3><dl>
+    <dt>Simulator</dt><dd>A device that recreates a real task, such as driving a tank, for training.</dd>
+    <dt>Full-mission simulator</dt><dd>A high-fidelity simulator that recreates an entire mission.</dd>
+    <dt>Part-task trainer</dt><dd>A simpler device that trains one skill.</dd>
+    <dt>Marksmanship trainer</dt><dd>A simulator for rifle and pistol shooting.</dd>
+    <dt>Crew gunnery simulator</dt><dd>A trainer for tank or armoured-vehicle gun crews.</dd>
+    <dt>Live–virtual–constructive (LVC)</dt><dd>Training that combines real units, simulators and computer-generated forces.</dd>
+    <dt>Live-range system</dt><dd>An instrumented firing range that records hits and performance.</dd>
+    <dt>Laser engagement system</dt><dd>Laser-based equipment that lets soldiers "fire" at each other safely in exercises.</dd>
+    <dt>Motion platform</dt><dd>A moving base that makes a simulator feel like a real vehicle.</dd>
+    <dt>Scenario generation</dt><dd>Creating the virtual environments and events used in training.</dd>
+    <dt>Game engine</dt><dd>Software for real-time 3D graphics, increasingly used in simulators.</dd>
+    <dt>After-action review</dt><dd>A debrief that analyses what happened in a training exercise.</dd>
+  </dl>
+  <h3>Anti-drone</h3><dl>
+    <dt>C-UAS</dt><dd>Counter-unmanned aircraft system — an anti-drone system.</dd>
+    <dt>Soft kill</dt><dd>Defeating a drone by jamming or spoofing its signals.</dd>
+    <dt>Hard kill</dt><dd>Physically destroying a drone.</dd>
+    <dt>RF detection</dt><dd>Finding a drone by its radio signals.</dd>
+    <dt>Jammer</dt><dd>A transmitter that blocks a drone's control or navigation signals.</dd>
+    <dt>Spoofing</dt><dd>Sending false signals to mislead a drone.</dd>
+    <dt>Interceptor drone</dt><dd>A drone designed to hunt and destroy other drones.</dd>
+    <dt>Directed-energy weapon</dt><dd>A laser or microwave weapon that disables targets.</dd>
+    <dt>Sensor fusion</dt><dd>Combining data from radar, cameras and RF detectors into one picture.</dd>
+    <dt>Drone swarm</dt><dd>Many drones attacking together.</dd>
+    <dt>UGV</dt><dd>Unmanned ground vehicle.</dd>
+    <dt>Acoustic detection</dt><dd>Finding drones by the sound of their motors and propellers.</dd>
+    <dt>Radar cross-section</dt><dd>How visible an object is to radar; small drones have a very small one.</dd>
+    <dt>Electro-optical/infrared (EO/IR) sensor</dt><dd>Day and thermal cameras used to see and track drones.</dd>
+    <dt>Geo-fencing</dt><dd>Software limits that stop drones entering defined areas.</dd>
+    <dt>Virtual reality (VR)</dt><dd>A fully computer-generated environment seen through a headset.</dd>
+    <dt>Augmented reality (AR)</dt><dd>Computer images overlaid on the real world.</dd>
+    <dt>Digital twin</dt><dd>A virtual copy of a real system used for training or testing.</dd>
+  </dl>
+  <h3>Business and procurement</h3><dl>
+    <dt>AMC</dt><dd>Annual maintenance contract.</dd>
+    <dt>Order conversion</dt><dd>Turning orders into delivered, invoiced revenue.</dd>
+    <dt>Operating leverage</dt><dd>When fixed costs make profit move more than revenue.</dd>
+    <dt>Operational EBITDA</dt><dd>EBITDA excluding other income such as interest.</dd>
+    <dt>Other income</dt><dd>Income from outside the core business, such as interest on cash.</dd>
+    <dt>Exceptional item</dt><dd>A one-off gain or loss, such as the fire loss in Q1 FY27.</dd>
+    <dt>Fast-track procurement</dt><dd>A shortened route for urgent military purchases.</dd>
+    <dt>Emergency procurement</dt><dd>Crisis-driven buying powers for the services.</dd>
+    <dt>Positive indigenisation list</dt><dd>Items the forces must buy from Indian suppliers.</dd>
+    <dt>Field trials</dt><dd>Tests in real conditions before a product is accepted.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why do armies use simulators?</summary><p>They save ammunition, fuel and equipment wear, and allow training for situations that cannot be practised safely live.</p></details>
+  <details class="q"><summary>2. Why is Zen's gross margin so high?</summary><p>Most of the value is software and system design, built on bought-in hardware.</p></details>
+  <details class="q"><summary>3. What happened to Zen's revenue in FY26?</summary><p>It fell 29% to ₹687.7 cr as order conversion slipped; adjusted profit fell to ₹193.5 cr.</p></details>
+  <details class="q"><summary>4. What was Zen's order book at 30 June 2026?</summary><p>₹1,239 cr — ₹920.6 cr equipment and ₹318.4 cr maintenance — plus ₹177.5 cr received in July.</p></details>
+  <details class="q"><summary>5. What revenue does Zen target over FY27–FY28?</summary><p>₹4,000 cr cumulatively.</p></details>
+  <details class="q"><summary>6. What are the four layers of an anti-drone system?</summary><p>Detect, identify and track, soft kill and hard kill.</p></details>
+  <details class="q"><summary>7. What is operating leverage, and how did it affect Zen?</summary><p>Fixed costs make profit swing more than revenue; Zen's EBITDA margin fell from 54.7% to 40.9% (27.3% excluding other income) as revenue fell.</p></details>
+  <details class="q"><summary>8. How did Zen's stock react to Operation Sindoor?</summary><p>It rose about 55% in three weeks, from ₹1,385 on 7 May to ₹2,140 on 30 May 2025.</p></details>
+  <details class="q"><summary>9. Which quarter has been weakest for the stock?</summary><p>January–March, which beat the Nifty in only 3 of 11 years.</p></details>
+  <details class="q"><summary>10. Who are Zen's competitors in anti-drone systems?</summary><p>BEL, Solar Industries, Paras Defence and many start-ups, plus foreign suppliers.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, April 2015 to 18 September 2026, against NSE:NIFTY; TSX:CAE for the global mirror.</li>
+    <li>Zen Q1 FY27: <a href="https://www.investing.com/news/company-news/zen-technologies-q1-fy27-slides-revenue-timing-weighs-on-results-93CH-4814052">results slides</a>; <a href="https://finance.yahoo.com/markets/stocks/articles/zen-technologies-ltd-bom-533339-190019399.html">earnings call highlights</a>; <a href="https://www.whalesbook.com/corporate-news/English/aerospace-defense/Zen-Technologies-Q1-FY27-Revenue-Declines-105percent-to-indian-rupee1416-Cr-Order-Book-Strong/6a6ce03310bce1fd2037d509">revenue and order book</a>; <a href="https://www.investywise.com/zen-technologies-reports-q1-fy27-financial-results-and-product-launches">product launches</a>; <a href="https://www.tipranks.com/news/company-announcements/zen-technologies-builds-strong-order-book-and-expands-defence-tech-portfolio-in-q1-fy27">order book and portfolio</a>.</li>
+    <li>Zen FY26: <a href="https://upstox.com/news/market-news/stocks/zen-technologies-shares-plunge-11-after-q4-net-profit-drops-69-to-31-crore/article-193063/">Q4 FY26 and share reaction</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/ZEN-Technologies-FY26-Revenue-Dips-indian-rupee1336-Cr-Order-Book-Fuels-FY27-Hopes/69f709369d1c9066481f9465">FY26 revenue and order book</a>; <a href="https://scanx.trade/stock-market-news/companies/zen-technologies-fy26-results-revenue-falls-order-book-rises/47590579">FY26 results</a>; <a href="https://www.business-standard.com/markets/news/zen-technologies-shares-fall-10-in-2-days-what-should-you-do-125072900707_1.html">2025 results reaction</a>.</li>
+    <li>More on Zen: <a href="https://www.business-standard.com/amp/markets/news/zen-technologies-rallies-8-hits-new-high-on-pact-with-avt-simulation-124120600233_1.html">record high on the AVT pact</a>; <a href="https://www.angelone.in/news/stocks/zen-technologies-share-price-drops-10-percent-q4-fy26-results-show-pat-falls-69-percent-yoy">Q4 FY26 share reaction</a>; <a href="https://www.investywise.com/zen-technologies-investor-presentation-for-q1-fy27">Q1 FY27 investor presentation</a>; <a href="https://www.equitybulls.com/category.php?id=373556">Q1 FY27 net profit</a>; <a href="https://univest.in/blogs/zen-technologies-q4-results-fy26">Q4 FY26 order inflow</a>.</li>
+    <li>Partnership and market: <a href="https://www.prnewswire.com/news-releases/zen-technologies-targets-us-expansion-with-strategic-partnership-with-avt-simulation-302324187.html">AVT Simulation partnership</a>; <a href="https://www.nationaldefensemagazine.org/articles/2024/12/4/indian-company-zen-technologies-signs-partnership-contract-with-avt-simulation">US defence press</a>; <a href="https://www.researchandmarkets.com/report/military-simulation">military simulation market</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2016, "v": -20.5}, {"y": 2017, "v": -15.2}, {"y": 2018, "v": 2.8}, {"y": 2019, "v": -10.6}, {"y": 2020, "v": -24.1}, {"y": 2021, "v": -20.6}, {"y": 2022, "v": 1.8}, {"y": 2023, "v": 64.5}, {"y": 2024, "v": 11.0}, {"y": 2025, "v": -15.1}, {"y": 2026, "v": 2.2}], "AprJul": [{"y": 2015, "v": 70.0}, {"y": 2016, "v": 1.2}, {"y": 2017, "v": -24.2}, {"y": 2018, "v": -38.1}, {"y": 2019, "v": -22.3}, {"y": 2020, "v": 89.5}, {"y": 2021, "v": 14.6}, {"y": 2022, "v": -12.7}, {"y": 2023, "v": 74.4}, {"y": 2024, "v": 66.5}, {"y": 2025, "v": -7.0}, {"y": 2026, "v": 17.8}], "AugSep": [{"y": 2015, "v": -11.7}, {"y": 2016, "v": -4.8}, {"y": 2017, "v": -10.1}, {"y": 2018, "v": -14.0}, {"y": 2019, "v": 15.5}, {"y": 2020, "v": 35.9}, {"y": 2021, "v": 42.7}, {"y": 2022, "v": 11.1}, {"y": 2023, "v": 24.4}, {"y": 2024, "v": -2.8}, {"y": 2025, "v": -1.5}], "OctDec": [{"y": 2015, "v": 57.9}, {"y": 2016, "v": -6.0}, {"y": 2017, "v": 152.6}, {"y": 2018, "v": 12.9}, {"y": 2019, "v": -17.3}, {"y": 2020, "v": -13.0}, {"y": 2021, "v": 6.8}, {"y": 2022, "v": -11.1}, {"y": 2023, "v": -6.7}, {"y": 2024, "v": 50.9}, {"y": 2025, "v": -10.7}], "SepNov": [{"y": 2015, "v": 18.9}, {"y": 2016, "v": -7.5}, {"y": 2017, "v": 79.4}, {"y": 2018, "v": -22.0}, {"y": 2019, "v": -2.0}, {"y": 2020, "v": -18.2}, {"y": 2021, "v": 50.7}, {"y": 2022, "v": -13.3}, {"y": 2023, "v": -12.7}, {"y": 2024, "v": 16.2}, {"y": 2025, "v": -10.9}], "JanMar": [{"y": 2016, "v": -37.2}, {"y": 2017, "v": -17.5}, {"y": 2018, "v": -20.4}, {"y": 2019, "v": -13.8}, {"y": 2020, "v": -21.8}, {"y": 2021, "v": -19.1}, {"y": 2022, "v": -5.7}, {"y": 2023, "v": 82.2}, {"y": 2024, "v": 17.6}, {"y": 2025, "v": -39.0}, {"y": 2026, "v": 8.0}]}, "my": {"1": {"2016": -21.6, "2017": -1.7, "2018": -24.6, "2019": -3.3, "2020": 4.0, "2021": 1.2, "2022": -7.4, "2023": 11.8, "2024": 5.8, "2025": -28.2, "2026": 6.5}, "2": {"2016": -26.7, "2017": -8.6, "2018": 1.9, "2019": -7.1, "2020": 1.9, "2021": -11.4, "2022": 2.1, "2023": 32.8, "2024": 1.8, "2025": -34.1, "2026": -3.4}, "3": {"2016": 13.7, "2017": -6.7, "2018": 0.9, "2019": -3.3, "2020": -26.8, "2021": -9.6, "2022": -0.4, "2023": 24.2, "2024": 8.9, "2025": 35.1, "2026": 5.4}, "4": {"2015": 8.0, "2016": 7.2, "2017": -8.4, "2018": -0.9, "2019": 1.9, "2020": 35.3, "2021": -3.4, "2022": -3.2, "2023": -15.4, "2024": 14.9, "2025": -7.7, "2026": 23.2}, "5": {"2015": 22.9, "2016": -18.4, "2017": -16.3, "2018": -15.3, "2019": -3.9, "2020": -5.5, "2021": -10.0, "2022": -1.7, "2023": 25.4, "2024": -12.7, "2025": 48.3, "2026": 1.5}, "6": {"2015": 4.4, "2016": 19.8, "2017": -6.3, "2018": -6.4, "2019": 0.4, "2020": 27.6, "2021": 25.6, "2022": -1.9, "2023": 8.7, "2024": 15.2, "2025": -10.5, "2026": 5.2}, "7": {"2015": 23.2, "2016": -4.3, "2017": 8.2, "2018": -16.9, "2019": -20.7, "2020": 10.0, "2021": 3.5, "2022": -7.1, "2023": 44.9, "2024": 41.2, "2025": -23.2, "2026": -10.6}, "8": {"2015": -19.0, "2016": -8.7, "2017": -10.3, "2018": -3.1, "2019": 5.3, "2020": 38.2, "2021": -5.7, "2022": 16.0, "2023": 38.6, "2024": -1.6, "2025": 1.1, "2026": 10.8}, "9": {"2015": 9.7, "2016": 4.0, "2017": 0.0, "2018": -11.1, "2019": 9.5, "2020": -1.2, "2021": 47.2, "2022": -3.6, "2023": -11.0, "2024": -1.1, "2025": -2.6}, "10": {"2015": 5.3, "2016": 0.2, "2017": 44.4, "2018": 3.0, "2019": -2.6, "2020": -12.0, "2021": 2.0, "2022": -1.0, "2023": -3.2, "2024": 16.0, "2025": -9.8}, "11": {"2015": 3.0, "2016": -11.2, "2017": 24.3, "2018": -16.8, "2019": -7.9, "2020": -4.1, "2021": 1.6, "2022": -8.7, "2023": 2.0, "2024": 1.0, "2025": 1.8}, "12": {"2015": 45.8, "2016": 5.9, "2017": 37.8, "2018": 30.4, "2019": -7.0, "2020": 5.6, "2021": 3.2, "2022": -1.3, "2023": -5.1, "2024": 30.9, "2025": -2.4}}, "basket": ["Zen Technologies Limited"], "nbasket": 1, "start": "Apr 2015", "monthly": [{"m": 1, "abs": -5.8, "rel": -5.2, "hit": 5, "n": 11}, {"m": 2, "abs": -6.4, "rel": -4.6, "hit": 5, "n": 11}, {"m": 3, "abs": 3.5, "rel": 3.8, "hit": 6, "n": 11}, {"m": 4, "abs": 7.2, "rel": 4.3, "hit": 6, "n": 12}, {"m": 5, "abs": 2.4, "rel": 1.2, "hit": 4, "n": 12}, {"m": 6, "abs": 8.2, "rel": 6.8, "hit": 8, "n": 12}, {"m": 7, "abs": 6.9, "rel": 4.0, "hit": 6, "n": 12}, {"m": 8, "abs": 5.7, "rel": 5.1, "hit": 6, "n": 12}, {"m": 9, "abs": 3.3, "rel": 3.6, "hit": 5, "n": 11}, {"m": 10, "abs": 4.8, "rel": 3.8, "hit": 6, "n": 11}, {"m": 11, "abs": 0.2, "rel": -1.4, "hit": 6, "n": 11}, {"m": 12, "abs": 14.5, "rel": 13.1, "hit": 7, "n": 11}], "cy": [{"y": 2016, "b": -42.7, "n": 3.0, "rel": -45.7, "partial": false}, {"y": 2017, "b": 83.5, "n": 28.6, "rel": 54.8, "partial": false}, {"y": 2018, "b": -48.1, "n": 3.2, "rel": -51.3, "partial": false}, {"y": 2019, "b": -28.0, "n": 12.0, "rel": -40.0, "partial": false}, {"y": 2020, "b": 63.2, "n": 14.9, "rel": 48.3, "partial": false}, {"y": 2021, "b": 70.4, "n": 24.1, "rel": 46.3, "partial": false}, {"y": 2022, "b": -14.7, "n": 4.3, "rel": -19.0, "partial": false}, {"y": 2023, "b": 331.3, "n": 20.0, "rel": 311.2, "partial": false}, {"y": 2024, "b": 207.8, "n": 8.8, "rel": 199.0, "partial": false}, {"y": 2025, "b": -44.4, "n": 10.5, "rel": -55.0, "partial": false}, {"y": 2026, "b": 23.3, "n": -10.7, "rel": 34.0, "partial": true}], "dd": [{"co": "Zen Technologies", "peak": "Dec 2024", "fp": -35, "y1": 4}], "win": {"FebMar": {"mean": -2.2, "median": -10.6, "hit": 5, "n": 11}, "AprJul": {"mean": 19.2, "median": 7.9, "hit": 7, "n": 12}, "AugSep": {"mean": 7.7, "median": -1.5, "hit": 5, "n": 11}, "OctDec": {"mean": 19.7, "median": -6.0, "hit": 5, "n": 11}, "SepNov": {"mean": 7.1, "median": -7.5, "hit": 4, "n": 11}, "JanMar": {"mean": -6.1, "median": -17.5, "hit": 3, "n": 11}}, "ytd": {"b": 23.3, "n": -10.7}, "notes": {"2016": "\u221242.7% against +3.0%. Zen almost halved.", "2017": "+83.5% against +28.6%. The small-cap boom; most of the gain came in October\u2013December.", "2018": "\u221248.1% against +3.2%. The small-cap crash.", "2019": "\u221228.0% against +12.0%. Zen fell for a second year.", "2020": "+63.2% against +14.9%. The Galwan clash and the first indigenisation list, which included simulators; anti-drone systems became a theme.", "2021": "+70.4% against +24.1%. The defence re-rating lifted Zen with the sector.", "2022": "\u221214.7% against +4.3%. Zen \u221215% after two strong years.", "2023": "+331.3% against +20.0%. Record orders and a surge in profit; the stock more than quadrupled.", "2024": "+207.8% against +8.8%. Continued growth, a partnership with US-based AVT Simulation in December, and a record high on 23 December.", "2025": "\u221244.4% against +10.5%. A 62% fall from the January high to the February low after weaker results and a small-cap sell-off; a 55% rebound in May after Operation Sindoor; profits fell through the year.", "2026": "+23.3% against a Nifty \u221210.7%. Anti-drone demand and fast-track procurement, despite Q4 FY26 profit \u221269% and Q1 FY27 revenue \u221210.5%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

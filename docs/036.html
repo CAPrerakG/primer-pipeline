@@ -1,0 +1,609 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coal and Coke Primer</title>
+<meta name="description" content="Industry 36 of 278, opening the Power family: India&#x27;s coal industry. Why a monopoly miner produced 7% less coal and sold 4% more, how e-auction premiums decide profit, what commercial mining auctions are changing, and the 12 listed companies — only one of which actually mines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Coal &amp; Coke · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What is actually sold</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where the industry is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 36 of 278 · Power family, part 1</div>
+  <h1>Coal &amp; Coke</h1>
+  <p class="lede">The fuel underneath three-quarters of India's electricity. One state-owned company digs most of it, sells it at prices the government influences, and auctions a slice at whatever the market will pay — and that slice decides the profit. Around it sits a second industry nobody notices: the contractors who move the coal, and who cart away the ash left when it burns.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 12 listed, 1 miner of scale</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Power Generation &amp; Integrated Utilities</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">−7% / +4%</div><div class="l">Coal India's Q1 FY27 production against its offtake: selling down the stockpile</div></div>
+    <div class="stat"><div class="n">₹3,085</div><div class="l">E-auction realisation per tonne against a ₹2,338 blended price — the profit is in the 13% sold this way</div></div>
+    <div class="stat"><div class="n">210 mt</div><div class="l">Captive and commercial mine production to March 2026, up 10.2% — the competition arriving</div></div>
+    <div class="stat"><div class="n">+96%</div><div class="l">Bharat Coking Coal's listing premium in January 2026, on a ₹1,071 cr offer for sale</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A monopoly with an administered price and an auction window</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Most of India's electricity comes from burning coal, and almost all of that coal is dug up by one government-owned company. It sells most of it at a fixed, low price to power stations, because cheap electricity matters to everybody. But it also puts a small share — about one tonne in eight — up for auction, where anyone can bid. Those auction tonnes sell for far more, and that is where most of the company's profit comes from. So the interesting question is never how much coal is dug; it is how much is auctioned, and how badly people want it.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is a regulated monopoly whose earnings turn on a small marginal market.</p>
+    <ul>
+      <li><b>The structure:</b> Coal India supplies power producers under long-term fuel agreements at notified prices, and sells roughly 13% by e-auction at ₹3,085 a tonne against a blended ₹2,338. The spread between the two is the earnings engine.</li>
+      <li><b>2026 so far:</b> production fell 7% to 169.63 million tonnes in the June quarter while offtake rose 4% to 197.86 million tonnes — the difference came out of pithead stocks. Revenue rose 8% to ₹46,255 cr and profit was flat at ₹8,852 cr.</li>
+      <li><b>Competition is finally arriving.</b> Captive and commercial mines produced 210.46 million tonnes to March 2026, up 10.2%, and the 16th auction round opened in September 2026.</li>
+      <li><b>Two new listings:</b> Bharat Coking Coal in January, up 96% on debut, and Caliber Mining in July.</li>
+      <li><b>Most of this section is not mining.</b> Of twelve names, one is a large miner, one a coking-coal subsidiary, and the rest are coal traders, transporters and ash handlers.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What is actually sold">
+  <p class="eyebrow">2 · What is actually sold</p>
+  <h2>Three grades, two prices and a waste product</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Who buys it</th><th>How it is priced</th></tr></thead><tbody>
+    <tr><td>Thermal (non-coking) coal</td><td>Burned to raise steam and generate electricity</td><td>Power producers, cement, sponge iron (see 037)</td><td>Notified prices under fuel supply agreements; the bulk of volume</td></tr>
+    <tr><td>E-auction coal</td><td>The same coal, sold competitively</td><td>Industrial buyers without long-term agreements</td><td>Market-determined — ₹3,085 a tonne in Q1 FY27</td></tr>
+    <tr><td>Coking coal</td><td>Higher-grade coal used to make steel, not power</td><td>Steel makers</td><td>Largely imported; Bharat Coking Coal accounted for 58.5% of domestic coking coal output in FY25</td></tr>
+    <tr><td>Washed coal</td><td>Coal cleaned of ash and impurities</td><td>Steel and specialised users</td><td>Premium to raw coal</td></tr>
+    <tr><td>Fly ash</td><td>The residue left after burning; a waste that must be removed</td><td>Cement, road building, mine backfilling</td><td>A service contract, not a commodity — Refex's business</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Imagine a government dairy that must sell most of its milk to schools at a fixed low price, but is allowed to auction one crate in eight at the gate. The schools take the volume; the auction sets the profit. And because milk cannot be stored, a third business exists purely to move it — and, here, to cart away what is left once it is used.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a seam to a boiler, and the ash back out</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Blocks and leases</h4><div class="an">The right to mine</div>Nationalised reserves with Coal India, plus captive and commercial blocks auctioned to others.<div class="who">Ministry of Coal</div><div class="m">16th auction round opened September 2026</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Mining</h4><div class="an">Digging it out</div>Mostly opencast: strip the overburden, load, haul, crush.<div class="who">Coal India's subsidiaries, private developers</div><div class="m">169.63 mt in a quarter, down 7%</div></div>
+    <div class="stage"><div class="no">03</div><h4>Washing and grading</h4><div class="an">Cleaning it</div>Removing ash and stone, especially for coking coal.<div class="who">Bharat Coking Coal and washery operators</div><div class="m">Indian coal is high-ash by nature</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Evacuation</h4><div class="an">Moving it</div>Rail rakes, conveyors, road transport to power stations and ports.<div class="who">Railways; coal logistics firms like Sindhu Trade</div><div class="m">The binding constraint in most bad years</div></div>
+    <div class="stage"><div class="no">05</div><h4>Sale</h4><div class="an">Two markets</div>Fuel supply agreements at notified prices; e-auctions at market prices.<div class="who">Power producers (037), industry</div><div class="m">13% by e-auction sets the margin</div></div>
+    <div class="stage"><div class="no">06</div><h4>Combustion and ash</h4><div class="an">What is left</div>Burning produces electricity and vast quantities of fly ash to be removed and used.<div class="who">Refex Industries and other ash handlers</div><div class="m">70,000 tonnes of ash a day, for one contractor</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Blocks:</b> the government decides who is allowed to mine which patch of ground.</li>
+    <li><b>Mining:</b> most Indian coal is near the surface, so earth is stripped off the top and the coal scooped out.</li>
+    <li><b>Washing:</b> Indian coal has a lot of stone and ash in it, which has to be cleaned out for steel-making.</li>
+    <li><b>Moving:</b> coal is heavy and cheap, so transport costs a lot relative to the coal itself — the railway is the bottleneck.</li>
+    <li><b>Selling:</b> most goes to power stations at a set price; a little is auctioned to the highest bidder.</li>
+    <li><b>Ash:</b> after burning, a huge amount of fine grey powder is left, and somebody has to take it away.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Three things decide the miner's profit, and volume is the least of them. <b>E-auction share and premium</b>, because that is the only market-priced tonne — 13% of offtake at ₹3,085 against a ₹2,338 blend. <b>Notified price revisions</b>, which are political and infrequent. And <b>cost per tonne</b>, dominated by wages under long-term agreements and by the stripping ratio as mines deepen. A quarter in which production falls 7%, offtake rises 4% and profit is flat tells you the company sold stock it had already paid to mine — good for cash, and not repeatable.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 12 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>2026 so far</th></tr></thead><tbody>
+    <tr><td>Coal India (~₹2.60 lakh cr)</td><td>The monopoly: roughly three-quarters of India's coal, mined through subsidiaries, sold under fuel supply agreements and by e-auction.</td><td>Q1 FY27 production 169.63 mt (−7%), offtake 197.86 mt (+4%), revenue ₹46,255 cr (+8%), consolidated profit ₹8,852 cr (+0.6%). E-auction about 13% of offtake at ₹3,085 a tonne; blended realisation ₹2,338 against ₹2,248. First interim dividend ₹5.50 a share. Missed its FY26 production target. Stock +2.7%, −24% from its August 2024 peak.</td></tr>
+    <tr><td>Bharat Coking Coal (~₹15,000 cr)</td><td>Coal India's coking-coal subsidiary, incorporated 1972; coking, non-coking and washed coal. Accounted for 58.5% of India's domestic coking coal production in FY25.</td><td>Listed 19 January 2026 at ₹45 against a ₹23 issue price — a 96% premium — in a ₹1,071 cr offer for sale, the first mainboard IPO of 2026. Since −23% from its June peak. Too new for a full record.</td></tr>
+    <tr><td>Sindhu Trade Links (~₹3,600 cr)</td><td>Coal logistics and trading, with mining services and transport fleets; classified under freight in the underlying data.</td><td>+25.3% in 2026, the best of the basket, but −41% from its February 2024 peak.</td></tr>
+    <tr><td>Refex Industries (~₹3,600 cr)</td><td>Not a miner: ash and coal handling for thermal power plants, plus refrigerant gases. Its ash business serves 40 power plants across more than 14 states, moving over 70,000 tonnes a day with a fleet of 2,000-plus vehicles.</td><td>Ash and coal handling order book ₹1,635 cr at 30 June 2026. Recent wins include about ₹40.4 cr for ash transport to NHAI road projects and ₹33.7 cr of Telangana fly-ash contracts. Q4 FY26 consolidated profit ₹90.8 cr (+88%) on revenue ₹934 cr (+57%); the latest quarter's standalone profit rose 122% to ₹73.4 cr. Stock +4.6% but −53% from its September 2024 peak after tripling in 2024.</td></tr>
+    <tr><td>Caliber Mining and Logistics (~₹3,100 cr)</td><td>Coal mining and logistics services; listed July 2026.</td><td>−20% from its August 2026 peak. Two months of history — no basis for judgement yet.</td></tr>
+    <tr><td>Maheshwari Logistics (~₹210 cr)</td><td>Coal trading and logistics.</td><td>+46.5% in 2026 but −55% from its January 2020 peak.</td></tr>
+    <tr><td>Anmol India (~₹82 cr)</td><td>Coal importer and trader.</td><td>+2.8%, −78% from its December 2023 peak.</td></tr>
+    <tr><td>Virya Resources (~₹115 cr)</td><td><b>Flagged</b> — classified as engineering and construction, with no clear coal operations in the data.</td><td>+21.5%. Needs a business check before use.</td></tr>
+    <tr><td>MRP Agro (~₹104 cr)</td><td><b>Flagged</b> — classified as a food distributor.</td><td>−6.2%. Does not belong in this section.</td></tr>
+    <tr><td>ANI Integrated Services (~₹63 cr)</td><td><b>Flagged</b> — classified as personnel services.</td><td>−33.9%, −74% from its September 2024 peak.</td></tr>
+    <tr><td>Pagaria Energy (~₹3 cr)</td><td><b>Flagged</b> — micro-cap distributor.</td><td>−19.6%. Not investable.</td></tr>
+    <tr><td>Hemang Resources (negligible)</td><td><b>Flagged</b> — classified as real estate development.</td><td>−38.1% and −91.5% from its January 2023 peak. Not investable.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Audit note: this section is not a mining sector</span><p>Of twelve members, <b>one is a large miner</b> (Coal India), one is its newly listed coking-coal subsidiary, and one is a recent mining-and-logistics listing. The rest are coal traders, transporters, an ash-handling contractor and five companies whose underlying classifications are food distribution, personnel services, real estate and engineering. The computed basket contains Coal India, Sindhu Trade Links and Refex Industries — a miner, a logistics firm and an ash contractor — so every "sector" statistic in this primer is really a blend of three different businesses. Read Coal India on its own; treat Refex as a services company that happens to sit downstream of coal.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>The auction tonne carries the company</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Channel</th><th>Share of volume</th><th>Realisation</th><th>Character</th></tr></thead><tbody>
+    <tr><td>Fuel supply agreements</td><td>The large majority</td><td>Notified prices, revised occasionally and politically</td><td>Volume and social obligation</td></tr>
+    <tr><td>E-auction</td><td>About 13% of offtake</td><td>₹3,085 a tonne in Q1 FY27</td><td>Market-priced; the swing factor in profit</td></tr>
+    <tr><td>Washed and coking coal</td><td>Small</td><td>Premium grades</td><td>Steel-linked, import-competing</td></tr>
+    <tr><td>Blended average</td><td>—</td><td>₹2,338 a tonne against ₹2,248 a year earlier</td><td>The number that actually moves earnings</td></tr>
+  </tbody></table></div>
+  <h3>Reading the June quarter properly</h3>
+  <p>Coal India produced 169.63 million tonnes and sold 197.86 million — it sold 28 million tonnes more than it dug. That is a stockpile drawdown, and it flatters both revenue and cash flow because the cost of mining those tonnes was incurred in an earlier period. Revenue rose 8%, blended realisation improved by about ₹90 a tonne, and profit still finished flat at ₹8,852 cr, which tells you costs rose to absorb the gain. For a business whose costs are dominated by a large unionised workforce on long-term wage agreements and by the rising expense of stripping deeper seams, flat profit on higher realisation is the normal state of affairs unless e-auction premiums widen.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A shopkeeper who sells more than he buys for a quarter looks busier and richer. He has simply emptied the storeroom, and next quarter he must either dig faster or sell less. Coal India's stockpile has been the shock absorber for the Indian power system for years — which is a public good and a private cost.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Rail capacity</td><td>Coal is bulky and low-value; without rakes it cannot reach a power station</td><td>The recurring constraint in every supply crisis</td></tr>
+    <tr><td>Land and forest clearances</td><td>Opencast mining needs large contiguous areas</td><td>The slowest step in bringing a block into production</td></tr>
+    <tr><td>Labour</td><td>A very large unionised workforce on periodic wage agreements</td><td>The dominant cost, and it does not fall when volumes do</td></tr>
+    <tr><td>Mining equipment and contractors</td><td>Draglines, shovels, haulers, and outsourced mine development</td><td>Increasingly contracted out, creating the services companies in this section</td></tr>
+    <tr><td>Explosives and diesel</td><td>Consumed per tonne of overburden moved</td><td>Diesel cost tracks crude (see 031)</td></tr>
+    <tr><td>Ash disposal capacity</td><td>Burning coal creates ash that must be removed by law</td><td>Refex handles over 70,000 tonnes a day; an estimated ₹75,000 cr market for ash and coal handling</td></tr>
+    <tr><td>Monsoon</td><td>Opencast pits flood; production collapses for weeks</td><td>The reason August is the worst month for these stocks</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Stockpile in, stockpile out</h2>
+  <ul>
+    <li><b>April–June:</b> peak power demand as summer cooling load climbs; stockpiles are drawn down and e-auction premiums typically firm.</li>
+    <li><b>July–September:</b> the monsoon floods opencast mines and production falls sharply — August is the worst month in the record for these stocks.</li>
+    <li><b>October–December:</b> production recovers hard as the industry races to rebuild stocks before winter; the largest output quarter.</li>
+    <li><b>January–March:</b> the year-end production push to meet annual targets, followed historically by weak share prices.</li>
+    <li><b>Auction rounds and price notifications:</b> not seasonal — the 16th commercial auction round opened in September 2026, and notified price revisions arrive when the government decides.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 3 names (Coal India Ltd., Sindhu Trade Links Ltd., Refex Industries Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +4.8 pts (beat in 11 of 15 years); Sep +4.6 pts (beat in 11 of 15 years); Jun +3.8 pts (beat in 7 of 15 years).</li><li><b>Weakest months:</b> Aug -4.1 pts (beat in 3 of 16 years); Oct -3.3 pts (beat in 3 of 15 years); Jan -2.4 pts (beat in 5 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 9 of 15 years (median +0.7 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +7.8 pts); Aug–Sep beat the Nifty in 6 of 14 years (median -2.4 pts); Oct–Dec beat the Nifty in 6 of 14 years (median -0.9 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +4.9 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -4.4 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +1.8 points.</p><p><b>Reading it:</b> the pattern follows the power-demand year rather than the mining year. April is the best month (11 of 15, +4.8 points) and September equal-best (11 of 15, +4.6), matching peak summer power demand and the post-monsoon restocking that follows flooded mines. April–July works 10 of 15 with a median of +7.8, and September–November 9 of 14. The weak stretch is August (3 of 16, −4.1 points), when the monsoon floods pits and production collapses, and January–March (5 of 15, median −4.4).</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July worked in 10 of 15 years (median +7.8)</b>, with failures in 2017 (−27.8), 2018 (−20.2), 2020 (−14.6), 2014 (−13.8) and 2012 (−3.2) — all years when either the power cycle or the state-enterprise mood was against it.</li>
+    <li><b>The best readings were 2023 (+74.8) and 2019 (+56.1)</b>, the first a genuine coal squeeze, the second a micro-cap run in Refex.</li>
+    <li><b>August is the clearest negative in the series</b>: 3 of 16 years, −4.1 points on average, with 2019 at −24.2 and 2015 at −17.0. The monsoon is visible in the share prices.</li>
+    <li><b>January–March has failed in ten of fifteen years</b>, with 2012's −41.6 the worst reading in this entire primer series.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The April-to-July strength and the August weakness both have physical causes — summer power demand and monsoon flooding — which makes this one of the more trustworthy seasonal patterns in the family. The caution is the basket: three stocks, one of which tripled in 2024 on an unrelated ash-handling story. For a view on coal itself, track Coal India's monthly production and offtake releases, which are published well before the quarterly results and tell you most of what the results will say.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Power demand:</b> roughly three-quarters of India's electricity is coal-fired, so peak-season demand drives offtake (see 037).</li>
+    <li><b>E-auction premium:</b> the only market-priced tonne, and the swing factor in profit.</li>
+    <li><b>Notified price revisions:</b> infrequent, political, and large when they happen.</li>
+    <li><b>Production and evacuation:</b> rakes, not reserves, are usually the constraint.</li>
+    <li><b>Imported coal prices:</b> when seaborne coal is dear, domestic e-auction premiums widen — the 2022 pattern.</li>
+    <li><b>Commercial mining supply:</b> captive and commercial output reached 210.46 mt, up 10.2%, and the 16th auction round is under way.</li>
+    <li><b>Wage agreements and stripping ratios:</b> the cost side, which rises structurally as mines deepen.</li>
+    <li><b>Renewable displacement:</b> solar and wind take the marginal unit of daytime generation first (see 038).</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of Coal India, Sindhu Trade Links and Refex Industries — the only members with usable history and scale, and note that two of the three are services rather than mining companies. Monthly returns capped at ±50%, price only; 2026 to 18 September. Bharat Coking Coal (January 2026) and Caliber Mining (July 2026) are too new to include.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a coal cycle</h3>
+  <ol>
+    <li><b>Power demand outruns supply</b> — a hot summer, a weak monsoon for hydro, or an import price spike.</li>
+    <li><b>Stockpiles fall and e-auction premiums widen</b>, because the marginal industrial buyer has nowhere else to go. Profit rises fast.</li>
+    <li><b>Production is pushed up and imports become affordable again</b>; premiums narrow.</li>
+    <li><b>Earnings normalise</b> while costs — wages, stripping — carry on rising, so the next flat year arrives quickly. 2025 and 2026 are that phase.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Coal India underperformed for most of the 2010s</b> — negative in 2016, 2017, 2018, 2019 and 2020 — because price control capped the upside of a monopoly.</li>
+    <li><b>The 2022–24 run was an energy-shock re-rating</b>, not a volume story: +54%, +67%, +2%.</li>
+    <li><b>Small caps in this section move on their own stories:</b> Refex +300% in 2024 on ash handling, then −46% in 2025.</li>
+    <li><b>The stockpile is the buffer.</b> In 2020 it built up and the stock fell 36%; in 2026 it is being drawn down and profits are flat.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>The one large economy still adding coal</h2>
+  <p>While most rich countries are retiring coal plants, India is still building them, because electricity demand is growing faster than renewables can be added and because coal is the only fuel the country has in abundance. That makes India, with China, the centre of the remaining global coal trade. The country still imports substantial volumes — chiefly from Indonesia for thermal coal and Australia for coking coal — because domestic coal is high in ash and because coastal power plants were designed for imported grades. The strategic direction is explicit: expand domestic production to displace imports, which is what commercial mining auctions are for, with captive and commercial output reaching 210.46 million tonnes and the 16th auction round offering 25 more blocks.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Role</th><th>India relevance</th></tr></thead><tbody>
+    <tr><td>Indonesia</td><td>The largest seaborne thermal coal exporter</td><td>India's main import source for power-grade coal</td></tr>
+    <tr><td>Australia</td><td>The premium coking coal supplier</td><td>Feeds Indian steel; Bharat Coking Coal is the domestic alternative</td></tr>
+    <tr><td>China</td><td>The largest producer and consumer</td><td>Its import appetite sets seaborne prices</td></tr>
+    <tr><td>Europe and the US</td><td>Retiring coal generation</td><td>Freed-up supply, and the source of the divestment pressure on Indian coal financing</td></tr>
+    <tr><td>India</td><td>Growing production and consumption</td><td>Commercial mining is the structural change</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Nationalisation to monopoly (1970s):</b> private coal mining was nationalised, creating Coal India and the structure that still defines the industry.</li>
+    <li><b>Captive blocks, cancellation and re-auction (2014):</b> the Supreme Court cancelled earlier allocations, and a transparent auction regime replaced them.</li>
+    <li><b>Commercial mining (2020 onwards):</b> for the first time since nationalisation, any company may mine and sell coal freely — the slow unwinding of the monopoly, now visible at 210 million tonnes.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where the industry is going">
+  <p class="eyebrow">12 · Where the industry is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Commercial and captive mining scale-up:</b> 12 blocks operationalised in FY26 adding over 86 million tonnes of annual capacity.</li>
+    <li><b>First-mile connectivity:</b> conveyors and silos replacing road haulage from pit to railhead, cutting cost and dust.</li>
+    <li><b>Coal gasification:</b> converting coal to syngas for chemicals and fertiliser, with policy support but unproven economics.</li>
+    <li><b>Washing and beneficiation:</b> reducing ash content to raise plant efficiency and cut transport of waste.</li>
+    <li><b>Ash utilisation:</b> a regulated obligation turning a waste problem into a services industry — road embankments, cement, mine backfill.</li>
+    <li><b>Diversification by the miner itself:</b> Coal India investing in renewables and critical minerals as its core business faces a long-term ceiling.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Notified price mechanism</td><td>Government-influenced pricing for fuel supply agreements</td><td>Caps the monopoly's earnings on most of its volume</td></tr>
+    <tr><td>E-auction policy</td><td>About 13% of offtake</td><td>The market-priced slice that drives profit</td></tr>
+    <tr><td>Commercial mining auctions</td><td>16th round launched 17 September 2026 with 25 blocks; auctioned mines projected to generate about ₹47,500 cr of annual revenue and ₹55,000 cr of investment</td><td>Ends the monopoly slowly, and adds supply</td></tr>
+    <tr><td>Mine opening permissions</td><td>12 blocks operationalised in FY26, adding 86+ mt of capacity</td><td>The practical measure of how fast competition arrives</td></tr>
+    <tr><td>Ash utilisation rules</td><td>Mandatory utilisation targets for thermal plants</td><td>Created the ash-handling services market</td></tr>
+    <tr><td>Environmental and forest clearances</td><td>Required before mining</td><td>The main brake on capacity addition</td></tr>
+    <tr><td>Coal cess and royalties</td><td>Levied per tonne</td><td>A fixed charge that raises the delivered cost of power</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: selling the stockpile</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Production</td><td>Falling</td><td>169.63 mt in Q1 FY27, down 7%; the FY26 target was missed</td></tr>
+    <tr><td>Demand</td><td>Firm</td><td>Offtake up 4% to 197.86 mt, drawing down stocks</td></tr>
+    <tr><td>Realisations</td><td>Slightly better</td><td>Blended ₹2,338 a tonne against ₹2,248; e-auction ₹3,085</td></tr>
+    <tr><td>Profit</td><td>Flat</td><td>₹8,852 cr, up 0.6%, on revenue up 8%</td></tr>
+    <tr><td>Competition</td><td>Building</td><td>Captive and commercial output 210.46 mt, up 10.2%; 16th auction round open</td></tr>
+    <tr><td>Stocks</td><td>Modestly up</td><td>Basket +14%, median +5%; Coal India +3% and 24% below its 2024 peak</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Coal India is doing something quietly important: it is meeting rising demand out of inventory while its own production falls, which is sustainable for a few quarters and not for a few years. The bull case has always been the e-auction premium, and at ₹3,085 against a ₹2,338 blend it is still healthy but no longer widening. The structural question is the one the market has been slow to price: commercial mining is now producing 210 million tonnes and growing at 10% a year, which is the first real competition the company has faced since nationalisation, and it arrives at the same time as renewables take the daytime margin (see 038). Against that, coal still fuels most of India's electricity and demand is growing. The result is a business that should be valued as a mature cash generator with a long, slow ceiling — which is roughly where a 24% drawdown from the 2024 peak and a ₹5.50 quarterly dividend leave it. The two things to avoid are reading the basket as a mining sector, and assuming the ash-handling contractor's economics have anything to do with the miner's.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Coal India monthly production and offtake</td><td>Monthly company release</td><td>Published weeks before results and tells you most of the story</td></tr>
+    <tr><td>E-auction premium to notified price</td><td>Quarterly</td><td>The profit driver; ₹3,085 against a ₹2,338 blend</td></tr>
+    <tr><td>Pithead and power-station coal stocks</td><td>Weekly power ministry data</td><td>Whether the buffer is building or draining</td></tr>
+    <tr><td>Power demand and plant load factors</td><td>Monthly (see 037)</td><td>The demand side</td></tr>
+    <tr><td>Imported thermal coal prices</td><td>Weekly</td><td>Sets the ceiling on e-auction premiums</td></tr>
+    <tr><td>Commercial and captive mine output</td><td>Ministry data, monthly</td><td>The competition; 210.46 mt and growing 10%</td></tr>
+    <tr><td>Rake availability</td><td>Railway data</td><td>The evacuation constraint</td></tr>
+    <tr><td>Wage agreement cycles</td><td>Periodic</td><td>The largest step-change in cost</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power generation &amp; integrated utilities</b> (037): the customer for three-quarters of this coal.</li>
+    <li><b>Renewable power generation</b> (038): the competitor for the marginal unit of electricity.</li>
+    <li><b>Oil &amp; gas exploration</b> (028) and <b>gas transmission</b> (033): the alternative fuels, and the same policy-versus-market tension.</li>
+    <li><b>Petroleum products</b> (032): calcined petcoke competes with coal in some industrial uses, at a different duty.</li>
+    <li><b>Steel:</b> the coking coal market and Bharat Coking Coal's customer base.</li>
+    <li><b>Railways and logistics:</b> coal is the single largest freight category on Indian railways.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is the production plan by subsidiary, and what caused the shortfall against target?</li>
+    <li>What is the current pithead stock, and how many more quarters can offtake exceed production?</li>
+    <li>What share of volume went to e-auction, and at what premium to notified price?</li>
+    <li>When is the next notified price revision expected, and what is the cost inflation it must cover?</li>
+    <li>What is cost per tonne, split between wages, contractual mining and stripping?</li>
+    <li>What is the stripping ratio trend as existing mines deepen?</li>
+    <li>What is the capital expenditure on first-mile connectivity and washeries?</li>
+    <li>How much capital is being allocated away from coal, and at what expected return?</li>
+    <li>(Services companies) What is the order book, and who is the counterparty?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Offtake exceeding production for several consecutive quarters.</li>
+    <li>Flat profit on rising realisations — cost inflation absorbing the gain.</li>
+    <li>Diversification capital into unrelated businesses at undisclosed returns.</li>
+    <li>Receivables from state distribution companies stretching (see 037).</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Coal India is a monopoly, so it must be a great business."</td><td>It was negative in five consecutive years from 2016 to 2020, because a monopoly whose prices are set by its owner is not a price-setter.</td></tr>
+    <tr><td>"Coal is in terminal decline in India."</td><td>Not yet. It still fuels around three-quarters of generation, offtake rose 4% this quarter, and commercial mining is adding capacity, not retiring it.</td></tr>
+    <tr><td>"Record offtake means the business is growing."</td><td>Offtake exceeded production by 28 million tonnes. That is a stockpile drawdown, and it reverses.</td></tr>
+    <tr><td>"Commercial mining will not dent the monopoly."</td><td>Captive and commercial mines produced 210.46 mt to March 2026, growing 10.2% — already a meaningful share, and 12 more blocks were operationalised in FY26.</td></tr>
+    <tr><td>"The coal sector is up 14% this year."</td><td>The median stock is up 5%, and two of the three basket members are logistics and ash-handling companies rather than miners.</td></tr>
+    <tr><td>"Ash handling is a coal business."</td><td>It is a regulated services business with contracts, order books and receivables — Refex tripled in 2024 and halved thereafter for reasons unconnected to the coal price.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. e-auction, stripping ratio" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Mining</h3><dl>
+    <dt>Opencast mining</dt><dd>Removing surface earth to reach a shallow coal seam; most Indian coal is mined this way.</dd>
+    <dt>Underground mining</dt><dd>Shafts and galleries to reach deeper seams; costlier and a smaller share of Indian output.</dd>
+    <dt>Overburden</dt><dd>The earth and rock above a coal seam that must be stripped away.</dd>
+    <dt>Stripping ratio</dt><dd>Tonnes of overburden moved per tonne of coal produced; it rises as a mine deepens, and with it the cost.</dd>
+    <dt>Seam</dt><dd>The layer of coal within the rock.</dd>
+    <dt>Coal block</dt><dd>A defined area allocated or auctioned for mining.</dd>
+    <dt>Captive mine</dt><dd>A block mined for the owner's own plant rather than for sale.</dd>
+    <dt>Commercial mining</dt><dd>Mining coal for open sale, permitted since 2020 — the end of the pure monopoly.</dd>
+    <dt>Mine opening permission (MOP)</dt><dd>The final clearance to begin production; 12 blocks received it in FY26.</dd>
+    <dt>Washery</dt><dd>A plant that removes ash and stone from raw coal.</dd>
+    <dt>Beneficiation</dt><dd>Any process that raises coal quality before use.</dd>
+    <dt>Grade and gross calorific value</dt><dd>The energy content per tonne, which determines the notified price.</dd>
+    <dt>Dragline</dt><dd>The very large excavator used to strip overburden in opencast mines; its availability sets production capacity.</dd>
+    <dt>Mine development operator (MDO)</dt><dd>A contractor engaged to develop and run a mine on the block owner's behalf; how most new captive mines are built.</dd>
+    <dt>Ash content</dt><dd>The non-combustible share of a coal by weight. Indian coal is high-ash, which is why washing and ash disposal matter so much here.</dd>
+    <dt>Sponge iron</dt><dd>Direct-reduced iron made using coal rather than coke; a significant non-power buyer of e-auction coal.</dd>
+  </dl>
+  <h3>Products and market</h3><dl>
+    <dt>Thermal coal</dt><dd>Coal burned to generate electricity or process heat.</dd>
+    <dt>Coking coal</dt><dd>Coal with the properties needed to make coke for steelmaking; India is largely import-dependent.</dd>
+    <dt>Washed coal</dt><dd>Coal cleaned to lower ash content.</dd>
+    <dt>Coke</dt><dd>Coal baked in the absence of air, used as a reductant in blast furnaces.</dd>
+    <dt>Fly ash</dt><dd>The fine residue from burning coal, which plants are obliged to have removed and utilised.</dd>
+    <dt>Fuel supply agreement (FSA)</dt><dd>A long-term contract supplying a power plant at notified prices.</dd>
+    <dt>Notified price</dt><dd>The administered price for FSA coal, set by grade.</dd>
+    <dt>E-auction</dt><dd>The competitive sale of a slice of output — about 13% of offtake, at ₹3,085 a tonne in Q1 FY27.</dd>
+    <dt>E-auction premium</dt><dd>The gap between auction and notified prices; the main swing factor in profit.</dd>
+    <dt>Blended realisation</dt><dd>The weighted average price across all channels — ₹2,338 a tonne this quarter.</dd>
+    <dt>Offtake</dt><dd>Coal actually despatched to customers, as distinct from coal produced.</dd>
+    <dt>Pithead stock</dt><dd>Coal mined but not yet despatched; the industry's buffer.</dd>
+    <dt>Evacuation</dt><dd>Moving coal from mine to customer, usually by rail.</dd>
+    <dt>First-mile connectivity</dt><dd>Conveyors and silos replacing road haulage between pit and railhead.</dd>
+    <dt>Rake</dt><dd>A full trainload of wagons; rake availability is the usual bottleneck.</dd>
+  </dl>
+  <h3>Policy and commercial</h3><dl>
+    <dt>Nationalisation</dt><dd>The 1970s takeover of private coal mines that created Coal India.</dd>
+    <dt>Auction round</dt><dd>A tranche of blocks offered for commercial mining; the 16th opened in September 2026.</dd>
+    <dt>Revenue share</dt><dd>The percentage of coal revenue a commercial miner pays the government, bid at auction.</dd>
+    <dt>Royalty and cess</dt><dd>Per-tonne levies payable on production.</dd>
+    <dt>Ash utilisation obligation</dt><dd>The requirement that thermal plants use or dispose of their ash, which created the handling market.</dd>
+    <dt>Offer for sale (OFS)</dt><dd>A listing in which existing shares are sold and no new money is raised — the structure of the ₹1,071 cr Bharat Coking Coal IPO.</dd>
+    <dt>Listing premium</dt><dd>The first-day gain over the issue price; Bharat Coking Coal's was 96% (see 024, 026).</dd>
+    <dt>Plant load factor</dt><dd>How hard a power station is running; the demand signal for coal (see 037).</dd>
+    <dt>Linkage</dt><dd>An assured long-term coal supply entitlement granted to a plant, without which a power project cannot be financed.</dd>
+    <dt>SHAKTI scheme</dt><dd>The framework under which coal linkages are allotted transparently to power producers.</dd>
+    <dt>Import parity</dt><dd>The landed cost of imported coal, which sets the ceiling on what domestic e-auction buyers will pay.</dd>
+    <dt>Coal gasification</dt><dd>Converting coal into syngas for chemicals or fertiliser instead of burning it (see 014).</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Administered pricing, price-taker</dt><dd>See 028.</dd>
+    <dt>Order book, receivables</dt><dd>See 029, 030.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Where does Coal India's profit actually come from?</summary><p>The e-auction slice — about 13% of offtake at ₹3,085 a tonne against a blended ₹2,338. Most volume goes out at notified prices under fuel supply agreements.</p></details>
+  <details class="q"><summary>2. How did production fall 7% while offtake rose 4%?</summary><p>The company sold 28 million tonnes more than it mined, drawing down pithead stocks. That flatters cash and revenue, and cannot continue indefinitely.</p></details>
+  <details class="q"><summary>3. Why did Coal India underperform for most of the 2010s?</summary><p>A monopoly whose prices are set by its owner is not a price-setter. It fell in five consecutive years from 2016 to 2020.</p></details>
+  <details class="q"><summary>4. What is commercial mining, and how big is it now?</summary><p>Mining coal for open sale, allowed since 2020. Captive and commercial mines produced 210.46 million tonnes to March 2026, up 10.2%.</p></details>
+  <details class="q"><summary>5. What happened in January 2026?</summary><p>Bharat Coking Coal, Coal India's coking-coal subsidiary and 58.5% of India's domestic coking coal output, listed at ₹45 against a ₹23 issue price — a 96% premium on a ₹1,071 cr offer for sale.</p></details>
+  <details class="q"><summary>6. Why is August the worst month for these stocks?</summary><p>The monsoon floods opencast pits and production collapses. August has beaten the Nifty in only 3 of 16 years.</p></details>
+  <details class="q"><summary>7. What does Refex Industries actually do?</summary><p>Ash and coal handling — moving over 70,000 tonnes of ash a day for 40 power plants, on a ₹1,635 cr order book. It is a services company, not a miner.</p></details>
+  <details class="q"><summary>8. What made 2022 and 2023 such strong years?</summary><p>Global energy prices spiked, imported coal became unaffordable, and domestic coal was the cheapest energy available — widening e-auction premiums.</p></details>
+  <details class="q"><summary>9. What is the structural ceiling on this industry?</summary><p>Renewables taking the marginal daytime unit of generation, plus commercial mining competing away the monopoly — while coal demand itself still grows.</p></details>
+  <details class="q"><summary>10. Why should the basket return be treated with care?</summary><p>It contains three companies — a miner, a coal logistics firm and an ash contractor. The median stock is up 5% against a basket up 14%.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of Coal India, Sindhu Trade Links and Refex Industries versus NSE:NIFTY, 2012 to 18 September 2026. Bharat Coking Coal and Caliber Mining listed during 2026 and are excluded from the basket.</li>
+    <li>Coal India: <a href="https://upstox.com/news/market-news/earnings/coal-india-q1-fy-27-results-net-profit-rises-marginally-to-8-852-crore-yo-y-board-declares-dividend-of-5-5-per-equity-share-for-fy-27/article-197634/">Q1 FY27 profit and dividend</a>; <a href="https://www.kotakneo.com/news/stocks/coal-india-q1-fy27-results-revenue-at-rs46255-crore/">revenue and the interim dividend detail</a>; <a href="https://www.business-standard.com/markets/stock-market-news/higher-demand-e-auction-premiums-improve-outlook-for-coal-india-126090201451_1.html">production, offtake, e-auction share and realisations</a>; <a href="https://www.multibagg.ai/market-pulse/articles/coal-india-fy27-output-drop-cmr1vghcjmd84o20j9p3pyqvb">the output decline and rising stocks</a>; <a href="https://www.whalesbook.com/news/English/energy/Coal-India-Misses-FY26-Target-as-Renewables-Mines-Gain-Share/69d65a3131d4f2ab4816c0da">the missed FY26 target</a>.</li>
+    <li>Bharat Coking Coal: <a href="https://www.chittorgarh.com/ipo/bharat-coking-coal-ipo/2462/">IPO structure, size and price band</a>; <a href="https://www.sahi.com/blogs/bccl-ipo-listing-gmp-cools-as-india-s-coking-coal-psu-faces-the-valuation-test">the listing premium</a>; <a href="https://www.business-standard.com/amp/markets/ipo/coal-india-subsidiary-bccl-to-launch-first-ipo-of-2026-on-january-9-126010400147_1.html">its status as the first mainboard IPO of 2026</a>.</li>
+    <li>Refex Industries: <a href="https://tradebrains.in/refex-industries-can-it-capture-larger-share-of-the-75000-cr-ash-and-coal-handling-market/">the ash and coal handling business, order book and fleet</a>; <a href="https://scanx.trade/stock-market-news/companies/refex-industries-q1-results-net-profit-rises-122-yoy-to-73-39-crore/46930397">quarterly profit growth</a>; <a href="https://www.sahi.com/news/refex-industries-wins-27-48-crore-contract-for-ash-transportation-to-nhai-road-projects-3666-PE1_COR">the NHAI ash transport contract</a>; <a href="https://www.sahi.com/news/refex-industries-secures-two-fly-ash-contracts-aggregating-33-7-crore-3666-PE1_COR">the Telangana fly-ash contracts</a>; <a href="https://www.screener.in/company/REFEX/consolidated/">financial history</a>.</li>
+    <li>Policy and industry: <a href="https://www.inkl.com/news/india-launches-16th-round-of-commercial-coal-mine-auctions-offering-25-blocks-for-investment">the 16th commercial auction round</a>; <a href="https://discoveryalert.com/india-captive-commercial-coal-mines-production-dispatches-2026/">captive and commercial production growth</a>; <a href="https://discoveryalert.com/coal-mining-auctions-india-2026-energy-sector/">expected revenue, investment and employment from auctioned mines, and the import-substitution rationale</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -27.7}, {"y": 2013, "v": 3.4}, {"y": 2014, "v": 24.6}, {"y": 2015, "v": 14.2}, {"y": 2016, "v": -15.3}, {"y": 2017, "v": 2.4}, {"y": 2018, "v": -5.5}, {"y": 2019, "v": 29.4}, {"y": 2020, "v": 0.7}, {"y": 2021, "v": -5.4}, {"y": 2022, "v": 0.1}, {"y": 2023, "v": -4.6}, {"y": 2024, "v": 0.9}, {"y": 2025, "v": -13.8}, {"y": 2026, "v": 8.3}], "AprJul": [{"y": 2012, "v": -3.2}, {"y": 2013, "v": 7.8}, {"y": 2014, "v": -13.8}, {"y": 2015, "v": 0.5}, {"y": 2016, "v": 47.9}, {"y": 2017, "v": -27.8}, {"y": 2018, "v": -20.2}, {"y": 2019, "v": 56.1}, {"y": 2020, "v": -14.6}, {"y": 2021, "v": 22.9}, {"y": 2022, "v": 9.4}, {"y": 2023, "v": 74.8}, {"y": 2024, "v": 4.7}, {"y": 2025, "v": 18.6}, {"y": 2026, "v": 12.7}], "AugSep": [{"y": 2012, "v": -10.7}, {"y": 2013, "v": -3.7}, {"y": 2014, "v": -2.0}, {"y": 2015, "v": -22.5}, {"y": 2016, "v": -6.3}, {"y": 2017, "v": 24.1}, {"y": 2018, "v": 20.9}, {"y": 2019, "v": -18.2}, {"y": 2020, "v": -11.3}, {"y": 2021, "v": 5.0}, {"y": 2022, "v": 18.8}, {"y": 2023, "v": 0.4}, {"y": 2024, "v": 31.7}, {"y": 2025, "v": -2.9}], "OctDec": [{"y": 2012, "v": -0.7}, {"y": 2013, "v": 27.3}, {"y": 2014, "v": -1.0}, {"y": 2015, "v": 1.2}, {"y": 2016, "v": 6.5}, {"y": 2017, "v": -2.9}, {"y": 2018, "v": 2.2}, {"y": 2019, "v": -10.7}, {"y": 2020, "v": 17.7}, {"y": 2021, "v": -10.4}, {"y": 2022, "v": 14.2}, {"y": 2023, "v": -3.0}, {"y": 2024, "v": -8.5}, {"y": 2025, "v": -24.5}], "SepNov": [{"y": 2012, "v": -21.2}, {"y": 2013, "v": 9.5}, {"y": 2014, "v": -7.3}, {"y": 2015, "v": -5.9}, {"y": 2016, "v": 15.2}, {"y": 2017, "v": 44.0}, {"y": 2018, "v": 13.2}, {"y": 2019, "v": 4.2}, {"y": 2020, "v": 5.6}, {"y": 2021, "v": -6.2}, {"y": 2022, "v": 25.4}, {"y": 2023, "v": 0.2}, {"y": 2024, "v": 9.4}, {"y": 2025, "v": -7.9}], "JanMar": [{"y": 2012, "v": -41.6}, {"y": 2013, "v": -7.2}, {"y": 2014, "v": -0.4}, {"y": 2015, "v": 27.0}, {"y": 2016, "v": -9.2}, {"y": 2017, "v": -0.4}, {"y": 2018, "v": -12.3}, {"y": 2019, "v": 25.0}, {"y": 2020, "v": -4.4}, {"y": 2021, "v": -8.0}, {"y": 2022, "v": 2.8}, {"y": 2023, "v": -5.7}, {"y": 2024, "v": 11.2}, {"y": 2025, "v": -14.8}, {"y": 2026, "v": 11.5}]}, "my": {"1": {"2012": -14.2, "2013": -11.0, "2014": -17.9, "2015": 10.7, "2016": 6.2, "2017": -2.6, "2018": -7.6, "2019": -3.2, "2020": -7.0, "2021": -2.6, "2022": 2.7, "2023": -1.3, "2024": 9.9, "2025": -1.3, "2026": 3.6}, "2": {"2012": -14.9, "2013": -7.1, "2014": -2.7, "2015": 10.8, "2016": -1.7, "2017": -6.3, "2018": 1.4, "2019": 26.2, "2020": 11.5, "2021": 0.5, "2022": 2.0, "2023": 0.1, "2024": 12.2, "2025": -11.2, "2026": 6.5}, "3": {"2012": -14.7, "2013": 12.0, "2014": 27.4, "2015": 3.5, "2016": -14.8, "2017": 9.0, "2018": -7.1, "2019": 1.0, "2020": -7.8, "2021": -5.5, "2022": -2.0, "2023": -4.8, "2024": -10.1, "2025": -2.3, "2026": 2.4}, "4": {"2012": 14.0, "2013": 0.9, "2014": -5.0, "2015": -6.6, "2016": 0.9, "2017": -4.9, "2018": -4.4, "2019": 2.0, "2020": 13.3, "2021": 19.4, "2022": 4.3, "2023": 18.6, "2024": 1.9, "2025": 4.9, "2026": 12.1}, "5": {"2012": -8.3, "2013": 15.2, "2014": -3.4, "2015": -5.4, "2016": 0.1, "2017": -14.0, "2018": -3.6, "2019": 23.8, "2020": -9.1, "2021": 6.3, "2022": 3.5, "2023": 24.1, "2024": -2.9, "2025": 7.7, "2026": 13.1}, "6": {"2012": -5.3, "2013": -3.4, "2014": 4.7, "2015": 29.6, "2016": 24.2, "2017": -1.3, "2018": -11.2, "2019": 17.8, "2020": 9.9, "2021": 2.9, "2022": -0.3, "2023": -5.5, "2024": -5.4, "2025": 2.8, "2026": -2.3}, "7": {"2011": -5.2, "2012": -2.1, "2013": -3.7, "2014": -8.6, "2015": -12.6, "2016": 14.9, "2017": -8.4, "2018": 0.0, "2019": 6.4, "2020": -21.3, "2021": -6.9, "2022": 1.7, "2023": 20.8, "2024": 11.4, "2025": 1.7, "2026": -9.6}, "8": {"2011": -6.6, "2012": -4.7, "2013": -4.2, "2014": -7.3, "2015": -17.0, "2016": -11.7, "2017": -6.6, "2018": 11.8, "2019": -24.2, "2020": -4.8, "2021": -4.1, "2022": 11.7, "2023": -1.2, "2024": 13.0, "2025": -8.7, "2026": -1.2}, "9": {"2011": -14.0, "2012": -5.8, "2013": 0.7, "2014": 5.6, "2015": -7.2, "2016": 5.8, "2017": 33.3, "2018": 8.6, "2019": 9.3, "2020": -6.7, "2021": 8.7, "2022": 6.6, "2023": 1.7, "2024": 16.1, "2025": 6.5}, "10": {"2011": -1.8, "2012": -2.7, "2013": -8.3, "2014": -4.5, "2015": 3.8, "2016": 8.7, "2017": 4.5, "2018": -0.4, "2019": -15.3, "2020": -3.7, "2021": -12.0, "2022": -0.2, "2023": -3.5, "2024": -5.6, "2025": -8.8}, "11": {"2011": -4.6, "2012": -12.5, "2013": 16.2, "2014": -8.0, "2015": -2.2, "2016": 0.9, "2017": 2.3, "2018": 5.2, "2019": 12.0, "2020": 18.6, "2021": -1.8, "2022": 17.1, "2023": 2.4, "2024": 1.0, "2025": -5.1}, "12": {"2011": -6.7, "2012": 16.1, "2013": 16.2, "2014": 11.7, "2015": -0.3, "2016": -2.6, "2017": -9.0, "2018": -2.3, "2019": -5.7, "2020": 1.6, "2021": 3.6, "2022": -2.3, "2023": -1.5, "2024": -4.3, "2025": -11.5}}, "basket": ["Coal India Ltd.", "Sindhu Trade Links Ltd.", "Refex Industries Limited"], "nbasket": 3, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -1.6, "rel": -2.4, "hit": 5, "n": 15}, {"m": 2, "abs": 0.7, "rel": 1.8, "hit": 9, "n": 15}, {"m": 3, "abs": -1.1, "rel": -0.9, "hit": 6, "n": 15}, {"m": 4, "abs": 7.3, "rel": 4.8, "hit": 11, "n": 15}, {"m": 5, "abs": 4.3, "rel": 3.1, "hit": 8, "n": 15}, {"m": 6, "abs": 5.6, "rel": 3.8, "hit": 7, "n": 15}, {"m": 7, "abs": 0.6, "rel": -1.3, "hit": 7, "n": 16}, {"m": 8, "abs": -4.3, "rel": -4.1, "hit": 3, "n": 16}, {"m": 9, "abs": 5.2, "rel": 4.6, "hit": 11, "n": 15}, {"m": 10, "abs": -1.2, "rel": -3.3, "hit": 3, "n": 15}, {"m": 11, "abs": 3.7, "rel": 2.8, "hit": 9, "n": 15}, {"m": 12, "abs": 0.9, "rel": 0.2, "hit": 5, "n": 15}], "cy": [{"y": 2012, "b": -29.5, "n": 27.7, "rel": -57.2, "partial": false}, {"y": 2013, "b": 27.8, "n": 6.8, "rel": 21.0, "partial": false}, {"y": 2014, "b": 11.9, "n": 31.4, "rel": -19.5, "partial": false}, {"y": 2015, "b": -6.5, "n": -4.1, "rel": -2.4, "partial": false}, {"y": 2016, "b": 33.5, "n": 3.0, "rel": 30.5, "partial": false}, {"y": 2017, "b": 16.4, "n": 28.6, "rel": -12.3, "partial": false}, {"y": 2018, "b": -8.2, "n": 3.2, "rel": -11.4, "partial": false}, {"y": 2019, "b": 62.3, "n": 12.0, "rel": 50.3, "partial": false}, {"y": 2020, "b": -3.0, "n": 14.9, "rel": -17.9, "partial": false}, {"y": 2021, "b": 29.9, "n": 24.1, "rel": 5.8, "partial": false}, {"y": 2022, "b": 58.4, "n": 4.3, "rel": 54.0, "partial": false}, {"y": 2023, "b": 82.7, "n": 20.0, "rel": 62.6, "partial": false}, {"y": 2024, "b": 49.0, "n": 8.8, "rel": 40.2, "partial": false}, {"y": 2025, "b": -17.3, "n": 10.5, "rel": -27.8, "partial": false}, {"y": 2026, "b": 14.3, "n": -10.7, "rel": 24.9, "partial": true}], "dd": [{"co": "Coal India", "peak": "Aug 2024", "fp": -24, "y1": 4}, {"co": "Sindhu Trade Links", "peak": "Feb 2024", "fp": -41, "y1": -17}, {"co": "Refex Industries", "peak": "Sep 2024", "fp": -53, "y1": -22}, {"co": "Maheshwari Logistics", "peak": "Jan 2020", "fp": -55, "y1": 15}, {"co": "Virya Resources", "peak": "Jul 2024", "fp": -1, "y1": 21}, {"co": "MRP Agro", "peak": "Jan 2025", "fp": -47, "y1": -10}, {"co": "Anmol India", "peak": "Dec 2023", "fp": -78, "y1": -12}, {"co": "ANI Integrated Services", "peak": "Sep 2024", "fp": -74, "y1": -46}, {"co": "Pagaria Energy", "peak": "Aug 2025", "fp": -56, "y1": -46}, {"co": "Hemang Resources", "peak": "Jan 2023", "fp": -92, "y1": -56}], "win": {"FebMar": {"mean": 0.8, "median": 0.7, "hit": 9, "n": 15}, "AprJul": {"mean": 11.7, "median": 7.8, "hit": 10, "n": 15}, "AugSep": {"mean": 1.7, "median": -2.4, "hit": 6, "n": 14}, "OctDec": {"mean": 0.5, "median": -0.9, "hit": 6, "n": 14}, "SepNov": {"mean": 5.6, "median": 4.9, "hit": 9, "n": 14}, "JanMar": {"mean": -1.8, "median": -4.4, "hit": 5, "n": 15}}, "ytd": {"b": 14.3, "n": -10.7}, "notes": {"2012": "\u221229.5% against the Nifty's +27.7%, the worst relative year on record. Coal India was caught between a government that set its prices and power producers who could not get supply; the fuel-supply-agreement dispute dominated the year.", "2013": "+27.8% versus +6.8%. Price revisions and a better supply position restored some confidence.", "2014": "+11.9% versus +31.4%. The new government's production push was read as volume growth for the miner but also as pressure to keep prices low.", "2015": "\u22126.5% versus \u22124.1%. Global coal prices collapsed, which made imported coal competitive and capped domestic realisations.", "2016": "+33.5% versus +3.0%. Refex Industries +82% on its ash-handling business; Coal India \u22129% as e-auction premiums stayed thin.", "2017": "+16.4% versus +28.6%. Coal India \u221212% on weak realisations even as the small names ran.", "2018": "\u22128.2% versus +3.2%. A difficult year for both the miner and the contractors.", "2019": "+62.3% versus +12.0%, entirely the small caps: Refex +169% while Coal India fell 12% into the pre-pandemic power slowdown.", "2020": "\u22123.0% versus +14.9%. Coal India \u221236% as power demand collapsed in the lockdowns and stockpiles built at the pitheads.", "2021": "+29.9% versus +24.1%. The power crisis of late 2021 \u2014 plants running on two days of coal \u2014 reminded the market what a monopoly supplier is worth.", "2022": "+58.4% versus +4.3%. Global energy prices spiked, imported coal became unaffordable, and domestic coal was suddenly the cheapest energy in the country. Coal India +54%, Refex +97%.", "2023": "+82.7% versus +20.0%, the best year in the record. Record production, high e-auction premiums and a re-rating of state enterprises. Refex +116%, Coal India +67%.", "2024": "+49.0% versus +8.8%, but the median stock rose just 2% \u2014 Refex Industries +300% did the work while Coal India managed +2%.", "2025": "\u221217.3% versus +10.5%. E-auction premiums softened, production growth slowed and the state-enterprise re-rating unwound. Refex \u221246%.", "2026": "+14.3% against a Nifty \u221211%, median +5%. Coal India +3% despite flat profits and a 7% production decline; Sindhu Trade +25%; Bharat Coking Coal listed in January at a 96% premium to its issue price and Caliber Mining in July."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

@@ -1,0 +1,601 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto Electricals and Electronics Primer</title>
+<meta name="description" content="Industry 24 of 278: the electrical and electronic half of a vehicle — wiring, lighting, instrument clusters, controllers, sensors and powertrain electronics. Why electronics will be half a car&#x27;s cost by 2030, the 13 listed suppliers including two big 2026 IPOs, and a year-by-year record from 2012.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Auto Electricals &amp; Electronics · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 24 of 278 · Auto family</div>
+  <h1>Auto Electricals &amp; Electronics</h1>
+  <p class="lede">The nervous system of a vehicle: the wiring that carries power, the lamps that light the road, the cluster that shows speed, and the controllers, sensors and software that increasingly decide how the vehicle behaves. Electronics were about a third of a car's cost in 2020 and are heading for half by 2030, which makes this the fastest-growing part of the supply chain.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 13 (Jagan Lamps moved in; Azad India Mobility flagged)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Tyres</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">45–55%</div><div class="l">Projected electronics share of a car's cost by 2030, from roughly 30–35% in 2020</div></div>
+    <div class="stat"><div class="n">₹1.64 lakh cr</div><div class="l">Investment approved across 12 India Semiconductor Mission projects, the supply-side answer</div></div>
+    <div class="stat"><div class="n">+37.8%</div><div class="l">Dhoot Transmission's listing premium in August 2026, on a ₹3,067 cr IPO</div></div>
+    <div class="stat"><div class="n">16%</div><div class="l">Share of Varroc's revenue now from electric vehicles, growing 87% year on year</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The part of the vehicle that keeps growing</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A vehicle is not just metal. Inside it there are wires like veins, lamps like eyes, and small computers that decide when to spray fuel, how bright the lights should be, and whether to warn the driver. Twenty years ago a scooter had almost none of this. Today even a cheap bike has electronics, and a new car has dozens of little computers. So the companies that make wires, lamps, dials and controllers sell more with every new model, even if the number of vehicles sold barely changes.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is the content-growth corner of the auto supply chain. Electronics were roughly 30–35% of a car's cost in 2020 and are forecast at 45–55% by 2030, so these suppliers grow faster than vehicle volumes.</p>
+    <ul>
+      <li><b>Bosch</b> is the technology leader, with fuel-injection, powertrain and aftermarket businesses; Q1 FY27 revenue +22% with a 14% EBITDA margin.</li>
+      <li><b>Motherson Sumi Wiring</b> is the pure wiring-harness play, sensitive to copper and wages.</li>
+      <li><b>Varroc</b> and <b>Lumax Industries</b> are lighting and electronics suppliers riding the shift to LED and EV content.</li>
+      <li><b>Pricol</b> makes instrument clusters and sensors, <b>Fiem</b> two-wheeler lighting, <b>India Nippon</b> ignition systems, <b>Danlaw</b> automotive test and telematics electronics.</li>
+      <li>Two large listings arrived in 2026: <b>SEDEMAC</b> (control electronics, March) and <b>Dhoot Transmission</b> (electrical components, August, listing 37.8% above issue).</li>
+    </ul>
+    <p>The catch is that most of the silicon is imported, which is what the India Semiconductor Mission's ₹1.64 lakh cr of approved projects is meant to change.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>From copper wire to control software</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it does</th><th>Content trend</th><th>Listed makers</th></tr></thead><tbody>
+    <tr><td>Wiring harness</td><td>Carries power and signals around the vehicle</td><td>Rising with features; EV harnesses are higher value</td><td>Motherson Sumi Wiring, Dhoot Transmission, Motherson (023)</td></tr>
+    <tr><td>Lighting</td><td>Headlamps, tail lamps, indicators</td><td>Halogen to LED: two to four times the value per vehicle</td><td>Lumax Industries, Varroc, Fiem, Jagan Lamps</td></tr>
+    <tr><td>Instrument clusters and displays</td><td>Speed, fuel, warnings; now digital screens</td><td>Analogue to TFT displays; rising fast</td><td>Pricol</td></tr>
+    <tr><td>Powertrain electronics</td><td>Fuel injection, engine control units, sensors</td><td>Tightening emission norms raise content</td><td>Bosch, SEDEMAC, India Nippon</td></tr>
+    <tr><td>Motor controllers and starter-generators</td><td>Control electric motors; start-stop systems</td><td>The core EV growth area</td><td>SEDEMAC, Varroc, Bosch</td></tr>
+    <tr><td>Switches, sensors and telematics</td><td>Switchgear, position and pressure sensors, connected-vehicle boxes</td><td>Safety rules and connectivity</td><td>Pricol, Danlaw, UNO Minda and Minda Corp (023)</td></tr>
+    <tr><td>Testing and validation electronics</td><td>Hardware and software to test vehicle electronics</td><td>Grows with software content</td><td>Danlaw Technologies</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Think of a vehicle as a house. The mechanical suppliers (023) build the walls and plumbing. This industry does the wiring, the lights, the meters and the smart switches. As houses get smarter, the electrician's share of the bill keeps rising even if the house is the same size. That is exactly what is happening to cars.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The LED headlamp on a new Creta is probably Lumax's or Varroc's. The digital speedometer on a Splendor may be Pricol's. The fuel-injection system on almost any BS-VI two-wheeler is likely Bosch's. The starter-generator that makes an idling scooter restart silently could be SEDEMAC's. The harness bundling it all together is Motherson Sumi Wiring's or Dhoot's.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From silicon and copper to a vehicle's nervous system</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Raw inputs</h4><div class="an">Copper and silicon</div>Copper wire, connectors, plastics, LEDs, semiconductors, magnets.<div class="who">Global chip makers, copper producers, Chinese LED suppliers</div><div class="m">Mostly imported silicon</div></div>
+    <div class="stage"><div class="no">02</div><h4>Electronic components</h4><div class="an">The small parts</div>Printed circuit boards, sensors, displays, power modules.<div class="who">Contract electronics makers; imports</div><div class="m">Localisation is the policy goal</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Systems and software</h4><div class="an">The brains</div>Engine and motor controllers, clusters, lighting systems, telematics.<div class="who">Bosch, SEDEMAC, Varroc, Pricol, Lumax, Danlaw</div><div class="m">Where engineering content earns margin</div></div>
+    <div class="stage"><div class="no">04</div><h4>Assembly and harnessing</h4><div class="an">The veins</div>Cutting, crimping and bundling wiring into vehicle-specific harnesses.<div class="who">Motherson Sumi Wiring, Dhoot Transmission</div><div class="m">Labour and copper intensive</div></div>
+    <div class="stage"><div class="no">05</div><h4>Vehicle makers</h4><div class="an">The customer</div>Specify the electrical architecture years before production.<div class="who">017–020</div><div class="m">Long design-in cycles</div></div>
+    <div class="stage"><div class="no">06</div><h4>Aftermarket and service</h4><div class="an">Replacement</div>Bulbs, batteries, sensors, diagnostics.<div class="who">Bosch's aftermarket arm; distributors</div><div class="m">High margin, steady</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Raw inputs:</b> copper for wires, tiny silicon chips for the computers, and LEDs for the lamps. India buys most of the chips from abroad.</li>
+    <li><b>Components:</b> circuit boards and sensors are built, often to a design the vehicle maker has approved.</li>
+    <li><b>Systems:</b> engineers write the software and build the controller that decides what the vehicle does.</li>
+    <li><b>Harnessing:</b> hundreds of wires are cut, joined and taped into one bundle shaped exactly for that model.</li>
+    <li><b>Vehicle makers:</b> pick these suppliers years before the vehicle launches, which makes the business sticky.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Two things separate winners here. First, <b>engineering content</b>: a harness maker sells copper and labour, while a controller maker sells software and know-how, which is why margins differ so much (Motherson Sumi Wiring's profit was flat on 37% revenue growth, while Bosch's margin reached 14%). Second, <b>the technology transition</b>: LED lighting, digital clusters and EV controllers all multiply content per vehicle. Buy the content shift, not the volume.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 13 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Bosch (~₹1.4 lakh cr)</td><td>The Indian arm of the world's largest component maker: fuel injection and powertrain systems, two-wheeler and powersports electronics, mobility aftermarket, plus power tools and building technologies.</td><td>Revenue ₹5,842 cr (+22%), EBITDA ₹821 cr (+28.5%), margin 14.06% (13.35%); profit before tax ₹939 cr, 16.1% of revenue. Power solutions +29%, aftermarket +9.6%, two-wheeler and powersports +41.4%. Reported net profit fell against a year-ago base that included exceptional items. 2026 +30%, near its highs.</td></tr>
+    <tr><td>Dhoot Transmission (~₹32,500 cr)</td><td>Electrical and electromechanical components, chiefly wiring harnesses for two-wheelers and commercial vehicles, with a growing EV portfolio. Listed 17 August 2026 after a ₹3,067 cr IPO at ₹871; opened at ₹1,200.</td><td>Too recently listed for a full record; its debut premium of 37.8% reflected demand for electrical-content exposure.</td></tr>
+    <tr><td>Motherson Sumi Wiring India (~₹23,500 cr)</td><td>India's largest wiring-harness maker for passenger vehicles, demerged from Motherson in 2021.</td><td>Revenue ₹3,407 cr (+36.6%) but profit ₹145 cr, roughly flat, as copper prices and minimum-wage revisions squeezed margins; EV programmes are 8.5% of revenue. 2026 −26%; −32% from its June 2024 peak.</td></tr>
+    <tr><td>SEDEMAC Mechatronics (~₹13,800 cr)</td><td>Pune-based control electronics: powertrain controllers, motor control products and integrated starter-generators for vehicles and industrial engines. Listed 11 March 2026 after a ₹1,087 cr IPO at ₹1,352.</td><td>A rare listed Indian designer of control electronics rather than an assembler; short trading history.</td></tr>
+    <tr><td>Varroc Engineering (~₹13,000 cr)</td><td>Lighting (two-wheeler and four-wheeler), electricals and electronics, with overseas operations including Thailand.</td><td>Revenue ₹2,634 cr (+29.9%); India +28.6%, overseas +45.6%; EV revenue 16% of the total, up 87%; profit ₹77 cr (−23%) and EBITDA margin 8.5% (from 9.5%) on war-related costs, tooling mix and manpower. Targets ₹20,000 cr revenue by FY31 and 20–25% growth in FY27. 2026 +46%.</td></tr>
+    <tr><td>Pricol (~₹9,100 cr)</td><td>Instrument clusters, sensors, pumps and telematics, mainly for two-wheelers.</td><td>Revenue ₹1,084 cr (+23.5%), profit ₹67 cr (+34.3%), EBITDA margin 11.4%; higher input, freight and inventory costs, plus a weaker rupee on imported parts. 2026 +16%.</td></tr>
+    <tr><td>Lumax Industries (~₹5,400 cr)</td><td>Automotive lighting (with Stanley Electric of Japan); the LED transition is its growth engine. Note: Lumax Auto Technologies, the group's other listed company, sits in 023.</td><td>Revenue ₹1,223 cr (+32.6%), profit ₹51 cr (+41.2%) on LED content; capex guidance raised. 2026 +12%.</td></tr>
+    <tr><td>Fiem Industries (~₹5,100 cr)</td><td>Two-wheeler lighting, mirrors and LED luminaires; a large share of Honda's and TVS's volumes.</td><td>Revenue ₹770 cr (+18.6%), profit ₹65 cr (+16.3%), EBITDA margin 13.5%; guides 15–20% revenue growth and about 14% margin for FY27. 2026 −14% after a strong 2025.</td></tr>
+    <tr><td>India Nippon Electricals (~₹2,800 cr)</td><td>Ignition systems and electronic control units for two- and three-wheelers (Lucas-TVS group with Japan's Mahle Electric Drives heritage).</td><td>2026 +55%.</td></tr>
+    <tr><td>Danlaw Technologies (~₹760 cr)</td><td>Automotive electronics testing, validation tools and telematics, largely for US customers.</td><td>2026 +114% after −48% in 2025; extremely volatile and thinly traded.</td></tr>
+    <tr><td>Azad India Mobility (~₹460 cr)</td><td>Flagged "needs your call" in the audit; small and unclear disclosure.</td><td>2026 −39%; −61% from its October 2024 peak.</td></tr>
+    <tr><td>Jagan Lamps (~₹40 cr)</td><td>Automotive bulbs and lamps; moved in from Lighting &amp; Electricals.</td><td>2026 −17%; −61% from its February 2024 peak.</td></tr>
+    <tr><td>Containe Technologies (tiny)</td><td>Small electronics maker; −86% from its October 2024 peak.</td><td>Effectively untradeable.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Classification notes</span><p><b>Bosch</b> is only partly an auto stock: power tools and building technologies are meaningful, and its results include a large aftermarket business. <b>Varroc</b> could sit in either 023 or 024; it is here because lighting and electronics dominate. <b>Dhoot Transmission</b> and <b>SEDEMAC</b> joined the market in 2026, so basket statistics that include them start only this year. <b>Azad India Mobility</b> and <b>Containe</b> need a disclosure review before use.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Copper and labour at one end, software at the other</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th class="num">EBITDA margin*</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>Powertrain electronics and systems (Bosch)</td><td class="num">13–16%</td><td>Technology leadership, emission norms, aftermarket</td></tr>
+    <tr><td>Control electronics (SEDEMAC)</td><td class="num">High teens plus</td><td>Software and design content, few competitors</td></tr>
+    <tr><td>Lighting (Lumax, Fiem, Varroc)</td><td class="num">9–14%</td><td>LED penetration, tooling recovery, customer mix</td></tr>
+    <tr><td>Instrument clusters and sensors (Pricol)</td><td class="num">10–13%</td><td>Digital cluster upgrades, two-wheeler volumes</td></tr>
+    <tr><td>Wiring harness (Motherson Sumi Wiring, Dhoot)</td><td class="num">10–13%</td><td>Copper pass-through, labour costs, model mix</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges from company filings; Q1 FY27: Bosch 14.1%, Fiem 13.5%, Pricol 11.4%, Varroc 8.5%.</p>
+  <h3>Why wiring is different from electronics</h3>
+  <p>A wiring harness is copper, connectors and a lot of skilled hand assembly. Copper is passed through to customers, but with a lag, and wage increases cannot be passed on at all. That is why Motherson Sumi Wiring grew revenue 37% in Q1 FY27 and still made no more profit than a year earlier. A controller, by contrast, embeds years of software development: the bill of materials is smaller, but the engineering is the product, so margins are higher and stickier. Between them sits lighting, where the shift from halogen bulbs to LED modules multiplies the value per vehicle and rewards tooling and design skill.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Harness making is tailoring: skilled, labour-intensive, priced by the cloth. Control electronics is writing the pattern everyone else must cut to. Both are needed; only one scales without adding people.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Copper</td><td>Domestic and imported</td><td>Harness makers above all</td><td>High prices squeezed Motherson Sumi Wiring's margin</td></tr>
+    <tr><td>Semiconductors</td><td>Taiwan, Korea, China, Japan; India Semiconductor Mission projects coming</td><td>Every electronics maker</td><td>Available, but import-dependent; 12 approved projects worth ~₹1.64 lakh cr aim to change that</td></tr>
+    <tr><td>LEDs and optics</td><td>Mostly imported</td><td>Lighting makers</td><td>Costs falling with scale</td></tr>
+    <tr><td>Displays</td><td>Imported panels</td><td>Cluster makers (Pricol)</td><td>Currency-sensitive</td></tr>
+    <tr><td>Skilled labour</td><td>Domestic</td><td>Harnessing (labour-intensive)</td><td>Minimum-wage revisions raised costs in 2026</td></tr>
+    <tr><td>Rare-earth magnets</td><td>China</td><td>Small motors, sensors, starter-generators</td><td>Export controls are a live constraint (see 023)</td></tr>
+    <tr><td>Rupee</td><td>—</td><td>Importers of chips and displays</td><td>A weaker rupee raised costs (Pricol flagged it)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Built around the customer's model year</h2>
+  <ul>
+    <li><b>April–June:</b> new programmes start and annual prices are settled; suppliers book tooling revenue for upcoming launches.</li>
+    <li><b>July–September:</b> festive production build; the strongest volume stretch, and historically the strongest months for these stocks.</li>
+    <li><b>October–December:</b> festive sales, then a slowdown; model-year changes bring new lighting and cluster specifications.</li>
+    <li><b>January–March:</b> year-end inventory control and the annual price-down; the weakest window.</li>
+    <li><b>Auto Expo and launch cycles:</b> new model launches decide which supplier's content is designed in for the next five years.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 9 names (Bosch Limited, Motherson Sumi Wiring India Ltd, Varroc Engineering Limited, Pricol Ltd., Lumax Industries Limited, Fiem Industries Limited, India Nippon Electricals Limited, Danlaw Technologies India Limited, Azad India Mobility Ltd), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +4.4 pts (beat in 12 of 15 years); Jul +2.9 pts (beat in 12 of 16 years); Aug +2.7 pts (beat in 10 of 16 years).</li><li><b>Weakest months:</b> Feb -2.3 pts (beat in 4 of 15 years); Mar -1.5 pts (beat in 6 of 15 years); May -0.6 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -3.1 pts); Apr–Jul beat the Nifty in 12 of 15 years (median +11.6 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +2.4 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +3.1 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +3.5 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -5.1 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +1.4 points.</p><p><b>Reading it:</b> the same production calendar as 023, slightly stronger. April beat the Nifty in 12 of 15 years and July in 12 of 16, with April–July winning 12 of 15 (median +11.6 points). September (11 of 15) and the September–November window (9 of 14) also work, matching the festive build. February–March is the weak spot (4 of 15) and January–March worse (5 of 15, median −5.1), when carmakers manage year-end inventory and the annual price-down lands.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July failed only three times: 2013 (−3.0), 2017 (−1.4) and 2019 (−26.1).</b> Only 2019, the auto slowdown, was a serious loss. The biggest runs were 2022 (+30.8) and 2026 (+28.1).</li>
+    <li><b>April misses were small</b> (2025 −2.9, 2013 −1.8, 2019 −1.2); the best Aprils were 2020 (+14.5), 2026 (+11.9) and 2022 (+9.6).</li>
+    <li><b>July is unusually reliable</b> (12 of 16), which fits the pre-festive production ramp; the exception was July 2019 (−14.7) at the depth of the slowdown.</li>
+    <li><b>February–March</b> beat the Nifty only 4 times in 15 years, with the worst in 2022 (−17.0) and 2020 (−16.5).</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>April–July, the same window as 023, but with a slightly better hit rate and a shorter tail of failures. The reason is structural: content-driven suppliers keep growing even when volumes are flat, so the seasonal pattern is less dependent on the vehicle cycle. Still check copper and chip costs, which is where the margin surprises come from.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Electronics content per vehicle:</b> from roughly 30–35% of car cost in 2020 towards 45–55% by 2030; the single most important driver.</li>
+    <li><b>LED and display penetration:</b> lighting and cluster value multiplies as halogen and analogue give way.</li>
+    <li><b>Emission and safety norms:</b> BS-VI, OBD, ABS for two-wheelers (see 018), ADAS features on mid-range cars.</li>
+    <li><b>Electrification:</b> motor controllers, battery-management electronics and high-voltage harnesses; Varroc's EV revenue is 16% of sales, Motherson Sumi Wiring's 8.5%.</li>
+    <li><b>Copper and chip prices:</b> the two input swings that decide harness and electronics margins.</li>
+    <li><b>Currency:</b> imported chips and displays make a weak rupee a cost problem, though it helps exporters.</li>
+    <li><b>Vehicle volumes and mix:</b> two-wheeler-heavy suppliers (Fiem, Pricol, India Nippon) follow 018; car-linked ones follow 017.</li>
+    <li><b>Localisation policy:</b> the India Semiconductor Mission and component PLI schemes shift value onshore over time.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of members with ₹300 cr+ market cap and enough history (5 in 2012, 9 in 2026), monthly returns capped at ±50%, price only; 2026 is to 18 September. Dhoot Transmission and SEDEMAC listed in 2026 and are not in the long-run basket.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a content cycle</h3>
+  <ol>
+    <li><b>A rule or feature arrives</b> (fuel injection, LED lamps, digital clusters, ABS, EV drivetrains), raising the value of electronics per vehicle.</li>
+    <li><b>Suppliers win design-ins</b> on new models, which lock in revenue for five to seven years.</li>
+    <li><b>Revenue outgrows volumes</b> for several years; margins expand with scale and localisation.</li>
+    <li><b>Input or currency shocks interrupt it</b> (copper in 2026, chips in 2021–22), compressing margins until pass-through catches up.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>This basket beats 023 in most upcycles</b> (2023: +78% vs +58%), because content growth compounds on top of volumes.</li>
+    <li><b>Copper and wages hit harness makers specifically:</b> Motherson Sumi Wiring in 2024 and 2026.</li>
+    <li><b>Micro caps swing hardest:</b> Danlaw +445% (2023), −48% (2025), +114% (2026).</li>
+    <li><b>New listings cluster near peaks:</b> two large IPOs arrived in 2026 after three strong years.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Where the value is moving</h2>
+  <p>Globally, vehicle electronics is dominated by Bosch, Continental, Denso, Aptiv, ZF and Hyundai Mobis, with chips from NXP, Infineon, Texas Instruments, Renesas and STMicro. The industry's direction is the "software-defined vehicle": fewer, more powerful computers running software that can be updated, replacing dozens of small controllers. Hyundai Mobis and Qualcomm announced a joint effort in this direction at CES 2026 aimed at emerging markets including India.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player / region</th><th>Strength</th><th>India angle</th></tr></thead><tbody>
+    <tr><td>Germany (Bosch, Continental, ZF)</td><td>Systems engineering and software</td><td>Bosch Limited is listed here; the others operate through subsidiaries</td></tr>
+    <tr><td>Japan (Denso, Stanley, Mahle Electric Drives)</td><td>Quality, lighting, ignition</td><td>Partners of Lumax, India Nippon and others</td></tr>
+    <tr><td>US (Aptiv, Texas Instruments, Qualcomm)</td><td>Architecture, chips, compute platforms</td><td>Chip supply and design partnerships; Danlaw's customers</td></tr>
+    <tr><td>Taiwan, Korea, China</td><td>Chip fabrication, displays, LEDs</td><td>The import dependency India is trying to reduce</td></tr>
+    <tr><td>India</td><td>Harnessing, lighting, clusters; growing design capability</td><td>Electrical and electronics is only about 12% of domestic component supply, so the localisation runway is long</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Mechanical to electronic control (2000s–2020s):</b> carburettors gave way to fuel injection, cables to sensors, bulbs to LEDs.</li>
+    <li><b>Many small controllers to few big computers:</b> the software-defined vehicle changes who owns the value, favouring software and chip firms.</li>
+    <li><b>India from assembler to designer:</b> SEDEMAC's listing shows Indian control-electronics design reaching public markets; the Semiconductor Mission is the supply-side counterpart.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Software-defined vehicles:</b> centralised computing, over-the-air updates and features sold after purchase.</li>
+    <li><b>ADAS moving down-market:</b> cameras, radar and driver-assist features appearing on mid-priced Indian cars, with India-specific tuning for local road conditions.</li>
+    <li><b>LED and adaptive lighting:</b> matrix headlamps, signature lighting and LED for two-wheelers.</li>
+    <li><b>Digital clusters and connected dashboards:</b> TFT displays replacing analogue dials even on motorcycles.</li>
+    <li><b>High-voltage architecture:</b> EV harnesses, inverters, battery-management systems and DC-DC converters.</li>
+    <li><b>Domestic semiconductors:</b> 12 India Semiconductor Mission projects worth about ₹1.64 lakh cr, including packaging and fabrication, aimed at automotive-grade silicon.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>India Semiconductor Mission</td><td>12 approved projects, about ₹1.64 lakh cr, including two units cleared in May 2026</td><td>Aims to localise chips, including automotive-grade</td></tr>
+    <tr><td>PLI for advanced automotive technology</td><td>Incentives tied to electronics and EV components</td><td>Supports investment in higher-content products</td></tr>
+    <tr><td>Safety norms</td><td>ABS on all two-wheelers from January 2026 (see 018); Bharat NCAP; airbags</td><td>Adds sensors, controllers and wiring per vehicle</td></tr>
+    <tr><td>Emission norms</td><td>BS-VI with OBD stages (see 017)</td><td>Fuel-injection and sensor content</td></tr>
+    <tr><td>EV localisation rules</td><td>Traction-motor and component localisation deadlines (see 023)</td><td>Pushes controller and motor manufacturing onshore</td></tr>
+    <tr><td>Import duties on electronics</td><td>Tariffs on components versus finished assemblies</td><td>Shapes make-or-buy decisions</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: content growing, copper biting</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Revenue growth</td><td>Strong across the board</td><td>Bosch +22%, Motherson Sumi Wiring +37%, Varroc +30%, Lumax Industries +33%, Pricol +23%</td></tr>
+    <tr><td>Margins</td><td>Split</td><td>Bosch 14.1% and rising; Varroc 8.5% and falling; harness margins squeezed by copper and wages</td></tr>
+    <tr><td>EV content</td><td>Scaling</td><td>Varroc 16% of revenue (+87%); Motherson Sumi Wiring 8.5%</td></tr>
+    <tr><td>Capital markets</td><td>Hot</td><td>Two 2026 IPOs; Dhoot listed 37.8% above issue</td></tr>
+    <tr><td>Stocks</td><td>Broadly up</td><td>Basket +15%, median +16%, against a Nifty down 11%</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is the structurally best-placed part of the auto chain: content per vehicle rises whether or not volumes do. The discipline is to pay for engineering content rather than assembly. Bosch and SEDEMAC sell know-how; Lumax and Varroc sell a technology transition; harness makers sell copper and labour, and their margins show it. Watch copper, the rupee and the pace at which domestic chips actually arrive.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Copper prices</td><td>Daily</td><td>Harness margins</td></tr>
+    <tr><td>Content per vehicle and LED share commentary</td><td>Quarterly calls</td><td>The growth engine</td></tr>
+    <tr><td>EV revenue share by company</td><td>Quarterly</td><td>Transition progress</td></tr>
+    <tr><td>OEM launch calendar</td><td>Industry news</td><td>Design-in wins</td></tr>
+    <tr><td>Semiconductor lead times and prices</td><td>Trade press</td><td>Supply risk</td></tr>
+    <tr><td>India Semiconductor Mission milestones</td><td>Government announcements</td><td>Localisation</td></tr>
+    <tr><td>Rupee</td><td>Daily</td><td>Imported chips and displays</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the content shift shows up</h2>
+  <ul>
+    <li><b>Auto components</b> (023): the mechanical half of the same supply chain.</li>
+    <li><b>Vehicle makers</b> (017–020): the customers whose feature decisions drive content.</li>
+    <li><b>Electric mobility</b> (022): chargers and power electronics use the same skills.</li>
+    <li><b>Electronics manufacturing services:</b> contract makers assembling automotive boards.</li>
+    <li><b>Semiconductors and displays:</b> the imported inputs and the localisation push.</li>
+    <li><b>Copper:</b> the raw material that decides harness margins.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What is content per vehicle today, and what does the next-generation platform add?</li>
+    <li>What share of revenue is electronics versus electrical assembly?</li>
+    <li>How much of copper and chip cost is contractually passed through, and with what lag?</li>
+    <li>What is the LED or digital-cluster share of lighting and cluster revenue?</li>
+    <li>What is the EV share of revenue and of the order book?</li>
+    <li>How much of the bill of materials is imported, and what is the localisation plan?</li>
+    <li>(Harness makers) How are minimum-wage revisions being absorbed?</li>
+    <li>(SEDEMAC, Danlaw) How much revenue is design and software versus hardware?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Revenue growth with flat absolute profit for several quarters.</li>
+    <li>Dependence on a single customer's model cycle.</li>
+    <li>Tooling revenue flattering growth without margin.</li>
+    <li>Newly listed names with short disclosure histories priced for perfection.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Electronics suppliers are just a play on car sales."</td><td>Content per vehicle is rising from about a third of cost towards half; this basket beat 023 in most upcycles for that reason.</td></tr>
+    <tr><td>"Wiring harnesses are a great EV play."</td><td>EV harnesses carry more value, but the business is copper and labour: Motherson Sumi Wiring grew revenue 37% with flat profit.</td></tr>
+    <tr><td>"India will localise automotive chips quickly."</td><td>Twelve projects worth ₹1.64 lakh cr are approved, but automotive-grade qualification takes years; imports dominate today.</td></tr>
+    <tr><td>"ADAS is years away in India."</td><td>It is already appearing on mid-priced cars, and the industry is building India-specific tuning; the content is being designed in now.</td></tr>
+    <tr><td>"The 2026 IPOs prove the sector's strength."</td><td>They prove demand for the theme. Both listed after three strong years, which historically is when supply arrives.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. ECU, harness" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Products and technology</h3><dl>
+    <dt>Wiring harness</dt><dd>The bundled wires and connectors carrying power and signals (see 023).</dd>
+    <dt>ECU (electronic control unit)</dt><dd>A small computer controlling one vehicle function; a modern car has dozens.</dd>
+    <dt>Domain controller</dt><dd>A more powerful computer replacing several ECUs; the basis of software-defined vehicles.</dd>
+    <dt>Fuel injection system</dt><dd>Electronically metered fuel delivery; required from BS-VI onwards.</dd>
+    <dt>Ignition system / CDI</dt><dd>The electronics that fire the spark plug; India Nippon's core product.</dd>
+    <dt>Instrument cluster</dt><dd>The display behind the steering wheel or handlebar; analogue, hybrid or full TFT.</dd>
+    <dt>TFT display</dt><dd>A colour screen used in digital clusters and infotainment.</dd>
+    <dt>LED lighting</dt><dd>Light-emitting diode lamps replacing halogen bulbs, at two to four times the value per vehicle.</dd>
+    <dt>Matrix / adaptive headlamp</dt><dd>Lighting that changes its beam pattern automatically.</dd>
+    <dt>Starter-generator</dt><dd>A combined starter motor and generator enabling start-stop and mild hybrids; SEDEMAC's speciality.</dd>
+    <dt>Motor controller / inverter</dt><dd>The electronics that drive an EV motor.</dd>
+    <dt>BMS</dt><dd>Battery management system (see 022).</dd>
+    <dt>ADAS</dt><dd>Advanced driver-assistance systems (see 017).</dd>
+    <dt>Telematics unit</dt><dd>The connected box transmitting vehicle data.</dd>
+    <dt>OBD</dt><dd>On-board diagnostics for emissions and fault monitoring (see 018).</dd>
+    <dt>Software-defined vehicle</dt><dd>A vehicle whose functions are controlled and updated by software (see 017).</dd>
+    <dt>Automotive-grade chip</dt><dd>A semiconductor qualified for vehicle temperature, vibration and reliability standards.</dd>
+    <dt>CAN bus</dt><dd>The internal network over which a vehicle's controllers talk to each other; the reason a single wire pair can carry dozens of signals.</dd>
+    <dt>Connector</dt><dd>The plug that joins one part of a harness to another; a large share of harness cost and the most common source of electrical faults.</dd>
+    <dt>Crimping</dt><dd>Pressing a metal terminal onto a wire end to make a gas-tight joint without solder; the core skilled step in harness assembly.</dd>
+    <dt>DC-DC converter</dt><dd>Steps an EV's high-voltage battery down to the 12-volt supply the lights, horn and electronics still run on.</dd>
+    <dt>Functional safety (ISO 26262)</dt><dd>The standard governing electronics whose failure could injure someone; compliance work is a barrier to entry in controllers.</dd>
+    <dt>EMI / EMC</dt><dd>Electromagnetic interference and compatibility: making sure one electronic part does not disturb another. Testing for it is part of Danlaw's business.</dd>
+    <dt>Over-the-air (OTA) update</dt><dd>Changing vehicle software remotely, without a workshop visit; the feature that makes software-defined vehicles possible.</dd>
+    <dt>Potting</dt><dd>Encasing a circuit board in resin to survive heat, vibration and water; standard for two-wheeler electronics.</dd>
+    <dt>IP rating</dt><dd>A two-digit measure of how well a part resists dust and water, as in IP67; quoted on lamps, connectors and controllers.</dd>
+    <dt>Sensor fusion</dt><dd>Combining camera, radar and other inputs into one picture of the road; the computing layer underneath ADAS.</dd>
+  </dl>
+  <h3>Business terms</h3><dl>
+    <dt>Design-in</dt><dd>Being specified into a model's architecture before production (see 023).</dd>
+    <dt>Content per vehicle</dt><dd>The value of a supplier's parts per vehicle (see 023).</dd>
+    <dt>Tooling revenue</dt><dd>One-time income for making moulds and dies for a new model; lumpy and lower margin.</dd>
+    <dt>Localisation</dt><dd>Making imported content domestically (see 017).</dd>
+    <dt>Technology licence / JV partner</dt><dd>A foreign partner providing designs, as Stanley does for Lumax.</dd>
+    <dt>Aftermarket</dt><dd>Replacement parts sold after sale; Bosch's large, steady business (see 023).</dd>
+    <dt>Listing premium</dt><dd>The gain on an IPO's first trading day; Dhoot's was 37.8%.</dd>
+    <dt>Exceptional item</dt><dd>A one-off gain or loss that distorts year-on-year profit comparisons (see 021).</dd>
+    <dt>Minimum-wage revision</dt><dd>A state-mandated wage increase; a direct cost for labour-intensive assembly.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>PLI</dt><dd>See 017.</dd>
+    <dt>Rare-earth magnets</dt><dd>See 023.</dd>
+    <dt>EV penetration</dt><dd>See 017 and 018.</dd>
+    <dt>Price-down and pass-through</dt><dd>See 023.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why does this industry grow faster than vehicle sales?</summary><p>Electronics content per vehicle is rising from roughly 30–35% of car cost in 2020 towards 45–55% by 2030.</p></details>
+  <details class="q"><summary>2. Why did Motherson Sumi Wiring's profit stay flat on 37% revenue growth?</summary><p>Copper prices and minimum-wage revisions: harnessing is copper plus labour, and wages cannot be passed through.</p></details>
+  <details class="q"><summary>3. What is the difference between a harness maker and a controller maker?</summary><p>One sells materials and assembly; the other sells embedded engineering and software, which earns higher, stickier margins.</p></details>
+  <details class="q"><summary>4. What did Bosch report in Q1 FY27?</summary><p>Revenue ₹5,842 cr (+22%), EBITDA margin 14.06%, profit before tax 16.1% of revenue, with two-wheeler and powersports up 41%.</p></details>
+  <details class="q"><summary>5. Which two companies listed in 2026, and what do they do?</summary><p>SEDEMAC (March, control electronics and starter-generators) and Dhoot Transmission (August, electrical components and harnesses), which listed 37.8% above issue.</p></details>
+  <details class="q"><summary>6. How fast is EV content growing for these suppliers?</summary><p>Varroc's EV revenue rose 87% to 16% of sales; Motherson Sumi Wiring's EV programmes are 8.5% of revenue.</p></details>
+  <details class="q"><summary>7. What is the strongest seasonal window here?</summary><p>April–July: 12 of 15 years, median +11.6 points, with July winning 12 of 16.</p></details>
+  <details class="q"><summary>8. What is India's biggest supply dependency in this industry?</summary><p>Semiconductors and displays, which are largely imported; the India Semiconductor Mission's 12 projects (~₹1.64 lakh cr) target that.</p></details>
+  <details class="q"><summary>9. What does the LED transition do for lighting suppliers?</summary><p>It multiplies the value of lighting per vehicle, which is why Lumax Industries' profit rose 41% on 33% revenue growth.</p></details>
+  <details class="q"><summary>10. Which stock in this basket should be treated with most caution?</summary><p>Danlaw (+445% in 2023, −48% in 2025, +114% in 2026) and the flagged micro caps, Azad India Mobility and Containe.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members with ₹300 cr+ market cap vs NSE:NIFTY; 2026 listings excluded from the long-run basket.</li>
+    <li>Companies: <a href="https://www.bosch-presse.de/pressportal/in/en/press-release-8129.html">Bosch Q1 FY27 (company release)</a>; <a href="https://www.investing.com/news/company-news/bosch-q1-fy27-slides-revenue-beats-forecast-margins-hit-14-93CH-4851374">Bosch margins</a>; <a href="https://www.investywise.com/motherson-sumi-wiring-india-limited-q1-fy27-un-audited-financial-results/">Motherson Sumi Wiring Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/varroc-q1-fy27-slides-ev-revenue-surges-87-overseas-growth-accelerates-93CH-4842431">Varroc Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/varroc-engineering-q1-results-revenue-surges-to-26-34b-yoy-net-profit-falls/47565198">Varroc's FY31 target</a>; <a href="https://www.investywise.com/pricol-limited-q1-fy27-unaudited-financial-results/">Pricol Q1 FY27</a>; <a href="https://scanx.trade/stock-market-news/companies/fiem-industries-q1-results-net-profit-rises-16-yoy-to-65-19-crore/48085512">Fiem Q1 FY27 and guidance</a>; <a href="https://www.whalesbook.com/corporate-news/English/auto/Lumax-Industries-Q1-FY27-Revenue-Up-326percent-PAT-Grows-412percent/6a8456a86817e697e7d1078e">Lumax Industries Q1 FY27</a>.</li>
+    <li>New listings: <a href="https://www.chittorgarh.com/ipo/dhoot-transmission-ipo/2859/">Dhoot Transmission IPO</a>; <a href="https://chshyd.in/finance/dhoot-transmission-ipo/">its listing premium</a>; <a href="https://www.chittorgarh.com/ipo/sedemac-mechatronics-ipo/2794/">SEDEMAC IPO</a>; <a href="https://www.paytmmoney.com/blog/sedemac-mechatronics-ipo/">SEDEMAC's business</a>.</li>
+    <li>Industry and technology: <a href="https://www.timesev.com/automotive-electronics-could-account-for-50-55-of-car-cost-by-2030-enhancing-localisation-opportunities/">electronics as a share of car cost</a>; <a href="https://www.timesev.com/from-imported-chips-to-automotive-silicon-made-in-india/">automotive silicon in India</a>; <a href="https://autotechinsight.spglobal.com/news/5286000/ces-2026-hyundai-mobis-and-qualcomm-collaborate-on-software-defined-vehicle-and-adas-solutions">software-defined vehicles and ADAS for emerging markets</a>; <a href="https://www.analyticsinsight.net/news/the-adas-show-2026-to-bring-indias-mobility-ecosystem-to-pune">India-ready ADAS</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 1.9}, {"y": 2013, "v": -3.3}, {"y": 2014, "v": -2.8}, {"y": 2015, "v": -5.9}, {"y": 2016, "v": -1.6}, {"y": 2017, "v": -8.3}, {"y": 2018, "v": 0.4}, {"y": 2019, "v": -6.2}, {"y": 2020, "v": -16.5}, {"y": 2021, "v": 9.9}, {"y": 2022, "v": -17.0}, {"y": 2023, "v": 7.1}, {"y": 2024, "v": -3.1}, {"y": 2025, "v": -5.8}, {"y": 2026, "v": -3.1}], "AprJul": [{"y": 2012, "v": 10.5}, {"y": 2013, "v": -3.0}, {"y": 2014, "v": 12.7}, {"y": 2015, "v": 19.1}, {"y": 2016, "v": 11.6}, {"y": 2017, "v": -1.4}, {"y": 2018, "v": 0.4}, {"y": 2019, "v": -26.1}, {"y": 2020, "v": 20.3}, {"y": 2021, "v": 5.0}, {"y": 2022, "v": 30.8}, {"y": 2023, "v": 17.6}, {"y": 2024, "v": 5.9}, {"y": 2025, "v": 15.7}, {"y": 2026, "v": 28.1}], "AugSep": [{"y": 2012, "v": -5.0}, {"y": 2013, "v": -1.9}, {"y": 2014, "v": 21.4}, {"y": 2015, "v": -2.0}, {"y": 2016, "v": 1.8}, {"y": 2017, "v": 8.4}, {"y": 2018, "v": -10.7}, {"y": 2019, "v": 8.1}, {"y": 2020, "v": 27.1}, {"y": 2021, "v": -11.5}, {"y": 2022, "v": 3.0}, {"y": 2023, "v": 9.0}, {"y": 2024, "v": -1.9}, {"y": 2025, "v": 10.7}], "OctDec": [{"y": 2012, "v": -4.4}, {"y": 2013, "v": 8.5}, {"y": 2014, "v": 19.2}, {"y": 2015, "v": 24.3}, {"y": 2016, "v": 3.5}, {"y": 2017, "v": 17.9}, {"y": 2018, "v": -7.8}, {"y": 2019, "v": 2.7}, {"y": 2020, "v": -16.9}, {"y": 2021, "v": 6.2}, {"y": 2022, "v": -2.3}, {"y": 2023, "v": 8.6}, {"y": 2024, "v": -3.1}, {"y": 2025, "v": -2.6}], "SepNov": [{"y": 2012, "v": -10.3}, {"y": 2013, "v": 2.2}, {"y": 2014, "v": 20.1}, {"y": 2015, "v": 31.1}, {"y": 2016, "v": 20.9}, {"y": 2017, "v": 26.8}, {"y": 2018, "v": -14.6}, {"y": 2019, "v": -2.4}, {"y": 2020, "v": -3.7}, {"y": 2021, "v": 9.3}, {"y": 2022, "v": 2.7}, {"y": 2023, "v": 13.4}, {"y": 2024, "v": -2.4}, {"y": 2025, "v": 4.3}], "JanMar": [{"y": 2012, "v": -5.1}, {"y": 2013, "v": 1.9}, {"y": 2014, "v": 5.3}, {"y": 2015, "v": -5.2}, {"y": 2016, "v": -0.4}, {"y": 2017, "v": -0.6}, {"y": 2018, "v": -6.8}, {"y": 2019, "v": -15.6}, {"y": 2020, "v": -11.0}, {"y": 2021, "v": 25.3}, {"y": 2022, "v": -9.6}, {"y": 2023, "v": 8.9}, {"y": 2024, "v": 10.0}, {"y": 2025, "v": -12.5}, {"y": 2026, "v": -8.7}]}, "my": {"1": {"2012": -6.9, "2013": 5.8, "2014": 7.5, "2015": 1.2, "2016": 1.1, "2017": 8.1, "2018": -7.8, "2019": -9.2, "2020": 9.4, "2021": 13.3, "2022": 8.8, "2023": 1.9, "2024": 13.2, "2025": -7.2, "2026": -6.7}, "2": {"2012": 0.0, "2013": -0.9, "2014": -2.3, "2015": -3.5, "2016": -8.3, "2017": -3.4, "2018": -0.0, "2019": -2.1, "2020": -12.8, "2021": 8.5, "2022": -8.5, "2023": 4.1, "2024": -0.2, "2025": -7.8, "2026": 2.7}, "3": {"2012": 1.8, "2013": -2.6, "2014": -0.4, "2015": -2.5, "2016": 8.9, "2017": -4.7, "2018": 0.4, "2019": -4.1, "2020": -8.2, "2021": 1.2, "2022": -9.2, "2023": 2.9, "2024": -2.9, "2025": 2.9, "2026": -5.3}, "4": {"2012": 4.5, "2013": -1.8, "2014": 1.1, "2015": 1.9, "2016": 1.7, "2017": 5.8, "2018": 5.7, "2019": -1.2, "2020": 14.5, "2021": 4.5, "2022": 9.6, "2023": 8.0, "2024": 2.4, "2025": -2.9, "2026": 11.9}, "5": {"2012": 3.2, "2013": -3.1, "2014": 5.6, "2015": -4.1, "2016": -2.7, "2017": -11.1, "2018": -5.5, "2019": -4.9, "2020": -4.9, "2021": -1.3, "2022": 2.3, "2023": -0.5, "2024": 0.3, "2025": 10.3, "2026": 7.4}, "6": {"2012": -7.6, "2013": -1.0, "2014": 2.3, "2015": -6.3, "2016": 10.3, "2017": 8.3, "2018": -2.9, "2019": -8.3, "2020": 7.4, "2021": 1.8, "2022": 8.8, "2023": 4.8, "2024": 5.6, "2025": 4.2, "2026": 3.6}, "7": {"2011": 0.2, "2012": 10.1, "2013": 2.8, "2014": 2.2, "2015": 30.5, "2016": 1.3, "2017": -3.5, "2018": 4.1, "2019": -14.7, "2020": 1.4, "2021": -0.4, "2022": 7.6, "2023": 3.1, "2024": -2.8, "2025": 3.0, "2026": 1.7}, "8": {"2011": 7.8, "2012": 2.9, "2013": -3.7, "2014": 14.2, "2015": -8.3, "2016": -9.3, "2017": 0.7, "2018": -1.6, "2019": 10.3, "2020": 21.2, "2021": -14.1, "2022": 0.3, "2023": 9.8, "2024": -4.7, "2025": 5.6, "2026": 11.8}, "9": {"2011": 3.2, "2012": -7.9, "2013": 2.2, "2014": 6.1, "2015": 7.5, "2016": 11.8, "2017": 7.8, "2018": -9.0, "2019": -2.4, "2020": 5.0, "2021": 3.1, "2022": 2.6, "2023": -0.9, "2024": 3.0, "2025": 4.9}, "10": {"2011": -9.7, "2012": -0.5, "2013": -7.5, "2014": 4.2, "2015": 6.1, "2016": 18.0, "2017": 10.3, "2018": -0.1, "2019": 2.2, "2020": -5.3, "2021": 1.2, "2022": -4.2, "2023": 5.9, "2024": -1.2, "2025": -1.2}, "11": {"2011": 4.2, "2012": -1.7, "2013": 7.0, "2014": 7.6, "2015": 15.0, "2016": -7.0, "2017": 6.3, "2018": -6.9, "2019": -2.0, "2020": -3.2, "2021": 4.7, "2022": 4.1, "2023": 7.8, "2024": -4.0, "2025": 0.3}, "12": {"2011": 1.6, "2012": -2.2, "2013": 8.1, "2014": 5.8, "2015": 1.8, "2016": -5.0, "2017": -0.1, "2018": -1.3, "2019": 2.4, "2020": -6.7, "2021": 0.1, "2022": -2.0, "2023": -5.8, "2024": 2.0, "2025": -1.6}}, "basket": ["Bosch Limited", "Motherson Sumi Wiring India Ltd", "Varroc Engineering Limited", "Pricol Ltd.", "Lumax Industries Limited", "Fiem Industries Limited", "India Nippon Electricals Limited", "Danlaw Technologies India Limited", "Azad India Mobility Ltd"], "nbasket": 9, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 2.9, "rel": 2.2, "hit": 10, "n": 15}, {"m": 2, "abs": -3.4, "rel": -2.3, "hit": 4, "n": 15}, {"m": 3, "abs": -1.7, "rel": -1.5, "hit": 6, "n": 15}, {"m": 4, "abs": 6.9, "rel": 4.4, "hit": 12, "n": 15}, {"m": 5, "abs": 0.5, "rel": -0.6, "hit": 6, "n": 15}, {"m": 6, "abs": 3.9, "rel": 2.1, "hit": 10, "n": 15}, {"m": 7, "abs": 4.8, "rel": 2.9, "hit": 12, "n": 16}, {"m": 8, "abs": 2.5, "rel": 2.7, "hit": 10, "n": 16}, {"m": 9, "abs": 3.1, "rel": 2.5, "hit": 11, "n": 15}, {"m": 10, "abs": 3.3, "rel": 1.2, "hit": 7, "n": 15}, {"m": 11, "abs": 3.1, "rel": 2.1, "hit": 9, "n": 15}, {"m": 12, "abs": 0.5, "rel": -0.2, "hit": 7, "n": 15}], "cy": [{"y": 2012, "b": 23.4, "n": 27.7, "rel": -4.3, "partial": false}, {"y": 2013, "b": 11.6, "n": 6.8, "rel": 4.8, "partial": false}, {"y": 2014, "b": 119.1, "n": 31.4, "rel": 87.7, "partial": false}, {"y": 2015, "b": 31.9, "n": -4.1, "rel": 36.0, "partial": false}, {"y": 2016, "b": 19.5, "n": 3.0, "rel": 16.5, "partial": false}, {"y": 2017, "b": 60.1, "n": 28.6, "rel": 31.5, "partial": false}, {"y": 2018, "b": -21.2, "n": 3.2, "rel": -24.3, "partial": false}, {"y": 2019, "b": -23.0, "n": 12.0, "rel": -35.0, "partial": false}, {"y": 2020, "b": 22.9, "n": 14.9, "rel": 8.0, "partial": false}, {"y": 2021, "b": 53.7, "n": 24.1, "rel": 29.6, "partial": false}, {"y": 2022, "b": 24.9, "n": 4.3, "rel": 20.5, "partial": false}, {"y": 2023, "b": 78.0, "n": 20.0, "rel": 57.9, "partial": false}, {"y": 2024, "b": 19.3, "n": 8.8, "rel": 10.5, "partial": false}, {"y": 2025, "b": 20.0, "n": 10.5, "rel": 9.5, "partial": false}, {"y": 2026, "b": 14.9, "n": -10.7, "rel": 25.6, "partial": true}], "dd": [{"co": "Bosch", "peak": "Sep 2025", "fp": 13, "y1": 18}, {"co": "Motherson Sumi Wiring India", "peak": "Jun 2024", "fp": -32, "y1": -26}, {"co": "Varroc Engineering", "peak": "Jun 2024", "fp": 24, "y1": 37}, {"co": "Pricol", "peak": "Dec 2025", "fp": 14, "y1": 41}, {"co": "Lumax Industries", "peak": "Dec 2025", "fp": 2, "y1": 37}, {"co": "Fiem Industries", "peak": "Dec 2025", "fp": -20, "y1": -6}, {"co": "India Nippon Electricals", "peak": "Oct 2025", "fp": 17, "y1": 28}, {"co": "Danlaw Technologies India", "peak": "Oct 2024", "fp": -24, "y1": 82}, {"co": "Azad India Mobility", "peak": "Oct 2024", "fp": -61, "y1": -39}, {"co": "Jagan Lamps", "peak": "Feb 2024", "fp": -61, "y1": -31}, {"co": "Containe Technologies", "peak": "Oct 2024", "fp": -86, "y1": -45}], "win": {"FebMar": {"mean": -3.6, "median": -3.1, "hit": 4, "n": 15}, "AprJul": {"mean": 9.8, "median": 11.6, "hit": 12, "n": 15}, "AugSep": {"mean": 4.0, "median": 2.4, "hit": 8, "n": 14}, "OctDec": {"mean": 3.8, "median": 3.1, "hit": 8, "n": 14}, "SepNov": {"mean": 7.0, "median": 3.5, "hit": 9, "n": 14}, "JanMar": {"mean": -1.6, "median": -5.1, "hit": 5, "n": 15}}, "ytd": {"b": 14.9, "n": -10.7}, "notes": {"2012": "A quiet year (+23% vs the Nifty's +28%): Bosch +40%, Fiem +25%, with the small electricals lagging.", "2013": "+12%: Fiem +88% on two-wheeler lighting; the rupee crash raised imported electronic content costs.", "2014": "+119%: the auto re-rating lifted everything. Danlaw +181%, India Nippon +143%, Fiem +140%, Bosch +95%.", "2015": "+32%: Danlaw +457% on a small base; the rest were flat as volumes disappointed.", "2016": "+20%: LED lighting began replacing bulbs. Lumax Industries +61%, Fiem +43%.", "2017": "+60%: the small and mid-cap boom plus content gains. Lumax Industries +182%, India Nippon +137%.", "2018": "\u221221%: the credit shock and a weak second half; Pricol \u221256%, Fiem \u221252%.", "2019": "\u221223%: the auto slowdown and BS-VI pre-buying pause; Danlaw \u221252%, Varroc \u221242%.", "2020": "+23%: COVID recovery favoured two-wheeler-linked suppliers; Danlaw +62%, Fiem +25%.", "2021": "+54%: vehicle rebound, LED penetration and EV content; Danlaw +202%, Pricol +138%, Fiem +100%.", "2022": "+25%: content per vehicle kept rising despite commodity inflation; Pricol +72%, Fiem +53%.", "2023": "+78%: the best year, as electronics content and premiumisation re-rated the group. Danlaw +445%, Pricol +99%, Varroc +87%.", "2024": "+19%: Bosch +54% on a strong domestic cycle; Motherson Sumi Wiring \u22126% as copper costs bit.", "2025": "+20%: Lumax Industries +124% on LED headlamps; Danlaw \u221248% gave back its gains.", "2026": "+15% against a Nifty down 11%, with a median stock up 16%. Danlaw +114%, India Nippon +55%, Varroc +46%, Bosch +30%; Motherson Sumi Wiring \u221226%. Two large listings arrived: SEDEMAC (March) and Dhoot Transmission (August, listing 37.8% above its issue price)."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

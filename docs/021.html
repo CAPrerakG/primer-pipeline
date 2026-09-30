@@ -1,0 +1,571 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automobile Manufacturers Primer</title>
+<meta name="description" content="Industry 21 of 278: a one-company section. Hindustan Motors, which has not built a car since 2014, as a case study in how carmakers die, how a story stock trades, and what to do with a watchlist bucket that no longer holds an industry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Automobile Manufacturers · reading order</p><ol>
+<li><a href="#brief">The section in 60 seconds</a></li>
+<li><a href="#bucket">What this section holds</a></li>
+<li><a href="#story">The Hindustan Motors story</a></li>
+<li><a href="#death">How carmakers die</a></li>
+<li><a href="#money">How a dormant company is valued</a></li>
+<li><a href="#maths">What a comeback would cost</a></li>
+<li><a href="#season">What the stock does</a></li>
+<li><a href="#drivers">What moves the price</a></li>
+<li><a href="#history">A decade of the story</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where things stand now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 21 of 278 · Auto family</div>
+  <h1>Automobile Manufacturers</h1>
+  <p class="lede">A section with one company in it, and that company has not built a car since 2014. This primer is therefore two things: a case study of Hindustan Motors, the maker of the Ambassador, and a lesson in how carmakers die, how "revival" stocks trade, and what to do with a watchlist bucket that no longer describes an industry.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 1 (audit recommendation inside)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Electric Mobility &amp; Charging</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">1</div><div class="l">Companies in this section: Hindustan Motors, market value about ₹285 cr</div></div>
+    <div class="stat"><div class="n">2014</div><div class="l">The year the last Ambassador was built, after 56 years in production</div></div>
+    <div class="stat"><div class="n">₹80 cr</div><div class="l">What Groupe PSA (Peugeot) paid for the Ambassador brand in February 2017</div></div>
+    <div class="stat"><div class="n">~9x</div><div class="l">Market value against FY26 net worth of ₹32 cr, for a company with a going-concern qualification</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The section in 60 seconds">
+  <p class="eyebrow">1 · The section in 60 seconds</p>
+  <h2>An empty bucket with one famous name in it</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Imagine a shelf in a shop labelled "Bicycles", and on it there is only one very old bicycle that nobody has ridden for years. The shop keeps it because it is famous. That is this section. Hindustan Motors made the Ambassador, the round black car that ministers and taxi drivers used for 56 years. New companies made better, cheaper cars, people stopped buying the Ambassador, and the factory closed in 2014. The company still exists and still has a share price, because people hope it will one day make a new electric Ambassador. Hoping is not the same as building.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This watchlist section holds one stock, Hindustan Motors, and it is not an operating carmaker. FY26 total income was ₹12.3 cr, net worth ₹32 cr, and the auditors flagged material uncertainty over going concern after West Bengal resumed the Uttarpara plant land. The stock is worth about ₹285 cr, roughly nine times book, on the expectation of an Ambassador electric revival with Peugeot, a plan that has slipped repeatedly.</p>
+    <p>Two practical conclusions. First, for actual automobile manufacturers, use 017 (passenger vehicles), 018 (two- and three-wheelers), 019 (commercial vehicles) and 020 (tractors); this section should be merged or re-labelled, which is the audit recommendation below. Second, treat Hindustan Motors as what it is: a story stock whose price follows revival headlines, not production. The pattern in its 15-year record is remarkable: it has lagged the Nifty in February–March in every single year.</p>
+  </div>
+</section>
+
+<section id="bucket" data-toc="What this section holds">
+  <p class="eyebrow">2 · What this section holds</p>
+  <h2>A classification artefact, and what to do about it</h2>
+  <p>The industry watchlists were built by mapping every listed company to one bucket. Where a name does not fit a working industry, it lands in a general one. "Automobile Manufacturers" is that bucket, and after the audit it holds a single legacy company. There is no industry to analyse here, because every real vehicle maker is already classified in a more specific section.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Where the real makers sit</th><th>Section</th><th>Examples</th></tr></thead><tbody>
+    <tr><td>Cars and SUVs</td><td>017 Passenger Vehicles</td><td>Maruti Suzuki, Mahindra, Hyundai India, Tata Motors PV</td></tr>
+    <tr><td>Motorcycles, scooters, three-wheelers</td><td>018 Two &amp; Three Wheelers</td><td>Hero, Bajaj, TVS, Eicher, Ather, Ola</td></tr>
+    <tr><td>Trucks, buses, vans</td><td>019 Commercial Vehicles</td><td>Tata Motors CV, Ashok Leyland, Force, SML Mahindra, Olectra</td></tr>
+    <tr><td>Tractors and farm machinery</td><td>020 Tractors</td><td>Escorts Kubota, Swaraj Engines, VST, Indo Farm</td></tr>
+    <tr><td>EV-specific plays and charging</td><td>022 Electric Mobility &amp; Charging</td><td>Covered next</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Audit recommendation</span><p>Retire this section and move Hindustan Motors either to 017 (as a dormant maker, clearly tagged) or to a "legacy and shell companies" bucket if you create one. Keeping a one-stock industry invites two errors: a seasonality or basket statistic that looks like an industry signal when it is one illiquid micro cap, and a screen that shows "Automobile Manufacturers" outperforming or lagging when nothing is being manufactured. If you would rather not lose the label, rename it "Legacy Automakers" so the next reader knows what it is.</p></div>
+</section>
+
+<section id="story" data-toc="The Hindustan Motors story">
+  <p class="eyebrow">3 · The Hindustan Motors story</p>
+  <h2>From India's biggest carmaker to a going-concern note</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Period</th><th>What happened</th><th>Why it mattered</th></tr></thead><tbody>
+    <tr><td>1942–1950s</td><td>Founded by the Birla family; the Ambassador, based on the Morris Oxford, went into production in 1958 at Uttarpara, near Kolkata.</td><td>India's first mass-produced car, built in a protected, licence-controlled market.</td></tr>
+    <tr><td>1960s–1980s</td><td>Ambassador and Premier Padmini were effectively the only cars available. Waiting lists ran for years, and a used car sometimes cost more than a new one.</td><td>No competition meant no need to improve the product. The design barely changed for decades.</td></tr>
+    <tr><td>1983</td><td>Maruti Udyog launched the Maruti 800 with Suzuki.</td><td>A light, cheap, modern car exposed how outdated the Ambassador was.</td></tr>
+    <tr><td>1991 onwards</td><td>Liberalisation brought Hyundai, Ford, GM, Honda, Toyota and others.</td><td>Hindustan Motors' share collapsed, surviving mainly on taxi and government fleets.</td></tr>
+    <tr><td>1990s–2000s</td><td>A Mitsubishi partnership (Lancer, Pajero) built at a Chennai-area plant; the Uttarpara operation kept shrinking.</td><td>A workable second business, but never large enough to fund a new Ambassador.</td></tr>
+    <tr><td>May 2014</td><td>Production suspended at Uttarpara; the last Ambassador was built after 56 years.</td><td>The end of manufacturing. What remained were land, a brand and liabilities.</td></tr>
+    <tr><td>February 2017</td><td>The Ambassador brand and trademarks were sold to Groupe PSA (Peugeot) for ₹80 cr.</td><td>The company sold its most famous asset; the brand now belongs to Stellantis.</td></tr>
+    <tr><td>2020–2025</td><td>Repeated reports of an Ambassador revival as an electric car, first with a Chinese partner, then through a joint venture with Peugeot, to be built at a Chennai plant owned by another CK Birla entity (HMFCI). Target dates slipped.</td><td>Each headline moved the stock; none produced a car.</td></tr>
+    <tr><td>FY26</td><td>Total income ₹12.3 cr, net profit ₹0.15 cr, net worth ₹32 cr, no financial debt. An exceptional write-off of ₹8.35 cr followed the West Bengal government's resumption of the Uttarpara land, and the auditors issued a qualified opinion with material uncertainty over going concern.</td><td>The last hard asset went, and the auditors said so plainly.</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Hindustan Motors is a famous old restaurant that closed its kitchen years ago. The signboard is still up, the owner talks about reopening with a new chef, and people walk past and say "that place was legendary". The share price is the price of the signboard and the hope, not of any meals being served.</p></div>
+</section>
+
+<section id="death" data-toc="How carmakers die">
+  <p class="eyebrow">4 · How carmakers die</p>
+  <h2>Five ways to lose a car business</h2>
+  <ol>
+    <li><b>No scale.</b> A car platform costs hundreds of crores to develop and needs large volumes to recover. Below roughly 100,000 units a year, fixed costs per car become impossible. Ford accumulated operating losses of more than $2 bn in India over a decade before quitting in 2021.</li>
+    <li><b>Wrong price points.</b> India's volume is below ₹10 lakh. Ford had nothing under ₹5 lakh; Harley-Davidson's cheapest bike cost about ₹6 lakh before taxes. Both were priced above where the market actually buys.</li>
+    <li><b>Skipping product cycles.</b> The Ambassador ran essentially unchanged for decades. When competition arrived, there was nothing to compete with.</li>
+    <li><b>Distribution and service starvation.</b> Buyers weigh resale value and service reach; a thin network becomes a self-reinforcing spiral of falling residuals and falling sales.</li>
+    <li><b>Regulatory cost steps in a weak franchise.</b> BS-VI, safety rules and tax changes hit every maker, but only those with volume can spread the cost. GM (2017), Harley (2020), Ford (2021) and Datsun (2022) all left in that decade.</li>
+  </ol>
+  <h3>India's automobile graveyard</h3>
+  <ul>
+    <li><b>Premier Automobiles:</b> the Padmini, the Ambassador's twin rival, ended in the 1990s.</li>
+    <li><b>Standard Motors, Sipani:</b> small makers that never reached scale.</li>
+    <li><b>General Motors (2017):</b> exited manufacturing; the Talegaon plant eventually went to Hyundai.</li>
+    <li><b>Harley-Davidson (2020):</b> withdrew and licensed the X440 to Hero instead.</li>
+    <li><b>Ford (2021):</b> stopped Indian production; the Sanand plant went to Tata Motors.</li>
+    <li><b>Datsun (2022):</b> Nissan's low-cost brand closed in India.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The pattern is consistent: the plants do not disappear, they change owners, and the market share flows to whoever already had scale and distribution. When a marginal maker exits, the right trade is usually the survivor, not the asset. Hyundai bought GM's plant, Tata bought Ford's, Hero licensed Harley's brand. Hindustan Motors is the opposite case: an exit that never got resolved, which is why its equity is a hope, not a business.</p></div>
+</section>
+
+<section id="money" data-toc="How a dormant company is valued">
+  <p class="eyebrow">5 · How a dormant company is valued</p>
+  <h2>Three ways people price a shell, and the traps in each</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Approach</th><th>What it counts</th><th>The trap</th></tr></thead><tbody>
+    <tr><td>Net worth (book value)</td><td>FY26 net worth ₹32 cr, no financial debt</td><td>Book value fell when the Uttarpara land was written off; what remains is largely cash and receivables</td></tr>
+    <tr><td>Asset or land value</td><td>Historically the main argument for owning it</td><td>The land was resumed by the state government; an asset you do not control is not an asset</td></tr>
+    <tr><td>Revival option value</td><td>The hope of an Ambassador EV with Peugeot</td><td>An agreement is not a product. Timelines have slipped from 2022 to 2026 and the plant is owned by a different group entity</td></tr>
+  </tbody></table></div>
+  <p>At about ₹285 cr of market value against ₹32 cr of net worth, roughly nine times book, essentially the whole price is option value on the revival. That can be a reasonable speculation if sized as one, but it should never be confused with owning an automobile manufacturer. The disclosure test is simple: ask what the company earned from selling vehicles last year. The answer here is nothing.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Buying this share is like buying a lottery ticket with a famous name printed on it. The ticket may be worth something if the draw happens, but the price you pay should reflect the odds and the wait, not the fame.</p></div>
+</section>
+
+<section id="maths" data-toc="What a comeback would cost">
+  <p class="eyebrow">6 · What a comeback would cost</p>
+  <h2>The arithmetic behind the headline</h2>
+  <p>It is worth doing the sums that a revival press release never shows. Suppose the plan is real: an Ambassador-styled electric sedan priced at ₹10–15 lakh, built on a licensed platform at a plant owned by another group company.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Item</th><th>What it involves</th><th>Rough scale</th></tr></thead><tbody>
+    <tr><td>Platform and engineering</td><td>Licensing a partner's EV platform, adapting the body, crash and safety engineering</td><td>Hundreds of crore, spread over two to three years before any sale</td></tr>
+    <tr><td>Tooling and plant readiness</td><td>Press tools, body shop, paint shop, assembly line; the plant belongs to a different group entity, so a lease or contract-manufacturing fee applies</td><td>Comparable to the engineering spend</td></tr>
+    <tr><td>Homologation and certification</td><td>ARAI or ICAT approval, Bharat NCAP testing, EV safety standards</td><td>Months of testing after the prototype works</td></tr>
+    <tr><td>Supply chain</td><td>Cells, motors, controllers, and about 70% bought-in content from suppliers who need volume commitments</td><td>Working capital before the first rupee of revenue</td></tr>
+    <tr><td>Dealers and service</td><td>A network from zero; buyers judge EVs on service reach and resale value</td><td>Years to build; the reason many EV entrants stall</td></tr>
+    <tr><td>Break-even volume</td><td>Even an asset-light EV needs tens of thousands of units a year to cover fixed costs</td><td>Against a listed company with ₹32 cr of net worth</td></tr>
+  </tbody></table></div>
+  <p>Set that against the balance sheet: FY26 net worth of ₹32 cr and total income of ₹12.3 cr. The gap between the plan and the resources is the whole story. It can only be closed by outside capital, which means either a partner funding the venture (in which case the value may sit in that venture, not in the listed shell) or heavy equity issuance (which dilutes today's shareholders). Neither possibility is priced by simply multiplying a hoped-for car price by a hoped-for volume.</p>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>When a dormant company announces a comeback, work backwards: what does the plan cost, who pays for it, and which legal entity owns the result? If the answer to the last question is "another group company", the listed shares may never see the profit, however successful the product is.</p></div>
+</section>
+
+<section id="season" data-toc="What the stock does">
+  <p class="eyebrow">6 · What the stock does</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return minus the Nifty, in percentage points; the label under each month is how many years the stock beat the Nifty. This is one stock, not a basket.</figcaption></figure>
+  <div><p><b>Basket:</b> the single listed company (Hindustan Motors Ltd), monthly from Jul 2011, compared with the Nifty 50. With one stock, these statistics describe that company, not an industry.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +10.9 pts (beat in 10 of 15 years); Oct +4.5 pts (beat in 7 of 15 years); Jun +4.3 pts (beat in 6 of 15 years).</li><li><b>Weakest months:</b> Mar -9.6 pts (beat in 2 of 15 years); Aug -5.7 pts (beat in 5 of 16 years); Jul -4.9 pts (beat in 6 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 0 of 15 years (median -13.3 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +4.8 pts); Aug–Sep beat the Nifty in 6 of 14 years (median -2.4 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +3.7 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +5.6 pts); Jan–Mar beat the Nifty in 3 of 15 years (median -17.8 pts).</li></ul><p><b>Reading it:</b> read this as one illiquid micro-cap, not an industry. The striking number is February–March: the stock lagged the Nifty in <b>all 15 years</b> (median −13.3 points), and January–March in 12 of 15 (median −17.8). April is the opposite (10 of 15, average +10.9), and April–July beat the Nifty in 9 of 15. That shape, sell into the tax-loss and year-end window and buy in April, is typical of a speculative micro cap rather than of carmaking.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="FebMar" viewBox="0 0 720 280" role="img" aria-label="February to March return minus Nifty by year"></svg><figcaption>February–March return minus the Nifty, by year: negative in all 15 years.</figcaption></figure>
+  <h3>The one pattern worth noting, and why to be careful</h3>
+  <ul>
+    <li><b>February–March lagged the Nifty in all 15 years</b> (median −13.3 points), and January–March in 12 of 15 (median −17.8). A clean 15-of-15 record is rare, and the likely cause is micro-cap behaviour: tax-loss selling into March, year-end risk reduction and thin liquidity, rather than anything about carmaking.</li>
+    <li><b>April is the mirror image:</b> 10 of 15 years, an average of +10.9 points, with the best Aprils in 2024 (+48.8) and 2026 (+42.5), both driven by revival headlines.</li>
+    <li><b>April–July</b> beat the Nifty in 9 of 15 years, but the swings are enormous: +55.4 in 2020 and −25.6 in 2013.</li>
+    <li><b>The caution:</b> with one illiquid stock, a handful of trades can set a month's return. Treat this as a description of speculative flow, not an investable edge, and remember that a stock can show a strong seasonal pattern while losing 71% from its peak.</li>
+  </ul>
+</section>
+
+<section id="drivers" data-toc="What moves the price">
+  <p class="eyebrow">7 · What moves the price</p>
+  <h2>Six drivers, none of them operational</h2>
+  <ol>
+    <li><b>Revival headlines:</b> each Ambassador-EV report has produced a spike, including the 2024 and 2026 April rallies.</li>
+    <li><b>Partner news:</b> the shift from a reported Chinese partner to a Peugeot joint venture; any signed, funded agreement would be the real trigger.</li>
+    <li><b>Asset events:</b> land sales and, in FY26, the state's resumption of the Uttarpara land.</li>
+    <li><b>Micro-cap liquidity cycles:</b> the 2020–22 small-cap boom lifted it 32%, 54% and 52% in successive years with no operating change.</li>
+    <li><b>Going-concern and audit language:</b> the FY26 qualification is the kind of disclosure that removes institutional buyers.</li>
+    <li><b>Group intentions:</b> the CK Birla group's willingness to fund a comeback, and which group entity would own the plant and the product.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of the story">
+  <p class="eyebrow">8 · A decade of the story</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Stock</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: Hindustan Motors alone (the section's only member) vs NSE:NIFTY, monthly returns capped at ±50%, price only; 2026 is to 18 September. The capped monthly series can differ from the raw calendar-year move in a very volatile micro cap.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a revival stock</h3>
+  <ol>
+    <li><b>A headline appears</b> (a partner, a plant, a launch date). The stock doubles in weeks on thin volume.</li>
+    <li><b>No cash flows follow.</b> The company has no revenue from vehicles, so nothing validates the move.</li>
+    <li><b>The timeline slips</b> quietly; the stock drifts down for a year or two.</li>
+    <li><b>A new headline resets the cycle,</b> usually from a lower base. Each cycle's peak has been lower in real terms since 2014.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Announcements, not deliveries,</b> move the price.</li>
+    <li><b>The asset base shrinks</b> with each cycle: first the business, then the brand, then the land.</li>
+    <li><b>Micro-cap beta dominates:</b> its best years (2020–22) were the market's best years for small caps.</li>
+    <li><b>The stock still trades far above book,</b> which is the clearest sign that hope, not assets, sets the price.</li>
+  </ul>
+  <h3>Drawdown from the 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">9 · The global picture</p>
+  <h2>Dead brands and what revives them</h2>
+  <p>Every big car market has its graveyard: Saab and Rover in Europe, Holden in Australia, Pontiac, Saturn and Plymouth in the United States. A few names do come back, but almost always because someone else buys the badge and builds a genuinely new product behind it. Nostalgia alone has never restarted a factory.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Case</th><th>What happened</th><th>The lesson</th></tr></thead><tbody>
+    <tr><td>MG (UK)</td><td>The brand ended up with China's SAIC and returned as a modern range; in India it is now JSW MG Motor.</td><td>A revival needs a deep-pocketed owner and an all-new product.</td></tr>
+    <tr><td>Jaguar Land Rover</td><td>Bought by Tata Motors in 2008 and turned around with heavy investment.</td><td>Capital and patience, not sentiment.</td></tr>
+    <tr><td>Saab</td><td>Attempts to revive it repeatedly failed after GM's exit.</td><td>Most revivals do not happen.</td></tr>
+    <tr><td>Ambassador</td><td>The brand is owned by Stellantis (through the PSA purchase), while the company that made it is separate.</td><td>Check who owns the trademark before believing a comeback story.</td></tr>
+  </tbody></table></div>
+  <h3>Critical dependencies: what an actual revival would require</h3>
+  <ul>
+    <li><b>Rights:</b> access to the Ambassador trademark, which Hindustan Motors sold in 2017.</li>
+    <li><b>A plant:</b> the Uttarpara land is gone; the proposed Chennai facility belongs to another group entity.</li>
+    <li><b>A platform and homologation:</b> a modern EV platform, crash and safety approvals, and a supply chain.</li>
+    <li><b>Capital:</b> several hundred crore at minimum, and a dealer and service network from scratch.</li>
+    <li><b>Evidence:</b> a signed, funded joint venture with disclosed shareholding and a production timeline in the company's own filings, not in press reports.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">10 · Where technology is going</p>
+  <h2>Why an EV comeback is even conceivable</h2>
+  <ol>
+    <li><b>Lower barriers in electric vehicles:</b> no engine or gearbox development, and battery packs, motors and controllers can be bought in.</li>
+    <li><b>Contract manufacturing:</b> a brand owner can have vehicles built by someone else, as several EV start-ups already do.</li>
+    <li><b>Platform licensing:</b> Chinese and European platforms are available to licence, which is what the reported partnerships are about.</li>
+    <li><b>Nostalgia as marketing:</b> retro-styled EVs have worked elsewhere, and the Ambassador is one of India's most recognisable shapes.</li>
+    <li><b>The hard parts remain:</b> distribution, service, safety approvals, working capital and the fact that buyers in the ₹10–15 lakh EV segment already have Tata, Mahindra, MG and Hyundai to choose from.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">11 · Policy and regulation</p>
+  <h2>What would matter if it ever restarted</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Land resumption</td><td>West Bengal resumed the Uttarpara land; FY26 write-off of ₹8.35 cr</td><td>Removed the main tangible asset and triggered the going-concern note</td></tr>
+    <tr><td>GST on EVs</td><td>5%, against 18% or 40% for petrol cars (see 017)</td><td>Makes an EV comeback cheaper for buyers than a petrol one</td></tr>
+    <tr><td>Homologation and safety</td><td>Bharat NCAP, crash and emission approvals</td><td>Years of work and cost before a first sale</td></tr>
+    <tr><td>PLI and state incentives</td><td>Available for EV manufacturing at scale</td><td>Only useful with real volume commitments</td></tr>
+    <tr><td>Listing and disclosure rules</td><td>Exchanges require clarification of price-sensitive news</td><td>Watch the company's own filings, not press reports</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where things stand now">
+  <p class="eyebrow">12 · Where things stand now</p>
+  <h2>September 2026: a name, a hope and an audit qualification</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Operations</td><td>None</td><td>No vehicles built since 2014; FY26 total income ₹12.3 cr</td></tr>
+    <tr><td>Balance sheet</td><td>Small but debt-free</td><td>Net worth ₹32 cr; no financial debt</td></tr>
+    <tr><td>Audit</td><td>Qualified</td><td>Material uncertainty over going concern after the land resumption</td></tr>
+    <tr><td>Revival</td><td>Announced, not delivered</td><td>Peugeot joint venture reported; the March 2026 launch target passed</td></tr>
+    <tr><td>Stock</td><td>Falling</td><td>−35% in 2026; −71% from its May 2024 peak; about 9x book</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>There is nothing here to analyse as an industry, and very little to analyse as a business. If you want exposure to Indian vehicle manufacturing, it is in 017 to 020. If you want to follow the revival as a speculation, the test is specific: a signed and funded joint venture disclosed in the company's filings, a plant with a stated capacity, and a homologated product. Until then, this is a ₹285 cr option on a press release.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">13 · What to track</p>
+  <h2>If you follow it at all</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Exchange filings and clarifications</td><td>BSE announcements</td><td>The only reliable source on the revival</td></tr>
+    <tr><td>Annual report audit opinion</td><td>Yearly</td><td>Whether the going-concern qualification is removed</td></tr>
+    <tr><td>Any joint-venture agreement details</td><td>Filings</td><td>Shareholding, funding, plant, timeline</td></tr>
+    <tr><td>Uttarpara land litigation</td><td>News, filings</td><td>Whether any value is recovered</td></tr>
+    <tr><td>Stellantis's plans for the Ambassador trademark</td><td>Global announcements</td><td>The brand owner controls the name</td></tr>
+    <tr><td>Promoter shareholding and pledges</td><td>Quarterly</td><td>Group intent</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">14 · Adjacent industries and proxies</p>
+  <h2>Where the real analysis lives</h2>
+  <ul>
+    <li><b>017 Passenger Vehicles:</b> the operating car makers and the market the Ambassador lost.</li>
+    <li><b>018 Two &amp; Three Wheelers</b> and <b>019 Commercial Vehicles:</b> the rest of Indian vehicle manufacturing.</li>
+    <li><b>020 Tractors:</b> the farm-machinery cycle.</li>
+    <li><b>022 Electric Mobility &amp; Charging:</b> where an EV revival would have to compete.</li>
+    <li><b>Auto components</b> (023, 024): the suppliers who outlived most of their customers.</li>
+    <li><b>Real estate:</b> the eventual fate of many closed plants, and a reminder that land value belongs to whoever controls the land.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">15 · Questions for management</p>
+  <h2>What to ask a company with no operations</h2>
+  <ol>
+    <li>Is there a signed joint-venture agreement, and what are the shareholding, funding commitment and timeline?</li>
+    <li>Which entity will own the plant and the product: the listed company or another group company?</li>
+    <li>Who holds the rights to the Ambassador name for the proposed vehicle?</li>
+    <li>What is the status of the Uttarpara land, and is any compensation expected?</li>
+    <li>What will remove the going-concern qualification?</li>
+    <li>How will the company fund product development, and will minority shareholders be diluted?</li>
+    <li>What revenue, if any, does the company expect in the next 12 months?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Revival claims that appear in the press but not in exchange filings.</li>
+    <li>Launch dates that move every year.</li>
+    <li>Value being built in an unlisted group entity rather than the listed one.</li>
+    <li>A market value many times net worth with no revenue.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">16 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"The Ambassador is coming back, so the stock is cheap."</td><td>The brand was sold to Peugeot's parent in 2017, the Uttarpara land has been resumed, and the proposed plant sits in another group entity. The listed company's FY26 income was ₹12.3 cr.</td></tr>
+    <tr><td>"It's an asset play on land."</td><td>That was the argument until FY26, when the state resumed the land and the company wrote off ₹8.35 cr.</td></tr>
+    <tr><td>"Nostalgia will sell the car."</td><td>Retro styling helps marketing, but buyers in the ₹10–15 lakh EV segment compare range, service and resale with Tata, Mahindra, MG and Hyundai.</td></tr>
+    <tr><td>"A 15-of-15 seasonal pattern must be tradeable."</td><td>It is one illiquid micro cap where a few trades set the monthly return, and the stock is 71% below its peak. Statistical regularity is not an edge.</td></tr>
+    <tr><td>"Every dead carmaker eventually revives."</td><td>Saab, Rover, Holden and Premier did not. The exceptions (MG, JLR) needed a rich new owner and an all-new product.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">17 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. going concern, shell" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Company and accounting terms</h3><dl>
+    <dt>Going concern</dt><dd>The assumption that a company can keep operating for the next year; auditors flag it when that is in doubt.</dd>
+    <dt>Qualified opinion</dt><dd>An audit report with a stated exception (see 012); here it concerns going concern.</dd>
+    <dt>Material uncertainty</dt><dd>The formal phrase auditors use when events cast significant doubt on survival.</dd>
+    <dt>Exceptional item</dt><dd>A one-off gain or loss shown separately, such as the ₹8.35 cr land write-off.</dd>
+    <dt>Write-off</dt><dd>Removing an asset's value from the books when it is no longer recoverable.</dd>
+    <dt>Net worth (book value)</dt><dd>Assets minus liabilities; ₹32 cr at FY26 here.</dd>
+    <dt>Price-to-book</dt><dd>Market value divided by net worth; about 9x here, with no operations.</dd>
+    <dt>Shell company</dt><dd>A listed company with negligible operations, often retained for its listing or assets.</dd>
+    <dt>Dormant operations</dt><dd>A business that has stopped producing but still files accounts.</dd>
+    <dt>Land resumption</dt><dd>A government taking back leased or allotted land, usually when conditions are unmet.</dd>
+    <dt>Trademark sale</dt><dd>Selling a brand name separately from the business, as with the Ambassador in 2017.</dd>
+    <dt>Group entity</dt><dd>Another company under the same promoters; value can sit there rather than in the listed company.</dd>
+    <dt>Related-party risk</dt><dd>The risk that transactions favour the promoter group over minority shareholders (see 016).</dd>
+    <dt>Dilution</dt><dd>Issuing new shares, which reduces existing holders' stake; common when a shell needs funding.</dd>
+    <dt>Option value</dt><dd>The part of a price that reflects a possible future event rather than current earnings.</dd>
+  </dl>
+  <h3>Market and industry terms</h3><dl>
+    <dt>Uttarpara</dt><dd>The West Bengal plant where Ambassadors were built from 1958 until 2014; its land was resumed by the state in FY26.</dd>
+    <dt>HMFCI</dt><dd>Hindustan Motors Finance Corporation India, the separate CK Birla entity that owns the Chennai-area plant proposed for the EV.</dd>
+    <dt>Stellantis / Groupe PSA</dt><dd>The French-led group that bought the Ambassador trademark in 2017 and now owns it.</dd>
+    <dt>EV platform licensing</dt><dd>Paying another maker for the right to build on its electric architecture instead of developing one.</dd>
+    <dt>Break-even volume</dt><dd>The annual units needed to cover fixed costs; the number that kills most small carmakers.</dd>
+    <dt>Tooling</dt><dd>The dies, jigs and fixtures specific to one model; a large upfront cost before the first car.</dd>
+    <dt>ARAI / ICAT</dt><dd>India's vehicle testing and certification agencies.</dd>
+    <dt>Bought-in content</dt><dd>The roughly 70% of a vehicle purchased from suppliers (see 017).</dd>
+    <dt>Story stock</dt><dd>A share driven by a narrative rather than by cash flows.</dd>
+    <dt>Revival announcement</dt><dd>A statement of intent to restart a business; only filings make it verifiable.</dd>
+    <dt>Micro cap</dt><dd>A very small listed company; here about ₹285 cr.</dd>
+    <dt>Illiquidity</dt><dd>Thin trading, where small orders move the price.</dd>
+    <dt>Circuit filter</dt><dd>The exchange's daily price limit for volatile or small stocks.</dd>
+    <dt>Tax-loss selling</dt><dd>Selling losers before the financial year ends, which weighs on micro caps in February and March.</dd>
+    <dt>Platform (vehicle)</dt><dd>The shared engineering base a model is built on (see 017).</dd>
+    <dt>Homologation</dt><dd>Official approval of a vehicle model for sale (see 018).</dd>
+    <dt>Contract manufacturing</dt><dd>Having your vehicle built by another company (see 019).</dd>
+    <dt>Fleet and institutional sales</dt><dd>Selling to taxi operators and government departments; the Ambassador's last stronghold, and low-margin business.</dd>
+    <dt>Badge engineering</dt><dd>Selling the same vehicle under another brand's name; a cheap way to revive a badge without new engineering.</dd>
+    <dt>Licence raj</dt><dd>The pre-1991 system of production licences that protected makers like Hindustan Motors from competition.</dd>
+    <dt>Residual value</dt><dd>What a used vehicle fetches; weak service networks destroy it (see 020).</dd>
+    <dt>Brand licensing</dt><dd>Paying to use someone else's brand, as Hero does with Harley-Davidson.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>GST 2.0 and EV tax rates</dt><dd>See 017.</dd>
+    <dt>Dispatches vs registrations</dt><dd>See 017.</dd>
+    <dt>PLI</dt><dd>See 017.</dd>
+    <dt>Unadjusted split / data flags</dt><dd>See 016.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">18 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What does this watchlist section actually contain?</summary><p>One company, Hindustan Motors, which has not built a vehicle since 2014; every operating maker sits in 017–020.</p></details>
+  <details class="q"><summary>2. Who owns the Ambassador brand today?</summary><p>Groupe PSA, now part of Stellantis, which bought the brand and trademarks for ₹80 cr in February 2017.</p></details>
+  <details class="q"><summary>3. What changed in FY26?</summary><p>West Bengal resumed the Uttarpara land, the company wrote off ₹8.35 cr, and the auditors issued a qualified opinion with material uncertainty over going concern.</p></details>
+  <details class="q"><summary>4. Why did the Ambassador die?</summary><p>It skipped product cycles for decades in a protected market; after 1983 and 1991, modern, cheaper cars took the market and only taxi and government fleets remained.</p></details>
+  <details class="q"><summary>5. What are the five classic ways a carmaker dies?</summary><p>No scale, wrong price points, skipped product cycles, weak distribution and service, and regulatory cost steps that a small franchise cannot absorb.</p></details>
+  <details class="q"><summary>6. What usually happens to a failed maker's plant?</summary><p>It is bought by a stronger rival: GM's Talegaon went to Hyundai, Ford's Sanand to Tata Motors.</p></details>
+  <details class="q"><summary>7. What is the stock's most unusual statistic?</summary><p>It has lagged the Nifty in February–March in all 15 years, with a median of −13.3 points; January–March in 12 of 15.</p></details>
+  <details class="q"><summary>8. Why is that pattern not an edge?</summary><p>It is one illiquid micro cap where a few trades set the monthly return, and the stock is 71% below its peak.</p></details>
+  <details class="q"><summary>9. What would make the revival credible?</summary><p>A signed, funded joint venture in the company's own filings, a plant with stated capacity owned by the listed entity, a homologated product and access to the brand.</p></details>
+  <details class="q"><summary>10. What is the audit recommendation for this section?</summary><p>Retire or rename it (for example "Legacy Automakers") and tag Hindustan Motors as dormant, so a one-stock bucket is never read as an industry signal.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">19 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes for BSE:HINDMOTORS vs NSE:NIFTY, monthly returns capped at ±50%, price only; 2026 to 18 September.</li>
+    <li>Company: <a href="https://www.screener.in/company/HINDMOTORS/">Hindustan Motors financials</a>; <a href="https://scanx.trade/stock-market-news/companies/hindustan-motors-reports-net-worth-of-3-205-37-lakh-in-fy26/42725769">FY26 net worth</a>; <a href="https://www.whalesbook.com/corporate-news/Hinglish/industrial-goodsservices/Hindustan-Motors-Posts-Loss-Writes-Off-Factory-Land-in-FY26/6a2a8828d7b7b190c073bf43">FY26 land write-off and going-concern note</a>.</li>
+    <li>Brand and history: <a href="https://www.carwale.com/news/hindustan-motors-sold-the-ambassador-brand-to-peugeot-for-rs-80-crore/">Ambassador brand sold to Peugeot</a>; <a href="https://en.wikipedia.org/wiki/Hindustan_Ambassador">Ambassador history</a>; <a href="https://en.wikipedia.org/wiki/Hindustan_Motors">Hindustan Motors</a>.</li>
+    <li>Revival reports: <a href="https://www.cartoq.com/car-life/iconic-hindustan-ambassador-plans-electric-comeback-2026/">Ambassador EV comeback plan</a>; <a href="https://carblogs.in/car-news/2026-hindustan-ambassador/">reported timeline and pricing</a>. These are press reports, not company filings.</li>
+    <li>Exits and lessons: <a href="https://www.deccanherald.com/india/end-of-the-road-why-auto-giants-quit-india-1031913">why auto giants quit India</a>; <a href="https://www.freepressjournal.in/analysis/fords-exit-from-india-is-a-cautionary-tale">Ford's exit</a>; <a href="https://blog.garagepro.in/car-companies-that-left-the-indian-market/">carmakers that left India</a>.</li>
+    <li>Extra references: <a href="https://www.drive.com.au/news/hindustan-sells-ambassador-brand-to-peugeot/">the brand sale reported abroad</a>; <a href="https://startuptalky.com/failed-automakers-india/">why global automakers failed in India</a>; <a href="https://upstox.com/stocks/hindustan-motors-ltd-share-price/INE253A01025/">Hindustan Motors price history</a>; <a href="https://en.wikipedia.org/wiki/CKA_Birla_Group">the CK Birla group</a>.</li>
+    <li>Industry context for the sections referenced (017–022): the primers in this library.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -7.7}, {"y": 2013, "v": -9.5}, {"y": 2014, "v": -10.4}, {"y": 2015, "v": -13.3}, {"y": 2016, "v": -14.3}, {"y": 2017, "v": -15.6}, {"y": 2018, "v": -12.0}, {"y": 2019, "v": -11.2}, {"y": 2020, "v": -17.5}, {"y": 2021, "v": -0.1}, {"y": 2022, "v": -6.1}, {"y": 2023, "v": -20.7}, {"y": 2024, "v": -14.9}, {"y": 2025, "v": -21.6}, {"y": 2026, "v": -26.5}], "AprJul": [{"y": 2012, "v": -4.4}, {"y": 2013, "v": -25.6}, {"y": 2014, "v": 1.0}, {"y": 2015, "v": 13.8}, {"y": 2016, "v": 16.8}, {"y": 2017, "v": -12.1}, {"y": 2018, "v": -3.1}, {"y": 2019, "v": -20.9}, {"y": 2020, "v": 55.4}, {"y": 2021, "v": 22.7}, {"y": 2022, "v": 39.0}, {"y": 2023, "v": -0.3}, {"y": 2024, "v": 46.6}, {"y": 2025, "v": 4.8}, {"y": 2026, "v": 26.2}], "AugSep": [{"y": 2012, "v": -2.7}, {"y": 2013, "v": 13.4}, {"y": 2014, "v": 6.0}, {"y": 2015, "v": 2.9}, {"y": 2016, "v": -5.1}, {"y": 2017, "v": -9.0}, {"y": 2018, "v": 7.4}, {"y": 2019, "v": 1.5}, {"y": 2020, "v": -4.4}, {"y": 2021, "v": -25.6}, {"y": 2022, "v": -2.0}, {"y": 2023, "v": 6.4}, {"y": 2024, "v": -28.5}, {"y": 2025, "v": -12.1}], "OctDec": [{"y": 2012, "v": -7.6}, {"y": 2013, "v": 4.8}, {"y": 2014, "v": -18.2}, {"y": 2015, "v": 6.7}, {"y": 2016, "v": 12.1}, {"y": 2017, "v": 17.6}, {"y": 2018, "v": -2.3}, {"y": 2019, "v": -6.6}, {"y": 2020, "v": 14.8}, {"y": 2021, "v": 59.2}, {"y": 2022, "v": 2.7}, {"y": 2023, "v": -2.0}, {"y": 2024, "v": 12.0}, {"y": 2025, "v": -4.0}], "SepNov": [{"y": 2012, "v": -4.4}, {"y": 2013, "v": 7.5}, {"y": 2014, "v": 6.6}, {"y": 2015, "v": 12.8}, {"y": 2016, "v": 32.2}, {"y": 2017, "v": -6.2}, {"y": 2018, "v": 4.1}, {"y": 2019, "v": 4.7}, {"y": 2020, "v": -23.6}, {"y": 2021, "v": 43.8}, {"y": 2022, "v": 10.2}, {"y": 2023, "v": 14.4}, {"y": 2024, "v": -18.3}, {"y": 2025, "v": -24.2}], "JanMar": [{"y": 2012, "v": 1.9}, {"y": 2013, "v": -5.7}, {"y": 2014, "v": -21.4}, {"y": 2015, "v": -22.8}, {"y": 2016, "v": -27.7}, {"y": 2017, "v": 17.3}, {"y": 2018, "v": -22.9}, {"y": 2019, "v": -12.3}, {"y": 2020, "v": -17.5}, {"y": 2021, "v": -17.8}, {"y": 2022, "v": 3.6}, {"y": 2023, "v": -22.7}, {"y": 2024, "v": -4.4}, {"y": 2025, "v": -24.7}, {"y": 2026, "v": -35.9}]}, "my": {"1": {"2012": 11.2, "2013": 4.7, "2014": -11.4, "2015": -10.4, "2016": -16.0, "2017": 36.8, "2018": -13.0, "2019": -1.1, "2020": -0.6, "2021": -16.4, "2022": 10.3, "2023": -3.2, "2024": 11.9, "2025": -4.0, "2026": -16.5}, "2": {"2012": 7.2, "2013": -6.6, "2014": -2.5, "2015": 1.9, "2016": -5.8, "2017": 6.0, "2018": 4.2, "2019": -12.2, "2020": -11.2, "2021": 18.2, "2022": -16.4, "2023": -16.2, "2024": -7.4, "2025": -11.6, "2026": -2.4}, "3": {"2012": -13.3, "2013": -3.3, "2014": -7.6, "2015": -14.7, "2016": -9.2, "2017": -19.9, "2018": -16.1, "2019": 2.2, "2020": -10.8, "2021": -14.8, "2022": 13.6, "2023": -5.4, "2024": -7.8, "2025": -11.2, "2026": -25.2}, "4": {"2012": -0.3, "2013": -1.6, "2014": 4.5, "2015": 24.5, "2016": 0.9, "2017": 11.1, "2018": -1.6, "2019": -0.8, "2020": 15.9, "2021": 2.5, "2022": -0.9, "2023": 3.4, "2024": 48.8, "2025": 14.9, "2026": 42.5}, "5": {"2012": -8.1, "2013": -7.3, "2014": 18.9, "2015": -14.8, "2016": -13.3, "2017": -20.3, "2018": -6.1, "2019": -4.6, "2020": 19.2, "2021": 15.6, "2022": 36.6, "2023": 0.5, "2024": 1.6, "2025": 31.7, "2026": 3.1}, "6": {"2012": 42.8, "2013": -6.1, "2014": -4.5, "2015": -10.0, "2016": 1.4, "2017": -3.9, "2018": 1.4, "2019": -3.4, "2020": 42.5, "2021": 13.1, "2022": 24.1, "2023": -2.2, "2024": -12.5, "2025": -16.2, "2026": -2.2}, "7": {"2011": 10.4, "2012": -24.8, "2013": -12.5, "2014": -14.4, "2015": 18.1, "2016": 30.3, "2017": 4.1, "2018": 4.0, "2019": -13.7, "2020": -26.7, "2021": -8.8, "2022": -19.9, "2023": -1.8, "2024": 6.9, "2025": -16.8, "2026": -12.3}, "8": {"2011": -11.5, "2012": -1.2, "2013": 1.0, "2014": -15.7, "2015": 6.0, "2016": -20.2, "2017": -6.7, "2018": 1.2, "2019": -3.2, "2020": 5.9, "2021": -17.9, "2022": -5.0, "2023": 2.9, "2024": -18.5, "2025": -4.5, "2026": -4.3}, "9": {"2011": -3.1, "2012": -1.4, "2013": 12.7, "2014": 24.9, "2015": -3.1, "2016": 18.0, "2017": -2.7, "2018": 6.0, "2019": 5.0, "2020": -9.4, "2021": -8.0, "2022": 2.8, "2023": 3.4, "2024": -11.6, "2025": -8.0}, "10": {"2011": 1.1, "2012": -1.4, "2013": -2.8, "2014": -5.2, "2015": -0.6, "2016": 49.7, "2017": -8.1, "2018": 4.1, "2019": 3.1, "2020": -9.8, "2021": 49.3, "2022": -6.0, "2023": 3.9, "2024": 0.9, "2025": -10.0}, "11": {"2011": -19.0, "2012": -1.3, "2013": -2.3, "2014": -10.9, "2015": 16.8, "2016": -22.9, "2017": 4.5, "2018": -6.2, "2019": -3.5, "2020": -3.6, "2021": 4.6, "2022": 13.5, "2023": 6.2, "2024": -9.7, "2025": -7.0}, "12": {"2011": -16.1, "2012": -4.8, "2013": 9.9, "2014": -2.7, "2015": -8.4, "2016": -0.7, "2017": 21.1, "2018": -0.4, "2019": -5.8, "2020": 29.8, "2021": 2.5, "2022": -3.6, "2023": -11.8, "2024": 23.5, "2025": 14.3}}, "basket": ["Hindustan Motors Ltd"], "nbasket": 1, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -0.4, "rel": -1.2, "hit": 5, "n": 15}, {"m": 2, "abs": -4.8, "rel": -3.7, "hit": 5, "n": 15}, {"m": 3, "abs": -9.7, "rel": -9.6, "hit": 2, "n": 15}, {"m": 4, "abs": 13.5, "rel": 10.9, "hit": 10, "n": 15}, {"m": 5, "abs": 4.7, "rel": 3.5, "hit": 8, "n": 15}, {"m": 6, "abs": 6.1, "rel": 4.3, "hit": 6, "n": 15}, {"m": 7, "abs": -2.9, "rel": -4.9, "hit": 6, "n": 16}, {"m": 8, "abs": -5.9, "rel": -5.7, "hit": 5, "n": 16}, {"m": 9, "abs": 2.3, "rel": 1.7, "hit": 7, "n": 15}, {"m": 10, "abs": 6.6, "rel": 4.5, "hit": 7, "n": 15}, {"m": 11, "abs": -1.8, "rel": -2.7, "hit": 5, "n": 15}, {"m": 12, "abs": 3.8, "rel": 3.1, "hit": 6, "n": 15}], "cy": [{"y": 2012, "b": 12.1, "n": 27.7, "rel": -15.6, "partial": false}, {"y": 2013, "b": -11.2, "n": 6.8, "rel": -18.0, "partial": false}, {"y": 2014, "b": -7.5, "n": 31.4, "rel": -38.9, "partial": false}, {"y": 2015, "b": -6.6, "n": -4.1, "rel": -2.5, "partial": false}, {"y": 2016, "b": -9.3, "n": 3.0, "rel": -12.3, "partial": false}, {"y": 2017, "b": 39.5, "n": 28.6, "rel": 10.9, "partial": false}, {"y": 2018, "b": -19.6, "n": 3.2, "rel": -22.8, "partial": false}, {"y": 2019, "b": -26.2, "n": 12.0, "rel": -38.2, "partial": false}, {"y": 2020, "b": 32.3, "n": 14.9, "rel": 17.4, "partial": false}, {"y": 2021, "b": 54.2, "n": 24.1, "rel": 30.0, "partial": false}, {"y": 2022, "b": 51.7, "n": 4.3, "rel": 47.3, "partial": false}, {"y": 2023, "b": -4.5, "n": 20.0, "rel": -24.5, "partial": false}, {"y": 2024, "b": 20.9, "n": 8.8, "rel": 12.1, "partial": false}, {"y": 2025, "b": -26.6, "n": 10.5, "rel": -37.1, "partial": false}, {"y": 2026, "b": -40.5, "n": -10.7, "rel": -29.8, "partial": true}], "dd": [{"co": "Hindustan Motors", "peak": "May 2024", "fp": -71, "y1": -44}], "win": {"FebMar": {"mean": -13.4, "median": -13.3, "hit": 0, "n": 15}, "AprJul": {"mean": 10.7, "median": 4.8, "hit": 9, "n": 15}, "AugSep": {"mean": -3.7, "median": -2.4, "hit": 6, "n": 14}, "OctDec": {"mean": 6.4, "median": 3.7, "hit": 8, "n": 14}, "SepNov": {"mean": 4.3, "median": 5.6, "hit": 9, "n": 14}, "JanMar": {"mean": -14.2, "median": -17.8, "hit": 3, "n": 15}}, "ytd": {"b": -40.5, "n": -10.7}, "notes": {"2012": "Two years before the last Ambassador was built, the stock rose 17% while the Nifty rose 28%. The car business was already loss-making.", "2013": "\u221211%: volumes collapsed towards a few hundred cars a month and the Uttarpara plant ran far below capacity.", "2014": "\u22128%: production of the Ambassador stopped in May after 56 years, and the plant was suspended.", "2015": "\u22127%: the company became an asset story, with land and the brand as its only real value.", "2016": "\u22129%: no operations, no revival.", "2017": "+40%: Hindustan Motors sold the Ambassador brand to Groupe PSA (Peugeot) for \u20b980 cr in February, its last major asset sale.", "2018": "\u221220% as the cash was absorbed and nothing replaced the business.", "2019": "\u221226%: the auto slowdown took even the speculative bid away.", "2020": "+32%: the COVID micro-cap rally, plus talk of a revival partner.", "2021": "+54%: peak revival speculation and a general micro-cap boom.", "2022": "+52%: reports of an electric-vehicle joint venture, first with a Chinese partner, kept the story alive.", "2023": "\u22125%: nothing shipped, and the story cooled.", "2024": "+68% at the peak in May on renewed Ambassador-EV headlines, closing the year +21%.", "2025": "\u221227%: the revival timeline slipped again and the Peugeot joint venture stayed at agreement stage.", "2026": "\u221235%: FY26 accounts carried a going-concern qualification after West Bengal resumed the Uttarpara land and the company wrote off \u20b98.35 cr; the promised March 2026 Ambassador EV did not arrive."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

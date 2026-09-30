@@ -1,0 +1,639 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paints and Adhesives Primer</title>
+<meta name="description" content="Industry 13 of 278: decorative and industrial paints, adhesives, inks and insulation coatings. The distribution moat, crude and TiO₂ costs, the Birla Opus and JSW entry shock, 24 companies (each described), and a year-by-year record against the Brent price from 2012 to the 2026 crude spike.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Paints, Coatings &amp; Adhesives · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical raw materials</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 13 of 278 · Chemicals family</div>
+  <h1>Paints, Coatings &amp; Adhesives</h1>
+  <p class="lede">The walls of every home, the shine on every car, the glue in every cupboard, the ink on every packet. For 20 years this was India's most admired consumer franchise. Since 2024 it has been a price war.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 24 after the audit (4 moved out, DIC India in)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Fertilizers</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">55–60%</div><div class="l">Asian Paints' estimated share of India's decorative paint market before Birla Opus</div></div>
+    <div class="stat"><div class="n">₹1,661 cr</div><div class="l">Birla Opus's Q1 FY27 revenue (+64%), now India's #3 decorative brand; its share including putty is nearing the low teens</div></div>
+    <div class="stat"><div class="n">40–60%</div><div class="l">Share of paint production costs that is petroleum-linked (resins, solvents, monomers)</div></div>
+    <div class="stat"><div class="n">~9.7%</div><div class="l">Cumulative paint price increases taken by mid-May 2026 after the crude spike</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Selling colour through a shop network</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Paint is four things mixed together. There is a colour powder, mostly a very white powder called titanium dioxide plus tints. There is a glue that makes it stick (the resin), a liquid that makes it spreadable (water or a solvent), and a few helpers. When the liquid dries off, the glue and colour stay on the wall. The paint itself isn't hard to make. The hard part is getting the right colour to thousands of small shops across India every day, and making painters trust your brand. A company that does this well can sell a bucket for much more than it costs to make. Adhesives like Fevicol work the same way: simple chemistry, a famous name, and shops everywhere.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian paints were a textbook oligopoly: Asian Paints (55–60% of decorative), Berger, Kansai Nerolac and Akzo's Dulux, with ~20% EBITDA margins and returns on capital above 25%. The moat was distribution (dealers, tinting machines, painter loyalty), not chemistry.</p>
+    <p>Two newcomers tested that moat. Grasim launched Birla Opus in February 2024 with a ₹10,000 cr investment and heavy dealer incentives, and it reached ₹1,661 cr of quarterly revenue by Q1 FY27. JSW bought Akzo Nobel India, now JSW Dulux. Asian Paints lost share, its stock fell a third in 2024, and the CCI is probing it on Birla Opus's complaint.</p>
+    <p>In 2026 the Hormuz crude spike raised costs ~20% and the industry pushed through ~10% price increases. Q1 FY27 was strong: Asian Paints' profit +40%, Berger's +29%, Pidilite's +30%. The stocks are still down because investors doubt the old oligopoly margins will return. Pidilite, the adhesives near-monopoly, has held up best, and Elantas (wire enamels) is really an electrical-equipment play.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Several industries in one watchlist</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Segment</th><th>Products</th><th>Customers</th></tr></thead><tbody>
+    <tr><td>Decorative paints (~70–75% of Indian paint demand)</td><td>Emulsions (interior, exterior), enamels, distempers, primers, putty, waterproofing, wood finishes</td><td>Households via dealers and painters; builders</td></tr>
+    <tr><td>Industrial coatings</td><td>Auto OEM and refinish, powder coatings, protective and marine, coil, general industrial</td><td>Car makers, appliance and steel companies</td></tr>
+    <tr><td>Electrical insulation</td><td>Wire enamels, impregnating varnishes and resins</td><td>Motor, transformer, fan and EV makers (Elantas)</td></tr>
+    <tr><td>Adhesives and sealants</td><td>Wood glue (PVA), rubber adhesives, epoxy putty, PVC solvent cement, silicones, tapes</td><td>Carpenters, plumbers, households, packaging and industry</td></tr>
+    <tr><td>Construction chemicals</td><td>Waterproofing, tile adhesives, admixtures</td><td>Builders, contractors, households</td></tr>
+    <tr><td>Printing inks and dispersions</td><td>Packaging and publication inks, lamination adhesives, colourant dispersions</td><td>Packaging converters, printers, paint makers</td></tr>
+  </tbody></table></div>
+  <h3>What's inside a can of emulsion</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Component</th><th>Role</th><th>Examples</th></tr></thead><tbody>
+    <tr><td>Pigment</td><td>Colour and hiding power</td><td>Titanium dioxide (white; the largest single cost; see 004), iron oxides, organic pigments (see 009)</td></tr>
+    <tr><td>Binder (resin)</td><td>Film and adhesion</td><td>Acrylic and vinyl emulsions (from butyl acrylate, VAM, styrene); alkyds (from pentaerythritol and phthalic anhydride; see 005)</td></tr>
+    <tr><td>Solvent / carrier</td><td>Spreadability</td><td>Water (emulsions), mineral turpentine (enamels)</td></tr>
+    <tr><td>Extenders</td><td>Bulk, lower cost</td><td>Calcium carbonate, talc, china clay</td></tr>
+    <tr><td>Additives</td><td>Flow, anti-fungal, anti-foam</td><td>Specialty chemicals (see 008)</td></tr>
+    <tr><td>Packaging</td><td>—</td><td>Tin and plastic containers (a meaningful cost)</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A paint is like a pizza. Titanium dioxide is the cheese (the most expensive topping and what gives the white "coverage"), the resin is the dough that holds everything together, water is the sauce that spreads it, and fillers are cheaper toppings that bulk it up. Anyone can make pizza; the chain with the most delivery outlets and the most loyal delivery boys wins.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>Asian Paints Royale or Apex on a living-room wall; Berger WeatherCoat outside; Nerolac on a new Maruti's body (Kansai is the auto-coatings leader); Fevicol under a laminate; M-Seal on a leaking pipe; Dr. Fixit on a terrace; DIC ink on a chips packet; Elantas enamel on the copper wire inside a ceiling fan's motor.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From crude and ilmenite to a painted wall</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Raw materials</h4><div class="an">The ingredients</div>TiO₂ (from ilmenite and rutile), acrylic monomers and VAM (crude-linked), solvents, pentaerythritol, phthalic anhydride, fillers, tin and plastic.<div class="who">Chemours, Tronox, Chinese TiO₂ makers; petrochemical majors; Indian chemical makers (005, 008)</div><div class="m">Crude and TiO₂ cycles</div></div>
+    <div class="stage"><div class="no">02</div><h4>Resins and emulsions</h4><div class="an">The glue</div>Many large paint makers make their own; others buy.<div class="who">Asian Paints (captive), Pidilite, Nikhil Adhesives, BASF, Dow</div><div class="m">Backward integration saves 2–4 margin points</div></div>
+    <div class="stage"><div class="no">03</div><h4>Paint and adhesive making</h4><div class="an">The kitchen</div>Mixing, grinding and filling; low capital intensity.<div class="who">All listed players, plus Birla Opus, JSW, Haisha (Pidilite)</div><div class="m">Chemistry is not the moat</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Distribution and tinting</h4><div class="an">The shops</div>Depots, 1.5 lakh+ dealers, tinting machines, daily replenishment.<div class="who">Asian Paints' network is the benchmark</div><div class="m">The real moat</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Influencers</h4><div class="an">The people who choose</div>Painters and contractors often decide the brand; loyalty schemes and training.<div class="who">Painters, carpenters, plumbers, architects</div><div class="m">Incentive wars happen here</div></div>
+    <div class="stage"><div class="no">06</div><h4>End users</h4><div class="an">The home owner</div>Repainting (~70%+ of decorative demand), new homes, factories, car makers.<div class="who">Households, builders, OEMs</div><div class="m">Repainting is steady</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Raw materials:</b> the white powder is made from a black sand (ilmenite) found on beaches in Kerala and Odisha and abroad. The glue comes from oil.</li>
+    <li><b>Resins:</b> the glue is made in big reactors; the biggest paint companies make their own to save money.</li>
+    <li><b>Paint making:</b> the powders and glue are stirred and ground in big tanks, then poured into tins. A new factory takes about two years to build, which is not hard for a rich company.</li>
+    <li><b>Distribution and tinting:</b> a shop keeps white paint and a machine that squirts in exactly measured tints, so it can make 2,000 colours on the spot. Getting that machine into your shop, and keeping it stocked every day, is what makes a paint company powerful.</li>
+    <li><b>Painters:</b> most people let their painter choose the brand. Companies give painters training, insurance and reward points, so the painter is the real customer.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>In decorative paints the scarce asset is shelf space and painter loyalty, not factories. A new entrant can build plants quickly (Birla Opus did) but has to pay dealers and painters to switch. So watch dealer incentives, not capacity: when entrants stop subsidising, market share settles. Industrial coatings are the opposite: technical approvals with car and appliance makers, lower margins, stickier customers.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 24 companies</h2>
+  <h3>A. Decorative and industrial paint majors</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Asian Paints (~₹2.3 lakh cr)</td><td>The market leader (55–60% decorative share before 2024); industrial JVs with PPG; home décor; backward integration into white cement and VAM.</td><td>Revenue ₹10,521 cr (+18%), profit ₹1,539 cr (+40%), decorative volumes +9% (from 12.4% in Q4 FY26); guides 8–10% volume growth for FY27. Under a CCI investigation (ordered July 2025) into alleged abuse of dominance, after Grasim's complaint about dealer exclusivity; its court challenges have failed so far. 2026 −11%.</td></tr>
+    <tr><td>Berger Paints (~₹52,200 cr)</td><td>India's #2 decorative maker, strong in the east and in industrial and protective coatings.</td><td>Standalone revenue ₹3,227 cr (+12.7%), volume +8.4%; consolidated profit ₹405 cr (+29%); gross margin moderated on raw materials. Price increases of up to 8.5% in 2026. 2026 −15%.</td></tr>
+    <tr><td>Kansai Nerolac (~₹15,000 cr)</td><td>Japanese-owned; the leader in automotive and industrial coatings, weaker in decorative.</td><td>Revenue ₹2,300 cr (+10%), EBITDA ₹336 cr (+8%), profit +5%. Approved a ₹204 cr expansion at Sayakha (Gujarat). 2026 −22%; 59% below its January 2021 peak.</td></tr>
+    <tr><td>JSW Dulux (~₹14,000 cr)</td><td>Formerly Akzo Nobel India (Dulux); JSW Paints took control in 2025, combining JSW's aggressive growth with Dulux's premium brand.</td><td>Like-for-like revenue ₹965 cr (+18.8%), volume ~+25% (~18–19% adjusted), industrial +25%; EBITDA ₹115 cr (11.9% margin). Reported figures are distorted by merger accounting. 2026 flat.</td></tr>
+    <tr><td>Indigo Paints (~₹5,200 cr)</td><td>A challenger with differentiated products (metallic emulsions, floor coats), strong in smaller towns.</td><td>Revenue ₹370 cr (+20%), profit ₹41.7 cr (+60%), EBITDA ₹62 cr (+40%); gross margin 45.3%, the industry's highest; advertising cut to 4.3% of revenue from 6.8%. 2026 −4%; 65% below its 2021 peak.</td></tr>
+    <tr><td>Shalimar Paints (~₹690 cr)</td><td>A 1902-vintage brand in turnaround.</td><td>2026 +31% after −51% in 2025.</td></tr>
+    <tr><td>Kamdhenu Ventures (~₹140 cr), Siddhika Coatings (~₹140 cr), Retina Paints</td><td>Small decorative makers and paint contractors; Kamdhenu Ventures is the paint business demerged from Kamdhenu (steel bars).</td><td>2026: Kamdhenu Ventures −27%, Siddhika +3%.</td></tr>
+  </tbody></table></div>
+  <h3>B. Specialty coatings</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Elantas Beck India (~₹10,600 cr)</td><td>Altana group (Germany). Wire enamels and electrical insulating varnishes and resins (84% of sales), plus construction chemicals. A proxy for transformers, motors, fans and EVs rather than houses. Calendar-year accounts.</td><td>April–June 2026: revenue ₹283 cr (+35%), profit ₹71 cr, EBITDA margin 28.8% (18.9%). 2026 +49%, after +95% (2023) and +50% (2024).</td></tr>
+    <tr><td>Sirca Paints (~₹2,300 cr)</td><td>Wood coatings under Italian technology (Sirca, Unico), including PU finishes for furniture.</td><td>Revenue ₹130 cr (+14%), profit ₹16.2 cr (+14%). 2026 −17%.</td></tr>
+    <tr><td>Silkflex Polymers (~₹310 cr)</td><td>Water-based wood coatings and printing chemicals; SME listing.</td><td>2026 +207%, then hitting lower circuits in August; rating cut to "hold". A speculative profile.</td></tr>
+  </tbody></table></div>
+  <h3>C. Adhesives, sealants and tapes</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Q1 FY27 and status</th></tr></thead><tbody>
+    <tr><td>Pidilite Industries (~₹1.57 lakh cr)</td><td>Fevicol, M-Seal, Fevikwik, Dr. Fixit; dominant in Indian consumer adhesives and strong in waterproofing; launched Haisha paints.</td><td>Revenue ₹4,552 cr (+21%), profit ₹884 cr (+30%), underlying volumes +11.3%, EBITDA margin 26.2%. 2026 +6%, the best of the large caps.</td></tr>
+    <tr><td>Jyoti Resins (~₹1,000 cr)</td><td>Euro 7000 wood adhesive, a challenger to Fevicol among carpenters.</td><td>Record revenue ₹87.7 cr (+17%; volume +9–10%, price +8–9%), but profit fell to ₹11.8 cr: gross margin 59% (72.5%) and EBITDA 14.4% (27.5%) as West Asian disruption spiked raw materials. Price rises in May–June help Q2. 2026 −25%.</td></tr>
+    <tr><td>HP Adhesives (~₹330 cr)</td><td>PVC solvent cements, sealants and plumbing adhesives.</td><td>2026 −16% after −50% in 2025.</td></tr>
+    <tr><td>Nikhil Adhesives (~₹370 cr)</td><td>Polymer emulsions (PVA, acrylic) for adhesives, textiles and paints.</td><td>2026 +4%.</td></tr>
+    <tr><td>SPEB Adhesives (~₹200 cr)</td><td>Rubber-based and synthetic adhesives.</td><td>2026 +61%.</td></tr>
+    <tr><td>Hindustan Adhesives (~₹190 cr), Srivasavi Adhesive Tapes (~₹100 cr), Sonal Adhesives (~₹26 cr)</td><td>Carton-sealing and industrial tapes.</td><td>2026: +16%, +48%, −11%.</td></tr>
+  </tbody></table></div>
+  <h3>D. Inks, dispersions and construction chemicals</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Status</th></tr></thead><tbody>
+    <tr><td>DIC India (~₹570 cr)</td><td>Printing inks and lamination adhesives (Japan's DIC group). Moved in from Printing Services.</td><td>2026 +30%.</td></tr>
+    <tr><td>Ducol Organics (~₹220 cr)</td><td>Pigment dispersions for paints, textiles and inks.</td><td>2026 −19%.</td></tr>
+    <tr><td>Hindcon Chemicals (~₹120 cr)</td><td>Sodium silicate and construction chemicals.</td><td>2026 −12%.</td></tr>
+    <tr><td>Organic Coatings (~₹19 cr)</td><td>Printing inks; tiny.</td><td>2026 −32%.</td></tr>
+  </tbody></table></div>
+  <p><b>Moved out (4):</b> Clara Industries to Flexible Packaging; COSYN to IT Services; Metal Coatings (India) to Steel (it coats steel, it doesn't make coatings); Shree Ganesh Elastoplast to Commodity Trading. <b>Moved in:</b> DIC India (from Printing Services).</p>
+  <div class="box warn"><span class="tag">Classification flags for the next audit</span><p><b>Elantas Beck</b> behaves like an electrical-equipment stock (motors, transformers, EVs), not a paint stock; consider a capital-goods proxy tag. <b>Hindcon</b> (sodium silicate) overlaps 003/004. The tape makers could form their own small group. Birla Opus sits inside <b>Grasim</b> (Diversified), so the watchlist misses the #3 decorative player.</p></div>
+  <h3>Key competitors listed elsewhere or unlisted</h3>
+  <ul>
+    <li><b>Birla Opus</b> (inside Grasim, Diversified).</li>
+    <li><b>JSW Paints</b> (unlisted parent of JSW Dulux).</li>
+    <li><b>Haisha</b> (Pidilite's paint brand).</li>
+    <li><b>Astral</b> (adhesives and paints, in Pipes).</li>
+    <li><b>PPG Asian Paints</b> (industrial JV).</li>
+    <li><b>Nippon Paint India</b> (unlisted; strong in auto and decorative in the south).</li>
+  </ul>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>A brand and distribution business wearing a chemistry coat</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th class="num">EBITDA margin*</th><th>What drives it</th></tr></thead><tbody>
+    <tr><td>Decorative leaders (pre-2024)</td><td class="num">18–22%</td><td>Brand, distribution, captive resins, pricing power</td></tr>
+    <tr><td>Decorative challengers</td><td class="num">8–16%</td><td>Heavy dealer and ad spending to buy share</td></tr>
+    <tr><td>Industrial and auto coatings</td><td class="num">10–14%</td><td>Technical approvals; car makers' price pressure</td></tr>
+    <tr><td>Consumer adhesives (Pidilite)</td><td class="num">22–26%</td><td>Near-monopoly brands, fragmented users</td></tr>
+    <tr><td>Wire enamels (Elantas)</td><td class="num">15–29%</td><td>Technical approvals, few competitors</td></tr>
+    <tr><td>Tapes and small adhesives</td><td class="num">5–12%</td><td>Commodity products</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges from company filings.</p>
+  <p>Working capital is famously light. Dealers pay quickly and suppliers give credit, so the leaders earned very high returns on capital. Price increases usually lag raw-material inflation by one or two quarters, which is why margins dip when crude jumps and recover afterwards. In 2026 the lag was short: roughly 10% of increases were taken within about two months of the spike.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A paint leader is like a popular chain of neighbourhood bakeries. Flour is cheap and anyone can bake, but the chain owns the best corner in every street and the customers' habit. A new rival can open next door, but first it has to pay people to try it. The question in 2024–26 is whether the new rival (Birla Opus) keeps paying long enough for the habit to change.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical raw materials">
+  <p class="eyebrow">6 · Critical raw materials</p>
+  <h2>What to watch on the input side</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Titanium dioxide</td><td>Chinese makers dominate volume; Chemours, Tronox, Kronos; Indian: Travancore Titanium, Kerala Minerals (see 004)</td><td>All decorative makers (the largest single cost)</td><td>Firm; India imposed anti-dumping duty on Chinese TiO₂ in 2025</td></tr>
+    <tr><td>Acrylic monomers (butyl acrylate), VAM, styrene</td><td>Imports, Reliance; crude-linked (see 002)</td><td>Emulsion makers; adhesives (PVA from VAM)</td><td>Spiked with the Gulf disruption; Asian Paints is backward-integrating into VAM</td></tr>
+    <tr><td>Solvents (mineral turpentine, xylene)</td><td>Refineries</td><td>Enamels, wood finishes, industrial coatings</td><td>Brent averaging ~$88 in 2026, $103 on 18 September</td></tr>
+    <tr><td>Pentaerythritol, phthalic anhydride</td><td>Domestic (see 005, 008)</td><td>Alkyd resins (enamels)</td><td>Up with the methanol and xylene chains</td></tr>
+    <tr><td>Extenders (calcium carbonate, talc)</td><td>Domestic mining</td><td>All</td><td>Stable</td></tr>
+    <tr><td>Packaging (tinplate, HDPE)</td><td>Steel and polymer makers</td><td>All</td><td>Polymer prices up with crude</td></tr>
+    <tr><td>Copper-wire demand (not an input, but Elantas' demand driver)</td><td>Motor and transformer makers</td><td>Elantas</td><td>Strong power-equipment cycle</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The history table shows the rule. Paint stocks beat the market when Brent fell (2014–15, 2020, 2023) and lagged when it spiked (2013 in rupees, 2018, 2022, and 2026 for the leaders). Crude is the best single macro variable for this basket. But since 2024 competition has joined it: falling crude no longer guarantees margin expansion if entrants keep discounting.</p></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Festivals and dry weather</h2>
+  <ul>
+    <li><b>September–November:</b> the peak repainting season before Diwali; the strongest quarter for decorative volumes.</li>
+    <li><b>January–May:</b> dry weather suits exterior painting; wedding-season repainting.</li>
+    <li><b>June–August (monsoon):</b> the weakest months for painting; waterproofing demand rises before and during the rains.</li>
+    <li><b>Price increases</b> are typically announced in April and after crude spikes; companies time them to avoid the festive peak.</li>
+    <li><b>Industrial coatings</b> follow auto production (strong October–March); wire enamels follow power-equipment orders.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 14 names (Asian Paints Ltd., Pidilite Industries Limited, Berger Paints India Limited, Kansai Nerolac Paints Limited, JSW Dulux Ltd, ELANTAS Beck India Limited, Indigo Paints Ltd, Sirca Paints India Ltd., Jyoti Resins &amp; Adhesives Ltd., Shalimar Paints Ltd, DIC India Limited, Nikhil Adhesives Limited, HP Adhesives Ltd., Silkflex Polymers (India) Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +3.5 pts (beat in 13 of 15 years); Aug +3.0 pts (beat in 11 of 16 years); Sep +2.0 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Oct -1.6 pts (beat in 7 of 15 years); Mar -0.5 pts (beat in 6 of 15 years); Jan -0.1 pts (beat in 7 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 8 of 15 years (median +1.3 pts); Apr–Jul beat the Nifty in 11 of 15 years (median +8.6 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +1.2 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +1.1 pts); Sep–Nov beat the Nifty in 5 of 14 years (median -1.4 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -1.7 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +0.5 points.</p><p><b>Reading it:</b> paints are calmer than chemicals. April is the only reliably strong month (13 of 15 years) and August is second (11 of 16); no month is badly weak, and February–March is roughly even (8 of 15). April–July beat the Nifty in 11 of 15 years (median +8.6 points). The basket mixes large caps with small adhesive makers, so the ~3-point small-cap April effect explains part of April. The bigger driver is visible in the history table: these stocks do best when crude is falling and worst when it spikes.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April misses: 2020 (−7.8) and 2013 (−3.7).</b> In April 2020 the lockdown shut paint shops while the Nifty rebounded; 2013 was the rupee slide. The best Aprils were 2026 (+15.0, as prices were raised faster than feared), 2015 (+10.9, collapsing crude) and 2022 (+7.2).</li>
+    <li><b>April–July failures: 2013 (−12.2), 2017 (−1.2), 2018 (−9.1), 2020 (−16.6).</b> 2013 and 2018 combined rupee weakness with rising crude; 2020 was the lockdown. The biggest runs were 2015 (+20.7) and 2026 (+19.0).</li>
+    <li><b>August</b> beat the Nifty in 11 of 16 years; the big miss was 2021 (−10.8), when crude rose and the small-cap adhesive rally paused.</li>
+    <li><b>October–December misses: 2022 (−11.2) and 2025 (−10.0).</b> These coincided with competition news (Birla Opus's plans in 2022, discounting in 2025) rather than the festive season itself.</li>
+    <li><b>January–March</b> lagged in the last three years (2024 −11.6, 2025 −12.7, 2026 −6.1), the entry-shock period.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The calendar is weak compared with crude and competition. April–July is modestly favourable, and the last three first quarters were poor. For the large caps, the entry pressure (share, dealer incentives) and crude will decide the year, not the month.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Crude and derivatives:</b> 40–60% of costs are petroleum-linked. Brent's yearly average explains much of the basket's relative return (see the history table).</li>
+    <li><b>TiO₂ prices:</b> the single biggest input; Chinese capacity and Indian anti-dumping duty.</li>
+    <li><b>Competition:</b> Birla Opus's dealer incentives and discounts, JSW Dulux's push, Pidilite's Haisha; Asian Paints' response. Ad-spend and rebate trends matter more than list prices.</li>
+    <li><b>Repainting cycles:</b> 70%+ of decorative demand is repainting, driven by incomes, festivals and the weather (a long monsoon delays painting).</li>
+    <li><b>Housing and real estate:</b> new homes add first-time painting demand with a lag of 2–3 years after launches.</li>
+    <li><b>Auto and industrial production:</b> Kansai, Nippon and PPG-Asian; wire-enamel demand from power and EVs (Elantas).</li>
+    <li><b>Regulation and competition law:</b> the CCI probe of Asian Paints; GST (28% → 18% in 2018); lead-paint rules.</li>
+    <li><b>Rupee:</b> TiO₂ and monomers are dollar-priced; the rupee at ~₹96/$ adds cost.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">Brent avg $/bbl</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of up to 14 names with ₹300 cr+ market cap (10 in 2012, 14 by 2026; monthly returns capped at ±50%), price only; 2026 is to 18 September. Brent: yearly average of TradingView TVC:UKOIL daily closes (2026 year to date). Named stock moves are that stock's calendar-year return.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the paint cycle, old and new</h3>
+  <ol>
+    <li><b>The old cycle (2012–23): crude.</b> Falling crude meant margin expansion and outperformance (2014–15, 2020, 2023). Rising crude meant a margin squeeze for a few quarters until price increases caught up (2013, 2018, 2022).</li>
+    <li><b>The new cycle (2024 onwards): competition plus crude.</b> Well-funded entrants (Grasim, JSW) buy share with dealer incentives. The leader defends with rebates and pays in margin. Valuations de-rate from 60x+ earnings, even when crude helps (2025).</li>
+    <li><b>The settle-down:</b> entrants reach scale and cut subsidies, and share stabilises. This hasn't happened yet in 2026; Birla Opus is still gaining 30 bp a quarter.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Brent below $60 means paint outperformance:</b> 2015, 2016, 2017 and 2020 all beat the Nifty.</li>
+    <li><b>Brent jumps mean a margin dip, then price rises:</b> 2022 and 2026.</li>
+    <li><b>Small adhesive makers swing far more than the leaders</b> (Jyoti Resins +457% in 2015, Nikhil +318% in 2017, HP −50% in 2025).</li>
+    <li><b>Specialty coatings follow their end markets:</b> Elantas followed the power-equipment boom, not houses.</li>
+    <li><b>Entry shocks de-rate the whole group,</b> including companies with little overlap (Kansai fell in 2024 even though it is mainly industrial).</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak (top 18 by market cap)</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Global giants, local champions</h2>
+  <p>Paint is mostly a local business, because it's heavy and cheap per kilo and tastes differ. Global giants dominate where they arrived first; local champions win where distribution was built early. India is unusual: the local champion (Asian Paints, founded in 1942 in a Mumbai garage) beat the global giants on their own game by building the densest dealer and tinting network anywhere.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Strength</th><th>India presence</th></tr></thead><tbody>
+    <tr><td>Sherwin-Williams (US)</td><td>World #1; owns its stores</td><td>Small</td></tr>
+    <tr><td>PPG (US)</td><td>Auto, aerospace, industrial</td><td>A JV with Asian Paints</td></tr>
+    <tr><td>Nippon Paint (Japan)</td><td>Asia's largest; China decorative</td><td>Nippon Paint India (unlisted)</td></tr>
+    <tr><td>AkzoNobel (Netherlands)</td><td>Dulux decorative; powder coatings</td><td>Sold its Indian arm to JSW (2025), keeping some businesses</td></tr>
+    <tr><td>Kansai Paint (Japan)</td><td>Auto coatings</td><td>Kansai Nerolac (listed)</td></tr>
+    <tr><td>Henkel, H.B. Fuller, 3M (adhesives)</td><td>Industrial adhesives, tapes</td><td>Present, but Pidilite dominates consumer adhesives</td></tr>
+    <tr><td>Altana (Germany)</td><td>Electrical insulation, additives</td><td>Elantas Beck India (listed)</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Multinationals → Asian Paints (1960s–70s):</b> Asian Paints became #1 in India by 1967 by selling small packs to small towns and building distribution the multinationals ignored.</li>
+    <li><b>Oligopoly → entry (2024):</b> conglomerates with cash (Grasim, JSW) saw 20% margins and 25%+ returns and decided distribution could be bought.</li>
+    <li><b>Global owners exit:</b> AkzoNobel sold its India business to JSW, a sign that capital-rich Indian groups now outbid multinationals for domestic scale.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Low-VOC and water-based coatings</b> replacing solvent enamels and wood finishes (Silkflex, Sirca's water-based lines).</li>
+    <li><b>Tinting and digital colour:</b> automated tinting, colour-matching apps and painter platforms; data on painter loyalty is the new moat.</li>
+    <li><b>Waterproofing and construction chemicals:</b> the fastest-growing adjacent category (Dr. Fixit, Asian Paints SmartCare).</li>
+    <li><b>Powder coatings and coil coatings</b> for appliances and steel (no solvents, less waste).</li>
+    <li><b>EV and electrical coatings:</b> high-temperature wire enamels, battery coatings and thermal interface materials (Elantas).</li>
+    <li><b>Lower TiO₂ loading:</b> opaque polymers and extender technology to cut the most expensive ingredient.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>CCI investigation of Asian Paints</td><td>Ordered July 2025 on Grasim's complaint (dealer exclusivity, blocking entry); challenges dismissed so far</td><td>Could restrict dealer practices; a fine risk</td></tr>
+    <tr><td>GST</td><td>28% from July 2017, cut to 18% in July 2018</td><td>Lower tax helped organised brands against unorganised makers</td></tr>
+    <tr><td>Lead in paint</td><td>A 90 ppm limit on lead in household paints</td><td>Hurts unorganised makers; favours brands</td></tr>
+    <tr><td>Anti-dumping duty on TiO₂ (see 004)</td><td>Imposed on Chinese TiO₂ in 2025</td><td>Raises the largest input cost</td></tr>
+    <tr><td>VOC norms</td><td>Tightening for solvent-based products</td><td>Shift to water-based</td></tr>
+    <tr><td>BIS standards</td><td>Quality standards for some paints and adhesives</td><td>Compliance cost; organised players favoured</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: strong quarter, weak conviction</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Decorative demand</td><td>Healthy</td><td>Volumes: Asian Paints +9%, Berger +8.4%, JSW Dulux ~+18–19%, Indigo double-digit</td></tr>
+    <tr><td>Pricing</td><td>Up ~10%</td><td>Increases taken by mid-May after the crude spike</td></tr>
+    <tr><td>Margins</td><td>Mixed</td><td>Leaders' profits up 25–40% on price and mix; small adhesive makers squeezed (Jyoti's EBITDA margin 14%)</td></tr>
+    <tr><td>Competition</td><td>Still intensifying</td><td>Birla Opus +64% year on year, gaining 30 bp of share a quarter</td></tr>
+    <tr><td>Stocks</td><td>De-rated</td><td>Leaders down 11–22% this year despite profits</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>The profit recovery is real, but the market is pricing a permanently more competitive industry. The re-rating trigger would be evidence that Birla Opus's share gains are slowing or that incentives are being cut. The risk is a second leg of discounting when crude falls. Pidilite and Elantas are the two names whose moats are untouched by the entry shock.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Brent and rupee</td><td>Daily</td><td>Two-thirds of the cost story</td></tr>
+    <tr><td>TiO₂, VAM and acrylate prices</td><td>Monthly price services</td><td>Gross margins</td></tr>
+    <tr><td>Decorative volume growth by company</td><td>Quarterly</td><td>Share shifts</td></tr>
+    <tr><td>Grasim's paint revenue and commentary</td><td>Quarterly</td><td>The entrant's pace</td></tr>
+    <tr><td>Dealer incentive and rebate levels</td><td>Channel checks, calls</td><td>Where the war is fought</td></tr>
+    <tr><td>CCI investigation progress</td><td>News, filings</td><td>Dealer practices</td></tr>
+    <tr><td>Housing completions and repainting indicators</td><td>Real-estate data</td><td>Demand</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where else the cycle shows up</h2>
+  <ul>
+    <li><b>Petrochemicals and chemicals</b> (002, 005, 008): monomers, solvents, alkyd inputs.</li>
+    <li><b>TiO₂ and minerals</b> (004): the white pigment.</li>
+    <li><b>Pigments</b> (009): colour for paints and inks.</li>
+    <li><b>Real estate and building materials:</b> new-home painting, waterproofing, tile adhesives.</li>
+    <li><b>Auto</b> (OEM coatings): Kansai, PPG-Asian.</li>
+    <li><b>Power equipment and electricals:</b> Elantas' demand.</li>
+    <li><b>Packaging:</b> inks and lamination adhesives (DIC).</li>
+    <li><b>Grasim</b> (Diversified): Birla Opus.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What were volume vs value growth, and the mix of economy vs premium products?</li>
+    <li>How have dealer incentives, rebates and painter schemes changed? What share of revenue do they take?</li>
+    <li>How many retail touchpoints and tinting machines were added this quarter?</li>
+    <li>How much of the raw-material rise is passed on, and what further increases are planned?</li>
+    <li>What is the progress on backward integration (VAM, white cement, resins)?</li>
+    <li>(Asian Paints) What is the status of the CCI investigation, and have dealer terms changed?</li>
+    <li>(Elantas) How big is the order backlog from transformer, motor and EV makers?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Value growth well above volume growth for many quarters (price-led, not demand-led).</li>
+    <li>Rising receivables (dealer stress or channel stuffing).</li>
+    <li>Ad spend cut to protect margins while share is falling.</li>
+    <li>Small-cap rallies without volumes (Silkflex).</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Birla Opus will fail like other entrants."</td><td>Earlier entrants lacked capital. Birla Opus reached ₹1,661 cr of quarterly revenue in about two and a half years and is still gaining share.</td></tr>
+    <tr><td>"Asian Paints' moat is gone."</td><td>It still grew volumes 9% and profit 40% in Q1 FY27, with the densest network. The moat is narrower, not gone; margins are what's at risk.</td></tr>
+    <tr><td>"Falling crude always helps paint stocks."</td><td>It did until 2023. In 2025 crude fell and the median stock still dropped 14%, because competition absorbed the gain.</td></tr>
+    <tr><td>"Pidilite will be hit by the paint war."</td><td>Its core adhesives business barely overlaps; volumes grew 11% and margins expanded.</td></tr>
+    <tr><td>"Elantas is a paint stock."</td><td>It is an electrical-insulation business; its drivers are transformers, motors and EVs.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. tinting, emulsion" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Products and chemistry</h3><dl>
+    <dt>Decorative paint</dt><dd>Paint for homes and buildings.</dd>
+    <dt>Industrial coating</dt><dd>Paint for factories' products (cars, appliances, steel).</dd>
+    <dt>Emulsion</dt><dd>Water-based paint with an acrylic or vinyl binder.</dd>
+    <dt>Enamel</dt><dd>Solvent-based glossy paint, usually with an alkyd binder.</dd>
+    <dt>Distemper</dt><dd>A cheap, chalky water-based paint; the entry product.</dd>
+    <dt>Primer</dt><dd>The first coat that helps paint stick.</dd>
+    <dt>Putty</dt><dd>A filler that smooths walls before painting; a big volume product (Birla White).</dd>
+    <dt>Binder / resin</dt><dd>The film-forming glue in paint.</dd>
+    <dt>Alkyd</dt><dd>A resin made from polyols and anhydrides for enamels.</dd>
+    <dt>Acrylic emulsion</dt><dd>A binder made from acrylic monomers.</dd>
+    <dt>VAM</dt><dd>Vinyl acetate monomer; the base of PVA glues and vinyl emulsions.</dd>
+    <dt>Butyl acrylate</dt><dd>A key acrylic monomer for emulsions.</dd>
+    <dt>PVA</dt><dd>Polyvinyl acetate, the white glue in Fevicol.</dd>
+    <dt>Extender</dt><dd>A cheap filler (calcium carbonate, talc).</dd>
+    <dt>Hiding power / opacity</dt><dd>How well paint covers the surface below, mainly from TiO₂.</dd>
+    <dt>VOC</dt><dd>Volatile organic compounds, the solvents that evaporate; regulated.</dd>
+    <dt>Powder coating</dt><dd>Solvent-free coating sprayed as powder and baked.</dd>
+    <dt>Coil coating</dt><dd>Paint applied to steel or aluminium coils before forming.</dd>
+    <dt>Refinish</dt><dd>Paint used to repair cars after accidents.</dd>
+    <dt>Wire enamel</dt><dd>An insulating coating on copper wire in motors and transformers.</dd>
+    <dt>Impregnating varnish</dt><dd>Resin that fills and insulates motor windings.</dd>
+    <dt>Solvent cement</dt><dd>An adhesive that welds PVC and CPVC pipes.</dd>
+    <dt>Epoxy putty</dt><dd>Two-part repair compound (M-Seal).</dd>
+    <dt>Waterproofing</dt><dd>Coatings and chemicals that stop leaks (Dr. Fixit).</dd>
+    <dt>Tile adhesive</dt><dd>A cement-polymer glue replacing mortar for tiles.</dd>
+    <dt>Lamination adhesive</dt><dd>Glue that bonds layers of flexible packaging.</dd>
+  </dl>
+  <h3>Business terms</h3><dl>
+    <dt>Tinting machine</dt><dd>A dealer-installed machine that mixes colours on demand.</dd>
+    <dt>Touchpoint</dt><dd>A retail outlet selling a brand.</dd>
+    <dt>Painter loyalty scheme</dt><dd>Rewards and training that tie painters to a brand.</dd>
+    <dt>Dealer incentive / rebate</dt><dd>Payments to dealers for volume or exclusivity.</dd>
+    <dt>Volume vs value growth</dt><dd>Growth in litres vs rupees; the gap shows price and mix.</dd>
+    <dt>Underlying volume growth (UVG)</dt><dd>Pidilite's volume measure.</dd>
+    <dt>Premiumisation</dt><dd>Customers trading up to costlier products.</dd>
+    <dt>Abuse of dominance</dt><dd>Competition-law offence by a dominant firm, as alleged against Asian Paints.</dd>
+    <dt>CCI</dt><dd>Competition Commission of India.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Titanium dioxide</dt><dd>See 004.</dd>
+    <dt>Pentaerythritol</dt><dd>See 005.</dd>
+    <dt>Phthalic anhydride</dt><dd>See 008.</dd>
+    <dt>Styrene, crude-linked monomers</dt><dd>See 002.</dd>
+    <dt>Pigments (organic, phthalocyanine)</dt><dd>See 009.</dd>
+    <dt>Sodium silicate</dt><dd>See 003 and 004.</dd>
+    <dt>Anti-dumping duty</dt><dd>See 002 and 008.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What is the real moat in Indian decorative paints?</summary><p>Distribution and influence: dealer reach, tinting machines, daily replenishment and painter loyalty, not the chemistry.</p></details>
+  <details class="q"><summary>2. What is the single best macro variable for this basket, and why?</summary><p>Crude oil: 40–60% of costs are petroleum-linked, so the basket beat the Nifty when Brent fell (2014–15, 2020) and lagged when it spiked (2022).</p></details>
+  <details class="q"><summary>3. What changed in 2024?</summary><p>Grasim launched Birla Opus with a ₹10,000 cr investment and heavy dealer incentives, and JSW agreed to buy Akzo Nobel India; Asian Paints fell 33%.</p></details>
+  <details class="q"><summary>4. Why did paint stocks fall in 2026 despite strong Q1 profits?</summary><p>Investors doubt the old oligopoly margins will return, as competition keeps intensifying and costs rose ~20% with the crude spike.</p></details>
+  <details class="q"><summary>5. What is the CCI investigating?</summary><p>Whether Asian Paints abused its dominance by using dealer practices to block Birla Opus's entry (ordered July 2025).</p></details>
+  <details class="q"><summary>6. Why is Elantas Beck a different kind of stock?</summary><p>84% of its sales are electrical insulation (wire enamels, varnishes), so it follows transformers, motors and EVs, not housing.</p></details>
+  <details class="q"><summary>7. What is the largest single raw material in white paint?</summary><p>Titanium dioxide.</p></details>
+  <details class="q"><summary>8. Why did Jyoti Resins' profit fall despite record revenue?</summary><p>West Asian disruption spiked raw materials; its gross margin fell to 59% from 72.5% before price rises in May–June took effect.</p></details>
+  <details class="q"><summary>9. What happened to GST on paints in 2017–18?</summary><p>It started at 28% in July 2017 and was cut to 18% in July 2018.</p></details>
+  <details class="q"><summary>10. Which month is the most reliable for this basket?</summary><p>April (13 of 15 years), though some of it is the general small-cap April effect.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members with at least ₹300 cr market cap vs NSE:NIFTY; Brent yearly averages from TVC:UKOIL.</li>
+    <li>Leaders: <a href="https://www.kotakneo.com/news/stocks/asian-paints-q1-results-fy27-net-profit-jumps-40-to-rs-1539-crore-revenue-up-18/">Asian Paints Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/asian-paints-q1-fy27-slides-17-revenue-growth-innovation-push-93CH-4820272">Asian Paints slides</a>; <a href="https://www.investing.com/news/company-news/berger-paints-q1-fy27-slides-profit-surges-26-on-decorative-push-93CH-4837641">Berger Q1 FY27</a>; <a href="https://www.investywise.com/kansai-nerolac-paints-q1-fy27-unaudited-results-review/">Kansai Nerolac Q1 FY27</a>; <a href="https://www.whalesbook.com/corporate-news/English/consumer-products/JSW-Dulux-Revenue-Up-188percent-in-Q1-FY27-Eyes-Market-Leadership/6a8407f66817e697e7d05c28">JSW Dulux Q1 FY27</a>; <a href="https://www.sahi.com/blogs/indigo-paints-q1-fy27-results">Indigo Q1 FY27</a>.</li>
+    <li>Adhesives and specialty: <a href="https://www.sahi.com/blogs/pidilite-industries-q1-results-fy2027">Pidilite Q1 FY27</a>; <a href="https://ca.investing.com/news/company-news/pidilite-q1-fy27-slides-22-revenue-growth-margins-expand-93CH-4777272">Pidilite slides</a>; <a href="https://scanx.trade/stock-market-news/companies/jyoti-resins-q1-results-net-profit-drops-to-118m-margin-contracts-to-14-42-yoy/47981612">Jyoti Resins Q1</a>; <a href="https://www.equitybulls.com/category.php?id=373624">Sirca Q1</a>; <a href="https://www.screener.in/company/ELANTAS/">Elantas Beck</a>; <a href="https://www.marketsmojo.com/news/stock-recommendation/silkflex-polymers-india-ltd-is-rated-hold-4139558">Silkflex</a>.</li>
+    <li>Competition: <a href="https://www.grasim.com/media/press-releases/grasim-results-q1fy-2026-27">Grasim Q1 FY27 (Birla Opus)</a>; <a href="https://www.business-standard.com/industry/news/cci-orders-probe-asian-paints-abuse-dominant-position-complaint-grasim-125070101088_1.html">CCI probe order</a>; <a href="https://www.business-standard.com/industry/news/asian-paints-supreme-court-cci-investigation-grasim-paint-market-125101000947_1.html">Asian Paints' legal challenge</a>; <a href="https://tncapital.substack.com/p/the-great-indian-paint-shake-up">the Indian paint shake-up</a>.</li>
+    <li>Costs: <a href="https://www.chemanalyst.com/NewsAndDeals/NewsDetails/is-the-global-paint-industry-facing-a-perfect-storm-amid-oil-price-surge-and-war-41770">global paint cost storm</a>; <a href="https://www.business-standard.com/industry/news/paint-industry-optimistic-on-growth-despite-crude-volatility-rising-costs-126053100307_1.html">price increases (May 2026)</a>; <a href="https://www.business-standard.com/industry/news/paint-manufacturers-expect-healthy-fy27-demand-despite-price-increase-126090600427_1.html">FY27 demand outlook</a>; <a href="https://etio2.com/industry-columns/the-raw-material-trap-in-indian-paints-industry/">the raw-material trap</a>; <a href="https://www.procurementresource.com/resource-center/titanium-dioxide-price-trends">TiO₂ prices</a>.</li>
+    <li>History (Asian Paints' 1942 founding and 1967 leadership, the GST rate changes, the lead limit): company history and public records, known before this session.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 13.8}, {"y": 2013, "v": 3.2}, {"y": 2014, "v": -3.4}, {"y": 2015, "v": -8.0}, {"y": 2016, "v": -0.7}, {"y": 2017, "v": 6.8}, {"y": 2018, "v": 4.9}, {"y": 2019, "v": 1.5}, {"y": 2020, "v": 6.6}, {"y": 2021, "v": 2.8}, {"y": 2022, "v": -3.9}, {"y": 2023, "v": 1.3}, {"y": 2024, "v": -12.2}, {"y": 2025, "v": -9.0}, {"y": 2026, "v": -4.8}], "AprJul": [{"y": 2012, "v": 1.9}, {"y": 2013, "v": -12.2}, {"y": 2014, "v": 9.2}, {"y": 2015, "v": 20.7}, {"y": 2016, "v": 17.1}, {"y": 2017, "v": -1.2}, {"y": 2018, "v": -9.1}, {"y": 2019, "v": 5.3}, {"y": 2020, "v": -16.6}, {"y": 2021, "v": 15.6}, {"y": 2022, "v": 9.8}, {"y": 2023, "v": 10.6}, {"y": 2024, "v": 6.6}, {"y": 2025, "v": 8.6}, {"y": 2026, "v": 19.0}], "AugSep": [{"y": 2012, "v": -2.1}, {"y": 2013, "v": 7.7}, {"y": 2014, "v": 21.9}, {"y": 2015, "v": 12.8}, {"y": 2016, "v": -1.5}, {"y": 2017, "v": 1.8}, {"y": 2018, "v": -4.0}, {"y": 2019, "v": 14.1}, {"y": 2020, "v": 15.4}, {"y": 2021, "v": -12.8}, {"y": 2022, "v": 16.1}, {"y": 2023, "v": 0.6}, {"y": 2024, "v": -0.9}, {"y": 2025, "v": -4.6}], "OctDec": [{"y": 2012, "v": 1.0}, {"y": 2013, "v": 4.0}, {"y": 2014, "v": 1.2}, {"y": 2015, "v": 18.7}, {"y": 2016, "v": -7.4}, {"y": 2017, "v": 5.2}, {"y": 2018, "v": 10.3}, {"y": 2019, "v": -2.2}, {"y": 2020, "v": 4.7}, {"y": 2021, "v": 7.2}, {"y": 2022, "v": -11.2}, {"y": 2023, "v": -4.0}, {"y": 2024, "v": -1.8}, {"y": 2025, "v": -10.0}], "SepNov": [{"y": 2012, "v": -3.6}, {"y": 2013, "v": 15.0}, {"y": 2014, "v": 12.5}, {"y": 2015, "v": 9.5}, {"y": 2016, "v": -1.8}, {"y": 2017, "v": -3.1}, {"y": 2018, "v": 1.1}, {"y": 2019, "v": 5.4}, {"y": 2020, "v": -5.3}, {"y": 2021, "v": -1.1}, {"y": 2022, "v": -6.8}, {"y": 2023, "v": -6.5}, {"y": 2024, "v": -0.9}, {"y": 2025, "v": -6.0}], "JanMar": [{"y": 2012, "v": 6.4}, {"y": 2013, "v": -0.2}, {"y": 2014, "v": -3.1}, {"y": 2015, "v": -2.7}, {"y": 2016, "v": 2.2}, {"y": 2017, "v": 14.4}, {"y": 2018, "v": -1.7}, {"y": 2019, "v": -2.0}, {"y": 2020, "v": 14.5}, {"y": 2021, "v": 4.7}, {"y": 2022, "v": -4.1}, {"y": 2023, "v": -1.5}, {"y": 2024, "v": -11.6}, {"y": 2025, "v": -12.7}, {"y": 2026, "v": -6.1}]}, "my": {"1": {"2012": -7.9, "2013": -3.6, "2014": 0.2, "2015": 6.6, "2016": 2.8, "2017": 6.4, "2018": -7.1, "2019": -3.2, "2020": 10.2, "2021": 1.8, "2022": -0.2, "2023": -2.8, "2024": 0.7, "2025": -4.1, "2026": -1.7}, "2": {"2012": 4.5, "2013": 2.2, "2014": 0.8, "2015": -6.3, "2016": 2.4, "2017": 2.6, "2018": 3.1, "2019": 2.0, "2020": 6.9, "2021": 0.1, "2022": -0.3, "2023": 1.4, "2024": -6.0, "2025": -6.9, "2026": -0.6}, "3": {"2012": 8.6, "2013": 1.1, "2014": -4.1, "2015": -2.1, "2016": -3.6, "2017": 3.8, "2018": 2.0, "2019": -0.6, "2020": 1.3, "2021": 2.5, "2022": -3.7, "2023": -0.1, "2024": -6.4, "2025": -2.0, "2026": -4.3}, "4": {"2012": 3.1, "2013": -3.7, "2014": 2.8, "2015": 10.9, "2016": 2.3, "2017": 6.5, "2018": 2.1, "2019": 1.2, "2020": -7.8, "2021": 2.9, "2022": 7.2, "2023": 4.8, "2024": 3.6, "2025": 1.0, "2026": 15.0}, "5": {"2012": 10.3, "2013": 1.9, "2014": -2.5, "2015": -3.4, "2016": 3.9, "2017": -0.8, "2018": -3.9, "2019": 4.3, "2020": -2.5, "2021": 5.1, "2022": -1.5, "2023": 3.3, "2024": -2.5, "2025": 3.2, "2026": 3.4}, "6": {"2012": -10.7, "2013": -5.4, "2014": 6.3, "2015": -1.6, "2016": 4.1, "2017": 4.9, "2018": -5.5, "2019": -1.9, "2020": 0.1, "2021": 3.3, "2022": 3.2, "2023": -0.8, "2024": -2.0, "2025": 3.7, "2026": 1.4}, "7": {"2011": 6.2, "2012": -1.1, "2013": -5.2, "2014": 1.4, "2015": 14.2, "2016": 4.7, "2017": -11.5, "2018": -0.8, "2019": 1.9, "2020": -4.5, "2021": 2.8, "2022": 0.7, "2023": 2.0, "2024": 7.2, "2025": 0.3, "2026": -1.9}, "8": {"2011": 2.9, "2012": 2.0, "2013": -2.0, "2014": 5.8, "2015": 9.1, "2016": -1.6, "2017": 2.5, "2018": 1.1, "2019": 6.8, "2020": 13.2, "2021": -10.8, "2022": 11.5, "2023": 5.6, "2024": -1.7, "2025": -3.6, "2026": 7.8}, "9": {"2011": 3.9, "2012": -4.1, "2013": 10.5, "2014": 14.7, "2015": 3.6, "2016": 0.0, "2017": -0.7, "2018": -4.9, "2019": 6.7, "2020": 2.1, "2021": -1.8, "2022": 4.4, "2023": -4.9, "2024": 0.9, "2025": -1.0}, "10": {"2011": -7.7, "2012": 1.6, "2013": -5.1, "2014": -0.8, "2015": 1.9, "2016": 2.8, "2017": -5.3, "2018": 0.4, "2019": 1.7, "2020": -2.5, "2021": -5.1, "2022": -6.9, "2023": 2.0, "2024": 2.7, "2025": -3.3}, "11": {"2011": 3.8, "2012": -1.1, "2013": 7.9, "2014": -2.0, "2015": 3.8, "2016": -4.4, "2017": 2.9, "2018": 6.5, "2019": -3.0, "2020": -4.7, "2021": 5.8, "2022": -4.4, "2023": -3.7, "2024": -4.5, "2025": -1.7}, "12": {"2011": -2.7, "2012": 0.4, "2013": 0.6, "2014": 3.8, "2015": 12.2, "2016": -5.9, "2017": 7.4, "2018": 3.4, "2019": -0.7, "2020": 11.9, "2021": 6.8, "2022": -0.1, "2023": -2.3, "2024": -0.2, "2025": -4.9}}, "basket": ["Asian Paints Ltd.", "Pidilite Industries Limited", "Berger Paints India Limited", "Kansai Nerolac Paints Limited", "JSW Dulux Ltd", "ELANTAS Beck India Limited", "Indigo Paints Ltd", "Sirca Paints India Ltd.", "Jyoti Resins & Adhesives Ltd.", "Shalimar Paints Ltd", "DIC India Limited", "Nikhil Adhesives Limited", "HP Adhesives Ltd.", "Silkflex Polymers (India) Ltd."], "nbasket": 14, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 0.6, "rel": -0.1, "hit": 7, "n": 15}, {"m": 2, "abs": -0.8, "rel": 0.4, "hit": 10, "n": 15}, {"m": 3, "abs": -0.7, "rel": -0.5, "hit": 6, "n": 15}, {"m": 4, "abs": 6.0, "rel": 3.5, "hit": 13, "n": 15}, {"m": 5, "abs": 2.4, "rel": 1.2, "hit": 8, "n": 15}, {"m": 6, "abs": 1.7, "rel": -0.1, "hit": 8, "n": 15}, {"m": 7, "abs": 2.9, "rel": 1.0, "hit": 10, "n": 16}, {"m": 8, "abs": 2.8, "rel": 3.0, "hit": 11, "n": 16}, {"m": 9, "abs": 2.6, "rel": 2.0, "hit": 9, "n": 15}, {"m": 10, "abs": 0.5, "rel": -1.6, "hit": 7, "n": 15}, {"m": 11, "abs": 1.0, "rel": 0.1, "hit": 6, "n": 15}, {"m": 12, "abs": 2.7, "rel": 2.0, "hit": 8, "n": 15}], "cy": [{"y": 2012, "b": 36.1, "n": 27.7, "rel": 8.4, "partial": false}, {"y": 2013, "b": 4.6, "n": 6.8, "rel": -2.2, "partial": false}, {"y": 2014, "b": 68.8, "n": 31.4, "rel": 37.4, "partial": false}, {"y": 2015, "b": 52.1, "n": -4.1, "rel": 56.2, "partial": false}, {"y": 2016, "b": 10.3, "n": 3.0, "rel": 7.3, "partial": false}, {"y": 2017, "b": 53.2, "n": 28.6, "rel": 24.5, "partial": false}, {"y": 2018, "b": -1.5, "n": 3.2, "rel": -4.7, "partial": false}, {"y": 2019, "b": 29.2, "n": 12.0, "rel": 17.2, "partial": false}, {"y": 2020, "b": 44.2, "n": 14.9, "rel": 29.3, "partial": false}, {"y": 2021, "b": 41.1, "n": 24.1, "rel": 17.0, "partial": false}, {"y": 2022, "b": 14.4, "n": 4.3, "rel": 10.0, "partial": false}, {"y": 2023, "b": 25.2, "n": 20.0, "rel": 5.2, "partial": false}, {"y": 2024, "b": -0.6, "n": 8.8, "rel": -9.4, "partial": false}, {"y": 2025, "b": -9.9, "n": 10.5, "rel": -20.4, "partial": false}, {"y": 2026, "b": 9.2, "n": -10.7, "rel": 19.8, "partial": true}], "dd": [{"co": "Asian Paints", "peak": "Jan 2022", "fp": -31, "y1": -1}, {"co": "Pidilite Industries", "peak": "Sep 2024", "fp": -7, "y1": 3}, {"co": "Berger Paints India", "peak": "Jul 2021", "fp": -36, "y1": -14}, {"co": "Kansai Nerolac Paints", "peak": "Jan 2021", "fp": -59, "y1": -27}, {"co": "JSW Dulux", "peak": "Nov 2024", "fp": -29, "y1": -6}, {"co": "ELANTAS Beck India", "peak": "Oct 2024", "fp": -1, "y1": 41}, {"co": "Indigo Paints", "peak": "Feb 2021", "fp": -65, "y1": -2}, {"co": "Sirca Paints India", "peak": "Nov 2025", "fp": -24, "y1": -17}, {"co": "Jyoti Resins & Adhesives", "peak": "Sep 2022", "fp": -52, "y1": -34}, {"co": "Shalimar Paints", "peak": "Jan 2024", "fp": -63, "y1": -4}, {"co": "DIC India", "peak": "Oct 2024", "fp": -23, "y1": 11}, {"co": "Nikhil Adhesives", "peak": "Nov 2022", "fp": -62, "y1": -22}, {"co": "HP Adhesives", "peak": "Feb 2024", "fp": -73, "y1": -30}, {"co": "Silkflex Polymers (India)", "peak": "Sep 2024", "fp": 153, "y1": 203}, {"co": "Ducol Organics & Colours", "peak": "Aug 2023", "fp": -37, "y1": -20}, {"co": "SPEB Adhesives", "peak": "Dec 2025", "fp": 51, "y1": 0}, {"co": "Hindustan Adhesives", "peak": "Apr 2022", "fp": -41, "y1": 9}, {"co": "Siddhika Coatings", "peak": "Nov 2025", "fp": -8, "y1": 15}], "win": {"FebMar": {"mean": -0.1, "median": 1.3, "hit": 8, "n": 15}, "AprJul": {"mean": 5.7, "median": 8.6, "hit": 11, "n": 15}, "AugSep": {"mean": 4.6, "median": 1.2, "hit": 8, "n": 14}, "OctDec": {"mean": 1.1, "median": 1.1, "hit": 8, "n": 14}, "SepNov": {"mean": 0.6, "median": -1.4, "hit": 5, "n": 14}, "JanMar": {"mean": -0.2, "median": -1.7, "hit": 5, "n": 15}}, "ytd": {"b": 9.2, "n": -10.7}, "hx": {"label": "Brent avg $/bbl", "v": {"2012": "112", "2013": "109", "2014": "99", "2015": "54", "2016": "45", "2017": "55", "2018": "72", "2019": "64", "2020": "43", "2021": "71", "2022": "99", "2023": "82", "2024": "80", "2025": "68", "2026": "88 (YTD)"}}, "notes": {"2012": "Consumer staples re-rated as growth held up: Shalimar +104%, Berger +85%, Asian Paints +71%. Elantas \u221219%.", "2013": "The rupee crash raised crude and TiO\u2082 costs in rupees, but staples held up: DIC +49%, Berger +40%, Pidilite +31%; Elantas \u221252%, Shalimar \u221231%.", "2014": "Crude began its collapse in the second half and raw-material deflation widened margins: Pidilite +90%, Nikhil +82%, Berger +79%.", "2015": "Brent halved to ~$54 and paint margins hit records. The basket beat a falling Nifty by 56 points, led by small caps: Jyoti Resins +457%, DIC +84%, Elantas +56%.", "2016": "Demonetisation (November) hit dealer cash sales late in the year: Jyoti +78%, Kansai +18%; DIC \u221234%.", "2017": "GST arrived at 28% for paints, but the small-cap boom and cheap crude carried the basket: Nikhil +318%, Kansai +80%, Pidilite +53%.", "2018": "Crude rose to ~$72 and the rupee fell. GST on paints was cut to 18% in July. Large caps held (Pidilite +23%, Berger +21%, Asian Paints +19%) while small caps sank (Shalimar \u221252%).", "2019": "Crude eased and investors crowded into 'quality consumer' names: Jyoti +126%, Berger +56%, Sirca +46%.", "2020": "The lockdown shut paint shops in April, then the home-improvement boom and $43 crude drove record margins: Jyoti +159%, Nikhil +59%, Asian Paints +55%.", "2021": "Indigo listed in February; small adhesive makers soared (Nikhil +284%, Jyoti +166%) while Kansai (\u22123%) and Akzo Nobel India (\u221215%) lagged as crude rose back to $71.", "2022": "The Ukraine war pushed Brent to ~$99 on average and squeezed margins: Berger \u221225%, Kansai \u221226%, Indigo \u221239%. Grasim's paint plans loomed. Jyoti (+232%) was the outlier.", "2023": "Raw materials deflated and leaders posted record margins, but entry fears capped the stocks: Asian Paints +10%, Pidilite +6%. Elantas +95% on electrical demand.", "2024": "The entry shock: Birla Opus launched in February with heavy dealer incentives, and JSW agreed to buy Akzo Nobel India. Asian Paints \u221233%, Berger \u221226%, Shalimar \u221229%; the median stock fell 15%.", "2025": "Crude fell to ~$68 and Asian Paints recovered (+21%) with Berger (+20%) and Sirca (+42%). The CCI ordered a probe of Asian Paints (July). Small adhesive makers fell (HP \u221250%, Shalimar \u221251%).", "2026": "The Hormuz spike lifted crude-linked costs ~20% and the industry raised prices ~10%. Q1 FY27 profits were strong, yet Asian Paints \u221211%, Kansai \u221222%; gains came from Silkflex (+207%), Elantas (+49%) and Shalimar (+31%)."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

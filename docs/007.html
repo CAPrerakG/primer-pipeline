@@ -1,0 +1,584 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluorochemicals Primer</title>
+<meta name="description" content="Industry 7 of 278: fluorspar to hydrofluoric acid to refrigerants, fluoropolymers, battery chemicals and fluorinated intermediates. The HFC quota cycle, China&#x27;s discipline, India&#x27;s four listed players and a year-by-year record.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Fluorochemicals · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 7 of 278 · Chemicals family</div>
+  <h1>Fluorochemicals</h1>
+  <p class="lede">Everything made by adding fluorine to molecules: the gas in your air conditioner, the non-stick coating on a pan, the salt inside a lithium battery, and the fluorine atoms in about a fifth of modern medicines and a third of new crop chemicals.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 4 after the audit (GFL Ltd out)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Specialty Chemicals</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">+80%</div><div class="l">Chinese R32 average price in H1 2026 (¥25,700/t) vs H1 2023 (¥14,800/t)</div></div>
+    <div class="stat"><div class="n">797,800 t</div><div class="l">China's capped annual HFC production quota; six producers hold over 90%</div></div>
+    <div class="stat"><div class="n">31 Dec 2027</div><div class="l">India's cut-off for new or additional HFC production clearances; the freeze starts on 1 January 2028</div></div>
+    <div class="stat"><div class="n">₹2,300 cr</div><div class="l">SRF's Odisha complex: 20,000 t of HFOs and 30,000 t of HF by February 2028</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Fluorine is hard to handle, and that's the moat</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Fluorine is the most "grabby" element there is: it sticks to almost anything and, once stuck, almost never lets go. That's why a pan coated with a fluorine plastic is non-stick, why fluorine gases carry heat so well inside a fridge, and why medicines with fluorine last longer in the body. But because it is so grabby, it is dangerous to work with: its acid (hydrofluoric acid) can eat through glass. Only a few companies in the world know how to handle it safely at scale. It starts with a rock called fluorspar, dug up in South Africa, China, Mexico and Mongolia. Because some fluorine gases warm the planet, countries have agreed to limit how much can be made, and when making it is capped, the few makers who hold the permits earn more.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Fluorochemicals start with fluorspar, which is turned into hydrofluoric acid (HF). From HF come refrigerant gases (R32, R125, R134a, blends), fluoropolymers (PTFE, PVDF, FKM), battery chemicals (LiPF₆, PVDF binder) and fluorinated intermediates for pharma and agrochemicals. Refrigerants are a quota-driven commodity: China capped HFC production from 2024, which pushed R32 up ~80% (H1 2026 vs H1 2023). India freezes in 2028 on a 2024–26 baseline and will stop clearing new HFC plants after 2027, so capacity built now counts: Tanfac is adding 20,000 t of R32, and SRF is building HFO and HF capacity in Odisha. All four listed players posted strong Q1 FY27 results. The long-term value is in fluoropolymers, battery chemicals, next-generation HFOs and CDMO. The risks are refrigerant price normalisation (SRF's own warning) and PFAS regulation in Europe, which is unlikely to bite before 2029.</p>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>The fluorine tree</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Family</th><th>Examples</th><th>Used in</th></tr></thead><tbody>
+    <tr><td>Inorganic fluorides</td><td>Anhydrous HF, aluminium fluoride, cryolite, dilute HF</td><td>Aluminium smelting, glass etching, steel pickling, solar and semiconductor cleaning</td></tr>
+    <tr><td>Refrigerants (HCFCs)</td><td>R22</td><td>Old air conditioners (being phased out for emissive use); feedstock for PTFE</td></tr>
+    <tr><td>Refrigerants (HFCs)</td><td>R32, R125, R134a, R143a, blends R410A and R407C</td><td>Room ACs, car ACs (R134a), fridges, chillers, pharma propellants (MDIs)</td></tr>
+    <tr><td>Refrigerants (HFOs)</td><td>R1234yf, R1234ze, R1233zd</td><td>New car ACs (Europe, US), chillers, foam blowing; patented by Honeywell and Chemours</td></tr>
+    <tr><td>Fluoropolymers</td><td>PTFE, PVDF, FEP, PFA, FKM (fluoroelastomers)</td><td>Non-stick coatings, cables, seals, semiconductors, battery binders, membranes for hydrogen</td></tr>
+    <tr><td>Battery chemicals</td><td>LiPF₆ (electrolyte salt), PVDF (binder), electrolytes</td><td>Lithium-ion cells</td></tr>
+    <tr><td>Fluorinated intermediates</td><td>Fluoro-aromatics, trifluoromethyl compounds</td><td>Agrochemicals (a third of new active ingredients contain fluorine) and pharma</td></tr>
+    <tr><td>Chloromethanes</td><td>Methylene chloride, chloroform</td><td>Feedstock for R32 and R22; solvents</td></tr>
+    <tr><td>Specialty fluids</td><td>Liquid-cooling fluids for data centres</td><td>Immersion and two-phase cooling (Navin–Chemours)</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The gas circulating in your split AC is probably R32 (SRF, Navin, GFL); your car's AC uses R134a or, in newer European cars, R1234yf; the non-stick frying pan is PTFE (GFL); the asthma inhaler's propellant is a medical-grade HFC; the phone battery's electrolyte salt is LiPF₆; the fluorine atom in many modern crop sprays came through a fluorinated intermediate.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a rock to a battery</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Fluorspar</h4><div class="an">The ore</div>Calcium fluoride (CaF₂); acid grade is ≥97% pure.<div class="who">China, Mexico, Mongolia, South Africa; India mostly imports (South Africa 71%)</div><div class="m">~$550/t in 2026</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Hydrofluoric acid</h4><div class="an">The master key</div>Fluorspar + sulphuric acid → anhydrous HF (AHF).<div class="who">Tanfac, SRF, GFL, Navin (captive)</div><div class="m">~$2,200/t in China; captive HF is a cost advantage</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Refrigerants</h4><div class="an">The heat carriers</div>HF + chloromethanes → R22, R32; HF + chlorinated ethanes → R125, R134a.<div class="who">SRF, GFL, Navin; Tanfac from Q3 FY27</div><div class="m">Quota-driven pricing; highly cyclical</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Fluoropolymers</h4><div class="an">The coatings and seals</div>R22 → TFE monomer → PTFE; also PVDF, FKM, PFA.<div class="who">GFL (largest in India), SRF</div><div class="m">Specialty margins; long approvals</div></div>
+    <div class="stage"><div class="no">05</div><h4>Specialty and CDMO</h4><div class="an">Custom tailoring</div>Fluorinated intermediates and contract synthesis for global pharma and agro companies; HFOs for patent holders.<div class="who">Navin, SRF, Anupam Rasayan</div><div class="m">Highest value; lumpy</div></div>
+    <div class="stage"><div class="no">06</div><h4>End users</h4><div class="an">Where it lands</div>AC and fridge makers, auto OEMs, battery cells, chip fabs, pharma, agrochem, aluminium smelters, data centres.<div class="who">Voltas, Daikin, Honeywell, Chemours, global innovators</div><div class="m">—</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Fluorspar:</b> a shiny purple-green rock, crushed and cleaned.</li>
+    <li><b>HF:</b> the rock is cooked with sulphuric acid to release fluorine as a dangerous acid; handling it safely is the hard part.</li>
+    <li><b>Refrigerants:</b> fluorine is attached to small carbon molecules to make gases that soak up heat inside your AC and release it outside.</li>
+    <li><b>Fluoropolymers:</b> long chains of carbon and fluorine that nothing sticks to and almost nothing can dissolve.</li>
+    <li><b>Specialty chemistry:</b> fluorine carefully added to one exact spot on a big medicine or pesticide molecule, like a jeweller setting a stone.</li>
+  </ul>
+  <h3>Critical inputs and choke points</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Acid-grade fluorspar</td><td>South Africa (71% of India's import value), China, Mexico, Mongolia</td><td>All HF makers</td><td>~$550–560/t; China restricts exports and now imports</td></tr>
+    <tr><td>Sulphuric acid / sulphur</td><td>Gulf sulphur, domestic acid</td><td>HF makers (Tanfac's Q1 margins hit)</td><td>Sulphur at $1,000–1,100/t CFR India (see 004)</td></tr>
+    <tr><td>Chloromethanes (methylene chloride, chloroform)</td><td>Chlor-alkali makers (GACL, Chemplast, Meghmani), captive</td><td>R32 and R22 makers</td><td>Linked to chlorine and methanol costs</td></tr>
+    <tr><td>Lithium salts</td><td>Imported lithium carbonate/hydroxide</td><td>GFL (LiPF₆)</td><td>Commercial supplies since December 2025</td></tr>
+    <tr><td>HFC production quota / clearances</td><td>China's Ministry of Ecology; India's MoEFCC</td><td>All refrigerant makers</td><td>China flat 2026 quota; India stops new HFC clearances after 2027</td></tr>
+    <tr><td>HFO patents and licences</td><td>Honeywell, Chemours</td><td>SRF, Navin (contract manufacturing)</td><td>SRF building its own HFO capacity</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The key link is R22 → PTFE. R22 is being phased out as a refrigerant but remains allowed as a feedstock, so a producer with chloromethanes, HF and R22 can make PTFE cheaply. GFL built its fluoropolymer business on this integration. Refrigerant pricing is the swing factor in profits; fluoropolymers, battery chemicals and CDMO are the stable growth. The 2024–26 Indian baseline window is a once-only land grab: whatever capacity producers add now defines their future production rights.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>Four listed companies, four different models</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What to know</th></tr></thead><tbody>
+    <tr><td>SRF <span class="tk">SRF</span></td><td>A conglomerate: chemicals (fluorochemicals plus specialty agro and pharma intermediates), performance films and foil (BOPET/BOPP) and technical textiles. India's largest R32 maker (~29–30 kt; R125 ~7 kt). Q1 FY27: revenue ₹5,033 cr (+32%), profit ₹759 cr (+76%), a record; chemicals revenue ₹2,315 cr (+26%) with EBIT ₹638 cr; films and technical textiles (segment profit +187%) also grew. Management warned refrigerant prices would normalise; specialty chemicals face Chinese pricing and Middle East exports were hit. Capex: a ₹88 cr Dahej HFC expansion (from June 2026) and a ₹2,300 cr Odisha complex (20,000 t HFOs, 30,000 t HF, HF derivatives) by February 2028. The stock fell 4% on results day and is −18% this year.</td></tr>
+    <tr><td>Gujarat Fluorochemicals <span class="tk">FLUOROCHEM</span></td><td>INOX group; demerged from GFL in 2019. India's largest fluoropolymer maker (PTFE, PVDF, FKM, PFA) plus refrigerants, and building a battery-chemicals business through GFCL EV (which raised $80 m): LiPF₆ commercial supplies began in December 2025 with repeat orders; PVDF is close to final qualification; LFP cathode and binders scale in FY27–28. Q1 FY27 revenue ₹1,588 cr (+24%), EBITDA margin 27%, profit ₹219 cr (+20%); ₹2,300 cr battery-materials capex planned in FY27.</td></tr>
+    <tr><td>Navin Fluorine <span class="tk">NAVINFLUOR</span></td><td>Three businesses: high-performance products (refrigerants, inorganic fluorides, HFO work for global patent holders), specialty chemicals (agro and pharma intermediates) and CDMO. Q1 FY27 revenue ₹1,045 cr (+44%), profit ₹243 cr (+108%); HPP ₹540 cr (+33%), specialty ₹325 cr (+48%), CDMO ₹180 cr (+82%). R32 capacity doubling from 4,500 t. Building capacity for Chemours' data-centre liquid-cooling products (₹120 cr capex, 35% customer-funded, due Q2 FY27) and a ₹125 cr cGMP4 phase II (Q4 FY27).</td></tr>
+    <tr><td>Tanfac Industries <span class="tk">TANFACIND</span></td><td>HF and aluminium fluoride maker in Tamil Nadu, promoted by Anupam Rasayan with TIDCO. Doubled HF capacity to 29,700 t in October 2024; a 5,000 t solar-grade dilute HF plant (to 10,000 t). Q1 FY27 revenue ₹187 cr (+6%), profit ₹16.9 cr (−13%) on sulphur and fuel costs. Raised ₹250 cr by QIP plus ~₹100 cr from the promoter to build a 20,000 t R32 plant (~₹390 cr), due by the end of Q3 FY27, which counts toward India's baseline.</td></tr>
+  </tbody></table></div>
+  <p><b>Moved out:</b> GFL Ltd, the holding company left after Gujarat Fluorochemicals was demerged; it no longer runs fluorochemical operations.</p>
+  <div class="box pm"><span class="tag">Fund-manager lens: four ways to own fluorine</span><p><b>SRF</b> is the diversified, lowest-risk route, but you also buy films and textiles, and its specialty chemicals face Chinese pricing. <b>Gujarat Fluorochemicals</b> is the fluoropolymer and battery-chemicals bet: less exposed to refrigerant normalisation, more exposed to EV demand and PFAS rules. <b>Navin</b> is the CDMO and high-value-gas story, with customer-funded projects and the highest growth this year. <b>Tanfac</b> is the upstream HF owner adding R32: the purest play on the baseline race, but small, sulphur-exposed and dependent on flawless execution by Q3 FY27. Diversifying across them trades cyclicality for growth optionality.</p></div>
+  <h3>Related listed names elsewhere</h3>
+  <ul>
+    <li><b>Anupam Rasayan</b> (Specialty/CDMO, 008): fluorinated intermediates; Tanfac's promoter.</li>
+    <li><b>Chemplast Sanmar, Gujarat Alkalies, Meghmani Finechem</b> (chloromethanes, the other feedstock).</li>
+    <li><b>Aarti Industries, PI Industries</b>: users of fluorinated intermediates.</li>
+    <li><b>Hindalco, Vedanta, NALCO</b>: aluminium fluoride buyers; <b>Alufluoride</b> (004) is a competing AlF₃ maker.</li>
+    <li><b>AC makers</b> (Voltas, Blue Star, Amber, Daikin India): refrigerant buyers.</li>
+  </ul>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Quota rent on commodities, approvals on specialties</h2>
+  <ul>
+    <li><b>Refrigerants:</b> commodity pricing, but supply is capped by law (China's quota; the US AIM Act; India's freeze from 2028). When demand grows faster than quotas, spreads widen sharply, as in 2025–26.</li>
+    <li><b>Fluoropolymers:</b> grades approved customer by customer (semiconductors, automotive, medical); EBITDA margins of 25–35% in good years.</li>
+    <li><b>CDMO and specialty:</b> multi-year supply contracts; value depends on the molecule's success in the market.</li>
+    <li><b>HF and inorganics:</b> cost-plus on fluorspar and sulphur; captive HF gives downstream players a cost edge.</li>
+  </ul>
+  <div class="box ana"><span class="tag">Analogy</span><p>A refrigerant quota works like a taxi-licence system: when the city caps the number of taxis and demand keeps rising, the licence holders earn more, even though every taxi is the same. Fluoropolymers are more like a specialist surgeon: fewer customers, each one needing a lengthy approval, but much steadier fees once trusted.</p></div>
+  <p><b>Carbon credits, the forgotten chapter:</b> until 2012–13, SRF and Navin earned large income from destroying HFC-23 (a potent greenhouse gas made alongside R22) under the UN's clean development mechanism. When carbon-credit prices collapsed and the EU stopped accepting industrial-gas credits (2013), that income disappeared, one reason the stocks lagged in 2012–13.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">6 · The business calendar</p>
+  <h2>A year shaped by air-conditioning season</h2>
+  <ul>
+    <li><b>October–February:</b> AC and refrigerant makers stock up ahead of summer; refrigerant contract prices are set, and China announces next year's quota (usually October–December).</li>
+    <li><b>March–August:</b> the northern summer; peak refrigerant demand in India (March–June) and the US/Europe (May–August). Service-market prices spike in heatwaves.</li>
+    <li><b>September–October:</b> the season ends; destocking and weaker spot prices.</li>
+    <li><b>Year-round:</b> fluoropolymers, CDMO and battery chemicals follow customers' capex and launches, not the weather.</li>
+    <li><b>Regulatory dates:</b> China's quota announcement (Q4), India's baseline years (2024–26) and clearance cut-off (end-2027), EU PFAS milestones (SEAC opinion by end-2026).</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">7 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (Srf Limited, Gujarat Fluorochemicals Ltd., Navin Fluorine International Limited, TANFAC Industries Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.0 pts (beat in 12 of 15 years); Aug +5.6 pts (beat in 10 of 16 years); Jul +5.4 pts (beat in 13 of 16 years).</li><li><b>Weakest months:</b> May -2.9 pts (beat in 8 of 15 years); Feb -0.8 pts (beat in 7 of 15 years); Nov -0.8 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 7 of 15 years (median -1.3 pts); Apr–Jul beat the Nifty in 8 of 15 years (median +4.2 pts); Aug–Sep beat the Nifty in 11 of 14 years (median +9.6 pts); Oct–Dec beat the Nifty in 10 of 14 years (median +3.9 pts); Sep–Nov beat the Nifty in 9 of 14 years (median +3.6 pts); Jan–Mar beat the Nifty in 8 of 15 years (median +3.3 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.0 points.</p><p><b>Reading it:</b> this is one of the few industries with a real mid-year edge: July (13 of 16 years) is as reliable as April (12 of 15), and August–September beat the Nifty in 11 of 14 years (median +9.6 points). That matches the refrigerant calendar: gas prices firm into the northern summer air-conditioning season and Q1 results (July–August) show it. May is the soft month.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AugSep" viewBox="0 0 720 280" role="img" aria-label="August to September return minus Nifty by year"></svg><figcaption>August–September return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>August–September misses (2012: −6.0; 2024: −1.7; 2025: −0.9).</b> 2012 was the carbon-credit collapse; 2024 and 2025 misses were marginal. The biggest were 2022 (+20.9) and 2018 (+19.6).</li>
+    <li><b>April misses (2013: −8.5; 2025: −2.0; 2019: −0.5).</b> 2013: the end of carbon-credit income; 2025: markets fell on US tariff news. The best Aprils were 2021 (+23.0), 2015 (+19.4) and 2023 (+16.2).</li>
+    <li><b>July misses (2023: −10.3; 2019: −4.0).</b> 2023 was the agrochemical destocking year for Navin and SRF; July otherwise beat the Nifty in 13 of 16 years.</li>
+    <li><b>May is soft:</b> the worst Mays were 2013 (−15.7), 2017 (−14.2) and 2018 (−14.0), each after strong runs.</li>
+    <li><b>April–July big years:</b> 2021 (+61.9) and 2014 (+58.7); failures in 2013 (−23.3) and 2018 (−18.8).</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>For fluorochemicals the calendar edge is real and has a business reason: refrigerant pricing firms into summer and Q1 results (July–August) report it. It works best when Chinese quotas are tight; in oversupply years (2018, 2023–24) it fades.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">8 · What moves demand and margins</p>
+  <h2>Seven drivers</h2>
+  <ol>
+    <li><b>China's HFC quota:</b> frozen at 2024 levels; the 2026 quota was flat to slightly lower. This is the single biggest driver of refrigerant prices.</li>
+    <li><b>India's baseline race:</b> capacity added in 2024–26 sets future rights; clearances for new HFC production stop after 2027. Expect more announcements (Tanfac R32, SRF, Navin, GFL) before then.</li>
+    <li><b>AC penetration and heatwaves:</b> India's room-AC penetration is only ~10%; the market grows double digits in hot years; data-centre cooling is a new demand pool.</li>
+    <li><b>Fluorspar, sulphur and HF costs:</b> fluorspar ~$550/t; sulphur records in 2026 hit HF makers (Tanfac).</li>
+    <li><b>Battery supply chains:</b> LiPF₆ and PVDF demand from cell makers outside China.</li>
+    <li><b>Agro and pharma intermediate cycles:</b> the 2023–25 agrochemical destocking hurt SRF's and Navin's specialty businesses.</li>
+    <li><b>PFAS regulation:</b> EU and US moves against "forever chemicals" could restrict some fluoropolymers; the EU decision is unlikely before Q3 2027 and would apply from 2029 at the earliest.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">9 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of SRF, Navin and Tanfac (plus Gujarat Fluorochemicals from 2020), price only; 2026 is to 18 September. There is no free long daily series for refrigerant prices, so the notes carry the price story. Named stock moves are that stock's calendar-year return.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a fluorochemical cycle</h3>
+  <ol>
+    <li><b>Regulation creates scarcity</b> (quotas, phase-outs, environmental closures) → refrigerant spreads widen.</li>
+    <li><b>Producers race to add capacity before baselines lock</b> (China before 2024; India before 2027).</li>
+    <li><b>Oversupply until the freeze bites</b> (China's 2021–23 volume race crushed prices).</li>
+    <li><b>The freeze bites</b> → scarcity pricing (2025–26); producers use the windfall to build fluoropolymers, HFOs and battery chemicals, the next leg.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Specialty chemistry, not refrigerants, made the long-term money.</b> SRF's 2014 and 2019 surges and Navin's 2015 and 2020 surges were driven by specialty and CDMO, not gases.</li>
+    <li><b>Policy windfalls end.</b> Carbon credits (to 2012) and Chinese quotas (from 2024) both created income that the market learned to discount.</li>
+    <li><b>The HF owner wins in upcycles.</b> Tanfac, the smallest, has been the basket's best performer in most recent years (2021, 2022, 2023, 2026).</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">10 · The global picture</p>
+  <h2>China makes most of it; the West holds the patents</h2>
+  <ul>
+    <li><b>China</b> dominates HF, refrigerants and fluoropolymers. Zhejiang Juhua alone holds ~38% of China's HFC quota; six producers hold over 90%.</li>
+    <li><b>Chemours, Honeywell, Daikin, Arkema, Solvay/Syensqo, 3M (exiting PFAS)</b> are the Western majors; they own HFO patents and many specialty grades.</li>
+    <li><b>India</b> is the main non-Chinese alternative for refrigerants and fluoropolymers; Western buyers are building supply chains outside China, especially for batteries and data-centre cooling.</li>
+    <li><b>Fluorspar:</b> China's shift from exporter to net importer tightens the global market; Mexico, South Africa and Mongolia fill the gap.</li>
+    <li><b>Country leadership shift:</b> the US and Europe invented CFCs, HFCs and HFOs; China took over volume production in the 2000s; India is now taking share in high-value niches (CDMO, fluoropolymers) and adding refrigerant capacity before its 2028 freeze.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">11 · Where technology is going</p>
+  <h2>Generations of refrigerants and new fluorine uses</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Generation</th><th>Example</th><th>Problem</th><th>Status</th></tr></thead><tbody>
+    <tr><td>1st: CFCs</td><td>R12</td><td>Destroys ozone</td><td>Banned</td></tr>
+    <tr><td>2nd: HCFCs</td><td>R22</td><td>Ozone and warming</td><td>Being phased out (India by 2030 for emissive uses)</td></tr>
+    <tr><td>3rd: HFCs</td><td>R32, R134a, R410A</td><td>High global-warming potential</td><td>Phase-down under Kigali</td></tr>
+    <tr><td>4th: HFOs and naturals</td><td>R1234yf, propane (R290), CO₂</td><td>Cost, flammability; PFAS concern about TFA breakdown products</td><td>Growing in the West; SRF building Indian HFO capacity</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><b>Data-centre liquid cooling</b> uses fluorinated fluids (Navin–Chemours project).</li>
+    <li><b>Batteries:</b> LiPF₆ salts and PVDF binders; new salts (LiFSI) are emerging.</li>
+    <li><b>Hydrogen:</b> fluoropolymer membranes (PFSA) in electrolysers and fuel cells.</li>
+    <li><b>Semiconductors and solar:</b> high-purity HF (Tanfac's solar-grade dilute HF), fluorinated etch gases and PFA piping.</li>
+  </ul>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">12 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Kigali Amendment (India, ratified September 2021)</td><td>Baseline = average HFC output 2024–26 plus 65% of HCFC baseline; freeze from 1 January 2028; cuts of 10% (2032), 20% (2037), 30% (2042), 85% (2047)</td><td>Capacity built before 2027 counts toward the baseline</td></tr>
+    <tr><td>MoEFCC clearance cut-off</td><td>No environmental clearance for new or additional HFC production beyond 31 December 2027 (April 2026 order)</td><td>Locks in incumbents; a rush to build before the deadline</td></tr>
+    <tr><td>China HFC quota</td><td>Freeze since 2024; 2026 quota flat to lower</td><td>Global price support</td></tr>
+    <tr><td>US AIM Act</td><td>HFC production cut 40% from 2024, deeper cuts later</td><td>Import demand and price support in the US</td></tr>
+    <tr><td>EU F-gas regulation and PFAS restriction</td><td>ECHA final consultation March–May 2026; SEAC opinion by end-2026; Commission decision unlikely before Q3 2027; application from 2029 at the earliest, with a conditional route for fluoropolymers</td><td>Long-dated risk for fluoropolymers and some refrigerants</td></tr>
+    <tr><td>Anti-dumping duties</td><td>India on some Chinese refrigerants; US on Chinese refrigerant blends</td><td>Protect domestic producers</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">13 · Where the cycle stands now</p>
+  <h2>September 2026: peak refrigerant economics, and a capacity race</h2>
+  <div class="sig">
+    <div class="sg"><div class="t">Refrigerant prices <span class="chip ch-good">Decade highs</span></div>R32 and R125 up 60%+ in H1 2026 on Chinese quotas.</div>
+    <div class="sg"><div class="t">Earnings <span class="chip ch-good">Record</span></div>SRF, Navin and GFL posted record or near-record Q1 FY27 results; Tanfac was squeezed by sulphur.</div>
+    <div class="sg"><div class="t">Capacity race <span class="chip ch-mid">Accelerating</span></div>Tanfac R32 (Q3 FY27), Navin R32 doubling, SRF Dahej and Odisha, before the end-2027 clearance cut-off.</div>
+    <div class="sg"><div class="t">Next leg <span class="chip ch-mid">Building</span></div>Battery chemicals (GFL), liquid cooling (Navin), HFOs (SRF).</div>
+  </div>
+  <h3>Q1 FY27 at a glance</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Revenue</th><th class="num">Profit</th><th>Note</th></tr></thead><tbody>
+    <tr><td>SRF</td><td class="num">₹5,033 cr (+32%)</td><td class="num">₹759 cr (+76%)</td><td>Record; normalisation warning</td></tr>
+    <tr><td>Gujarat Fluorochemicals</td><td class="num">₹1,588 cr (+24%)</td><td class="num">₹219 cr (+20%)</td><td>R32 and fluoropolymers</td></tr>
+    <tr><td>Navin Fluorine</td><td class="num">₹1,045 cr (+44%)</td><td class="num">₹243 cr (+108%)</td><td>All three segments grew</td></tr>
+    <tr><td>Tanfac</td><td class="num">₹187 cr (+6%)</td><td class="num">₹16.9 cr (−13%)</td><td>Sulphur and fuel costs</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +29.2% this year vs -10.7% for the Nifty (to 18 Sep 2026). Navin Fluorine and Tanfac are at or near highs (+40% and +43% above their 2020–25 peaks). SRF is 24% below its peak despite a record Q1 FY27, because management warned refrigerant pricing would normalise, specialty chemicals face Chinese pricing and Middle East exports were disrupted.</p>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">14 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>China R32, R125 and R134a prices; long-term contract prices</td><td>Chinese price reports, weekly; Cooling Post</td><td>Refrigerant margins</td></tr>
+    <tr><td>China HFC quota for next year</td><td>Ministry of Ecology and Environment, Q4</td><td>Supply cap</td></tr>
+    <tr><td>India room-AC sales and heatwaves</td><td>AC makers' results; IMD</td><td>Domestic demand</td></tr>
+    <tr><td>Fluorspar, sulphur and HF prices</td><td>Price trackers, monthly</td><td>Costs</td></tr>
+    <tr><td>New Indian HFC capacity announcements</td><td>Company filings before end-2027</td><td>Future oversupply risk</td></tr>
+    <tr><td>Battery-chemical approvals and orders</td><td>GFL disclosures</td><td>New growth</td></tr>
+    <tr><td>EU PFAS restriction milestones</td><td>ECHA</td><td>Regulatory risk</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">15 · Adjacent industries and proxies</p>
+  <h2>Who else feels the cycle</h2>
+  <ul>
+    <li><b>Air conditioners and consumer durables:</b> refrigerant is a cost for Voltas, Blue Star, Daikin and Amber.</li>
+    <li><b>Chlor-Alkali</b> (003): chloromethane supply.</li>
+    <li><b>Agrochemicals and Pharma:</b> buyers of fluorinated intermediates.</li>
+    <li><b>Battery makers:</b> buyers of LiPF₆ and PVDF.</li>
+    <li><b>Aluminium:</b> buyers of aluminium fluoride.</li>
+    <li><b>Data centres:</b> liquid-cooling fluids.</li>
+    <li><b>Inorganic chemicals</b> (004): sulphur and acid costs.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">16 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <div class="two"><div><ol>
+    <li>What share of profit comes from refrigerants, and what margin do you assume at "normal" pricing?</li>
+    <li>How much capacity will count toward India's Kigali baseline, and what's planned before the 2027 cut-off?</li>
+    <li>What is your HF and fluorspar integration and sourcing?</li>
+    <li>Where are fluoropolymer and battery-chemical approvals, and with which customers?</li>
+    <li>What exposure do you have to PFAS restrictions?</li>
+  </ol></div><div><h3>Red flags</h3><ul>
+    <li>Extrapolating peak refrigerant prices.</li>
+    <li>Battery capex without firm offtake.</li>
+    <li>Heavy dependence on a single CDMO molecule.</li>
+    <li>A crowded rush of new R32 capacity before 2028.</li>
+  </ul></div></div>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">17 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Refrigerant pricing is structurally higher now."</td><td>Partly: quotas cap China's supply, but India is adding capacity before its baseline, and SRF itself expects normalisation.</td></tr>
+    <tr><td>"HFOs will make HFC makers obsolete."</td><td>Slowly: India and most developing markets will use HFCs into the 2040s under Kigali; SRF is building HFOs anyway.</td></tr>
+    <tr><td>"PFAS rules will kill fluoropolymers."</td><td>Not settled: many uses (semiconductors, medical, batteries) have no substitutes, and the EU proposal now includes a conditional route; nothing applies before 2029.</td></tr>
+    <tr><td>"SRF's fall means the refrigerant cycle is over."</td><td>SRF's record quarter shows the cycle is strong; the stock reflects its own warning, specialty pressure and valuation.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">18 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. R32, PTFE" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Chemistry and products</h3><dl>
+    <dt>Fluorspar (acidspar, metspar)</dt><dd>Calcium fluoride ore; acid grade (≥97% CaF₂) for HF, metallurgical grade for steel.</dd>
+    <dt>AHF</dt><dd>Anhydrous hydrofluoric acid, the building block for most fluorochemicals.</dd>
+    <dt>DHF</dt><dd>Dilute HF, used in solar and semiconductor cleaning.</dd>
+    <dt>CFC, HCFC, HFC, HFO</dt><dd>Four generations of refrigerants, from ozone-destroying to low-warming.</dd>
+    <dt>GWP</dt><dd>Global-warming potential relative to CO₂ (R32 ≈ 675; R410A ≈ 2,088).</dd>
+    <dt>ODP</dt><dd>Ozone-depletion potential; zero for HFCs and HFOs.</dd>
+    <dt>R32, R125, R134a, R410A</dt><dd>Common HFCs; R410A is a 50/50 blend of R32 and R125.</dd>
+    <dt>R1234yf / R1234ze</dt><dd>HFO refrigerants for car ACs and chillers.</dd>
+    <dt>R290</dt><dd>Propane used as a natural refrigerant.</dd>
+    <dt>HFC-23</dt><dd>A super-potent greenhouse gas made as a by-product of R22; its destruction earned carbon credits until 2013.</dd>
+    <dt>PTFE</dt><dd>Polytetrafluoroethylene (Teflon): non-stick, chemically inert.</dd>
+    <dt>PVDF</dt><dd>Polyvinylidene fluoride: battery binder, coatings, membranes.</dd>
+    <dt>FKM</dt><dd>Fluoroelastomer: high-temperature seals.</dd>
+    <dt>PFA / FEP</dt><dd>Melt-processable fluoropolymers for tubing and cable insulation.</dd>
+    <dt>TFE</dt><dd>Tetrafluoroethylene, the monomer for PTFE, made from R22.</dd>
+    <dt>LiPF₆</dt><dd>Lithium hexafluorophosphate, the salt in lithium-ion electrolytes.</dd>
+    <dt>LiFSI</dt><dd>A newer lithium salt for higher-performance electrolytes.</dd>
+    <dt>PFSA membrane</dt><dd>A fluorinated ion-exchange membrane used in fuel cells and electrolysers.</dd>
+    <dt>MDI propellant</dt><dd>Medical-grade HFC (R134a, R152a) used in asthma inhalers.</dd>
+    <dt>Chloromethanes</dt><dd>Methyl chloride, methylene chloride, chloroform, carbon tetrachloride; feedstocks for refrigerants.</dd>
+    <dt>TFA</dt><dd>Trifluoroacetic acid, a persistent breakdown product of some HFOs.</dd>
+    <dt>Two-phase immersion cooling</dt><dd>Cooling servers by submerging them in a fluid that boils and condenses.</dd>
+    <dt>Refrigerant blend</dt><dd>A mix of HFCs sold under one number (R410A, R407C, R404A).</dd>
+    <dt>Service (aftermarket) refrigerant</dt><dd>Gas sold to top up or repair existing ACs; prices spike in heatwaves.</dd>
+    <dt>Fluorination</dt><dd>The chemical step that adds fluorine to a molecule; hazardous and specialised.</dd>
+    <dt>Captive HF</dt><dd>Hydrofluoric acid made in-house rather than bought, a cost and supply advantage.</dd>
+    <dt>Carbon tetrachloride</dt><dd>A chloromethane used as a feedstock for some refrigerants and HFOs.</dd>
+  </dl>
+  <h3>Regulation and business</h3><dl>
+    <dt>Montreal Protocol</dt><dd>The 1987 treaty that phased out ozone-depleting substances.</dd>
+    <dt>Kigali Amendment</dt><dd>The 2016 Montreal Protocol amendment to phase down HFCs.</dd>
+    <dt>A5 Group 2</dt><dd>The Kigali group including India, with a 2024–26 baseline and a 2028 freeze.</dd>
+    <dt>Baseline</dt><dd>The reference production level from which phase-down cuts are measured.</dd>
+    <dt>Quota</dt><dd>A legal production or consumption cap per company.</dd>
+    <dt>AIM Act</dt><dd>The US law phasing down HFC production and imports.</dd>
+    <dt>F-gas regulation</dt><dd>The EU's rules on fluorinated greenhouse gases.</dd>
+    <dt>PFAS</dt><dd>Per- and polyfluoroalkyl substances ("forever chemicals"), under regulatory scrutiny.</dd>
+    <dt>ECHA / RAC / SEAC</dt><dd>The EU chemicals agency and its risk-assessment and socio-economic committees.</dd>
+    <dt>CER / CDM</dt><dd>Certified emission reductions under the UN clean development mechanism: carbon credits.</dd>
+    <dt>CDMO</dt><dd>Contract development and manufacturing organisation.</dd>
+    <dt>QIP</dt><dd>Qualified institutional placement, a quick share sale to institutions (Tanfac raised ₹250 cr).</dd>
+    <dt>Environmental clearance (EC)</dt><dd>Government approval needed to build or expand a chemical plant; India will stop issuing them for new HFC capacity after 2027.</dd>
+  </dl>
+  <p class="note" id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">19 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why did refrigerant prices hit decade highs in 2026?</summary><p>China capped HFC production in 2024 and kept 2026 quotas flat while demand grew; six producers control 90% of quotas.</p></details>
+  <details class="q"><summary>2. Why is R22 still made if it's being phased out?</summary><p>It's allowed as a feedstock for PTFE (non-emissive use).</p></details>
+  <details class="q"><summary>3. Why does 2024–26 output matter for Indian producers?</summary><p>It sets India's Kigali baseline, the cap from 2028.</p></details>
+  <details class="q"><summary>4. What makes Gujarat Fluorochemicals different from SRF?</summary><p>It's mainly a fluoropolymer company building a battery-chemicals business; SRF is a conglomerate with specialty chemicals, packaging films and textiles.</p></details>
+  <details class="q"><summary>5. Which months have a real edge, and why?</summary><p>April, July and August–September: the air-conditioning season and Q1 results.</p></details>
+  <details class="q"><summary>6. What income did SRF and Navin lose in 2012–13?</summary><p>Carbon-credit income from destroying HFC-23, after CER prices collapsed and the EU stopped accepting industrial-gas credits.</p></details>
+  <details class="q"><summary>7. Why is Tanfac building an R32 plant now?</summary><p>To have capacity counted before India's 2028 freeze and the end-2027 clearance cut-off, using its own HF.</p></details>
+  <details class="q"><summary>8. When could EU PFAS restrictions actually apply?</summary><p>Not before 2029; the Commission is unlikely to decide before Q3 2027.</p></details>
+  <details class="q"><summary>9. Why did SRF's stock fall despite a record quarter?</summary><p>Management warned refrigerant prices would normalise; specialty chemicals face Chinese pricing; Middle East exports were hit.</p></details>
+  <details class="q"><summary>10. What's the next growth leg for each company?</summary><p>SRF: HFOs and HF (Odisha); GFL: battery chemicals; Navin: CDMO and liquid-cooling fluids; Tanfac: R32 and solar-grade HF.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">20 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of members vs NSE:NIFTY; individual stock returns for the year notes.</li>
+    <li><a href="https://www.bloominglobal.com/media/detail/china-refrigerant-prices-hit-record-highs-in-2026">China refrigerant prices 2026</a>; <a href="https://en.cheaa.org/contents/483/13080.html">China 2026 quotas</a>; <a href="https://www.itiger.com/news/1139744620">Kaiyuan Securities on quotas and SRF/Navin capacity</a>; <a href="https://www.fluorined-chemicals.com/info/r32-refrigerant-price-trends-and-global-expor-103027209.html">R32 price trends</a>; <a href="https://www.coolingpost.com/world-news/price-of-chinese-r32-set-to-rise/">Cooling Post on R32 contract prices</a>.</li>
+    <li><a href="https://www.srf.com/news/srf-limited-delivers-robust-q1fy27-results-driven-by-strong-performance-across-businesses">SRF Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/srf-q1-fy27-slides-reveal-record-quarter-management-warns-of-normalization-93CH-4807633">SRF normalisation warning</a>; <a href="https://univest.in/blogs/why-is-srf-limited-share-price-falling-key-reasons-amp-share-price-target-2026">SRF share price</a>; <a href="https://www.angelone.in/news/stocks/srf-share-price-rises-after-2-300-crore-hfo-refrigerant-expansion-boosts-india-s-self-reliance-push">SRF Odisha HFO project</a>.</li>
+    <li><a href="https://www.multibagg.ai/market-pulse/articles/gujarat-fluorochemicals-q1fy27-results-cmspxxcyr0e4v0znx0ur6r2rb">GFL Q1 FY27</a>; <a href="https://m.investing.com/news/transcripts/earnings-call-transcript-gujarat-fluorochemicals-posts-strong-q1-2026-growth-93CH-4854947?ampMode=1">GFL call (battery chemicals)</a>; <a href="https://tradebrains.in/gujarat-fluorochemicals-subsidiary-gfcl-ev-raises-80-million-from-global-investor/">GFCL EV funding</a>.</li>
+    <li><a href="https://www.indianchemicalnews.com/chemical/navin-fluorine-revenue-jumps-44-yoy-to-rs-10451-cr-31417">Navin Q1 FY27</a>; <a href="https://www.investing.com/news/company-news/navin-fluorine-q1-fy27-slides-profit-doubles-capex-ramps-up-93CH-4838286">Navin slides</a>.</li>
+    <li><a href="https://www.indianchemicalnews.com/chemical/tanfac-industries-posts-rs-1685-crore-q1-fy27-profit-31232">Tanfac Q1 FY27 and R32 project</a>; <a href="https://www.indianchemicalnews.com/chemical/tanfac-commissions-rs-100-crore-expanded-capacity-of-hydrofluoric-acid-capacity-23626">Tanfac HF expansion</a>; <a href="https://www.energetica-india.net/news/tanfac-commissions-5000-tpa-high-purity-solar-grade-dilute-hydrofluoric-acid-plant">Tanfac DHF plant</a>.</li>
+    <li><a href="https://www.procurementresource.com/resource-center/fluorspar-price-trends">Fluorspar prices</a>; <a href="https://www.indexbox.io/store/india-fluorspar-market-analysis-forecast-size-trends-and-insights-1/">India fluorspar imports</a>; <a href="https://www.nrdcindia.org/pdf/India-HFC_Phase_Down_Pathways_web.pdf">NRDC: India HFC phase-down</a>; <a href="https://visionias.in/current-affairs/news-today/2026-04-09/environment/india-to-discontinue-new-clearances-for-hydrofluorocarbons-hfcs-production-post-2027">India's HFC clearance cut-off</a>.</li>
+    <li><a href="https://www.whitecase.com/insight-alert/europes-pfas-restriction-proposal-moving-forward">White &amp; Case: EU PFAS restriction</a>; <a href="https://www.cov.com/en/news-and-insights/insights/2026/03/echa-launches-a-new-public-consultation-on-a-proposed-universal-ban-on-pfas-in-the-eu">Covington: ECHA consultation 2026</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -10.7}, {"y": 2013, "v": -10.8}, {"y": 2014, "v": 16.6}, {"y": 2015, "v": 7.4}, {"y": 2016, "v": -5.9}, {"y": 2017, "v": -11.1}, {"y": 2018, "v": 9.5}, {"y": 2019, "v": 11.5}, {"y": 2020, "v": -1.3}, {"y": 2021, "v": 5.9}, {"y": 2022, "v": -1.4}, {"y": 2023, "v": 6.9}, {"y": 2024, "v": -8.1}, {"y": 2025, "v": -2.1}, {"y": 2026, "v": 6.5}], "AprJul": [{"y": 2012, "v": -12.5}, {"y": 2013, "v": -23.3}, {"y": 2014, "v": 58.7}, {"y": 2015, "v": 56.3}, {"y": 2016, "v": 18.1}, {"y": 2017, "v": -7.8}, {"y": 2018, "v": -18.8}, {"y": 2019, "v": -7.9}, {"y": 2020, "v": 31.0}, {"y": 2021, "v": 61.9}, {"y": 2022, "v": 4.2}, {"y": 2023, "v": -5.4}, {"y": 2024, "v": -1.0}, {"y": 2025, "v": 9.2}, {"y": 2026, "v": 26.3}], "AugSep": [{"y": 2012, "v": -6.0}, {"y": 2013, "v": 2.3}, {"y": 2014, "v": 7.7}, {"y": 2015, "v": 13.6}, {"y": 2016, "v": 16.2}, {"y": 2017, "v": 11.8}, {"y": 2018, "v": 19.6}, {"y": 2019, "v": 10.0}, {"y": 2020, "v": 9.1}, {"y": 2021, "v": 17.9}, {"y": 2022, "v": 20.9}, {"y": 2023, "v": 4.8}, {"y": 2024, "v": -1.7}, {"y": 2025, "v": -0.9}], "OctDec": [{"y": 2012, "v": -7.6}, {"y": 2013, "v": 21.3}, {"y": 2014, "v": 0.7}, {"y": 2015, "v": 25.7}, {"y": 2016, "v": 22.5}, {"y": 2017, "v": 21.8}, {"y": 2018, "v": -2.3}, {"y": 2019, "v": 2.8}, {"y": 2020, "v": -5.2}, {"y": 2021, "v": 8.1}, {"y": 2022, "v": -13.3}, {"y": 2023, "v": 5.0}, {"y": 2024, "v": 14.4}, {"y": 2025, "v": 1.1}], "SepNov": [{"y": 2012, "v": -11.5}, {"y": 2013, "v": 22.4}, {"y": 2014, "v": 2.2}, {"y": 2015, "v": 20.8}, {"y": 2016, "v": 21.1}, {"y": 2017, "v": 24.7}, {"y": 2018, "v": 3.1}, {"y": 2019, "v": -7.7}, {"y": 2020, "v": 4.1}, {"y": 2021, "v": -1.7}, {"y": 2022, "v": 12.4}, {"y": 2023, "v": -7.3}, {"y": 2024, "v": 11.2}, {"y": 2025, "v": -4.4}], "JanMar": [{"y": 2012, "v": -6.6}, {"y": 2013, "v": -16.2}, {"y": 2014, "v": 21.7}, {"y": 2015, "v": 18.3}, {"y": 2016, "v": -12.1}, {"y": 2017, "v": -7.3}, {"y": 2018, "v": -2.9}, {"y": 2019, "v": -0.8}, {"y": 2020, "v": 6.1}, {"y": 2021, "v": 3.9}, {"y": 2022, "v": 6.5}, {"y": 2023, "v": 9.1}, {"y": 2024, "v": -15.5}, {"y": 2025, "v": 15.9}, {"y": 2026, "v": 3.3}]}, "my": {"1": {"2012": 6.0, "2013": -6.2, "2014": 4.5, "2015": 10.0, "2016": -6.7, "2017": 4.5, "2018": -12.8, "2019": -10.3, "2020": 10.5, "2021": -1.6, "2022": 8.0, "2023": 2.2, "2024": -7.9, "2025": 18.3, "2026": -3.2}, "2": {"2012": -7.1, "2013": -4.2, "2014": -4.1, "2015": 2.8, "2016": -8.7, "2017": -15.6, "2018": 10.5, "2019": 7.1, "2020": 5.8, "2021": 6.2, "2022": -3.7, "2023": 3.6, "2024": -6.5, "2025": -1.5, "2026": 2.8}, "3": {"2012": -3.8, "2013": -7.4, "2014": 21.2, "2015": 4.6, "2016": 4.5, "2017": 5.6, "2018": -0.6, "2019": 3.6, "2020": -5.8, "2021": -0.4, "2022": 2.6, "2023": 3.3, "2024": -1.5, "2025": -0.6, "2026": 4.0}, "4": {"2012": 0.9, "2013": -8.5, "2014": 7.0, "2015": 19.4, "2016": 4.9, "2017": 3.3, "2018": 5.0, "2019": -0.5, "2020": 15.3, "2021": 23.0, "2022": 0.8, "2023": 16.2, "2024": 11.0, "2025": -2.0, "2026": 9.5}, "5": {"2012": 2.6, "2013": -15.7, "2014": 11.2, "2015": 2.5, "2016": 7.0, "2017": -14.2, "2018": -14.0, "2019": 0.7, "2020": 2.8, "2021": -10.0, "2022": -1.9, "2023": 2.3, "2024": -13.1, "2025": -4.2, "2026": 0.1}, "6": {"2012": -15.3, "2013": -6.8, "2014": 23.9, "2015": 6.4, "2016": -1.5, "2017": -0.9, "2018": -7.7, "2019": -4.3, "2020": 0.7, "2021": 17.5, "2022": -0.1, "2023": -10.7, "2024": 2.2, "2025": 10.1, "2026": 9.0}, "7": {"2011": 16.6, "2012": -1.6, "2013": 6.6, "2014": 4.2, "2015": 19.4, "2016": 5.6, "2017": 5.6, "2018": 0.1, "2019": -4.0, "2020": 6.1, "2021": 20.6, "2022": 6.1, "2023": -10.3, "2024": 0.9, "2025": 5.2, "2026": 4.8}, "8": {"2011": -2.1, "2012": -1.9, "2013": -3.5, "2014": 8.4, "2015": 15.9, "2016": 14.1, "2017": 1.3, "2018": 20.3, "2019": 5.8, "2020": 6.7, "2021": 11.1, "2022": -0.6, "2023": 13.0, "2024": -6.1, "2025": -0.6, "2026": 7.0}, "9": {"2011": 3.5, "2012": -3.9, "2013": 6.5, "2014": -0.7, "2015": -2.1, "2016": 2.0, "2017": 10.6, "2018": 0.4, "2019": 3.8, "2020": 2.3, "2021": 5.4, "2022": 20.9, "2023": -7.7, "2024": 4.8, "2025": -0.3}, "10": {"2011": -2.4, "2012": 2.0, "2013": 1.1, "2014": 4.3, "2015": 31.2, "2016": 6.5, "2017": 16.4, "2018": 4.9, "2019": 6.7, "2020": -2.9, "2021": -11.1, "2022": -2.7, "2023": 0.1, "2024": 3.2, "2025": -1.7}, "11": {"2011": -2.4, "2012": -9.1, "2013": 11.5, "2014": -1.3, "2015": -5.5, "2016": 12.2, "2017": -3.1, "2018": -2.3, "2019": -16.1, "2020": 4.7, "2021": 4.8, "2022": -6.0, "2023": 0.5, "2024": 3.1, "2025": -2.3}, "12": {"2011": -9.0, "2012": -0.5, "2013": 5.9, "2014": -1.9, "2015": 1.8, "2016": 2.9, "2017": 7.6, "2018": -5.1, "2019": 14.7, "2020": -5.8, "2021": 16.2, "2022": -4.6, "2023": 4.2, "2024": 8.3, "2025": 5.1}}, "basket": ["Srf Limited", "Gujarat Fluorochemicals Ltd.", "Navin Fluorine International Limited", "TANFAC Industries Limited"], "nbasket": 4, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.8, "rel": 1.0, "hit": 8, "n": 15}, {"m": 2, "abs": -2.0, "rel": -0.8, "hit": 7, "n": 15}, {"m": 3, "abs": 1.8, "rel": 1.9, "hit": 8, "n": 15}, {"m": 4, "abs": 9.6, "rel": 7.0, "hit": 12, "n": 15}, {"m": 5, "abs": -1.8, "rel": -2.9, "hit": 8, "n": 15}, {"m": 6, "abs": 3.3, "rel": 1.5, "hit": 7, "n": 15}, {"m": 7, "abs": 7.3, "rel": 5.4, "hit": 13, "n": 16}, {"m": 8, "abs": 5.3, "rel": 5.6, "hit": 10, "n": 16}, {"m": 9, "abs": 3.7, "rel": 3.0, "hit": 10, "n": 15}, {"m": 10, "abs": 5.8, "rel": 3.7, "hit": 10, "n": 15}, {"m": 11, "abs": 0.2, "rel": -0.8, "hit": 6, "n": 15}, {"m": 12, "abs": 3.3, "rel": 2.7, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": -7.9, "n": 27.7, "rel": -35.6, "partial": false}, {"y": 2013, "b": -16.6, "n": 6.8, "rel": -23.4, "partial": false}, {"y": 2014, "b": 158.4, "n": 31.4, "rel": 127.0, "partial": false}, {"y": 2015, "b": 154.1, "n": -4.1, "rel": 158.1, "partial": false}, {"y": 2016, "b": 50.7, "n": 3.0, "rel": 47.7, "partial": false}, {"y": 2017, "b": 50.6, "n": 28.6, "rel": 22.0, "partial": false}, {"y": 2018, "b": -2.2, "n": 3.2, "rel": -5.4, "partial": false}, {"y": 2019, "b": 14.9, "n": 12.0, "rel": 2.9, "partial": false}, {"y": 2020, "b": 61.8, "n": 14.9, "rel": 46.9, "partial": false}, {"y": 2021, "b": 154.9, "n": 24.1, "rel": 130.7, "partial": false}, {"y": 2022, "b": 22.5, "n": 4.3, "rel": 18.2, "partial": false}, {"y": 2023, "b": 37.1, "n": 20.0, "rel": 17.1, "partial": false}, {"y": 2024, "b": 4.3, "n": 8.8, "rel": -4.5, "partial": false}, {"y": 2025, "b": 39.7, "n": 10.5, "rel": 29.1, "partial": false}, {"y": 2026, "b": 29.2, "n": -10.7, "rel": 39.8, "partial": true}], "dd": [{"co": "Srf", "peak": "Jul 2025", "fp": -24, "y1": -14}, {"co": "Gujarat Fluorochemicals", "peak": "Oct 2024", "fp": -5, "y1": 24}, {"co": "Navin Fluorine International", "peak": "Dec 2025", "fp": 40, "y1": 76}, {"co": "TANFAC Industries", "peak": "Aug 2025", "fp": 43, "y1": 49}], "win": {"FebMar": {"mean": 0.9, "median": -1.3, "hit": 7, "n": 15}, "AprJul": {"mean": 12.6, "median": 4.2, "hit": 8, "n": 15}, "AugSep": {"mean": 9.0, "median": 9.6, "hit": 11, "n": 14}, "OctDec": {"mean": 6.8, "median": 3.9, "hit": 10, "n": 14}, "SepNov": {"mean": 6.4, "median": 3.6, "hit": 9, "n": 14}, "JanMar": {"mean": 1.6, "median": 3.3, "hit": 8, "n": 15}}, "ytd": {"b": 29.2, "n": -10.7}, "notes": {"2012": "Carbon-credit income from destroying HFC-23 (a by-product of R22) dried up as CER prices collapsed, and refrigerant prices fell back from 2011 highs. SRF \u221216%, Tanfac \u221217%.", "2013": "The EU stopped accepting industrial-gas carbon credits, ending that income for good; Tanfac \u221252%. SRF +11% as its specialty chemicals grew.", "2014": "The re-rating year for Indian specialty chemistry: SRF +293% and Navin +134% as refrigerant and specialty-chemical profits recovered.", "2015": "Navin +206% (specialty and contract manufacturing) and Tanfac +190%; the basket beat the Nifty by 158 points.", "2016": "Tanfac +72%, Navin +35%, SRF +22%: steady gains as China began closing polluting plants.", "2017": "Chinese environmental inspections tightened fluorochemical supply: Tanfac +89%, Navin +64%.", "2018": "Chinese HFC oversupply softened refrigerant prices; Navin \u221216% while Tanfac rose 75%.", "2019": "SRF +72% on specialty agro intermediates; Navin +44%; Tanfac \u221250%. Gujarat Fluorochemicals was demerged from GFL and listed in October.", "2020": "The China+1 story began: Navin +159% (contract manufacturing), SRF +62%, Tanfac +63%.", "2021": "The chemicals boom: Gujarat Fluorochemicals +325% on fluoropolymers and battery plans, Tanfac +202%, SRF +117%. The basket beat the Nifty by 131 points.", "2022": "Tanfac +65% under promoter Anupam Rasayan; GFL +29%; SRF and Navin flat as refrigerant prices weakened.", "2023": "Tanfac +166% on its HF expansion plan; Navin \u22125% as agrochemical customers destocked.", "2024": "China's HFC production freeze began, but agro and specialty weakness dominated: Navin \u221216%, SRF \u221210%.", "2025": "Quota scarcity lifted R32 and R125 prices: Navin +82%, Tanfac +45%, SRF +37%; GFL \u221212% as battery-chemical growth slowed.", "2026": "R32 and R125 at decade highs; Tanfac +66% (entering R32), Navin +45%, GFL +25%. SRF \u221218% despite record profits, on its normalisation warning and Chinese pressure on specialty chemicals."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

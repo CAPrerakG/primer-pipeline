@@ -1,0 +1,614 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iron Ore & Manganese Mining Primer</title>
+<meta name="description" content="Industry 64 of 278: the ore at the bottom of the steel chain. How iron ore and manganese are priced, why India&#x27;s miners earn more than global peers in some years and less in others, NMDC&#x27;s record 53 mt year, MOIL&#x27;s manganese monopoly, Sandur&#x27;s move from mining into steel, a listed company whose mines have not run since 2020, and what Simandou means for prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Iron Ore &amp; Manganese · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#pricing">How ore is priced</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 64 of 278 · Metals family, part 1</div>
+  <h1>Iron Ore &amp; Manganese Mining</h1>
+  <p class="lede">Steel begins with iron ore, and almost every tonne of steel needs a little manganese to make it strong. India digs about 310 million tonnes of iron ore a year — the fourth largest output in the world — and is one of the few countries with a listed, state-owned manganese miner. These are businesses with no marketing, no brands and one product whose price is set in China: when ore prices rise, profits soar; when they fall, volume records count for nothing. This primer explains how ore is mined, graded and priced, what royalties and auctions take out of the price, how the four listed companies differ, and why 2026 has been a bad year for them despite record production.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 4 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Ferro Alloys</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">53.15 mt</div><div class="l">NMDC's FY26 iron ore output — the first Indian miner past 50 mt</div></div>
+    <div class="stat"><div class="n">310 mt</div><div class="l">India's iron ore production in FY26, up 7%</div></div>
+    <div class="stat"><div class="n">~$97/t</div><div class="l">Iron ore, down from $158 at the end of 2020</div></div>
+    <div class="stat"><div class="n">3 of 15</div><div class="l">Years in which the basket beat the Nifty in February–March</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Record volumes, falling prices</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Steel is made by melting rock that has iron in it. That rock is called iron ore, and digging it out of a hill is the first step in making everything from cars to bridges. A pinch of another rock, manganese, is added in the furnace, like salt in cooking — without it the steel would be brittle. The companies here own the hills. They cannot choose their price: it is set by what steel makers around the world, especially in China, are willing to pay. So they can dig more rock than ever and still earn less, if the price has fallen.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is a price-taking business at the bottom of the steel chain, and the price is falling while volumes rise.</p>
+    <ul>
+      <li><b>Volumes:</b> NMDC produced a record 53.15 mt in FY26, targets 60 mt in FY27 and 100 mt by 2030. India's output rose 7% to 310 mt.</li>
+      <li><b>Prices:</b> iron ore is about $97 a tonne against $158 at end-2020; consensus is roughly $95 for 2026 as Guinea's Simandou ramps up.</li>
+      <li><b>Manganese:</b> MOIL's Q1 FY27 profit rose 70% on a 10% higher realisation; it targets 3.5 mt by FY30.</li>
+      <li><b>Integration:</b> Sandur has moved from mining into ferro alloys, coke and specialty steel — FY26 income ₹5,163 cr, up 61%.</li>
+      <li><b>Caution:</b> OMDC, valued at ₹2,294 cr, has had no mining operations since 2020; it is a lease-value play, not a producer.</li>
+      <li><b>Valuation:</b> NMDC trades at about 9 times annualised Q1 profit, MOIL 14 times, Sandur 13 times FY26 profit.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Lumps, fines, pellets and manganese grades</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Who buys it</th><th>Pricing</th></tr></thead><tbody>
+    <tr><td>Iron ore lumps</td><td>Coarse ore that can go straight into a blast furnace or sponge-iron kiln</td><td>Steel mills, sponge-iron plants</td><td>Premium over fines</td></tr>
+    <tr><td>Iron ore fines</td><td>Fine ore that must be sintered or pelletised first</td><td>Large integrated mills, pellet plants</td><td>Discount to lumps; the global benchmark grade is 62% Fe</td></tr>
+    <tr><td>Pellets</td><td>Fines rolled into marble-sized balls and hardened</td><td>Blast furnaces and direct-reduction plants</td><td>Premium over fines; made by pellet plants, not miners</td></tr>
+    <tr><td>Manganese ore</td><td>Ore graded by manganese content, used to make ferro alloys</td><td>Ferro alloy makers (see 065)</td><td>Grade-linked prices, revised quarterly by MOIL</td></tr>
+    <tr><td>Electrolytic manganese dioxide (EMD)</td><td>A refined product used in dry-cell batteries</td><td>Battery makers</td><td>Specialty pricing</td></tr>
+    <tr><td>By-products</td><td>Ferro alloys, coke, sinter and, at integrated miners, steel</td><td>Steel chain</td><td>Follows steel prices</td></tr>
+  </tbody></table></div>
+  <p>Grade is everything. Indian ore is generally high in iron (many Odisha and Chhattisgarh deposits run above 62% Fe) but often high in alumina, which raises costs in the furnace. That is why India both exports low-grade fines and imports some high-grade ore for coastal mills. In manganese, India's ore is mostly medium grade and the country imports a large share of its needs from South Africa, Australia and Gabon.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a hill in Odisha to a steel beam</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Exploration and leases</h4><div class="an">The permission</div>Blocks are auctioned by state governments; winners bid a share of revenue as premium.<div class="who">State governments, IBM, the mines ministry</div><div class="m">The premium bid decides economics for decades</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Mining</h4><div class="an">The digging</div>Open-cast benches, drilling and blasting (see 060), excavators and dumpers.<div class="who">NMDC, MOIL, Sandur, captive mines of steel makers</div><div class="m">Stripping ratio and haulage cost</div></div>
+    <div class="stage"><div class="no">03</div><h4>Processing</h4><div class="an">The clean-up</div>Crushing, screening, washing and beneficiation to lift grade.<div class="who">Miners; specialist beneficiation plants</div><div class="m">Recovery and alumina removal</div></div>
+    <div class="stage"><div class="no">04</div><h4>Logistics</h4><div class="an">The journey</div>Conveyors, slurry pipelines, rail rakes and ports.<div class="who">Indian Railways, ports (see the logistics sections)</div><div class="m">Often the largest controllable cost</div></div>
+    <div class="stage"><div class="no">05</div><h4>Steel and alloys</h4><div class="an">The customer</div>Sponge iron, blast furnaces, ferro alloys and finally steel.<div class="who">Steel makers; ferro alloy producers (065)</div><div class="m">Steel demand sets ore demand</div></div>
+    <div class="stage"><div class="no">06</div><h4>Government</h4><div class="an">The silent partner</div>Royalty, district mineral foundation, exploration levy and auction premium.<div class="who">Centre and states</div><div class="m">Takes a fifth or more of revenue</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Governments</b> auction the right to mine.</li>
+    <li><b>Miners</b> blast and dig the ore.</li>
+    <li><b>Plants</b> crush and wash it to raise its grade.</li>
+    <li><b>Railways and ports</b> move it, often thousands of kilometres.</li>
+    <li><b>Steel mills</b> melt it; the government takes its share at every tonne.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical variable is the gap between the landed price a steel mill will pay and the miner's all-in cost, including royalty, district mineral foundation contributions and any auction premium. In the auctions since 2015, some bidders offered premiums above 100% of the reference price, which leaves them earning almost nothing when ore prices fall. NMDC, MOIL and Sandur hold older, low-premium leases, which is why they remain profitable at prices that would close a newly auctioned mine. That advantage is finite: leases expire, and renewals come at auction.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 4 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>NMDC (~₹70,642 cr)</td><td>India's largest iron ore miner, state-owned: mines in Chhattisgarh (Bailadila) and Karnataka (Donimalai), with a slurry pipeline and pellet plants; demerged its steel plant in 2022–23.</td><td>FY26 production 53.15 mt and sales 50.23 mt, both records. Q1 FY27 production 15.12 mt (+26%) but sales 11.73 mt (+2%); revenue ₹6,795 cr (+2%), profit ₹2,007 cr (+2%). Targets 60 mt in FY27 and 100 mt by 2030. About 9 times annualised Q1 profit. Stock −5% in 2026 and still 44% below its January 2010 high.</td></tr>
+    <tr><td>Sandur Manganese &amp; Iron Ores (~₹8,781 cr)</td><td>A Karnataka miner that has become an integrated mines-to-metals group: iron and manganese ore, ferro alloys, coke and, through Arjas Steel, specialty steel.</td><td>FY26 total income ₹5,163 cr (+61%), profit ₹658 cr; iron ore output 4.45 mt (+14%), manganese +15%; net debt-free at March 2026. About 13 times FY26 profit. Stock −24% in 2026.</td></tr>
+    <tr><td>MOIL (~₹4,816 cr)</td><td>State-owned, India's largest manganese ore producer, with mines in Maharashtra and Madhya Pradesh; also makes electrolytic manganese dioxide and ferro alloys.</td><td>Q1 FY27 revenue ₹371 cr (+6.6%), profit ₹87.6 cr (+70%) on realisations of ₹9,749 a tonne (+10%); production 5.08 lakh tonnes. Targets 3.5 mt by FY30 against about 2.35 mt in FY26, with ₹664 cr of shaft projects. About 14 times annualised Q1 profit. Stock −34% in 2026.</td></tr>
+    <tr><td>Orissa Minerals Development — OMDC (~₹2,294 cr)</td><td>A state-owned holder of three iron and manganese leases in Odisha's Keonjhar district, a subsidiary of RINL through Eastern Investments.</td><td>Mining has been suspended since 2020 for want of statutory clearances; lease validities run to 2026, 2030 and 2041. The company is valued on the worth of those leases rather than on production. Stock −24% in 2026, 59% below its September 2024 high. <b>Kept in the basket but flagged: it is not a producing miner.</b></td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The rest of the industry</span><p>Most Indian iron ore is mined by steel makers for their own use — Tata Steel, JSW, AM/NS and SAIL all hold captive mines — so the listed "miners" are only part of the picture. Vedanta and Rungta are large merchant miners; Odisha's OMC is state-owned and unlisted. Pellet makers such as those inside steel groups sit in the steel sections, and ferro alloy producers, the main buyers of manganese ore, are the subject of primer 065.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>A price taker with a heavy government share</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Item</th><th>What it means</th><th>Typical direction</th></tr></thead><tbody>
+    <tr><td>Realisation per tonne</td><td>The price a miner actually gets, after grade and freight adjustments</td><td>Set against global benchmarks and domestic competition</td></tr>
+    <tr><td>Royalty</td><td>A percentage of the sale value paid to the state</td><td>15% for iron ore</td></tr>
+    <tr><td>District Mineral Foundation</td><td>A contribution for mining-affected districts, set as a share of royalty</td><td>10–30% of royalty</td></tr>
+    <tr><td>National Mineral Exploration Trust</td><td>A levy for exploration funding</td><td>2% of royalty</td></tr>
+    <tr><td>Auction premium</td><td>The share of revenue a bidder promised to win the block</td><td>0 for old leases; often very high for auctioned blocks</td></tr>
+    <tr><td>Cash cost</td><td>Drilling, blasting, excavation, haulage, processing</td><td>Rises with stripping ratio and diesel</td></tr>
+    <tr><td>Logistics</td><td>Rail freight, pipelines, ports</td><td>Often the difference between a good and bad mine</td></tr>
+  </tbody></table></div>
+  <p>Because royalties and levies are charged on sale value, the government's share is fixed as a proportion of revenue, not of profit. When prices fall, the miner absorbs the whole decline. That is the central feature of the business model, and it explains why the stocks track the ore price more closely than their own production.</p>
+  <h3>Volumes versus price, in one quarter</h3>
+  <p>NMDC's Q1 FY27 shows the tension exactly. Production rose 26% to 15.12 mt — a record — yet sales rose only 2% to 11.73 mt and revenue only 2% to ₹6,795 cr. Output ran ahead of despatches, and prices offered no help. MOIL's quarter was the opposite: production and sales grew only slightly, but a 10% better realisation lifted profit 70%. In this industry, price does the work.</p>
+  <h3>What integration changes</h3>
+  <p>Sandur's answer has been to stop selling all its ore. By adding ferro alloys, coke and, through Arjas Steel, specialty steel, it captures the margin further along the chain and smooths the ore cycle — FY26 income rose 61% to ₹5,163 cr with profit of ₹658 cr. The trade-off is that it now carries the risks of a steel maker too, and should increasingly be judged as one.</p>
+</section>
+
+<section id="pricing" data-toc="How ore is priced">
+  <p class="eyebrow">5b · How ore is priced</p>
+  <h2>China sets the price; India sets the discount</h2>
+  <p>The world benchmark is 62% iron content fines delivered to China, quoted daily and traded as futures in Singapore. Everything else is a differential: higher grade earns a premium, high alumina a penalty, lumps a premium over fines, and inland Indian mines a discount for the cost of getting ore to a port or a mill. NMDC publishes its own prices for lumps and fines and revises them often, which is why Indian realisations can move even when the global benchmark does not.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Year-end price ($/t)</th><th>What happened</th></tr></thead><tbody>
+    <tr><td>2015: $41</td><td>The bottom of the commodity crash, after Australian supply expansions</td></tr>
+    <tr><td>2019: $91</td><td>Vale's Brumadinho dam disaster cut supply</td></tr>
+    <tr><td>2020: $158</td><td>China's stimulus and supply disruption</td></tr>
+    <tr><td>2021: peak above $200 in May, $123 by December</td><td>China capped steel output; the fastest round trip in the modern era</td></tr>
+    <tr><td>2023: $140</td><td>Post-Covid restocking in China</td></tr>
+    <tr><td>2026: about $97</td><td>Property-led demand weakness; Simandou starts shipping</td></tr>
+  </tbody></table></div>
+  <p>The structural question for the next five years is Simandou in Guinea — one of the world's largest untapped high-grade deposits, expected to ship about 20 mt in 2026 and to reach roughly 120 mt a year by 2030. That is new supply equal to a third of India's entire output, aimed at the same Chinese buyers. Consensus forecasts of about $95 a tonne for 2026, with a $80–100 range, already reflect it. For Indian miners, the offset is domestic: steel consumption grew 7–8% in FY26 to 164 mt, and India's mills need more ore every year.</p>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the miners depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Mining leases and clearances</td><td>The right to mine at all</td><td>The critical dependency: OMDC has been idle since 2020 for want of clearances</td></tr>
+    <tr><td>Environment and forest approvals</td><td>Capacity limits are set in the clearance</td><td>Expansion needs fresh approvals</td></tr>
+    <tr><td>Explosives and diesel</td><td>Blasting and haulage</td><td>Cost inflation (see 060)</td></tr>
+    <tr><td>Rail rakes and roads</td><td>Moving ore to customers</td><td>Rake availability caps despatches</td></tr>
+    <tr><td>Water and land</td><td>Beneficiation and waste dumps</td><td>Community and environmental friction</td></tr>
+    <tr><td>Labour and contractors</td><td>Mine operations</td><td>Safety and local employment obligations</td></tr>
+  </tbody></table></div>
+  <p>A mining company's real asset is not the ore in the ground but the permission to take it out. Indian mining has repeatedly shown how fragile that is: the Karnataka ban of 2011, the Goa cancellations, Odisha's suspensions, and the Supreme Court's cancellation of leases in 2014. OMDC is the extreme case — a listed company valued at more than ₹2,000 cr whose mines have produced nothing for years.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Monsoon, restocking and the March rush</h2>
+  <ul>
+    <li><b>January–March:</b> the fiscal year-end push; miners maximise despatches and steel mills build stocks before the monsoon.</li>
+    <li><b>February:</b> Chinese New Year slows Chinese buying, and global prices often drift.</li>
+    <li><b>April–June:</b> pre-monsoon stocking; NMDC often revises prices; production runs hard before the rains.</li>
+    <li><b>July–September:</b> the monsoon floods pits and slows haulage in Odisha, Chhattisgarh, Karnataka and Goa; output and prices usually dip.</li>
+    <li><b>October–December:</b> post-monsoon restocking; mills rebuild inventory and prices often firm.</li>
+  </ul>
+  <p>That calendar matches the stock pattern: April and October have been the best months, and February–March the worst. It is a cleaner seasonal signal than in most industries because the physical constraint — rain — is real and repeats every year.</p>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the four miners minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (NMDC Limited, Sandur Manganese &amp; Iron Ores Ltd, Moil Limited, Orissa Minerals Development Company Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +5.4 pts (beat in 10 of 15 years); Oct +3.2 pts (beat in 9 of 15 years); Dec +2.0 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Feb -4.2 pts (beat in 3 of 15 years); Mar -2.6 pts (beat in 4 of 15 years); Jun -1.3 pts (beat in 5 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -8.5 pts); Apr–Jul beat the Nifty in 8 of 15 years (median +1.3 pts); Aug–Sep beat the Nifty in 5 of 14 years (median -1.8 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +5.8 pts); Sep–Nov beat the Nifty in 5 of 14 years (median -1.3 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -9.2 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +2.4 points.</p><p><b>Reading it:</b> four companies — NMDC, MOIL and OMDC through the period, Sandur from September 2023. <b>February–March has beaten the Nifty in only 3 of 15 years</b> (median −8.5 points) and February alone in 3 of 15 (average −4.2). April has worked in 10 of 15 (+5.4) and October in 9 of 15 (+3.2). The shape follows the mining year: dispatches and price revisions cluster before the monsoon and after it, while February–March combines the Chinese New Year lull with the end of the Indian fiscal year, when miners have already pushed volumes out.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="FebMar" viewBox="0 0 720 280" role="img" aria-label="February to March return minus Nifty by year"></svg><figcaption>February–March return of the basket minus the Nifty, by year, in percentage points. Green bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>February–March worked only in 2016 (+10.3), 2021 (+7.3) and 2022</b> — each a moment when ore prices were rising fast. Its worst years were 2024 (−22.0), 2017 (−15.8) and 2013 (−14.8).</li>
+    <li><b>April–July failed in 2018 (−31.1), 2013 (−21.7), 2022 (−15.3) and 2019 (−8.3)</b>; it worked best in 2024 (+34.6) and 2012 (+23.3).</li>
+    <li><b>August–September has lost in 9 of 14 years</b>, the monsoon quarter.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The seasonal pattern is real but second-order. The first-order driver is the ore price: in the five years when iron ore fell (2015, 2021, 2024 and 2026 among them), no calendar helped. Use the season for timing within a view on prices, not instead of one.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>The global ore price.</b> Chinese steel output and seaborne supply set it.</li>
+    <li><b>Domestic steel demand.</b> India's mills now consume 164 mt of finished steel a year.</li>
+    <li><b>NMDC's price revisions.</b> They set the domestic reference for merchant ore.</li>
+    <li><b>Royalty, DMF and auction premium.</b> A fixed share of revenue, whatever the price.</li>
+    <li><b>Volume growth and clearances.</b> Higher approved capacity lifts output.</li>
+    <li><b>Logistics.</b> Rakes, pipelines and port access decide how much can be sold.</li>
+    <li><b>Export duty.</b> Applied and removed repeatedly; it redirects ore to or from the domestic market.</li>
+    <li><b>Manganese-specific supply.</b> Cyclones, mine outages and restarts abroad swing manganese prices sharply.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th class="num">Iron ore ($/t)</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: NMDC, MOIL and OMDC throughout, Sandur from September 2023, equal-weighted monthly. Iron ore is the SGX 62% Fe futures price at each year-end (2026 to 18 September). Monthly returns capped at ±50%, price only.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>A global mirror: Vale</h3>
+  <p>Vale (NYSE:VALE), the world's second-largest iron ore producer, shows the same cycle without the Indian regulatory layer: −46% in 2014 and −60% in 2015 as prices collapsed, +132% in 2016 and +60% in 2017 on the rebound, −44% in 2024 as China's property slump bit, then +47% in 2025 and +9% so far in 2026. Its share price today is roughly a third below its 2011 level, fifteen years on — the same lesson the Indian miners teach: in commodities, the cycle can eat a decade.</p>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>Bans and cancellations</b> (2011–2015): Karnataka, Goa and Odisha suspensions, then the Supreme Court's cancellation of leases and the shift to auctions in 2015.</li>
+    <li><b>The rebound</b> (2016–2020): prices recovered from $41 to $158; supply shocks at Vale helped.</li>
+    <li><b>The round trip</b> (2021–2022): a record spike above $200, a halving by December, and an export duty that came and went.</li>
+    <li><b>The PSU re-rating</b> (2023): government-owned miners were re-rated with the rest of the PSU complex; the basket rose 114%.</li>
+    <li><b>Volume growth, price decline</b> (2024–2026): record Indian output against a falling global price, now with Simandou arriving.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Records do not pay.</b> NMDC's best-ever production year came with a 5% share-price fall.</li>
+    <li><b>Prices turn faster than mines.</b> Capacity added at high prices arrives after they have fallen.</li>
+    <li><b>Policy is a second commodity.</b> Export duties, auction premiums and clearances move earnings as much as the ore price.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Four countries, one buyer</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Position</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>Australia (Rio Tinto, BHP, FMG)</td><td>The largest exporters, with the lowest costs</td><td>Set the floor price</td></tr>
+    <tr><td>Brazil (Vale)</td><td>High-grade ore; the swing supplier after dam failures</td><td>Its outages have lifted prices twice in a decade</td></tr>
+    <tr><td>Guinea (Simandou)</td><td>New high-grade supply ramping to about 120 mt by 2030</td><td>The main structural headwind to prices</td></tr>
+    <tr><td>China</td><td>Buys roughly three-quarters of seaborne ore; steel output is falling</td><td>Sets the price; its property slump is the demand risk</td></tr>
+    <tr><td>India</td><td>About 310 mt of output, mostly consumed at home</td><td>Growing demand offsets weak exports</td></tr>
+    <tr><td>Manganese: South Africa, Australia, Gabon</td><td>The main ore sources</td><td>A cyclone shut Australia's GEMCO mine for a year; its return pressures prices</td></tr>
+  </tbody></table></div>
+  <p>India is unusual: it is a large producer that consumes almost everything it mines. That makes its miners less exposed to the seaborne market than Vale or Rio Tinto, but not immune — the domestic price follows the import parity price, and when global prices fall, Indian mills demand discounts. The hedge is domestic growth. India's finished steel consumption of 164 mt in FY26 is growing at 7–8% a year, while China's is shrinking.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Beneficiation.</b> Upgrading low-grade and dump ore into usable fines as high-grade reserves deplete.</li>
+    <li><b>Slurry pipelines and conveyors.</b> Cheaper, cleaner transport than road; NMDC and Sandur are both building them.</li>
+    <li><b>Pelletisation.</b> More ore is pelletised before use, adding a value-added step in India.</li>
+    <li><b>Green steel.</b> Direct-reduction and hydrogen routes need high-grade, low-alumina ore and pellets — a premium India must earn.</li>
+    <li><b>Automation and digital mining.</b> Fleet management, drones for surveys, remote drilling.</li>
+    <li><b>Deeper mines.</b> MOIL's shaft-sinking programme reflects manganese deposits that are no longer shallow.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>MMDR Act and the 2015 auction regime</td><td>Mineral blocks are auctioned; winners pay a revenue share</td><td>High premiums have squeezed newer miners</td></tr>
+    <tr><td>Royalty, DMF and NMET</td><td>Statutory levies on sale value</td><td>Take roughly a fifth of revenue</td></tr>
+    <tr><td>Export duty on iron ore</td><td>Applied at 30%, raised to 50% in May 2022 and removed in November 2022</td><td>Redirects supply between export and domestic markets</td></tr>
+    <tr><td>Environment and forest clearances</td><td>Set capacity and permit expansion</td><td>The binding constraint on volume growth</td></tr>
+    <tr><td>Lease extensions and transfers</td><td>Decide who mines after a lease ends</td><td>OMDC's leases expire between 2026 and 2041</td></tr>
+    <tr><td>Critical minerals policy</td><td>Priority exploration and auctions for strategic minerals</td><td>Opens new blocks, including manganese-bearing areas</td></tr>
+    <tr><td>Disinvestment</td><td>Government stake sales in mining PSUs</td><td>Supply of stock and periodic re-ratings</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: records at the mine, pressure on the price</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Volumes</td><td>Records</td><td>NMDC 53.15 mt in FY26; India 310 mt (+7%)</td></tr>
+    <tr><td>Iron ore price</td><td>Falling</td><td>About $97/t; consensus about $95 for 2026</td></tr>
+    <tr><td>New supply</td><td>Arriving</td><td>Simandou about 20 mt in 2026, 120 mt by 2030</td></tr>
+    <tr><td>Manganese</td><td>Better realisations</td><td>MOIL +10% a tonne; GEMCO's return is a risk</td></tr>
+    <tr><td>Domestic demand</td><td>Strong</td><td>Finished steel consumption 164 mt, +7–8%</td></tr>
+    <tr><td>Stocks</td><td>De-rating</td><td>Basket −21%; NMDC at about 9 times earnings</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is -20.9% this year vs -10.7% for the Nifty (to 18 Sep 2026). The basket is down 21% against a Nifty down 11% — the worst year since 2018 — even though volumes are at records. NMDC produced 53.15 mt in FY26, the first Indian miner past 50 mt, and lifted Q1 FY27 output 26%, but its sales rose only 2% and profit 2%. MOIL's profit rose 70% on a 10% better realisation, yet its stock is down 34%. The market is pricing the ore cycle, not the volumes: iron ore is about $97 a tonne, consensus sees roughly $95 for 2026, and Guinea's Simandou mine is ramping toward 120 mt a year by 2030.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th><th class="num">1 year</th></tr></thead><tbody>
+    <tr><td>NMDC</td><td class="num">₹79</td><td>₹142 (19 Jan 2010)</td><td class="num">−44%</td><td class="num">−5%</td><td class="num">+3%</td></tr>
+    <tr><td>Sandur Manganese</td><td class="num">₹185</td><td>₹265 (2 Jan 2026)</td><td class="num">−30%</td><td class="num">−24%</td><td class="num">+18%</td></tr>
+    <tr><td>MOIL</td><td class="num">₹244</td><td>₹557 (8 Jul 2024)</td><td class="num">−56%</td><td class="num">−34%</td><td class="num">−32%</td></tr>
+    <tr><td>OMDC</td><td class="num">₹3,821</td><td>₹9,363 (20 Sep 2024)</td><td class="num">−59%</td><td class="num">−24%</td><td class="num">−21%</td></tr>
+  </tbody></table></div>
+  <p class="note">Prices are adjusted for bonus issues, so NMDC's 2010 high is comparable with today's price.</p>
+  <h3>What is priced in</h3>
+  <p>At roughly 9 times annualised profit, NMDC is priced for lower ore prices, not for its volume target — the market is assuming that 60 mt of sales at weaker realisations earns little more than 50 mt did. MOIL at about 14 times, after a 34% fall, prices in the return of Australian manganese supply. Sandur, at about 13 times, is increasingly a steel company and will be valued as one. OMDC's ₹2,294 cr value rests on leases, not production, and will move on clearance and lease news rather than on earnings.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>These are cash-generating, low-cost assets with a domestic demand story that is genuinely strong. But they cannot escape the global price, and the next few years bring the largest new iron ore supply in a generation. The way to own the theme is to buy the low-cost producer when the cycle is against it and to avoid confusing production records with earnings growth. Manganese is a separate, tighter market with its own supply shocks, and MOIL is the only listed way to own it.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>62% Fe iron ore price</td><td>Sets realisations</td><td>SGX futures, price reporting agencies</td></tr>
+    <tr><td>NMDC monthly production and sales</td><td>Volumes and the gap between them</td><td>NMDC monthly releases</td></tr>
+    <tr><td>NMDC price notifications</td><td>Domestic pricing direction</td><td>Company announcements</td></tr>
+    <tr><td>Simandou shipments</td><td>The new supply</td><td>Rio Tinto and Guinea reports</td></tr>
+    <tr><td>China's steel output and property starts</td><td>The demand side</td><td>Chinese statistics</td></tr>
+    <tr><td>Indian steel production and imports</td><td>Domestic ore demand</td><td>Steel ministry, JPC data</td></tr>
+    <tr><td>Manganese ore prices and GEMCO output</td><td>MOIL's realisations</td><td>South32 reports, price agencies</td></tr>
+    <tr><td>Lease and clearance decisions</td><td>Who can mine what</td><td>State governments, mines ministry</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Ferro alloys (065):</b> the main buyers of manganese ore.</li>
+    <li><b>Steel &amp; iron (066):</b> the customer for iron ore, and the owner of most captive mines.</li>
+    <li><b>Explosives (060):</b> every tonne of ore starts with a blast.</li>
+    <li><b>Construction &amp; mining equipment:</b> excavators, dumpers and drills.</li>
+    <li><b>Coal (036):</b> the other bulk mineral, with the same monsoon calendar and the same royalty structure.</li>
+    <li><b>Logistics and ports:</b> rakes, pipelines and export terminals.</li>
+    <li><b>Global proxies:</b> Vale, Rio Tinto, BHP and Fortescue; SGX iron ore futures.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What realisation per tonne did you achieve, and how does it compare with the import parity price?</li>
+    <li>Why did sales lag production this quarter, and where is the inventory?</li>
+    <li>What is the all-in cost per tonne, including royalty, DMF and premium?</li>
+    <li>Which clearances or lease approvals are pending, and what volume depends on them?</li>
+    <li>How much of the expansion plan is funded and approved?</li>
+    <li>What is the logistics mix — rail, road, pipeline — and how is it changing?</li>
+    <li>How will the arrival of Simandou supply affect your pricing assumptions?</li>
+    <li>For MOIL: how do domestic manganese prices compare with imported ore?</li>
+    <li>For integrated miners: what share of ore is sold and what share consumed internally?</li>
+    <li>What is the capital-allocation plan — dividends, buybacks or expansion?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Record production means record profits"</td><td>NMDC's output rose 26% in Q1 FY27; profit rose 2%</td><td>Price decides</td></tr>
+    <tr><td>"Indian miners are insulated from global prices"</td><td>Domestic prices follow import parity; mills demand discounts when ore falls</td><td>Partly insulated, not immune</td></tr>
+    <tr><td>"Cheap PSU miners are always cheap"</td><td>The basket rose 114% in 2023 when the cycle and sentiment turned</td><td>They re-rate, violently and rarely</td></tr>
+    <tr><td>"A mining company owns its ore"</td><td>OMDC has held leases and produced nothing since 2020</td><td>It owns permission, which can be withdrawn</td></tr>
+    <tr><td>"Simandou is priced in"</td><td>Consensus at about $95 assumes it; the ramp runs to 2030</td><td>Partly — the supply arrives over years</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. fines, DMF" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Ore and processing</h3><dl>
+    <dt>Iron ore</dt><dd>Rock containing enough iron to be worth smelting.</dd>
+    <dt>Fe content</dt><dd>The percentage of iron in ore; 62% is the global benchmark grade.</dd>
+    <dt>Lumps</dt><dd>Coarse ore that can be charged directly into a furnace.</dd>
+    <dt>Fines</dt><dd>Fine ore that must be sintered or pelletised first.</dd>
+    <dt>Pellet</dt><dd>Fines rolled into balls and hardened for furnace use.</dd>
+    <dt>Sinter</dt><dd>Fines fused into lumps at the steel mill.</dd>
+    <dt>Alumina</dt><dd>An impurity common in Indian ore that raises furnace costs.</dd>
+    <dt>Beneficiation</dt><dd>Processing that raises the grade of low-quality ore.</dd>
+    <dt>Manganese ore</dt><dd>Ore used to make the ferro alloys that strengthen steel.</dd>
+    <dt>EMD</dt><dd>Electrolytic manganese dioxide, used in batteries.</dd>
+    <dt>Stripping ratio</dt><dd>Tonnes of waste that must be removed per tonne of ore.</dd>
+    <dt>Open-cast mine</dt><dd>A surface mine worked in benches.</dd>
+    <dt>Shaft</dt><dd>A vertical opening to reach deeper ore, as in MOIL's mines.</dd>
+    <dt>Slurry pipeline</dt><dd>A pipeline that carries ore mixed with water.</dd>
+  </dl>
+  <h3>Pricing and policy</h3><dl>
+    <dt>Import parity price</dt><dd>The landed cost of imported ore, which caps domestic prices.</dd>
+    <dt>Benchmark price</dt><dd>The published 62% Fe price delivered to China.</dd>
+    <dt>Realisation</dt><dd>The price a producer actually receives per tonne.</dd>
+    <dt>Royalty</dt><dd>A share of sale value paid to the state; 15% for iron ore.</dd>
+    <dt>DMF</dt><dd>District Mineral Foundation — a levy for mining-affected areas.</dd>
+    <dt>NMET</dt><dd>National Mineral Exploration Trust levy.</dd>
+    <dt>Auction premium</dt><dd>The additional revenue share a bidder offers to win a block.</dd>
+    <dt>MMDR Act</dt><dd>The law governing mines and minerals, amended in 2015 to require auctions.</dd>
+    <dt>IBM</dt><dd>Indian Bureau of Mines, which publishes reference prices.</dd>
+    <dt>Export duty</dt><dd>A tax on exporting ore, used to keep supply at home.</dd>
+    <dt>Mining lease</dt><dd>The time-bound right to extract minerals from a defined area.</dd>
+    <dt>Forest clearance</dt><dd>Permission required where mining affects forest land.</dd>
+    <dt>Captive mine</dt><dd>A mine owned by a steel maker for its own use.</dd>
+    <dt>Merchant miner</dt><dd>A miner that sells ore on the open market.</dd>
+  </dl>
+  <h3>Market terms</h3><dl>
+    <dt>Seaborne market</dt><dd>Ore traded across oceans, mostly to China.</dd>
+    <dt>Simandou</dt><dd>A very large Guinean iron ore project ramping up from 2026.</dd>
+    <dt>Brumadinho</dt><dd>Vale's 2019 dam disaster, which cut world supply.</dd>
+    <dt>GEMCO</dt><dd>South32's Australian manganese mine, shut for a year by a cyclone in 2024.</dd>
+    <dt>Despatches</dt><dd>Ore actually shipped to customers, as opposed to produced.</dd>
+    <dt>Rake</dt><dd>A full train of wagons; rake availability limits despatches.</dd>
+    <dt>PSU</dt><dd>A public sector undertaking — a state-owned company.</dd>
+    <dt>Overburden</dt><dd>Soil and rock removed to reach the ore body.</dd>
+    <dt>Screening</dt><dd>Separating crushed ore into size fractions.</dd>
+    <dt>Tailings</dt><dd>Waste left after processing, stored behind dams.</dd>
+    <dt>Sponge iron</dt><dd>Iron made by reducing ore with gas or coal instead of melting it.</dd>
+    <dt>Ferro alloy</dt><dd>An alloy of iron with manganese, silicon or chromium, added to steel (see 065).</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What is the difference between lumps and fines?</summary><p>Lumps can go straight into a furnace; fines must be sintered or pelletised first.</p></details>
+  <details class="q"><summary>2. What did NMDC produce in FY26, and what does it target?</summary><p>53.15 mt, the first Indian miner past 50 mt; it targets 60 mt in FY27 and 100 mt by 2030.</p></details>
+  <details class="q"><summary>3. Why did NMDC's profit rise only 2% in Q1 FY27 when production rose 26%?</summary><p>Sales rose only 2% and prices did not help; output ran ahead of despatches.</p></details>
+  <details class="q"><summary>4. What drove MOIL's 70% profit growth?</summary><p>A 10% higher realisation, at ₹9,749 a tonne.</p></details>
+  <details class="q"><summary>5. How much of a miner's revenue goes to the government?</summary><p>Roughly a fifth through royalty, DMF and NMET, plus any auction premium.</p></details>
+  <details class="q"><summary>6. What is Simandou, and why does it matter?</summary><p>A Guinean iron ore project shipping about 20 mt in 2026 and ramping toward 120 mt by 2030 — a major new source of supply.</p></details>
+  <details class="q"><summary>7. Why is OMDC unusual?</summary><p>It is valued above ₹2,000 cr but has not mined since 2020, pending statutory clearances.</p></details>
+  <details class="q"><summary>8. Which months have been best and worst for these stocks?</summary><p>April and October best; February–March worst, beating the Nifty in only 3 of 15 years.</p></details>
+  <details class="q"><summary>9. What happened to iron ore prices in 2021?</summary><p>They peaked above $200 in May and fell to about $123 by December.</p></details>
+  <details class="q"><summary>10. How has Sandur changed its business?</summary><p>It has integrated forward into ferro alloys, coke and specialty steel through Arjas Steel.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes to 18 September 2026 against NSE:NIFTY, adjusted for bonuses; SGX:FEF1! for iron ore and NYSE:VALE for the global mirror.</li>
+    <li>NMDC: <a href="https://www.businesstoday.in/latest/corporate/story/nmdc-q1-profit-rises-to-rs2007-crore-as-iron-ore-production-jumps-26-549448-2026-08-16">Q1 FY27 results</a>; <a href="https://psuwatch.com/events-reports/nmdc-targets-60-mt-iron-ore-production-in-fy27-100-mt-by-2030-cmd">FY27 and 2030 targets</a>; <a href="https://indianmasterminds.com/news/nmdc-record-fy26-iron-ore-production-crosses-50-million-tonnes-207641/">FY26 record</a>.</li>
+    <li>MOIL: <a href="https://psuwatch.com/amp/story/newsupdates/moils-q1-net-profit-surges-70-on-improved-manganese-ore-realisation">Q1 FY27 results and realisations</a>; <a href="https://www.equitybulls.com/category.php?id=372633">production and sales</a>; <a href="https://scanx.trade/stock-market-news/companies/moil-limited-conducts-investors-and-analysts-meet-on-march-17-2026/35274033">3.5 mt by FY30 plan</a>.</li>
+    <li>Sandur and OMDC: <a href="https://www.multibagg.ai/market-pulse/articles/sandur-q4fy26-93521">Sandur FY26 results</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Sandur-Manganese-Q4-FY26-Profit-indian-rupee658-Cr-Income-indian-rupee5163-Cr/6a66e51798a9268fb1760a15">Sandur Q4 and FY26 profit</a>; <a href="https://birdgroup.co.in/omdc/">OMDC leases and status</a>; <a href="https://en.wikipedia.org/wiki/Orissa_Minerals_Development_Company">OMDC background</a>.</li>
+    <li>More sources: <a href="https://www.indexbox.io/blog/indias-iron-ore-output-jumps-19-in-first-eight-months-of-2026-to-230-million-tonnes/">2026 output data</a>; <a href="https://investingnews.com/iron-forecast/">price forecasts</a>; <a href="https://www.south32.net/what-we-do/our-locations/australia/gemco">GEMCO</a>.</li>
+    <li>Market: <a href="https://www.steelorbis.com/steel-news/latest-news/indias-iron-ore-production-rises-7-in-fy26-as-merchant-supply-offsets-fall-in-captive-production-1447313.htm">India's FY26 iron ore output</a>; <a href="https://www.ibef.org/industry/steel">Indian steel production and consumption</a>; <a href="https://gmk.center/en/news/iron-ore-prices-may-fall-to-94-per-tonne-in-2026-consensus-forecast/">2026 price consensus</a>; <a href="https://www.breakwaveadvisors.com/insights/2026/1/21/iron-ore-outlook-simandou-supply-china-demand-and-freight-trends">Simandou and China demand</a>; <a href="https://www.abc.net.au/news/2025-05-21/south32-gemco-manganese-mine-resumes-exports-groote-eylandt/105314952">GEMCO's restart</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -7.8}, {"y": 2013, "v": -14.8}, {"y": 2014, "v": -9.4}, {"y": 2015, "v": -12.3}, {"y": 2016, "v": 10.3}, {"y": 2017, "v": -15.8}, {"y": 2018, "v": -8.4}, {"y": 2019, "v": -0.5}, {"y": 2020, "v": -10.1}, {"y": 2021, "v": 7.3}, {"y": 2022, "v": 7.3}, {"y": 2023, "v": -11.9}, {"y": 2024, "v": -22.0}, {"y": 2025, "v": -0.2}, {"y": 2026, "v": -8.5}], "AprJul": [{"y": 2012, "v": 23.3}, {"y": 2013, "v": -21.7}, {"y": 2014, "v": 14.2}, {"y": 2015, "v": -5.2}, {"y": 2016, "v": 1.3}, {"y": 2017, "v": -8.6}, {"y": 2018, "v": -31.1}, {"y": 2019, "v": -8.3}, {"y": 2020, "v": 13.3}, {"y": 2021, "v": 21.4}, {"y": 2022, "v": -15.3}, {"y": 2023, "v": 19.3}, {"y": 2024, "v": 34.6}, {"y": 2025, "v": -2.4}, {"y": 2026, "v": 6.3}], "AugSep": [{"y": 2012, "v": -9.0}, {"y": 2013, "v": 8.3}, {"y": 2014, "v": -12.8}, {"y": 2015, "v": -7.3}, {"y": 2016, "v": -2.3}, {"y": 2017, "v": -1.3}, {"y": 2018, "v": -4.9}, {"y": 2019, "v": -0.5}, {"y": 2020, "v": 6.0}, {"y": 2021, "v": -25.6}, {"y": 2022, "v": 5.6}, {"y": 2023, "v": 28.5}, {"y": 2024, "v": -5.0}, {"y": 2025, "v": 6.4}], "OctDec": [{"y": 2012, "v": -13.1}, {"y": 2013, "v": 9.8}, {"y": 2014, "v": -9.5}, {"y": 2015, "v": -1.3}, {"y": 2016, "v": 28.2}, {"y": 2017, "v": 13.1}, {"y": 2018, "v": 6.2}, {"y": 2019, "v": 31.6}, {"y": 2020, "v": -5.7}, {"y": 2021, "v": -6.3}, {"y": 2022, "v": 5.5}, {"y": 2023, "v": 34.1}, {"y": 2024, "v": -10.4}, {"y": 2025, "v": 8.4}], "SepNov": [{"y": 2012, "v": -26.9}, {"y": 2013, "v": -0.1}, {"y": 2014, "v": -18.4}, {"y": 2015, "v": -5.3}, {"y": 2016, "v": 26.4}, {"y": 2017, "v": 13.8}, {"y": 2018, "v": -5.4}, {"y": 2019, "v": 40.0}, {"y": 2020, "v": -16.7}, {"y": 2021, "v": -8.5}, {"y": 2022, "v": -1.4}, {"y": 2023, "v": 31.1}, {"y": 2024, "v": -1.1}, {"y": 2025, "v": 7.7}], "JanMar": [{"y": 2012, "v": -5.3}, {"y": 2013, "v": -18.8}, {"y": 2014, "v": -3.8}, {"y": 2015, "v": -18.7}, {"y": 2016, "v": 5.0}, {"y": 2017, "v": -14.1}, {"y": 2018, "v": -14.1}, {"y": 2019, "v": -9.8}, {"y": 2020, "v": 0.4}, {"y": 2021, "v": 1.7}, {"y": 2022, "v": 18.5}, {"y": 2023, "v": -9.2}, {"y": 2024, "v": -16.3}, {"y": 2025, "v": -5.5}, {"y": 2026, "v": -10.2}]}, "my": {"1": {"2012": 3.7, "2013": -4.7, "2014": 5.3, "2015": -6.8, "2016": -4.3, "2017": 2.6, "2018": -6.4, "2019": -8.7, "2020": 16.7, "2021": -4.6, "2022": 10.3, "2023": 2.7, "2024": 7.0, "2025": -5.4, "2026": -2.5}, "2": {"2012": -2.8, "2013": -4.6, "2014": -8.0, "2015": -5.2, "2016": 0.2, "2017": -3.1, "2018": -3.3, "2019": 0.2, "2020": -11.6, "2021": 6.1, "2022": -1.3, "2023": -8.6, "2024": -13.3, "2025": -2.0, "2026": -5.9}, "3": {"2012": -4.9, "2013": -11.4, "2014": -1.0, "2015": -7.6, "2016": 10.9, "2017": -12.5, "2018": -5.6, "2019": -0.6, "2020": -1.4, "2021": 0.9, "2022": 9.1, "2023": -3.6, "2024": -9.6, "2025": 2.1, "2026": -3.5}, "4": {"2012": 3.7, "2013": -3.6, "2014": 4.3, "2015": 8.4, "2016": 4.0, "2017": -2.1, "2018": -0.7, "2019": -4.3, "2020": 10.3, "2021": 7.1, "2022": 6.8, "2023": 4.2, "2024": 32.0, "2025": -4.0, "2026": 14.2}, "5": {"2012": 1.1, "2013": -8.9, "2014": 20.3, "2015": -4.8, "2016": -11.2, "2017": -9.7, "2018": -9.2, "2019": -2.0, "2020": 4.9, "2021": 10.3, "2022": -12.7, "2023": -4.9, "2024": 2.8, "2025": 6.9, "2026": 1.1}, "6": {"2012": 4.8, "2013": -8.6, "2014": -2.0, "2015": -1.7, "2016": 8.9, "2017": -1.1, "2018": -10.9, "2019": 0.9, "2020": -1.3, "2021": 6.2, "2022": -9.9, "2023": 6.5, "2024": -1.2, "2025": -3.8, "2026": -6.9}, "7": {"2011": -1.5, "2012": 12.6, "2013": -2.1, "2014": -7.7, "2015": -7.1, "2016": 0.3, "2017": 5.3, "2018": -10.6, "2019": -3.4, "2020": -2.6, "2021": -3.8, "2022": 1.5, "2023": 11.3, "2024": -2.2, "2025": -1.2, "2026": -0.9}, "8": {"2011": -3.5, "2012": 2.6, "2013": 13.9, "2014": -5.4, "2015": -2.3, "2016": -0.0, "2017": 0.2, "2018": -1.9, "2019": -12.9, "2020": 16.0, "2021": -21.2, "2022": 5.9, "2023": 19.4, "2024": -8.0, "2025": -2.2, "2026": 0.0}, "9": {"2011": -0.7, "2012": -11.5, "2013": -5.8, "2014": -7.5, "2015": -5.5, "2016": -2.2, "2017": -1.5, "2018": -3.1, "2019": 15.0, "2020": -8.2, "2021": -4.4, "2022": -0.1, "2023": 7.5, "2024": 3.4, "2025": 8.9}, "10": {"2011": -6.6, "2012": -3.9, "2013": 6.4, "2014": 0.6, "2015": 3.1, "2016": 26.9, "2017": 12.7, "2018": 4.1, "2019": 12.6, "2020": -7.6, "2021": -5.5, "2022": -5.6, "2023": 11.4, "2024": -6.3, "2025": 5.7}, "11": {"2011": -8.2, "2012": -12.1, "2013": -0.1, "2014": -11.2, "2015": -2.7, "2016": 3.3, "2017": 2.8, "2018": -6.9, "2019": 6.5, "2020": 0.6, "2021": 1.0, "2022": 4.4, "2023": 8.6, "2024": 2.5, "2025": -6.8}, "12": {"2011": -7.8, "2012": 2.9, "2013": 3.1, "2014": 1.3, "2015": -1.5, "2016": -1.1, "2017": -2.6, "2018": 9.1, "2019": 8.9, "2020": 2.7, "2021": -2.0, "2022": 6.3, "2023": 8.9, "2024": -7.1, "2025": 9.6}}, "basket": ["NMDC Limited", "Sandur Manganese & Iron Ores Ltd", "Moil Limited", "Orissa Minerals Development Company Limited"], "nbasket": 4, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.1, "rel": 0.3, "hit": 7, "n": 15}, {"m": 2, "abs": -5.4, "rel": -4.2, "hit": 3, "n": 15}, {"m": 3, "abs": -2.8, "rel": -2.6, "hit": 4, "n": 15}, {"m": 4, "abs": 7.9, "rel": 5.4, "hit": 10, "n": 15}, {"m": 5, "abs": 0.1, "rel": -1.1, "hit": 7, "n": 15}, {"m": 6, "abs": 0.4, "rel": -1.3, "hit": 5, "n": 15}, {"m": 7, "abs": 1.2, "rel": -0.8, "hit": 5, "n": 16}, {"m": 8, "abs": -0.2, "rel": 0.0, "hit": 7, "n": 16}, {"m": 9, "abs": -0.4, "rel": -1.0, "hit": 4, "n": 15}, {"m": 10, "abs": 5.3, "rel": 3.2, "hit": 9, "n": 15}, {"m": 11, "abs": -0.3, "rel": -1.2, "hit": 8, "n": 15}, {"m": 12, "abs": 2.7, "rel": 2.0, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": 20.7, "n": 27.7, "rel": -7.0, "partial": false}, {"y": 2013, "b": -20.5, "n": 6.8, "rel": -27.3, "partial": false}, {"y": 2014, "b": 13.3, "n": 31.4, "rel": -18.1, "partial": false}, {"y": 2015, "b": -32.3, "n": -4.1, "rel": -28.3, "partial": false}, {"y": 2016, "b": 38.8, "n": 3.0, "rel": 35.8, "partial": false}, {"y": 2017, "b": 14.7, "n": 28.6, "rel": -13.9, "partial": false}, {"y": 2018, "b": -35.8, "n": 3.2, "rel": -39.0, "partial": false}, {"y": 2019, "b": 20.1, "n": 12.0, "rel": 8.1, "partial": false}, {"y": 2020, "b": 28.9, "n": 14.9, "rel": 14.0, "partial": false}, {"y": 2021, "b": 9.2, "n": 24.1, "rel": -14.9, "partial": false}, {"y": 2022, "b": 15.8, "n": 4.3, "rel": 11.5, "partial": false}, {"y": 2023, "b": 113.6, "n": 20.0, "rel": 93.5, "partial": false}, {"y": 2024, "b": 1.2, "n": 8.8, "rel": -7.6, "partial": false}, {"y": 2025, "b": 17.2, "n": 10.5, "rel": 6.7, "partial": false}, {"y": 2026, "b": -20.9, "n": -10.7, "rel": -10.2, "partial": true}], "dd": [{"co": "NMDC", "peak": "May 2024", "fp": -16, "y1": 3}, {"co": "Sandur Manganese & Iron Ores", "peak": "Dec 2025", "fp": -24, "y1": 18}, {"co": "Moil", "peak": "Jul 2024", "fp": -56, "y1": -32}, {"co": "Orissa Minerals Development Company", "peak": "Sep 2024", "fp": -59, "y1": -21}], "win": {"FebMar": {"mean": -6.4, "median": -8.5, "hit": 3, "n": 15}, "AprJul": {"mean": 2.7, "median": 1.3, "hit": 8, "n": 15}, "AugSep": {"mean": -1.0, "median": -1.8, "hit": 5, "n": 14}, "OctDec": {"mean": 6.5, "median": 5.8, "hit": 8, "n": 14}, "SepNov": {"mean": 2.5, "median": -1.3, "hit": 5, "n": 14}, "JanMar": {"mean": -6.7, "median": -9.2, "hit": 4, "n": 15}}, "ytd": {"b": -20.9, "n": -10.7}, "hx": {"label": "Iron ore ($/t)", "v": {"2014": "71", "2015": "41", "2016": "75", "2017": "72", "2018": "71", "2019": "91", "2020": "158", "2021": "123", "2022": "117", "2023": "140", "2024": "101", "2025": "105", "2026": "97"}}, "notes": {"2012": "+20.7% against +27.7%. OMDC +28%, MOIL +17%, NMDC +3%, in the middle of India's mining bans in Karnataka, Odisha and Goa.", "2013": "\u221220.5% against +6.8%. OMDC \u221241%; suspensions and the 30% iron-ore export duty kept Indian ore at home.", "2014": "+13.3% against +31.4%. MOIL +31%, OMDC +30%; Goa's mines reopened under a cap and the MMDR ordinance moved India to auctions.", "2015": "\u221232.3% against \u22124.1%. The commodity crash took iron ore to $41 by year-end; NMDC \u221238%.", "2016": "+38.8% against +3.0%. Iron ore rebounded 84% to $75; MOIL +71%.", "2017": "+14.7% against +28.6%. A quiet year for ore prices; MOIL +35%, NMDC +12%.", "2018": "\u221235.8% against +3.2%. The small-cap crash: OMDC \u221251%, NMDC \u221230%, MOIL \u221229%.", "2019": "+20.1% against +12.0%. Vale's Brumadinho dam disaster cut world supply and lifted ore 28% to $91; NMDC +33%.", "2020": "+28.9% against +14.9%. China's post-pandemic stimulus drove ore up 73% to $158; OMDC +98%.", "2021": "+9.2% against +24.1%. Ore peaked above $200 in May and halved by year-end; the miners ended up only 9%.", "2022": "+15.8% against +4.3%. A 50% export duty from May to November hit merchant miners; NMDC demerged its steel plant.", "2023": "+113.6% against +20.0%. The PSU re-rating and ore up 20% to $140: OMDC +143%, MOIL +92%, NMDC +70%.", "2024": "+1.2% against +8.8%. Ore fell 28% to $101 as China's property slump deepened; the basket gave back nothing but gained nothing.", "2025": "+17.2% against +10.5%. Sandur +76% on its integration into steel; NMDC +26%; OMDC \u221229%.", "2026": "\u221220.9% against a Nifty \u221210.7%. MOIL \u221234%, Sandur \u221224%, OMDC \u221224%, NMDC \u22125% as ore slipped to $97 and Simandou began shipping."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

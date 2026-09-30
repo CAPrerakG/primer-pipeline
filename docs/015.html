@@ -1,0 +1,616 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salt Industry Primer</title>
+<meta name="description" content="Industry 15 of 278: how India makes ~30 million tonnes of salt from sun, sea and underground brine, why two-thirds goes to chemical plants and exports, and why the money is in brands and downstream chemistry, not pans. The two listed companies, the real salt plays elsewhere, iodisation policy and a year-by-year record.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Salt · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">Grades of salt</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#chem">How a salt pan works</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 15 of 278 · Chemicals family</div>
+  <h1>Salt</h1>
+  <p class="lede">The oldest chemical industry of all. Seawater and underground brine are left in the sun until salt crystals form. India is one of the world's three biggest producers and a leading exporter, yet the listed salt makers are tiny, because the real money sits with chemical plants and brands.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Auto, Chemicals, Construction, Consumer</span><span><b>Companies</b> 2 after the audit (Saboo Sodium Chloro moved in from Chlor-Alkali)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Chemical Distribution</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~30 mt</div><div class="l">India's salt output in 2025 (USGS estimate); the record year 2022–23 was higher</div></div>
+    <div class="stat"><div class="n">~77–87%</div><div class="l">Gujarat's share of Indian salt production (sources vary), then Rajasthan and Tamil Nadu</div></div>
+    <div class="stat"><div class="n">~14 mt</div><div class="l">Salt exported in 2023–24, one of the world's largest export volumes</div></div>
+    <div class="stat"><div class="n">₹2–3 vs ₹25+</div><div class="l">Price per kg of industrial salt at the works vs a branded iodised packet: the whole economics in one line</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Sun, sea and a lot of patience</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Salt farmers in Gujarat dig shallow, flat ponds called salt pans. They fill them with seawater or salty water pumped from underground and let the sun do the work. Over weeks the water evaporates, and white salt crystals are left behind, which workers rake into big heaps. Most of this salt isn't eaten. It goes to factories that split it into caustic soda and chlorine, or make washing soda and glass. The salt you eat is cleaned, has iodine added (so your thyroid gland works properly) and is packed with a brand name. Raw salt costs a rupee or two a kilo at the pan; a packet of branded salt costs over ₹25.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Indian salt is a solar-evaporation industry concentrated in Gujarat (coastal pans and the Rann of Kutch), with Rajasthan (Sambhar, Nawa) and Tamil Nadu (Tuticorin) behind it. About two-thirds of domestic demand is industrial: the chlor-alkali and soda-ash plants in 003. Edible salt must be iodised. The branded market is led by Tata Salt (Tata Consumer; 40%+ of branded salt), with Aashirvaad, Annapurna, Catch and Nirma behind. Raw salt is worth ₹2–3 per kg at the works; refining, iodising and branding multiply that about ten times.</p>
+    <p>The two listed salt companies (Goyal Salt, Saboo Sodium Chloro) are small refiners and packers, both 57–65% below their peaks. The real salt plays sit elsewhere:</p>
+    <ul>
+      <li><b>Archean:</b> industrial salt exports plus bromine from the same brine.</li>
+      <li><b>Tata Chemicals and GHCL:</b> salt turned into soda ash.</li>
+      <li><b>Tata Consumer:</b> Tata Salt.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="Grades of salt">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Grades of salt</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Grade</th><th>How it's made</th><th>Used for</th></tr></thead><tbody>
+    <tr><td>Crude solar salt</td><td>Seawater or subsoil brine evaporated in pans</td><td>Chlor-alkali, soda ash, exports, road de-icing (abroad)</td></tr>
+    <tr><td>Washed / industrial salt</td><td>Crude salt washed to remove mud and magnesium and calcium impurities</td><td>Chemical plants, textiles, leather, detergents, water softening</td></tr>
+    <tr><td>Refined iodised salt</td><td>Washed, dried, iodised with potassium iodate; free-flowing agents added</td><td>Household cooking</td></tr>
+    <tr><td>Vacuum-evaporated salt</td><td>Brine boiled in vacuum pans; very pure, fine grains</td><td>Premium table salt, pharma, food processing</td></tr>
+    <tr><td>Double-fortified salt</td><td>Iodine plus iron</td><td>Public nutrition programmes (PDS, school meals)</td></tr>
+    <tr><td>Rock salt (sendha namak), black salt (kala namak)</td><td>Mined halite (mostly from Pakistan's Salt Range); black salt is heated with sulphur-bearing compounds</td><td>Fasting foods, chaats, Ayurvedic uses</td></tr>
+    <tr><td>Low-sodium salt</td><td>Salt blended with potassium chloride</td><td>Health-conscious and hypertensive consumers</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Salt is like water: free from the sky, cheap from a tap, expensive in a branded bottle. The pan is the sky, the refinery is the tap, and Tata Salt is the branded bottle. Most of the price you pay is for the bottle and the name.</p></div>
+  <div class="box ana"><span class="tag">Everyday examples</span><p>The chlorine that disinfects city water and the caustic soda in your soap both started as Gujarat salt (see 003). So did the soda ash in window glass. The salt in a packet of chips is vacuum salt from a food-grade refinery. The coarse salt poured on icy roads in Korea or Japan may have been shipped from Kandla.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a salt pan to a chlorine plant or a kitchen</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Brine</h4><div class="an">The raw ingredient</div>Seawater (coastal Gujarat, Tamil Nadu) or underground brine (Little Rann of Kutch, Rajasthan's lakes).<div class="who">Land leased from government; Agariya salt workers in the Rann</div><div class="m">A free ingredient, weather-dependent</div></div>
+    <div class="stage"><div class="no">02</div><h4>Solar evaporation</h4><div class="an">Sun-drying</div>Reservoir, condenser and crystalliser pans; harvesting and heaping.<div class="who">Thousands of small salt works; large works of Tata Chemicals, GHCL, Archean, Nirma</div><div class="m">₹2–3/kg; the costs are land, labour and pumping</div></div>
+    <div class="stage"><div class="no">03</div><h4>Washing and refining</h4><div class="an">Cleaning the harvest</div>Washing, centrifuging, drying, iodising, packing.<div class="who">Goyal Salt, Saboo Sodium Chloro, many regional refiners</div><div class="m">Conversion margin</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Industrial use</h4><div class="an">The big customer</div>Chlor-alkali (caustic, chlorine), soda ash, sodium chemicals; bromine and potash from the leftover bittern.<div class="who">Tata Chemicals, GHCL, Nirma, GACL, DCW (003); Archean (004)</div><div class="m">Value created downstream</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Brands</h4><div class="an">The label</div>Iodised packaged salt sold through FMCG distribution.<div class="who">Tata Salt, Aashirvaad, Annapurna, Catch, Nirma</div><div class="m">₹25+/kg; brand premium</div></div>
+    <div class="stage"><div class="no">06</div><h4>Exports</h4><div class="an">Shipping it out</div>Crude and industrial salt to China, Japan, Korea, Bangladesh, Southeast Asia and the Gulf.<div class="who">Kandla/Mundra exporters, Archean</div><div class="m">Freight-sensitive</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Brine:</b> seawater has about 3.5% salt. Underground water in the Rann of Kutch is much saltier, because an ancient sea dried up there.</li>
+    <li><b>Evaporation:</b> the water moves from pond to pond, getting saltier each time. First, chalky gypsum settles out. Then, when the water is about 8 times saltier than the sea, clean salt crystals form. The bitter water left at the end (bittern) holds bromine, magnesium and potash.</li>
+    <li><b>Refining:</b> the heaps are washed to remove mud, spun dry, crushed, mixed with a tiny amount of iodine and packed.</li>
+    <li><b>Industrial use:</b> a chlor-alkali plant dissolves the salt again and splits it with electricity into chlorine and caustic soda (see 003).</li>
+    <li><b>Brands:</b> the same salt, sealed in a bright packet with a trusted name, sells for ten times more.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Salt is a textbook case of value sitting away from the raw material. Owning pans earns little unless you use the salt yourself (soda ash, chlor-alkali, bromine from the bittern) or put a trusted brand on it. That's why the best "salt stocks" aren't in this watchlist, and why Archean, which mines both salt and bromine from the same brine, is the closest listed pure play.</p></div>
+</section>
+
+<section id="chem" data-toc="How a salt pan works">
+  <p class="eyebrow">4 · How a salt pan works</p>
+  <h2>Fractional crystallisation in the open air</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Stage</th><th>Brine strength (°Bé)</th><th>What happens</th><th>Why it matters</th></tr></thead><tbody>
+    <tr><td>Reservoir</td><td>~3–10</td><td>Seawater or subsoil brine is stored and starts concentrating</td><td>Cheap evaporation area</td></tr>
+    <tr><td>Condensers</td><td>~10–25</td><td>Calcium sulphate (gypsum) and iron and calcium impurities drop out</td><td>Clean brine means purer salt</td></tr>
+    <tr><td>Crystallisers</td><td>~25–29</td><td>Sodium chloride crystallises; workers harvest it</td><td>The product</td></tr>
+    <tr><td>Bittern</td><td>&gt;29</td><td>Magnesium, potassium and bromide salts concentrate</td><td>Raw material for bromine, magnesium chloride and potash (see 004)</td></tr>
+  </tbody></table></div>
+  <p>A well-run works harvests only in the 25–29 °Bé window, because salt harvested beyond it picks up bitter magnesium salts. Large integrated works (Archean, Tata Chemicals) turn the bittern into bromine and sulphate of potash; small works discard it. That is the difference between a salt business and a marine-chemicals business.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>It's like boiling down sugarcane juice for jaggery. Different things come out at different stages, and the skill is knowing exactly when to scoop. The leftover syrup (bittern) is valuable if you have a use for it.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">5 · Who sits where</p>
+  <h2>The two listed salt companies, and where the real exposure is</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it makes</th><th>Latest numbers and status</th></tr></thead><tbody>
+    <tr><td>Goyal Salt (~₹184 cr)</td><td>A Rajasthan-based maker and dealer of sodium chloride grades (industrial and edible); listed October 2023 on the NSE SME platform.</td><td>FY26 revenue ₹199.8 cr (+45%), but operating profit ₹15.2 cr (−12%) and net profit ₹11.4 cr (−14%) as margins thinned. 2026 −38%; −57% from its October 2024 peak.</td></tr>
+    <tr><td>Saboo Sodium Chloro (~₹49 cr)</td><td>A Jaipur-based salt maker that has diversified into FMCG, hotels and power; tiny and thinly traded. Moved in from Chlor-Alkali.</td><td>FY26 revenue ₹64 cr, profit ₹0.23 cr, after a Q4 loss of ₹3.5 cr. Q1 FY27: revenue ₹16.6 cr (flat), profit ₹1.96 cr (vs ₹0.87 cr). 2026 −18%; −65% from its peak.</td></tr>
+  </tbody></table></div>
+  <h3>Where the real salt exposure is</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Salt role</th><th>Latest</th></tr></thead><tbody>
+    <tr><td>Archean Chemical (004)</td><td>Marine chemicals in the Rann of Kutch: industrial salt exports, bromine and sulphate of potash from the same brine</td><td>Q1 FY27 industrial salt revenue ₹171 cr (−12%) on 0.98 mt, hit by road works and diesel costs, with recovery expected from Q3 FY27; bromine revenue +58% (realisation +50%, ~₹300/kg)</td></tr>
+    <tr><td>Tata Chemicals (003)</td><td>Captive salt works at Mithapur feeding soda ash; Tata Salt's original maker</td><td>Announced an industrial-salt expansion in Gujarat in February 2026</td></tr>
+    <tr><td>GHCL (003)</td><td>Salt works feeding its soda-ash plant at Sutrapada</td><td>Soda-ash cycle (see 003)</td></tr>
+    <tr><td>Tata Consumer Products</td><td>Tata Salt: launched 1983 as India's first packaged iodised salt; 40%+ of branded salt</td><td>A packaged-foods stock; salt is its cash cow</td></tr>
+    <tr><td>Nirma (unlisted), Hindustan Salts and Sambhar Salts (government-owned, unlisted)</td><td>Soda ash and salt; Rajasthan's lake salt</td><td>—</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Classification flag for the next audit</span><p><b>Archean Chemical</b> earned about half its Q1 FY27 revenue from industrial salt, and its bromine and potash come from salt bittern. It fits this industry at least as well as 004, and would give the Salt basket a meaningful, liquid member. Keep Archean in 004 but cross-tag it, or move it here; that call is yours.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">6 · How money is made</p>
+  <h2>Three layers, very different margins</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Layer</th><th class="num">Price*</th><th>What earns the margin</th></tr></thead><tbody>
+    <tr><td>Crude salt at the pan</td><td class="num">₹1–3/kg</td><td>Low-cost land, good weather, pumping efficiency</td></tr>
+    <tr><td>Industrial salt at the works</td><td class="num">~₹2,400–2,900/t (coarse, detergent grade, 2026)</td><td>Purity, logistics to chemical plants and ports</td></tr>
+    <tr><td>Refined, iodised, unbranded</td><td class="num">₹6–12/kg</td><td>Conversion and regional distribution</td></tr>
+    <tr><td>Branded iodised salt</td><td class="num">₹25–30+/kg</td><td>Brand trust, FMCG reach</td></tr>
+    <tr><td>Bittern chemicals (bromine)</td><td class="num">~₹300/kg (bromine)</td><td>Integration, scale, technology</td></tr>
+  </tbody></table></div>
+  <p class="note">*Indicative ranges; industrial prices from trade listings (August 2026).</p>
+  <h3>The cost structure of a salt works</h3>
+  <ul>
+    <li><b>Land:</b> mostly government land leased for long periods; lease renewal is a recurring risk.</li>
+    <li><b>Pumping:</b> subsoil brine in the Rann is pumped with diesel or, increasingly, solar pumps; diesel costs matter.</li>
+    <li><b>Labour:</b> harvesting and heaping are still labour-intensive in small works; large works mechanise.</li>
+    <li><b>Freight:</b> salt is cheap and heavy, so rail and road freight to chemical plants or ports can exceed its value.</li>
+  </ul>
+  <h3>Why chemical plants care about salt quality</h3>
+  <p>A chlor-alkali or soda-ash plant uses roughly 1.5–1.7 tonnes of salt for every tonne of caustic soda or soda ash it makes, so salt is a large share of its raw-material bill. Price is not the only thing it buys on. Modern membrane cells (see 003) need brine almost free of calcium and magnesium, because traces of them clog the membranes. So buyers pay more for washed salt with high sodium chloride content (typically 98.5% or more) and low calcium, magnesium and sulphate. That is why large users run their own salt works and washeries (Tata Chemicals at Mithapur, GHCL near Sutrapada, Nirma in Kutch), and why good-quality export salt from Gujarat commands a premium over crude salt.</p>
+  <h3>The people behind the pans</h3>
+  <p>Much of India's inland salt still comes from Agariya families in the Little Rann of Kutch. They move into the desert after the monsoon, pump subsoil brine into hand-built pans for about eight months, and leave before the Rann floods again. Their costs are diesel (increasingly replaced by state-subsidised solar pumps), labour and transport; their selling price is set by traders and large buyers. Land rights inside the Wild Ass Sanctuary, health and education are recurring policy issues. For an investor, this fragmented base is why crude-salt prices stay low: thousands of small producers with little bargaining power sell into a few big buyers.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>A salt pan is like a solar farm that produces a product instead of electricity. The sun is free, the land and pumps cost money, and the profit depends on how far you have to carry the product to someone who needs it.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">7 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Source</th><th>Who's exposed</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Sunshine and a dry season</td><td>October–June in Gujarat and Rajasthan</td><td>Everyone</td><td>A below-normal monsoon (forecast 90% of LPA) usually means a long, productive season</td></tr>
+    <tr><td>Land leases</td><td>State governments; the Salt Commissioner</td><td>All salt works</td><td>Renewals and sanctuary disputes in the Little Rann</td></tr>
+    <tr><td>Diesel and power for pumping</td><td>Fuel markets; solar pumps</td><td>Subsoil-brine works in the Rann</td><td>Diesel costs up in 2026 (Archean cited them)</td></tr>
+    <tr><td>Potassium iodate</td><td>Chemical suppliers</td><td>Edible-salt refiners</td><td>A small cost</td></tr>
+    <tr><td>Freight and ports</td><td>Rail, road, Kandla, Mundra</td><td>Exporters, chemical users</td><td>Road works and costlier diesel slowed Archean's shipments</td></tr>
+    <tr><td>Packaging</td><td>Laminates and polymers</td><td>Branded and refined salt</td><td>Up with crude</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">8 · The business calendar</p>
+  <h2>A dry-season industry</h2>
+  <ul>
+    <li><b>October–June:</b> the production season. Pans are prepared after the monsoon and harvested through the dry months, with peak output in March–May.</li>
+    <li><b>June–September (monsoon):</b> production stops, and rain can wash away unsold heaps. Cyclones on the Gujarat coast (Tauktae 2021, Biparjoy 2023) can damage pans and stocks.</li>
+    <li><b>The Little Rann of Kutch:</b> Agariya families move into the Rann after the monsoon and leave before it floods again.</li>
+    <li><b>Demand:</b> edible demand is steady all year; industrial demand follows chlor-alkali and soda-ash operating rates; exports peak in the dry season.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">9 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 2 names (Goyal Salt Limited, Saboo Sodium Chloro Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +5.5 pts (beat in 9 of 15 years); Oct +4.1 pts (beat in 8 of 15 years); Aug +3.2 pts (beat in 7 of 16 years).</li><li><b>Weakest months:</b> Mar -7.2 pts (beat in 3 of 15 years); Feb -2.4 pts (beat in 4 of 15 years); Jun -1.8 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 3 of 15 years (median -14.4 pts); Apr–Jul beat the Nifty in 9 of 15 years (median +7.5 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +5.4 pts); Oct–Dec beat the Nifty in 7 of 14 years (median -1.2 pts); Sep–Nov beat the Nifty in 7 of 14 years (median -0.7 pts); Jan–Mar beat the Nifty in 4 of 15 years (median -15.8 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +2.5 points.</p><p><b>Reading it:</b> treat this as noise. Before 2024 the basket is a single tiny, thinly traded stock (Saboo Sodium Chloro, ~₹49 cr); Goyal Salt listed only in October 2023. March has been bad (3 of 15) and February–March beat the Nifty in only 3 of 15 years (median −14 points), but with one illiquid stock this reflects micro-cap trading, not salt. For a real read on the salt business, follow Archean (004), Tata Chemicals and GHCL (003) and Tata Consumer.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>March</b> beat the Nifty in only 3 of 15 years (−26.7 in 2022, −23.4 in 2020, −18.8 in 2018). These are micro-cap sell-offs, not salt events.</li>
+    <li><b>April–July</b> beat the Nifty in 9 of 15 years; the misses (2018 −34.6, 2019 −24.9) were the micro-cap crash years.</li>
+    <li><b>The largest single months</b> (October 2017 +44.4, October 2021 +36.1) came during micro-cap manias.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Don't. A basket of one or two micro caps has no reliable seasonality. Salt's economic season (dry-season output, cyclone risk) shows up in Archean's, Tata Chemicals' and GHCL's results, not in these two stocks.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">10 · What moves demand and margins</p>
+  <h2>Seven drivers</h2>
+  <ol>
+    <li><b>Weather:</b> a long dry season means more salt; unseasonal rain and cyclones cut output and destroy heaps.</li>
+    <li><b>Chlor-alkali and soda-ash operating rates:</b> the biggest demand source (see 003). New caustic and soda-ash capacity in Gujarat raises industrial salt demand.</li>
+    <li><b>Export demand and freight:</b> Chinese, Japanese, Korean and Southeast Asian chemical demand; ocean and inland freight.</li>
+    <li><b>Logistics:</b> rail rake availability, road condition and diesel prices to ports.</li>
+    <li><b>Land and labour:</b> lease renewals, wildlife-sanctuary rules in the Little Rann, wages and worker welfare.</li>
+    <li><b>Branded competition:</b> distribution reach and pricing of the big brands for edible salt; growth in value-added salts (low-sodium, rock salt).</li>
+    <li><b>Regulation:</b> iodisation rules (FSSAI), and any action on microplastics or sodium reduction.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">11 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: Saboo Sodium Chloro alone until 2023; Saboo and Goyal Salt equal-weighted from 2024. Monthly returns capped at ±50%, price only; 2026 is to 18 September. The notes pair each year's stock move with that year's salt-industry events; the two rarely have anything to do with each other.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>A longer history</h3>
+  <ul>
+    <li><b>1930:</b> Gandhi's Dandi March against the British salt tax (he made salt at Dandi on 6 April) made salt a symbol of independence.</li>
+    <li><b>1983:</b> Tata Chemicals launched Tata Salt, India's first packaged iodised salt; branded salt became an FMCG category.</li>
+    <li><b>1998–2006:</b> the ban on non-iodised salt for eating was imposed, lifted in 2000 and restored in 2005. Iodised salt now reaches ~94% of households (NFHS-5).</li>
+    <li><b>1990s–2000s:</b> salt de-licensed; large works mechanised and turned bittern into bromine.</li>
+    <li><b>2017:</b> the small central salt cess was abolished with other minor cesses.</li>
+    <li><b>2022–23:</b> record Indian output, driven by strong soda-ash and caustic demand; Archean listed (November 2022).</li>
+  </ul>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The listed salt stocks follow micro-cap sentiment,</b> not salt output: +285% in 2021 and −61% in 2018 had nothing to do with pans.</li>
+    <li><b>Industrial salt follows chemicals:</b> soda-ash booms (2021–22) lift salt demand and prices.</li>
+    <li><b>Weather is the supply shock:</b> cyclones and unseasonal rain, not demand, cause shortages.</li>
+    <li><b>Value accrues downstream:</b> bromine and brands earn the margins.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">12 · The global picture</p>
+  <h2>China, the US and India make most of the world's salt</h2>
+  <p>World salt comes from three methods: solar evaporation (India, Australia, Mexico, China's coast), rock-salt mining (the US, Germany, Canada, Pakistan) and solution mining or vacuum evaporation (Europe, the US, China). Uses differ too. In India and China, salt mostly feeds chemicals; in North America and Europe, a big share goes to de-icing roads in winter.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Country / company</th><th>Strength</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>China</td><td>The largest producer; lake, well and sea salt</td><td>Mostly consumed at home by chlor-alkali and soda ash</td></tr>
+    <tr><td>United States (Compass Minerals, Cargill, Morton)</td><td>Rock salt and evaporated salt; a huge de-icing market</td><td>Compass's Goderich mine (Canada) is the world's largest underground salt mine</td></tr>
+    <tr><td>India</td><td>~30 mt solar salt; a leading exporter (~14 mt in 2023–24)</td><td>Gujarat dominates</td></tr>
+    <tr><td>Australia (Dampier Salt, Shark Bay)</td><td>Large solar salt exporters to Asian chemical plants</td><td>India's main export competitor</td></tr>
+    <tr><td>Mexico (Exportadora de Sal, Guerrero Negro)</td><td>The world's largest solar salt works</td><td>Exports to Asia and North America</td></tr>
+    <tr><td>Germany (K+S)</td><td>Rock salt, de-icing, potash</td><td>European leader</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>Salt as tax to salt as commodity:</b> for centuries governments taxed and monopolised salt (the British in India, the gabelle in France, Chinese dynasties); de-regulation made it a low-value bulk commodity.</li>
+    <li><b>Asia's chemical boom made solar salt a trade good:</b> Indian, Australian and Mexican works supply Chinese, Japanese and Korean chemical plants.</li>
+    <li><b>India's export rise:</b> cheap Gujarat solar salt and port access lifted India into the top rank of exporters.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">13 · Where technology is going</p>
+  <h2>Five shifts</h2>
+  <ol>
+    <li><b>Solar pumps</b> replacing diesel pumps for subsoil brine in the Rann: lower cost and cleaner, and state-supported.</li>
+    <li><b>Mechanised harvesting and washeries:</b> higher purity for chlor-alkali membrane cells (see 003), which need very pure brine.</li>
+    <li><b>Bittern valorisation:</b> extracting bromine, magnesium and potash (Archean's model); lithium from brines is a future possibility.</li>
+    <li><b>Value-added edible salts:</b> low-sodium, iron-fortified, rock and pink salts, and flavoured salts; premiumisation in a staple.</li>
+    <li><b>Microplastic testing:</b> a 2024 Toxics Link study reported microplastics in all Indian salt samples it tested, pushing brands towards better washing and filtration.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">14 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Iodisation (FSSAI)</td><td>Salt for human consumption must be iodised (at least 30 ppm at manufacture, 15 ppm at consumer level)</td><td>Refining cost; protects organised players</td></tr>
+    <tr><td>Salt Commissioner's Organisation</td><td>Under DPIIT (Commerce Ministry); land allotment, statistics, welfare</td><td>The industry's regulator</td></tr>
+    <tr><td>Salt land leases</td><td>Mostly state land; long-term leases</td><td>Lease renewals are a recurring risk</td></tr>
+    <tr><td>Wildlife sanctuary in the Little Rann</td><td>The Wild Ass Sanctuary overlaps Agariya salt pans</td><td>Land rights disputes; survey and settlement</td></tr>
+    <tr><td>Double-fortified salt in welfare schemes</td><td>Some states use it in PDS and school meals</td><td>Volume for fortified-salt makers</td></tr>
+    <tr><td>Salt cess</td><td>Abolished in 2017</td><td>Minor</td></tr>
+    <tr><td>Sodium reduction</td><td>WHO recommends under 5 g of salt a day; Indians eat well above that</td><td>A long-term push towards low-sodium products</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">15 · Where the cycle stands now</p>
+  <h2>September 2026: steady salt, weak listed stocks</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Production</td><td>Steady</td><td>A below-normal monsoon points to a long 2026–27 season</td></tr>
+    <tr><td>Industrial demand</td><td>Steady, logistics-constrained</td><td>Archean's industrial salt −12% on transport issues; recovery expected from Q3 FY27</td></tr>
+    <tr><td>Bittern chemicals</td><td>Strong</td><td>Bromine realisation +50%</td></tr>
+    <tr><td>Edible salt</td><td>Steady, premiumising</td><td>Tata Salt's value-added range growing</td></tr>
+    <tr><td>Listed salt stocks</td><td>Weak</td><td>Goyal −38%, Saboo −18% this year</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Nothing here is broken; salt is a steady, low-margin commodity. The listed pure plays are too small and illiquid to own for the industry. For salt exposure with scale, look at Archean (salt plus bromine), Tata Chemicals and GHCL (salt plus soda ash) and Tata Consumer (the brand).</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">16 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Monsoon length and cyclones in Gujarat</td><td>IMD</td><td>Supply</td></tr>
+    <tr><td>Chlor-alkali and soda-ash operating rates</td><td>Company results (003)</td><td>Industrial demand</td></tr>
+    <tr><td>Salt export volumes</td><td>Commerce ministry, port data</td><td>Export demand</td></tr>
+    <tr><td>Archean's industrial salt volumes and realisations</td><td>Quarterly</td><td>The best listed read</td></tr>
+    <tr><td>Goyal Salt's margins</td><td>Half-yearly (SME)</td><td>Whether growth turns profitable</td></tr>
+    <tr><td>FSSAI rules on iodisation, sodium, microplastics</td><td>Notifications</td><td>Edible-salt costs</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">17 · Adjacent industries and proxies</p>
+  <h2>Where else salt shows up</h2>
+  <ul>
+    <li><b>Chlor-alkali and soda ash</b> (003): the main customers.</li>
+    <li><b>Bromine and marine chemicals</b> (004): Archean.</li>
+    <li><b>Packaged foods:</b> Tata Consumer (Tata Salt), ITC (Aashirvaad salt), HUL (Annapurna).</li>
+    <li><b>Glass, detergents, textiles and leather:</b> industrial salt users via soda ash and directly.</li>
+    <li><b>Ports and logistics:</b> Kandla (Deendayal) and Mundra handle salt exports.</li>
+    <li><b>Water treatment:</b> softener salt.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">18 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of volume is industrial vs edible vs export? What are realisations for each?</li>
+    <li>Do you own your pans or buy crude salt? What is the lease tenure?</li>
+    <li>How much of the season was lost to rain or cyclones, and what stock is carried into the monsoon?</li>
+    <li>What is your freight cost per tonne, and how dependent are you on rail rakes?</li>
+    <li>(Goyal) Why did margins fall as revenue grew 45%? Is growth from lower-margin trading?</li>
+    <li>(Saboo) How much of profit comes from salt vs the hotel, FMCG and power businesses?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Revenue growth with falling margins (trading-led growth).</li>
+    <li>Diversification into unrelated businesses at tiny scale.</li>
+    <li>Thin trading and large price moves without news.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">19 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Salt is a defensive staple, so salt stocks are defensive."</td><td>Demand is steady, but the listed salt stocks fell 61% (2018) and rose 285% (2021): micro-cap behaviour, not staples.</td></tr>
+    <tr><td>"India's salt dominance is a moat."</td><td>Salt is abundant and cheap everywhere on a coast; the moat is in brands (Tata) and downstream chemistry (Archean, Tata Chemicals).</td></tr>
+    <tr><td>"Iodised salt is no longer needed."</td><td>Iodine deficiency disorders fell sharply because of iodisation; the rule remains public-health policy.</td></tr>
+    <tr><td>"Rock and pink salt are healthier."</td><td>They contain little or no iodine; nutritionists warn against replacing iodised salt entirely.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">20 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. bittern, Baumé" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Making salt</h3><dl>
+    <dt>Brine</dt><dd>Salty water: seawater or underground (subsoil) brine.</dd>
+    <dt>Subsoil brine</dt><dd>Very salty groundwater pumped in the Rann of Kutch and Rajasthan.</dd>
+    <dt>Baumé (°Bé)</dt><dd>A scale of brine strength; seawater is ~3.5 °Bé and salt crystallises at ~25–29 °Bé.</dd>
+    <dt>Reservoir / condenser / crystalliser</dt><dd>The sequence of evaporation ponds.</dd>
+    <dt>Salt pan</dt><dd>A shallow evaporation pond.</dd>
+    <dt>Bittern</dt><dd>The magnesium- and bromide-rich liquid left after salt crystallises.</dd>
+    <dt>Gypsum</dt><dd>Calcium sulphate that settles out before salt.</dd>
+    <dt>Fractional crystallisation</dt><dd>Separating salts by letting them crystallise at different concentrations.</dd>
+    <dt>Solar salt</dt><dd>Salt made by sun evaporation.</dd>
+    <dt>Vacuum salt</dt><dd>Very pure salt made by boiling brine in vacuum pans.</dd>
+    <dt>Rock salt / halite</dt><dd>Mined natural salt.</dd>
+    <dt>Solution mining</dt><dd>Dissolving underground salt with water and pumping up the brine.</dd>
+    <dt>Washery</dt><dd>A plant that washes crude salt.</dd>
+    <dt>Hydro-extractor</dt><dd>A centrifuge that spins washed salt dry.</dd>
+    <dt>Heaping</dt><dd>Storing harvested salt in large mounds.</dd>
+    <dt>Agariya</dt><dd>Traditional salt workers of the Little Rann of Kutch.</dd>
+    <dt>Little Rann of Kutch</dt><dd>A seasonal salt desert in Gujarat; major subsoil-brine salt works.</dd>
+    <dt>Sambhar Lake</dt><dd>India's largest inland saline lake (Rajasthan); lake salt.</dd>
+  </dl>
+  <h3>Products and health</h3><dl>
+    <dt>Industrial salt</dt><dd>Salt for chemical plants and other industries.</dd>
+    <dt>Edible salt</dt><dd>Salt for eating; must be iodised.</dd>
+    <dt>Iodisation</dt><dd>Adding iodine to salt to prevent deficiency.</dd>
+    <dt>Potassium iodate</dt><dd>The iodine compound added to Indian salt.</dd>
+    <dt>ppm</dt><dd>Parts per million; the unit for iodine content.</dd>
+    <dt>IDD / goitre</dt><dd>Iodine deficiency disorders; goitre is an enlarged thyroid.</dd>
+    <dt>Double-fortified salt (DFS)</dt><dd>Salt fortified with iodine and iron.</dd>
+    <dt>Low-sodium salt</dt><dd>Salt partly replaced with potassium chloride.</dd>
+    <dt>Free-flowing agent</dt><dd>An anti-caking additive that stops salt clumping.</dd>
+    <dt>Sendha namak / kala namak</dt><dd>Rock salt / black salt.</dd>
+    <dt>Microplastics</dt><dd>Tiny plastic particles found in sea salt and packaging.</dd>
+    <dt>De-icing salt</dt><dd>Coarse salt spread on icy roads (a big use abroad).</dd>
+  </dl>
+  <h3>Policy and business</h3><dl>
+    <dt>Salt Commissioner</dt><dd>The central office regulating the salt industry.</dd>
+    <dt>Salt land lease</dt><dd>Government land leased for salt works.</dd>
+    <dt>Salt cess</dt><dd>A small central levy on salt, abolished in 2017.</dd>
+    <dt>Dandi March</dt><dd>Gandhi's 1930 protest against the British salt tax.</dd>
+    <dt>FSSAI</dt><dd>Food Safety and Standards Authority of India.</dd>
+    <dt>NFHS</dt><dd>National Family Health Survey; tracks iodised-salt use.</dd>
+    <dt>Marine chemicals</dt><dd>Chemicals from seawater or brine: salt, bromine, potash, magnesium.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Chlor-alkali, soda ash, membrane cell</dt><dd>See 003.</dd>
+    <dt>Bromine, sulphate of potash (SOP)</dt><dd>See 004.</dd>
+    <dt>SME platform</dt><dd>See 004 and 008.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">21 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Where does most of India's salt go?</summary><p>About two-thirds to industry, mainly chlor-alkali and soda-ash plants, plus large exports; edible salt is the smaller share.</p></details>
+  <details class="q"><summary>2. At what brine strength does salt crystallise, and why stop harvesting beyond it?</summary><p>About 25–29 °Bé; beyond that, bitter magnesium salts contaminate the product.</p></details>
+  <details class="q"><summary>3. What is bittern, and who uses it?</summary><p>The leftover brine rich in bromide, magnesium and potassium; Archean and Tata Chemicals turn it into bromine and potash.</p></details>
+  <details class="q"><summary>4. Why are the best "salt stocks" outside this watchlist?</summary><p>Value sits downstream: Archean (salt plus bromine), Tata Chemicals and GHCL (salt plus soda ash) and Tata Consumer (the Tata Salt brand).</p></details>
+  <details class="q"><summary>5. What must edible salt contain in India?</summary><p>Iodine: at least 30 ppm at manufacture and 15 ppm at consumer level.</p></details>
+  <details class="q"><summary>6. What hurts salt supply?</summary><p>Unseasonal rain and cyclones on the Gujarat coast (Tauktae 2021, Biparjoy 2023), which shorten the season and wash away heaps.</p></details>
+  <details class="q"><summary>7. Why did Goyal Salt fall 38% in 2026 despite 45% revenue growth?</summary><p>Its FY26 operating and net profit fell 12–14% as margins thinned.</p></details>
+  <details class="q"><summary>8. Why should you ignore this basket's seasonality?</summary><p>It is one or two illiquid micro caps; the moves reflect micro-cap sentiment, not salt.</p></details>
+  <details class="q"><summary>9. When was Tata Salt launched, and why does it matter?</summary><p>1983, as India's first packaged iodised salt; it created branded salt as an FMCG category.</p></details>
+  <details class="q"><summary>10. Which company is the most defensible candidate to add to this basket?</summary><p>Archean Chemical, which earned about half its Q1 FY27 revenue from industrial salt.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">22 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; Saboo (and Goyal from 2024) vs NSE:NIFTY.</li>
+    <li>Industry: <a href="https://saltcomindia.gov.in/Pdf/SailentFeatures.pdf">Salt Commissioner: salient features</a>; <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-salt.pdf">USGS Mineral Commodity Summaries 2026: salt</a>; <a href="https://uja.in/blog/market-reports/salt-industry-in-india/">salt industry in India</a>; <a href="https://www.statesinsights.com/salt-producing-states-in-india/">salt-producing states</a>; <a href="https://www.seair.co.in/blog/salt-export-from-india.aspx">salt exports</a>; <a href="https://www.expertmarketresearch.com/reports/india-salt-market">India salt market</a>; <a href="https://www.tridge.com/market-overview/salt/IN">salt prices 2026</a>; <a href="https://ic.gujarat.gov.in/sagarkhedu-development-scheme.aspx">Gujarat salt-worker schemes</a>.</li>
+    <li>Companies: <a href="https://www.screener.in/company/GOYALSALT/">Goyal Salt</a>; <a href="https://scanx.trade/stock-market-news/companies/saboo-sodium-chloro-q1-results-net-profit-jumps-126-yoy-to-196-lakh/46951065">Saboo Q1 FY27</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Saboo-Sodium-Chloro-Posts-FY26-Profit-of-indian-rupee023-Cr-Q4-Sees-Loss/6a1ac431de28c5c0a91238cb">Saboo FY26</a>; <a href="https://uk.finance.yahoo.com/news/archean-chemical-industries-ltd-bom-010623677.html">Archean Q1 FY27 call</a>; <a href="https://www.investywise.com/archean-chemical-industries-limited-q1-fy27-earnings-call-transcript/">Archean transcript</a>.</li>
+    <li>Brands: <a href="https://en.wikipedia.org/wiki/Tata_Salt">Tata Salt</a>; <a href="https://www.tata.com/newsroom/business/tata-the-salt-india-trusts">Tata group on Tata Salt</a>.</li>
+    <li>Chemistry, policy and history (Baumé stages, iodisation rules, the salt cess, the Dandi March, the NFHS-5 iodised-salt coverage, the 2024 microplastics study): standard references and public records, known before this session.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -11.9}, {"y": 2013, "v": -11.6}, {"y": 2014, "v": -11.2}, {"y": 2015, "v": -18.5}, {"y": 2016, "v": -3.7}, {"y": 2017, "v": 41.1}, {"y": 2018, "v": -27.4}, {"y": 2019, "v": -19.9}, {"y": 2020, "v": -24.5}, {"y": 2021, "v": 23.5}, {"y": 2022, "v": -29.8}, {"y": 2023, "v": 10.2}, {"y": 2024, "v": -22.9}, {"y": 2025, "v": -19.4}, {"y": 2026, "v": -14.4}], "AprJul": [{"y": 2012, "v": 7.5}, {"y": 2013, "v": 32.5}, {"y": 2014, "v": -17.5}, {"y": 2015, "v": 8.8}, {"y": 2016, "v": 11.8}, {"y": 2017, "v": -11.2}, {"y": 2018, "v": -34.6}, {"y": 2019, "v": -24.9}, {"y": 2020, "v": 19.6}, {"y": 2021, "v": 48.0}, {"y": 2022, "v": 18.3}, {"y": 2023, "v": -8.8}, {"y": 2024, "v": 7.8}, {"y": 2025, "v": -7.9}, {"y": 2026, "v": 5.2}], "AugSep": [{"y": 2012, "v": -22.3}, {"y": 2013, "v": -4.3}, {"y": 2014, "v": 3.2}, {"y": 2015, "v": -9.2}, {"y": 2016, "v": 9.4}, {"y": 2017, "v": -1.2}, {"y": 2018, "v": -7.9}, {"y": 2019, "v": -12.3}, {"y": 2020, "v": 12.4}, {"y": 2021, "v": 34.2}, {"y": 2022, "v": 8.2}, {"y": 2023, "v": 13.8}, {"y": 2024, "v": 15.5}, {"y": 2025, "v": 7.7}], "OctDec": [{"y": 2012, "v": 7.9}, {"y": 2013, "v": -45.2}, {"y": 2014, "v": 29.3}, {"y": 2015, "v": 12.2}, {"y": 2016, "v": -3.0}, {"y": 2017, "v": 37.6}, {"y": 2018, "v": 3.8}, {"y": 2019, "v": -4.3}, {"y": 2020, "v": -7.5}, {"y": 2021, "v": -7.4}, {"y": 2022, "v": 0.7}, {"y": 2023, "v": -18.0}, {"y": 2024, "v": 0.7}, {"y": 2025, "v": -16.2}], "SepNov": [{"y": 2012, "v": 5.6}, {"y": 2013, "v": -40.5}, {"y": 2014, "v": 61.6}, {"y": 2015, "v": 26.4}, {"y": 2016, "v": 1.4}, {"y": 2017, "v": 48.3}, {"y": 2018, "v": -15.5}, {"y": 2019, "v": -11.5}, {"y": 2020, "v": -27.3}, {"y": 2021, "v": 20.5}, {"y": 2022, "v": -18.1}, {"y": 2023, "v": -16.9}, {"y": 2024, "v": 11.8}, {"y": 2025, "v": -2.8}], "JanMar": [{"y": 2012, "v": -33.1}, {"y": 2013, "v": -12.4}, {"y": 2014, "v": 20.4}, {"y": 2015, "v": -33.1}, {"y": 2016, "v": -7.3}, {"y": 2017, "v": 43.8}, {"y": 2018, "v": -40.5}, {"y": 2019, "v": -22.3}, {"y": 2020, "v": -20.5}, {"y": 2021, "v": 36.3}, {"y": 2022, "v": -15.8}, {"y": 2023, "v": 3.6}, {"y": 2024, "v": -3.4}, {"y": 2025, "v": -24.6}, {"y": 2026, "v": -17.3}]}, "my": {"1": {"2012": -21.9, "2013": -0.7, "2014": 31.5, "2015": -17.2, "2016": -3.8, "2017": 0.6, "2018": -18.4, "2019": -2.9, "2020": 7.6, "2021": 10.2, "2022": 19.8, "2023": -5.8, "2024": 24.3, "2025": -6.6, "2026": -4.6}, "2": {"2012": 1.4, "2013": -3.8, "2014": -18.2, "2015": -10.6, "2016": -9.3, "2017": 2.3, "2018": -12.2, "2019": -14.3, "2020": -4.8, "2021": 43.4, "2022": -5.2, "2023": 20.7, "2024": -9.0, "2025": -9.6, "2026": -7.0}, "3": {"2012": -12.6, "2013": -8.6, "2014": 9.7, "2015": -9.3, "2016": 7.9, "2017": 36.5, "2018": -18.8, "2019": -5.2, "2020": -23.4, "2021": -13.6, "2022": -26.7, "2023": -9.0, "2024": -14.9, "2025": -11.0, "2026": -8.8}, "4": {"2012": 26.9, "2013": -7.6, "2014": -12.0, "2015": 11.4, "2016": 5.5, "2017": -8.8, "2018": -5.8, "2019": -5.4, "2020": 4.5, "2021": -17.8, "2022": 45.9, "2023": 4.4, "2024": 18.1, "2025": 6.9, "2026": 15.9}, "5": {"2012": -13.1, "2013": 19.1, "2014": 23.4, "2015": 3.8, "2016": -4.8, "2017": -5.3, "2018": -13.4, "2019": -10.6, "2020": 24.1, "2021": 23.4, "2022": -17.1, "2023": -10.6, "2024": -10.7, "2025": -4.6, "2026": -5.5}, "6": {"2012": 1.0, "2013": 13.5, "2014": -6.6, "2015": -11.5, "2016": 0.9, "2017": 8.0, "2018": -16.8, "2019": -8.2, "2020": 23.8, "2021": -3.5, "2022": -4.7, "2023": -6.2, "2024": -8.4, "2025": -9.8, "2026": 1.5}, "7": {"2011": -4.2, "2012": -2.6, "2013": 5.2, "2014": -15.8, "2015": 6.2, "2016": 9.4, "2017": -4.3, "2018": 1.7, "2019": -4.6, "2020": -29.3, "2021": 49.7, "2022": 3.5, "2023": 5.1, "2024": 10.7, "2025": 0.3, "2026": -4.8}, "8": {"2011": 0.5, "2012": -11.5, "2013": -9.9, "2014": -8.2, "2015": -12.6, "2016": 8.7, "2017": -4.1, "2018": 7.9, "2019": -5.7, "2020": 17.2, "2021": 37.8, "2022": 22.0, "2023": 16.5, "2024": -1.8, "2025": -1.8, "2026": -3.1}, "9": {"2011": 1.2, "2012": -10.9, "2013": 7.1, "2014": 12.0, "2015": 4.2, "2016": 0.8, "2017": 3.0, "2018": -13.9, "2019": -6.8, "2020": -3.8, "2021": -3.2, "2022": -10.3, "2023": -2.7, "2024": 17.5, "2025": 9.8}, "10": {"2011": -8.3, "2012": 5.8, "2013": -28.4, "2014": -3.7, "2015": -4.8, "2016": 1.4, "2017": 44.4, "2018": 1.6, "2019": 2.9, "2020": -7.4, "2021": 36.1, "2022": 18.3, "2023": -2.8, "2024": 7.3, "2025": -0.7}, "11": {"2011": 2.8, "2012": 10.7, "2013": -18.5, "2014": 46.8, "2015": 27.0, "2016": -0.7, "2017": 0.3, "2018": -4.0, "2019": -6.9, "2020": -16.4, "2021": -8.1, "2022": -21.7, "2023": -12.0, "2024": -10.9, "2025": -10.9}, "12": {"2011": 23.1, "2012": -7.8, "2013": -2.1, "2014": -8.3, "2015": -7.6, "2016": -3.8, "2017": -5.5, "2018": 6.1, "2019": 0.3, "2020": 20.3, "2021": -26.3, "2022": 8.1, "2023": -3.0, "2024": 4.9, "2025": -4.5}}, "basket": ["Goyal Salt Limited", "Saboo Sodium Chloro Limited"], "nbasket": 2, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 1.6, "rel": 0.8, "hit": 6, "n": 15}, {"m": 2, "abs": -3.6, "rel": -2.4, "hit": 4, "n": 15}, {"m": 3, "abs": -7.4, "rel": -7.2, "hit": 3, "n": 15}, {"m": 4, "abs": 8.0, "rel": 5.5, "hit": 9, "n": 15}, {"m": 5, "abs": 1.0, "rel": -0.1, "hit": 5, "n": 15}, {"m": 6, "abs": -0.0, "rel": -1.8, "hit": 6, "n": 15}, {"m": 7, "abs": 3.6, "rel": 1.6, "hit": 9, "n": 16}, {"m": 8, "abs": 3.0, "rel": 3.2, "hit": 7, "n": 16}, {"m": 9, "abs": 0.9, "rel": 0.2, "hit": 8, "n": 15}, {"m": 10, "abs": 6.2, "rel": 4.1, "hit": 8, "n": 15}, {"m": 11, "abs": -0.6, "rel": -1.5, "hit": 5, "n": 15}, {"m": 12, "abs": 0.3, "rel": -0.4, "hit": 6, "n": 15}], "cy": [{"y": 2012, "b": -16.3, "n": 27.7, "rel": -44.0, "partial": false}, {"y": 2013, "b": -30.8, "n": 6.8, "rel": -37.6, "partial": false}, {"y": 2014, "b": 75.3, "n": 31.4, "rel": 43.9, "partial": false}, {"y": 2015, "b": -28.5, "n": -4.1, "rel": -24.4, "partial": false}, {"y": 2016, "b": 11.7, "n": 3.0, "rel": 8.7, "partial": false}, {"y": 2017, "b": 114.1, "n": 28.6, "rel": 85.5, "partial": false}, {"y": 2018, "b": -60.7, "n": 3.2, "rel": -63.8, "partial": false}, {"y": 2019, "b": -44.6, "n": 12.0, "rel": -56.6, "partial": false}, {"y": 2020, "b": -0.8, "n": 14.9, "rel": -15.7, "partial": false}, {"y": 2021, "b": 192.1, "n": 24.1, "rel": 168.0, "partial": false}, {"y": 2022, "b": 13.7, "n": 4.3, "rel": 9.4, "partial": false}, {"y": 2023, "b": 9.5, "n": 20.0, "rel": -10.5, "partial": false}, {"y": 2024, "b": 30.4, "n": 8.8, "rel": 21.6, "partial": false}, {"y": 2025, "b": -29.8, "n": 10.5, "rel": -40.3, "partial": false}, {"y": 2026, "b": -28.1, "n": -10.7, "rel": -17.5, "partial": true}], "dd": [{"co": "Goyal Salt", "peak": "Oct 2024", "fp": -57, "y1": -43}, {"co": "Saboo Sodium Chloro", "peak": "Sep 2024", "fp": -65, "y1": -31}], "win": {"FebMar": {"mean": -9.4, "median": -14.4, "hit": 3, "n": 15}, "AprJul": {"mean": 3.6, "median": 7.5, "hit": 9, "n": 15}, "AugSep": {"mean": 3.4, "median": 5.4, "hit": 8, "n": 14}, "OctDec": {"mean": -0.7, "median": -1.2, "hit": 7, "n": 14}, "SepNov": {"mean": 3.1, "median": -0.7, "hit": 7, "n": 14}, "JanMar": {"mean": -8.4, "median": -15.8, "hit": 4, "n": 15}}, "ytd": {"b": -28.1, "n": -10.7}, "notes": {"2012": "A single-stock basket: Saboo \u221216% as micro caps lagged a Nifty that rose 28%.", "2013": "Saboo \u221231% in the small-cap and rupee sell-off; the weaker rupee made Indian salt more competitive abroad.", "2014": "The small-cap rally lifted even micro caps: Saboo +77%.", "2015": "Saboo \u221229% as small caps fell; a second weak monsoon (86% of LPA) meant a long, dry production season.", "2016": "Saboo +12%; steady chlor-alkali and soda-ash demand for industrial salt (see 003).", "2017": "The micro-cap boom: Saboo +159%, with no change in the salt business itself.", "2018": "The micro-cap crash: Saboo \u221261%.", "2019": "Saboo \u221245%; the monsoon was strong (110% of LPA) and withdrew late, delaying the start of the salt season.", "2020": "Flat (\u22121%): edible salt demand held through the lockdown, while industrial demand dipped.", "2021": "Micro-cap mania: Saboo +285%. Cyclone Tauktae (May) damaged salt pans on the Saurashtra coast; strong soda-ash demand pulled industrial salt.", "2022": "Saboo +14%. Soda-ash and caustic prices peaked (see 003); a record salt year (2022\u201323) followed. Archean listed in November.", "2023": "Saboo +20%. Cyclone Biparjoy (June) hit the Kutch coast and salt works around Kandla. Goyal Salt listed on the NSE SME platform in October.", "2024": "The first two-stock year: Goyal +27%, Saboo +25%, on strong revenue growth and micro-cap flows.", "2025": "Goyal \u221216%, Saboo \u221243% as micro caps fell; Goyal's margins began to slip.", "2026": "Goyal \u221238% as FY26 profit fell 14% despite 45% revenue growth; Saboo \u221218% after a Q4 FY26 loss. Industrial salt faced logistics and diesel-cost problems (Archean's volumes \u2212)."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

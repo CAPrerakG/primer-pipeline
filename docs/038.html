@@ -1,0 +1,604 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renewable Power Generation Primer</title>
+<meta name="description" content="Industry 38 of 278: solar and wind generators. Why 45 GW of grid connectivity sits unused waiting for contracts, how bid tariffs of ₹2.86–2.97 a unit changed the economics, the battery pivot, and the 20 listed developers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Renewable Power Generation · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What is sold</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where the business is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 38 of 278 · Power family, part 3</div>
+  <h1>Renewable Power Generation</h1>
+  <p class="lede">The companies building India's solar and wind capacity — four-fifths of every megawatt the country added last year. The technology works, the cost has collapsed, and the growth is extraordinary. What has not kept up is the ability to sell the output: about 45 gigawatts of granted grid connectivity is sitting idle because nobody has signed the contract to buy the power.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 20 listed (2 new in 2026)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Power Transmission &amp; Distribution Utilities</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">~45 GW</div><div class="l">Grid connectivity granted or applied for that is unused, awaiting power purchase agreements</div></div>
+    <div class="stat"><div class="n">₹2.86–2.97</div><div class="l">Where 2026 solar bids are clearing, per unit — a price that leaves little room for error</div></div>
+    <div class="stat"><div class="n">20.1 GW</div><div class="l">Adani Green's operational capacity, up 27% year on year, at a 94% EBITDA margin</div></div>
+    <div class="stat"><div class="n">3.62 GWh</div><div class="l">ACME Solar's commissioned battery storage — about 40% of India's total</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>Building faster than the grid can absorb</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>A solar farm is a field of panels that makes electricity whenever the sun shines, with no fuel and almost no running cost. Once it is built, it is nearly free to operate — which is why nearly every new power plant in India is now solar or wind. But there are two catches. The sun only shines in the daytime, and everyone needs electricity most in the evening. And before you build, somebody has to promise to buy your electricity for the next twenty-five years — and right now a great many builders have finished the paperwork to connect to the grid and still cannot find a buyer willing to sign.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Operationally this is the best-growing industry in the market; commercially it has hit a bottleneck.</p>
+    <ul>
+      <li><b>The growth is real:</b> Adani Green at 20.1 GW (+27%) with a 94% EBITDA margin, NTPC Green revenue +63% and 10,671 MW operational, ACME Solar profit +80%.</li>
+      <li><b>The bottleneck is contracts.</b> Around 31.8 GW of granted connectivity plus 13.5 GW applied for is awaiting power purchase agreements, with signing delays of up to twelve months; Rajasthan alone accounts for 18.75 GW.</li>
+      <li><b>Tariffs keep falling:</b> 2026 bids at ₹2.86–2.97 a unit, and regulators are rejecting higher ones — Haryana's regulator turned down a ₹2.99 contract on tariff and delay grounds.</li>
+      <li><b>The answer everyone is building is storage.</b> Adani Green's battery capacity reached 3,551 MWh and ACME's 3.62 GWh, roughly 40% of India's total, with ACME now guiding to more than 10 GWh by FY27.</li>
+      <li><b>The market has noticed the gap:</b> basket flat, median −6%, Adani Green still 55% below its 2022 peak.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What is sold">
+  <p class="eyebrow">2 · What is sold</p>
+  <h2>Four products, only one of which is simply electricity</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Who buys it</th><th>Economics</th></tr></thead><tbody>
+    <tr><td>Utility-scale solar</td><td>Large ground-mounted farms selling under long contracts</td><td>Central agencies and state distribution companies</td><td>Bid tariffs of ₹2.86–2.97 a unit; very high margins, very high capital intensity</td></tr>
+    <tr><td>Wind and hybrid</td><td>Wind farms, or wind and solar combined to smooth output</td><td>Same buyers</td><td>Better evening output than solar alone</td></tr>
+    <tr><td>Firm and dispatchable power</td><td>Renewables plus storage, contracted to supply set hours</td><td>Utilities needing reliable supply</td><td>Higher tariff, and the direction the industry is moving</td></tr>
+    <tr><td>Commercial and industrial supply</td><td>Direct sale to factories and campuses under open access</td><td>Corporates seeking cheaper or greener power</td><td>Better credit than a state utility; the core of Clean Max's model</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>A solar plant is an orchard that produces its entire harvest between ten in the morning and four in the afternoon, every day, free, for twenty-five years — provided you signed a buyer before planting. India now has a great many orchards planted, a falling price per crate, and a queue of growers waiting for someone to sign. Batteries are the cold store that lets you sell the fruit in the evening, when it is worth more.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From an auction to a generating asset</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>The auction</h4><div class="an">Winning the right</div>Central and state agencies auction capacity; the lowest tariff wins.<div class="who">SECI, NTPC, state agencies</div><div class="m">2026 bids at ₹2.86–2.97 per unit</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>The contract</h4><div class="an">Finding a buyer</div>A power sale agreement with a state distribution company must follow the auction.<div class="who">State discoms</div><div class="m">The bottleneck: ~45 GW awaiting signature</div></div>
+    <div class="stage"><div class="no">03</div><h4>Land and connectivity</h4><div class="an">Where it goes</div>Large contiguous land, plus granted transmission connectivity.<div class="who">Developers, transmission utilities (039)</div><div class="m">Connectivity granted but unused is dead capital</div></div>
+    <div class="stage"><div class="no">04</div><h4>Equipment</h4><div class="an">Panels and turbines</div>Modules, cells, inverters, turbines, and increasingly batteries.<div class="who">Solar manufacturers (045), battery suppliers (046)</div><div class="m">Domestic content rules apply</div></div>
+    <div class="stage hot"><div class="no">05</div><h4>Construction and commissioning</h4><div class="an">Building it</div>EPC contracting, erection, grid connection and testing.<div class="who">Renewable EPC firms (047)</div><div class="m">Adani Green added 4,327 MW in a year</div></div>
+    <div class="stage"><div class="no">06</div><h4>Generation and settlement</h4><div class="an">Getting paid</div>Power delivered and invoiced at the contracted tariff for twenty-five years.<div class="who">The offtaker</div><div class="m">94% EBITDA margins, if the buyer pays</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Auction:</b> the government asks who will supply solar power most cheaply, and the lowest bidder wins.</li>
+    <li><b>Contract:</b> a state electricity company then has to agree to buy it — and many are refusing or delaying because they think prices will fall further.</li>
+    <li><b>Land and wires:</b> you need a lot of flat land and a permit to plug into the grid.</li>
+    <li><b>Equipment:</b> panels, inverters and increasingly big batteries are bought and installed.</li>
+    <li><b>Building:</b> a large solar farm can be built in under a year, far faster than a coal plant.</li>
+    <li><b>Generating:</b> once running, costs are tiny — so nearly all the revenue becomes profit, provided the customer pays.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The economics of a renewable developer are simple and brutal: a fixed tariff for twenty-five years against a cost base that is almost entirely capital and interest. That produces a 94% EBITDA margin and enormous sensitivity to two things — <b>the bid tariff</b>, which has fallen to ₹2.86–2.97 a unit, and <b>the cost of capital</b>, because the asset is effectively a bond. What has changed in 2026 is a third variable: <b>whether a signed offtake contract exists at all</b>. A developer with connectivity, land and no power sale agreement is carrying the cost of capital with no revenue, which is why capacity growth and share prices have decoupled so sharply.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 20 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Adani Green Energy (~₹2.09 lakh cr)</td><td>India's largest renewable developer, anchored on the Khavda complex in Gujarat, now building storage at scale.</td><td>Operational capacity 20.1 GW, up 27%, with 4,327 MW of greenfield added over the year. Energy sales +30% to 13,657 million units; power supply revenue +29% to ₹4,280 cr; power supply EBITDA +33% to ₹4,122 cr at a 94% margin; net profit ₹983 cr (+19.3%). Battery storage of 1,972 MWh commissioned at Khavda in the quarter, taking installed storage to 3,551 MWh, with 5 GW of renewables and over 10,000 MWh of storage targeted by FY27. Stock +31.5% — and still 55% below its April 2022 peak.</td></tr>
+    <tr><td>NTPC Green Energy (~₹73,800 cr)</td><td>NTPC's renewable arm, listed November 2024; the state route into the transition.</td><td>Revenue ₹1,107 cr (+63%), operating EBITDA ₹989 cr (+64%) at a 92% margin, profit ₹305 cr (+38%). Added 595 MW in the quarter to 10,671 MW operational, 10,722 MW by 20 July. Targets 7–8 GW of commissioning in FY27, 60 GW by FY32 and 136 GW by FY37, with a renewable pipeline of about 164 GW. Stock −6.3% and −40% from its December 2024 peak.</td></tr>
+    <tr><td>ACME Solar Holdings (~₹29,500 cr)</td><td>A solar developer that has pivoted hard into battery storage; listed November 2024.</td><td>Revenue ₹954 cr (+63%), EBITDA +56%, profit ₹235 cr (+80%), with earnings per share of ₹3.71. Commissioned about 2.3 GWh of storage in the quarter to reach roughly 3.62 GWh — around 40% of India's cumulative commissioned battery capacity — and upgraded guidance to more than 10 GWh by FY27. Deploying the proceeds of a qualified institutional placement, with about ₹1,689 cr still unutilised at 30 June. Stock +83.3%, at its September 2026 high.</td></tr>
+    <tr><td>Clean Max Enviro Energy (~₹15,100 cr)</td><td>The commercial-and-industrial specialist: supplying corporates directly under open access rather than selling to state utilities. Listed March 2026.</td><td>−14% from its June 2026 peak. Its model avoids the state-discom credit risk that defines the rest of the section.</td></tr>
+    <tr><td>Juniper Green Energy (~₹14,900 cr)</td><td>A utility-scale solar, wind and hybrid developer; listed August 2026.</td><td>Barely a month of trading. Too new to judge.</td></tr>
+    <tr><td>KPI Green Energy (~₹5,500 cr)</td><td>A Gujarat developer operating both its own capacity and a captive-power model for industrial clients; the sector's biggest winner of 2022–24.</td><td>−43.4% in 2026 and −61% from its August 2024 peak, after gains of 173%, 236% and 67% in the three preceding years.</td></tr>
+    <tr><td>Ravindra Energy (~₹2,900 cr)</td><td>A smaller solar developer and EPC contractor.</td><td>−5.1%, −19% from its July 2026 peak.</td></tr>
+    <tr><td>Ujaas Energy (~₹2,750 cr)</td><td>A solar company with a long restructuring history.</td><td>No usable price series in this dataset; excluded from all statistics.</td></tr>
+    <tr><td>Orient Green Power (~₹1,060 cr)</td><td>One of India's oldest listed wind operators, and a case study in what the first renewable cycle did to shareholders: −44% (2016), −43% (2018), +692% (2021), −44% (2022).</td><td>−21.5% in 2026 and −70% from its February 2024 peak.</td></tr>
+    <tr><td>Swelect Energy Systems (~₹820 cr)</td><td>Solar generation plus module manufacturing.</td><td>−10.3%, −62% from its April 2024 peak.</td></tr>
+    <tr><td>The tail: Indowind, Sampann Utpadan, Indsil Hydro, Energy Development, Waa Solar, Karma Energy, Agni Green, Tarini International, Sri KPR, Transwind</td><td>Micro caps and legacy wind vehicles, several with negligible operating capacity and one or two effectively dormant.</td><td>All between −8% and −54% in 2026, and most 60–86% below their peaks. None is investable at scale, and several should be reviewed out of the section.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Read this section in three layers</span><p><b>The scale developers</b> — Adani Green, NTPC Green, ACME Solar, and now Juniper Green and Clean Max — are genuine growth businesses with 90%-plus EBITDA margins and access to capital. <b>The mid-tier</b> — KPI Green, Ravindra — grew explosively in 2022–24 and have given most of it back. <b>The legacy wind tail</b> is what the sector's first cycle left behind: Orient Green Power, Indowind, Karma Energy and others, all 60–86% below their peaks after two decades. The equal-weighted basket mixes all three, and in 2026 that produces a flat number that describes none of them: ACME +83%, KPI Green −43%.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>A bond with panels attached</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Element</th><th>What it does</th><th>Where it stands</th></tr></thead><tbody>
+    <tr><td>Bid tariff</td><td>The fixed price per unit for twenty-five years</td><td>₹2.86–2.97 in 2026 solar auctions</td></tr>
+    <tr><td>Capacity utilisation factor</td><td>How much of the year the plant effectively generates</td><td>Roughly a fifth to a quarter for solar; higher for hybrid</td></tr>
+    <tr><td>Operating cost</td><td>Cleaning, maintenance, land lease, insurance</td><td>Tiny — hence Adani Green's 94% EBITDA margin</td></tr>
+    <tr><td>Cost of capital</td><td>The dominant cost; these are leveraged, long-duration assets</td><td>The single biggest determinant of project returns</td></tr>
+    <tr><td>Offtake contract</td><td>Whether anyone has agreed to buy the power</td><td>~45 GW of connectivity idle awaiting signature</td></tr>
+    <tr><td>Storage attachment</td><td>Batteries that shift output to the evening peak</td><td>ACME at ~3.62 GWh, Adani Green at 3,551 MWh</td></tr>
+  </tbody></table></div>
+  <h3>Why a 94% margin business can still disappoint</h3>
+  <p>Because almost all of the cost sits below the EBITDA line. A solar plant's fuel is free and its maintenance is trivial, so nearly all revenue becomes operating profit — and then interest and depreciation consume most of it. That is why Adani Green can report EBITDA of ₹4,122 cr and net profit of ₹983 cr in the same quarter. The consequence is that returns depend on financing terms and on the tariff, not on operations, and both have moved against developers: tariffs have fallen to under ₹3 a unit, and any delay between building an asset and signing a buyer is pure carrying cost. With about 45 GW of connectivity granted or applied for and unused, the industry is currently financing a large quantity of capacity that is not yet earning.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Owning a renewable developer is like owning a toll bridge you built with a mortgage, where the toll is fixed for twenty-five years and the government decides when the road opens. The bridge is superb; the only questions are what you paid for the mortgage and when the traffic is allowed on.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Power purchase agreements</td><td>No contract, no financing and no revenue</td><td>The binding constraint: delays of up to twelve months, ~45 GW affected</td></tr>
+    <tr><td>Grid connectivity</td><td>Granted capacity to inject power into the network</td><td>31.8 GW granted and unused, 13.5 GW applied for</td></tr>
+    <tr><td>Land</td><td>Large contiguous parcels, ideally in high-irradiation states</td><td>Rajasthan, Gujarat and Karnataka dominate; Rajasthan also has the largest unsigned queue</td></tr>
+    <tr><td>Capital</td><td>The dominant cost of a zero-fuel asset</td><td>ACME funded expansion through a qualified institutional placement</td></tr>
+    <tr><td>Modules and cells</td><td>The physical plant, subject to domestic content rules</td><td>See 045</td></tr>
+    <tr><td>Batteries</td><td>What converts intermittent output into firm supply</td><td>Storage is the fastest-growing part of every developer's plan (see 046)</td></tr>
+    <tr><td>Transmission capacity</td><td>Getting power from desert states to load centres</td><td>Under construction, and behind the generation build (see 039)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Sun, rain and the March deadline</h2>
+  <ul>
+    <li><b>February–May:</b> the highest solar generation months — clear skies and long days — and the start of the construction season.</li>
+    <li><b>June–September:</b> the monsoon cuts solar output sharply and halts site work, while wind output peaks; August–September is the weakest window for these stocks.</li>
+    <li><b>October–December:</b> the post-monsoon commissioning rush, and historically the best window (11 of 14 years).</li>
+    <li><b>January–March:</b> the financial-year commissioning deadline, and then a lull; the weakest calendar-quarter window.</li>
+    <li><b>Auction calendar:</b> central and state tenders arrive irregularly, and the signing of power sale agreements afterwards is the event that matters most.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 7 names (Adani Green Energy Limited, NTPC Green Energy Limited, ACME Solar Holdings Ltd., KPI Green Energy Limited, Ravindra Energy Ltd., Orient Green Power Company Ltd, Swelect Energy Systems Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +7.2 pts (beat in 11 of 15 years); Nov +5.5 pts (beat in 8 of 15 years); Dec +4.0 pts (beat in 11 of 15 years).</li><li><b>Weakest months:</b> Feb -3.5 pts (beat in 5 of 15 years); Aug -2.8 pts (beat in 6 of 16 years); Jul -1.6 pts (beat in 8 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 6 of 15 years (median -6.1 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +5.5 pts); Aug–Sep beat the Nifty in 5 of 14 years (median -3.8 pts); Oct–Dec beat the Nifty in 11 of 14 years (median +4.3 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +1.1 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -6.0 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +4.2 points.</p><p><b>Reading it:</b> the two windows that work are April (11 of 15 years, +7.2 points, the best month in the section) and October–December (11 of 14, median +4.3), which frame the two halves of the generation year — the summer solar peak and the post-monsoon commissioning rush. April–July works 10 of 15 with a median of +5.5. The negatives are consistent and large: February–March 6 of 15 (median −6.1), January–March 6 of 15 (median −6.0) and August–September 5 of 14 (median −3.8), the monsoon months when solar output and site work both stop.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="OctDec" viewBox="0 0 720 280" role="img" aria-label="October to December return minus Nifty by year"></svg><figcaption>October–December return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>October–December has worked in 11 of 14 years (median +4.3)</b>, with only 2025 (−12.3), 2024 (−11.4) and 2012 (−1.8) failing — and the two recent failures are precisely the de-rating years.</li>
+    <li><b>The 2021 reading of +94.0</b> in that window is the high-water mark of the energy-transition trade, and it flatters every average in this table.</li>
+    <li><b>April–July works 10 of 15 (median +5.5)</b> but with one catastrophic exception, 2012 at −34.9, from the sector's earliest and most speculative phase.</li>
+    <li><b>August–September fails 9 times in 14</b>, matching the monsoon, when solar generation and construction both stop.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>The October–December pattern is the most reliable in the Power family and has a real cause: the monsoon ends, output recovers and developers rush to commission before the financial year closes. But note how much of this table is history from a different industry — the 2020 and 2021 readings belong to a speculative phase that is unlikely to repeat, and the legacy wind names in the basket distort the early years. The more useful signal today is not seasonal at all: it is the monthly count of power purchase agreements actually signed against the 45 GW waiting.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>PPA and PSA signing:</b> the bottleneck — about 45 GW of connectivity is idle awaiting contracts.</li>
+    <li><b>Bid tariffs:</b> ₹2.86–2.97 a unit in 2026, and regulators pushing back on anything higher.</li>
+    <li><b>Cost of capital:</b> the dominant input for an asset with no fuel cost.</li>
+    <li><b>Module and battery prices:</b> the capital cost per megawatt, and increasingly per megawatt-hour (see 045, 046).</li>
+    <li><b>Transmission availability:</b> connectivity granted is not the same as evacuation delivered (see 039).</li>
+    <li><b>Renewable purchase obligations:</b> the regulatory demand floor.</li>
+    <li><b>Storage attachment:</b> what converts a daytime asset into firm, higher-tariff supply.</li>
+    <li><b>Commercial and industrial open access:</b> selling to corporates instead of to state utilities — better credit, as Clean Max's model shows.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of section members with sufficient history — just 2 names until 2019, rising to 7 by 2025–26. Monthly returns capped at ±50%, price only; 2026 to 18 September. The early years describe legacy wind companies, not today's industry; Clean Max (March 2026) and Juniper Green (August 2026) are too new to include, and Ujaas Energy has no usable series.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of two renewable cycles</h3>
+  <ol>
+    <li><b>The first cycle (2010–2018)</b> was wind, built on accelerated depreciation and feed-in tariffs. It ended in tariff renegotiation, discom non-payment and stranded assets — the −38.6% of 2016 and −37.7% of 2018, and a legacy tail still 60–86% below its peaks.</li>
+    <li><b>The second cycle (2019–2024)</b> was solar, built on competitive auctions and global energy-transition capital. It produced +151% in 2020 and +127% in 2021.</li>
+    <li><b>The constraint moved from cost to offtake.</b> Tariffs fell below ₹3, capacity was built fast, and state buyers stopped signing — which is where 2025 and 2026 sit.</li>
+    <li><b>The next leg is storage,</b> converting an intermittent daytime product into firm supply that a utility actually wants to contract.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Tariff deflation is permanent and relentless.</b> Every cycle has ended with bids below what incumbents assumed.</li>
+    <li><b>The buyer's credit decides the outcome.</b> Both cycles' crises came from state distribution companies renegotiating or not paying.</li>
+    <li><b>Capacity growth and share prices decouple for years.</b> Adani Green has added over 4 GW in a year and remains 55% below its 2022 peak.</li>
+    <li><b>The legacy names never recover.</b> Orient Green's +692% in 2021 left it still 70% below its later peak.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>The cheapest electricity ever built, and the hardest to sell</h2>
+  <p>Solar is now the lowest-cost source of new electricity in most of the world, and India has some of the best irradiation and the lowest construction costs anywhere — which is how tariffs reached ₹2.86–2.97 a unit. The global pattern is that this abundance creates its own problem: when a large share of supply arrives in the same six daylight hours, the value of each additional daytime unit falls, and the system's need shifts to firm capacity that can serve the evening. Europe, California and now India are all working through the same sequence. India's version is complicated by the financial condition of its state distribution companies, which is why the binding constraint here is contractual rather than technical: about 45 GW of connectivity has been granted or applied for and cannot find a signed buyer.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Market</th><th>Stage</th><th>Lesson for India</th></tr></thead><tbody>
+    <tr><td>China</td><td>Dominant manufacturer and largest installer</td><td>Sets global module prices, and therefore Indian capital costs</td></tr>
+    <tr><td>Europe</td><td>High renewable share, negative daytime prices at times</td><td>What happens when solar saturates the middle of the day</td></tr>
+    <tr><td>United States</td><td>Tax-credit-driven build with large storage attachment</td><td>Storage is what restores the value of solar</td></tr>
+    <tr><td>Middle East</td><td>Record-low tariffs on sovereign-backed contracts</td><td>Cheap capital and a creditworthy buyer are worth more than sunlight</td></tr>
+    <tr><td>India</td><td>Record build, falling tariffs, contracting bottleneck</td><td>The offtaker's balance sheet is the whole game</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From feed-in tariffs to reverse auctions (mid-2010s):</b> competitive bidding collapsed tariffs and destroyed the first generation of developers.</li>
+    <li><b>From wind to solar:</b> solar's cost decline and faster construction made wind a niche, until hybrid contracts revived it.</li>
+    <li><b>From energy to firm power:</b> the shift now under way, where storage-attached contracts replace plain solar — and where ACME's 40% share of India's commissioned batteries becomes strategic.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where the business is going">
+  <p class="eyebrow">12 · Where the business is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>Battery energy storage at scale:</b> ACME at about 3.62 GWh and guiding above 10 GWh by FY27; Adani Green at 3,551 MWh and targeting over 10,000 MWh.</li>
+    <li><b>Firm and dispatchable renewable contracts:</b> tenders that require supply in specified hours, which price storage properly.</li>
+    <li><b>Hybrid solar-wind projects:</b> smoothing output and improving utilisation of the same grid connection.</li>
+    <li><b>Commercial and industrial open access:</b> selling directly to corporates, avoiding state-utility credit risk — Clean Max's entire model.</li>
+    <li><b>Higher-efficiency modules and trackers:</b> more output from the same land and the same connectivity.</li>
+    <li><b>Green hydrogen as a future offtaker:</b> the long-dated answer to surplus daytime power, still unproven commercially.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>Competitive auctions</td><td>The standard route to capacity; 2026 bids at ₹2.86–2.97 a unit</td><td>Sets the tariff, and keeps compressing it</td></tr>
+    <tr><td>Power sale agreement signing</td><td>Delays of up to twelve months; ~45 GW of connectivity idle</td><td>The defining problem of the sector right now</td></tr>
+    <tr><td>Regulatory tariff approval</td><td>State regulators rejecting contracts they consider expensive — Haryana turned down ₹2.99 a unit</td><td>Adds a second layer of approval risk after the auction</td></tr>
+    <tr><td>Renewable purchase obligations</td><td>Mandated procurement shares</td><td>The demand floor that should clear the backlog</td></tr>
+    <tr><td>Transmission connectivity rules</td><td>Connectivity granted ahead of contracts</td><td>Created the 31.8 GW of granted-but-unused capacity</td></tr>
+    <tr><td>Domestic content requirements</td><td>Approved lists for modules and cells</td><td>Raises capital cost but builds the supply chain (see 045)</td></tr>
+    <tr><td>Open access rules</td><td>Governs direct supply to industrial consumers</td><td>The route around discom credit risk</td></tr>
+    <tr><td>Storage obligations and viability support</td><td>Emerging</td><td>What makes battery-attached projects bankable</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: the build is running ahead of the contracts</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Capacity growth</td><td>Exceptional</td><td>Adani Green 20.1 GW (+27%), NTPC Green 10,671 MW with 595 MW added in a quarter</td></tr>
+    <tr><td>Financial performance</td><td>Strong</td><td>NTPC Green revenue +63% and profit +38%; ACME profit +80%; Adani Green EBITDA margin 94%</td></tr>
+    <tr><td>Contracting</td><td>The bottleneck</td><td>About 45 GW of connectivity idle awaiting PPAs, with Rajasthan alone at 18.75 GW</td></tr>
+    <tr><td>Tariffs</td><td>Still falling</td><td>2026 bids at ₹2.86–2.97 a unit; a ₹2.99 contract rejected by a state regulator</td></tr>
+    <tr><td>Storage</td><td>The new race</td><td>ACME ~3.62 GWh (about 40% of India's total); Adani Green 3,551 MWh</td></tr>
+    <tr><td>Stocks</td><td>Flat and dispersed</td><td>Basket flat, median −6%; ACME +83% against KPI Green −43%; Adani Green 55% below its 2022 peak</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>This is the clearest example in the series of an industry whose operating performance and share prices are answering different questions. The operators are compounding capacity at 27% and revenue at 63%, with margins no other industry can match. The market is pricing the fact that roughly 45 GW of connectivity is sitting unused, that tariffs have fallen below ₹3 and are still being rejected as too high, and that the buyer at the other end of a twenty-five-year contract is a state distribution company. Both views are correct. The resolution is likely to come from two directions, and both are already visible: <b>storage</b>, which turns an unwanted daytime product into firm power a utility will contract for — ACME holds about 40% of India's commissioned batteries and Adani Green is building at Khavda — and <b>commercial and industrial supply</b>, where Clean Max sells to corporates with better credit than any discom. Judge developers from here on the quality of their offtake, not the size of their pipeline: a gigawatt without a signed buyer is a liability with a solar panel on it.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>PPAs and PSAs signed each month</td><td>Ministry and agency announcements</td><td>The single binding constraint; ~45 GW waiting</td></tr>
+    <tr><td>Auction tariffs</td><td>Every tender</td><td>₹2.86–2.97 and falling sets project returns</td></tr>
+    <tr><td>Capacity commissioned versus target</td><td>Quarterly</td><td>NTPC Green targets 7–8 GW in FY27</td></tr>
+    <tr><td>Storage commissioned in GWh</td><td>Quarterly</td><td>The shift from energy to firm power</td></tr>
+    <tr><td>Module and cell prices</td><td>Monthly (see 045)</td><td>Capital cost per megawatt</td></tr>
+    <tr><td>Receivable days from discoms</td><td>Quarterly</td><td>The historical cause of every renewable crisis</td></tr>
+    <tr><td>Transmission commissioning in renewable zones</td><td>Ongoing (see 039)</td><td>Whether granted connectivity becomes usable</td></tr>
+    <tr><td>Open-access volumes to corporates</td><td>Periodic data</td><td>The alternative demand channel</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power generation &amp; integrated utilities</b> (037): the thermal incumbents whose daytime economics this industry erodes.</li>
+    <li><b>Power transmission &amp; distribution utilities</b> (039): the wires that decide whether connectivity is usable.</li>
+    <li><b>Solar cells &amp; modules</b> (045): the equipment supply chain and the domestic content rules.</li>
+    <li><b>Batteries &amp; energy storage</b> (046): what converts this industry's output into a contractible product.</li>
+    <li><b>Renewable energy EPC</b> (047): the contractors who build these plants.</li>
+    <li><b>Coal &amp; coke</b> (036): the fuel being displaced at the margin, slowly.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>How much of the pipeline has a signed power sale agreement, and how much has only connectivity?</li>
+    <li>What is the average tariff of capacity commissioned this year against the portfolio average?</li>
+    <li>What is the cost of debt on recent project financing, and the expected equity return?</li>
+    <li>What is the capacity utilisation factor achieved, and how does it compare with the bid assumption?</li>
+    <li>What is receivable days from each major offtaker?</li>
+    <li>What is the storage attachment plan, in GWh and in capital cost per GWh?</li>
+    <li>What proportion of revenue comes from commercial and industrial customers rather than state utilities?</li>
+    <li>How much capacity is built but not yet earning, and what is the carrying cost?</li>
+    <li>What happens to returns if tariffs fall another 10%?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Pipeline quoted in gigawatts without stating how much is contracted.</li>
+    <li>Commissioned capacity growing faster than energy sold.</li>
+    <li>Equity raised repeatedly to fund a pipeline that is not yet contracted.</li>
+    <li>Receivables from a single state utility rising for consecutive quarters.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"Renewables are the fastest-growing sector, so the stocks must follow."</td><td>Capacity grew 27% at the largest developer and the basket is flat, because about 45 GW of connectivity has no signed buyer.</td></tr>
+    <tr><td>"A 94% EBITDA margin means a wonderful business."</td><td>Almost all the cost sits below EBITDA. Adani Green's ₹4,122 cr of EBITDA became ₹983 cr of net profit after interest and depreciation.</td></tr>
+    <tr><td>"Falling tariffs are good — they prove the technology works."</td><td>They prove it for the country and against the incumbent developer. Every bid below the portfolio average dilutes returns, and ₹2.99 was rejected as too high in Haryana.</td></tr>
+    <tr><td>"Storage is a distraction from core generation."</td><td>Storage is what makes the output contractible at a decent tariff. ACME holds about 40% of India's commissioned batteries and its stock is up 83%.</td></tr>
+    <tr><td>"The old wind companies are cheap option value."</td><td>Orient Green, Indowind, Karma and the rest are 60–86% below their peaks after two full cycles. They are the residue of the first cycle, not an option on the second.</td></tr>
+    <tr><td>"Discom credit risk is solved."</td><td>Payment discipline has improved, but it is the unwillingness to sign contracts at all — not late payment — that is stalling 45 GW today.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. CUF, BESS" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Technology and operations</h3><dl>
+    <dt>Utility-scale solar</dt><dd>A large ground-mounted solar farm selling to the grid rather than to a building.</dd>
+    <dt>Capacity utilisation factor (CUF)</dt><dd>Actual output as a share of theoretical maximum; for Indian solar, typically around a fifth to a quarter.</dd>
+    <dt>Irradiation</dt><dd>The solar energy falling on a site, which sets how much a panel can produce.</dd>
+    <dt>Hybrid project</dt><dd>Solar and wind on the same grid connection, smoothing output.</dd>
+    <dt>Firm and dispatchable renewable energy (FDRE)</dt><dd>A contract to supply guaranteed power in specified hours, usually requiring storage.</dd>
+    <dt>Round-the-clock contract</dt><dd>Renewable supply matched to demand at all hours (see 037).</dd>
+    <dt>BESS</dt><dd>Battery energy storage system, measured in megawatt-hours. ACME has about 3.62 GWh commissioned.</dd>
+    <dt>MWh and GWh</dt><dd>Units of energy storage capacity, as distinct from MW of power capacity.</dd>
+    <dt>Tracker</dt><dd>A mounting system that turns panels to follow the sun, raising output per megawatt.</dd>
+    <dt>Curtailment</dt><dd>Output the grid refuses to accept, usually when supply exceeds demand (see 037).</dd>
+    <dt>Evacuation and connectivity</dt><dd>The right and the physical ability to inject power into the transmission network.</dd>
+    <dt>Greenfield capacity</dt><dd>Newly built rather than acquired capacity; Adani Green added 4,327 MW of it in a year.</dd>
+    <dt>Commissioning</dt><dd>The point at which a project starts generating and earning.</dd>
+    <dt>Module</dt><dd>An assembled panel of solar cells — the basic building block of a solar farm (see 045).</dd>
+    <dt>Inverter</dt><dd>The equipment converting the panel's direct current into alternating current for the grid.</dd>
+    <dt>Degradation</dt><dd>The slow annual loss of a panel's output, typically under 1% a year, assumed in every bid.</dd>
+    <dt>Wind capacity factor</dt><dd>The wind equivalent of CUF; higher in the monsoon months, which offsets solar's seasonal dip.</dd>
+    <dt>Repowering</dt><dd>Replacing old, small wind turbines with fewer larger ones on the same site.</dd>
+    <dt>Pooling substation</dt><dd>Where several projects' output is collected before entering the transmission network (see 039).</dd>
+  </dl>
+  <h3>Commercial and contractual</h3><dl>
+    <dt>Reverse auction</dt><dd>A tender in which developers bid the tariff down; the standard route to capacity in India.</dd>
+    <dt>Bid tariff</dt><dd>The price per unit a developer commits to for twenty-five years — ₹2.86–2.97 in 2026.</dd>
+    <dt>Power purchase agreement (PPA)</dt><dd>The contract to buy the power (see 037).</dd>
+    <dt>Power sale agreement (PSA)</dt><dd>The back-to-back contract between the intermediary agency and the ultimate state buyer; the step that is stalling.</dd>
+    <dt>Letter of award</dt><dd>Confirmation of an auction win, which precedes the contracts and the financing.</dd>
+    <dt>Offtaker credit</dt><dd>The creditworthiness of the buyer, which determines the project's cost of capital.</dd>
+    <dt>Open access</dt><dd>Selling directly to a large consumer rather than to the local utility (see 037).</dd>
+    <dt>Commercial and industrial (C&amp;I) supply</dt><dd>Power sold to corporates, typically at better credit and higher realisation.</dd>
+    <dt>Renewable purchase obligation</dt><dd>The minimum renewable share a buyer must procure.</dd>
+    <dt>Qualified institutional placement (QIP)</dt><dd>A share issue to institutions; ACME used one to fund expansion.</dd>
+    <dt>Domestic content requirement</dt><dd>Rules requiring locally made modules or cells in certain projects (see 045).</dd>
+    <dt>Levelised cost of energy</dt><dd>The lifetime cost of a project per unit generated; the number auction bids are built from.</dd>
+    <dt>Accelerated depreciation</dt><dd>The tax incentive that drove India's first wind cycle.</dd>
+    <dt>Feed-in tariff</dt><dd>A fixed administered price for renewable power, used before competitive auctions replaced it.</dd>
+    <dt>Tariff renegotiation</dt><dd>State attempts to reopen signed contracts — the event that broke the first renewable cycle in 2018.</dd>
+    <dt>Must-run status</dt><dd>The rule requiring grid operators to take renewable output ahead of other generation.</dd>
+    <dt>Deemed generation compensation</dt><dd>Payment for output a project could have produced but was curtailed (see 037).</dd>
+    <dt>Bank guarantee</dt><dd>Security a developer lodges when winning an auction, forfeited if the project is not built.</dd>
+    <dt>Project internal rate of return</dt><dd>The expected return on the project's cash flows, the number a bid is ultimately set by.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Plant load factor, merit order, discom, two-part tariff</dt><dd>See 037.</dd>
+    <dt>Regulated return, capitalisation</dt><dd>See 037.</dd>
+    <dt>Listing premium and post-IPO derating</dt><dd>See 024, 026.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why are these stocks flat when capacity is growing 27%?</summary><p>About 45 GW of granted or applied-for grid connectivity has no signed power purchase agreement, so capacity is being financed before it can earn.</p></details>
+  <details class="q"><summary>2. Where are solar tariffs now?</summary><p>2026 bids are clearing at ₹2.86–2.97 a unit, and a state regulator rejected a ₹2.99 contract as too expensive.</p></details>
+  <details class="q"><summary>3. Why does a 94% EBITDA margin not mean a 94% profit margin?</summary><p>Fuel is free but capital is not. Interest and depreciation consume most of it: Adani Green turned ₹4,122 cr of EBITDA into ₹983 cr of net profit.</p></details>
+  <details class="q"><summary>4. What is the industry's answer to solar's daytime-only output?</summary><p>Battery storage. ACME has about 3.62 GWh commissioned — roughly 40% of India's total — and Adani Green 3,551 MWh.</p></details>
+  <details class="q"><summary>5. Which state has the largest unsigned queue?</summary><p>Rajasthan, at 18.75 GW, followed by Andhra Pradesh (7.11 GW), Karnataka (6.99 GW) and Madhya Pradesh (4.85 GW).</p></details>
+  <details class="q"><summary>6. What did the first renewable cycle do to shareholders?</summary><p>It ended in tariff renegotiation and non-payment. The legacy wind names — Orient Green, Indowind, Karma — remain 60–86% below their peaks.</p></details>
+  <details class="q"><summary>7. What is NTPC Green's ambition?</summary><p>7–8 GW of commissioning in FY27, 60 GW by FY32 and 136 GW by FY37, from 10,671 MW operational today.</p></details>
+  <details class="q"><summary>8. Why is Clean Max's model different?</summary><p>It sells directly to commercial and industrial customers under open access, avoiding the state distribution companies whose credit and signing behaviour constrain everyone else.</p></details>
+  <details class="q"><summary>9. Which seasonal window is most reliable, and why?</summary><p>October–December, 11 of 14 years: the monsoon ends, generation recovers and developers rush to commission before the financial year closes.</p></details>
+  <details class="q"><summary>10. What should a developer be judged on from here?</summary><p>The contracted share of its pipeline, not its size. A gigawatt without a signed buyer is a cost, not an asset.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of section members with sufficient history versus NSE:NIFTY, 2012 to 18 September 2026 — 2 names until 2019, 7 by 2025–26. Clean Max, Juniper Green and Ujaas Energy are excluded.</li>
+    <li>Adani Green: <a href="https://www.adani.com/newsroom/media-releases/adani-green-energys-capacity-grows-27percent-yoy-to-20-1-gw">the company's Q1 FY27 release with capacity, energy sales, revenue and EBITDA</a>; <a href="https://solarquarter.com/2026/07/24/adani-green-energy-crosses-20-gw-renewable-energy-milestone-expands-bess-portfolio-to-3551-mwh-in-q1-fy27/">the 20 GW milestone and battery portfolio</a>; <a href="https://www.equitybulls.com/category.php?id=373322">net profit and greenfield additions</a>.</li>
+    <li>NTPC Green: <a href="https://renewablewatch.in/2026/07/23/ntpc-green-energy-announces-financial-results-for-q1-fy-2026-27/">Q1 FY27 results</a>; <a href="https://www.indmoney.com/blog/stocks/why-ntpc-green-shares-jumped">revenue, EBITDA, profit and capacity added</a>; <a href="https://www.icicidirect.com/research/equity/trending-news/ntpc-green-energy-surpasses-coal-capacity-with-164-gw-re-pipeline-in-q1fy27">the pipeline and long-term targets</a>.</li>
+    <li>ACME Solar: <a href="https://www.pv-magazine-india.com/2026/07/30/acme-solar-posts-inr-235-crore-profit-for-q1-fy27-up-80-yoy/">Q1 FY27 profit</a>; <a href="https://www.whalesbook.com/corporate-news/English/renewables/ACME-Solar-Q1-FY27-Revenue-Surges-63percent-to-indian-rupee954-Crore-PAT-Jumps-80percent/6a721a8110bce1fd203d6e8c">revenue and EBITDA growth</a>; <a href="https://www.saurenergy.com/solar-energy-news/acme-solars-battery-pivot-what-the-q1-fy27-call-really-signals-for-investors-12211576">the battery pivot, commissioned GWh and upgraded guidance</a>. Note: one outlet reported these figures in rupees million as though they were crore; the numbers used here are the internally consistent ones.</li>
+    <li>Sector constraints: <a href="https://www.downtoearth.org.in/energy/indias-renewable-energy-sector-grapples-with-massive-ppa-signing-delays">the scale and state-wise split of unsigned capacity</a>; <a href="https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/renewable-energy-projects-face-up-to-12-month-delay-in-ppa-signing/66613">the length of signing delays</a>; <a href="https://solarquarter.com/2026/04/27/herc-rejects-solar-developers-plea-for-ppa-approval-at-%E2%82%B92-99-kwh-over-delay-and-tariff-concerns-in-haryana/">the Haryana regulator's rejection and prevailing bid tariffs</a>; <a href="https://knnindia.co.in/news/newsdetails/sectors/energy/renewable-energy-sector-faces-major-ppa-delays-financial-infrastructure-challenges">the causes of the delays</a>; <a href="https://www.jsalaw.com/newsletters-and-updates/jsa-prism-electricity-and-power-june-2026-3/">a legal review of the June 2026 electricity and power regulatory position</a>; <a href="https://www.business-standard.com/article/news-cm/renewable-power-contract-renegotiations-continue-to-affect-investor-sentiment-118011000259_1.html">the tariff renegotiation episode that ended the first cycle</a>; <a href="https://www.adani.com/newsroom/media-releases/adani-green-energy-delivers-on-5-gw-commitment-in-fy26">Adani Green's 5 GW FY26 delivery</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 12.3}, {"y": 2013, "v": 12.2}, {"y": 2014, "v": -6.1}, {"y": 2015, "v": -4.2}, {"y": 2016, "v": -17.8}, {"y": 2017, "v": -16.6}, {"y": 2018, "v": -15.2}, {"y": 2019, "v": -9.5}, {"y": 2020, "v": 0.2}, {"y": 2021, "v": -12.0}, {"y": 2022, "v": 3.3}, {"y": 2023, "v": -10.1}, {"y": 2024, "v": 5.1}, {"y": 2025, "v": -11.4}, {"y": 2026, "v": 6.4}], "AprJul": [{"y": 2012, "v": -34.9}, {"y": 2013, "v": -6.5}, {"y": 2014, "v": 67.3}, {"y": 2015, "v": -6.1}, {"y": 2016, "v": -16.5}, {"y": 2017, "v": 14.3}, {"y": 2018, "v": -11.4}, {"y": 2019, "v": 0.2}, {"y": 2020, "v": 33.1}, {"y": 2021, "v": 12.7}, {"y": 2022, "v": 5.0}, {"y": 2023, "v": 47.6}, {"y": 2024, "v": 5.5}, {"y": 2025, "v": 14.2}, {"y": 2026, "v": 19.0}], "AugSep": [{"y": 2012, "v": -1.4}, {"y": 2013, "v": -4.3}, {"y": 2014, "v": -15.7}, {"y": 2015, "v": -9.9}, {"y": 2016, "v": -11.7}, {"y": 2017, "v": -3.4}, {"y": 2018, "v": -18.2}, {"y": 2019, "v": -6.8}, {"y": 2020, "v": 31.8}, {"y": 2021, "v": -11.2}, {"y": 2022, "v": 4.7}, {"y": 2023, "v": 0.9}, {"y": 2024, "v": 3.0}, {"y": 2025, "v": 3.5}], "OctDec": [{"y": 2012, "v": -1.8}, {"y": 2013, "v": 5.8}, {"y": 2014, "v": 14.5}, {"y": 2015, "v": 30.2}, {"y": 2016, "v": 1.6}, {"y": 2017, "v": 2.9}, {"y": 2018, "v": 1.5}, {"y": 2019, "v": 33.7}, {"y": 2020, "v": 26.0}, {"y": 2021, "v": 94.0}, {"y": 2022, "v": 0.1}, {"y": 2023, "v": 33.5}, {"y": 2024, "v": -11.4}, {"y": 2025, "v": -12.3}], "SepNov": [{"y": 2012, "v": -3.1}, {"y": 2013, "v": -6.6}, {"y": 2014, "v": 10.4}, {"y": 2015, "v": 15.6}, {"y": 2016, "v": 0.4}, {"y": 2017, "v": -6.7}, {"y": 2018, "v": -11.6}, {"y": 2019, "v": 31.9}, {"y": 2020, "v": 30.2}, {"y": 2021, "v": 53.0}, {"y": 2022, "v": -6.1}, {"y": 2023, "v": 17.7}, {"y": 2024, "v": 1.9}, {"y": 2025, "v": -9.9}], "JanMar": [{"y": 2012, "v": 36.0}, {"y": 2013, "v": 21.2}, {"y": 2014, "v": -6.0}, {"y": 2015, "v": 3.3}, {"y": 2016, "v": -21.5}, {"y": 2017, "v": -6.3}, {"y": 2018, "v": -17.6}, {"y": 2019, "v": -26.3}, {"y": 2020, "v": 6.7}, {"y": 2021, "v": -7.5}, {"y": 2022, "v": 24.0}, {"y": 2023, "v": -15.6}, {"y": 2024, "v": 29.9}, {"y": 2025, "v": -20.3}, {"y": 2026, "v": -2.5}]}, "my": {"1": {"2012": 19.4, "2013": 8.2, "2014": -0.1, "2015": 8.4, "2016": -5.3, "2017": 12.3, "2018": -2.2, "2019": -17.2, "2020": 9.0, "2021": 4.4, "2022": 19.9, "2023": -6.5, "2024": 23.0, "2025": -10.2, "2026": -9.2}, "2": {"2012": 13.1, "2013": 11.4, "2014": -6.8, "2015": 8.1, "2016": -14.2, "2017": -9.5, "2018": -0.9, "2019": -12.9, "2020": -8.2, "2021": -12.7, "2022": -10.2, "2023": -20.0, "2024": 21.0, "2025": -12.9, "2026": 2.6}, "3": {"2012": -0.5, "2013": 0.8, "2014": 1.3, "2015": -10.9, "2016": -2.7, "2017": -7.2, "2018": -15.2, "2019": 5.1, "2020": 7.6, "2021": 0.9, "2022": 16.1, "2023": 12.7, "2024": -13.3, "2025": 2.9, "2026": 4.0}, "4": {"2012": 4.0, "2013": -1.9, "2014": 18.9, "2015": 4.8, "2016": 0.8, "2017": 5.3, "2018": 8.4, "2019": -0.3, "2020": 13.4, "2021": -3.4, "2022": 14.0, "2023": 9.4, "2024": 15.4, "2025": -4.0, "2026": 23.1}, "5": {"2012": -0.9, "2013": -2.5, "2014": 25.8, "2015": -11.3, "2016": -7.7, "2017": -3.0, "2018": -20.2, "2019": 1.2, "2020": 7.0, "2021": 12.7, "2022": -16.5, "2023": -3.8, "2024": -1.1, "2025": 16.4, "2026": 0.8}, "6": {"2012": -7.6, "2013": -6.3, "2014": 13.6, "2015": -1.5, "2016": 0.2, "2017": 7.6, "2018": -10.1, "2019": 6.5, "2020": 30.4, "2021": 3.2, "2022": 11.3, "2023": 13.1, "2024": -7.1, "2025": -4.1, "2026": 3.1}, "7": {"2011": 3.3, "2012": -32.2, "2013": 4.4, "2014": -4.8, "2015": 2.2, "2016": -9.3, "2017": 3.0, "2018": 17.0, "2019": -6.5, "2020": -19.5, "2021": 0.3, "2022": -1.1, "2023": 20.6, "2024": -1.4, "2025": 5.6, "2026": -7.2}, "8": {"2011": -6.3, "2012": 1.7, "2013": 4.6, "2014": -15.7, "2015": -10.8, "2016": -7.4, "2017": -2.1, "2018": -6.4, "2019": -7.1, "2020": 18.5, "2021": -9.8, "2022": 5.7, "2023": 1.0, "2024": -7.6, "2025": 0.6, "2026": -3.6}, "9": {"2011": 2.4, "2012": -3.1, "2013": -9.1, "2014": -0.0, "2015": 1.0, "2016": -4.7, "2017": -1.3, "2018": -12.7, "2019": 0.7, "2020": 11.2, "2021": -1.2, "2022": -0.7, "2023": -0.1, "2024": 11.6, "2025": 2.9}, "10": {"2011": -4.5, "2012": 1.7, "2013": 0.6, "2014": -3.8, "2015": 4.1, "2016": 6.3, "2017": 0.1, "2018": 5.8, "2019": -1.5, "2020": 2.8, "2021": 18.5, "2022": -12.5, "2023": 0.7, "2024": -2.5, "2025": 2.1}, "11": {"2011": -9.5, "2012": -1.7, "2013": 2.5, "2014": 14.3, "2015": 9.9, "2016": -0.7, "2017": -5.3, "2018": -4.8, "2019": 30.8, "2020": 11.9, "2021": 29.8, "2022": 8.0, "2023": 17.1, "2024": -5.9, "2025": -13.8}, "12": {"2011": -11.9, "2012": -1.8, "2013": 2.1, "2014": 3.7, "2015": 13.8, "2016": -3.6, "2017": 8.6, "2018": 0.3, "2019": 2.7, "2020": 6.9, "2021": 26.5, "2022": 5.3, "2023": 12.3, "2024": -4.2, "2025": 0.2}}, "basket": ["Adani Green Energy Limited", "NTPC Green Energy Limited", "ACME Solar Holdings Ltd.", "KPI Green Energy Limited", "Ravindra Energy Ltd.", "Orient Green Power Company Ltd", "Swelect Energy Systems Limited"], "nbasket": 7, "start": "Jul 2011", "monthly": [{"m": 1, "abs": 4.4, "rel": 3.6, "hit": 8, "n": 15}, {"m": 2, "abs": -4.6, "rel": -3.5, "hit": 5, "n": 15}, {"m": 3, "abs": -0.1, "rel": 0.1, "hit": 9, "n": 15}, {"m": 4, "abs": 9.7, "rel": 7.2, "hit": 11, "n": 15}, {"m": 5, "abs": 0.9, "rel": -0.2, "hit": 6, "n": 15}, {"m": 6, "abs": 5.3, "rel": 3.5, "hit": 9, "n": 15}, {"m": 7, "abs": 0.3, "rel": -1.6, "hit": 8, "n": 16}, {"m": 8, "abs": -3.0, "rel": -2.8, "hit": 6, "n": 16}, {"m": 9, "abs": 0.4, "rel": -0.2, "hit": 6, "n": 15}, {"m": 10, "abs": 3.3, "rel": 1.2, "hit": 10, "n": 15}, {"m": 11, "abs": 6.4, "rel": 5.5, "hit": 8, "n": 15}, {"m": 12, "abs": 4.7, "rel": 4.0, "hit": 11, "n": 15}], "cy": [{"y": 2012, "b": 5.3, "n": 27.7, "rel": -22.4, "partial": false}, {"y": 2013, "b": 22.7, "n": 6.8, "rel": 16.0, "partial": false}, {"y": 2014, "b": 89.7, "n": 31.4, "rel": 58.3, "partial": false}, {"y": 2015, "b": 8.3, "n": -4.1, "rel": 12.4, "partial": false}, {"y": 2016, "b": -38.6, "n": 3.0, "rel": -41.6, "partial": false}, {"y": 2017, "b": 36.0, "n": 28.6, "rel": 7.4, "partial": false}, {"y": 2018, "b": -37.7, "n": 3.2, "rel": -40.9, "partial": false}, {"y": 2019, "b": 4.2, "n": 12.0, "rel": -7.8, "partial": false}, {"y": 2020, "b": 150.9, "n": 14.9, "rel": 136.0, "partial": false}, {"y": 2021, "b": 126.7, "n": 24.1, "rel": 102.6, "partial": false}, {"y": 2022, "b": 42.5, "n": 4.3, "rel": 38.1, "partial": false}, {"y": 2023, "b": 87.4, "n": 20.0, "rel": 67.4, "partial": false}, {"y": 2024, "b": 32.8, "n": 8.8, "rel": 24.0, "partial": false}, {"y": 2025, "b": -8.7, "n": 10.5, "rel": -19.2, "partial": false}, {"y": 2026, "b": 0.5, "n": -10.7, "rel": 11.2, "partial": true}], "dd": [{"co": "Adani Green Energy", "peak": "Apr 2022", "fp": -55, "y1": 36}, {"co": "NTPC Green Energy", "peak": "Dec 2024", "fp": -40, "y1": -15}, {"co": "ACME Solar Holdings", "peak": "Sep 2025", "fp": 37, "y1": 43}, {"co": "KPI Green Energy", "peak": "Aug 2024", "fp": -61, "y1": -41}, {"co": "Ravindra Energy", "peak": "Sep 2025", "fp": -17, "y1": -16}, {"co": "Orient Green Power Company", "peak": "Feb 2024", "fp": -70, "y1": -36}, {"co": "Swelect Energy Systems", "peak": "Apr 2024", "fp": -62, "y1": -36}, {"co": "Indowind Energy", "peak": "Jan 2022", "fp": -76, "y1": -47}, {"co": "Sampann Utpadan India", "peak": "Dec 2024", "fp": -44, "y1": -14}, {"co": "Indsil Hydro Power & Manganese", "peak": "Feb 2022", "fp": -65, "y1": -19}, {"co": "Energy Development Co.", "peak": "Jan 2022", "fp": -64, "y1": -26}, {"co": "Waa Solar", "peak": "May 2024", "fp": -80, "y1": -29}, {"co": "Karma Energy", "peak": "Jan 2024", "fp": -61, "y1": -22}, {"co": "Agni Green Power", "peak": "Feb 2024", "fp": -81, "y1": -50}, {"co": "Tarini International", "peak": "Jul 2024", "fp": -86, "y1": -41}], "win": {"FebMar": {"mean": -4.2, "median": -6.1, "hit": 6, "n": 15}, "AprJul": {"mean": 9.6, "median": 5.5, "hit": 10, "n": 15}, "AugSep": {"mean": -2.8, "median": -3.8, "hit": 5, "n": 14}, "OctDec": {"mean": 15.6, "median": 4.3, "hit": 11, "n": 14}, "SepNov": {"mean": 8.4, "median": 1.1, "hit": 8, "n": 14}, "JanMar": {"mean": -0.2, "median": -6.0, "hit": 6, "n": 15}}, "ytd": {"b": 0.5, "n": -10.7}, "notes": {"2012": "+5.3% against the Nifty's +27.7%, on a tiny basket of early wind and solar names. Renewables were a subsidy-dependent niche, not an industry.", "2013": "+22.7% versus +6.8%. Small-scale wind assets were still the bulk of the sector.", "2014": "+89.7% versus +31.4%. The new government's 100 GW solar ambition was announced and the market repriced everything with a solar connection.", "2015": "+8.3% versus \u22124.1%. Enthusiasm met the reality of tariffs bid down faster than costs fell.", "2016": "\u221238.6% versus +3.0%. The first reckoning: aggressive bids, payment delays from state distribution companies and stranded wind assets. Orient Green Power \u221244%.", "2017": "+36.0% versus +28.6%. Solar tariffs collapsed to record lows, which was good for the country and bad for incumbent developers; the listed names bounced from a low base.", "2018": "\u221237.7% versus +3.2%. Contract renegotiation by state governments destroyed investor confidence; both surviving names fell about 43%.", "2019": "+4.2% versus +12.0%, with a median of \u221236%. Adani Green Energy listed and rose 298%, masking continued carnage elsewhere.", "2020": "+150.9% versus +14.9%. The global energy-transition trade arrived: Adani Green +532%.", "2021": "+126.7% versus +24.1%. Orient Green Power +692% on a restructuring, Swelect +40% \u2014 the speculative phase.", "2022": "+42.5% versus +4.3%. KPI Green Energy +173%; Adani Green peaked in April and began a long decline.", "2023": "+87.4% versus +20.0%. KPI Green +236%, Orient Green +119%; the broad renewable re-rating, even as Adani Green fell 17%.", "2024": "+32.8% versus +8.8%. Swelect +91% and KPI Green +67%; NTPC Green listed in November at the top of the enthusiasm.", "2025": "\u22128.7% versus +10.5%. The PPA-signing problem became visible, tariffs kept falling and the sector de-rated: NTPC Green \u221226%, Swelect \u221239%.", "2026": "Flat against a Nifty \u221211%, median \u22126%. Operationally it is a boom \u2014 Adani Green 20.1 GW (+27%), NTPC Green revenue +63%, ACME Solar profit +80% \u2014 but roughly 45 GW of connectivity is unused for want of contracts. ACME Solar +83% and Adani Green +31% against KPI Green \u221243%. Two large developers listed: Clean Max Enviro in March and Juniper Green in August."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

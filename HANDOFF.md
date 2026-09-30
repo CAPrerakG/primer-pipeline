@@ -1,8 +1,11 @@
 # Handoff — resuming the industry primer series at 082
 
 _Written 30 Sep 2026, after primer 081 (Metal Fabrication & Engineering) was published and pushed._
-_This file is for a fresh Claude session, possibly on a different Claude account. Read it, then read
-`CLAUDE.md`, `.claude/skills/industry-primer/SKILL.md`, `CHECKLIST.md` and `FAMILY_NOTES.md`._
+_Updated 30 Sep 2026: the series is moving to **ChatGPT Codex / agent mode**. Publishing no longer depends
+on Claude._
+
+_If you are an agent: read `AGENTS.md` first — it is the operating contract. Then this file,
+`.claude/skills/industry-primer/SKILL.md` (the full pipeline spec), `CHECKLIST.md` and `FAMILY_NOTES.md`._
 
 ---
 
@@ -30,35 +33,37 @@ do not repeat it.
 
 ---
 
-## 2. ⚠️ If you are on a DIFFERENT Claude account, read this first
+## 2. Publishing — resolved (30 Sep 2026)
 
-Everything in git transfers cleanly. **The published artifacts do not.**
+The series no longer depends on Claude to publish.
 
-1. **All 81 primer artifacts and the index are owned by the original account**
-   (`sowiloconcallbot@gmail.com`). A different account **cannot republish to those URLs.**
-2. The skill says every run must republish the index to
-   `https://claude.ai/artifact/28APxDNsNdKC2zXQmDH6dC`. **From a new account that will fail.**
-   You must instead publish `b1/out/index.html` as a **new artifact**, then:
-   - update the index URL in `.claude/skills/industry-primer/SKILL.md` (the "Index artifact" line), and
-   - tell Prerak the new index URL so he can replace his bookmark.
-3. The 81 existing primer URLs in `b1/urls.json` still work as **links** — leave them alone. They stay
-   readable; they just cannot be edited from the new account. If primer 081 or any earlier one ever needs
-   a correction, it has to be done from the original account, or republished as a new artifact with a new
-   URL recorded in `urls.json`.
-4. **The individual primers are currently PRIVATE**; only the index is shared "anyone with the link".
-   So the index's links open for Prerak but not for anyone he sends the index to. If the series is meant
-   to be shareable, each primer's sharing has to be changed from its own Share menu — Claude cannot do
-   this, only the owner can, and it is 81 manual changes. Worth raising with him before going further.
+**What changed.** `b1/publish_static.py` writes every primer to `docs/NNN.html` and a relinked
+`docs/index.html`. GitHub Pages serves `/docs` on `main`, so the canonical URL becomes
+`https://caprerakg.github.io/primer-pipeline/NNN.html`. The pages are fully self-contained — inline CSS
+and JS, no build step, no external dependency except Google Fonts, which degrade gracefully.
 
----
+**One manual step, and only Prerak can do it:** GitHub → repo **Settings → Pages → Source: `main`,
+folder `/docs`**. Until that is switched on the site builds correctly but is not served.
+
+**The old artifacts.** Primers 001–081 also exist as claude.ai artifacts; their URLs are in
+`b1/urls.json`. Those are owned by the original Claude account, are **private**, and cannot be updated
+from anywhere else. Leave them alone — the static copies in `docs/` are now the readable set, and being
+public they also fix the problem that the artifact index linked to pages nobody else could open.
+
+From 082 onward, record the **GitHub Pages URL** in `urls.json`.
 
 ## 3. Start of every run — exact sequence
 
 ```bash
-cd <repo root>
 git pull
-python b1/prices_io.py unpack        # prices.json is git-ignored; the .gz is the stored copy
+pip install websocket-client pandas numpy   # not pre-installed in most sandboxes
+python b1/prices_io.py unpack               # prices.json is git-ignored; the .gz is the stored copy
+cd b1 && python preflight.py                # STOP if this exits non-zero
 ```
+
+`preflight.py` verifies packages, python3.12, the price cache, **live TradingView websocket access**,
+Screener and BSE reachability, and git. Prices are fetched per primer, so if TradingView is blocked in
+your sandbox the pipeline cannot proceed — report it and stop rather than improvising.
 
 Then read `CHECKLIST.md` (the "Next up" table), `FAMILY_NOTES.md`, and the most recent
 `b1/frag_NNN.html` as the structural and stylistic template. **`b1/frag_081.html` is the current
@@ -164,12 +169,15 @@ If `build_primer.py` reports fewer than 21 sections, **the fragment is truncated
    block, the hero, the section ids, the four required boxes (`kid`, `client`, `pm`, `warn`), the chart
    hooks, and **`<p id="now-stocks"></p>` inside the `now` section**.
 9. **Build and gate.** `python build_primer.py NNN` then `python gate.py NNN`, both from `b1/`.
-10. **Publish** `b1/out/NNN.html` with a title, a one-word generic icon and a one-sentence description.
-    Save the **full `https://claude.ai/artifact/...` URL** in `b1/urls.json` — never a bare id;
+10. **Verify, then publish.** `python verify.py NNN` **must exit 0** — it checks that every basket
+    series ends on the data date, the Nifty column is canonical, every year has a note, every
+    cross-reference resolves, no artifact id is bare, and where this basket's months actually rank
+    against all 67 baskets (so no false record is claimed). Then `python publish_static.py` writes
+    `docs/NNN.html`. Record the **full** GitHub Pages URL in `b1/urls.json` — never a bare id;
     `mkchecklist.py` refuses to run otherwise.
 11. **Housekeeping, every time:** set each covered section `"status":"done","primer":"NNN"` in
     `b1/sections.json`; `python mkchecklist.py`; update the family line in `mkindex.py` if the family's
-    thesis moved; `python3.12 mkindex.py`; republish `b1/out/index.html` (see §2 if on a new account);
+    thesis moved; `python3.12 mkindex.py` then `python publish_static.py`;
     append findings to `FAMILY_NOTES.md`; then
     `python b1/prices_io.py pack && git add -A && git commit && git push`.
 
@@ -177,14 +185,17 @@ If `build_primer.py` reports fewer than 21 sections, **the fragment is truncated
 
 ## 7. Open items inherited from the 081 run
 
-1. **Pipeline bug, not fixed — Prerak's call.** `build_primer.py` only inserts the `now_note` where the
-   fragment contains `<p id="now-stocks"></p>`. **Fragments 070–080 all define a `now_note` and none has
-   the hook**, so eleven published primers silently dropped that paragraph (the basket-vs-Nifty line).
-   081 has the hook. Fixing 070–080 = add one line to each fragment, rebuild, republish to the same URLs
-   — **which requires the original account.**
+1. ~~Pipeline bug in 070–080~~ — **FIXED 30 Sep 2026.** `build_primer.py` only inserts the `now_note`
+   where the fragment has `<p id="now-stocks"></p>`; fragments 070–080 all defined a `now_note` and none
+   had the hook, so eleven published primers silently dropped the basket-vs-Nifty paragraph. The hook has
+   been added to all eleven, they have been rebuilt and re-gated, and the corrected pages are in `docs/`.
+   `verify.py` check [8] now fails any primer missing the hook, so it cannot recur. **The claude.ai
+   artifacts for 070–080 still carry the old text** — only the original account can refresh those, and
+   the static pages supersede them anyway.
 2. **An enrichment to 081, offered and not applied.** Artson's audited FY26 release states the
-   going-concern opinion rests on Tata Projects' support. That sharpens the page's existing
-   "parentage is not a balance sheet" line. One sentence; needs the original account to republish.
+   going-concern opinion rests on Tata Projects' support, which sharpens the page's existing
+   "parentage is not a balance sheet" line. One sentence — now applyable by anyone, since the static
+   page rebuilds from the fragment.
 3. **Reclassifications worth making in Prerak's source file**, found in 081:
    Brady & Morris (material-handling equipment, not fabrication) · Ameya Precision (pump/valve
    components) · Misquita (filed under electronics distribution) · and **Omax Autos**, still sitting in
@@ -244,14 +255,14 @@ answering the other way for once. Fasteners are the opposite: catalogue parts, p
 > Resume the industry primer pipeline and build the next primer: 082 Fasteners, Industrial Tools &
 > Abrasives (merged).
 >
-> Read `HANDOFF.md` in the repo root first, then `CLAUDE.md`, the `industry-primer` skill,
-> `CHECKLIST.md` and `FAMILY_NOTES.md`.
+> Read `AGENTS.md` first, then `HANDOFF.md`, the `industry-primer` skill in
+> `.claude/skills/industry-primer/SKILL.md`, `CHECKLIST.md` and `FAMILY_NOTES.md`.
+>
+> Run `python b1/preflight.py` before anything else and stop if it fails. Before publishing,
+> `python b1/verify.py 082` must exit 0.
 >
 > The data date is fixed at 18-Sep-2026. Confirm every member series ends on 18-Sep before computing.
 > Apply the Engineering family's three tests (078, 080, 081) and cross-reference them; do not repeat
 > their content. Check every cross-reference number against `CHECKLIST.md`.
->
-> If you are on a different Claude account from the one that published 001–081, read §2 of `HANDOFF.md`
-> before publishing anything.
 >
 > When 082 is done, report its URL, word count, key audit findings and any corrections, then stop.

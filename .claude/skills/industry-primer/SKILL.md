@@ -31,7 +31,11 @@ need no follow-up.
 - Running theses and known data traps: `FAMILY_NOTES.md`.
 - Finished pages: `b1/out/NNN.html`, plus a named copy in `primers/`. **Nothing is ever written to OneDrive.**
   Prerak's local clone is `C:\Users\sayoni.n\Desktop\primer-pipeline`.
-- Index artifact (republish with `url`): https://claude.ai/artifact/28APxDNsNdKC2zXQmDH6dC
+- **Publishing (changed 30 Sep 2026):** the canonical output is now the static site in `docs/`, served by
+  GitHub Pages at `https://caprerakg.github.io/primer-pipeline/NNN.html`. Build it with
+  `python publish_static.py` from `b1/`. Primers 001-081 also exist as claude.ai artifacts whose URLs are
+  in `urls.json`; those are owned by the original Claude account and cannot be updated from elsewhere.
+  Legacy index artifact (original account only): https://claude.ai/artifact/28APxDNsNdKC2zXQmDH6dC
 - The TradingView fetcher is `b1/tv_fetch.py` (needs the `websocket-client` package:
   `pip install websocket-client` if the import fails).
 
@@ -93,13 +97,16 @@ need no follow-up.
    words ≥ 5000, links ≥ 15, glossary `<dt>` ≥ 40, questions ≥ 8, a note for every cy year, and the literal word
    "critical". Write the file in one go — a partial write has happened before; if the build shows fewer than 21
    sections, the file is truncated.
-10. **Publish.** Artifact publish `b1/out/NNN.html` with a title, a one-word generic icon and a one-sentence
-    description. **Save the full `https://claude.ai/artifact/...` URL** in `urls.json` (never a bare id).
+10. **Verify, then publish.** `python verify.py NNN` must exit 0 before anything is published - it checks that
+    series end on the data date, the Nifty column is canonical, every year has a note, every cross-reference
+    resolves, and no month-record claim is false. Then `python publish_static.py` to write `docs/NNN.html`, and
+    **save the full URL** in `urls.json` (never a bare id). On the original Claude account you may also publish
+    `b1/out/NNN.html` as an artifact, but the static page is the canonical one.
 11. **Housekeeping, every time:**
     - In `sections.json`, set each covered section to `"status": "done", "primer": "NNN"`.
     - `python mkchecklist.py` (it refuses to run if any URL is bare).
-    - When a family starts or closes, edit its line in `mkindex.py`; then `python mkindex.py` and republish
-      `b1/out/index.html` to the index URL above with `url` set.
+    - When a family starts or closes, edit its line in `mkindex.py`; then `python3.12 mkindex.py` followed by
+      `python publish_static.py` to rebuild `docs/index.html`.
     - Append any new through-line or data trap to `FAMILY_NOTES.md`.
     - **Commit and push after every primer**, so nothing is lost if the session ends:
       `python b1/prices_io.py pack`, then `git add -A && git commit -m "Primer NNN: <name>" && git push`.
@@ -107,7 +114,8 @@ need no follow-up.
 
 ## Fixing a published primer
 
-Edit its fragment, rebuild, re-gate, and republish to the **same URL** (from `urls.json`) with a short label. Record
+Edit its fragment, rebuild, re-gate, re-verify, and rerun `publish_static.py` - the static URL stays the same.
+(A primer that exists only as a claude.ai artifact can be corrected in place solely from the original account.) Record
 the correction in `FAMILY_NOTES.md` and tell Prerak what changed and why.
 
 ## End of run

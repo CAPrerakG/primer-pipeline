@@ -1,0 +1,766 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metal Fabrication & Engineering Primer</title>
+<meta name="description" content="Industry 81 of 278, part 3 of the Engineering family: cutting, bending, welding and machining steel into factory sheds, bus bodies, exhaust systems, fuel-cell assemblies and aircraft parts. Why one company in this section earns a 29% margin and another 3%, why the pre-engineered building stocks fell 17-34% in 2026 while the precision engineers rose 154% and 198%, and why April has beaten the Nifty in 14 of 15 years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Metal Fabrication · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#four">Four industries in one section</a></li>
+<li><a href="#demand">What is being built now</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 81 of 278 · Engineering family, part 3</div>
+  <h1>Metal Fabrication &amp; Engineering</h1>
+  <p class="lede">Fabrication is what happens to steel after the mill and before the machine: a plate is cut, a section is bent, two pieces are welded, the joint is ground and painted, and the result is a factory shed, a bus body, a motorcycle exhaust, a storage tank or an aircraft bracket. It is the least glamorous industry in the Engineering family and the one that contains the widest spread of outcomes. On their latest reported numbers, <b>Omnitech Engineering earns a 29% operating margin and SM Auto Stamping earns 3.1%</b> — both classified as metal fabricators, both cutting and joining steel. This primer explains what separates them, why India's three listed pre-engineered building makers all fell in 2026 while its two listed precision engineers doubled, and why <a href="https://www.icicidirect.com/research/equity/blog/domestic-steel-prices-have-surged-to-a-four-year-high-of-rs-63800-per-tonne">a four-year high in steel prices</a> in the week this data ends is not good news for anyone on this list.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 23 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Fasteners, Tools &amp; Abrasives</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">+35% vs −11%</div><div class="l">The eight-stock fabrication basket against the Nifty in 2026, to 18 September; the median member is up 24%</div></div>
+    <div class="stat"><div class="n">14 of 15</div><div class="l">Years April has beaten the Nifty, by +8.3 points — matched only by specialty chemicals (008) and castings (078)</div></div>
+    <div class="stat"><div class="n">29% vs 3.1%</div><div class="l">Latest operating margin at Omnitech Engineering against SM Auto Stamping — same process, opposite contract</div></div>
+    <div class="stat"><div class="n">₹63,900/t</div><div class="l">Mumbai hot-rolled coil in the week to 18 September 2026, a four-year high and the input every name here buys</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>One skill, two opposite contracts</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Imagine two people who both make things out of cardboard. The first one says to a customer: "Tell me what box you want, and I'll tell you today what it will cost to build it by next winter." The second one says: "Test me for two years. If you decide my folding is good enough for your rocket, then we'll talk about price." Both of them cut, fold and glue. But if cardboard suddenly gets expensive, the first one has already promised a price and must pay the difference out of his own pocket, while the second one is one of only three people in the world allowed to fold for rockets, so the customer pays. Metal fabrication is exactly this. Cutting and welding steel is a skill almost anyone can learn — India has more than five thousand firms doing it — so the money is never in the welding. It is in whether you promised a price before you bought the steel.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Twenty-three names, eight with enough history for a basket, and the widest internal spread of any section so far.</p>
+    <ul>
+      <li><b>The precision engineers — Sansera (~₹24,775 cr) and MTAR (~₹20,915 cr):</b> up 154% and 198% in 2026. Sansera's aerospace, defence and semiconductor backlog is about ₹5,750 cr; MTAR's order book is ₹5,143 cr after a record ₹2,895 cr of inflows in one quarter.</li>
+      <li><b>The pre-engineered building makers — Interarch, Epack Prefab, M&amp;B Engineering:</b> down 26%, 17% and 34%, all three peaking within a week of each other in November 2025. Revenue is growing 16–25%; margins are 8–9% and falling.</li>
+      <li><b>The auto sheet-metal shops — Automobile Corporation of Goa, Munjal Auto, Autoline, SM Auto Stamping:</b> ₹250–700 cr of quarterly revenue at 3–7% margins, and in ACGL's case <b>93.7% of revenue from a single customer</b>.</li>
+      <li><b>The structural and process fabricators — Salasar, Artson, Rishi Laser:</b> the hardest place to be. Salasar's revenue grew 24% over two years while profit fell two-thirds; Artson's net worth is about ₹1 cr.</li>
+      <li><b>The drivers:</b> steel prices and the lag before they can be passed on, India's private capital-expenditure cycle, data centres and semiconductor fabs, nuclear policy, and aerospace qualification.</li>
+      <li><b>The calendar:</b> April has beaten the Nifty in 14 of 15 years; March in only 2 of 15.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Sorted by who fixes the price and when</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it is</th><th>Who sets the price, and when</th><th>Typical margin</th><th>Listed makers here</th></tr></thead><tbody>
+    <tr><td>Pre-engineered buildings (PEB)</td><td>A whole steel building — columns, rafters, purlins, roof and wall sheets — designed, rolled, cut and bolted on site</td><td>The customer, at tender, months before the steel is bought</td><td>8–11%</td><td>Interarch, Epack Prefab, M&amp;B Engineering</td></tr>
+    <tr><td>Galvanised structures and towers</td><td>Transmission and telecom towers, monopoles, railway electrification masts, solar mounting</td><td>The utility, by reverse auction</td><td>5–8%</td><td>Salasar Techno Engineering</td></tr>
+    <tr><td>Process and tank fabrication</td><td>Storage tanks, pressure vessels, piping spools, structures for refineries and chemical plants</td><td>The EPC contractor, at order, with milestone payments</td><td>0–6%</td><td>Artson, Pattech Fitwell</td></tr>
+    <tr><td>Auto sheet-metal stampings and assemblies</td><td>Exhaust systems, fuel tanks, wheel rims, body-in-white parts, chassis frames, bus bodies</td><td>The vehicle maker, annually, with an expected price reduction each year</td><td>3–7%</td><td>ACGL, Munjal Auto, Autoline, SM Auto Stamping</td></tr>
+    <tr><td>Architectural and cleanroom metalwork</td><td>Steel doors, windows, cleanroom panels and partitions</td><td>The builder or contractor, at tender</td><td>8–14%</td><td>Ahlada Engineers</td></tr>
+    <tr><td>Job-work laser cutting and sheet metal</td><td>Cut, bent and welded parts made to a customer's drawing, in small batches</td><td>The customer, per part, with no long contract</td><td>4–7%</td><td>Rishi Laser, Electro Force, Misquita</td></tr>
+    <tr><td>Precision machined components</td><td>Turned and milled parts held to microns — valve trim, pump shafts, connecting rods, cylinder blocks</td><td>Negotiated after the supplier is approved</td><td>11–19%</td><td>Sansera, Pritika, Ameya, Birla Precision</td></tr>
+    <tr><td>Safety-critical assemblies</td><td>Fuel-cell hot boxes, nuclear grid plates, flow formers, actuators, aerospace sub-assemblies</td><td>Negotiated after a multi-year qualification the customer paid for</td><td>19–29%</td><td>MTAR, Omnitech, Aequs</td></tr>
+    <tr><td>Machine-tool accessories and tooling</td><td>Tool holders, collets, arbors held to AT3 class</td><td>Catalogue price, set by the maker</td><td>5–11%</td><td>Birla Precision</td></tr>
+  </tbody></table></div>
+  <p>The table is deliberately sorted by contract rather than by product, because in this industry the contract explains more than the product does. Read down the "who sets the price" column and the margin column moves with it almost perfectly. Where the customer fixes a price before the supplier buys its steel — PEB, towers, tanks, stampings — margins sit between 3% and 11%. Where the customer must first spend two or three years qualifying the supplier, and only then negotiates — nuclear assemblies, fuel-cell parts, aerospace machining — margins sit between 19% and 29%. Nothing about the welding is different. The <b>critical</b> variable is the order in which price and approval are settled.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a coil of steel to a building or a fuel cell</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Steel input</h4><div class="an">The coil</div>Hot-rolled coil, plate, sections, bars and tube bought from mills or traders.<div class="who">Mills (066), traders (077)</div><div class="m">55–70% of revenue — the highest in the family</div></div>
+    <div class="stage"><div class="no">02</div><h4>Design and detailing</h4><div class="an">The drawing</div>Structural design, connection detailing and nesting so plates cut with least scrap.<div class="who">Interarch, Epack, M&amp;B, Artson</div><div class="m">Where the job is won or lost on tonnage</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Cutting and forming</h4><div class="an">The shaping</div>Laser, plasma and oxy cutting; press braking, rolling, punching and stamping.<div class="who">Every fabricator</div><div class="m">CNC cutting is the fastest-growing process step</div></div>
+    <div class="stage hot"><div class="no">04</div><h4>Welding and joining</h4><div class="an">The joining</div>Submerged-arc, MIG and TIG welding, plus bolting and riveting.<div class="who">Every fabricator</div><div class="m">About a third of all process activity in India</div></div>
+    <div class="stage"><div class="no">05</div><h4>Machining</h4><div class="an">The finishing</div>Turning, milling and grinding to tolerances measured in microns.<div class="who">Sansera, MTAR, Omnitech, Aequs, Ameya</div><div class="m">The step that changes the margin bracket</div></div>
+    <div class="stage"><div class="no">06</div><h4>Surface treatment</h4><div class="an">The protection</div>Galvanising, shot blasting, painting, anodising, special coatings.<div class="who">Salasar, Ahlada, Aequs</div><div class="m">Zinc cost (see 074) and environmental clearance</div></div>
+    <div class="stage"><div class="no">07</div><h4>Inspection and approval</h4><div class="an">The proof</div>Radiography, dimensional inspection, first-article approval, AS9100 or nuclear-grade audits.<div class="who">Customers and third parties</div><div class="m">One to three years for a safety-critical part</div></div>
+    <div class="stage"><div class="no">08</div><h4>Delivery and erection</h4><div class="an">The site</div>Transport, site erection, commissioning and retention money released after defect liability.<div class="who">PEB and structural names</div><div class="m">Where the working capital goes</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Buy</b> steel at a price nobody can predict three months out.</li>
+    <li><b>Draw</b> the job so it uses as few tonnes as possible.</li>
+    <li><b>Cut</b> and <b>bend</b> the plate, then <b>weld</b> it.</li>
+    <li><b>Machine</b> it, if the customer's drawing calls for microns rather than millimetres.</li>
+    <li><b>Coat</b> it so it survives twenty years outdoors.</li>
+    <li><b>Prove</b> it — and then wait to be paid.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>Castings (078) set the Engineering family's first test — <b>who writes the specification, and does the part wear out?</b> Forgings (080) added a second — <b>margin follows the weight class and the depth of machining, not the tonnes.</b> Fabrication adds a third, and it is the bluntest of the three: <b>who carries the price of steel between the quote and the delivery?</b> Both 078's and 080's tests still apply here, and they point the same way. A pre-engineered building is made to the customer's design, from steel the customer's tender priced, and it does not wear out. A nuclear grid plate is made to a specification the customer spent three years approving, and a failure is unthinkable. That is the whole difference between an 8% business and a 24% business in one section of the watchlist.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 23 companies</h2>
+  <h3>The precision engineers</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Sansera Engineering (~₹24,775 cr)</td><td>A Bengaluru maker of precision forged and machined components — connecting rods, rocker arms, crankshafts and gear-shift forks for engines, plus a fast-growing aerospace, defence and semiconductor (ADS) arm.</td><td>Q1 FY27 revenue ₹1,021 cr (+33%), <a href="https://www.investing.com/news/company-news/sansera-q1-fy27-presentation-nonauto-surge-drives-33-revenue-growth-93CH-4856708">EBITDA ₹196 cr at 19.2%</a> (from 17.2%), profit ₹87 cr (+39%); ₹100 cr excluding a ₹12.7 cr litigation settlement. Non-auto 20.8% of sales; ADS revenue ₹145 cr, more than three times a year earlier. India +17.4%, international +71.4%, with US exports nearly doubling. Order book ₹1,849 cr excluding ADS; ADS backlog ₹4,437 cr at 30 June, raised to about ₹5,750 cr by a <a href="https://businessupturn.com/business/sansera-engineering-slips-2-despite-record-q1-rs5-700-crore-ads-backlog-semicon-mega-order-and-rs3-500-crore-capacity-plan-steal-the-show/">₹1,250 cr five-year semiconductor-equipment order</a>. FY26 revenue ₹3,498 cr, profit ₹327 cr; capex ₹510 cr. Targets ₹8,000–9,000 cr of revenue by FY31. Stock ₹4,260, <b>+154% in 2026 and at an all-time high on 18 September</b>. In the basket.</td></tr>
+    <tr><td>MTAR Technologies (~₹20,915 cr)</td><td>A Hyderabad precision-engineering company making grid plates and drive mechanisms for nuclear reactors, hot-box assemblies for solid-oxide fuel cells, and parts for space launch vehicles and defence.</td><td><a href="https://www.business-standard.com/markets/capital-market-news/mtar-tech-hits-the-roof-after-q1-pat-zooms-365-yoy-126073000301_1.html">Q1 FY27 revenue ₹360.7 cr (+130%)</a>, EBITDA ₹85.1 cr at 23.6%, profit ₹50.2 cr (+365%). Record order inflow ₹2,895 cr in one quarter, including ₹504 cr for the Kaiga 5 and 6 reactors; order book ₹5,143 cr. Guides to 80% revenue growth in FY27 at a 22–24% margin, with large nuclear and clean-energy execution from the second half. FY26 revenue ₹876 cr, profit ₹94 cr. <b>Clean energy was more than 60% of FY25 revenue, almost all of it from one customer, Bloom Energy</b>, whose own revenue <a href="https://www.sec.gov/Archives/edgar/data/0001664703/000162828026050150/ex991_q226financialresults.htm">rose 166% in the June quarter on AI data-centre demand</a>. Stock ₹7,202, +198% in 2026 and 14% below its 19 June high. In the basket.</td></tr>
+    <tr><td>Aequs (~₹14,802 cr)</td><td>India's only vertically integrated aerospace manufacturing ecosystem inside a single special economic zone, at Belagavi — forging, machining, surface treatment and assembly — plus a consumer-products arm making toys and kitchenware.</td><td><a href="https://www.investing.com/news/company-news/aequs-q1-fy27-slides-revenue-surges-55-as-order-book-tops-1b-93CH-4820715">Q1 FY27 revenue ₹395.5 cr (+55%)</a>, reported EBITDA ₹21.5 cr at 5.0% against 16.0%, and a <b>net loss of ₹53.2 cr</b> against a ₹3.6 cr profit. Aerospace order book passed <b>$1 bn</b> for the first time, up 13% in the quarter, helped by a fifteen-year agreement with Safran Landing Systems for Airbus A320 wheels. The consumer arm lost ₹36.1 cr of EBITDA in the quarter, down from ₹47.3 cr. FY26 revenue ₹1,230 cr with a ₹113 cr loss; borrowings ₹701 cr. Stock ₹232, +53% since its 10 December 2025 listing close. <b>Excluded: listed December 2025.</b></td></tr>
+    <tr><td>Omnitech Engineering (~₹6,672 cr)</td><td>A Rajkot maker of high-precision engineered components and assemblies for safety-critical uses in energy, motion control, automation and industrial equipment, mostly exported.</td><td>Q1 FY27 revenue ₹169 cr (+59%), operating profit ₹49 cr at <b>29.0% — the highest margin in the section</b>, profit ₹29 cr. FY26 revenue ₹512 cr, profit ₹77 cr, against ₹188 cr and ₹22 cr in FY24. Borrowings ₹431 cr. Trades at about 68 times earnings at the 18 September price. Its <a href="https://www.chittorgarh.com/ipo/omnitech-engineering-ipo/2479/">₹583 cr IPO</a> was priced at ₹216–227 and listed on 5 March 2026 at ₹205 — below the issue price. Stock ₹556, +171% from that first close and 24% below its 5 August high. <b>Excluded: listed March 2026.</b></td></tr>
+  </tbody></table></div>
+  <h3>The pre-engineered building makers</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Interarch Building Solutions (~₹2,797 cr)</td><td>India's second-largest integrated pre-engineered building maker by installed capacity, at 221,000 tonnes, selling under the TRAC and TRACDEK brands; founded 1983.</td><td><a href="https://propnewstime.com/latestnewsstories/MzQzNzc=/interarch-building-solutions-reports-flat-q1-fy27-profit-at-inr-28-crore">Q1 FY27 revenue ₹459.7 cr (+20.7%)</a>, EBITDA ₹39.4 cr (+24.6%) at 8.6% against 10.5% in the March quarter, and <b>profit flat at ₹28.2 cr</b> — because other income fell from ₹9.9 cr to ₹3.0 cr. Order book ₹1,864 cr at 31 July, weighted to renewable energy, semiconductor plants and data centres. Capacity rising to 336,000 t by FY27; utilisation 80–88%. FY28 revenue guidance raised to ₹2,700 cr. FY26 revenue ₹1,898 cr, profit ₹135 cr; ROCE 23.7% and nearly debt-free at ₹18 cr. Stock ₹1,706, −26% in 2026 and 35% below its 17 November 2025 high. <b>Excluded: IPO August 2024.</b></td></tr>
+    <tr><td>Epack Prefab Technologies (~₹2,230 cr)</td><td>A PEB and prefabricated-construction company offering design, manufacture, supply and installation; incorporated 1999 and demerged from the Epack group's appliance business.</td><td>Q1 FY27 revenue ₹366 cr (+24%), operating profit ₹34 cr at 9.3% against 10.5% a year earlier, profit ₹18 cr (+13%). FY26 revenue ₹1,525 cr, profit ₹93 cr; ROCE 21.7%, borrowings ₹114 cr. Trades at about 24 times earnings. Stock ₹226, −17% in 2026 and 31% below its 10 November 2025 high, though still above its 1 October 2025 listing close of ₹191. <b>Excluded: listed October 2025.</b></td></tr>
+    <tr><td>M&amp;B Engineering (~₹1,466 cr)</td><td>An Ahmedabad PEB maker with two divisions — pre-engineered buildings under Phenix and self-supported steel roofing under Proflex; incorporated 1981.</td><td>Q1 FY27 revenue ₹265 cr (+16%), operating profit ₹21 cr at <b>7.9%</b>, profit ₹15 cr against ₹16 cr. FY26 revenue ₹1,085 cr, profit ₹79 cr; ROCE 19.9%, borrowings ₹84 cr, about 18 times earnings. Stock ₹252, −34% in 2026, <b>51% below its 10 November 2025 high and 38% below its 6 August 2025 listing close</b>. <b>Excluded: listed August 2025.</b></td></tr>
+  </tbody></table></div>
+  <h3>The sheet-metal and structural fabricators</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Automobile Corporation of Goa (~₹1,073 cr)</td><td>Pressed parts, sub-assemblies and bus bodies, promoted jointly by Tata Motors and EDC Ltd, a Government of Goa undertaking, which together hold 48.98%.</td><td><a href="https://www.whalesbook.com/corporate-news/English/auto/Automobile-Corp-Goa-Q1-Profit-Drops-51percent-Revenue-Marginally-Down/6a7321a410bce1fd203f1280">Q1 FY27 total income ₹252.7 cr</a>, revenue ₹249 cr (−3%), EBITDA margin down to 6.69%, <b>profit ₹11.2 cr, down 51%</b>. It built 2,712 bus bodies against 2,784, blaming weaker exports on the Middle East. <b>Tata Motors was ₹233.4 cr, or 93.7%, of the quarter's revenue.</b> FY26 was a record: revenue ₹934 cr (+41%), profit ₹70 cr, ROCE 29.6%, debt ₹10 cr, about 17 times earnings. Stock ₹1,737, flat in 2026 and 48% below its August 2024 high. In the basket.</td></tr>
+    <tr><td>Munjal Auto Industries (~₹1,022 cr)</td><td>A Hero-group maker of two-wheeler exhaust systems, wheel rims, fuel tanks and body-in-white parts — about 22,000 exhaust systems and 10,000 rims a day — with about a 28% domestic market share in its core two-wheeler components and a growing renewable and railway business.</td><td>Q1 FY27 consolidated revenue ₹699 cr (+42%), operating profit ₹44 cr at 6.3%, profit ₹29 cr (+53%) — helped by ₹20 cr of other income. FY26 revenue ₹2,295 cr, operating profit ₹128 cr at 5.6%, other income ₹39 cr, profit ₹46 cr; trailing revenue ₹2,503 cr with ₹48 cr of other income against ₹131 cr of operating profit. Promoters hold 74.81%. Stock ₹104, +31% in 2026. In the basket.</td></tr>
+    <tr><td>Salasar Techno Engineering (~₹862 cr)</td><td>A galvanised-steel-structure maker and EPC contractor — transmission and telecom towers, monopoles, railway electrification and solar structures. Face value ₹1, about 175 cr shares.</td><td>Q1 FY27 revenue ₹295.5 cr (−1.5%), operating profit ₹21.9 cr at 7.42% against 9.97%, interest ₹15.2 cr, <b>profit ₹5.1 cr against ₹8.8 cr</b>. FY26 revenue ₹1,503 cr but profit only ₹18 cr, against ₹53 cr on ₹1,208 cr in FY24 — <b>revenue up 24% in two years, profit down two-thirds</b>. Borrowings ₹422 cr; return on equity 2.13%. It bought EMC Ltd out of liquidation under the insolvency code and the <a href="https://scanx.trade/stock-market-news/companies/nclt-kolkata-approves-salasar-emc-amalgamation-scheme/41087932">NCLT sanctioned the amalgamation on 22 May 2026</a>, with an appointed date of 23 October 2024. Order book about ₹2,200–2,500 cr; targets ₹1,800 cr of FY27 revenue. Stock ₹4.89, <b>−45% in 2026 and 86% below its February 2024 high</b>. In the basket.</td></tr>
+    <tr><td>IST Ltd (~₹762 cr)</td><td>Described as a maker of high-precision components, but in practice a Noida property and investment company with a small manufacturing arm.</td><td>Q1 FY27 revenue ₹35 cr, operating profit ₹16 cr — and <b>other income ₹87 cr</b>, producing a profit of ₹83 cr. FY26: revenue ₹126 cr, operating profit ₹81 cr, other income ₹127 cr, profit ₹154 cr. Investments ₹1,449 cr and reserves ₹1,686 cr against a ₹746 cr market value; book value ₹1,451 a share against a ₹664 price, and under 5 times earnings. Stock −11% in 2026. <b>Excluded from the basket: the profit is investments and property, not fabrication. See the audit.</b></td></tr>
+    <tr><td>Artson (~₹637 cr)</td><td>A 75%-owned subsidiary of Tata Projects: design and EPC for oil, gas and hydrocarbon processing, plus structural and tank fabrication.</td><td>Q1 FY27 revenue ₹26.1 cr, <b>down 42%</b>, operating profit ₹1.2 cr at 4.55%, interest ₹1.75 cr and a small net loss. FY26 revenue ₹164 cr with an operating loss of ₹6 cr and a net loss of ₹11 cr; FY25's ₹3 cr profit came from ₹19 cr of other income against a ₹2 cr operating loss. <b>Equity ₹4 cr and reserves −₹3 cr leave about ₹1 cr of net worth</b>, against borrowings of ₹54 cr and a ₹637 cr market value. Stock ₹169, +19% in 2026. In the basket.</td></tr>
+    <tr><td>Birla Precision Technologies (~₹397 cr)</td><td>Originally a Birla–Kennametal joint venture: AT3-class tool holders, machine-tool accessories, precision and automotive components and castings.</td><td>Q1 FY27 revenue ₹58.9 cr, flat, operating profit ₹3.4 cr at 5.72% against 11.40% — but <b>other income of ₹6.2 cr against ₹0.07 cr</b> lifted profit to ₹5.8 cr from ₹2.7 cr. FY26 revenue ₹238 cr, profit ₹12 cr; borrowings ₹53 cr, book value ₹25.9. Stock ₹57, +28% in 2026 and still 55% below its January 2008 high. In the basket.</td></tr>
+    <tr><td>Autoline Industries (~₹353 cr)</td><td>A Pune maker of sheet-metal stampings, welded assemblies and modules — foot control modules, parking brakes, exhaust systems — with Tata Motors a principal customer.</td><td>Q1 FY27 revenue ₹265.5 cr (+75%), operating profit ₹19.2 cr at 7.22% against 8.94%, <b>interest ₹11.7 cr — 61% of operating profit</b> — and profit ₹1.9 cr. FY26 revenue ₹824 cr, profit ₹38 cr. Borrowings ₹325 cr against a ₹353 cr market value; promoters hold only 32.6%. Stock ₹78, −1% in 2026 and 82% below its February 2007 high. In the basket.</td></tr>
+  </tbody></table></div>
+  <h3>The small, misclassified and illiquid names</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Why it is outside the basket</th></tr></thead><tbody>
+    <tr><td>Pritika Engineering Components (~₹170 cr)</td><td>Machined tractor and commercial-vehicle components</td><td><b>A 70.8%-owned subsidiary of Pritika Auto Industries, which sits in Castings (078).</b> Q1 FY27 revenue ₹50.8 cr (+58%), margin down to 11.5%, profit ₹2.2 cr; borrowings ₹81 cr on ₹144 cr of FY26 revenue.</td></tr>
+    <tr><td>Brady &amp; Morris Engineering (~₹148 cr)</td><td>Material-handling equipment, cranes and textile machinery</td><td><b>An equipment maker, not a fabricator</b>, and 72.7% owned by W H Brady &amp; Co, which sits in Trading &amp; Distribution. Q1 FY27 revenue ₹17.5 cr with the margin down from 10.6% to 4.9%. FY25's ₹24 cr profit on ₹90 cr of revenue was an outlier; FY26 was ₹5.6 cr on ₹73 cr. Stock 74% below its October 2024 high.</td></tr>
+    <tr><td>Rishi Laser (~₹145 cr)</td><td>Laser cutting and sheet-metal job work for construction equipment, autos, rail and power</td><td>Size and a 16.1% promoter holding. Q1 FY27 revenue ₹42.3 cr (+3%), margin 6.5% against 8.8%, profit ₹0.5 cr against ₹1.8 cr. The purest job-work economics on this list.</td></tr>
+    <tr><td>Ameya Precision Engineers (~₹97 cr)</td><td>Pump and valve components — shafts, stems, trim parts</td><td>An NSE Emerge SME listing reporting half-yearly. The best small-company numbers here: FY26 revenue ₹40 cr, profit ₹5.6 cr at an 18.9% margin, debt-free, 18% return on equity. Stock +47% in 2026 and at an all-time high on 18 September. Belongs with pumps and valves, both queued.</td></tr>
+    <tr><td>Ahlada Engineers (~₹47 cr)</td><td>Steel doors, windows and cleanroom equipment</td><td><b>Revenue fell from ₹259 cr in FY24 to ₹101 cr in FY26</b>, with FY26 profit of ₹0.2 cr. Book value ₹106 against a ₹38 price. 84% below its 2021 high.</td></tr>
+    <tr><td>Electro Force (India) (~₹44 cr)</td><td>Precision sheet metal and plastic mouldings for electricals and lighting</td><td>An SME listing of December 2023. <b>Revenue collapsed from ₹52 cr in FY25 to ₹19 cr in FY26.</b> 87% below its January 2024 high.</td></tr>
+    <tr><td>SM Auto Stamping (~₹42 cr)</td><td>Precision sheet-metal stamping and deep-drawn parts</td><td>Size and a half-yearly reporting cycle. <b>A 3.1% operating margin on ₹71 cr of FY26 revenue</b> — the thinnest in the section, and the clearest picture of unbranded stamping economics.</td></tr>
+    <tr><td>Misquita Engineering (~₹26 cr)</td><td>Precision machined parts; claims over 50% of the Indian front-loading washing-machine market for its components</td><td>Size, over 100 times earnings on ₹0.23 cr of FY26 profit, and 209 debtor days. Classified by TradingView under electronics distribution. Last trade in this data set was 16 September.</td></tr>
+    <tr><td>Pattech Fitwell Tube Components (~₹108 cr)</td><td>Pipe fittings, flanges, forgings and pipe spools for fertiliser, power and petrochemical plants</td><td><b>No price discovery: the last trade in this data set was 9 June 2026 at ₹114.85</b>, and the price quoted in late September is the same. FY26 revenue ₹60 cr, profit ₹1.9 cr, about 58 times earnings. The company is filing normally; the stock simply is not trading.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The audit</span>
+    <p><b>Eight of 23 names form the basket:</b> Sansera Engineering, MTAR Technologies, Automobile Corporation of Goa, Munjal Auto, Salasar Techno Engineering, Artson, Birla Precision and Autoline Industries, equal-weighted monthly from July 2011. <b>Members join as they list</b>: from 2011 the basket is five names, Salasar joins in 2017, and MTAR and Sansera in 2021. Read the pre-2017 years as a micro-cap sheet-metal basket and the post-2021 years as the section it has become. Three NSE series that began only in 2026 were repaired with BSE history back to 2006, scaled at the first overlapping day: Automobile Corporation of Goa (×0.992), IST Ltd (×0.998) and Birla Precision (×1.023). Artson trades on the BSE and its own history runs from 2005.</p>
+    <p><b>Four of the five largest names are excluded for being too new, and they are 85% of the section's market value.</b> Aequs listed in December 2025, Omnitech in March 2026, Epack Prefab in October 2025, M&amp;B Engineering in August 2025 and Interarch in August 2024. Together with the four basket newcomers this is the most recently listed section in the project so far: of about ₹79,500 cr of market value in these 23 names, <b>only ₹5,400 cr — under 7% — belongs to companies with a listed price before 2021</b>. Any statement about how "metal fabrication stocks" behaved before 2021 is a statement about micro caps.</p>
+    <p><b>IST Ltd is excluded as misclassified, and the exclusion changes a headline.</b> Its June-quarter operating profit was ₹16 cr on ₹35 cr of revenue, while <b>other income was ₹87 cr</b>; in FY26 other income of ₹127 cr exceeded operating profit of ₹81 cr, and the balance sheet holds ₹1,449 cr of investments against a ₹746 cr market value. It is an investment and property company with a components arm. Including it would make April's record <b>15 of 15 rather than 14 of 15</b> — the only 15-of-15 month this project would have produced. It is stated here rather than used, because the extra year comes from a stock whose profit has almost nothing to do with fabrication.</p>
+    <p><b>Three names are misclassified in the source file.</b> Brady &amp; Morris makes material-handling equipment and textile machinery, not fabricated steel, and belongs with Material Handling Equipment. Ameya Precision makes pump and valve components and belongs with pumps or valves. Misquita Engineering, a machining job shop, is filed under electronics distribution. <b>All three are worth reclassifying.</b> Separately, <a href="https://www.screener.in/company/OMAXAUTO/">Omax Autos</a>, a sheet-metal and chassis-frame maker, sits in Forgings in the source file and was flagged in 080 as belonging here.</p>
+    <p><b>Two same-group traps, both checked by ISIN.</b> Pritika Engineering Components (NSE:PRITIKA, INE0MJQ01020) is a <b>70.8%-owned subsidiary of Pritika Auto Industries</b> (NSE:PRITIKAUTO, INE583R01029), which the source file places in Castings &amp; Foundries — the same parent-and-subsidiary pattern as Welcast and AIA in 078. Brady &amp; Morris Engineering (BSE:BRADYM, INE856A01017) is 72.7% owned by W H Brady &amp; Co (NSE:WHBRADY, INE855A01019), filed under Trading &amp; Distribution; the ISINs differ by one character.</p>
+    <p><b>Profit that is not operations, four times over.</b> IST Ltd, above, is the extreme case. Birla Precision's June-quarter profit rose from ₹2.7 cr to ₹5.8 cr while its operating profit <b>halved</b>, on other income of ₹6.2 cr against ₹0.07 cr a year earlier. Munjal Auto carries about ₹48 cr of trailing other income against ₹131 cr of operating profit. Artson's FY25 profit of ₹3 cr came from ₹19 cr of other income against a ₹2 cr operating loss. In a low-margin industry, other income routinely decides whether the bottom line is positive — read that line first.</p>
+    <p><b>An income line that cuts the other way.</b> Interarch's June-quarter profit was flat at ₹28.2 cr on revenue up 20.7%, because other income fell from ₹9.9 cr to ₹3.0 cr. The operating business grew; the treasury income did not.</p>
+    <p><b>A near-zero net worth carrying a ₹637 cr market value.</b> Artson's equity capital of ₹4 cr and reserves of −₹3 cr leave roughly ₹1 cr of net worth against ₹54 cr of borrowings, after an FY26 operating loss. The market values it at ₹637 cr. The Tata Projects parentage is doing the work, not the balance sheet.</p>
+    <p><b>Series checked, and what turned up.</b> Every member was scanned for one-day moves of −30% or worse and +50% or better. Only two flags: Artson's −35% in March 2008 and Brady &amp; Morris's −32% in June 2004, both in illiquid trading rather than corporate actions. Trading gaps of more than 45 days appear in Brady &amp; Morris (2013–14, 2014, 2019), SM Auto Stamping (seven gaps, 2020–22), Misquita (2020, 2024–25) and Autoline (three in 2008–09). None affects the basket. <b>Salasar's ₹4.89 price is not an error</b>: its face value is ₹1 and it has about 175 cr shares, so a ₹862 cr market value is consistent, and the 86% fall from its February 2024 high is a continuous decline with no single-day step.</p>
+    <p><b>A stock with no price.</b> Pattech Fitwell's last trade in this data set was on 9 June 2026 at ₹114.85, and the price quoted in late September is unchanged. The company held its annual meeting on 18 September and issued a trading-window notice on 28 September, so this is illiquidity, not suspension. It is excluded, and so is Misquita, whose last trade was 16 September.</p>
+    <p><b>A unit trap, again.</b> One widely syndicated summary printed <a href="https://scanx.trade/stock-market-news/companies/sansera-engineering-q1-results-net-profit-rises-39-yoy-866-crore/48110226">Sansera's June-quarter profit as "₹866 crore"</a>. The correct figure is ₹86.6 cr — ₹866 million. This is the third million-versus-crore misprint from the same source in three primers. Check profit against EPS times shares: ₹13.89 on about 6.25 cr shares gives ₹87 cr.</p>
+  </div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>A nine-fold margin spread inside one section</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company (June 2026 quarter unless noted)</th><th class="num">Operating margin</th><th>What explains it</th></tr></thead><tbody>
+    <tr><td>Omnitech Engineering</td><td class="num">29.0%</td><td>Safety-critical assemblies, exported, qualified before priced</td></tr>
+    <tr><td>MTAR Technologies</td><td class="num">23.6%</td><td>Nuclear and fuel-cell assemblies; multi-year approvals</td></tr>
+    <tr><td>Sansera Engineering</td><td class="num">19.2%</td><td>Precision machining, with a fast-growing aerospace and semiconductor mix</td></tr>
+    <tr><td>Ameya Precision (FY26 H2)</td><td class="num">18.9%</td><td>Valve trim components; small, debt-free, export-approved</td></tr>
+    <tr><td>Ahlada Engineers</td><td class="num">13.6%</td><td>Cleanroom and steel-door metalwork on shrinking revenue</td></tr>
+    <tr><td>Pritika Engineering</td><td class="num">11.5%</td><td>Machined tractor components, down from 14.0%</td></tr>
+    <tr><td>Epack Prefab</td><td class="num">9.3%</td><td>Pre-engineered buildings, down from 10.5%</td></tr>
+    <tr><td>Interarch</td><td class="num">8.6%</td><td>Pre-engineered buildings, down from 10.5% in March</td></tr>
+    <tr><td>M&amp;B Engineering</td><td class="num">7.9%</td><td>Pre-engineered buildings and roofing</td></tr>
+    <tr><td>Salasar Techno</td><td class="num">7.4%</td><td>Galvanised towers sold by reverse auction, down from 10.0%</td></tr>
+    <tr><td>Autoline Industries</td><td class="num">7.2%</td><td>Auto stampings; interest takes 61% of what is left</td></tr>
+    <tr><td>Rishi Laser</td><td class="num">6.5%</td><td>Laser-cutting job work with no long contracts</td></tr>
+    <tr><td>Munjal Auto (consolidated)</td><td class="num">6.3%</td><td>Two-wheeler exhausts and rims at high volume</td></tr>
+    <tr><td>Aequs (reported EBITDA)</td><td class="num">5.4%</td><td>Aerospace margins diluted by a loss-making consumer arm</td></tr>
+    <tr><td>Automobile Corporation of Goa</td><td class="num">5.2%</td><td>Bus bodies; 93.7% of revenue from one customer</td></tr>
+    <tr><td>Birla Precision</td><td class="num">5.7%</td><td>Tool holders and components; halved from 11.4%</td></tr>
+    <tr><td>Brady &amp; Morris</td><td class="num">4.9%</td><td>Material-handling equipment on falling revenue</td></tr>
+    <tr><td>Artson</td><td class="num">4.6%</td><td>Tank and structural fabrication; revenue down 42%</td></tr>
+    <tr><td>Misquita Engineering (FY26 H1)</td><td class="num">3.6%</td><td>Machining job work with 209 debtor days</td></tr>
+    <tr><td>SM Auto Stamping (FY26 H1)</td><td class="num">3.1%</td><td>Unbranded sheet-metal stamping — the floor</td></tr>
+  </tbody></table></div>
+  <h3>The levers</h3>
+  <ol>
+    <li><b>The steel lag.</b> Steel is 55–70% of revenue here, the highest share in the Engineering family. A PEB or tower contract fixes the price at tender and the steel is bought over the following six to twelve months. When hot-rolled coil rises ₹5,000 a tonne in a month, as it did into September 2026, the fabricator absorbs it. When steel falls, the same asymmetry works in its favour for two quarters.</li>
+    <li><b>Design efficiency.</b> A PEB is priced per square foot but costed per tonne, so a design that uses 2 kg less steel per square foot is pure margin. This is the one genuinely proprietary skill on the fabrication side, and it is why Interarch's margins, even at 8.6%, sit above the industry's mid-single digits.</li>
+    <li><b>Approval before price.</b> The entire difference between 29% and 3%. A nuclear grid plate or a fuel-cell hot box is qualified over years; a stamped bracket is re-quoted every year with an expected price reduction built in.</li>
+    <li><b>Customer concentration.</b> ACGL takes 93.7% of revenue from Tata Motors; MTAR took more than 60% of FY25 revenue from Bloom Energy; Munjal Auto is built around Hero MotoCorp. Concentration is not automatically bad — MTAR's dependence is the reason it rose 198% — but it removes the ability to say no on price.</li>
+    <li><b>Working capital and interest.</b> Retention money, defect-liability periods and 200-day receivables are normal. Autoline's interest took 61% of operating profit in the June quarter; Salasar's ₹15.2 cr of quarterly interest against ₹21.9 cr of operating profit is the same story.</li>
+    <li><b>Utilisation and overhead timing.</b> Interarch's capacity is rising from 221,000 t to 336,000 t while utilisation runs at 80–88%; new sheds carry depreciation and overhead before they carry revenue. This is the stated reason its margin fell.</li>
+    <li><b>Other income.</b> In an industry earning 5% on operations, treasury and rental income routinely decide the sign of the bottom line. It flatters Birla Precision and Munjal Auto and, when it fell, flattened Interarch.</li>
+  </ol>
+  <div class="box pm"><span class="tag">The test to apply</span><p>Ask of any company in this section one question: <b>was the price agreed before or after the customer decided you were the only one who could do it?</b> If before — a tender, a reverse auction, an annual price letter — the business earns 3% to 11% and will keep earning it however fast revenue grows. Salasar proves the point in the cleanest possible way: revenue up 24% in two years, profit down two-thirds. If after — a nuclear qualification, an AS9100 approval, a fifteen-year landing-gear agreement — the business earns 19% to 29%, and the approval is worth more than the plant. Growth in the first kind of business is a liability funded by debt; growth in the second is an annuity.</p></div>
+</section>
+
+<section id="four" data-toc="Four industries in one section">
+  <p class="eyebrow">5b · Four industries in one section</p>
+  <h2>Why the average of this basket means very little</h2>
+  <p>Industrial minerals (079) taught this project that the word "mining" says nothing about where profit comes from. "Metal fabrication" is worse. The TradingView section holds at least four businesses that share a process and share nothing else — different customers, different contract structures, different capital intensity and, in 2026, opposite share-price outcomes.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>The business</th><th>Who buys</th><th>How it is paid</th><th>Names here</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td><b>Precision and safety-critical engineering</b></td><td>Aero-engine makers, reactor builders, fuel-cell and semiconductor-equipment makers</td><td>Negotiated after a two-to-three-year qualification; multi-year order books</td><td>Sansera, MTAR, Omnitech, Aequs, Ameya</td><td class="num">+154%, +198%</td></tr>
+    <tr><td><b>Pre-engineered buildings</b></td><td>Factories, warehouses, data centres, semiconductor plants</td><td>Fixed-price tender, six to twelve months before the steel is bought</td><td>Interarch, Epack Prefab, M&amp;B</td><td class="num">−26%, −17%, −34%</td></tr>
+    <tr><td><b>Auto sheet metal</b></td><td>Vehicle makers and tier-one suppliers</td><td>Annual price letters with a built-in annual reduction</td><td>ACGL, Munjal Auto, Autoline, SM Auto, Pritika</td><td class="num">0%, +31%, −1%</td></tr>
+    <tr><td><b>Structural, tower and process fabrication</b></td><td>Utilities, telecom operators, refiners, EPC contractors</td><td>Reverse auction or EPC subcontract, with retention money</td><td>Salasar, Artson, Rishi Laser, Pattech</td><td class="num">−45%, +19%, +12%</td></tr>
+  </tbody></table></div>
+  <p>The spread in the last column is the argument. Two stocks rose about 150% and 200%; three fell 17% to 34%; one fell 45%. A basket average of +35% describes none of them. It also explains why the section's seasonality is so strong and its annual returns so violent: a group of small, working-capital-heavy businesses with no pricing power behaves like a single leveraged bet on the Indian capital-expenditure cycle, while the two precision names behave like a bet on American AI power demand and Indian nuclear policy.</p>
+  <p>One structural fact makes the section stranger still. <a href="https://www.mordorintelligence.com/industry-reports/india-structural-steel-fabrication-market">India's largest structural fabricators are not in it</a>: Larsen &amp; Toubro Construction, Tata Projects, Tata BlueScope, JSW Severfield, Bridge &amp; Roof and KEC International (048) do most of the country's heavy structural work, and each is either unlisted, part of a much larger listed group, or filed elsewhere in the watchlist. Pennar Industries, one of the bigger listed PEB and steel-products makers, sits in Steel &amp; Iron (066). What is left in this section is the residue: a handful of specialists and a long tail of small shops.</p>
+  <div class="box pm"><span class="tag">How to use this</span><p>Do not own "metal fabrication". Decide first which of the four businesses you want, then check that the company is actually in it. Two of the four — precision engineering and, on a longer view, pre-engineered buildings — are attached to real structural demand. Two — auto sheet metal and reverse-auction structures — are price-taking businesses whose growth has historically destroyed capital. The section's own history says the same: its two best years, 2017 and 2021, were micro-cap re-ratings that were entirely given back, while its worst year, 2019, was a demand shock that took 41% out in twelve months.</p></div>
+</section>
+
+<section id="demand" data-toc="What is being built now">
+  <p class="eyebrow">5c · What is being built now</p>
+  <h2>Nuclear reactors, wafer fabs, data centres and AI power</h2>
+  <p>The order books in this section changed character between 2024 and 2026. The customers that mattered — truck makers, telecom operators, ordinary factories — have been joined by four new ones that pay differently and buy for longer.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Source of demand</th><th>The evidence</th><th>Who it reaches here</th></tr></thead><tbody>
+    <tr><td><b>Nuclear</b></td><td>The <a href="https://www.nuclearbusiness-platform.com/media/insights/india-nuclear-market-after-shanti">SHANTI Act of 2025</a> lets private companies build, own and operate nuclear plants for the first time and allows 49% foreign direct investment; a ₹20,000 cr Nuclear Energy Mission funds indigenous small modular reactors; the target is 100 GW by 2047, requiring more than $250 bn.</td><td>MTAR: ₹504 cr for Kaiga 5 and 6 in a single order, part of ₹2,895 cr of quarterly inflow</td></tr>
+    <tr><td><b>AI data-centre power</b></td><td>Bloom Energy's June-quarter revenue passed $1 bn for the first time, up 166%, on fuel cells sold to AI data centres; its product backlog is $6 bn, up 140%.</td><td>MTAR builds the hot-box assemblies; clean energy was more than 60% of its FY25 revenue</td></tr>
+    <tr><td><b>Data-centre construction</b></td><td>India added 178 MW in the first half of 2026 to reach <a href="https://www.cushmanwakefield.com/en/india/news/2026/09/india-data-centre-h1-2026-update">1,789 MW of operational capacity, with a 3,860 MW pipeline</a>. Each megawatt needs roughly 40,000 sq ft of column-free space — which means a pre-engineered or heavy steel building.</td><td>Interarch's order book is weighted to data centres, semiconductor plants and renewables</td></tr>
+    <tr><td><b>Semiconductor fabs</b></td><td>The Tata Electronics–PSMC fab at Dholera is a ₹91,000 cr project, half-funded by the centre, <a href="https://www.constructionworld.in/policy-updates-and-economic-news/indias-first-semiconductor-fab-construction-begins-in-gujarat/66990">about half built by April 2026</a>, targeting first silicon in December 2026 and 50,000 wafers a month.</td><td>Building steel for Interarch and Epack Prefab; tool parts for Sansera's ₹1,250 cr semiconductor order</td></tr>
+    <tr><td><b>Aerospace</b></td><td>India's aerospace manufacturing exports are about $10 bn. <a href="https://www.iadb.in/2026/07/22/beyond-aircraft-orders-how-india-is-becoming-an-integral-part-of-airbus-boeings-global-supply-chains/">Airbus sources more than $1.5 bn a year from over 100 Indian suppliers</a> and targets $2 bn by 2030; Boeing sources more than $1.25 bn from over 300.</td><td>Aequs's $1 bn order book and its Safran landing-gear agreement; Sansera's ADS arm</td></tr>
+    <tr><td><b>Warehousing</b></td><td>Industrial and warehousing stock across India's eight primary markets reached 549 m sq ft by December 2025; the <a href="https://www.imarcgroup.com/india-pre-engineered-buildings-market">PEB market is forecast to grow about 12% a year to $6.5 bn by 2034</a>.</td><td>All three PEB makers; M&amp;B's roofing division</td></tr>
+  </tbody></table></div>
+  <p>Two cautions keep this in proportion. First, <b>the demand is real but the contract still decides who keeps the money</b>. A data centre is an excellent customer for a PEB maker in volume terms and a perfectly ordinary one in margin terms, because it still runs a tender. That is why Interarch's order book is full of data centres and semiconductor fabs while its margin fell to 8.6%. Second, <b>the new precision work is slow to arrive</b>. Sansera's semiconductor order starts producing meaningful revenue in calendar 2027 and peaks in 2029; an Indian small modular reactor takes 60 to 72 months to build after approval. The share prices moved in 2026; the revenue mostly has not.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>MTAR at +198% is, stripped to its mechanism, an Indian listed proxy for American AI electricity demand plus Indian nuclear policy — two of the strongest narratives available in 2026, in a company with ₹876 cr of FY26 revenue. Sansera at +154% is a genuine mix shift, with the ADS backlog eight times bigger than ADS revenue, executable over five years. Both re-ratings are defensible and both are now priced for delivery: MTAR guides to 80% revenue growth in FY27, and misses are not forgiven at these multiples. The relevant risk is not that the demand is fake. It is that the demand arrives in 2028 and the multiple is paid in 2026.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What fabricators depend on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>Hot-rolled coil, plate and structural sections</td><td>The raw material — 55–70% of revenue</td><td><b>The critical input.</b> Mumbai HRC reached ₹63,900 a tonne in the week to 18 September 2026, a four-year high, after rising about ₹5,000 in a month. Fixed-price contracts absorb it</td></tr>
+    <tr><td>Coking coal, through the steel price</td><td>Sets the mills' cost floor</td><td>Up 22% to $283 a tonne between August and September 2026 — the proximate cause of the steel rise</td></tr>
+    <tr><td>Zinc for galvanising</td><td>Protects towers, structures and roofing for twenty years</td><td>A commodity price the fabricator cannot hedge in a tender (see 074)</td></tr>
+    <tr><td>Welding consumables and gases</td><td>Wire, flux, electrodes, argon and carbon dioxide</td><td>Small in cost, decisive in quality; welding is about a third of all process activity</td></tr>
+    <tr><td>Machine tools, especially CNC and five-axis</td><td>The capital barrier on the precision side</td><td><b>India imports 60–65% of the machine tools it consumes</b> — China 28%, Japan 22%, Germany 13%. Consumption reached a record ₹31,781 cr in FY25 against ₹14,566 cr of domestic production</td></tr>
+    <tr><td>Certified welders and fitters</td><td>The physical skill</td><td>Certification for pressure vessels, nuclear and aerospace work takes years and is the real constraint on scaling the high-margin end</td></tr>
+    <tr><td>Design and detailing software</td><td>Turns a building into a bill of material</td><td>Two kilos of steel per square foot is the difference between winning a tender and losing money on it</td></tr>
+    <tr><td>Working capital</td><td>Funds the job between the order and the retention release</td><td>Over 60% of India's MSME fabricators had negative cash flow in 2024 when steel prices moved beyond their bid buffers</td></tr>
+    <tr><td>Customer approvals — AS9100, ASME, nuclear-grade, IATF 16949</td><td>The licence to earn a high margin</td><td>One to three years to win; the single largest barrier to entry in the section</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>The client's capital budget, and the fabricator's own year-end</h2>
+  <ul>
+    <li><b>April:</b> Indian corporate capital budgets open, vehicle makers issue annual schedules and price letters, and steel contracts reset. April has beaten the Nifty in <b>14 of 15 years</b>.</li>
+    <li><b>April–June:</b> the strongest execution quarter for structural work before the monsoon; site clearance and erection run at full speed. April–July beat the Nifty in 12 of 15 years, median +15.1 points.</li>
+    <li><b>July–September:</b> the monsoon stops site erection and pushes revenue recognition into the second half. Interarch blamed its June-quarter margin on exactly this. Order intake continues; revenue does not.</li>
+    <li><b>October–December:</b> post-monsoon execution catches up and steel demand and prices usually firm. The basket's December has beaten the Nifty in 9 of 15 years, but October–December as a whole has beaten it in only 6 of 14, with a median of −4.8 points.</li>
+    <li><b>January–March:</b> the fiscal year-end, when cost overruns are recognised, provisions are taken on jobs quoted a year earlier, and steel losses are booked. <b>March has beaten the Nifty in only 2 of 15 years</b> and January–March has a median of −13.8 points — the weakest first quarter of any multi-company basket in this project except salt (015).</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the eight-stock fabrication basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 8 names (Sansera Engineering Limited, MTAR Technologies Ltd., Automobile Corporation of Goa Limited, Munjal Auto Industries Limited, Salasar Techno Engineering Ltd., Artson Ltd, Birla Precision Technologies Limited, Autoline Industries Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +8.3 pts (beat in 14 of 15 years); Dec +4.7 pts (beat in 9 of 15 years); Jun +3.1 pts (beat in 9 of 15 years).</li><li><b>Weakest months:</b> Feb -4.7 pts (beat in 4 of 15 years); Mar -3.3 pts (beat in 2 of 15 years); Jan -2.7 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 4 of 15 years (median -9.8 pts); Apr–Jul beat the Nifty in 12 of 15 years (median +15.1 pts); Aug–Sep beat the Nifty in 8 of 14 years (median +4.2 pts); Oct–Dec beat the Nifty in 6 of 14 years (median -4.8 pts); Sep–Nov beat the Nifty in 8 of 14 years (median +1.0 pts); Jan–Mar beat the Nifty in 6 of 15 years (median -13.8 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +5.3 points.</p><p><b>Reading it:</b> eight companies - Sansera Engineering, MTAR Technologies, Automobile Corporation of Goa, Munjal Auto, Salasar Techno Engineering, Artson, Birla Precision and Autoline Industries - equal-weighted monthly from July 2011, with Salasar joining in 2017 and MTAR and Sansera in 2021. <b>April has beaten the Nifty in 14 of 15 years</b>, averaging +8.3 points. Only two baskets in this project match that hit rate - specialty chemicals (008, 14 of 15 at +8.7 points) and castings (078, 14 of 15 at +5.4) - and no basket has ever managed 15 of 15. It failed only in 2019. The mirror image is the first calendar quarter: <b>March has beaten the Nifty in only 2 of 15 years</b> and January-March has a median of -13.8 points - the weakest first quarter of any multi-company basket in this project except salt (015). The mechanism is the order book, not the product: fabrication contracts are placed against the client's April capital budget, and a fabricator's own fiscal-year-end quarter is when it books cost overruns, provisions and steel losses on jobs it quoted a year earlier. Six of the eight are small or micro caps, so part of the April edge is the market-wide small-cap April - say so when using it.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points; 12 of 15 positive, median +15.1.</figcaption></figure>
+  <h3>The exceptions, and why they matter</h3>
+  <ul>
+    <li><b>April failed only in 2019 (−4.5 points).</b> That was the year Indian vehicle sales fell through the floor during the BS-VI transition while the NBFC credit squeeze starved working-capital-hungry fabricators. The whole year was −41%. When the calendar and the cycle disagree, the cycle wins.</li>
+    <li><b>April's best years were 2026 (+19.2), 2012 (+14.1) and 2014 (+12.8)</b> — all years when the Indian capital-expenditure narrative reset in the new fiscal year.</li>
+    <li><b>April–July failed in 2019 (−26.2), 2018 (−13.8) and 2013 (−8.1)</b>, the three worst years for Indian industrial credit in the record. Its best were 2020 (+45.8) and 2021 (+41.7), on the post-Covid capital-expenditure rebound.</li>
+    <li><b>January–March was worst in 2013 (−33.2), 2025 (−31.3) and 2022 (−22.1)</b>, and positive in 6 of 15 years, led by 2012 (+19.8) and 2021 (+13.1). Two of those three bad years followed steel price spikes; the third followed a credit squeeze.</li>
+  </ul>
+  <figure><svg data-chart="win" data-win="JanMar" viewBox="0 0 720 280" role="img" aria-label="January to March return minus Nifty by year"></svg><figcaption>January–March return of the basket minus the Nifty, by year, in percentage points; median −13.8, positive in only 2 of 15 years.</figcaption></figure>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is the Engineering family's April effect at its strongest — 14 of 15 against castings' 14 of 15 (078) and forgings' 13 of 15 (080), and by the widest margin of the three at +8.3 points — and it comes with the family's sharpest mirror image, a March that has worked twice in fifteen years. Three cautions. <b>Six of the eight members are small or micro caps</b>, so a meaningful part of the April edge is the market's own small-cap April; the control line under the chart strips out roughly three points of it. <b>The basket's composition changes</b>, from five names before 2017 to eight after 2021, and the two newest members are the two largest. And the signal is a capital-expenditure signal, not a fabrication signal: it says when Indian industrial orders are placed, not who will earn a margin on them.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Nine drivers</h2>
+  <ol>
+    <li><b>The steel price, and the lag.</b> The single largest driver. Hot-rolled coil at a four-year high in September 2026 is a margin event for every fixed-price contract signed in the previous year.</li>
+    <li><b>India's private capital-expenditure cycle.</b> Factories, warehouses, data centres and fabs are the order book. The <a href="https://www.mordorintelligence.com/industry-reports/india-structural-steel-fabrication-market">structural fabrication market is about $11.8 bn in 2026</a>, growing 7.35% a year to 2031.</li>
+    <li><b>Vehicle volumes.</b> Two-wheelers for Munjal Auto, buses for ACGL, commercial vehicles and cars for Autoline, tractors for Pritika. See 017–020 and 023.</li>
+    <li><b>Qualification wins.</b> Every new approval — nuclear, aerospace, semiconductor equipment — permanently moves a company's margin bracket. Sansera's ADS backlog rose from ₹4,437 cr to about ₹5,750 cr on one order.</li>
+    <li><b>Utilisation against new capacity.</b> Interarch's expansion to 336,000 t is the clearest current case of overhead arriving before revenue.</li>
+    <li><b>Interest and working capital.</b> Retention money, long receivables and project finance. Autoline pays away 61% of operating profit in interest; Salasar pays 69%.</li>
+    <li><b>Tender intensity.</b> Reverse auctions for utility and telecom structures compress margins to mid single digits regardless of demand.</li>
+    <li><b>Other income.</b> Treasury and rental income, which in a 5% business decides the sign of the result.</li>
+    <li><b>Export tariffs and the rupee.</b> US Section 232 duties of 50% on steel and aluminium, 25% on many derivatives, and a 50% country tariff on Indian goods since August 2025, against Indian export exposure of about $5 bn a year in steel and aluminium derivatives.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: Sansera Engineering, MTAR Technologies, Automobile Corporation of Goa, Munjal Auto, Salasar Techno Engineering, Artson, Birla Precision and Autoline Industries, equal-weighted monthly from July 2011, with members joining as they list — five names to 2017, six from 2017, eight from 2021. Excluded: Aequs, Omnitech, Epack Prefab, M&amp;B Engineering and Interarch (listed 2024–2026); IST Ltd (an investment and property company); Brady &amp; Morris, Ameya and Misquita (misclassified); Pattech and Misquita (no recent trades); and the micro caps listed above. The Automobile Corporation of Goa, IST and Birla Precision histories are spliced from BSE; Artson is a BSE line throughout. Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The capex winter</b> (2012–2013): the basket lagged a rising market in 2012 and fell 24% in 2013 as India's investment cycle stalled and the rupee broke.</li>
+    <li><b>The election re-rating</b> (2014–2015): +84% in 2014 on the promise of an industrial revival, most of which did not arrive; 2015 was flat.</li>
+    <li><b>Demonetisation, GST and the small-cap boom</b> (2016–2017): nothing in 2016, then +135% in 2017 — the second-best year — as GST pushed work from unregistered job shops to organised fabricators and micro caps re-rated.</li>
+    <li><b>The double break</b> (2018–2019): the small-cap unwind and the IL&amp;FS credit squeeze, then the vehicle slump. −27% and then −41%, a 57% fall over two years against a Nifty that rose 15%.</li>
+    <li><b>Rebound and mania</b> (2020–2021): +30% then +140%, the best year in the record, on the capital-expenditure rebound and a micro-cap melt-up that took Birla Precision up 739%.</li>
+    <li><b>The steel shock and the split</b> (2022–2026): flat in 2022 as steel prices destroyed fixed-price contracts; +58% in 2023 as capital expenditure turned; then a section that stopped moving together — precision engineering up, pre-engineered buildings down.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>This is a credit-cycle basket dressed as an industrial one.</b> Its three worst years — 2013, 2018, 2019 — are the three worst years for Indian industrial credit. Working capital, not welding, is the binding constraint.</li>
+    <li><b>Rallies are violent and fully given back.</b> +135% in 2017 was followed by −27% and −41%. +140% in 2021 was followed by flat, and Birla Precision is still 55% below a high set in January 2008.</li>
+    <li><b>The micro caps carry the average in both directions.</b> Birla Precision has managed +245%, +739%, −50% and −57% in this record. Its median annual move is far larger than its business ever justified.</li>
+    <li><b>Steel price spikes show up with a one-quarter lag.</b> 2022 is the clearest instance: revenue rose everywhere, margins did not.</li>
+    <li><b>The three PEB names now move as one.</b> All three peaked within a week in November 2025 and all three fell 17–51% from those highs. That is a multiple reset, not three company stories.</li>
+  </ul>
+  <h3>Drawdowns and one-year returns, 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+  <p class="note">Positive "from peak" figures mean the stock is now above the highest close it reached between January 2020 and December 2025 — true for Sansera, MTAR, Aequs and Ameya, and for no one else on the list.</p>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Where fabrication happens, and why it stays local</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Region</th><th>Position</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>India</td><td>Over 5,000 fabricators; a $11.8 bn structural market growing 7.35% a year; 9th in the world in machine-tool production and 4th in consumption</td><td>Fragmented, domestic, and short of the imported machine tools needed to move up the value chain</td></tr>
+    <tr><td>China</td><td>The largest fabricator and the largest exporter of fabricated structures</td><td>The reason India runs safeguard duties on flat steel; also 28% of India's machine-tool imports</td></tr>
+    <tr><td>Japan and Germany</td><td>The source of precision machine tools and of the process know-how behind five-axis machining</td><td>22% and 13% of India's machine-tool imports; the capital barrier to the high-margin end</td></tr>
+    <tr><td>United States</td><td>A large buyer of Indian precision components behind a tariff wall</td><td>Section 232 duties of 50% on steel and aluminium and 25% on many derivatives; a 50% country tariff since August 2025</td></tr>
+    <tr><td>Middle East</td><td>An export market for Indian bus bodies, tanks and structures</td><td>The stated reason ACGL's export volumes fell in the June 2026 quarter</td></tr>
+  </tbody></table></div>
+  <h3>Why structural fabrication does not globalise</h3>
+  <p>Heavy fabricated steel is expensive to move and cheap to make. A shipping container of welded structures is mostly air and freight, which is why structural fabrication is a regional business almost everywhere and why India's market is served by Indian firms even without tariffs. Precision machining is the opposite: a crate of machined valve trim or fuel-cell parts is worth a hundred times its freight, so it is globally contested and globally tariffed. <b>This single physical fact explains why the low-margin half of the section is safe from imports and the high-margin half is not.</b> It also explains the 2026 tariff pattern: the businesses exposed to US duties are precisely the ones earning 19–29%, while the businesses earning 5% face no import threat and no export opportunity either.</p>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From site-built concrete to factory-built steel</b> (2000s–2020s): pre-engineered buildings replaced reinforced concrete for factories and warehouses because they go up in weeks rather than months.</li>
+    <li><b>From unregistered job shops to organised fabricators</b> (2017–): the goods and services tax made invoicing unavoidable and shifted share to companies that could issue one.</li>
+    <li><b>From captive shops to specialists</b> (2010s): vehicle and equipment makers closed in-house press and weld shops.</li>
+    <li><b>From build-to-print to qualified supply</b> (2020s): the shift that separated this section in two — Indian machinists winning aerospace, nuclear and semiconductor approvals rather than quoting on drawings.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>CNC cutting over manual and oxy cutting.</b> The fastest-growing process step in Indian fabrication, at about 8.6% a year, because it cuts scrap on a material that is two-thirds of cost.</li>
+    <li><b>Robotic and automated welding.</b> Removes the certified-welder bottleneck for repetitive joints and improves the consistency that pressure-vessel and nuclear work demands.</li>
+    <li><b>Five-axis machining and in-process metrology.</b> The technical gate to aerospace and semiconductor work, and the reason India's machine-tool import bill matters more than its steel bill at the top of the section.</li>
+    <li><b>Design-led steel reduction.</b> Optimisation software that takes kilograms per square foot out of a PEB is the only real intellectual property on the fabrication side.</li>
+    <li><b>Modular and off-site construction.</b> Custom plate-worked modules are the fastest-growing product category, at about 8.7% a year, as data centres and process plants move fabrication off site.</li>
+    <li><b>Additive and hybrid manufacturing.</b> Still marginal in India, but it is how aerospace and turbine work will be re-specified over the next decade — a threat to any machinist whose advantage is machining time rather than approval.</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>Cheap steel kept out, expensive exports kept out</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect</th></tr></thead><tbody>
+    <tr><td><a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2770881-india-extends-import-duties-on-flat-steel-to-3-years">India's flat-steel safeguard duty</a></td><td>12% from 21 April 2025, 11.5% from 21 April 2026, 11% from 21 April 2027</td><td><b>Protects steelmakers and taxes fabricators.</b> The input of every company here costs more because of it</td></tr>
+    <tr><td>The SHANTI Act, 2025</td><td>Allows private ownership and operation of nuclear plants and 49% foreign investment</td><td>The foundation of MTAR's ₹5,143 cr order book</td></tr>
+    <tr><td>Nuclear Energy Mission</td><td>₹20,000 cr for indigenous small modular reactors; 100 GW target by 2047</td><td>A multi-decade order pipeline for nuclear-qualified machinists</td></tr>
+    <tr><td>India Semiconductor Mission</td><td>50% central capital support for fabs such as Dholera's ₹91,000 cr plant</td><td>Building steel now, tool components later</td></tr>
+    <tr><td>US Section 232 and country tariffs</td><td>50% on steel and aluminium, 25% on many derivatives, 50% on Indian goods since August 2025; some derivative rates cut to 15% from June 2026</td><td>Hits the precision exporters; irrelevant to the structural names</td></tr>
+    <tr><td>Goods and services tax</td><td>Made invoicing unavoidable from 2017</td><td>The structural reason organised fabricators gained share; visible in the 2017 re-rating</td></tr>
+    <tr><td>Make in India and defence indigenisation lists</td><td>Favour Indian-made equipment and components</td><td>The route by which machinists enter nuclear, space and defence supply chains</td></tr>
+    <tr><td>Bureau of Indian Standards quality control orders</td><td>Mandatory standards on steel and fasteners</td><td>Raise the compliance cost of the small unorganised shop</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: two industries going opposite ways</h2>
+  <p id="now-stocks">Stocks: the basket is +35.3% this year vs -10.7% for the Nifty (to 18 Sep 2026). The basket is up 35% against a Nifty down 11%, but the median member is up only 24% and the average hides two different industries. MTAR Technologies (+198%) and Sansera Engineering (+154%) carried it, on nuclear orders and an aerospace, defence and semiconductor order book. Every pre-engineered building name fell - Interarch -26%, Epack Prefab -17%, M&B Engineering -34% - and all three peaked within a week of each other in November 2025. Salasar Techno Engineering is down 45% and 86% below its 2024 high. Behind the split sits one number: Mumbai hot-rolled coil reached a four-year high of Rs 63,900 a tonne in the week to 18 September 2026, the week this data ends.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Steel input cost</td><td>Worst in four years</td><td>Mumbai HRC ₹63,900/t in the week to 18 September, up about ₹5,000 in a month; coking coal $283/t, up 22%</td></tr>
+    <tr><td>Pre-engineered buildings</td><td>Volume strong, margin falling</td><td>Interarch revenue +20.7% with margin 8.6% from 10.5%; Epack 9.3% from 10.5%; M&amp;B 7.9%</td></tr>
+    <tr><td>Precision engineering</td><td>Accelerating</td><td>MTAR revenue +130% and ₹2,895 cr of quarterly order inflow; Sansera ADS revenue three times higher</td></tr>
+    <tr><td>Auto sheet metal</td><td>Mixed</td><td>Munjal Auto revenue +42%; ACGL profit −51% with margin at 6.69%</td></tr>
+    <tr><td>Structural and tower fabrication</td><td>Weak</td><td>Salasar profit −42% with interest at 69% of operating profit; Artson revenue −42% with negligible net worth</td></tr>
+    <tr><td>Balance sheets</td><td>Stretched at the bottom</td><td>Autoline's ₹325 cr of debt against a ₹353 cr market value; Salasar's ₹422 cr; Aequs's ₹701 cr with a ₹113 cr FY26 loss</td></tr>
+  </tbody></table></div>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th></tr></thead><tbody>
+    <tr><td>Sansera Engineering</td><td class="num">₹4,260</td><td>₹4,260 (18 Sep 2026)</td><td class="num">0%</td><td class="num">+154%</td></tr>
+    <tr><td>MTAR Technologies</td><td class="num">₹7,202</td><td>₹8,375 (19 Jun 2026)</td><td class="num">−14%</td><td class="num">+198%</td></tr>
+    <tr><td>Aequs</td><td class="num">₹232</td><td>₹262 (19 Aug 2026)</td><td class="num">−12%</td><td class="num">+53% since listing</td></tr>
+    <tr><td>Omnitech Engineering</td><td class="num">₹556</td><td>₹733 (5 Aug 2026)</td><td class="num">−24%</td><td class="num">+171% since listing</td></tr>
+    <tr><td>Interarch Building Solutions</td><td class="num">₹1,706</td><td>₹2,623 (17 Nov 2025)</td><td class="num">−35%</td><td class="num">−26%</td></tr>
+    <tr><td>Epack Prefab</td><td class="num">₹226</td><td>₹330 (10 Nov 2025)</td><td class="num">−31%</td><td class="num">−17%</td></tr>
+    <tr><td>M&amp;B Engineering</td><td class="num">₹252</td><td>₹514 (10 Nov 2025)</td><td class="num">−51%</td><td class="num">−34%</td></tr>
+    <tr><td>Automobile Corporation of Goa</td><td class="num">₹1,737</td><td>₹3,338 (2 Aug 2024)</td><td class="num">−48%</td><td class="num">0%</td></tr>
+    <tr><td>Munjal Auto Industries</td><td class="num">₹104</td><td>₹143 (18 Oct 2024)</td><td class="num">−28%</td><td class="num">+31%</td></tr>
+    <tr><td>Salasar Techno Engineering</td><td class="num">₹4.89</td><td>₹33.95 (7 Feb 2024)</td><td class="num">−86%</td><td class="num">−45%</td></tr>
+    <tr><td>IST Ltd</td><td class="num">₹664</td><td>₹1,098 (24 Sep 2024)</td><td class="num">−40%</td><td class="num">−11%</td></tr>
+    <tr><td>Artson</td><td class="num">₹169</td><td>₹217 (23 Sep 2025)</td><td class="num">−22%</td><td class="num">+19%</td></tr>
+    <tr><td>Birla Precision</td><td class="num">₹57</td><td>₹127 (7 Jan 2008)</td><td class="num">−55%</td><td class="num">+28%</td></tr>
+    <tr><td>Autoline Industries</td><td class="num">₹78</td><td>₹430 (7 Feb 2007)</td><td class="num">−82%</td><td class="num">−1%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p><b>For MTAR, the whole of the next decade's nuclear and fuel-cell demand.</b> At ₹7,202 the stock trades at roughly 160 times trailing earnings. The order book is real, the inflow of ₹2,895 cr in one quarter is real, and the FY27 guidance of 80% revenue growth at a 22–24% margin is specific enough to be checked. But the largest customer is a single American fuel-cell company whose own demand rests on AI data-centre construction, and the nuclear orders execute over five years and more. The stock is 14% off its June high already.</p>
+  <p><b>For Sansera, a mix shift that is real but eight times ahead of itself.</b> ADS revenue of ₹145 cr a quarter sits against a backlog of about ₹5,750 cr executable to FY31, and the semiconductor order does not produce meaningful revenue until calendar 2027. At roughly 70 times earnings the price assumes the conversion happens on schedule and the auto business holds its 19% margin while it does.</p>
+  <p><b>For the pre-engineered building makers, the de-rating has done most of the work.</b> Interarch at about 21 times earnings with a 23.7% return on capital, no debt and a ₹1,864 cr order book is a different proposition from Interarch at ₹2,623 in November 2025. The question is not demand — data centres, fabs and warehouses are as good an order book as this industry has ever had — but whether an 8.6% margin is the bottom or the new normal. With steel at a four-year high, the next two quarters will answer it.</p>
+  <p><b>For the bottom half, the market is right.</b> Salasar at 2.1% return on equity after buying a bankrupt EPC business, Artson with ₹1 cr of net worth, Autoline with debt equal to its market value, Ahlada with revenue down 61% in two years: these are not cheap industrial assets waiting for a cycle. They are businesses whose growth has consumed capital, and the share prices say so.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>This section is where the Engineering family's three tests meet and give the clearest answer yet. <b>Treat it as two industries and never own the average.</b> Precision and safety-critical engineering — Sansera, MTAR, Omnitech, Aequs, Ameya — is a business with a real, checkable barrier in the form of customer qualification, and it is now priced as if delivery is certain. Fabrication proper — pre-engineered buildings, towers, tanks, stampings — is a business with no barrier, a 55–70% input it cannot price, and a customer who runs a tender; its good years come from capital-expenditure re-ratings rather than earnings, and they are given back. Within it, only design-led PEB has a defensible edge, and the current margin compression is the test of whether that edge survives ₹63,900 steel. The basket's own history is the warning: +135% and +140% in its two best years, and −57% across the two years that followed the first of them.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>Mumbai and Delhi hot-rolled coil prices</td><td>The margin of every fixed-price contract</td><td>BigMint and SteelMint weekly, broker weeklies</td></tr>
+    <tr><td>Coking coal and iron ore</td><td>The mills' cost floor, one quarter ahead of the coil price</td><td>Australian premium hard coking coal, SGX iron ore</td></tr>
+    <tr><td>PEB order inflow and order book</td><td>Volume visibility, six to twelve months ahead of revenue</td><td>Quarterly disclosures from Interarch, Epack Prefab, M&amp;B</td></tr>
+    <tr><td>Interarch's realised margin</td><td>The test of whether design efficiency beats the steel price</td><td>Quarterly results; watch the gap to Epack and M&amp;B</td></tr>
+    <tr><td>Data-centre and fab construction starts</td><td>The new PEB demand</td><td>Cushman &amp; Wakefield and JLL half-yearly; India Semiconductor Mission announcements</td></tr>
+    <tr><td>NPCIL and Nuclear Power Corporation tenders</td><td>MTAR's order pipeline</td><td>Company disclosures, Department of Atomic Energy</td></tr>
+    <tr><td>Bloom Energy's quarterly results and backlog</td><td>More than 60% of MTAR's FY25 revenue</td><td>Bloom Energy's SEC filings</td></tr>
+    <tr><td>Sansera's ADS revenue against its backlog</td><td>Whether ₹5,750 cr converts on schedule</td><td>Quarterly presentations</td></tr>
+    <tr><td>Two-wheeler and bus production</td><td>Munjal Auto and ACGL volumes</td><td>SIAM monthly, Hero MotoCorp and Tata Motors disclosures</td></tr>
+    <tr><td>Receivable days and retention money</td><td>Where the capital goes in this industry</td><td>Annual reports; watch the cash conversion cycle</td></tr>
+    <tr><td>US tariff proclamations on steel derivatives</td><td>The precision exporters' realisation</td><td>Federal Register, USTR notices</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Castings (078) and forgings (080):</b> the two competing ways to make a metal part, and the two earlier tests this primer builds on. Omax Autos sits in 080 and belongs here.</li>
+    <li><b>Steel &amp; iron (066) and steel pipes and tubes (068):</b> the coil, plate and section every name here buys; Pennar Industries, a large PEB maker, is filed in 066.</li>
+    <li><b>Zinc (074):</b> the galvanising cost in every tower and roof.</li>
+    <li><b>Metal trading (077):</b> where the smaller fabricators actually buy their steel.</li>
+    <li><b>Auto components (023), commercial vehicles (019), tractors (020), two-wheelers (018):</b> the customers of the sheet-metal half.</li>
+    <li><b>Aerospace &amp; defence manufacturing (057) and defence electronics (058):</b> the qualification route that MTAR, Sansera and Aequs have taken.</li>
+    <li><b>Power T&amp;D EPC (048) and boilers, turbines and power equipment (041):</b> the buyers of towers and process fabrication.</li>
+    <li><b>Semiconductors and electronic components (050):</b> the fab construction and the tool components behind Sansera's largest order.</li>
+    <li><b>Still queued and closely related:</b> Machine Tools, Industrial Machinery, Material Handling Equipment, Heat Exchangers &amp; Process Equipment, Transmission Towers &amp; Structures, Railway Equipment, Pumps and Valves. Several names in this section arguably belong in them.</li>
+    <li><b>Global proxies:</b> Howmet and Precision Castparts for qualified aerospace machining; Lincoln Electric for welding consumables; NCI Building Systems and BlueScope for pre-engineered buildings; Worthington Steel for processed sheet.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of your order book is on fixed prices, and what steel price was assumed when it was quoted?</li>
+    <li>How many months pass between winning an order and buying the steel for it, and do you hedge or pre-buy?</li>
+    <li>What is your realised price per tonne and your steel consumption per square foot, and how have both moved this year?</li>
+    <li>How much of this quarter's profit is other income, and what generates it?</li>
+    <li>What is your utilisation by plant, and how much overhead and depreciation from new capacity is already in the cost base but not yet in revenue?</li>
+    <li>What is the cash conversion cycle, how much is retention money, and when is it released?</li>
+    <li>For the precision names: how many new customer qualifications did you complete this year, how long did each take, and what margin does approved work earn against build-to-print work?</li>
+    <li>What share of revenue comes from your largest customer, and what happens to fixed-cost absorption if that customer halves its offtake?</li>
+    <li>For MTAR specifically: what is the split of the order book between nuclear, clean energy, space and defence, and what is the delivery schedule for each?</li>
+    <li>For Sansera: what is the execution profile of the ₹5,750 cr ADS backlog by year, and what capex does it require?</li>
+    <li>For the PEB makers: is 8–9% the new steady-state margin, and what would take it back to 11%?</li>
+    <li>For the leveraged names: what is the plan for debt, and at what interest cover do lenders reset terms?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Fabrication is a capex play — buy it when capex turns"</td><td>The basket rose 135% in 2017 and 140% in 2021, then gave both back. Profits never followed</td><td>It is a capex <i>re-rating</i> play, which is not the same thing. The earnings do not arrive</td></tr>
+    <tr><td>"Higher steel prices are good for fabricators"</td><td>Steel is 55–70% of revenue and most contracts are fixed-price; over 60% of MSME fabricators had negative cash flow in 2024 on exactly this</td><td>False. It is good for steelmakers (066) and bad for everyone in this section</td></tr>
+    <tr><td>"The PEB names are cheap now"</td><td>Interarch at about 21 times earnings with 23.7% return on capital, no debt and a full order book — but a margin that fell from 10.5% to 8.6% in one quarter</td><td>Cheaper, and the argument is real. The margin, not the multiple, is what has to be underwritten</td></tr>
+    <tr><td>"Revenue growth proves the model works"</td><td>Salasar: revenue up 24% in two years, profit down two-thirds, return on equity 2.13%. Autoline: revenue +75% in a quarter, profit ₹1.9 cr after interest</td><td>In this industry revenue growth is often evidence of the opposite</td></tr>
+    <tr><td>"MTAR is a nuclear stock"</td><td>Clean energy — almost entirely Bloom Energy fuel cells — was more than 60% of FY25 revenue; nuclear is the fastest-growing part of a ₹5,143 cr order book</td><td>It is becoming one. Today it is still mostly an American fuel-cell supplier</td></tr>
+    <tr><td>"Metal fabrication is protected from imports"</td><td>True of structures, which cost too much to ship; false of precision components, which is where the margin is</td><td>The protection and the profit are in different halves of the section</td></tr>
+    <tr><td>"A Tata or Birla name gives you a floor"</td><td>Artson, 75% owned by Tata Projects, has about ₹1 cr of net worth and an FY26 operating loss, at a ₹637 cr market value. Birla Precision is 55% below a 2008 high</td><td>Parentage is not a balance sheet</td></tr>
+    <tr><td>"Record profit means record operations"</td><td>IST's ₹83 cr quarterly profit on ₹35 cr of revenue; Birla Precision's profit doubling while operating profit halved</td><td>Read other income before the profit line, every time</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. PEB, purlin, AS9100" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Process</h3><dl>
+    <dt>Fabrication</dt><dd>Cutting, forming and joining metal into a finished structure or assembly — as opposed to casting or forging it into shape.</dd>
+    <dt>Laser cutting</dt><dd>Cutting sheet and plate with a focused laser beam; precise, fast and the standard for thin material.</dd>
+    <dt>Plasma cutting</dt><dd>Cutting conductive metal with an ionised gas jet; cheaper than laser on thick plate.</dd>
+    <dt>Press brake</dt><dd>A machine that bends sheet metal along a straight line between a punch and a die.</dd>
+    <dt>Stamping</dt><dd>Pressing sheet metal between dies to cut and form a part in one or more strokes.</dd>
+    <dt>Deep drawing</dt><dd>Stretching sheet metal into a deep hollow shape, such as a fuel tank or a washing-machine drum.</dd>
+    <dt>Roll forming</dt><dd>Passing strip through successive rollers to make a constant profile, such as a purlin or a roof sheet.</dd>
+    <dt>Submerged-arc welding</dt><dd>High-deposition welding under a blanket of flux; the workhorse of heavy structural fabrication.</dd>
+    <dt>MIG and TIG welding</dt><dd>Gas-shielded arc welding; MIG for speed on structures, TIG for precision and thin or exotic metals.</dd>
+    <dt>Weld procedure specification</dt><dd>The documented recipe — material, wire, current, preheat — that a certified weld must follow.</dd>
+    <dt>Welder qualification</dt><dd>A certified test proving a named welder can make a specified joint; required for pressure, nuclear and aerospace work.</dd>
+    <dt>Radiography</dt><dd>X-raying a weld to find internal defects without cutting it open.</dd>
+    <dt>Non-destructive testing</dt><dd>Any inspection that checks a part without damaging it — radiography, ultrasonics, dye penetrant.</dd>
+    <dt>Shot blasting</dt><dd>Cleaning steel with high-velocity abrasive before painting or galvanising.</dd>
+    <dt>Hot-dip galvanising</dt><dd>Dipping fabricated steel in molten zinc to protect it outdoors for decades.</dd>
+    <dt>CNC machining</dt><dd>Computer-controlled cutting of metal to programmed dimensions.</dd>
+    <dt>Five-axis machining</dt><dd>Machining with the tool able to approach the part from five directions at once; the technical gate to complex aerospace parts.</dd>
+    <dt>Flow forming</dt><dd>Forming a rotating cylindrical part by pressing rollers against it; used for rocket and missile casings.</dd>
+    <dt>Nesting</dt><dd>Arranging cutting patterns on a plate so that the least material is wasted.</dd>
+    <dt>Jig and fixture</dt><dd>The purpose-built tooling that holds a part in position while it is welded or machined.</dd>
+  </dl>
+  <h3>Products and structures</h3><dl>
+    <dt>Pre-engineered building (PEB)</dt><dd>A steel building designed, fabricated and pre-drilled in a factory and bolted together on site.</dd>
+    <dt>Primary and secondary framing</dt><dd>The main columns and rafters of a PEB, and the purlins and girts that span between them.</dd>
+    <dt>Purlin</dt><dd>A horizontal member carrying the roof sheeting between rafters.</dd>
+    <dt>Girt</dt><dd>The horizontal member carrying the wall sheeting between columns.</dd>
+    <dt>Built-up section</dt><dd>A beam welded from three plates rather than rolled in one piece, so its depth can vary along its length.</dd>
+    <dt>Column-free span</dt><dd>The clear width a building achieves without internal supports — the reason data centres and warehouses use steel.</dd>
+    <dt>Self-supported roofing</dt><dd>A curved steel roof that spans without a supporting frame.</dd>
+    <dt>Monopole</dt><dd>A single tubular tower used for telecom or lighting where a lattice tower will not fit.</dd>
+    <dt>Lattice tower</dt><dd>A bolted framework of galvanised angles used for transmission and telecom.</dd>
+    <dt>Pipe spool</dt><dd>A prefabricated assembly of pipe, elbows and flanges made in a shop and lifted into a plant.</dd>
+    <dt>Pressure vessel</dt><dd>A tank designed and certified to hold contents above atmospheric pressure.</dd>
+    <dt>Body-in-white</dt><dd>The welded sheet-metal shell of a vehicle before paint and trim.</dd>
+    <dt>Bus body</dt><dd>The passenger structure built onto a chassis supplied by the vehicle maker.</dd>
+    <dt>Hot box</dt><dd>The insulated high-temperature assembly at the core of a solid-oxide fuel cell.</dd>
+    <dt>Grid plate</dt><dd>A precision-machined nuclear reactor component that positions and supports fuel assemblies.</dd>
+    <dt>Tool holder</dt><dd>The precision adaptor that grips a cutting tool in a machine spindle; AT3 is a high accuracy class.</dd>
+    <dt>Valve trim</dt><dd>The internal parts of a valve that control flow — plug, seat, stem and cage.</dd>
+  </dl>
+  <h3>Business and contracts</h3><dl>
+    <dt>Job work</dt><dd>Fabricating to a customer's drawing on a per-part basis with no long-term contract.</dd>
+    <dt>Build to print</dt><dd>Making exactly what the customer's drawing specifies, without owning the design.</dd>
+    <dt>Fixed-price contract</dt><dd>A contract where the price is agreed before the cost is known; the defining risk of this industry.</dd>
+    <dt>Price variation clause</dt><dd>A contract term that adjusts the price for movements in a named input, usually steel; its presence or absence decides the margin.</dd>
+    <dt>Reverse auction</dt><dd>A tender in which suppliers bid the price down against each other in real time.</dd>
+    <dt>Retention money</dt><dd>A share of the contract value held back by the customer until the defect-liability period ends.</dd>
+    <dt>Defect liability period</dt><dd>The months after handover during which the fabricator must fix faults at its own cost.</dd>
+    <dt>Order book</dt><dd>Contracted work not yet executed; the sector's main forward indicator.</dd>
+    <dt>Unexecuted backlog</dt><dd>The portion of the order book still to be delivered, usually quoted with an execution period.</dd>
+    <dt>First article inspection</dt><dd>The detailed approval of the first part off a new process before series supply begins.</dd>
+    <dt>Qualification</dt><dd>The multi-year process by which a customer approves a supplier for safety-critical work; the highest barrier to entry here.</dd>
+    <dt>AS9100</dt><dd>The aerospace quality-management standard.</dd>
+    <dt>ASME stamp</dt><dd>American Society of Mechanical Engineers certification allowing a shop to build coded pressure vessels.</dd>
+    <dt>IATF 16949</dt><dd>The automotive quality-management standard.</dd>
+    <dt>Safeguard duty</dt><dd>A temporary import duty to protect a domestic industry from a surge of imports; India levies one on flat steel.</dd>
+    <dt>Section 232</dt><dd>The US law used to impose tariffs on national-security grounds, including on steel, aluminium and their derivative products.</dd>
+    <dt>Derivative product</dt><dd>A finished good tariffed on the steel or aluminium it contains rather than on the good itself.</dd>
+    <dt>Special economic zone</dt><dd>A designated area with customs and tax concessions for exporters; Aequs's Belagavi aerospace cluster is one.</dd>
+    <dt>SME platform</dt><dd>The exchanges' board for small and medium enterprises, with lighter listing and reporting rules.</dd>
+    <dt>Other income</dt><dd>Income from outside operations — interest, dividends, rent, asset sales — which in a 5% margin industry frequently decides the bottom line.</dd>
+    <dt>Cash conversion cycle</dt><dd>The days between paying for material and being paid for the finished job.</dd>
+    <dt>Interest cover</dt><dd>Operating profit divided by interest; below about two, the lender effectively owns the growth.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Casting, investment casting</dt><dd>See 078.</dd>
+    <dt>Forging, closed-die forging, near-net shape</dt><dd>See 080.</dd>
+    <dt>Hot-rolled coil, special bar quality steel</dt><dd>See 066 and 080.</dd>
+    <dt>Galvanising economics and the zinc price</dt><dd>See 074.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. Why does one company in this section earn 29% and another 3.1%?</summary><p>Because of when the price is fixed. Omnitech is qualified for safety-critical work and negotiates afterwards; SM Auto Stamping quotes a price on a drawing that hundreds of shops could make.</p></details>
+  <details class="q"><summary>2. Why did the three pre-engineered building stocks fall in 2026 while revenue grew?</summary><p>Margins fell — Interarch from 10.5% to 8.6%, Epack from 10.5% to 9.3%, M&amp;B to 7.9% — as steel rose against fixed-price contracts and new capacity added overhead before revenue. All three had peaked within a week in November 2025.</p></details>
+  <details class="q"><summary>3. What is the significance of ₹63,900 a tonne?</summary><p>Mumbai hot-rolled coil in the week to 18 September 2026 — a four-year high, about ₹5,000 above a month earlier, and the input cost of every company in this section.</p></details>
+  <details class="q"><summary>4. Why is Salasar's revenue growth not good news?</summary><p>Revenue rose 24% over two years to ₹1,503 cr while profit fell from ₹53 cr to ₹18 cr, after it bought a bankrupt EPC company out of liquidation. Return on equity is 2.13% and interest takes about 69% of operating profit.</p></details>
+  <details class="q"><summary>5. What actually drives MTAR's share price?</summary><p>Two things: India's nuclear opening under the SHANTI Act, which produced a ₹504 cr Kaiga order, and Bloom Energy's fuel-cell demand from American AI data centres, which was more than 60% of MTAR's FY25 revenue.</p></details>
+  <details class="q"><summary>6. Why is IST Ltd excluded from the basket?</summary><p>Its June-quarter other income was ₹87 cr against ₹35 cr of revenue, and it holds ₹1,449 cr of investments against a ₹746 cr market value. It is an investment and property company, not a fabricator — and including it would have made April read 15 of 15 instead of 14 of 15.</p></details>
+  <details class="q"><summary>7. What is the strongest and weakest calendar signal here?</summary><p>April has beaten the Nifty in 14 of 15 years, failing only in 2019. March has beaten it in 2 of 15, and January–March has a median of −13.8 points.</p></details>
+  <details class="q"><summary>8. Why does structural fabrication stay local while precision machining does not?</summary><p>Fabricated structures are bulky and cheap, so freight kills the trade; machined components are small and valuable, so they are globally sourced — and globally tariffed.</p></details>
+  <details class="q"><summary>9. What relationship should you check before writing about Pritika Engineering Components?</summary><p>It is a 70.8%-owned subsidiary of Pritika Auto Industries, which the watchlist files under Castings (078). The ISINs are INE0MJQ01020 and INE583R01029.</p></details>
+  <details class="q"><summary>10. How much of this section's market value has a price history before 2021?</summary><p>About ₹5,400 cr of roughly ₹79,500 cr — under 7%. Four of the five largest names listed between August 2024 and March 2026, so any long-run statistic here describes micro caps.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, trimmed to 18 September 2026, against NSE:NIFTY; BSE history spliced for Automobile Corporation of Goa, IST Ltd and Birla Precision. Company financials not otherwise cited are from <a href="https://www.screener.in/company/SANSERA/consolidated/">Screener</a> quarterly and annual tables, cross-checked against earnings per share and share count.</li>
+    <li>Sansera Engineering: <a href="https://www.investing.com/news/company-news/sansera-q1-fy27-presentation-nonauto-surge-drives-33-revenue-growth-93CH-4856708">Q1 FY27 presentation — segments, order book, capex, guidance</a>; <a href="https://businessupturn.com/business/sansera-engineering-slips-2-despite-record-q1-rs5-700-crore-ads-backlog-semicon-mega-order-and-rs3-500-crore-capacity-plan-steal-the-show/">the semiconductor order and the ADS backlog</a>; <a href="https://tradebrains.in/indian-markets/sansera-engineering-what-is-the-market-paying-for-after-a-200-rally-12571466">the valuation argument after the rally</a>; the misprinted summary at <a href="https://scanx.trade/stock-market-news/companies/sansera-engineering-q1-results-net-profit-rises-39-yoy-866-crore/48110226">ScanX</a>.</li>
+    <li>MTAR Technologies: <a href="https://www.business-standard.com/markets/capital-market-news/mtar-tech-hits-the-roof-after-q1-pat-zooms-365-yoy-126073000301_1.html">Q1 FY27 results</a>; <a href="https://www.screener.in/company/MTARTECH/consolidated/">quarterly and annual financials</a>; <a href="https://www.sec.gov/Archives/edgar/data/0001664703/000162828026050150/ex991_q226financialresults.htm">Bloom Energy's June-quarter results and backlog</a>; <a href="https://www.business-standard.com/markets/capital-market-news/mtar-tech-surges-after-strong-results-from-key-client-bloom-energy-126043000735_1.html">the Bloom dependence</a>.</li>
+    <li>Aequs: <a href="https://www.investing.com/news/company-news/aequs-q1-fy27-slides-revenue-surges-55-as-order-book-tops-1b-93CH-4820715">Q1 FY27 slides — revenue, order book, consumer losses</a>; <a href="https://inc42.com/buzz/aequs-reports-%E2%82%B953-2-cr-loss-in-q1-despite-a-55-yoy-jump-in-revenue/">the quarterly loss</a>.</li>
+    <li>Pre-engineered buildings: <a href="https://propnewstime.com/latestnewsstories/MzQzNzc=/interarch-building-solutions-reports-flat-q1-fy27-profit-at-inr-28-crore">Interarch Q1 FY27</a>; <a href="https://tradebrains.in/indian-markets/interarch-building-solutions-stock-falls-25-from-may-high-6-reasons-behind-the-correction-12501154">why the stock corrected — margins, overheads, other income</a>; <a href="https://www.screener.in/company/EPACKPEB/">Epack Prefab</a> and <a href="https://www.screener.in/company/MBEL/">M&amp;B Engineering</a> financials; <a href="https://www.imarcgroup.com/india-pre-engineered-buildings-market">the Indian PEB market</a>.</li>
+    <li>Industry structure: <a href="https://www.mordorintelligence.com/industry-reports/india-structural-steel-fabrication-market">India structural steel fabrication — market size, fragmentation, process and product mix, reverse-auction margins, MSME cash flow, and the leading players</a>.</li>
+    <li>Steel and inputs: <a href="https://www.icicidirect.com/research/equity/blog/domestic-steel-prices-have-surged-to-a-four-year-high-of-rs-63800-per-tonne">HRC, CRC and rebar prices in the week to 18 September 2026 and the coking coal move</a>; <a href="https://www.business-standard.com/industry/news/domestic-steel-prices-hit-four-year-high-trend-to-continue-in-h2-report-126092200489_1.html">the four-year high</a>; <a href="https://www.argusmedia.com/en/news-and-insights/latest-market-news/2770881-india-extends-import-duties-on-flat-steel-to-3-years">India's three-year flat-steel safeguard duty</a>; <a href="https://www.ipfonline.com/news/detail/machinetoolsaccessories/indian-machine-tool-industry-expected-to-grow-10-in-fy26-jibak-dasgupta">Indian machine-tool production, consumption and import dependence</a>.</li>
+    <li>Demand: <a href="https://www.cushmanwakefield.com/en/india/news/2026/09/india-data-centre-h1-2026-update">India data centres, first half of 2026</a>; <a href="https://www.constructionworld.in/policy-updates-and-economic-news/indias-first-semiconductor-fab-construction-begins-in-gujarat/66990">the Dholera fab</a>; <a href="https://www.nuclearbusiness-platform.com/media/insights/india-nuclear-market-after-shanti">India's nuclear market after the SHANTI Act</a>; <a href="https://kpmg.com/in/en/insights/2026/05/atoms-for-net-zero-a-100-gw-bet-on-indias-nuclear-expansion.html">the 100 GW nuclear target</a>; <a href="https://www.iadb.in/2026/07/22/beyond-aircraft-orders-how-india-is-becoming-an-integral-part-of-airbus-boeings-global-supply-chains/">Airbus and Boeing sourcing from India</a>.</li>
+    <li>Other companies: <a href="https://www.whalesbook.com/corporate-news/English/auto/Automobile-Corp-Goa-Q1-Profit-Drops-51percent-Revenue-Marginally-Down/6a7321a410bce1fd203f1280">Automobile Corporation of Goa Q1 FY27 and its Tata Motors concentration</a>; <a href="https://scanx.trade/stock-market-news/companies/nclt-kolkata-approves-salasar-emc-amalgamation-scheme/41087932">the Salasar–EMC amalgamation</a>; <a href="https://www.screener.in/company/522134/">Artson</a>, <a href="https://www.screener.in/company/522105/">Birla Precision</a>, <a href="https://www.screener.in/company/AUTOIND/consolidated/">Autoline</a>, <a href="https://www.screener.in/company/PRITIKA/">Pritika Engineering</a> and <a href="https://www.screener.in/company/PATTECH/">Pattech Fitwell</a> financials and disclosures.</li>
+    <li>Tariffs: <a href="https://www.india-briefing.com/news/us-india-tariff-50-percent-new-rules-impact-exporters-39458.html/">the 50% US tariff on Indian goods and what is exempt</a>; <a href="https://www.etvbharat.com/en/bharat/trump-administration-eases-some-metl-tariffs-but-core-duties-on-steel-and-aluminium-remain-limited-relief-for-indian-exporters-enn26060203691">the June 2026 easing on some derivative products</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 9.2}, {"y": 2013, "v": -22.2}, {"y": 2014, "v": 8.3}, {"y": 2015, "v": -12.8}, {"y": 2016, "v": -17.3}, {"y": 2017, "v": -0.9}, {"y": 2018, "v": -5.8}, {"y": 2019, "v": -14.0}, {"y": 2020, "v": -16.7}, {"y": 2021, "v": 9.9}, {"y": 2022, "v": -15.1}, {"y": 2023, "v": -9.8}, {"y": 2024, "v": -8.4}, {"y": 2025, "v": -23.7}, {"y": 2026, "v": 2.5}], "AprJul": [{"y": 2012, "v": 5.0}, {"y": 2013, "v": -8.1}, {"y": 2014, "v": 39.5}, {"y": 2015, "v": 33.0}, {"y": 2016, "v": 17.0}, {"y": 2017, "v": 4.7}, {"y": 2018, "v": -13.8}, {"y": 2019, "v": -26.2}, {"y": 2020, "v": 45.8}, {"y": 2021, "v": 41.7}, {"y": 2022, "v": 6.9}, {"y": 2023, "v": 35.2}, {"y": 2024, "v": 15.1}, {"y": 2025, "v": 14.3}, {"y": 2026, "v": 30.6}], "AugSep": [{"y": 2012, "v": -5.0}, {"y": 2013, "v": 2.4}, {"y": 2014, "v": 9.6}, {"y": 2015, "v": -15.7}, {"y": 2016, "v": 15.6}, {"y": 2017, "v": 14.8}, {"y": 2018, "v": -3.2}, {"y": 2019, "v": -0.1}, {"y": 2020, "v": 8.4}, {"y": 2021, "v": -15.0}, {"y": 2022, "v": 21.5}, {"y": 2023, "v": 6.1}, {"y": 2024, "v": -2.9}, {"y": 2025, "v": 13.8}], "OctDec": [{"y": 2012, "v": -21.5}, {"y": 2013, "v": 16.8}, {"y": 2014, "v": -9.9}, {"y": 2015, "v": 26.2}, {"y": 2016, "v": -4.6}, {"y": 2017, "v": 46.4}, {"y": 2018, "v": 5.1}, {"y": 2019, "v": -9.5}, {"y": 2020, "v": -5.1}, {"y": 2021, "v": 42.4}, {"y": 2022, "v": -5.2}, {"y": 2023, "v": 6.7}, {"y": 2024, "v": -5.1}, {"y": 2025, "v": -8.3}], "SepNov": [{"y": 2012, "v": -24.6}, {"y": 2013, "v": -1.7}, {"y": 2014, "v": 4.0}, {"y": 2015, "v": 1.4}, {"y": 2016, "v": 12.3}, {"y": 2017, "v": 47.8}, {"y": 2018, "v": -6.0}, {"y": 2019, "v": -8.4}, {"y": 2020, "v": -11.1}, {"y": 2021, "v": 32.6}, {"y": 2022, "v": 0.9}, {"y": 2023, "v": 1.0}, {"y": 2024, "v": -8.5}, {"y": 2025, "v": 9.8}], "JanMar": [{"y": 2012, "v": 19.8}, {"y": 2013, "v": -33.2}, {"y": 2014, "v": 5.8}, {"y": 2015, "v": -21.0}, {"y": 2016, "v": -21.1}, {"y": 2017, "v": 7.0}, {"y": 2018, "v": -19.3}, {"y": 2019, "v": -21.7}, {"y": 2020, "v": -13.8}, {"y": 2021, "v": 13.1}, {"y": 2022, "v": -22.1}, {"y": 2023, "v": -10.0}, {"y": 2024, "v": 0.1}, {"y": 2025, "v": -31.3}, {"y": 2026, "v": 2.6}]}, "my": {"1": {"2012": 8.5, "2013": -14.5, "2014": -1.9, "2015": -8.8, "2016": -5.4, "2017": 7.5, "2018": -15.4, "2019": -8.3, "2020": 4.7, "2021": 2.9, "2022": -8.2, "2023": -0.5, "2024": 9.0, "2025": -10.1, "2026": 0.2}, "2": {"2012": 10.6, "2013": -10.0, "2014": -6.7, "2015": -12.5, "2016": -11.2, "2017": -0.4, "2018": 0.8, "2019": -10.7, "2020": -9.5, "2021": 5.8, "2022": -12.7, "2023": -6.3, "2024": -0.4, "2025": -18.3, "2026": 10.3}, "3": {"2012": -1.1, "2013": -14.5, "2014": 16.1, "2015": -1.0, "2016": -6.1, "2017": -0.5, "2018": -6.9, "2019": -2.8, "2020": -11.2, "2021": 3.7, "2022": -2.3, "2023": -3.8, "2024": -7.9, "2025": -5.7, "2026": -6.1}, "4": {"2012": 14.1, "2013": 10.1, "2014": 12.8, "2015": 8.1, "2016": 9.8, "2017": 1.4, "2018": 9.1, "2019": -4.5, "2020": 11.8, "2021": 6.1, "2022": 9.8, "2023": 3.3, "2024": 7.3, "2025": 5.7, "2026": 19.2}, "5": {"2012": -2.0, "2013": -1.9, "2014": 9.6, "2015": -4.5, "2016": -7.1, "2017": -7.7, "2018": -12.9, "2019": -3.9, "2020": 2.9, "2021": 8.2, "2022": -4.1, "2023": 1.8, "2024": -4.9, "2025": 10.7, "2026": 16.2}, "6": {"2012": -7.4, "2013": -6.9, "2014": 10.3, "2015": 3.5, "2016": 6.6, "2017": 8.1, "2018": -2.9, "2019": -8.2, "2020": 23.4, "2021": 11.3, "2022": 3.3, "2023": 9.9, "2024": 2.0, "2025": -5.7, "2026": -1.2}, "7": {"2011": 0.4, "2012": 0.9, "2013": -7.9, "2014": -0.5, "2015": 24.4, "2016": 6.1, "2017": 2.8, "2018": -4.7, "2019": -13.2, "2020": -2.1, "2021": 9.3, "2022": -2.0, "2023": 14.3, "2024": 9.7, "2025": 3.1, "2026": -5.8}, "8": {"2011": -5.9, "2012": 2.6, "2013": 7.5, "2014": -1.9, "2015": -12.6, "2016": 0.8, "2017": 2.3, "2018": 3.0, "2019": -1.1, "2020": 5.4, "2021": -19.7, "2022": 8.7, "2023": 7.1, "2024": 1.7, "2025": -0.3, "2026": 10.8}, "9": {"2011": -5.6, "2012": -7.6, "2013": -5.3, "2014": 11.4, "2015": -3.8, "2016": 14.4, "2017": 12.4, "2018": -5.7, "2019": 1.0, "2020": 2.8, "2021": 5.8, "2022": 11.7, "2023": -1.1, "2024": -4.5, "2025": 14.3}, "10": {"2011": -7.9, "2012": -5.9, "2013": -0.7, "2014": 0.2, "2015": 0.6, "2016": 7.3, "2017": 4.7, "2018": 5.3, "2019": -12.2, "2020": -9.9, "2021": 6.2, "2022": -8.0, "2023": 0.1, "2024": 0.1, "2025": -2.2}, "11": {"2011": 0.3, "2012": -11.3, "2013": 4.3, "2014": -7.2, "2015": 4.8, "2016": -7.7, "2017": 24.2, "2018": -5.9, "2019": 3.7, "2020": -3.3, "2021": 17.7, "2022": -2.8, "2023": 2.1, "2024": -4.8, "2025": -2.5}, "12": {"2011": 6.2, "2012": -5.5, "2013": 11.3, "2014": -2.8, "2015": 19.7, "2016": -3.5, "2017": 10.4, "2018": 5.5, "2019": -0.4, "2020": 10.0, "2021": 14.1, "2022": 5.5, "2023": 4.2, "2024": -0.8, "2025": -3.5}}, "basket": ["Sansera Engineering Limited", "MTAR Technologies Ltd.", "Automobile Corporation of Goa Limited", "Munjal Auto Industries Limited", "Salasar Techno Engineering Ltd.", "Artson Ltd", "Birla Precision Technologies Limited", "Autoline Industries Limited"], "nbasket": 8, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -1.9, "rel": -2.7, "hit": 6, "n": 15}, {"m": 2, "abs": -5.9, "rel": -4.7, "hit": 4, "n": 15}, {"m": 3, "abs": -3.5, "rel": -3.3, "hit": 2, "n": 15}, {"m": 4, "abs": 10.8, "rel": 8.3, "hit": 14, "n": 15}, {"m": 5, "abs": 1.2, "rel": 0.0, "hit": 6, "n": 15}, {"m": 6, "abs": 4.9, "rel": 3.1, "hit": 9, "n": 15}, {"m": 7, "abs": 4.1, "rel": 2.2, "hit": 9, "n": 16}, {"m": 8, "abs": 0.3, "rel": 0.5, "hit": 10, "n": 16}, {"m": 9, "abs": 3.3, "rel": 2.7, "hit": 8, "n": 15}, {"m": 10, "abs": 0.6, "rel": -1.5, "hit": 8, "n": 15}, {"m": 11, "abs": 1.7, "rel": 0.8, "hit": 7, "n": 15}, {"m": 12, "abs": 5.4, "rel": 4.7, "hit": 9, "n": 15}], "cy": [{"y": 2012, "b": 19.1, "n": 27.7, "rel": -8.6, "partial": false}, {"y": 2013, "b": -24.1, "n": 6.8, "rel": -30.8, "partial": false}, {"y": 2014, "b": 84.0, "n": 31.4, "rel": 52.6, "partial": false}, {"y": 2015, "b": 6.4, "n": -4.1, "rel": 10.4, "partial": false}, {"y": 2016, "b": 2.3, "n": 3.0, "rel": -0.7, "partial": false}, {"y": 2017, "b": 135.0, "n": 28.6, "rel": 106.4, "partial": false}, {"y": 2018, "b": -26.6, "n": 3.2, "rel": -29.7, "partial": false}, {"y": 2019, "b": -41.1, "n": 12.0, "rel": -53.1, "partial": false}, {"y": 2020, "b": 30.1, "n": 14.9, "rel": 15.2, "partial": false}, {"y": 2021, "b": 140.0, "n": 24.1, "rel": 115.9, "partial": false}, {"y": 2022, "b": 0.8, "n": 4.3, "rel": -3.5, "partial": false}, {"y": 2023, "b": 58.4, "n": 20.0, "rel": 38.4, "partial": false}, {"y": 2024, "b": 13.6, "n": 8.8, "rel": 4.8, "partial": false}, {"y": 2025, "b": -9.7, "n": 10.5, "rel": -20.2, "partial": false}, {"y": 2026, "b": 35.3, "n": -10.7, "rel": 45.9, "partial": true}], "dd": [{"co": "Sansera Engineering", "peak": "Dec 2025", "fp": 143, "y1": 189}, {"co": "MTAR Technologies", "peak": "Sep 2023", "fp": 156, "y1": 306}, {"co": "Aequs", "peak": "Dec 2025", "fp": 46, "y1": 0}, {"co": "Interarch Building Solutions", "peak": "Nov 2025", "fp": -35, "y1": -21}, {"co": "Epack Prefab Technologies", "peak": "Nov 2025", "fp": -31, "y1": 0}, {"co": "M & B Engineering", "peak": "Nov 2025", "fp": -51, "y1": -40}, {"co": "Automobile Corporation of Goa", "peak": "Aug 2024", "fp": -48, "y1": -22}, {"co": "Munjal Auto Industries", "peak": "Oct 2024", "fp": -28, "y1": 15}, {"co": "Salasar Techno Engineering", "peak": "Feb 2024", "fp": -86, "y1": -52}, {"co": "IST", "peak": "Sep 2024", "fp": -40, "y1": -27}, {"co": "Artson", "peak": "Sep 2025", "fp": -22, "y1": -10}, {"co": "Birla Precision Technologies", "peak": "Jul 2024", "fp": -38, "y1": 9}, {"co": "Autoline Industries", "peak": "Feb 2024", "fp": -51, "y1": 1}, {"co": "Pritika Engineering Components", "peak": "Dec 2024", "fp": -38, "y1": -28}, {"co": "Brady & Morris Engineering Co.", "peak": "Oct 2024", "fp": -74, "y1": -48}, {"co": "Rishi Laser", "peak": "Sep 2024", "fp": -16, "y1": 4}, {"co": "Ameya Precision Engineers", "peak": "Jul 2024", "fp": 4, "y1": 40}], "win": {"FebMar": {"mean": -7.8, "median": -9.8, "hit": 4, "n": 15}, "AprJul": {"mean": 16.0, "median": 15.1, "hit": 12, "n": 15}, "AugSep": {"mean": 3.6, "median": 4.2, "hit": 8, "n": 14}, "OctDec": {"mean": 5.3, "median": -4.8, "hit": 6, "n": 14}, "SepNov": {"mean": 3.5, "median": 1.0, "hit": 8, "n": 14}, "JanMar": {"mean": -9.7, "median": -13.8, "hit": 6, "n": 15}}, "ytd": {"b": 35.3, "n": -10.7}, "notes": {"2012": "+19.1% against +27.7%, median +9%, from five names. Autoline +52% and Birla Precision +10%; Automobile Corporation of Goa -2% as bus orders slowed. The basket lagged a strong Nifty - the first of several years in which fabricators failed to join a market rally.", "2013": "-24.1% against +6.8%, median -27%. India's capex winter and the rupee crisis: Birla Precision -50%, Autoline -38%, Artson -27%, ACGL -25%. Only Munjal Auto rose, at +7%, carried by two-wheeler volumes.", "2014": "+84.0% against +31.4%, median +91%. The election re-rating of Indian engineering, the same wave that lifted castings (078) and forgings (080): Munjal Auto +168%, ACGL +166%, Artson +91%.", "2015": "+6.4% against -4.1%. A narrow year: Artson +67% on Tata Projects order flow and Birla Precision +10%, against Munjal Auto -20% and Autoline -27%.", "2016": "+2.3% against +3.0%, median -3%. ACGL +12%; Artson -22%. November's demonetisation hit the cash cycle of small fabricators hardest, and the sector ended the year where it started.", "2017": "+135.0% against +28.6%, median +118% - the second-best year in the record. The small-cap boom met GST, which moved work from unregistered job shops to organised fabricators: Birla Precision +245%, Artson +158%, ACGL +118%, Autoline +110%, Munjal Auto +95%.", "2018": "-26.6% against +3.2%, median -34%. The small-cap unwind and the IL&FS credit squeeze, which falls hardest on businesses that finance a customer's project before being paid: Artson -57%, ACGL -45%, Autoline -39%. Birla Precision +38% was the exception.", "2019": "-41.1% against +12.0%, median -45% - the worst year in the record, and the only year April failed. India's vehicle slump, the BS-VI transition and the NBFC squeeze together: Salasar -63%, Autoline -60%, Birla Precision -57%.", "2020": "+30.1% against +14.9%, median +22%. The post-Covid rebound, led by Salasar +112% on telecom-tower orders; ACGL -29% as bus demand collapsed with public transport.", "2021": "+140.0% against +24.1%, median +129% - the best year in the record. The capex re-rating, PLI announcements and a micro-cap mania: Birla Precision +739%, Artson +264%, ACGL +154%, Salasar +103%.", "2022": "+0.8% against +4.3%, median -9%. Steel prices spiked after the invasion of Ukraine and crushed fabricators working on fixed-price contracts quoted in 2021. Salasar +116% and Autoline +40%; MTAR -34% and Birla Precision -36% in the de-rating of 2021's new listings.", "2023": "+58.4% against +20.0%, median +47%. The capital-expenditure cycle turned: Artson +132%, Munjal Auto +81%, Autoline +66%, MTAR +37%.", "2024": "+13.6% against +8.8%, median +10%. A narrow year: ACGL +50% and Sansera +46%, against MTAR -25% as profit fell on higher revenue, and Autoline -18%.", "2025": "-9.7% against +10.5%, median -20%. The pre-engineered building trade topped in November - Interarch, Epack Prefab and M&B Engineering all peaked within a week - and auto sheet metal was weak: Salasar -38%, Birla Precision -30%, Autoline -26%. MTAR +46% and Sansera +13% were the only risers.", "2026": "+35.3% against a Nifty -10.7%, to 18 September; median +24%. Two stocks made the year: MTAR +198% on nuclear and clean-energy orders, Sansera +154% on aerospace, defence and semiconductors. Munjal Auto +31%, Birla Precision +28%, Artson +19%; ACGL flat, Autoline -1%, Salasar -45%."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

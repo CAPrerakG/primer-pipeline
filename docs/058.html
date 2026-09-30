@@ -1,0 +1,616 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defence Electronics Primer</title>
+<meta name="description" content="Industry 58 of 278: radars, electronic warfare, communications, electro-optics and the boards and modules inside them. Why electronics is the most indigenised and highest-margin part of Indian defence, how BEL and the small-cap suppliers make money, the gallium and germanium dependence, and why 2026&#x27;s rally was led by small caps while BEL stood still.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Defence Electronics · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What the products are</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#qrsam">Air defence and QRSAM</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where technology is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 58 of 278 · Defence family, part 2</div>
+  <h1>Defence Electronics</h1>
+  <p class="lede">A modern fighter, warship or air-defence battery is increasingly a collection of electronics wrapped in metal: radars that see, electronic-warfare systems that jam and listen, radios that link, and computers that fuse it all together. This is the part of Indian defence where domestic industry has come furthest — and where margins are highest. This primer explains what the products are, who makes what, how BEL and a group of smaller listed suppliers earn their money, and why the sector's 2026 rally was a small-cap story while its largest company stood still.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Industrials, Metals, Defence</span><span><b>Companies</b> 9 listed</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Shipbuilding &amp; Ship Repair</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹73,882 cr</div><div class="l">BEL's order book on 1 April 2026 — 2.7 years of revenue</div></div>
+    <div class="stat"><div class="n">30%</div><div class="l">BEL's FY26 EBITDA margin; Data Patterns guides to 35–40%</div></div>
+    <div class="stat"><div class="n">~₹30,000 cr</div><div class="l">The QRSAM air-defence order BEL expects by September 2026</div></div>
+    <div class="stat"><div class="n">2 of 15</div><div class="l">Years in which the basket beat the Nifty in January–March</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>The most Indian, most profitable part of defence</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>If a fighter jet were a person, the metal body would be the skeleton, the engine the muscles — and the electronics would be the eyes, ears, voice and brain. The radar is its eyes, seeing planes far away even at night. The jammer is like shouting loudly so the enemy cannot hear. The radio is its voice, and the computer is its brain, deciding what to do. India still buys many engines from abroad, but it now makes a lot of the eyes, ears and brains itself, and the companies that make them earn more on each rupee than the companies that bend the metal.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>Defence electronics is where Indian indigenisation and margins are highest, and where valuations have run furthest.</p>
+    <ul>
+      <li><b>The leader:</b> BEL — FY26 revenue ₹27,480 cr (+16%), profit ₹6,048 cr, EBITDA margin 30%, order book ₹73,882 cr. Guides to 15%+ growth, 28%+ margin and ₹55,000 cr+ of orders in FY27, including QRSAM.</li>
+      <li><b>The suppliers:</b> Data Patterns (processors and radars), Astra Microwave (RF and radar modules), Apollo Micro Systems (embedded systems), Paras (optics and electronics) — fast-growing, lumpy, richly valued.</li>
+      <li><b>2026:</b> the basket is +26%; Paras +101%, Data Patterns +72%, Astra +66% on FII buying, while BEL is −2% as it waits for QRSAM.</li>
+      <li><b>The cracks:</b> Data Patterns' Q1 margin fell to 27%, Astra's revenue fell 11.5%, and C2C's auditors raised going-concern doubts.</li>
+      <li><b>Calendar:</b> January–March has beaten the Nifty in only 2 of 15 years; April in 12 of 15.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What the products are">
+  <p class="eyebrow">2 · What the products are</p>
+  <h2>Eyes, ears, voice and brain</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Product</th><th>What it does</th><th>Examples</th><th>Who makes it in India</th></tr></thead><tbody>
+    <tr><td>Radars</td><td>Detect and track aircraft, missiles, ships and ground targets</td><td>Air-defence, fire-control and airborne AESA radars (Uttam on Tejas)</td><td>BEL; Data Patterns; Astra (modules); DRDO designs</td></tr>
+    <tr><td>Electronic warfare (EW)</td><td>Detects, locates and jams enemy radars and radios</td><td>Aircraft self-protection suites, ground jammers</td><td>BEL; Data Patterns; Apollo</td></tr>
+    <tr><td>Communications</td><td>Secure radios, data links, satellite terminals</td><td>Software-defined radios, tactical networks</td><td>BEL; C2C (software)</td></tr>
+    <tr><td>Electro-optics</td><td>See by day and night with cameras and thermal imagers</td><td>Gun sights, surveillance, missile seekers' optics</td><td>BEL; Paras</td></tr>
+    <tr><td>Fire control and C4I</td><td>Aim weapons and connect sensors to shooters</td><td>Air-defence command systems, naval combat systems</td><td>BEL; C2C</td></tr>
+    <tr><td>Avionics and embedded computers</td><td>Mission computers, displays, flight electronics</td><td>Boards and processors inside missiles and aircraft</td><td>Data Patterns; Apollo</td></tr>
+    <tr><td>Counter-drone systems</td><td>Detect, jam or destroy small drones</td><td>RF detectors, jammers, lasers</td><td>BEL; C2C; many start-ups</td></tr>
+  </tbody></table></div>
+  <p>Most of these products are built from the same building blocks — antennas, RF (radio-frequency) modules, signal processors, power supplies and software — assembled into a system that sits on a platform: a fighter, a warship, a truck or a missile. The same company may therefore sell a single board to one customer and a complete radar to another. That is why the listed companies overlap and why their order books are often a mix of components, subsystems and whole systems.</p>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a gallium-nitride chip to an air-defence battery</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Components</h4><div class="an">The atoms</div>Processors and FPGAs, RF chips (gallium arsenide and gallium nitride), connectors, optics.<div class="who">Mostly imported; DRDO's GAETEC fab for some RF chips; see 050 and 051</div><div class="m">Critical, often single-source</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Modules and boards</h4><div class="an">The organs</div>Radar transmit–receive modules, processor boards, power supplies, receivers.<div class="who">Astra Microwave, Data Patterns, Apollo, Paras, Precision Electronics</div><div class="m">Design capability and qualification</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Systems</h4><div class="an">The senses</div>Complete radars, EW suites, radios, sonars, fire-control and optical systems.<div class="who">BEL; Data Patterns (small radars); private integrators</div><div class="m">Where most value is captured</div></div>
+    <div class="stage"><div class="no">04</div><h4>Platform integration</h4><div class="an">The body</div>Fitting systems into aircraft, ships, missiles and vehicles.<div class="who">HAL, BDL (057); shipyards (059)</div><div class="m">Programme schedules</div></div>
+    <div class="stage"><div class="no">05</div><h4>Design authority</h4><div class="an">The architect</div>DRDO laboratories design many systems and transfer them to industry for production.<div class="who">LRDE (radars), DLRL and DARE (electronic warfare), others</div><div class="m">Who owns the design</div></div>
+    <div class="stage"><div class="no">06</div><h4>Upgrades and support</h4><div class="an">The long tail</div>Software updates, spares, obsolescence management over decades.<div class="who">BEL and suppliers</div><div class="m">Recurring, high-margin</div></div>
+  </div>
+  <h3>The chain in one breath</h3>
+  <ul>
+    <li><b>Chip makers</b> — mostly abroad — supply the atoms.</li>
+    <li><b>Module makers</b> such as Astra and Data Patterns build the organs.</li>
+    <li><b>BEL</b> assembles most of the senses into complete systems, often to DRDO designs.</li>
+    <li><b>HAL, BDL and the shipyards</b> put them into platforms.</li>
+    <li><b>Everyone</b> earns again from upgrades and spares for decades.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>The critical question for each company is where it sits between build-to-print and design ownership. A company that builds a DRDO design earns a manufacturing margin and must wait for DRDO's next project. A company that owns its design — Data Patterns' processors and radars, Astra's RF modules — can sell it across programmes and exports and earns more. That is the main reason Data Patterns guides to a 35–40% EBITDA margin while Astra earns about 19%, and why valuations in this section differ so widely.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 9 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Latest results and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Bharat Electronics — BEL (~₹2,82,450 cr)</td><td>The state-owned defence-electronics major: radars, EW, communications, fire control, air-defence systems, electro-optics; also civilian electronics.</td><td>FY26 revenue ₹27,480 cr (+16.2%), profit ₹6,048 cr (+14.4%), EBITDA margin 30%; orders won ₹30,045 cr. Q1 FY27 revenue ₹5,533 cr (+25.3%), margin 25.8%; order inflow ₹3,750 cr (−51%). About 47 times FY26 profit. Stock −2% in 2026, 16% below its March high.</td></tr>
+    <tr><td>Data Patterns (~₹24,200 cr)</td><td>Designs and builds its own processors, radars, EW and avionics electronics in Chennai; in the Bharat Forge-led AMCA consortium.</td><td>Q1 FY27 revenue ₹116 cr (+16.8%), EBITDA margin 27.0% against 32.0%, profit ₹22.1 cr (−13.5%); shares fell 7% on the day. Order book ₹2,654 cr including negotiated orders. FY27 guidance: +20–25% revenue, 35–40% margin. Stock +72% in 2026.</td></tr>
+    <tr><td>Sigma Advanced Systems (~₹15,440 cr)</td><td>Formerly Megasoft (renamed February 2026): an IT company that pivoted into defence, then bought UK aerospace machining firms (Nasmyth, Bromford) and AS Strategic.</td><td>Q1 FY27 revenue ₹374 cr, EBITDA ₹61 cr; order book ₹8,000 cr+, including a Rolls-Royce agreement (~£300 mn) and a $104.9 mn export order for 155 mm artillery shells. Stock +361% in 2026. <b>Excluded:</b> an IT company before 2021, and now mostly precision manufacturing and munitions (closer to 057).</td></tr>
+    <tr><td>Astra Microwave (~₹15,401 cr)</td><td>Hyderabad maker of RF and microwave modules and subsystems for radars, EW, space and weather systems.</td><td>Q1 FY27 revenue ₹177 cr (−11.5%), EBITDA margin 18.7%; shares fell 9% on the day and the MD stepped down. A ₹2,205 cr HAL order for Uttam radar subsystems lifted the order book to about ₹4,300 cr. FY27 revenue guidance ₹1,350 cr. Stock +66% in 2026.</td></tr>
+    <tr><td>Apollo Micro Systems (~₹13,744 cr)</td><td>Hyderabad maker of embedded electronics for missiles, torpedoes and launchers; bought IDL Explosives from GOCL in 2025 and agreed in July 2026 to buy 41% of Premier Explosives (060).</td><td>Q1 FY27 revenue ₹251 cr (+88%), profit ₹25.2 cr (+43%); order book ₹1,704 cr including ₹480 cr at IDL Explosives; expects ₹2,500–3,000 cr from QRSAM and other programmes. Guides to 40–45% growth. Stock +36% in 2026.</td></tr>
+    <tr><td>Paras Defence &amp; Space (~₹10,630 cr)</td><td>Optics and optronic systems, defence electronics, heavy engineering and anti-drone systems.</td><td>Q1 FY27 revenue ₹128 cr (+37%), profit ₹20.7 cr (+45%), EBITDA margin 24.9%, led by optics. FII holding rose from 5.1% to 8.3% in the June quarter. Stock +101% in 2026.</td></tr>
+    <tr><td>C2C Advanced Systems (~₹353 cr)</td><td>An SME-listed defence software and systems firm (command and control, counter-drone); listed December 2024.</td><td>FY26 revenue ₹145.6 cr (+26.5%) but profit −36%; auditors raised going-concern doubts over liquidity and reliance on promoter funding. Stock −58% in 2026, 78% below its January 2025 high.</td></tr>
+    <tr><td>Precision Electronics (~₹235 cr)</td><td>Masts and pedestals for ground radars, signal-intelligence and jamming equipment; moving its plant from Noida to Faridabad.</td><td>FY26 revenue ₹79 cr (+68%), small profit. Stock −3% in 2026. Too thinly traded for the basket.</td></tr>
+    <tr><td>Uravi Defence &amp; Technology (~₹130 cr)</td><td>Formerly Uravi T &amp; Wedge Lamps, an automotive-lamp maker; renamed in November 2024 to add defence equipment.</td><td>Stock −42% in 2026, 81% below its May 2025 high. Mostly an auto-lamp business; excluded.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">The rest of the industry</span><p>Several important defence-electronics companies sit in other sections: MTAR Technologies, Centum Electronics, SPEL and Zen Technologies (062) among them, and the electronics arms of HAL and L&amp;T. Unlisted players include Tata Advanced Systems, Alpha Design, and the Indian subsidiaries of Thales, Elbit and Rafael. The basket uses BEL, Data Patterns, Astra, Apollo, Paras and C2C.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Design ownership, advances and a year-end rush</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Model</th><th>Who</th><th>Margin</th><th>Cash</th></tr></thead><tbody>
+    <tr><td>System prime on nomination or competitive bid</td><td>BEL</td><td>High for a manufacturer (FY26 EBITDA 30%) thanks to scale and advances</td><td>Customer advances fund working capital; net cash</td></tr>
+    <tr><td>Own-design subsystems and small systems</td><td>Data Patterns</td><td>Highest (guided 35–40%)</td><td>Long receivable cycles; lumpy</td></tr>
+    <tr><td>Modules to others' designs</td><td>Astra, Apollo, Paras</td><td>Moderate (about 19–25%)</td><td>Working-capital heavy</td></tr>
+    <tr><td>Software and integration</td><td>C2C</td><td>Can be high, but small scale</td><td>Receivables can strain liquidity</td></tr>
+  </tbody></table></div>
+  <p>BEL's economics rest on scale and on the government as a customer that pays advances. It carries large cash balances, plans over ₹2,200 cr of R&amp;D and over ₹1,200 cr of capital spending this year, and earns a margin above most private manufacturers. Its order book of ₹73,882 cr is 2.7 years of revenue — much shorter than HAL's 7.7 years (see 057) — because electronics programmes are delivered faster than aircraft.</p>
+  <p>The smaller companies depend on winning a place in programmes led by BEL, HAL, BDL or DRDO. Their orders arrive in large, irregular pieces, and revenue can swing sharply when a customer delays acceptance. Data Patterns' Q1 FY27 illustrates it: revenue rose 16.8%, but delays in customer approvals shifted some revenue to later quarters and the margin fell to 27% from 32%. Astra's revenue fell 11.5% in the same quarter even as it booked a ₹2,205 cr order. For these companies, one quarter says little; the year and the order book say more.</p>
+  <h3>Why margins are higher than in the rest of defence</h3>
+  <ul>
+    <li><b>Design content:</b> much of the value is in software and design, not materials.</li>
+    <li><b>Less imported pass-through:</b> unlike an aircraft maker passing through a foreign engine, electronics firms add more of the value themselves.</li>
+    <li><b>Upgrades:</b> electronics are refreshed several times during a platform's life, creating repeat business.</li>
+  </ul>
+</section>
+
+<section id="qrsam" data-toc="Air defence and QRSAM">
+  <p class="eyebrow">5b · Air defence and QRSAM</p>
+  <h2>Why one order decides BEL's year</h2>
+  <p>BEL's FY27 guidance of ₹55,000 cr+ in new orders includes the Quick Reaction Surface-to-Air Missile (QRSAM) system, a DRDO-developed short-range air-defence system valued at about ₹30,000 cr, which BEL expects to receive by September 2026. Without it, BEL's inflow would be far below the prior year's ₹30,045 cr; with it, the order book would rise well above ₹90,000 cr. That single contract explains why BEL's stock has been flat while smaller peers rallied: its Q1 inflow fell 51% to ₹3,750 cr, and the market is waiting.</p>
+  <p>QRSAM matters for the small caps too. Apollo Micro Systems expects ₹2,500–3,000 cr of orders from QRSAM and other programmes by the end of FY27, and suppliers of radar modules, processors and power electronics will receive sub-orders once BEL's contract is signed. Air defence gained urgency after Operation Sindoor in May 2025, when Indian air-defence networks faced drones and missiles; since then, counter-drone systems and short-range air defence have moved up the procurement list.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>BEL order inflow</th><th>Value</th></tr></thead><tbody>
+    <tr><td>FY26 actual</td><td>₹30,045 cr</td></tr>
+    <tr><td>Q1 FY27 actual</td><td>₹3,750 cr (−51%)</td></tr>
+    <tr><td>FY27 guidance</td><td>₹55,000 cr+, including QRSAM</td></tr>
+    <tr><td>QRSAM (expected)</td><td>~₹30,000 cr</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What defence electronics depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Role</th><th>Source</th><th>Risk</th></tr></thead><tbody>
+    <tr><td>FPGAs and processors</td><td>The computing core of radars and EW</td><td>US makers (AMD-Xilinx, Intel); some Indian designs</td><td>Export licences, obsolescence</td></tr>
+    <tr><td>Gallium nitride and gallium arsenide chips</td><td>Power amplifiers in radar and jammer modules</td><td>Imported; DRDO's GAETEC fab for some</td><td>Gallium supply: China controls exports since August 2023</td></tr>
+    <tr><td>Germanium optics</td><td>Lenses for thermal imagers</td><td>Imported; China dominant</td><td>China restricted germanium exports from August 2023 — critical for optics makers such as Paras</td></tr>
+    <tr><td>Rare-earth magnets</td><td>Motors, actuators, some RF devices</td><td>China dominant; controls since April 2025 (see 051)</td><td>Supply security</td></tr>
+    <tr><td>Specialty PCBs and connectors</td><td>Boards and interconnects</td><td>Mix of Indian and imported</td><td>Qualification time</td></tr>
+    <tr><td>Engineers</td><td>Design and software</td><td>Indian talent pool</td><td>Wage inflation — cited by Data Patterns for its Q1 margin decline</td></tr>
+  </tbody></table></div>
+  <p>The paradox of Indian defence electronics is that the systems are increasingly designed in India but the most important chips are not. Gallium and germanium — used in radar amplifiers and thermal optics — are materials China has restricted since 2023, and advanced processors come mainly from the US. Companies that secure multi-year supply, or qualify alternative sources, reduce a risk that does not appear in their order books.</p>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>A back-ended year</h2>
+  <ul>
+    <li><b>April–May:</b> BEL announces order-inflow and revenue guidance with fourth-quarter results; the market resets expectations for the year.</li>
+    <li><b>April–June:</b> the smallest quarter for most companies; margins often look weak.</li>
+    <li><b>July–December:</b> orders accumulate; large contracts (such as QRSAM) may be signed.</li>
+    <li><b>1 February:</b> the budget. Expectations are usually priced in beforehand.</li>
+    <li><b>January–March:</b> the biggest quarter for deliveries and billing as the Ministry spends its budget.</li>
+  </ul>
+  <p>For analysis, compare full years rather than quarters, and look at order inflow over rolling twelve months. A weak first quarter — like Data Patterns' or Astra's in FY27 — is common in this industry and should be judged against the year's guidance.</p>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the six-stock basket minus the Nifty, in percentage points; the label under each month is how many years it beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 6 names (Bharat Electronics Limited, Data Patterns (India) Limited, Astra Microwave Products Ltd., Apollo Micro Systems Ltd., Paras Defence &amp; Space Technologies Ltd., C2C Advanced Systems Ltd.), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +8.9 pts (beat in 12 of 15 years); Jun +6.0 pts (beat in 9 of 15 years); May +5.5 pts (beat in 10 of 15 years).</li><li><b>Weakest months:</b> Feb -3.8 pts (beat in 4 of 15 years); Sep -1.8 pts (beat in 6 of 15 years); Mar -1.2 pts (beat in 6 of 15 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 5 of 15 years (median -5.3 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +19.9 pts); Aug–Sep beat the Nifty in 3 of 14 years (median -2.2 pts); Oct–Dec beat the Nifty in 8 of 14 years (median +4.8 pts); Sep–Nov beat the Nifty in 6 of 14 years (median -3.7 pts); Jan–Mar beat the Nifty in 2 of 15 years (median -4.5 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +5.9 points.</p><p><b>Reading it:</b> before 2019 the basket is BEL and Astra Microwave only; Apollo joins in 2019, Data Patterns and Paras in 2022, C2C in 2025. The calendar is the strongest in the Defence family so far. <b>January–March has beaten the Nifty in only 2 of 15 years</b> (median −4.5 points) and February–March in 5 of 15. April has worked in 12 of 15 (average +8.9) and April–July in 10 of 15 (median +19.9). August–September has worked in only 3 of 14. The pattern matches the business: budget expectations are priced in before 1 February, while April and May bring BEL's order-inflow guidance and fourth-quarter results, when BEL and Data Patterns book their largest quarters.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="JanMar" viewBox="0 0 720 280" role="img" aria-label="January to March return minus Nifty by year"></svg><figcaption>January–March return of the basket minus the Nifty, by year, in percentage points. Green bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>January–March worked only in 2015 (+16.8) and 2026 (+3.1).</b> Its worst years were 2018 (−25.6) and 2025 (−18.6).</li>
+    <li><b>April–July failed in 2018 (−21.4), 2013 (−9.7), 2012 (−4.7), 2019 (−2.8) and 2016 (−1.3)</b>; its best runs were 2014 (+86.4) and 2020 (+61.6).</li>
+    <li><b>August–September worked only in 2022 (+20.7), 2025 (+16.0) and 2023</b>; it lost in 11 of 14 years.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>This is the cleanest calendar in the Defence family: two of fifteen January–March wins is hard to dismiss, and the business logic — budget hopes priced in, then April guidance and fourth-quarter results — is sound. The caveat is that 2012–2018 rests on two stocks (BEL and Astra). Use it for timing entries and exits around a view, not as a view in itself.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Large orders.</b> A single contract such as QRSAM can change a year's inflow.</li>
+    <li><b>Design ownership.</b> Own designs earn more than build-to-print.</li>
+    <li><b>Product mix.</b> Systems and upgrades earn more than components.</li>
+    <li><b>Customer acceptance timing.</b> Delays shift revenue between quarters.</li>
+    <li><b>Engineer costs.</b> Wage inflation squeezes margins when revenue slips.</li>
+    <li><b>Imported chips.</b> Prices, licences and Chinese controls on gallium and germanium.</li>
+    <li><b>Exports.</b> Radars, EW and optics are among India's growing defence exports.</li>
+    <li><b>Valuation.</b> FII flows and index inclusion have driven 2026's moves more than earnings.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Basket: BEL, Data Patterns, Astra Microwave, Apollo Micro Systems, Paras Defence and C2C, equal-weighted monthly; BEL and Astra only before 2019. Sigma, Precision Electronics and Uravi are excluded (see section 4). Monthly returns capped at ±50%, price only; 2026 to 18 September.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year return of the basket minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of the cycles</h3>
+  <ol>
+    <li><b>The quiet PSU years</b> (2012–2013): BEL traded as a cash-rich, slow-growing government company.</li>
+    <li><b>Make in India, first wave</b> (2014–2017): BEL +185% in 2014; steady gains after.</li>
+    <li><b>The margin scare</b> (2018–2019): BEL −52% in 2018 on worries about pricing of government-nominated orders and the small-cap crash.</li>
+    <li><b>The long re-rating</b> (2020–2025): indigenisation lists, new listings, the Ukraine war and Operation Sindoor. The basket beat the Nifty in every year from 2020 to 2025.</li>
+    <li><b>The split</b> (2026): small caps re-rated on FII buying; BEL paused; the weakest small caps (C2C) broke.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>Six straight years of outperformance</b> (2020–2025), the longest run in the Defence family, reflect real earnings growth at BEL as well as re-rating.</li>
+    <li><b>Small caps move two to three times as much as BEL,</b> in both directions: Apollo +290% in 2023, C2C −58% in 2026.</li>
+    <li><b>Listing surges fade.</b> Paras fell 19% in 2022 after its listing surge; C2C and Uravi fell 78–81% from their early highs.</li>
+  </ul>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Electronics is where modern wars are being decided</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Region or company</th><th>Position</th><th>Relevance to India</th></tr></thead><tbody>
+    <tr><td>US: RTX, L3Harris, Northrop</td><td>Technology leaders in radars, EW and sensors</td><td>Processors and components; export controls</td></tr>
+    <tr><td>Europe: Thales, Leonardo, Hensoldt, Saab</td><td>Re-rated sharply since 2022 on European rearmament</td><td>Valuation benchmarks; partners for Indian programmes</td></tr>
+    <tr><td>Israel: Elbit, IAI (Elta), Rafael</td><td>Strong in radars, EW and air defence; long-standing Indian partners</td><td>Joint ventures and supply chains (DCX, 057, works mainly for Israeli firms)</td></tr>
+    <tr><td>China</td><td>Controls gallium, germanium and rare earths</td><td>Input risk for Indian radar and optics makers</td></tr>
+  </tbody></table></div>
+  <p>The wars in Ukraine and the Middle East, and India's own Operation Sindoor, showed that drones, jamming and air defence decide outcomes as much as aircraft and tanks. That has shifted procurement budgets toward sensors, electronic warfare and counter-drone systems worldwide. Indian companies are small by global standards — BEL's revenue is roughly an eighth of Thales's — but India's domestic reservation policy gives them a protected home market in which to build scale before competing abroad.</p>
+</section>
+
+<section id="tech" data-toc="Where technology is going">
+  <p class="eyebrow">12 · Where technology is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>AESA radars.</b> Thousands of small transmit–receive modules replace one large transmitter; Astra's Uttam order shows the demand for these modules.</li>
+    <li><b>Gallium nitride.</b> GaN amplifiers give more power and range; they depend on a material China controls.</li>
+    <li><b>Counter-drone systems.</b> Cheap drones need cheap defences: detectors, jammers, guns and lasers.</li>
+    <li><b>Software-defined everything.</b> Radios, radars and EW systems that change function through software updates.</li>
+    <li><b>Sensor fusion and AI.</b> Combining radar, optical and electronic data into one picture for faster decisions.</li>
+    <li><b>Space.</b> Satellite payloads and ground systems; Astra and Paras already sell to the space sector (see 061).</li>
+  </ol>
+  <p>Each shift increases the share of software and design in the product, which favours companies that own their intellectual property and invest in R&amp;D. BEL's R&amp;D budget of over ₹2,200 cr and Data Patterns' in-house designs are their main defences against becoming build-to-print contractors.</p>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <p>The procurement framework — DAP 2020, positive indigenisation lists, the 75% domestic reservation and 74% automatic FDI — is described in the Aerospace &amp; Defence primer (057). Three points matter particularly for electronics:</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Policy</th><th>What it does</th><th>Effect on electronics</th></tr></thead><tbody>
+    <tr><td>Indigenisation lists for DPSUs</td><td>Sub-systems and line-replaceable units that BEL, HAL and others must source in India</td><td>Direct demand for module and board makers</td></tr>
+    <tr><td>DRDO technology transfer</td><td>DRDO designs are transferred to industry for production</td><td>Build-to-print volume; design stays with DRDO</td></tr>
+    <tr><td>iDEX and the Technology Development Fund</td><td>Grants and contracts for start-ups and MSMEs</td><td>New competitors in drones, counter-drone and EW</td></tr>
+    <tr><td>Semiconductor schemes (050)</td><td>Support for chip design and fabrication</td><td>May eventually localise processors and RF chips</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: small caps priced for perfection, BEL waiting for QRSAM</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>BEL orders</td><td>Pausing, big order due</td><td>Q1 inflow −51%; QRSAM ~₹30,000 cr expected by September</td></tr>
+    <tr><td>BEL execution</td><td>Strong</td><td>Q1 revenue +25%</td></tr>
+    <tr><td>Small-cap results</td><td>Mixed</td><td>Apollo +88%, Paras +37%; Data Patterns margin 27%, Astra revenue −11.5%</td></tr>
+    <tr><td>Flows</td><td>Strong</td><td>FII buying; Nifty India Defence index +28% in 2026 by August</td></tr>
+    <tr><td>Balance-sheet stress</td><td>At the margin</td><td>C2C going-concern doubts</td></tr>
+  </tbody></table></div>
+  <p id="now-stocks">Stocks: the basket is +26.2% this year vs -10.7% for the Nifty (to 18 Sep 2026). The six-stock basket is up 26% against a Nifty down 11%, but it is two markets. Small caps re-rated on FII buying — Paras +101%, Data Patterns +72%, Astra +66%, Apollo +36% — while BEL, about 80% of the section's market value, is −2% as Q1 order inflow fell 51% ahead of the ~₹30,000 cr QRSAM order it expects by September. C2C fell 58% after its auditors raised going-concern doubts. Results have been mixed: Data Patterns' margin fell to 27% and Astra's revenue fell 11.5%.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th class="num">Price 18 Sep</th><th>High (date)</th><th class="num">From high</th><th class="num">2026</th><th class="num">1 year</th></tr></thead><tbody>
+    <tr><td>BEL</td><td class="num">₹393</td><td>₹468 (6 Mar 2026)</td><td class="num">−16%</td><td class="num">−2%</td><td class="num">−4%</td></tr>
+    <tr><td>Data Patterns</td><td class="num">₹4,513</td><td>₹4,932 (8 Sep 2026)</td><td class="num">−8%</td><td class="num">+72%</td><td class="num">+59%</td></tr>
+    <tr><td>Sigma Advanced Systems</td><td class="num">₹866</td><td>₹866 (18 Sep 2026)</td><td class="num">0%</td><td class="num">+361%</td><td class="num">+480%</td></tr>
+    <tr><td>Astra Microwave</td><td class="num">₹1,631</td><td>₹1,862 (31 Jul 2026)</td><td class="num">−12%</td><td class="num">+66%</td><td class="num">+50%</td></tr>
+    <tr><td>Apollo Micro Systems</td><td class="num">₹371</td><td>₹450 (3 Jul 2026)</td><td class="num">−18%</td><td class="num">+36%</td><td class="num">+8%</td></tr>
+    <tr><td>Paras Defence</td><td class="num">₹1,373</td><td>₹1,527 (18 Aug 2026)</td><td class="num">−10%</td><td class="num">+101%</td><td class="num">+85%</td></tr>
+    <tr><td>C2C Advanced Systems</td><td class="num">₹204</td><td>₹938 (10 Jan 2025)</td><td class="num">−78%</td><td class="num">−58%</td><td class="num">−74%</td></tr>
+    <tr><td>Precision Electronics</td><td class="num">₹187</td><td>₹266 (16 Oct 2025)</td><td class="num">−30%</td><td class="num">−3%</td><td class="num">−14%</td></tr>
+    <tr><td>Uravi Defence</td><td class="num">₹108</td><td>₹558 (23 May 2025)</td><td class="num">−81%</td><td class="num">−42%</td><td class="num">−65%</td></tr>
+  </tbody></table></div>
+  <h3>What is priced in</h3>
+  <p>BEL at about 47 times FY26 profit is priced for its guidance — 15%+ growth at a 28%+ margin — and for QRSAM arriving on time. A delay would disappoint; a signing would lift the order book to more than three years of revenue. The small caps are priced far higher on current earnings: Paras, for example, trades at over 120 times its Q1 profit annualised. Their prices assume that 2026's order wins become revenue quickly and that margins recover — assumptions that Data Patterns' and Astra's Q1 results have already tested.</p>
+  <div class="box pm"><span class="tag">The honest read</span><p>The industry is excellent and the policy support durable; the valuations of the small caps are the risk. The stocks rallied on flows while two of the four largest small caps reported disappointing quarters. BEL is the lower-risk way to own the theme and has lagged; the small caps offer more growth but will react sharply to any slip in orders or margins, as C2C showed at the extreme.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Why it matters</th><th>Where to find it</th></tr></thead><tbody>
+    <tr><td>QRSAM contract signing</td><td>Decides BEL's FY27 inflow and sub-orders for suppliers</td><td>BEL disclosures; Ministry releases</td></tr>
+    <tr><td>BEL rolling order inflow</td><td>The broadest demand gauge</td><td>BEL order announcements</td></tr>
+    <tr><td>Data Patterns' margin</td><td>Tests design-led profitability</td><td>Quarterly results</td></tr>
+    <tr><td>Astra's revenue recovery</td><td>Converts the ₹4,300 cr order book</td><td>Quarterly results</td></tr>
+    <tr><td>Receivables and cash flow at small caps</td><td>C2C showed the risk</td><td>Half-yearly balance sheets</td></tr>
+    <tr><td>Chinese export controls on gallium and germanium</td><td>Input availability for radars and optics</td><td>Chinese commerce ministry notices</td></tr>
+    <tr><td>FII holdings</td><td>Driver of the 2026 re-rating</td><td>Quarterly shareholding patterns</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Aerospace &amp; defence manufacturing (057):</b> HAL and BDL are the largest customers for radars, avionics and missile electronics.</li>
+    <li><b>Shipbuilding (059):</b> warships carry BEL's sonars, radars and combat systems.</li>
+    <li><b>Explosives (060):</b> Apollo's move into explosives links the two industries.</li>
+    <li><b>Drones and space (061):</b> payloads, counter-drone systems and satellite electronics.</li>
+    <li><b>Defence services (062):</b> Zen Technologies' simulators and counter-drone systems.</li>
+    <li><b>Semiconductors and components (050, 051):</b> the chips and magnets inside.</li>
+    <li><b>EMS (052):</b> contract manufacturers increasingly build defence boards.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What share of revenue comes from your own designs, and what from build-to-print?</li>
+    <li>How much of the order book is signed, and how much is "negotiated" or expected?</li>
+    <li>Which programmes (QRSAM, Uttam, others) will drive revenue this year, and when?</li>
+    <li>What is the cause of the quarter's margin change — mix, wages or timing?</li>
+    <li>How dependent are you on imported processors, GaN chips or germanium, and how much stock is secured?</li>
+    <li>What are receivable days, and how much is overdue from government customers?</li>
+    <li>What share of revenue is exports, and in which products?</li>
+    <li>How much do you spend on R&amp;D, and what new products will it deliver?</li>
+    <li>For BEL: what inflow is expected without QRSAM?</li>
+    <li>For acquirers (Apollo, Sigma): how will acquisitions be integrated and financed?</li>
+  </ol>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th><th>Verdict</th></tr></thead><tbody>
+    <tr><td>"Every defence-electronics stock is a winner"</td><td>C2C −78% and Uravi −81% from their highs</td><td>Quality and balance sheets separate them</td></tr>
+    <tr><td>"BEL is ex-growth"</td><td>FY26 revenue +16%, Q1 FY27 +25%; guidance 15%+</td><td>Growth intact; the stock waits for orders</td></tr>
+    <tr><td>"Electronics is fully indigenous"</td><td>Processors, GaN chips and germanium are imported</td><td>Designs yes, key materials no</td></tr>
+    <tr><td>"A renamed company is a defence company"</td><td>Sigma was Megasoft; Uravi makes auto lamps</td><td>Check what the revenue actually comes from</td></tr>
+    <tr><td>"One weak quarter is a warning"</td><td>First quarters are seasonally small</td><td>Judge the full year</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. AESA, EW" autocomplete="off"><span id="gcount"></span></div>
+  <h3>Systems</h3><dl>
+    <dt>Radar</dt><dd>A sensor that sends radio waves and listens for echoes to find objects.</dd>
+    <dt>AESA</dt><dd>Active electronically scanned array — a radar made of many small transmit–receive modules that steer the beam electronically.</dd>
+    <dt>Uttam</dt><dd>India's AESA radar for the Tejas fighter.</dd>
+    <dt>Electronic warfare (EW)</dt><dd>Using the electromagnetic spectrum to detect, deceive or jam an enemy.</dd>
+    <dt>ESM / ELINT</dt><dd>Electronic support measures and electronic intelligence — listening to enemy emissions.</dd>
+    <dt>Jammer</dt><dd>A transmitter that drowns out enemy radar or radio signals.</dd>
+    <dt>SIGINT</dt><dd>Signals intelligence — intercepting communications and radar signals.</dd>
+    <dt>C4I</dt><dd>Command, control, communications, computers and intelligence.</dd>
+    <dt>Fire control</dt><dd>Systems that aim and direct weapons.</dd>
+    <dt>Electro-optics</dt><dd>Day cameras, thermal imagers and laser rangefinders.</dd>
+    <dt>Sonar</dt><dd>Underwater sound-based detection used by ships and submarines.</dd>
+    <dt>QRSAM</dt><dd>Quick Reaction Surface-to-Air Missile — a short-range air-defence system developed by DRDO.</dd>
+    <dt>Counter-drone</dt><dd>Systems that detect, jam or destroy small unmanned aircraft.</dd>
+    <dt>Software-defined radio</dt><dd>A radio whose functions are set by software rather than fixed hardware.</dd>
+    <dt>Sensor fusion</dt><dd>Combining data from several sensors into one picture.</dd>
+  </dl>
+  <h3>Components</h3><dl>
+    <dt>T/R module</dt><dd>Transmit–receive module — the building block of an AESA radar.</dd>
+    <dt>RF</dt><dd>Radio frequency — the band of signals used by radars and radios.</dd>
+    <dt>MMIC</dt><dd>Monolithic microwave integrated circuit — a chip for RF signals.</dd>
+    <dt>GaN</dt><dd>Gallium nitride — a semiconductor for high-power RF amplifiers.</dd>
+    <dt>GaAs</dt><dd>Gallium arsenide — an older RF semiconductor.</dd>
+    <dt>FPGA</dt><dd>Field-programmable gate array — a reconfigurable processor chip used widely in defence.</dd>
+    <dt>LRU</dt><dd>Line-replaceable unit — a module that can be swapped quickly in the field.</dd>
+    <dt>Germanium</dt><dd>A metal used for thermal-imaging lenses.</dd>
+    <dt>Thermal imager</dt><dd>A camera that sees heat, used for night vision and targeting.</dd>
+    <dt>Laser rangefinder</dt><dd>A device that measures distance to a target with a laser pulse.</dd>
+    <dt>Beamforming</dt><dd>Steering a radar or radio beam electronically by adjusting many small antennas.</dd>
+    <dt>GAETEC</dt><dd>DRDO's gallium arsenide fabrication facility in Hyderabad.</dd>
+  </dl>
+  <h3>Institutions and business terms</h3><dl>
+    <dt>DRDO</dt><dd>Defence Research and Development Organisation.</dd>
+    <dt>LRDE</dt><dd>DRDO's radar laboratory in Bengaluru.</dd>
+    <dt>DLRL / DARE</dt><dd>DRDO's electronic-warfare laboratories.</dd>
+    <dt>Design authority</dt><dd>The organisation that owns a product's design.</dd>
+    <dt>Build to print</dt><dd>Manufacturing to someone else's design.</dd>
+    <dt>Transfer of technology</dt><dd>Handing a design to a manufacturer for production.</dd>
+    <dt>iDEX</dt><dd>Innovations for Defence Excellence — a Ministry programme for start-ups.</dd>
+    <dt>TDF</dt><dd>Technology Development Fund for defence R&amp;D by industry.</dd>
+    <dt>Negotiated order</dt><dd>An order agreed on price but not yet signed.</dd>
+    <dt>Order inflow</dt><dd>The value of new orders won in a period.</dd>
+    <dt>Going-concern doubt</dt><dd>An auditor's warning that a company may not be able to continue operating without new funding.</dd>
+    <dt>SME platform</dt><dd>The exchange segment for small companies, with thinner trading.</dd>
+    <dt>FII</dt><dd>Foreign institutional investor.</dd>
+    <dt>Obsolescence management</dt><dd>Replacing components that are no longer made during a system's decades-long life.</dd>
+    <dt>Book-to-bill</dt><dd>New orders divided by revenue; above 1 means the order book is growing.</dd>
+  </dl>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. What is an AESA radar?</summary><p>A radar made of many small transmit–receive modules that steer the beam electronically.</p></details>
+  <details class="q"><summary>2. What were BEL's FY26 revenue, profit and margin?</summary><p>Revenue ₹27,480 cr (+16.2%), profit ₹6,048 cr, EBITDA margin 30%.</p></details>
+  <details class="q"><summary>3. Why has BEL's stock lagged in 2026?</summary><p>Q1 order inflow fell 51% while the ~₹30,000 cr QRSAM order it expects by September is awaited.</p></details>
+  <details class="q"><summary>4. Why does Data Patterns guide to a higher margin than Astra?</summary><p>It owns more of its designs; Astra mostly builds modules to others' designs.</p></details>
+  <details class="q"><summary>5. What happened to Data Patterns' margin in Q1 FY27, and why?</summary><p>It fell to 27% from 32% on higher employee costs, product mix and delayed customer approvals.</p></details>
+  <details class="q"><summary>6. Which two materials used in radars and thermal optics does China control?</summary><p>Gallium and germanium, restricted since August 2023.</p></details>
+  <details class="q"><summary>7. Why is Sigma Advanced Systems excluded from the basket?</summary><p>It was Megasoft, an IT company, before 2021 and is now mostly precision manufacturing and munitions.</p></details>
+  <details class="q"><summary>8. What happened to C2C in 2026?</summary><p>Its auditors raised going-concern doubts; the stock fell 58% and is 78% below its high.</p></details>
+  <details class="q"><summary>9. In how many of 15 years did the basket beat the Nifty in January–March?</summary><p>Two — 2015 and 2026.</p></details>
+  <details class="q"><summary>10. What order lifted Astra's order book to about ₹4,300 cr?</summary><p>A ₹2,205 cr HAL order for Uttam radar subsystems, received in July 2026.</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes, 2011 to 18 September 2026, against NSE:NIFTY.</li>
+    <li>BEL: <a href="https://scanx.trade/stock-market-news/companies/bel-fy26-net-profit-rises-14-to-6-048-48-crore/40740009">FY26 results</a>; <a href="https://insights.dsij.in/dsijarticledetail/rs-73882-crore-order-book-indias-largest-defence-electronics-company-reports-q4fy26-results-pat-rises-5-yoy-announces-dividend-id021-57216">order book</a>; <a href="https://scanx.trade/stock-market-news/companies/bharat-electronics-q1-results-ebitda-margin-at-25-83-fy27-targets-28-margin/46753643">Q1 FY27</a>; <a href="https://www.business-standard.com/markets/news/order-inflows-execution-to-keep-growth-elevated-for-bharat-electronics-126072801341_1.html">inflow and QRSAM</a>.</li>
+    <li>Data Patterns: <a href="https://www.investing.com/news/company-news/data-patterns-q1-fy27-slides-revenue-rises-but-margins-compress-93CH-4827016">Q1 FY27 slides</a>; <a href="https://upstox.com/news/market-news/stocks/data-patterns-shares-collapse-7-as-q1-fy-27-earnings-show-subdued-performance/article-197883/">share reaction</a>; <a href="https://www.sahi.com/news/data-patterns-confirms-fy27-guidance-targeting-20-25-revenue-growth-and-2-000-cr-new-orders-3950-PE1_COR">guidance</a>.</li>
+    <li>Astra Microwave: <a href="https://upstox.com/news/market-news/stocks/astra-microwave-products-shares-plunge-9-as-q1-fy-27-results-disappoint-investors-check-all-numbers/article-198395/">Q1 FY27</a>; <a href="https://www.multibagg.ai/market-pulse/articles/astra-microwave-q1fy27-orderbook-guidance-cmswwk6gu022m0zo43fo9ruiw">order book and guidance</a>.</li>
+    <li>Apollo, Paras, C2C, Sigma: <a href="https://scanx.trade/stock-market-news/companies/apollo-micro-systems-q1-results-net-profit-jumps-43-yoy/47731471">Apollo Q1 FY27</a>; <a href="https://www.sahi.com/news/apollo-micro-confirms-40-45-fy27-revenue-growth-guidance-targets-3-500-4-000-crore-order-book-4661-PE1_COR">Apollo guidance</a>; <a href="https://www.business-standard.com/markets/capital-market-news/paras-defence-q1-pat-jumps-22-yoy-to-rs-21-cr-126080701375_1.html">Paras Q1 FY27</a>; <a href="https://upstox.com/news/market-news/stocks/mtar-technologies-paras-defence-asta-microwave-and-others-witness-strong-fii-buying-in-q1-fy-27-shares-soar-up-to-180/article-198888/">FII buying in defence small caps</a>; <a href="https://www.screener.in/company/C2C/">C2C financials</a>; <a href="https://scanx.trade/stock-market-news/stocks/megasoft-limited-rebrands-as-sigma-advanced-systems-limited-with-new-trading-symbol-sigmaadv/31766184">Megasoft renamed Sigma</a>; <a href="https://www.tipranks.com/news/company-announcements/sigma-advanced-systems-posts-strong-q1-fy2027-and-deepens-global-aerospace-and-defence-footprint">Sigma Q1 FY27</a>.</li>
+    <li>Others: <a href="https://www.marketscreener.com/quote/stock/URAVI-DEFENCE-AND-TECHNOL-42547882/news/Uravi-T-Wedge-Lamps-Limited-has-Changed-its-Name-to-URAVI-DEFENCE-AND-TECHNOLOGY-LIMITED-47520443/">Uravi name change</a>; <a href="https://www.whalesbook.com/corporate-news/English/industrial-goodsservices/Precision-Electronics-Reports-FY26-Profit-at-indian-rupee144-Crore-Shifts-Noida-Operations/6a197adf6ec823f1f291c705">Precision Electronics FY26</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": -1.5}, {"y": 2013, "v": 2.8}, {"y": 2014, "v": 2.9}, {"y": 2015, "v": 9.7}, {"y": 2016, "v": -10.9}, {"y": 2017, "v": -9.3}, {"y": 2018, "v": -18.8}, {"y": 2019, "v": 1.3}, {"y": 2020, "v": -4.4}, {"y": 2021, "v": -13.4}, {"y": 2022, "v": -6.2}, {"y": 2023, "v": -7.1}, {"y": 2024, "v": -5.3}, {"y": 2025, "v": -19.1}, {"y": 2026, "v": 1.4}], "AprJul": [{"y": 2012, "v": -4.7}, {"y": 2013, "v": -9.7}, {"y": 2014, "v": 86.4}, {"y": 2015, "v": 1.4}, {"y": 2016, "v": -1.3}, {"y": 2017, "v": 8.4}, {"y": 2018, "v": -21.4}, {"y": 2019, "v": -2.8}, {"y": 2020, "v": 61.6}, {"y": 2021, "v": 29.1}, {"y": 2022, "v": 19.9}, {"y": 2023, "v": 44.2}, {"y": 2024, "v": 43.0}, {"y": 2025, "v": 48.0}, {"y": 2026, "v": 39.4}], "AugSep": [{"y": 2012, "v": -2.6}, {"y": 2013, "v": -1.8}, {"y": 2014, "v": -7.9}, {"y": 2015, "v": -5.9}, {"y": 2016, "v": -5.3}, {"y": 2017, "v": -0.4}, {"y": 2018, "v": -16.7}, {"y": 2019, "v": -7.8}, {"y": 2020, "v": -0.6}, {"y": 2021, "v": -1.1}, {"y": 2022, "v": 20.7}, {"y": 2023, "v": 6.7}, {"y": 2024, "v": -17.5}, {"y": 2025, "v": 16.0}], "OctDec": [{"y": 2012, "v": -2.6}, {"y": 2013, "v": 22.8}, {"y": 2014, "v": 23.1}, {"y": 2015, "v": 22.0}, {"y": 2016, "v": 9.6}, {"y": 2017, "v": -6.4}, {"y": 2018, "v": -1.2}, {"y": 2019, "v": -6.1}, {"y": 2020, "v": -10.7}, {"y": 2021, "v": 12.4}, {"y": 2022, "v": 0.5}, {"y": 2023, "v": 18.4}, {"y": 2024, "v": 9.2}, {"y": 2025, "v": -12.9}], "SepNov": [{"y": 2012, "v": -16.0}, {"y": 2013, "v": 1.0}, {"y": 2014, "v": -8.4}, {"y": 2015, "v": 22.2}, {"y": 2016, "v": 12.8}, {"y": 2017, "v": -4.1}, {"y": 2018, "v": -14.5}, {"y": 2019, "v": -4.4}, {"y": 2020, "v": -16.4}, {"y": 2021, "v": 13.6}, {"y": 2022, "v": 8.6}, {"y": 2023, "v": 21.1}, {"y": 2024, "v": -3.4}, {"y": 2025, "v": -5.4}], "JanMar": [{"y": 2012, "v": -7.2}, {"y": 2013, "v": -2.6}, {"y": 2014, "v": -9.6}, {"y": 2015, "v": 16.8}, {"y": 2016, "v": -14.1}, {"y": 2017, "v": -4.5}, {"y": 2018, "v": -25.6}, {"y": 2019, "v": -1.8}, {"y": 2020, "v": -2.3}, {"y": 2021, "v": -10.9}, {"y": 2022, "v": -11.6}, {"y": 2023, "v": -1.2}, {"y": 2024, "v": -1.2}, {"y": 2025, "v": -18.6}, {"y": 2026, "v": 3.1}]}, "my": {"1": {"2012": -5.5, "2013": -5.7, "2014": -11.0, "2015": 6.2, "2016": -4.1, "2017": 5.3, "2018": -8.2, "2019": -2.8, "2020": 3.1, "2021": 2.3, "2022": -5.8, "2023": 6.2, "2024": 4.2, "2025": 0.6, "2026": 2.0}, "2": {"2012": 2.3, "2013": 0.1, "2014": -4.8, "2015": 11.3, "2016": -8.3, "2017": -4.5, "2018": -9.9, "2019": -4.2, "2020": -2.3, "2021": -10.3, "2022": -7.0, "2023": -4.6, "2024": 6.7, "2025": -19.8, "2026": -1.7}, "3": {"2012": -3.5, "2013": 2.9, "2014": 8.2, "2015": -1.0, "2016": -2.0, "2017": -4.7, "2018": -10.8, "2019": 6.1, "2020": -2.9, "2021": -3.1, "2022": 1.2, "2023": -2.6, "2024": -11.2, "2025": 2.5, "2026": 2.9}, "4": {"2012": 6.7, "2013": -3.0, "2014": 20.1, "2015": -9.0, "2016": 4.9, "2017": 14.4, "2018": 2.9, "2019": -2.1, "2020": 9.1, "2021": 2.7, "2022": 13.4, "2023": 14.4, "2024": 16.5, "2025": 19.4, "2026": 22.9}, "5": {"2012": -2.7, "2013": 4.7, "2014": 33.4, "2015": 0.5, "2016": -8.7, "2017": -4.3, "2018": -10.7, "2019": 11.2, "2020": 8.1, "2021": 3.0, "2022": -2.0, "2023": 1.7, "2024": 15.2, "2025": 23.5, "2026": 9.9}, "6": {"2012": -1.7, "2013": -4.5, "2014": 18.9, "2015": -3.5, "2016": 7.3, "2017": 1.3, "2018": -10.0, "2019": -2.6, "2020": 26.5, "2021": 18.1, "2022": -3.1, "2023": 17.0, "2024": 6.4, "2025": 6.5, "2026": 13.8}, "7": {"2011": 11.8, "2012": -6.7, "2013": -6.6, "2014": -5.7, "2015": 15.6, "2016": -4.3, "2017": -3.1, "2018": -2.0, "2019": -7.7, "2020": 1.5, "2021": 2.1, "2022": 12.7, "2023": 3.1, "2024": -2.6, "2025": -6.1, "2026": -10.5}, "8": {"2011": -6.2, "2012": 4.2, "2013": 6.8, "2014": 2.3, "2015": -7.5, "2016": -6.1, "2017": 3.2, "2018": -4.0, "2019": -6.6, "2020": 6.0, "2021": -13.0, "2022": 15.0, "2023": 8.0, "2024": -7.1, "2025": 13.5, "2026": 2.1}, "9": {"2011": 11.1, "2012": -6.8, "2013": -8.7, "2014": -9.7, "2015": 1.8, "2016": 0.7, "2017": -3.5, "2018": -13.1, "2019": -1.0, "2020": -6.0, "2021": 12.8, "2022": 5.3, "2023": -1.4, "2024": -11.0, "2025": 2.2}, "10": {"2011": 5.9, "2012": -2.4, "2013": -0.9, "2014": 5.4, "2015": 10.3, "2016": 4.1, "2017": -1.4, "2018": 5.2, "2019": -1.0, "2020": -11.9, "2021": 2.3, "2022": 1.3, "2023": 10.4, "2024": 4.4, "2025": -3.3}, "11": {"2011": 8.3, "2012": -6.6, "2013": 10.6, "2014": -3.0, "2015": 9.0, "2016": 8.0, "2017": 0.8, "2018": -7.2, "2019": -2.2, "2020": 3.3, "2021": -1.1, "2022": 1.4, "2023": 10.6, "2024": 3.2, "2025": -4.1}, "12": {"2011": -4.2, "2012": 6.7, "2013": 10.0, "2014": 19.0, "2015": 1.5, "2016": -2.4, "2017": -5.6, "2018": 0.5, "2019": -2.7, "2020": 0.3, "2021": 11.5, "2022": -2.0, "2023": -4.6, "2024": 1.8, "2025": -5.5}}, "basket": ["Bharat Electronics Limited", "Data Patterns (India) Limited", "Astra Microwave Products Ltd.", "Apollo Micro Systems Ltd.", "Paras Defence & Space Technologies Ltd.", "C2C Advanced Systems Ltd."], "nbasket": 6, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -0.1, "rel": -0.9, "hit": 8, "n": 15}, {"m": 2, "abs": -4.9, "rel": -3.8, "hit": 4, "n": 15}, {"m": 3, "abs": -1.4, "rel": -1.2, "hit": 6, "n": 15}, {"m": 4, "abs": 11.4, "rel": 8.9, "hit": 12, "n": 15}, {"m": 5, "abs": 6.7, "rel": 5.5, "hit": 10, "n": 15}, {"m": 6, "abs": 7.8, "rel": 6.0, "hit": 9, "n": 15}, {"m": 7, "abs": 1.4, "rel": -0.5, "hit": 6, "n": 16}, {"m": 8, "abs": 0.5, "rel": 0.7, "hit": 9, "n": 16}, {"m": 9, "abs": -1.2, "rel": -1.8, "hit": 6, "n": 15}, {"m": 10, "abs": 4.0, "rel": 1.9, "hit": 9, "n": 15}, {"m": 11, "abs": 3.0, "rel": 2.1, "hit": 9, "n": 15}, {"m": 12, "abs": 2.3, "rel": 1.6, "hit": 8, "n": 15}], "cy": [{"y": 2012, "b": 8.5, "n": 27.7, "rel": -19.2, "partial": false}, {"y": 2013, "b": 11.3, "n": 6.8, "rel": 4.6, "partial": false}, {"y": 2014, "b": 135.9, "n": 31.4, "rel": 104.6, "partial": false}, {"y": 2015, "b": 29.4, "n": -4.1, "rel": 33.5, "partial": false}, {"y": 2016, "b": -9.3, "n": 3.0, "rel": -12.3, "partial": false}, {"y": 2017, "b": 24.6, "n": 28.6, "rel": -4.0, "partial": false}, {"y": 2018, "b": -50.0, "n": 3.2, "rel": -53.2, "partial": false}, {"y": 2019, "b": -6.8, "n": 12.0, "rel": -18.9, "partial": false}, {"y": 2020, "b": 49.4, "n": 14.9, "rel": 34.5, "partial": false}, {"y": 2021, "b": 57.7, "n": 24.1, "rel": 33.6, "partial": false}, {"y": 2022, "b": 34.6, "n": 4.3, "rel": 30.3, "partial": false}, {"y": 2023, "b": 104.9, "n": 20.0, "rel": 84.9, "partial": false}, {"y": 2024, "b": 36.1, "n": 8.8, "rel": 27.3, "partial": false}, {"y": 2025, "b": 33.5, "n": 10.5, "rel": 23.0, "partial": false}, {"y": 2026, "b": 26.2, "n": -10.7, "rel": 36.9, "partial": true}], "dd": [{"co": "Bharat Electronics", "peak": "Jul 2025", "fp": -9, "y1": -4}, {"co": "Data Patterns (India)", "peak": "Jul 2024", "fp": 33, "y1": 59}, {"co": "Sigma Advanced Systems", "peak": "Nov 2025", "fp": 290, "y1": 480}, {"co": "Astra Microwave Products", "peak": "Jun 2025", "fp": 38, "y1": 50}, {"co": "Apollo Micro Systems", "peak": "Sep 2025", "fp": 8, "y1": 8}, {"co": "Paras Defence & Space Technologies", "peak": "Jul 2025", "fp": 47, "y1": 85}, {"co": "C2C Advanced Systems", "peak": "Jan 2025", "fp": -78, "y1": -74}, {"co": "Precision Electronics", "peak": "Oct 2025", "fp": -30, "y1": -14}, {"co": "Uravi Defence and Technology", "peak": "May 2025", "fp": -81, "y1": -65}], "win": {"FebMar": {"mean": -5.2, "median": -5.3, "hit": 5, "n": 15}, "AprJul": {"mean": 22.8, "median": 19.9, "hit": 10, "n": 15}, "AugSep": {"mean": -1.7, "median": -2.2, "hit": 3, "n": 14}, "OctDec": {"mean": 5.6, "median": 4.8, "hit": 8, "n": 14}, "SepNov": {"mean": 0.5, "median": -3.7, "hit": 6, "n": 14}, "JanMar": {"mean": -6.1, "median": -4.5, "hit": 2, "n": 15}}, "ytd": {"b": 26.2, "n": -10.7}, "notes": {"2012": "+8.5% against +27.7%. Only BEL (\u22123%) and Astra Microwave (+18%); defence orders were slow.", "2013": "+11.3% against +6.8%. Astra +49%, BEL \u221221%.", "2014": "+135.9% against +31.4%. The election and Make in India: BEL +185%, Astra +95%.", "2015": "+29.4% against \u22124.1%. BEL +40%, Astra +16% as the first Make in India orders flowed.", "2016": "\u22129.3% against +3.0%. BEL flat, Astra \u221220%.", "2017": "+24.6% against +28.6%. BEL +46%, Astra +4%.", "2018": "\u221250.0% against +3.2%. BEL \u221252% on worries about margins on government-nominated orders and the small-cap crash; Astra \u221232%.", "2019": "\u22126.8% against +12.0%. BEL +14%, Astra +7%; Apollo \u221240%.", "2020": "+49.4% against +14.9%. The Galwan clash and the first indigenisation list: Apollo +69%, Astra +50%, BEL +20%.", "2021": "+57.7% against +24.1%. Astra +88%, BEL +75%, Apollo +33%. Paras (October) and Data Patterns (December) listed.", "2022": "+34.6% against +4.3%. The Ukraine war: Apollo +77%, Data Patterns +44%, BEL +43%; Paras \u221219% after its listing surge.", "2023": "+104.9% against +20.0%. Apollo +290%, Astra +111%, BEL +84%, Data Patterns +70%.", "2024": "+36.1% against +8.8%. BEL +59%, Paras +40%, Data Patterns +33%; Apollo +1%.", "2025": "+33.5% against +10.5%. Operation Sindoor put air-defence electronics in focus: Apollo +136%, BEL and Paras +36%; C2C \u221240%.", "2026": "+26.2% against a Nifty \u221210.7%. FII buying of small caps: Paras +101%, Data Patterns +72%, Astra +66%; BEL \u22122% awaiting QRSAM; C2C \u221258% on going-concern doubts."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>

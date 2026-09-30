@@ -1,0 +1,594 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Transmission and Distribution Utilities Primer</title>
+<meta name="description" content="Industry 39 of 278: the wires business. Regulated returns on transmission assets, the ₹9.15 lakh cr national grid plan, why only 12% of competitively bid projects finish on time, and the five listed names — including one under trading restrictions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --sunk:#E7EBE2; --ink:#15201A; --ink2:#35423A; --muted:#5E6B63; --line:#D3D9CF;
+  --leaf:#2B6A44; --leaf-soft:#DCEBDF; --rain:#2A5B8A; --rain-soft:#DDE7F2; --neg:#B23B2A; --neg-soft:#F4E0DA; --amber:#9A6A12; --amber-soft:#F4E8D0;
+  --tox-red:#C62828; --tox-yellow:#E0AE1C; --tox-blue:#1F5FAE; --tox-green:#2E8B4A;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+    --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+    --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1411; --surface:#161D18; --sunk:#1C241E; --ink:#E4EAE4; --ink2:#C3CDC5; --muted:#8F9B93; --line:#2B352E;
+  --leaf:#7CC596; --leaf-soft:#1C2E22; --rain:#8DB3DE; --rain-soft:#1A2633; --neg:#EE8A75; --neg-soft:#3A221D; --amber:#E0B25A; --amber-soft:#33291A;
+  --tox-red:#EF6F63; --tox-yellow:#F0C74E; --tox-blue:#6FA3E6; --tox-green:#6CC286;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--rain)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:28px 96px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:52px}
+@media (max-width:1000px){.wrap{grid-template-columns:minmax(0,1fr);gap:24px}}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;max-height:calc(100vh - 40px);overflow:auto;font-family:var(--sans);font-size:13.5px;line-height:1.35}
+nav.toc .toc-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc li{counter-increment:t}
+nav.toc a{display:grid;grid-template-columns:22px 1fr;gap:4px;padding:5px 6px;border-radius:6px;color:var(--ink2);text-decoration:none}
+nav.toc a::before{content:counter(t);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:1px}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+@media (max-width:1000px){nav.toc{position:static;max-height:none}nav.toc details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}nav.toc ol{margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+@media (min-width:1001px){nav.toc summary{display:none}nav.toc details>ol{display:grid}}
+main{min-width:0}
+header.hero{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.series{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.series svg{flex:none}
+h1{font-family:var(--sans);font-stretch:88%;font-weight:800;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.02;letter-spacing:-.01em;margin:10px 0 8px;text-wrap:balance}
+.lede{font-size:1.14rem;color:var(--ink2);max-width:62ch;margin:0 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink2);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:22px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .l{font-family:var(--sans);font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px}
+section{padding-top:44px;scroll-margin-top:16px}
+.eyebrow{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin:0 0 6px}
+h2{font-family:var(--sans);font-stretch:90%;font-weight:750;font-size:clamp(1.5rem,3vw,1.95rem);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;margin:26px 0 8px;text-wrap:balance}
+p,ul,ol{max-width:70ch}
+p{margin:0 0 14px}
+ul,ol{padding-left:1.2em;margin:0 0 14px}
+li{margin:0 0 6px}
+.note{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.5}
+.box{border-radius:12px;padding:16px 18px;margin:18px 0;max-width:74ch}
+.box .tag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;margin-bottom:8px}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.kid{background:var(--leaf-soft)} .kid .tag{background:var(--leaf);color:var(--surface)}
+.client{background:var(--rain-soft)} .client .tag{background:var(--rain);color:var(--surface)}
+.pm{background:var(--amber-soft)} .pm .tag{background:var(--amber);color:var(--surface)}
+.warn{background:var(--neg-soft)} .warn .tag{background:var(--neg);color:var(--surface)}
+.tbl-wrap{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:14px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pos{color:var(--leaf)} .negc{color:var(--neg)}
+code,.tk{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 5px;border-radius:4px}
+/* value chain */
+.chain{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+@media (max-width:1100px){.chain{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.chain{grid-template-columns:minmax(0,1fr)}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 13px;position:relative;font-family:var(--sans);font-size:13.5px;line-height:1.42}
+.stage .no{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage h4{margin:2px 0 6px;font-size:15px;font-weight:750;line-height:1.2}
+.stage .an{color:var(--leaf);font-style:italic;font-family:var(--serif);font-size:14px;margin-bottom:6px}
+.stage .who{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink2)}
+.stage .m{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.stage.hot{border-color:var(--leaf);box-shadow:0 0 0 1px var(--leaf) inset}
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}
+@media (max-width:760px){.lanes{grid-template-columns:minmax(0,1fr)}}
+.lane{background:var(--sunk);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.lane b{display:block;font-size:14.5px;margin-bottom:4px}
+/* calendar */
+.cal-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.cal{min-width:760px;display:grid;grid-template-columns:150px repeat(12,minmax(0,1fr));font-family:var(--sans);font-size:12px}
+.cal .mh{padding:8px 4px;text-align:center;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);letter-spacing:.05em}
+.cal .rh{padding:10px 10px;font-weight:700;color:var(--ink2);border-top:1px solid var(--line);grid-column:1;display:flex;align-items:center;line-height:1.2}
+.cal .row{display:contents}
+.cal .bar{margin:6px 3px;padding:5px 7px;border-radius:6px;line-height:1.2;font-weight:600;align-self:center}
+.b-rain{background:var(--rain-soft);color:var(--rain)} .b-leaf{background:var(--leaf-soft);color:var(--leaf)} .b-amb{background:var(--amber-soft);color:var(--amber)} .b-neg{background:var(--neg-soft);color:var(--neg)} .b-sunk{background:var(--sunk);color:var(--ink2)}
+.cal .cellline{border-top:1px solid var(--line)}
+/* charts */
+figure{margin:18px 0 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.c-axis{stroke:var(--line);stroke-width:1}
+.c-zero{stroke:var(--ink2);stroke-width:1}
+.c-txt{fill:var(--muted);font-family:var(--sans);font-size:12px}
+.c-val{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+.c-pos{fill:var(--leaf)} .c-neg{fill:var(--neg)} .c-band{fill:var(--leaf-soft)} .c-band2{fill:var(--neg-soft)}
+/* signals */
+.sig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media (max-width:760px){.sig{grid-template-columns:minmax(0,1fr)}}
+.sg{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.45}
+.sg .t{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ch-bad{background:var(--neg-soft);color:var(--neg)} .ch-good{background:var(--leaf-soft);color:var(--leaf)} .ch-mid{background:var(--amber-soft);color:var(--amber)}
+/* glossary */
+.gtools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 6px;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.gtools input{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-width:0;width:min(360px,100%)}
+.gl h3{margin-top:22px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.gl dl{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:0;margin:0;border-top:1px solid var(--line);max-width:none}
+@media (max-width:640px){.gl dl{grid-template-columns:minmax(0,1fr)}}
+.gl dt{font-family:var(--sans);font-weight:700;font-size:14.5px;padding:9px 12px 9px 0;border-bottom:1px solid var(--line)}
+.gl dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+@media (max-width:640px){.gl dt{border-bottom:0;padding-bottom:0}}
+.tox{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.tox i{width:12px;height:12px;display:inline-block;transform:rotate(45deg);border-radius:2px}
+details.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0;max-width:74ch}
+details.q summary{cursor:pointer;font-weight:600;font-family:var(--sans);font-size:15px}
+details.q p{margin:10px 0 2px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+.src li{font-family:var(--sans);font-size:13.5px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+
+.c-pos2{fill:var(--rain)}
+
+.note-cell{font-size:.9rem;line-height:1.45;min-width:260px}
+</style>
+<div class="wrap">
+<nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><p class="toc-h">Power Transmission &amp; D Utilities · reading order</p><ol>
+<li><a href="#brief">The industry in 60 seconds</a></li>
+<li><a href="#products">What is sold</a></li>
+<li><a href="#chain">The value chain</a></li>
+<li><a href="#players">Who sits where</a></li>
+<li><a href="#money">How money is made</a></li>
+<li><a href="#rawmat">Critical inputs</a></li>
+<li><a href="#calendar">The business calendar</a></li>
+<li><a href="#season">What the stocks do</a></li>
+<li><a href="#drivers">What moves margins</a></li>
+<li><a href="#history">A decade of cycles</a></li>
+<li><a href="#world">The global picture</a></li>
+<li><a href="#tech">Where the business is going</a></li>
+<li><a href="#policy">Policy and regulation</a></li>
+<li><a href="#now">Where the cycle stands now</a></li>
+<li><a href="#watch">What to track</a></li>
+<li><a href="#proxies">Adjacent industries</a></li>
+<li><a href="#ask">Questions for management</a></li>
+<li><a href="#debates">Myths and debates</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#test">Test yourself</a></li>
+<li><a href="#sources">Sources and method</a></li>
+</ol></details></nav>
+<main>
+
+<header class="hero">
+  <div class="series">Industry primer · 39 of 278 · Power family, part 4</div>
+  <h1>Power Transmission &amp; Distribution Utilities</h1>
+  <p class="lede">The wires. Generation gets the attention, but electricity is worthless where it is made — it has to travel from the deserts of Rajasthan and the coalfields of Odisha to the cities that consume it. The companies that own those lines earn a regulated return on every rupee of steel and conductor they put in the ground, which makes this the most predictable business in the Power family and, right now, the one with the largest building programme.</p>
+  <div class="meta"><span><b>Watchlist</b> Industry – Energy, Electricals, Tech, Logistics</span><span><b>Companies</b> 5 listed (1 flagged, 1 restricted)</span><span><b>Data to</b> 18 Sep 2026</span><span><b>Next</b> Power Trading</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">₹9.15 lakh cr</div><div class="l">Investment envisaged in the National Electricity Plan for transmission through 2032</div></div>
+    <div class="stat"><div class="n">12%</div><div class="l">Share of competitively bid transmission projects commissioned on schedule by March 2026</div></div>
+    <div class="stat"><div class="n">₹5,277 cr</div><div class="l">Power Grid's quarterly capitalisation, more than triple a year earlier</div></div>
+    <div class="stat"><div class="n">₹71,779 cr</div><div class="l">Adani Energy Solutions' transmission order book under construction</div></div>
+  </div>
+</header>
+
+<section id="brief" data-toc="The industry in 60 seconds">
+  <p class="eyebrow">1 · The industry in 60 seconds</p>
+  <h2>A toll road for electrons, with a building boom</h2>
+  <div class="box kid"><span class="tag">Explain it to a 10-year-old</span>
+    <p>Electricity is made in big power stations far from where people live — in deserts where the sun is strong, or next to coal mines. To get it to your house, it travels along huge steel towers carrying thick cables, sometimes for a thousand kilometres. The companies that build and own those towers do not make electricity and do not sell it; they charge a fee for letting it pass, like a toll bridge. The government decides the fee, and it is set so the company earns a fixed profit on the money it spent building the line. So the only way to earn more is to build more lines — and India needs an enormous number of new ones, because the new power stations are in places the old wires do not reach.</p>
+  </div>
+  <div class="box client"><span class="tag">Say it to a client in one minute</span>
+    <p>This is the least cyclical business in the power chain, with the clearest multi-year capital-expenditure runway.</p>
+    <ul>
+      <li><b>The programme:</b> the National Electricity Plan envisages about ₹9.15 lakh cr of transmission investment through 2032, with roughly 1,37,500 circuit kilometres of new lines; ICRA expects ₹5–6 trillion of capex by FY32.</li>
+      <li><b>Power Grid</b> is the incumbent: capex ₹7,765 cr in the quarter (+11%), capitalisation ₹5,277 cr (more than tripled), and FY27 guidance of ₹37,000 cr capex and ₹30,000 cr capitalisation on a ₹3.25 lakh cr asset base.</li>
+      <li><b>Adani Energy Solutions</b> is the challenger: profit +130% to ₹1,237 cr, EBITDA above ₹3,000 cr for the first time, a ₹71,779 cr transmission order book and 24.6 million smart meters ordered.</li>
+      <li><b>The risk is execution, not demand.</b> Only about 12% of competitively bid projects commissioned by March 2026 finished on schedule; delays run from two months to three years on land and right-of-way issues.</li>
+      <li><b>Read the basket carefully:</b> its −18% is dominated by Reliance Infrastructure, down 70% and now tradeable only once a week under a 5% band.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="products" data-toc="What is sold">
+  <p class="eyebrow">2 · What is sold</p>
+  <h2>Three regulated businesses</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Business</th><th>What it is</th><th>How it earns</th><th>Who</th></tr></thead><tbody>
+    <tr><td>Inter-state transmission</td><td>The national high-voltage backbone moving power between states</td><td>A regulated transmission charge, or a tariff bid competitively for 35 years</td><td>Power Grid, Adani Energy Solutions</td></tr>
+    <tr><td>Intra-state transmission</td><td>Lines within a state</td><td>State regulator's tariff</td><td>State utilities and private licensees</td></tr>
+    <tr><td>Distribution</td><td>The local wires, meters and billing that reach consumers</td><td>A regulated retail tariff, plus efficiency gains from cutting losses</td><td>CESC in Kolkata, Adani in Mumbai, Tata Power and Torrent elsewhere (see 037)</td></tr>
+    <tr><td>Smart metering</td><td>Installing and operating metering systems for utilities</td><td>An annuity per meter over the contract life</td><td>Adani Energy Solutions — 24.6 million meters ordered, 13.4 million installed</td></tr>
+  </tbody></table></div>
+  <div class="box ana"><span class="tag">Analogy</span><p>Transmission is the national highway and distribution is the lane to your gate. The highway operator is paid a toll fixed by a regulator to give it a set return on construction cost — it does not care who is driving or what they are carrying. The lane operator has a harder job: it must collect from every household, and in India a substantial share of what it delivers is never paid for at all.</p></div>
+</section>
+
+<section id="chain" data-toc="The value chain">
+  <p class="eyebrow">3 · The value chain</p>
+  <h2>From a bid to a regulated asset</h2>
+  <div class="chain">
+    <div class="stage"><div class="no">01</div><h4>Planning</h4><div class="an">Where the wires go</div>The central authority identifies corridors needed for new generation and demand.<div class="who">Central Electricity Authority</div><div class="m">₹9.15 lakh cr of plan through 2032</div></div>
+    <div class="stage hot"><div class="no">02</div><h4>Award</h4><div class="an">Who builds it</div>Tariff-based competitive bidding, now the default route; the lowest tariff wins a 35-year licence.<div class="who">Bidders including Power Grid and Adani Energy Solutions</div><div class="m">92 schemes worth ₹1.24 lakh cr awarded; 41 under bidding</div></div>
+    <div class="stage hot"><div class="no">03</div><h4>Right of way and land</h4><div class="an">The hard part</div>Acquiring the corridor across farmland, forest and towns.<div class="who">Developers with state support</div><div class="m">The main reason 88% of projects are late</div></div>
+    <div class="stage"><div class="no">04</div><h4>Construction</h4><div class="an">Towers and conductors</div>Foundations, towers, stringing, substations and transformers.<div class="who">T&amp;D EPC contractors (see 048), equipment makers (042, 043, 044)</div><div class="m">Two to four years per corridor</div></div>
+    <div class="stage"><div class="no">05</div><h4>Capitalisation</h4><div class="an">When it starts earning</div>The commissioned asset enters the regulated base and begins earning its return.<div class="who">The utility</div><div class="m">Power Grid capitalised ₹5,277 cr in one quarter</div></div>
+    <div class="stage"><div class="no">06</div><h4>Operation</h4><div class="an">Availability</div>Keeping the line available; the charge is earned on availability, not on flow.<div class="who">The utility</div><div class="m">Very high margins, very low variability</div></div>
+  </div>
+  <h3>Each stage for a 10-year-old</h3>
+  <ul>
+    <li><b>Planning:</b> engineers work out which new lines the country will need in ten years.</li>
+    <li><b>Award:</b> companies compete by offering the lowest toll, and the winner gets to build and own the line for 35 years.</li>
+    <li><b>Right of way:</b> the line must cross thousands of people's land, and each one must agree. This is what takes years.</li>
+    <li><b>Construction:</b> steel towers go up and cables are strung between them.</li>
+    <li><b>Capitalisation:</b> the moment the line is switched on, the company starts earning its fee.</li>
+    <li><b>Operation:</b> as long as the line is available to carry power, the fee is paid — whether or not power actually flows.</li>
+  </ul>
+  <div class="box pm"><span class="tag">Fund-manager lens</span><p>This is the purest asset-growth business in the market: earnings are a regulated return on capitalised assets, so the only meaningful forecast is how much gets commissioned and when. Watch <b>capitalisation, not capex</b> — Power Grid spent ₹7,765 cr but capitalised ₹5,277 cr, and only the second number starts earning. Watch <b>the order book against the delivery record</b>, because a ₹71,779 cr book is worth what the company can actually commission, and the industry's on-time record is 12%. And watch <b>the regulated return itself</b>, which is periodically reviewed and is the one thing that can reprice the entire sector overnight.</p></div>
+</section>
+
+<section id="players" data-toc="Who sits where">
+  <p class="eyebrow">4 · Who sits where</p>
+  <h2>The 5 companies</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>What it is</th><th>Q1 FY27 and 2026 so far</th></tr></thead><tbody>
+    <tr><td>Power Grid Corporation (~₹2.45 lakh cr)</td><td>The national transmission utility: 1,86,595 circuit kilometres across 1,595 lines and 6,34,516 MVA of transformation capacity across 291 substations, on gross fixed assets of ₹3.25 lakh cr.</td><td>Capex ₹7,765 cr (+11%) and capitalisation ₹5,277 cr against ₹1,683 cr a year earlier — more than triple. FY27 guidance retained at ₹37,000 cr capex and ₹30,000 cr capitalisation. Profit ₹3,598 cr, slightly lower, with regulatory review flagged as a headwind. Stock +2.2%, −26% from its September 2024 peak.</td></tr>
+    <tr><td>Adani Energy Solutions (~₹1.65 lakh cr)</td><td>The largest private transmission developer, plus the Mumbai distribution licence and a smart-metering business.</td><td>Total income ₹9,852 cr (+40%), EBITDA ₹3,178 cr (+58%) — above ₹3,000 cr for the first time — and profit ₹1,237 cr, up 130%. Transmission order book under construction ₹71,779 cr against ₹59,936 cr in FY25. Smart metering order book 24.6 million meters with 13.4 million installed, plus a proposed acquisition of IntelliSmart. Stock +39.8% and still 65% below its September 2022 peak.</td></tr>
+    <tr><td>CESC (~₹18,800 cr)</td><td>The Kolkata integrated utility — generation plus one of India's oldest distribution licences — with newer distribution franchises elsewhere.</td><td>−15.5% in 2026, −32% from its August 2024 peak, after +73% in 2023 and +40% in 2024.</td></tr>
+    <tr><td>Reliance Infrastructure (~₹2,100 cr)</td><td>Formerly a large integrated utility and infrastructure group; now a distressed entity.</td><td>−69.6% in 2026 and −88% from its June 2025 peak. Its shares are under an Additional Surveillance Measure linked to insolvency proceedings, permitting trading only once a week within a 5% band — a restriction the company has asked the regulator to review, citing more than seven lakh public shareholders. A fresh central agency case against the group's promoter in February 2026 preceded the fall. This is a legal and solvency situation, not a utility investment.</td></tr>
+    <tr><td>RMC Switchgears (~₹220 cr)</td><td><b>Flagged.</b> A switchgear and metering equipment maker, listed April 2026 — a manufacturer, not a utility. It belongs with 043.</td><td>−56% from its April 2026 listing peak. Excluded from all statistics here.</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><span class="tag">Why the basket says −18% and the businesses say otherwise</span><p>Four names carry the basket, and one of them — Reliance Infrastructure — has fallen 70% this year for reasons that have nothing to do with the transmission cycle. The median stock is −7%, and the two operating businesses that matter reported a tripled capitalisation and a 130% profit increase respectively. This is the clearest case in the Power family for reading the constituents rather than the aggregate, and for treating a distressed shell under trading restrictions as a separate category rather than a cheap utility.</p></div>
+</section>
+
+<section id="money" data-toc="How money is made">
+  <p class="eyebrow">5 · How money is made</p>
+  <h2>Return on the asset base, earned on availability</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Element</th><th>What it means</th><th>Where it stands</th></tr></thead><tbody>
+    <tr><td>Regulated asset base</td><td>Capitalised transmission assets on which a return is allowed</td><td>Power Grid's gross fixed assets: ₹3.25 lakh cr</td></tr>
+    <tr><td>Allowed return on equity</td><td>The rate the regulator permits</td><td>Under periodic review — the sector's single largest risk</td></tr>
+    <tr><td>Capitalisation</td><td>Projects commissioned and moved into the earning base</td><td>₹5,277 cr in the quarter, against ₹1,683 cr a year earlier</td></tr>
+    <tr><td>Availability</td><td>The condition for earning the full charge</td><td>Consistently high; transmission lines rarely fail</td></tr>
+    <tr><td>Competitively bid projects</td><td>A fixed tariff for 35 years, won at auction</td><td>92 schemes worth ₹1.24 lakh cr awarded; the return depends entirely on building to budget</td></tr>
+    <tr><td>Smart metering annuity</td><td>Payment per meter over the contract life</td><td>24.6 million meters ordered at Adani Energy Solutions</td></tr>
+  </tbody></table></div>
+  <h3>Why capitalisation matters more than capex</h3>
+  <p>A transmission utility spends money for years before earning anything from it. Capital expenditure is cash going out; capitalisation is the moment a completed line enters the regulated base and begins earning its allowed return. The two can diverge sharply, and Power Grid's June quarter shows why it matters: capex rose 11% to ₹7,765 cr, but capitalisation more than tripled to ₹5,277 cr, meaning a large tranche of previously funded work finally came on stream. For the competitively bid projects that now dominate new awards, the arithmetic is harsher still — the tariff is fixed for 35 years at the bid price, so every month of delay and every rupee of cost overrun comes directly out of the return. With only about 12% of such projects commissioned on schedule and delays running to three years, the gap between an order book and an earning asset is the central analytical problem in this industry.</p>
+  <div class="box ana"><span class="tag">Analogy</span><p>Winning a transmission bid is like agreeing to build a bridge for a fixed toll set today, collectible for 35 years starting whenever the bridge opens. If the land takes three extra years, you still get the same toll — you simply get it later, having paid interest throughout. That is why the on-time record, not the order book, is the number that decides returns.</p></div>
+</section>
+
+<section id="rawmat" data-toc="Critical inputs">
+  <p class="eyebrow">6 · Critical inputs</p>
+  <h2>What the industry depends on</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Input</th><th>Why it is critical</th><th>2026 situation</th></tr></thead><tbody>
+    <tr><td>Right of way and land</td><td>A line crosses thousands of holdings; each can stop it</td><td>The main cause of the 88% late rate</td></tr>
+    <tr><td>Regulatory approvals and forest clearances</td><td>Required before construction</td><td>A recurring source of multi-year delay</td></tr>
+    <tr><td>Conductors, towers and transformers</td><td>The physical plant</td><td>See 042, 044; steel and aluminium linked</td></tr>
+    <tr><td>EPC contracting capacity</td><td>Skilled crews to string lines at scale</td><td>See 048</td></tr>
+    <tr><td>Capital</td><td>Multi-year spending before any return</td><td>Power Grid alone plans ₹37,000 cr in FY27</td></tr>
+    <tr><td>The allowed return</td><td>Determines what the asset base earns</td><td>Under regulatory review — flagged by Power Grid as a headwind</td></tr>
+    <tr><td>Generation build-out</td><td>New lines are only needed where new plants are built</td><td>Renewable zones in Rajasthan and Gujarat drive the plan (see 038)</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="calendar" data-toc="The business calendar">
+  <p class="eyebrow">7 · The business calendar</p>
+  <h2>Build in the dry, capitalise before March</h2>
+  <ul>
+    <li><b>October–June:</b> the construction season. Foundations and stringing proceed in dry weather, which is why the two positive windows sit either side of the monsoon.</li>
+    <li><b>July–September:</b> the monsoon halts tower erection and stringing; the weakest stretch operationally and for the shares.</li>
+    <li><b>January–March:</b> the capitalisation push before the financial year ends — good for the accounts, historically poor for the share prices.</li>
+    <li><b>Tariff and regulatory cycles:</b> multi-year tariff periods reset the allowed return; these are step changes, not seasonal ones.</li>
+    <li><b>Bid calendar:</b> competitively bid schemes are tendered irregularly; 41 were under bidding at last count.</li>
+  </ul>
+</section>
+
+<section id="season" data-toc="What the stocks do">
+  <p class="eyebrow">8 · What the stocks do</p>
+  <h2>Seasonality test on TradingView prices</h2>
+  <figure><svg data-chart="month" viewBox="0 0 720 310" role="img" aria-label="Average monthly return minus Nifty"></svg><figcaption>Average monthly return of the equal-weighted basket minus the Nifty, in percentage points; the label under each month is how many years the basket beat the Nifty.</figcaption></figure>
+  <div><p><b>Basket:</b> 4 names (Power Grid Corporation of India Limited, Adani Energy Solutions Ltd, CESC Ltd, Reliance Infrastructure Limited), equal-weighted, monthly from Jul 2011, compared with the Nifty 50.</p><ul><li><b>Strongest months vs the Nifty:</b> Apr +3.6 pts (beat in 9 of 15 years); Jun +3.4 pts (beat in 11 of 15 years); Mar +2.4 pts (beat in 10 of 15 years).</li><li><b>Weakest months:</b> Feb -2.5 pts (beat in 5 of 15 years); Sep -1.5 pts (beat in 7 of 15 years); Jul -1.3 pts (beat in 6 of 16 years).</li><li><b>Windows:</b> Feb–Mar beat the Nifty in 8 of 15 years (median +0.8 pts); Apr–Jul beat the Nifty in 10 of 15 years (median +3.1 pts); Aug–Sep beat the Nifty in 6 of 14 years (median -1.3 pts); Oct–Dec beat the Nifty in 9 of 14 years (median +4.1 pts); Sep–Nov beat the Nifty in 7 of 14 years (median -1.4 pts); Jan–Mar beat the Nifty in 5 of 15 years (median -5.0 pts).</li></ul><p><b>Control:</b> small caps as a whole (Nifty Smallcap 100) beat the Nifty in April in 11 of 15 years, by an average of 3.0 points, and lag in January–February. Part of any April strength is this market-wide effect. After removing it, this industry's own April edge is about +0.6 points.</p><p><b>Reading it:</b> two usable windows and one clear trap. April–July works in 10 of 15 years (median +3.1) and October–December in 9 of 14 (median +4.1) — the construction season either side of the monsoon, when lines are strung and assets are capitalised. January–March is the trap: 5 of 15 years and a median of −5.0, with failures in ten separate years. August–September is also weak (6 of 14), which is when transmission construction stops for the rains.</p><p class="note">A tendency, not a rule: small samples, survivorship bias (only names still listed) and equal weighting. Use it for timing context, not as a signal.</p></div>
+  <figure><svg data-chart="win" data-win="AprJul" viewBox="0 0 720 280" role="img" aria-label="April to July return minus Nifty by year"></svg><figcaption>April–July return of the basket minus the Nifty, by year, in percentage points. Red bars are the exceptions.</figcaption></figure>
+  <h3>The exceptions, and why</h3>
+  <ul>
+    <li><b>April–July worked in 10 of 15 years (median +3.1)</b>, failing in 2018 (−17.7) and 2019 (−14.9) — both years dominated by Reliance Infrastructure's collapse rather than by the transmission cycle.</li>
+    <li><b>October–December works 9 of 14 (median +4.1)</b>, the post-monsoon construction restart.</li>
+    <li><b>January–March has failed in ten of fifteen years</b>, median −5.0, despite being the quarter in which most capitalisation happens — the accounts and the share prices point in opposite directions.</li>
+    <li><b>The 2021 readings are extreme in every window</b> because two of the four names roughly quadrupled that year, one on a genuine re-rating and one on a distressed bounce.</li>
+  </ul>
+  <div class="box pm"><span class="tag">How to use this</span><p>Use the construction calendar, not the seasonality table: this basket has four names, one of which has been a distressed vehicle for most of the period, so the statistics carry a lot of noise. The mechanism is nonetheless sound — lines are built in the dry months, capitalised at year-end, and the regulated return follows. For a regulated utility, the more useful cadence is quarterly capitalisation against annual guidance, which for Power Grid means tracking ₹30,000 cr of FY27 capitalisation against ₹5,277 cr achieved in the first quarter.</p></div>
+</section>
+
+<section id="drivers" data-toc="What moves margins">
+  <p class="eyebrow">9 · What moves demand and margins</p>
+  <h2>Eight drivers</h2>
+  <ol>
+    <li><b>Capitalisation rate:</b> the pace at which projects enter the earning asset base.</li>
+    <li><b>The allowed return on equity:</b> under periodic regulatory review, and the one variable that reprices the whole sector.</li>
+    <li><b>Order book and bid wins:</b> 92 competitively bid schemes worth ₹1.24 lakh cr awarded, 41 more under bidding.</li>
+    <li><b>Execution timeliness:</b> only about 12% on time; delays of two months to three years directly erode bid returns.</li>
+    <li><b>Renewable build-out:</b> new generation in Rajasthan and Gujarat creates the need for new corridors (see 038).</li>
+    <li><b>Right-of-way and clearance processes:</b> the practical determinant of delivery.</li>
+    <li><b>Smart metering roll-out:</b> an annuity business layered on the wires — 24.6 million meters ordered.</li>
+    <li><b>Distribution loss reduction:</b> the efficiency lever in the retail half of the business.</li>
+  </ol>
+</section>
+
+<section id="history" data-toc="A decade of cycles">
+  <p class="eyebrow">10 · A decade of cycles</p>
+  <h2>2012 to 2026, year by year</h2>
+  <div class="tbl-wrap"><table><thead><tr><th class="num">Year</th><th>What happened (and which stocks drove it)</th><th class="num">Basket</th><th class="num">Nifty</th><th class="num">Diff (pts)</th></tr></thead><tbody data-table="cy"></tbody></table></div>
+  <p class="note">Returns: equal-weighted basket of Power Grid, Adani Energy Solutions, CESC and Reliance Infrastructure. Monthly returns capped at ±50%, price only; 2026 to 18 September. RMC Switchgears listed in April 2026 and is a manufacturer rather than a utility; it is excluded. Reliance Infrastructure's distress distorts several years — the median is quoted alongside wherever it matters.</p>
+  <figure><svg data-chart="year" viewBox="0 0 720 280" role="img" aria-label="Calendar-year return minus Nifty"></svg><figcaption>Calendar-year basket return minus the Nifty, in percentage points (2026 to 18 September).</figcaption></figure>
+  <h3>The anatomy of a transmission cycle</h3>
+  <ol>
+    <li><b>Generation is built somewhere new</b> — coalfields in the 2010s, renewable zones now — and the existing grid cannot carry it.</li>
+    <li><b>A national plan is drawn up</b> and corridors are awarded, increasingly by competitive bidding.</li>
+    <li><b>Capital is deployed for years</b> before anything earns, and the delivery record determines who actually makes the bid return.</li>
+    <li><b>Assets capitalise and earnings step up</b>, steadily and with little cyclicality — which is why this section's problems are almost always financial distress at one company rather than an industry downturn.</li>
+  </ol>
+  <h3>Patterns that repeat</h3>
+  <ul>
+    <li><b>The defensive characteristic is real:</b> 2015 (+3.0% against a Nifty −4.1%) and 2012 (+42.3%) both came in difficult years for generation.</li>
+    <li><b>One distressed name has dominated the aggregate for a decade.</b> Reliance Infrastructure fell 91% in 2019, rose 258% in 2021, and is down 70% now.</li>
+    <li><b>Group events can overwhelm fundamentals:</b> Adani Energy Solutions fell 60% in 2023 while its transmission business kept growing, and is still 65% below its 2022 peak.</li>
+    <li><b>The capital-expenditure story peaks with sentiment,</b> not with capitalisation: most names topped in late 2024 while capitalisation accelerated into 2026.</li>
+  </ul>
+  <h3>Drawdowns from each stock's 2020–25 peak</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Company</th><th>Peak</th><th class="num">From peak</th><th class="num">1 year</th></tr></thead><tbody data-table="dd"></tbody></table></div>
+</section>
+
+<section id="world" data-toc="The global picture">
+  <p class="eyebrow">11 · The global picture</p>
+  <h2>Everyone is short of wires</h2>
+  <p>The global energy transition has run into the same constraint everywhere: renewable generation can be built in eighteen months, and the transmission to evacuate it takes five to ten years. Europe, the United States and India all now have queues of generation waiting for grid connection — India's version is the roughly 45 GW of connectivity granted or applied for that has no contract behind it (see 038). India's response is unusually structured: a national plan of about ₹9.15 lakh cr through 2032, tariff-based competitive bidding as the default award route, and a single national grid already operating synchronously. The weakness is delivery — only about 12% of competitively bid projects have been commissioned on schedule — which is a land and clearance problem rather than an engineering or financing one.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Market</th><th>Position</th><th>Contrast with India</th></tr></thead><tbody>
+    <tr><td>United States</td><td>Fragmented interstate planning; multi-year interconnection queues</td><td>India plans centrally and awards competitively — faster in principle</td></tr>
+    <tr><td>Europe</td><td>Large offshore and cross-border build, heavy public funding</td><td>Similar scale of ambition, higher cost base</td></tr>
+    <tr><td>China</td><td>Ultra-high-voltage lines built at speed by a state monopoly</td><td>The execution benchmark nobody else matches</td></tr>
+    <tr><td>India</td><td>₹9.15 lakh cr plan, competitive bidding, 12% on-time record</td><td>Good design, difficult delivery</td></tr>
+  </tbody></table></div>
+  <h3>Leadership shifts, and what caused them</h3>
+  <ul>
+    <li><b>From a single state monopoly to competitive bidding:</b> transmission awards moved from cost-plus allocation to tariff-based bidding, which is now the default and has let private developers take a meaningful share.</li>
+    <li><b>From coal corridors to renewable corridors:</b> the destination of new lines has moved from the eastern coalfields to the western desert states.</li>
+    <li><b>From wires to wires-plus-metering:</b> smart metering has turned distribution into an annuity contracting business, which is why Adani Energy Solutions holds an order book of 24.6 million meters.</li>
+  </ul>
+</section>
+
+<section id="tech" data-toc="Where the business is going">
+  <p class="eyebrow">12 · Where the business is going</p>
+  <h2>Six shifts</h2>
+  <ol>
+    <li><b>High-voltage direct current:</b> long-distance links with lower losses, essential for moving desert renewables to load centres.</li>
+    <li><b>Renewable energy zones and pooling substations:</b> grid built ahead of generation, to shorten the queue.</li>
+    <li><b>Smart metering at scale:</b> prepaid meters that fix the distribution revenue leak — 13.4 million installed by one company alone.</li>
+    <li><b>Grid-scale storage on the network:</b> batteries owned by the grid rather than the generator, to manage the evening ramp (see 046).</li>
+    <li><b>Digital substations and monitoring:</b> reducing outage time and manpower.</li>
+    <li><b>Distribution privatisation and franchises:</b> the slow, politically difficult reform that would fix the sector's credit problem (see 037).</li>
+  </ol>
+</section>
+
+<section id="policy" data-toc="Policy and regulation">
+  <p class="eyebrow">13 · Policy and regulation</p>
+  <h2>What moves the economics</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Lever</th><th>Status</th><th>Effect</th></tr></thead><tbody>
+    <tr><td>National Electricity Plan (transmission)</td><td>About ₹9.15 lakh cr through 2032, with ~1,37,500 ckm of lines and 8,27,600 MVA of substations</td><td>The demand pipeline for the whole section</td></tr>
+    <tr><td>Tariff-based competitive bidding</td><td>The default award route; 92 schemes worth ₹1.24 lakh cr awarded, 41 under bidding</td><td>Transfers cost and delay risk to the developer</td></tr>
+    <tr><td>Regulated return review</td><td>Periodic; flagged by Power Grid as a headwind</td><td>Can reprice the entire regulated asset base</td></tr>
+    <tr><td>General network access rules</td><td>Governs how generators connect and pay</td><td>Determines who funds evacuation for renewables</td></tr>
+    <tr><td>Smart metering programme</td><td>Central funding for prepaid metering</td><td>The annuity opportunity in distribution</td></tr>
+    <tr><td>Distribution reform schemes</td><td>Loss-reduction targets tied to central funds</td><td>Improves the credit of the sector's buyers (see 037)</td></tr>
+    <tr><td>Surveillance measures on listed shares</td><td>Reliance Infrastructure trades weekly in a 5% band under an insolvency-linked measure</td><td>A market-structure constraint, not a business one</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="now" data-toc="Where the cycle stands now">
+  <p class="eyebrow">14 · Where the cycle stands now</p>
+  <h2>September 2026: the capital cycle is accelerating</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Part</th><th>State</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>Capital expenditure</td><td>Rising</td><td>Power Grid ₹7,765 cr in the quarter (+11%), on track for ₹37,000 cr in FY27</td></tr>
+    <tr><td>Capitalisation</td><td>Accelerating sharply</td><td>₹5,277 cr against ₹1,683 cr a year earlier</td></tr>
+    <tr><td>Private competition</td><td>Winning</td><td>Adani Energy Solutions' transmission order book at ₹71,779 cr, profit +130%</td></tr>
+    <tr><td>Execution</td><td>The weak point</td><td>About 12% of competitively bid projects commissioned on schedule; delays to three years</td></tr>
+    <tr><td>Regulation</td><td>A live risk</td><td>Return review flagged as a headwind</td></tr>
+    <tr><td>Stocks</td><td>Distorted and de-rated</td><td>Basket −18%, median −7%; Power Grid −26% and Adani Energy Solutions −65% from their peaks</td></tr>
+  </tbody></table></div>
+  <div class="box pm"><span class="tag">The honest read</span><p>Transmission has the clearest multi-year visibility of anything in the Power family: a national plan of roughly ₹9.15 lakh cr, a pipeline that grows every time a renewable zone is announced, and an incumbent whose capitalisation just tripled. What has changed is who takes the risk. Competitive bidding transfers cost and delay onto the developer, and with only about 12% of such projects finishing on time, the gap between winning work and earning on it is wide and widening. That favours operators who can actually execute — which is the strongest argument for Adani Energy Solutions' 130% profit growth being more than a group story, and the reason Power Grid's tripled capitalisation matters more than its flat profit. The two things to hold in mind are the regulatory return review, which can reprice the whole asset base, and the fact that this section's headline return is currently being written by a distressed company that trades once a week.</p></div>
+</section>
+
+<section id="watch" data-toc="What to track">
+  <p class="eyebrow">15 · What to track</p>
+  <h2>Leading indicators</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Indicator</th><th>Where / when</th><th>Why</th></tr></thead><tbody>
+    <tr><td>Quarterly capitalisation against guidance</td><td>Quarterly</td><td>The only number that adds to earnings; ₹30,000 cr targeted for FY27</td></tr>
+    <tr><td>Capex against guidance</td><td>Quarterly</td><td>Future capitalisation</td></tr>
+    <tr><td>Bid wins and order book</td><td>As awarded</td><td>₹71,779 cr under construction at the private challenger</td></tr>
+    <tr><td>Commissioning against scheduled dates</td><td>Regulatory filings</td><td>The 12% on-time rate is the industry's central problem</td></tr>
+    <tr><td>Regulated return review</td><td>Regulatory consultations</td><td>Reprices the entire asset base</td></tr>
+    <tr><td>Smart meter installations</td><td>Quarterly</td><td>13.4 million installed against 24.6 million ordered</td></tr>
+    <tr><td>Renewable zone announcements</td><td>Ongoing (see 038)</td><td>Creates the next corridors</td></tr>
+    <tr><td>Distribution loss levels</td><td>Annual state data</td><td>The retail half's efficiency lever</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="proxies" data-toc="Adjacent industries">
+  <p class="eyebrow">16 · Adjacent industries and proxies</p>
+  <h2>Where this connects</h2>
+  <ul>
+    <li><b>Power generation</b> (037) and <b>renewable generation</b> (038): the reason new lines are needed, and the queue waiting for them.</li>
+    <li><b>Power T&amp;D EPC</b> (048): the contractors who build what this section owns.</li>
+    <li><b>Transformers</b> (042), <b>switchgear</b> (043) and <b>wires, cables and conductors</b> (044): the equipment supply chain, and a cleaner way to own the capital cycle.</li>
+    <li><b>Power trading</b> (040): the market that uses this network.</li>
+    <li><b>Batteries &amp; energy storage</b> (046): increasingly a grid asset rather than a generator's.</li>
+    <li><b>Coal &amp; coke</b> (036): the older corridors this network was originally built for.</li>
+  </ul>
+</section>
+
+<section id="ask" data-toc="Questions for management">
+  <p class="eyebrow">17 · Questions for management</p>
+  <h2>Concall checklist</h2>
+  <ol>
+    <li>What was capitalised this quarter, and what is the full-year target?</li>
+    <li>What is the gap between capex incurred and capitalisation, and why?</li>
+    <li>How many projects are behind their scheduled commissioning date, and by how long?</li>
+    <li>What return was assumed in recent competitive bids, and what is the sensitivity to a one-year delay?</li>
+    <li>What is the status of the regulated return review, and what would a change mean for earnings?</li>
+    <li>What is the right-of-way status on the largest projects?</li>
+    <li>(Smart metering) What is the annuity per meter, and the working capital cycle on installation?</li>
+    <li>(Distribution) What are aggregate technical and commercial losses, and the trajectory?</li>
+  </ol>
+  <h3>Red flags</h3>
+  <ul>
+    <li>Order book growing while capitalisation stalls.</li>
+    <li>Bids won at tariffs that assume flawless execution in an industry with a 12% on-time record.</li>
+    <li>Capex guidance met but capitalisation repeatedly deferred.</li>
+    <li>Group-level financing events overshadowing operating disclosure.</li>
+  </ul>
+</section>
+
+<section id="debates" data-toc="Myths and debates">
+  <p class="eyebrow">18 · Myths and live debates</p>
+  <h2>What you'll hear, and the evidence</h2>
+  <div class="tbl-wrap"><table><thead><tr><th>Claim</th><th>Evidence</th></tr></thead><tbody>
+    <tr><td>"The transmission sector is down 18% this year."</td><td>The median stock is down 7%. One distressed company trading weekly under a 5% band accounts for most of the difference.</td></tr>
+    <tr><td>"A large order book guarantees earnings."</td><td>Only about 12% of competitively bid projects were commissioned on schedule by March 2026, with delays up to three years. The book earns nothing until it is capitalised.</td></tr>
+    <tr><td>"Regulated utilities are safe."</td><td>Safe from demand cycles, not from regulators. The allowed return is under review, and that is the one event that reprices the entire asset base.</td></tr>
+    <tr><td>"Competitive bidding has made transmission cheaper."</td><td>For consumers, yes. For developers, it transfers land, cost and delay risk onto the builder at a tariff fixed for 35 years.</td></tr>
+    <tr><td>"Private players cannot compete with the state incumbent."</td><td>Adani Energy Solutions is carrying a ₹71,779 cr transmission book and grew profit 130% — while remaining 65% below its 2022 peak on group-level concerns.</td></tr>
+    <tr><td>"Smart metering is a small side business."</td><td>24.6 million meters ordered with 13.4 million installed is an annuity stream on a scale comparable to a mid-sized transmission project.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="glossary" data-toc="Glossary" class="gl">
+  <p class="eyebrow">19 · Glossary</p>
+  <h2>Every term you'll meet</h2>
+  <div class="gtools"><label for="gq">Find a term</label><input id="gq" type="search" placeholder="e.g. TBCB, ckm" autocomplete="off"><span id="gcount"></span></div>
+  <h3>The network</h3><dl>
+    <dt>Transmission</dt><dd>Moving electricity at high voltage over long distances between generators and load centres.</dd>
+    <dt>Distribution</dt><dd>The local low-voltage network delivering power to homes and businesses.</dd>
+    <dt>Circuit kilometre (ckm)</dt><dd>The length measure of transmission lines; Power Grid operates 1,86,595 ckm.</dd>
+    <dt>MVA</dt><dd>Megavolt-amperes, the measure of transformation capacity at substations — 6,34,516 MVA at Power Grid.</dd>
+    <dt>Substation</dt><dd>Where voltage is stepped up or down and power is switched between lines.</dd>
+    <dt>Inter-state transmission system (ISTS)</dt><dd>The national backbone connecting states.</dd>
+    <dt>High-voltage direct current (HVDC)</dt><dd>Long-distance transmission with lower losses than alternating current.</dd>
+    <dt>Pooling substation</dt><dd>Where several generators' output is collected before entering the main network (see 038).</dd>
+    <dt>Right of way</dt><dd>The legal right to run a line across land; the main cause of delay (see 030).</dd>
+    <dt>Evacuation</dt><dd>Carrying generated power away from a plant (see 037).</dd>
+    <dt>Transmission losses</dt><dd>Energy lost as heat in the wires; lower at higher voltages.</dd>
+    <dt>Availability</dt><dd>The share of time a line is ready to carry power; the basis on which the charge is earned.</dd>
+    <dt>Smart meter</dt><dd>A meter that records and communicates consumption, usually prepaid; the fix for distribution revenue leakage.</dd>
+    <dt>Conductor</dt><dd>The aluminium or composite cable that actually carries the current between towers (see 044).</dd>
+    <dt>Transmission tower</dt><dd>The steel lattice structure supporting the conductors; erected in the dry season.</dd>
+    <dt>Stringing</dt><dd>Pulling conductors between erected towers — the step that stops in the monsoon.</dd>
+    <dt>Bay</dt><dd>A switching position in a substation; substation work is often measured in bays.</dd>
+    <dt>Grid synchronisation</dt><dd>Operating the country's regions as one alternating-current system, which India achieved nationally.</dd>
+    <dt>Green energy corridor</dt><dd>Transmission built specifically to evacuate renewable zones (see 038).</dd>
+  </dl>
+  <h3>Commercial and regulatory</h3><dl>
+    <dt>Regulated asset base</dt><dd>Capitalised assets on which a return is allowed (see 037).</dd>
+    <dt>Capitalisation</dt><dd>Moving a commissioned project into the earning asset base — ₹5,277 cr in one quarter at Power Grid.</dd>
+    <dt>Allowed return on equity</dt><dd>The profit rate the regulator permits, periodically reviewed.</dd>
+    <dt>Tariff-based competitive bidding (TBCB)</dt><dd>Awarding a transmission project to whoever bids the lowest 35-year tariff; now the default route.</dd>
+    <dt>Transmission service agreement</dt><dd>The long-term contract under which a bid project is paid.</dd>
+    <dt>Scheduled commissioning date</dt><dd>The date a project must be completed by; only about 12% of TBCB projects met it.</dd>
+    <dt>Point of connection charges</dt><dd>The mechanism by which network users pay for the shared grid.</dd>
+    <dt>General network access</dt><dd>The framework governing connection rights for generators.</dd>
+    <dt>Aggregate technical and commercial losses</dt><dd>Power lost plus power unbilled in distribution (see 037).</dd>
+    <dt>Distribution licence and franchise</dt><dd>The right to supply an area, held directly or operated under contract.</dd>
+    <dt>Annuity contract</dt><dd>Fixed payments over a contract life, as in smart metering.</dd>
+    <dt>Additional Surveillance Measure (ASM)</dt><dd>An exchange restriction on trading in a stressed security; Reliance Infrastructure's shares trade once a week within a 5% band.</dd>
+    <dt>Insolvency and Bankruptcy Code</dt><dd>India's insolvency framework (see 029), which triggered that surveillance measure.</dd>
+    <dt>Licence period</dt><dd>The 35-year term over which a competitively bid transmission asset is paid.</dd>
+    <dt>Cost overrun</dt><dd>Spending above the bid assumption; under TBCB it is borne entirely by the developer.</dd>
+    <dt>Liquidated damages</dt><dd>Penalties payable for missing the scheduled commissioning date.</dd>
+    <dt>Asset monetisation</dt><dd>Selling operating transmission assets, often into an investment trust, to recycle capital into new projects.</dd>
+  </dl>
+  <h3>Explained in earlier primers</h3><dl>
+    <dt>Two-part tariff, plant load factor, discom</dt><dd>See 037.</dd>
+    <dt>PPA, curtailment, connectivity</dt><dd>See 038.</dd>
+    <dt>Order book and execution risk</dt><dd>See 029, 030.</dd>
+    <dt>Drawdown from peak</dt><dd>See 001.</dd>
+  </dl>
+  <p id="gnone" hidden>No term matches that search.</p>
+</section>
+
+<section id="test" data-toc="Test yourself">
+  <p class="eyebrow">20 · Test yourself</p>
+  <h2>Ten questions; answers hidden</h2>
+  <details class="q"><summary>1. How does a transmission utility earn?</summary><p>A regulated return on capitalised assets, paid for making the line available rather than for the power that flows through it.</p></details>
+  <details class="q"><summary>2. Why is capitalisation more important than capex?</summary><p>Capex is cash spent; capitalisation is the moment an asset starts earning. Power Grid's capex rose 11% while capitalisation more than tripled to ₹5,277 cr.</p></details>
+  <details class="q"><summary>3. How large is the building programme?</summary><p>About ₹9.15 lakh cr through 2032 under the National Electricity Plan, including roughly 1,37,500 ckm of lines; ICRA expects ₹5–6 trillion of capex by FY32.</p></details>
+  <details class="q"><summary>4. What is TBCB, and what does it change?</summary><p>Tariff-based competitive bidding: the lowest 35-year tariff wins. It transfers land, cost and delay risk to the developer at a fixed price.</p></details>
+  <details class="q"><summary>5. What is the industry's central execution problem?</summary><p>Only about 12% of competitively bid projects commissioned by March 2026 were on schedule, with delays of two months to three years, mostly from land and right-of-way issues.</p></details>
+  <details class="q"><summary>6. Why is the basket's −18% misleading?</summary><p>Reliance Infrastructure is down 70% on distress and trades once a week under a 5% band. The median stock is down 7%.</p></details>
+  <details class="q"><summary>7. What did Adani Energy Solutions report?</summary><p>Income ₹9,852 cr (+40%), EBITDA ₹3,178 cr (+58%) and profit ₹1,237 cr (+130%), on a ₹71,779 cr transmission order book.</p></details>
+  <details class="q"><summary>8. What is the smart metering opportunity?</summary><p>An annuity per meter over the contract life: 24.6 million meters ordered and 13.4 million installed at one company, plus the proposed IntelliSmart acquisition.</p></details>
+  <details class="q"><summary>9. What is the single biggest risk to the sector's earnings?</summary><p>A change in the allowed return on equity, which reprices the entire regulated asset base at once.</p></details>
+  <details class="q"><summary>10. Why does transmission matter to the renewable story?</summary><p>Generation can be built in eighteen months and corridors take five to ten years — which is why roughly 45 GW of renewable connectivity is waiting (see 038).</p></details>
+</section>
+
+<section id="sources" data-toc="Sources and method">
+  <p class="eyebrow">21 · Sources and method</p>
+  <h2>Where the numbers come from</h2>
+  <ul class="src">
+    <li>Prices: TradingView daily closes; equal-weighted basket of Power Grid, Adani Energy Solutions, CESC and Reliance Infrastructure versus NSE:NIFTY, 2012 to 18 September 2026. RMC Switchgears is excluded as a manufacturer and a 2026 listing.</li>
+    <li>Power Grid: <a href="https://www.tndindia.com/pgcil-records-11-per-cent-capex-growth-in-q1fy27-capitalization-trebles/">Q1 FY27 capex, capitalisation and retained guidance</a>; <a href="https://www.investing.com/news/company-news/power-grid-q1-fy27-slides-strong-execution-amid-regulatory-headwinds-93CH-4845213">the network statistics, asset base and regulatory headwinds</a>; <a href="https://www.business-standard.com/companies/quarterly-results/power-grid-q1-result-profit-slips-marginally-to-3-598-crore-income-rises-126080600337_1.html">quarterly profit</a>.</li>
+    <li>Adani Energy Solutions: <a href="https://www.adani.com/newsroom/media-releases/aesl-concludes-q1fy27-with-solid-performance">the company's Q1 FY27 release</a>; <a href="https://www.oneindia.com/india/adani-energy-solutions-q1fy27-financial-performance-summary-012-8152877.html">income, EBITDA, profit and the order book</a>; <a href="https://nsearchives.nseindia.com/corporate/ADANITRANS_21072026215005_Outcome_presentation2026.pdf">its results presentation</a>; <a href="https://tradebrains.in/indian-markets/85000-cr-order-book-can-strong-order-inflows-turn-adani-energy-solutions-into-a-bigger-power-transmission-player-12443625">order inflows and the smart metering platform</a>.</li>
+    <li>Sector plan and execution: <a href="https://solarquarter.com/2026/07/13/indias-power-transmission-sector-to-see-%E2%82%B95-6-trillion-capex-by-fy32-amid-renewable-energy-expansion-icra/">ICRA on capex to FY32 and the 12% on-time record</a>; <a href="https://cea.nic.in/wp-content/uploads/psp___a_i/2024/01/Draft_NEP_Vol_II.pdf">the National Electricity Plan for transmission</a>; <a href="https://powermin.gov.in/en/content/tenders-tbcb-transmission-projects">the ministry's TBCB tender listing</a>; <a href="https://www.indiatransmission.org/listdocuments/Policy/TBCB%20Guidelines">the TBCB guidelines</a>.</li>
+    <li>Reliance Infrastructure: <a href="https://www.business-standard.com/markets/news/reliance-infra-reliance-comms-share-prices-hit-52-week-lows-here-s-why-126022700517_1.html">the February 2026 fall and its cause</a>; <a href="https://www.bajajbroking.in/stock/reliance-infrastructu-ltd-share-price">the surveillance measure, trading restriction and shareholder representation</a>; <a href="https://www.business-standard.com/markets/news/reliance-infra-shares-hit-5-upper-circuit-up-33-in-6-days-here-s-why-126060800212_1.html">the June 2026 rebound before the later decline</a>.</li>
+    <li>Adjacent: <a href="https://www.tndindia.com/energrid-plans-rs-5800-crore-capex-on-q1fy27-ists-tbcb-wins/amp/">a private bidder's capex plan on recent TBCB wins</a>; <a href="https://tradebrains.in/indian-markets/power-td-sector-outlook-fy27-3-stocks-to-watch-as-indias-power-transmission-growth-story-expands-12548474">the FY27 sector outlook</a>; <a href="https://www.angelone.in/news/stocks/power-grid-share-price-in-focus-revises-fy26-capex-target-to-35-000-crore">Power Grid's prior-year capex revision</a>.</li>
+  </ul>
+</section>
+
+</main></div>
+<script>window.PRIMER_DATA={"wy": {"FebMar": [{"y": 2012, "v": 5.3}, {"y": 2013, "v": -13.4}, {"y": 2014, "v": 3.7}, {"y": 2015, "v": -7.3}, {"y": 2016, "v": -0.3}, {"y": 2017, "v": -1.8}, {"y": 2018, "v": 0.8}, {"y": 2019, "v": -15.0}, {"y": 2020, "v": -10.6}, {"y": 2021, "v": 21.4}, {"y": 2022, "v": 4.3}, {"y": 2023, "v": 2.7}, {"y": 2024, "v": -1.3}, {"y": 2025, "v": 5.8}, {"y": 2026, "v": 2.5}], "AprJul": [{"y": 2012, "v": 2.8}, {"y": 2013, "v": 5.9}, {"y": 2014, "v": 26.9}, {"y": 2015, "v": -4.7}, {"y": 2016, "v": 10.0}, {"y": 2017, "v": 15.8}, {"y": 2018, "v": -17.7}, {"y": 2019, "v": -14.9}, {"y": 2020, "v": -3.1}, {"y": 2021, "v": 33.0}, {"y": 2022, "v": 12.3}, {"y": 2023, "v": -1.6}, {"y": 2024, "v": 2.8}, {"y": 2025, "v": 3.1}, {"y": 2026, "v": 7.0}], "AugSep": [{"y": 2012, "v": -1.6}, {"y": 2013, "v": 4.3}, {"y": 2014, "v": -4.7}, {"y": 2015, "v": -1.0}, {"y": 2016, "v": -2.7}, {"y": 2017, "v": 5.1}, {"y": 2018, "v": -5.4}, {"y": 2019, "v": -12.3}, {"y": 2020, "v": -5.3}, {"y": 2021, "v": 16.6}, {"y": 2022, "v": 6.6}, {"y": 2023, "v": 2.0}, {"y": 2024, "v": 10.9}, {"y": 2025, "v": -6.4}], "OctDec": [{"y": 2012, "v": -7.3}, {"y": 2013, "v": 7.7}, {"y": 2014, "v": -10.7}, {"y": 2015, "v": 24.6}, {"y": 2016, "v": 14.8}, {"y": 2017, "v": 9.4}, {"y": 2018, "v": 12.0}, {"y": 2019, "v": 3.8}, {"y": 2020, "v": 3.7}, {"y": 2021, "v": 4.3}, {"y": 2022, "v": -11.1}, {"y": 2023, "v": 18.5}, {"y": 2024, "v": -3.7}, {"y": 2025, "v": -11.3}], "SepNov": [{"y": 2012, "v": -8.4}, {"y": 2013, "v": 2.1}, {"y": 2014, "v": -7.5}, {"y": 2015, "v": 17.6}, {"y": 2016, "v": 9.9}, {"y": 2017, "v": 2.5}, {"y": 2018, "v": -4.8}, {"y": 2019, "v": -11.7}, {"y": 2020, "v": -8.5}, {"y": 2021, "v": 19.1}, {"y": 2022, "v": -15.8}, {"y": 2023, "v": 5.6}, {"y": 2024, "v": 3.8}, {"y": 2025, "v": -8.0}], "JanMar": [{"y": 2012, "v": 20.8}, {"y": 2013, "v": -17.3}, {"y": 2014, "v": -1.0}, {"y": 2015, "v": -8.8}, {"y": 2016, "v": -0.7}, {"y": 2017, "v": 6.5}, {"y": 2018, "v": -8.1}, {"y": 2019, "v": -16.7}, {"y": 2020, "v": -14.1}, {"y": 2021, "v": 25.7}, {"y": 2022, "v": 9.9}, {"y": 2023, "v": -6.1}, {"y": 2024, "v": 6.2}, {"y": 2025, "v": -6.9}, {"y": 2026, "v": -5.0}]}, "my": {"1": {"2012": 13.9, "2013": -4.5, "2014": -4.0, "2015": -1.2, "2016": -0.4, "2017": 7.9, "2018": -9.7, "2019": -1.9, "2020": -6.0, "2021": 3.7, "2022": 5.2, "2023": -8.7, "2024": 7.4, "2025": -12.0, "2026": -8.1}, "2": {"2012": 5.3, "2013": -5.7, "2014": -0.9, "2015": -7.5, "2016": -6.4, "2017": -0.1, "2018": 1.9, "2019": -14.8, "2020": -6.2, "2021": 12.6, "2022": 3.5, "2023": -9.8, "2024": -2.9, "2025": -7.6, "2026": 1.1}, "3": {"2012": 0.0, "2013": -8.6, "2014": 4.5, "2015": -0.2, "2016": 7.9, "2017": -1.6, "2018": -1.0, "2019": 1.1, "2020": -6.7, "2021": 7.3, "2022": 0.7, "2023": 14.2, "2024": 1.7, "2025": 16.0, "2026": 1.5}, "4": {"2012": -3.5, "2013": 5.6, "2014": 3.0, "2015": -1.6, "2016": 1.0, "2017": 9.5, "2018": -3.7, "2019": -8.6, "2020": 13.1, "2021": 10.6, "2022": 13.5, "2023": 1.1, "2024": -1.4, "2025": -0.8, "2026": 15.9}, "5": {"2012": 1.4, "2013": 3.6, "2014": 18.1, "2015": -3.1, "2016": -2.3, "2017": 3.5, "2018": -6.5, "2019": 1.5, "2020": -12.0, "2021": 19.7, "2022": -8.4, "2023": -12.4, "2024": 0.7, "2025": 3.9, "2026": -2.5}, "6": {"2012": 5.9, "2013": 1.4, "2014": 10.9, "2015": -1.4, "2016": 8.7, "2017": 1.6, "2018": -3.9, "2019": -8.1, "2020": 23.3, "2021": 5.7, "2022": 1.5, "2023": 0.1, "2024": 0.0, "2025": 5.6, "2026": -0.2}, "7": {"2011": 6.3, "2012": -0.3, "2013": -4.3, "2014": -7.2, "2015": 1.4, "2016": 1.6, "2017": -0.4, "2018": -3.1, "2019": -0.8, "2020": -19.3, "2021": -5.6, "2022": 7.2, "2023": 11.2, "2024": 3.3, "2025": -5.2, "2026": -4.9}, "8": {"2011": -2.7, "2012": -2.9, "2013": 2.8, "2014": -3.3, "2015": 1.6, "2016": 1.4, "2017": 2.5, "2018": 14.8, "2019": -0.5, "2020": 2.0, "2021": 0.4, "2022": 16.3, "2023": 1.5, "2024": -1.4, "2025": -8.7, "2026": -7.2}, "9": {"2011": -6.9, "2012": 1.6, "2013": 1.5, "2014": -1.4, "2015": -2.7, "2016": -4.0, "2017": 2.5, "2018": -16.4, "2019": -11.9, "2020": -6.9, "2021": 14.9, "2022": -7.6, "2023": 0.4, "2024": 12.4, "2025": 2.7}, "10": {"2011": 2.4, "2012": -10.3, "2013": 0.2, "2014": -2.1, "2015": 13.3, "2016": 4.6, "2017": 6.4, "2018": 12.6, "2019": 8.0, "2020": -1.8, "2021": -3.1, "2022": -2.4, "2023": -0.1, "2024": -2.5, "2025": -0.5}, "11": {"2011": 1.2, "2012": 1.9, "2013": 0.3, "2014": -3.8, "2015": 6.8, "2016": 9.7, "2017": -5.8, "2018": 1.6, "2019": -6.5, "2020": 1.3, "2021": 7.2, "2022": -5.8, "2023": 5.4, "2024": -4.6, "2025": -9.7}, "12": {"2011": -8.1, "2012": 2.0, "2013": 6.7, "2014": -4.7, "2015": 3.0, "2016": 0.3, "2017": 9.2, "2018": -2.5, "2019": 2.8, "2020": 3.8, "2021": 0.2, "2022": -2.9, "2023": 12.1, "2024": 3.4, "2025": -0.9}}, "basket": ["Power Grid Corporation of India Limited", "Adani Energy Solutions Ltd", "CESC Ltd", "Reliance Infrastructure Limited"], "nbasket": 4, "start": "Jul 2011", "monthly": [{"m": 1, "abs": -0.5, "rel": -1.2, "hit": 5, "n": 15}, {"m": 2, "abs": -3.6, "rel": -2.5, "hit": 5, "n": 15}, {"m": 3, "abs": 2.3, "rel": 2.4, "hit": 10, "n": 15}, {"m": 4, "abs": 6.1, "rel": 3.6, "hit": 9, "n": 15}, {"m": 5, "abs": 1.5, "rel": 0.3, "hit": 8, "n": 15}, {"m": 6, "abs": 5.2, "rel": 3.4, "hit": 11, "n": 15}, {"m": 7, "abs": 0.7, "rel": -1.3, "hit": 6, "n": 16}, {"m": 8, "abs": 0.8, "rel": 1.0, "hit": 9, "n": 16}, {"m": 9, "abs": -0.8, "rel": -1.5, "hit": 7, "n": 15}, {"m": 10, "abs": 3.7, "rel": 1.6, "hit": 7, "n": 15}, {"m": 11, "abs": 0.9, "rel": -0.1, "hit": 9, "n": 15}, {"m": 12, "abs": 2.3, "rel": 1.6, "hit": 10, "n": 15}], "cy": [{"y": 2012, "b": 42.3, "n": 27.7, "rel": 14.6, "partial": false}, {"y": 2013, "b": 3.5, "n": 6.8, "rel": -3.3, "partial": false}, {"y": 2014, "b": 37.5, "n": 31.4, "rel": 6.1, "partial": false}, {"y": 2015, "b": 3.0, "n": -4.1, "rel": 7.0, "partial": false}, {"y": 2016, "b": 25.2, "n": 3.0, "rel": 22.2, "partial": false}, {"y": 2017, "b": 78.2, "n": 28.6, "rel": 49.5, "partial": false}, {"y": 2018, "b": -15.9, "n": 3.2, "rel": -19.1, "partial": false}, {"y": 2019, "b": -27.2, "n": 12.0, "rel": -39.2, "partial": false}, {"y": 2020, "b": -12.4, "n": 14.9, "rel": -27.3, "partial": false}, {"y": 2021, "b": 142.2, "n": 24.1, "rel": 118.1, "partial": false}, {"y": 2022, "b": 23.2, "n": 4.3, "rel": 18.8, "partial": false}, {"y": 2023, "b": 31.9, "n": 20.0, "rel": 11.8, "partial": false}, {"y": 2024, "b": 25.5, "n": 8.8, "rel": 16.7, "partial": false}, {"y": 2025, "b": -11.5, "n": 10.5, "rel": -22.0, "partial": false}, {"y": 2026, "b": -17.7, "n": -10.7, "rel": -7.0, "partial": true}], "dd": [{"co": "Power Grid Corporation of India", "peak": "Sep 2024", "fp": -26, "y1": -7}, {"co": "Adani Energy Solutions", "peak": "Sep 2022", "fp": -65, "y1": 71}, {"co": "CESC", "peak": "Aug 2024", "fp": -32, "y1": -14}, {"co": "Reliance Infrastructure", "peak": "Jun 2025", "fp": -88, "y1": -81}], "win": {"FebMar": {"mean": -0.2, "median": 0.8, "hit": 8, "n": 15}, "AprJul": {"mean": 5.2, "median": 3.1, "hit": 10, "n": 15}, "AugSep": {"mean": 0.4, "median": -1.3, "hit": 6, "n": 14}, "OctDec": {"mean": 3.9, "median": 4.1, "hit": 9, "n": 14}, "SepNov": {"mean": -0.3, "median": -1.4, "hit": 7, "n": 14}, "JanMar": {"mean": -1.0, "median": -5.0, "hit": 5, "n": 15}}, "ytd": {"b": -17.7, "n": -10.7}, "notes": {"2012": "+42.3% against the Nifty's +27.7%. Transmission was the safe way to own the power sector during the generation crisis \u2014 a regulated return with no fuel risk and no offtaker to negotiate with.", "2013": "+3.5% versus +6.8%. A flat year; Power Grid's equity issuance weighed on the shares.", "2014": "+37.5% versus +31.4%. The reform rally lifted everything in power, and the grid build-out was an explicit government priority.", "2015": "+3.0% versus \u22124.1%. Steady regulated earnings in a falling market \u2014 the defensive characteristic that defines this section.", "2016": "+25.2% versus +3.0%. Adani Energy Solutions +54% and Power Grid +30% as the transmission capital-expenditure cycle accelerated.", "2017": "+78% versus +29%. Adani Energy Solutions +295% on aggressive competitive bidding and acquisitions; CESC +64%.", "2018": "\u221216% versus +3%. Reliance Infrastructure \u221243% as the group's leverage became a market issue.", "2019": "\u221227% versus +12%, with a median of +3%. Reliance Infrastructure fell 91%; strip it out and the section was flat.", "2020": "\u221212% versus +14.9%. Regulated utilities were the least interesting thing to own in a liquidity-driven recovery.", "2021": "+142% versus +24.1%, the best year on record. Adani Energy Solutions +298% and Reliance Infrastructure +258% \u2014 the first a re-rating, the second a distressed bounce.", "2022": "+23% versus +4.3%. Adani Energy Solutions +49% before the group's January 2023 shock.", "2023": "+32% versus +20%, but with Adani Energy Solutions \u221260% after the short-seller report; CESC +73% and Power Grid +48% carried the basket.", "2024": "+26% versus +8.8%. The transmission capital-expenditure story was at its most fashionable; most names peaked between August and October.", "2025": "\u221212% versus +10.5%. The de-rating: Reliance Infrastructure \u221246%, Power Grid \u221214% as regulatory returns came under review.", "2026": "\u221218% against a Nifty \u221211%, median \u22127%. Adani Energy Solutions +40% on a 130% profit rise; Power Grid +2% with capitalisation tripling; CESC \u221216%; and Reliance Infrastructure \u221270%, now traded once a week under a 5% band."}};</script>
+<script>(function(){
+  var D=window.PRIMER_DATA||{};
+  var NS="http://www.w3.org/2000/svg";
+  function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function nice(lo,hi){var p=(hi-lo)*0.14;if(lo<0)lo-=p;hi+=p*0.5;var span=hi-lo,step=span>80?20:span>40?10:span>16?5:span>8?2:1;lo=Math.floor(lo/step)*step;hi=Math.ceil(hi/step)*step;var t=[];for(var v=lo;v<=hi+1e-9;v+=step)t.push(Math.round(v*10)/10);return{min:lo,max:hi,ticks:t};}
+  function chart(svg,data,opt){
+    var vb=svg.getAttribute("viewBox").split(" "),W=+vb[2],H=+vb[3],L=46,R=10,T=20,B=opt.sub?52:34;
+    var vals=data.map(function(d){return d.v;}),sc=nice(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+    var n=data.length,cw=(W-L-R)/n,y=function(v){return T+(sc.max-v)/(sc.max-sc.min)*(H-T-B);};
+    if(opt.band){svg.appendChild(el("rect",{x:L+cw*opt.band[0],y:T,width:cw*(opt.band[1]-opt.band[0]+1),height:H-T-B,"class":"c-band"}));}
+    sc.ticks.forEach(function(t){svg.appendChild(el("line",{x1:L,x2:W-R,y1:y(t),y2:y(t),"class":t===0?"c-zero":"c-axis"}));svg.appendChild(el("text",{x:L-8,y:y(t)+4,"text-anchor":"end","class":"c-txt"},(t>0?"+":"")+t));});
+    data.forEach(function(d,i){var v=d.v,x=L+cw*i+cw*0.18,w=cw*0.64,y0=y(0),yv=y(v);
+      svg.appendChild(el("rect",{x:x,y:Math.min(y0,yv),width:w,height:Math.max(1,Math.abs(yv-y0)),"class":v>=0?"c-pos":"c-neg",rx:2}));
+      svg.appendChild(el("text",{x:x+w/2,y:v>=0?yv-5:yv+14,"text-anchor":"middle","class":"c-val"},(v>0?"+":"")+v.toFixed(1)));
+      svg.appendChild(el("text",{x:x+w/2,y:H-B+18,"text-anchor":"middle","class":"c-txt"},d.label));
+      if(d.sub)svg.appendChild(el("text",{x:x+w/2,y:H-B+34,"text-anchor":"middle","class":"c-txt"},d.sub));});
+  }
+  document.querySelectorAll("svg[data-chart]").forEach(function(svg){
+    var k=svg.getAttribute("data-chart");
+    if(k==="month"&&D.monthly){var ML="JFMAMJJASOND";chart(svg,D.monthly.map(function(m,i){return{v:m.rel,label:ML[i],sub:m.hit+"/"+m.n};}),{sub:true,band:D.band||null});}
+    if(k==="year"&&D.cy){chart(svg,D.cy.map(function(c){return{v:c.rel,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="win"&&D.wy){var w=D.wy[svg.getAttribute("data-win")];if(w)chart(svg,w.map(function(c){return{v:c.v,label:"'"+String(c.y).slice(2)};}),{});}
+    if(k==="mon"&&D.my){var mm=D.my[svg.getAttribute("data-m")];if(mm)chart(svg,Object.keys(mm).sort().map(function(y){return{v:mm[y],label:"'"+y.slice(2)};}),{});}
+  });
+  function sg(v){return(v>0?"+":"")+v;}
+  document.querySelectorAll("tbody[data-table]").forEach(function(tb){
+    var k=tb.getAttribute("data-table");
+    if(k==="cy"&&D.cy){D.cy.forEach(function(c){var tr=document.createElement("tr");var ys=String(c.y);
+      var hx=D.hx?'<td class="num">'+((D.hx.v&&D.hx.v[ys]!=null)?D.hx.v[ys]:'–')+'</td>':'';
+      var nt=D.notes?'<td class="note-cell">'+(D.notes[ys]||'')+'</td>':'';
+      tr.innerHTML='<td class="num">'+c.y+(c.partial?'*':'')+'</td>'+hx+nt+'<td class="num '+(c.b>=0?'pos':'negc')+'">'+sg(c.b.toFixed(1))+'%</td><td class="num">'+sg(c.n.toFixed(1))+'%</td><td class="num '+(c.rel>=0?'pos':'negc')+'">'+sg(c.rel.toFixed(1))+'</td>';tb.appendChild(tr);});}
+    if(k==="dd"&&D.dd){D.dd.forEach(function(d){var tr=document.createElement("tr");tr.innerHTML='<td>'+d.co+'</td><td>'+d.peak+'</td><td class="num '+(d.fp>=0?'pos':'negc')+'">'+sg(d.fp)+'%</td><td class="num '+(d.y1>=0?'pos':'negc')+'">'+sg(d.y1)+'%</td>';tb.appendChild(tr);});}
+  });
+  var q=document.getElementById("gq");
+  if(q){var cnt=document.getElementById("gcount"),none=document.getElementById("gnone");
+    var pairs=[].slice.call(document.querySelectorAll(".gl dt")).map(function(dt){return[dt,dt.nextElementSibling];});
+    var run=function(){var s=q.value.trim().toLowerCase(),shown=0;
+      pairs.forEach(function(p){var hit=!s||(p[0].textContent+" "+p[1].textContent).toLowerCase().indexOf(s)>-1;p[0].hidden=!hit;p[1].hidden=!hit;if(hit)shown++;});
+      document.querySelectorAll(".gl dl").forEach(function(dl){var any=[].some.call(dl.querySelectorAll("dt"),function(d){return!d.hidden;});dl.hidden=!any;if(dl.previousElementSibling&&dl.previousElementSibling.tagName==="H3")dl.previousElementSibling.hidden=!any;});
+      if(cnt)cnt.textContent=s?shown+" of "+pairs.length+" terms":pairs.length+" terms";if(none)none.hidden=shown>0;};
+    q.addEventListener("input",run);run();}
+})();
+</script>
