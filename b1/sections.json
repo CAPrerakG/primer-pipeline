@@ -923,8 +923,8 @@
   "section": "PUMPS",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 8,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "086",
   "family": "Engineering & Capital Goods",
   "order": 11,
   "note": ""

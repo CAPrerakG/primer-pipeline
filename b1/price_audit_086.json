@@ -1,0 +1,58 @@
+{
+  "NSE:GKENERGY": {
+    "bars": 242,
+    "start": "2025-09-26",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "BSE:JYOTI": {
+    "bars": 4992,
+    "start": "2005-08-11",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "NSE:KIRLOSBROS": {
+    "bars": 4067,
+    "start": "2010-04-20",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "NSE:KSB": {
+    "bars": 4992,
+    "start": "2006-07-04",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "NSE:OSWALPUMPS": {
+    "bars": 310,
+    "start": "2025-06-20",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "NSE:ROTO": {
+    "bars": 4992,
+    "start": "2006-04-26",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "NSE:SHAKTIPUMP": {
+    "bars": 3681,
+    "start": "2011-10-25",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  },
+  "NSE:WPIL": {
+    "bars": 4992,
+    "start": "2006-06-07",
+    "end": "2026-09-18",
+    "gaps": [],
+    "jumps": []
+  }
+}

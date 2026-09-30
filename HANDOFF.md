@@ -1,5 +1,25 @@
 # Handoff — industry primer series
 
+## Latest state: after 086 (30 Sep 2026)
+
+086 Pumps & Pumping Systems is published at https://caprerakg.github.io/primer-pipeline/086.html.
+Eight names researched, seven-stock basket; GK excluded for242bars. All endpoints18September2026.
+16,012 words,149links,88glossary terms,four groups,six analytical boxes,twelve questions,23sections.
+Verify086 exit0 with no warnings; verify081 exit0 with pre-existing warnings. Browser search/no-match,
+three charts,fifteen annual rows and390px mobile layout checked. Sources, EPS ledger and sensitivity retained.
+
+Key findings: Oswal original quarterly EPS does not reconcile; annual report33.98 does. GK/Shakti
+annual weighted-share EPS differs from summary closing-share shortcuts. WPIL minority claim materially
+reduces ownerprofit; MadhyaPradeshJalNigam new-tender restriction disclosed. Jyoti ARC debt note says
+due but not paid, conflicting with CARO no-overdue statement; aged receivables and networth erosion.
+KBL annual-report ownerprofit373.6301cr differs slightly from later comparative373.5cr; disclosed.
+KSB calendar-year reporting and other-income classification; Roto tax-base effect. Official PMKUSUM
+extension conditional on existing dated PPA/NTP, not approved successor scheme. No earlier page changed.
+
+Next087: Valves(order12,five names)+Flexible Hoses & Piping Systems(order13,three names), queue-suggested
+merge. Disclose merge. Prerak authorises continuation until approximately50% weekly allowance remains.
+Latest in-progress086 usage40%used/60%remaining; check again after publication before next primer.
+
 ## Latest state: after 085 (30 Sep 2026)
 
 085 Industrial Gears, Transmission & Hydraulics is published at

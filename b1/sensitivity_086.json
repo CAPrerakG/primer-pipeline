@@ -1,0 +1,51 @@
+{
+  "all": {
+    "ytd": -15.05,
+    "april_hits": 13,
+    "april_n": 15,
+    "AprJul_hits": 12,
+    "AprJul_n": 15,
+    "AprJul_median": 16.73
+  },
+  "without_Oswal": {
+    "ytd": -8.84,
+    "april_hits": 13,
+    "april_n": 15,
+    "AprJul_hits": 12,
+    "AprJul_n": 15,
+    "AprJul_median": 16.73
+  },
+  "without_Jyoti": {
+    "ytd": -12.62,
+    "april_hits": 13,
+    "april_n": 15,
+    "AprJul_hits": 11,
+    "AprJul_n": 15,
+    "AprJul_median": 15.62
+  },
+  "without_Shakti": {
+    "ytd": -11.12,
+    "april_hits": 13,
+    "april_n": 15,
+    "AprJul_hits": 12,
+    "AprJul_n": 15,
+    "AprJul_median": 18.01
+  },
+  "industrial_core": {
+    "ytd": 5.08,
+    "april_hits": 13,
+    "april_n": 15,
+    "AprJul_hits": 12,
+    "AprJul_n": 15,
+    "AprJul_median": 17.5
+  },
+  "individual_ytd": {
+    "BSE:JYOTI": -28.62,
+    "NSE:KIRLOSBROS": 12.5,
+    "NSE:KSB": 7.73,
+    "NSE:OSWALPUMPS": -47.24,
+    "NSE:ROTO": -8.92,
+    "NSE:SHAKTIPUMP": -36.35,
+    "NSE:WPIL": 5.23
+  }
+}

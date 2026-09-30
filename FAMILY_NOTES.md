@@ -264,3 +264,30 @@ filed in 066. The listed section is the residue.
   21Sepdeck/latercall excluded. HTELannualEPSprecision andRRPweighteddenominator caveats retained.
 - Apply078/080/081tests at product/customer/contract level; installedbase is an opportunity for
   repeatservice cash,not proofit exists. Separate industrial profit from capital-allocation returns.
+
+
+## 086 — Pumps & Pumping Systems (30 Sep 2026)
+
+Carry forward the distinction between hydraulic performance and the shareholder cash claim. Apply078
+specification/wear to qualified duty and replacement parts,080 processing-depth to hydraulic machining/testing,
+and081 quoted-input risk to solar packages. Technical capability does not ensure timely collection.
+
+Eight researched/seven basket, GK242bars excluded; Oswal only joins2025, Shakti late2011. YTD-15.1%vsNifty-10.7;
+withoutOswal-8.8%; four industrialnames+5.1%. April13/15 robust across tested subsets, AprJul12/15 becomes11/15
+withoutJyoti. Never call a full-history seven-stock portfolio. All fixed-date endpoints and corporate actions checked.
+
+Accounting: GK annual EPS10.90 weighted versus summary10.07; Shakti21.02 versus20.87. Oswal AR33.98 reconciles
+with weighted11.0720977crshares; quarterly filing34.76 annual comparison and4.86 June do not reconcile. Disclose,
+do not silently repair. WPIL June group59.0098cr versus owner33.8886cr, minority25.1212cr; associate contribution
+separate from ordinary other income. WPIL new MPJalNigam tender restriction and pending collections matter.
+Jyoti209.25cr ARC note includes same amount due but not paid, conflicts with CARO nooverdues; retain uncertainty.
+KBL AR373.6301cr owner profit differs slightly from later373.5comparative; annual EPS47.05 reconciles AR.
+KSB uses calendarFY, ordinaryother+associate-labour differs from summary otherincome classification.
+Roto netprofit growth aided by tax comparison; consolidatedCFO36.8441 not standalone35.9514.
+
+Policy: official MNRE25May2026clarification/28MarchOM only extends qualifying PPA/NTP<=31Dec2025projects to
+31Mar2027subjectconditions. PMKUSUM2.0 proposal/managementexpectation, not enacted blanketaward. DCRcell
+clarification distinguishes undiffused from imported diffused wafers. No post18Sep events folded into snapshot.
+
+Build/gate/verify086 passed; verify081 passed.16,012words149links88terms12questions6PMboxes4glossarygroups.
+No prior primer page changed. Next087 suggestedmergeValves+FlexibleHoses&Piping.
