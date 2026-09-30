@@ -316,3 +316,37 @@ Cash: DEEconsolCFO19.5484vsstandalone−44.5003; receivables135.8141absorption. 
 9.9132payableincrease; capex17.9729. ChemtechCFO−10.4556. AtamCFO.463. Notallprofitiscustomer cash.
 APIQ1qualityregistrationdistinctfromproductMonogram. Old2024Atam/Questcallsexcludedfromcurrentguidance.
 Jash10Sepupdate937book/86negotiatedpendingPO keptseparate. No earlierprimerpagechanged.
+
+## 088 — Compressors & Industrial Engines
+
+Explicitmerge3compressors+4enginewatchlistnames. Sevenreviewed/sixbasket, Scanexcludedforerection,
+commissioning/tradingclassificationandtenlongpricegaps. Allend18Sep. Jul2011fullsixhistory; YTD31.1%
+vsNifty−10.7, allsixpositive. WithoutKOEL23.1%,withoutGreaves35.8%. April9/15 becomes7/15withoutKOEL.
+Do not promote a generic Engineering April trade. 17,756words165links88terms12questions6PMboxes.
+
+Familyapplication:078qualification/servicecapture,080retainedcoremanufacturing,081price-resetlag.
+Usefulair/reliablepower only becomeownerreturns after marginconversion, collections andcapitalallocation.
+Installedbase is potentialserviceopportunity, not automaticallycontractedrecurringrevenue.
+
+KPCL18Aug2026splitoneRs2intotwoRs1shares explains originalJuneEPS5.15 vsroughlyhalfsummary.
+Annualowner256.131 uses6.49223crweightedpre-splitshares. Deck54EBITDA/308totalincomeisstandalone;
+consolidatedoperatingbridge45.6. Orderboard1853vs1863opening, notgrowing. ELGIoriginalJuneEPS3.28
+usesweightedshares; summary3.26usesdifferentbasis. Ordinaryother20.4,JV1.8,restructuring7.3 separate.
+
+Cumminsoperatingmargin~18.0vs21.5despitehigherrevenue; associate/JV89.83vs65.28supportsPAT.
+Prior disposal12.59consolidatedvs44.15standalone. CFO excludesinvestingdividends216.75/interest188.50.
+GreavesgroupPAT6.16vsowner25.77becauseminorityloss19.61; annualowner107.14 vs group35.29.
+GroupCFO32.58vsparent347.57; mobility/financefundingrequirescapitalallocationaudit. OCRdepreciation
+read18.21butvisual28.21; nevercomputeunverifiedscannedtables. Restatedengine/controlsegmentsused.
+
+KOELindustrialB2Bprofit114.63vs139.28onhigherrevenue. FinancefundingcostnotindustrialEBITDAaddback.
+CFO932.21 includesloanrelease431.68, whileindustrialreceivables/inventoryabsorb cash. InternalB2C
+transfertoKFDrestatesstandalone,doesnotcreateconsolidatedgrowth. AnnualEPS39.53usesowner574.32,
+weightedsharesanddiscontinuedprofit; dilutednumeratoralsoadjustssubsidiaryoptions. Summaryexpanded
+annualOtherIncome44 remainsunreconciledtosimplestatutorybridge,notusedforcoremargin.
+
+ScanFY25PAT.5728 vscomprehensive.5851; narrativeconfuseslatterwithprofit. FY26rupeenote7145196.73
+/2873300shares=2.49. ProposedmergernotreflectedinJuneaccounts; noassumednewbusinesshistory.
+IRIndiaisnotglobalIngersollRandbuyerof087MROtransaction. Sanandlow-volumeproductionnotmatureutilisation.
+CPCBscopeupto800kWgrossmechanicalgensetengines; certificationdistinctfromsiteoperatingpermission.
+No earlierprimerpagechanged. Build/gate/verify088and081exit0; browsertoolsandmobilechecked.

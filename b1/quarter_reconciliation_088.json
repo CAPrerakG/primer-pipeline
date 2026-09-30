@@ -1,0 +1,287 @@
+{
+  "NSE:ELGIEQUIP": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          867.0,
+          968.0,
+          1003.0,
+          1113.0
+        ],
+        "sum": 3951.0,
+        "annual": 3951.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "quarters": [
+          23.0,
+          55.0,
+          11.0,
+          22.0
+        ],
+        "sum": 111.0,
+        "annual": 110.0,
+        "difference": 1.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          86.0,
+          121.0,
+          95.0,
+          128.0
+        ],
+        "sum": 430.0,
+        "annual": 430.0,
+        "difference": 0.0
+      }
+    }
+  },
+  "NSE:INGERRAND": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          315.0,
+          322.0,
+          455.0,
+          300.0
+        ],
+        "sum": 1392.0,
+        "annual": 1392.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "quarters": [
+          10.0,
+          9.0,
+          -15.0,
+          23.0
+        ],
+        "sum": 27.0,
+        "annual": 27.0,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          59.0,
+          60.0,
+          72.0,
+          65.0
+        ],
+        "sum": 256.0,
+        "annual": 256.0,
+        "difference": 0.0
+      }
+    }
+  },
+  "NSE:KIRLPNU": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          282.0,
+          386.0,
+          407.0,
+          712.0
+        ],
+        "sum": 1787.0,
+        "annual": 1787.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "quarters": [
+          8.0,
+          7.0,
+          6.0,
+          10.0
+        ],
+        "sum": 31.0,
+        "annual": 14.0,
+        "difference": 17.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          25.0,
+          44.0,
+          42.0,
+          144.0
+        ],
+        "sum": 255.0,
+        "annual": 254.0,
+        "difference": 1.0
+      }
+    }
+  },
+  "NSE:CUMMINSIND": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          2907.0,
+          3170.0,
+          3055.0,
+          3011.0
+        ],
+        "sum": 12143.0,
+        "annual": 12143.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "quarters": [
+          212.0,
+          181.0,
+          46.0,
+          263.0
+        ],
+        "sum": 702.0,
+        "annual": 702.0,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          604.0,
+          622.0,
+          486.0,
+          649.0
+        ],
+        "sum": 2361.0,
+        "annual": 2362.0,
+        "difference": -1.0
+      }
+    }
+  },
+  "NSE:GREAVESCOT": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          745.43,
+          815.46,
+          875.47,
+          1000.26
+        ],
+        "sum": 3436.62,
+        "annual": 3437.0,
+        "difference": -0.38
+      },
+      "Other Income +": {
+        "quarters": [
+          17.52,
+          6.85,
+          -10.84,
+          -2.88
+        ],
+        "sum": 10.65,
+        "annual": 10.0,
+        "difference": 0.65
+      },
+      "Net Profit +": {
+        "quarters": [
+          20.85,
+          6.32,
+          5.92,
+          2.2
+        ],
+        "sum": 35.29,
+        "annual": 35.0,
+        "difference": 0.29
+      }
+    }
+  },
+  "NSE:KIRLOSENG": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          1762.0,
+          1948.0,
+          1873.0,
+          2116.0
+        ],
+        "sum": 7699.0,
+        "annual": 7701.0,
+        "difference": -2.0
+      },
+      "Other Income +": {
+        "quarters": [
+          39.0,
+          13.0,
+          -13.0,
+          2.0
+        ],
+        "sum": 41.0,
+        "annual": 44.0,
+        "difference": -3.0
+      },
+      "Net Profit +": {
+        "quarters": [
+          139.0,
+          159.0,
+          109.0,
+          155.0
+        ],
+        "sum": 562.0,
+        "annual": 562.0,
+        "difference": 0.0
+      }
+    }
+  },
+  "BSE:SCANPRO": {
+    "rightmost": "Jun 2026",
+    "year_ago": "Jun 2025",
+    "units": "crore; rounded Screener display, primary filings take precedence",
+    "rows": {
+      "Sales +": {
+        "quarters": [
+          2.71,
+          4.26,
+          4.7,
+          4.01
+        ],
+        "sum": 15.68,
+        "annual": 15.69,
+        "difference": -0.01
+      },
+      "Other Income +": {
+        "quarters": [
+          0.06,
+          0.09,
+          0.09,
+          0.16
+        ],
+        "sum": 0.4,
+        "annual": 0.39,
+        "difference": 0.01
+      },
+      "Net Profit +": {
+        "quarters": [
+          0.15,
+          0.16,
+          0.29,
+          0.11
+        ],
+        "sum": 0.71,
+        "annual": 0.71,
+        "difference": 0.0
+      }
+    }
+  },
+  "notes": [
+    "All seven rightmost headers Jun 2026; comparative Jun 2025. Sales and PAT sums match annual within displayed rounding, including KOEL sales 7699 vs 7701 with whole-crore inputs.",
+    "Other Income summary combines exceptions/associates and can reclassify annual expenses: KPCL quarterly 31 vs annual14 is not a clean ordinary-other-income sum. Use statutory ordinary27.7 annual, labour14.1 separate. ELGI ordinary117.8 + JV6.7 - labour15 =109.5 (summary110); Cummins517.34+266.28-81.61=702.01.",
+    "IR38.43-11.80=26.63; Greaves49.99-39.34=10.65; KOEL68.46-32.45+discontinued before-tax4.54=40.55 does NOT reconcile summary44, which remains a classification discrepancy. Do not derive operating margins from expanded summary Other Income."
+  ]
+}

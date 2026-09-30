@@ -1,5 +1,28 @@
 # Handoff — industry primer series
 
+## Latest state: after 088 (30 Sep 2026)
+
+088 Compressors & Industrial Engines is published at
+https://caprerakg.github.io/primer-pipeline/088.html. Explicit merge of three compressor and four
+engine-watchlist names; seven researched, six in the price basket. Scan excluded for machinery
+erection/commissioning/trading classification and ten long historical price gaps. All endpoints18Sep.
+17,756words165links88terms12questions6PMboxes4glossarygroups23sections. Verify088 and081 exit0.
+Browser:3charts42bars15annualrows, search/no-match/reset, TOC and390px layout pass; noJSerrors.
+
+Audit: KPCL18Augshare subdivision explains halved summaryEPS; use originalJuneEPS5.15 onoldbasis.
+ELGIweightedshareEPS3.28vsclosingcountsummary3.26. GreavesgroupPAT6.16vsowner25.77; EVlosses,
+parent/groupcashdifference andcapitalcommitments. KOELfinance loanrelease431.68supportsCFO932.21;
+do not call all of it enginecashconversion. Cumminsassociate89.83supportsPAT despiteoperatingmargin
+compression; priorgain12.59consolvs44.15standalone. ScanPATvsOCI narrativeerror disclosed.
+Primarytables visuallychecked; GreavesOCRdepreciation18.21 correctedto28.21 beforecalculation.
+Quarterreconciliation,EPSledger,source_manifest,sensitivities,evidence andbrowseraudit retained.
+No earlierprimerpage changed. Preserve085Veljanprice repair. KPCLsplitalreadyadjustedincache.
+
+Next089 is Machine Tools,16names. Prerak's continuous-run limit is approximately50%weeklyremaining.
+Completion check:50%used/50%remaining. Stop here as requested; do not start089 without Prerak resuming.
+Local source downloads and assembly scripts for088 remain in b1, excluded via .git/info/exclude;
+public audit, source manifest and evidence are tracked.
+
 ## Latest state: after 087 (30 Sep 2026)
 
 087 Valves, Flexible Hoses & Piping Systems is published at

@@ -1,0 +1,260 @@
+[
+  {
+    "label": "ELGI FY26",
+    "profit_crore": 430.2,
+    "EPS_rupees": 13.65,
+    "shares_crore": 31.524,
+    "basis": "weighted, AR278",
+    "EPS_times_shares": 430.3026,
+    "difference_crore": -0.1026,
+    "implied_EPS": 13.646745,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "ELGI June26",
+    "profit_crore": 103.3,
+    "EPS_rupees": 3.28,
+    "shares_crore": 31.5,
+    "basis": "weighted rounded millions, filing9",
+    "EPS_times_shares": 103.32,
+    "difference_crore": -0.02,
+    "implied_EPS": 3.279365,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "ELGI June25",
+    "profit_crore": 85.6,
+    "EPS_rupees": 2.71,
+    "shares_crore": 31.6,
+    "basis": "weighted rounded millions, filing9",
+    "EPS_times_shares": 85.636,
+    "difference_crore": -0.036,
+    "implied_EPS": 2.708861,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "IR FY26",
+    "profit_crore": 256.0282,
+    "EPS_rupees": 81.1,
+    "shares_crore": 3.1568,
+    "basis": "weighted AR202",
+    "EPS_times_shares": 256.01648,
+    "difference_crore": 0.01172,
+    "implied_EPS": 81.103713,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "IR June26",
+    "profit_crore": 70.46,
+    "EPS_rupees": 22.32,
+    "shares_crore": 3.1568,
+    "basis": "constant shares",
+    "EPS_times_shares": 70.459776,
+    "difference_crore": 0.000224,
+    "implied_EPS": 22.320071,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "IR June25",
+    "profit_crore": 58.98,
+    "EPS_rupees": 18.68,
+    "shares_crore": 3.1568,
+    "basis": "constant shares",
+    "EPS_times_shares": 58.969024,
+    "difference_crore": 0.010976,
+    "implied_EPS": 18.683477,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "KPCL FY26 owner",
+    "profit_crore": 256.131,
+    "EPS_rupees": 39.45,
+    "shares_crore": 6.49223,
+    "basis": "weighted before18Aug split AR157",
+    "EPS_times_shares": 256.118474,
+    "difference_crore": 0.012526,
+    "implied_EPS": 39.451929,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "KPCL June26 owner",
+    "profit_crore": 33.4,
+    "EPS_rupees": 5.15,
+    "shares_crore": 6.5,
+    "basis": "rounded capital130m / face2, pre-split; rounded million PAT, not exact weighted count",
+    "EPS_times_shares": 33.475,
+    "difference_crore": -0.075,
+    "implied_EPS": 5.138462,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "KPCL June25 owner",
+    "profit_crore": 26.6,
+    "EPS_rupees": 4.09,
+    "shares_crore": 6.5,
+    "basis": "rounded capital130m / face2, pre-split; rounded million PAT, not exact weighted count",
+    "EPS_times_shares": 26.585,
+    "difference_crore": 0.015,
+    "implied_EPS": 4.092308,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Cummins FY26",
+    "profit_crore": 2361.75,
+    "EPS_rupees": 85.2,
+    "shares_crore": 27.72,
+    "basis": "weighted AR321",
+    "EPS_times_shares": 2361.744,
+    "difference_crore": 0.006,
+    "implied_EPS": 85.200216,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Cummins June26",
+    "profit_crore": 609.3,
+    "EPS_rupees": 21.98,
+    "shares_crore": 27.72,
+    "basis": "constant shares",
+    "EPS_times_shares": 609.2856,
+    "difference_crore": 0.0144,
+    "implied_EPS": 21.980519,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Cummins June25",
+    "profit_crore": 603.9,
+    "EPS_rupees": 21.79,
+    "shares_crore": 27.72,
+    "basis": "constant shares",
+    "EPS_times_shares": 604.0188,
+    "difference_crore": -0.1188,
+    "implied_EPS": 21.785714,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Greaves FY26 owner",
+    "profit_crore": 107.14,
+    "EPS_rupees": 4.6,
+    "shares_crore": 23.2828025,
+    "basis": "weighted AR342",
+    "EPS_times_shares": 107.100891,
+    "difference_crore": 0.039109,
+    "implied_EPS": 4.60168,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Greaves June26 owner",
+    "profit_crore": 25.77,
+    "EPS_rupees": 1.11,
+    "shares_crore": 23.295,
+    "basis": "rounded issued approximate",
+    "EPS_times_shares": 25.85745,
+    "difference_crore": -0.08745,
+    "implied_EPS": 1.106246,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Greaves June25 owner",
+    "profit_crore": 33.09,
+    "EPS_rupees": 1.42,
+    "shares_crore": 23.28,
+    "basis": "rounded issued approximate",
+    "EPS_times_shares": 33.0576,
+    "difference_crore": 0.0324,
+    "implied_EPS": 1.421392,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "KOEL FY26 owner",
+    "profit_crore": 574.32,
+    "EPS_rupees": 39.53,
+    "shares_crore": 14.5287359,
+    "basis": "weighted AR228; includes discontinued",
+    "EPS_times_shares": 574.32093,
+    "difference_crore": -0.00093,
+    "implied_EPS": 39.529936,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "KOEL June26 owner",
+    "profit_crore": 113.71,
+    "EPS_rupees": 7.82,
+    "shares_crore": 14.5379944,
+    "basis": "closing issued approximate",
+    "EPS_times_shares": 113.687116,
+    "difference_crore": 0.022884,
+    "implied_EPS": 7.821574,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "KOEL June25 owner",
+    "profit_crore": 141.88,
+    "EPS_rupees": 9.77,
+    "shares_crore": 14.525,
+    "basis": "rounded issued approximate",
+    "EPS_times_shares": 141.90925,
+    "difference_crore": -0.02925,
+    "implied_EPS": 9.767986,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Scan FY26",
+    "profit_crore": 0.714519673,
+    "EPS_rupees": 2.49,
+    "shares_crore": 0.28733,
+    "basis": "constant shares AR85",
+    "EPS_times_shares": 0.715452,
+    "difference_crore": -0.000932,
+    "implied_EPS": 2.486756,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Scan June26",
+    "profit_crore": 0.1259,
+    "EPS_rupees": 0.44,
+    "shares_crore": 0.28733,
+    "basis": "constant shares",
+    "EPS_times_shares": 0.126425,
+    "difference_crore": -0.000525,
+    "implied_EPS": 0.438172,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Scan June25",
+    "profit_crore": 0.1545,
+    "EPS_rupees": 0.54,
+    "shares_crore": 0.28733,
+    "basis": "constant shares",
+    "EPS_times_shares": 0.155158,
+    "difference_crore": -0.000658,
+    "implied_EPS": 0.537709,
+    "assessment": "rounding / approximate quarterly denominator explicitly disclosed"
+  },
+  {
+    "label": "Cummins standalone June26",
+    "profit_crore": 543.01,
+    "EPS_rupees": 19.59,
+    "shares_crore": 27.72,
+    "EPS_times_shares": 543.0348,
+    "difference_crore": -0.0248,
+    "assessment": "within reported EPS rounding; primary source basis"
+  },
+  {
+    "label": "Cummins standalone June25",
+    "profit_crore": 589.27,
+    "EPS_rupees": 21.26,
+    "shares_crore": 27.72,
+    "EPS_times_shares": 589.3272,
+    "difference_crore": -0.0572,
+    "assessment": "within reported EPS rounding; primary source basis"
+  },
+  {
+    "label": "KOEL continuing annual owner",
+    "profit_crore": 569.57,
+    "EPS_rupees": 39.2,
+    "shares_crore": 14.5287359,
+    "EPS_times_shares": 569.526447,
+    "difference_crore": 0.043553,
+    "assessment": "within reported EPS rounding; primary source basis"
+  }
+]

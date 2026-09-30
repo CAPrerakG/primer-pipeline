@@ -1,0 +1,63 @@
+{
+  "full": {
+    "ytd": 31.1,
+    "april_hit": 9,
+    "april_n": 15,
+    "april_mean_relative": 4.1,
+    "aprjul_hit": 10,
+    "aprjul_n": 15,
+    "aprjul_median": 3.0
+  },
+  "compressors": {
+    "ytd": 29.3,
+    "april_hit": 8,
+    "april_n": 15,
+    "april_mean_relative": 5.5,
+    "aprjul_hit": 10,
+    "aprjul_n": 15,
+    "aprjul_median": 2.9
+  },
+  "engines": {
+    "ytd": 31.0,
+    "april_hit": 10,
+    "april_n": 15,
+    "april_mean_relative": 2.7,
+    "aprjul_hit": 10,
+    "aprjul_n": 15,
+    "aprjul_median": 5.3
+  },
+  "without_Greaves": {
+    "ytd": 35.8,
+    "april_hit": 8,
+    "april_n": 15,
+    "april_mean_relative": 4.2,
+    "aprjul_hit": 10,
+    "aprjul_n": 15,
+    "aprjul_median": 3.6
+  },
+  "without_KOEL": {
+    "ytd": 23.1,
+    "april_hit": 7,
+    "april_n": 15,
+    "april_mean_relative": 3.7,
+    "aprjul_hit": 9,
+    "aprjul_n": 15,
+    "aprjul_median": 2.1
+  },
+  "individual_ytd": {
+    "NSE:ELGIEQUIP": 28.7,
+    "NSE:INGERRAND": 18.8,
+    "NSE:KIRLPNU": 31.8,
+    "NSE:CUMMINSIND": 15.0,
+    "NSE:GREAVESCOT": 2.9,
+    "NSE:KIRLOSENG": 77.2,
+    "BSE:SCANPRO": 22.6
+  },
+  "KPCL_split_adjacent": {
+    "2026-08-14": 762.35,
+    "2026-08-17": 767.15,
+    "2026-08-18": 760.2,
+    "2026-08-19": 736.7,
+    "2026-08-20": 739.8
+  }
+}

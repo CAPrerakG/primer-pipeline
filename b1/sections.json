@@ -953,8 +953,8 @@
   "section": "COMPRESSORS",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 3,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "088",
   "family": "Engineering & Capital Goods",
   "order": 14,
   "note": "Suggest merging with Industrial Engines."
@@ -963,8 +963,8 @@
   "section": "INDUSTRIAL ENGINES",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 4,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "088",
   "family": "Engineering & Capital Goods",
   "order": 15,
   "note": "Suggest merging into Compressors."
