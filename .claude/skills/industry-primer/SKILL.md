@@ -30,7 +30,7 @@ need no follow-up.
 - Status of record: `CHECKLIST.md` (generated from `b1/sections.json`).
 - Running theses and known data traps: `FAMILY_NOTES.md`.
 - Finished pages: `b1/out/NNN.html`, plus a named copy in `primers/`. **Nothing is ever written to OneDrive.**
-  Prerak's local clone is `C:\Users\sayoni.n\Desktop\primer-pipeline`.
+  Prerak keeps a local clone on his Desktop; GitHub `main` is the master copy.
 - **Publishing (changed 30 Sep 2026):** the canonical output is now the static site in `docs/`, served by
   GitHub Pages at `https://caprerakg.github.io/primer-pipeline/NNN.html`. Build it with
   `python publish_static.py` from `b1/`. Primers 001-081 also exist as claude.ai artifacts whose URLs are

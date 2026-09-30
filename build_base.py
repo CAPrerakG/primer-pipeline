@@ -1,5 +1,7 @@
 import json, openpyxl
-wb=openpyxl.load_workbook(r'C:/Users/sayoni.n/Desktop/Industry-wise stocks.xlsx',read_only=True)
+import os
+XLSX=os.environ.get('INDUSTRY_XLSX', 'Industry-wise stocks.xlsx')  # set INDUSTRY_XLSX to the source workbook
+wb=openpyxl.load_workbook(XLSX,read_only=True)
 rows=[r for r in list(wb['Industry-wise stocks'].iter_rows(values_only=True))[1:] if r[2]]
 tv={d['s']:d['d'] for d in json.load(open('tv_scan.json'))['data']}
 bse=json.load(open('bse_list.json'))

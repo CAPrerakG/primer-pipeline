@@ -1,3 +1,4 @@
+import os
 import json, glob, importlib.util, collections
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
@@ -68,7 +69,7 @@ ws.column_dimensions['A'].width=22; ws.column_dimensions['B'].width=120
 for row in ws.iter_rows():
     for c in row: c.alignment=WR
     row[0].font=Font(bold=True)
-out=r'C:/Users/sayoni.n/Desktop/Industry classification audit - 18 Sep 2026.xlsx'
+out=os.environ.get('AUDIT_XLSX', 'Industry classification audit - 18 Sep 2026.xlsx')
 wb.save(out)
 print('saved',out,'W',len(W),'R',len(R),'K',len(K),'notscan',len(NS))
 print('W high',sum(1 for x in W if x[4]=='High'),'medium',sum(1 for x in W if x[4]=='Medium'))

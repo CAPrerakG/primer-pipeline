@@ -53,16 +53,15 @@ are owned by the original Claude account and **cannot be updated from anywhere e
 From 082 onward the canonical output is the static site in `docs/`:
 
 - `python publish_static.py` writes every primer to `docs/NNN.html` plus a relinked `docs/index.html`.
-- The pages are fully self-contained and are **read locally**: clone or pull the repo and open
-  `docs/index.html` in a browser. Relative links and the inline charts all work over `file://`.
-- Record the primer's path in `b1/urls.json` as `docs/NNN.html` (or, if GitHub Pages is ever switched
-  on, the full `https://…` URL — `mkchecklist.py` only rejects bare artifact ids).
+- GitHub Pages serves `/docs` on `main` → `https://caprerakg.github.io/primer-pipeline/NNN.html`
+  (the repository was made public on 30 Sep 2026, which is what Pages on the free plan requires).
+- Record that full `https://…` URL in `b1/urls.json`. `mkchecklist.py` rejects bare ids.
+- The pages also work straight off disk: open `docs/index.html` over `file://`. Relative links and the
+  inline charts all work, so the site is readable without Pages at all.
 
-**GitHub Pages is NOT enabled and cannot currently be enabled:** the repository is private and the
-account is on the free plan, which serves Pages only from public repositories. Do not assume a
-`caprerakg.github.io` URL exists. If Prerak later makes the repo public or upgrades, switching Pages on
-at Settings → Pages → Source `main`, folder `/docs` is the only extra step — `publish_static.py`
-already produces exactly what Pages needs, including `.nojekyll`.
+If a primer's page does not appear at its URL within a couple of minutes of pushing, check
+**Settings → Pages** is still set to source `main`, folder `/docs`. `publish_static.py` writes
+`.nojekyll`, which Pages needs so it does not try to run Jekyll over the files.
 
 ---
 

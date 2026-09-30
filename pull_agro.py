@@ -1,5 +1,6 @@
+import os
 import sys, json, time, datetime as dt
-sys.path.insert(0, r"C:/Users/sayoni.n/OneDrive - SOWILO INVESTMENT MANAGERS LLP/Info's files - Research/Research Stocks & Sectors-Prerak/Claude-Backtest")
+sys.path.insert(0, os.environ.get("PIPELINE_ROOT", os.path.dirname(os.path.abspath(__file__))))
 from tv_fetch import fetch
 syms = ["NSE:NIFTY","NSE:CNXSMALLCAP","NSE:UPL","NSE:PIIND","NSE:RALLIS","NSE:DHANUKA","NSE:BAYERCROP","NSE:SHARDACROP",
         "NSE:INSECTICID","NSE:BHARATRAS","NSE:EXCELINDUS","NSE:PUNJABCHEM","NSE:NACLIND","NSE:BHAGCHEM","NSE:SUMICHEM",

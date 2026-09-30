@@ -42,15 +42,19 @@ The series no longer depends on Claude to publish.
 `https://caprerakg.github.io/primer-pipeline/NNN.html`. The pages are fully self-contained — inline CSS
 and JS, no build step, no external dependency except Google Fonts, which degrade gracefully.
 
-**Status: Pages is not enabled, and cannot be on the current plan.** The repository is private and the
-account is free; GitHub serves Pages only from public repos. Checked 30 Sep 2026 — the Pages settings
-screen shows "Upgrade or make this repository public to enable Pages" with no source selector.
+**Status: the repository was made public on 30 Sep 2026**, which is what GitHub Pages requires on the
+free plan. One manual step remains and only Prerak can do it: **Settings → Pages → Source: Deploy from a
+branch → `main` / `/docs`**. Once set, every primer is live at
+`https://caprerakg.github.io/primer-pipeline/NNN.html` and each later push republishes automatically.
 
-**So the primers are read locally**, which needs nothing: pull the repo and open `docs/index.html` in a
-browser. Everything works over `file://` — relative links, the seasonality and calendar-year charts, the
-glossary search. Publishing to the web is optional and only matters if a shareable link is wanted; the
-options are making the repo public (free, exposes everything), GitHub Pro (~$4/mo, repo stays private
-but the site is public), or a host like Netlify or Cloudflare Pages that deploys from a private repo.
+The pages also work straight off disk without Pages at all — pull the repo and open `docs/index.html`.
+Relative links, the charts and the glossary search all work over `file://`.
+
+**Because the repo is public, everything in it is world-readable**, including `FAMILY_NOTES.md`,
+`base.json` and the full git history. It was scanned on 30 Sep 2026: no credentials or API keys. Local
+Windows paths and internal folder names were removed at that point, and two scratch files
+(`b1/idx_snip.txt`, `b1/mem_tail.txt`) that contained them were deleted. The commit author email in
+history predates the change and cannot be removed without rewriting public history — not worth it.
 
 **The old artifacts.** Primers 001–081 also exist as claude.ai artifacts; their URLs are in
 `b1/urls.json`. Those are owned by the original Claude account, are **private**, and cannot be updated
