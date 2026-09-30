@@ -1,6 +1,19 @@
 # Handoff — industry primer series
 
-## Latest state: after 083 (30 Sep 2026)
+## Latest state: after 084 (30 Sep 2026)
+
+084 Bearings is published at `https://caprerakg.github.io/primer-pipeline/084.html`: 16,163 words, 86 links,
+88 glossary terms, 12 questions, four glossary groups and six analytical boxes. Fifteen companies covered;
+eleven-stock basket. All selected prices end 18 September. SKF pair, SNL and Benara excluded with explanations.
+Primary audits cover SKF perimeters, Vishal OCI/EPS mismatch, SKP qualified review, Galaxy sanctions removal,
+Menon classification and Timken GGB restatement. `verify.py 084` and `verify.py 081` exit 0. Browser search/charts
+tested. Verification now also enforces the .gl glossary class and valid chart viewBox.
+
+Next: **085, Industrial Gears & Transmission + Hydraulics & Motion Control**, the queue-suggested merge
+of order 9 (six names) and order 10 (eight names). Disclose the merge. Weekly usage checked after 084 was
+30% used / 70% remaining; continue until approximately 50% remaining per Prerak.
+
+### Previous completed primer: 083
 
 The next queued primer is **084, Bearings (15 names)**. Primer 083, Welding & Cutting Equipment, covers all eight
 watchlist names and is published at `https://caprerakg.github.io/primer-pipeline/083.html`. It has 13,966 words,

@@ -1,0 +1,33 @@
+{
+  "base": {
+    "ytd": 29.7,
+    "april_hit": 13,
+    "april_n": 15,
+    "april_rel": 5.6
+  },
+  "without_sparse_histories": {
+    "ytd": 29.3,
+    "april_hit": 12,
+    "april_n": 15,
+    "april_rel": 5.7
+  },
+  "without_menon": {
+    "ytd": 18.5,
+    "april_hit": 11,
+    "april_n": 15,
+    "april_rel": 5.4
+  },
+  "individual": {
+    "NSE:AUSTENG": -8.5,
+    "BSE:GALXBRG": 89.1,
+    "NSE:HARSHA": 17.3,
+    "NSE:MENONBE": 196.3,
+    "NSE:NRBBEARING": 95.2,
+    "NSE:NIBL": -16.5,
+    "NSE:ROLEXRINGS": 33.6,
+    "NSE:SCHAEFFLER": 8.7,
+    "NSE:SKP": -8.0,
+    "NSE:TIMKEN": 4.0,
+    "BSE:VISHALBL": -18.8
+  }
+}

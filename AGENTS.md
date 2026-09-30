@@ -1,8 +1,8 @@
 # AGENTS.md — operating contract for this repository
 
 This repo builds Prerak's industry primer series: one self-contained HTML primer per industry
-section in his TradingView watchlists (278 sections, Indian listed universe). **083 is published;
-the next queued primer is 084, Bearings.**
+section in his TradingView watchlists (278 sections, Indian listed universe). **084 is published;
+the next queued primer is 085, Industrial Gears & Transmission + Hydraulics & Motion Control.**
 
 Read in this order before doing anything: this file → `HANDOFF.md` →
 `.claude/skills/industry-primer/SKILL.md` (the full pipeline spec) → `CHECKLIST.md` (what is done
@@ -79,7 +79,8 @@ If a primer's page does not appear at its URL within a couple of minutes of push
 - **Keep the series' reading tools and analytical voice.** Every primer carries the glossary search
   block (`gq`, `gcount`, `gnone`) and at least four `box pm` analytical boxes. Group glossary terms under
   `<h3>` headings with a separate `<dl>` for each group, rather than one flat list. `verify.py` checks
-  these structures in the built page.
+  these structures in the built page. Keep `class="gl"` on the glossary section and a valid
+  `viewBox` on each chart SVG: the shared JavaScript requires both, and verification checks them.
 - **Order is Prerak's.** Follow the `CHECKLIST.md` queue. Financials, insurance, pharma, healthcare,
   hospitals and hotels are deferred until every other section is done.
 - **No duplication.** Cross-reference as "see NNN" and check the number against `CHECKLIST.md`

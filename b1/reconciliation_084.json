@@ -1,0 +1,882 @@
+[
+  {
+    "sym": "NSE:AUSTENG",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "32.28",
+        "prior": "35.87",
+        "quarters": [
+          35.87,
+          29.65,
+          28.54,
+          30.92
+        ],
+        "sum": 124.98,
+        "annual": 125.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "0.48",
+        "prior": "0.31",
+        "quarters": [
+          0.31,
+          0.69,
+          0.07,
+          0.87
+        ],
+        "sum": 1.94,
+        "annual": 2.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "0.94",
+        "prior": "1.53",
+        "quarters": [
+          1.53,
+          1.14,
+          0.97,
+          1.2
+        ],
+        "sum": 4.84,
+        "annual": 5.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "2.70",
+        "prior": "4.40",
+        "quarters": [
+          4.4,
+          3.28,
+          2.79,
+          3.45
+        ],
+        "sum": 13.92,
+        "annual": 13.92
+      }
+    ]
+  },
+  {
+    "sym": "BSE:BENARA",
+    "rightmost": "Mar 2026",
+    "same_quarter_prior_year": "Mar 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "1",
+        "prior": "6",
+        "quarters": [],
+        "sum": null,
+        "annual": 3.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "1",
+        "prior": "-1",
+        "quarters": [],
+        "sum": null,
+        "annual": 1.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "-10",
+        "prior": "-6",
+        "quarters": [],
+        "sum": null,
+        "annual": -16.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "-5.54",
+        "prior": "-3.17",
+        "quarters": [],
+        "sum": null,
+        "annual": -9.1
+      }
+    ]
+  },
+  {
+    "sym": "BSE:GALXBRG",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "15.95",
+        "prior": "16.89",
+        "quarters": [
+          16.89,
+          15.1,
+          14.7,
+          20.83
+        ],
+        "sum": 67.52,
+        "annual": 67.51
+      },
+      {
+        "line": "Other Income +",
+        "current": "2.93",
+        "prior": "2.56",
+        "quarters": [
+          2.56,
+          -0.03,
+          1.8,
+          -2.16
+        ],
+        "sum": 2.17,
+        "annual": 2.17
+      },
+      {
+        "line": "Net Profit +",
+        "current": "2.99",
+        "prior": "2.59",
+        "quarters": [
+          2.59,
+          -2.15,
+          1.79,
+          1.08
+        ],
+        "sum": 3.31,
+        "annual": 3.31
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "9.40",
+        "prior": "8.14",
+        "quarters": [
+          8.14,
+          -6.76,
+          5.63,
+          3.4
+        ],
+        "sum": 10.41,
+        "annual": 10.41
+      }
+    ]
+  },
+  {
+    "sym": "NSE:HARSHA",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "457",
+        "prior": "365",
+        "quarters": [
+          365.0,
+          378.0,
+          409.0,
+          474.0
+        ],
+        "sum": 1626.0,
+        "annual": 1627.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "5",
+        "prior": "11",
+        "quarters": [
+          11.0,
+          10.0,
+          7.0,
+          11.0
+        ],
+        "sum": 39.0,
+        "annual": 38.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "37",
+        "prior": "38",
+        "quarters": [
+          38.0,
+          36.0,
+          34.0,
+          47.0
+        ],
+        "sum": 155.0,
+        "annual": 155.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "4.11",
+        "prior": "4.17",
+        "quarters": [
+          4.17,
+          4.0,
+          3.69,
+          5.19
+        ],
+        "sum": 17.05,
+        "annual": 17.05
+      }
+    ]
+  },
+  {
+    "sym": "NSE:MENONBE",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "92",
+        "prior": "67",
+        "quarters": [
+          67.0,
+          63.0,
+          77.0,
+          87.0
+        ],
+        "sum": 294.0,
+        "annual": 299.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "3",
+        "prior": "2",
+        "quarters": [
+          2.0,
+          2.0,
+          2.0,
+          1.0
+        ],
+        "sum": 7.0,
+        "annual": 1.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "14",
+        "prior": "8",
+        "quarters": [
+          8.0,
+          7.0,
+          9.0,
+          14.0
+        ],
+        "sum": 38.0,
+        "annual": 38.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "2.52",
+        "prior": "1.50",
+        "quarters": [
+          1.5,
+          1.21,
+          1.65,
+          2.46
+        ],
+        "sum": 6.82,
+        "annual": 6.83
+      }
+    ]
+  },
+  {
+    "sym": "NSE:NRBBEARING",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "370",
+        "prior": "310",
+        "quarters": [
+          310.0,
+          325.0,
+          328.0,
+          372.0
+        ],
+        "sum": 1335.0,
+        "annual": 1335.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "8",
+        "prior": "9",
+        "quarters": [
+          9.0,
+          14.0,
+          -3.0,
+          7.0
+        ],
+        "sum": 27.0,
+        "annual": 27.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "38",
+        "prior": "33",
+        "quarters": [
+          33.0,
+          41.0,
+          29.0,
+          42.0
+        ],
+        "sum": 145.0,
+        "annual": 146.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "3.80",
+        "prior": "3.31",
+        "quarters": [
+          3.31,
+          4.19,
+          2.95,
+          4.27
+        ],
+        "sum": 14.72,
+        "annual": 14.73
+      }
+    ]
+  },
+  {
+    "sym": "NSE:NIBL",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "18.90",
+        "prior": "18.55",
+        "quarters": [
+          18.55,
+          17.86,
+          18.63,
+          20.58
+        ],
+        "sum": 75.62,
+        "annual": 76.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "0.86",
+        "prior": "1.28",
+        "quarters": [
+          1.28,
+          1.21,
+          -0.65,
+          1.15
+        ],
+        "sum": 2.99,
+        "annual": 3.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "-6.59",
+        "prior": "-5.09",
+        "quarters": [
+          -5.09,
+          -6.74,
+          -10.89,
+          -6.74
+        ],
+        "sum": -29.46,
+        "annual": -29.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "-2.72",
+        "prior": "-2.10",
+        "quarters": [
+          -2.1,
+          -2.78,
+          -4.49,
+          -2.78
+        ],
+        "sum": -12.15,
+        "annual": -12.16
+      }
+    ]
+  },
+  {
+    "sym": "NSE:ROLEXRINGS",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "304",
+        "prior": "292",
+        "quarters": [
+          292.0,
+          271.0,
+          275.0,
+          306.0
+        ],
+        "sum": 1144.0,
+        "annual": 1144.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "20",
+        "prior": "16",
+        "quarters": [
+          16.0,
+          14.0,
+          15.0,
+          -46.0
+        ],
+        "sum": -1.0,
+        "annual": -1.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "60",
+        "prior": "49",
+        "quarters": [
+          49.0,
+          44.0,
+          48.0,
+          -0.0
+        ],
+        "sum": 141.0,
+        "annual": 141.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "2.21",
+        "prior": "1.81",
+        "quarters": [
+          1.81,
+          1.63,
+          1.75,
+          -0.01
+        ],
+        "sum": 5.18,
+        "annual": 5.18
+      }
+    ]
+  },
+  {
+    "sym": "NSE:SCHAEFFLER",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Dec 2025",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "2,761",
+        "prior": "2,353",
+        "quarters": [
+          2174.0,
+          2353.0,
+          2435.0,
+          2724.0
+        ],
+        "sum": 9686.0,
+        "annual": 9686.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "37",
+        "prior": "43",
+        "quarters": [
+          34.0,
+          43.0,
+          28.0,
+          43.0
+        ],
+        "sum": 148.0,
+        "annual": 145.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "326",
+        "prior": "287",
+        "quarters": [
+          252.0,
+          287.0,
+          289.0,
+          322.0
+        ],
+        "sum": 1150.0,
+        "annual": 1150.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "20.84",
+        "prior": "18.37",
+        "quarters": [
+          16.1,
+          18.37,
+          18.51,
+          20.62
+        ],
+        "sum": 73.6,
+        "annual": 73.6
+      }
+    ]
+  },
+  {
+    "sym": "NSE:SKFINDUS",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "971",
+        "prior": "821",
+        "quarters": [
+          821.0,
+          813.0,
+          861.0,
+          946.0
+        ],
+        "sum": 3441.0,
+        "annual": 3440.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "10",
+        "prior": "10",
+        "quarters": [
+          10.0,
+          1.0,
+          -166.0,
+          17.0
+        ],
+        "sum": -138.0,
+        "annual": -137.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "62",
+        "prior": "72",
+        "quarters": [
+          72.0,
+          77.0,
+          -50.0,
+          119.0
+        ],
+        "sum": 218.0,
+        "annual": 218.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "12.52",
+        "prior": "71,870.00",
+        "quarters": [
+          71870.0,
+          76930.0,
+          -10.13,
+          24.06
+        ],
+        "sum": 148813.93,
+        "annual": 44.03
+      }
+    ]
+  },
+  {
+    "sym": "NSE:SKFINDIA",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "588",
+        "prior": "1,283",
+        "quarters": [
+          1283.0,
+          1309.0,
+          577.0,
+          595.0
+        ],
+        "sum": 3764.0,
+        "annual": 3763.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "12",
+        "prior": "15",
+        "quarters": [
+          15.0,
+          -2.0,
+          20.0,
+          29.0
+        ],
+        "sum": 62.0,
+        "annual": 63.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "62",
+        "prior": "118",
+        "quarters": [
+          118.0,
+          105.0,
+          62.0,
+          -20.0
+        ],
+        "sum": 265.0,
+        "annual": 266.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "12.53",
+        "prior": "23.93",
+        "quarters": [
+          23.93,
+          21.35,
+          12.55,
+          -4.0
+        ],
+        "sum": 53.83,
+        "annual": 53.83
+      }
+    ]
+  },
+  {
+    "sym": "NSE:SKP",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "22.11",
+        "prior": "22.12",
+        "quarters": [
+          22.12,
+          17.84,
+          24.77,
+          37.99
+        ],
+        "sum": 102.72,
+        "annual": 103.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "0.83",
+        "prior": "0.24",
+        "quarters": [
+          0.24,
+          2.41,
+          0.42,
+          1.32
+        ],
+        "sum": 4.39,
+        "annual": 4.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "0.04",
+        "prior": "0.38",
+        "quarters": [
+          0.38,
+          2.98,
+          -1.48,
+          -0.95
+        ],
+        "sum": 0.93,
+        "annual": 1.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "0.02",
+        "prior": "0.23",
+        "quarters": [
+          0.23,
+          1.8,
+          -0.89,
+          -0.57
+        ],
+        "sum": 0.57,
+        "annual": 0.53
+      }
+    ]
+  },
+  {
+    "sym": "BSE:SNL",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "15.25",
+        "prior": "12.37",
+        "quarters": [
+          12.37,
+          14.77,
+          14.26,
+          15.22
+        ],
+        "sum": 56.62,
+        "annual": 57.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "1.24",
+        "prior": "0.86",
+        "quarters": [
+          0.86,
+          0.48,
+          0.74,
+          -0.01
+        ],
+        "sum": 2.07,
+        "annual": 2.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "3.46",
+        "prior": "2.71",
+        "quarters": [
+          2.71,
+          2.93,
+          2.65,
+          2.57
+        ],
+        "sum": 10.86,
+        "annual": 11.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "9.58",
+        "prior": "7.50",
+        "quarters": [
+          7.5,
+          8.11,
+          7.34,
+          7.12
+        ],
+        "sum": 30.07,
+        "annual": 30.04
+      }
+    ]
+  },
+  {
+    "sym": "NSE:TIMKEN",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "943",
+        "prior": "822",
+        "quarters": [
+          822.0,
+          786.0,
+          780.0,
+          1090.0
+        ],
+        "sum": 3478.0,
+        "annual": 3478.0
+      },
+      {
+        "line": "Other Income +",
+        "current": "11",
+        "prior": "11",
+        "quarters": [
+          11.0,
+          11.0,
+          7.0,
+          1.0
+        ],
+        "sum": 30.0,
+        "annual": 30.0
+      },
+      {
+        "line": "Net Profit +",
+        "current": "120",
+        "prior": "108",
+        "quarters": [
+          108.0,
+          94.0,
+          55.0,
+          158.0
+        ],
+        "sum": 415.0,
+        "annual": 415.0
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "15.91",
+        "prior": "14.42",
+        "quarters": [
+          14.42,
+          12.44,
+          7.25,
+          21.05
+        ],
+        "sum": 55.16,
+        "annual": 55.16
+      }
+    ]
+  },
+  {
+    "sym": "BSE:VISHALBL",
+    "rightmost": "Jun 2026",
+    "same_quarter_prior_year": "Jun 2025",
+    "annual": "Mar 2026",
+    "rows": [
+      {
+        "line": "Sales +",
+        "current": "22.65",
+        "prior": "22.23",
+        "quarters": [
+          22.23,
+          21.75,
+          20.6,
+          23.36
+        ],
+        "sum": 87.94,
+        "annual": 87.94
+      },
+      {
+        "line": "Other Income +",
+        "current": "0.03",
+        "prior": "0.24",
+        "quarters": [
+          0.24,
+          0.07,
+          0.04,
+          0.09
+        ],
+        "sum": 0.44,
+        "annual": 0.45
+      },
+      {
+        "line": "Net Profit +",
+        "current": "-0.81",
+        "prior": "-1.67",
+        "quarters": [
+          -1.67,
+          1.78,
+          -2.45,
+          1.64
+        ],
+        "sum": -0.7,
+        "annual": -0.78
+      },
+      {
+        "line": "EPS in Rs",
+        "current": "-0.75",
+        "prior": "-1.55",
+        "quarters": [
+          -1.55,
+          1.65,
+          -2.27,
+          1.52
+        ],
+        "sum": -0.65,
+        "annual": -0.72
+      }
+    ]
+  }
+]

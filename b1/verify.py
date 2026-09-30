@@ -151,6 +151,24 @@ else:
             ok(f'glossary search id="{element_id}" present')
     groups = len(re.findall(r'<h3\b[^>]*>.*?</h3>\s*<dl\b', glossary.group(), re.S)) if glossary else 0
     fail(f'glossary has only {groups} headed groups - use <h3> followed by <dl>') if groups < 2 else ok(f'glossary has {groups} headed groups')
+    # base.js selects .gl dt; controls alone do not make search functional.
+    glossary_tag = glossary.group().split('>', 1)[0] if glossary else ''
+    glossary_class = re.search(r'\bclass="([^"]*)"', glossary_tag)
+    if not glossary_class or 'gl' not in glossary_class.group(1).split():
+        fail('glossary section missing class="gl" - search cannot find its terms')
+    else:
+        ok('glossary terms have the .gl search container')
+    # chart() reads viewBox immediately; a missing value also prevents the
+    # later history-table and glossary initialization from running.
+    for svg in re.findall(r'<svg\b[^>]*\bdata-chart="[^"]+"[^>]*>', body):
+        viewbox = re.search(r'\bviewBox="([^"]+)"', svg)
+        try:
+            coordinates = [float(v) for v in viewbox.group(1).split()] if viewbox else []
+            valid = len(coordinates) == 4 and coordinates[2] > 0 and coordinates[3] > 0
+        except ValueError:
+            valid = False
+        if not valid:
+            fail('chart missing a valid four-number viewBox - base.js cannot render it')
     classes = re.findall(r'<(?:div|aside)\b[^>]*\bclass="([^"]+)"', body)
     pm_boxes = sum({'box', 'pm'} <= set(value.split()) for value in classes)
     fail(f'only {pm_boxes} box pm analytical boxes - need at least 4') if pm_boxes < 4 else ok(f'{pm_boxes} box pm analytical boxes')

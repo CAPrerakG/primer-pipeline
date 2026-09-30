@@ -204,3 +204,34 @@ filed in 066. The listed section is the residue.
 - **Price calendar:** Feb–Mar beat the Nifty in only 3/15 years, median −6.7 points; April–July only 8/15, median
   +6.1. December beat 11/15. There is no robust universal Engineering April effect. The current basket gained
   19.0% to 18 September 2026 versus Nifty −10.7%, but three of six individual stocks were negative.
+
+
+## 084 — Bearings
+
+- Fifteen companies reviewed; eleven-stock basket. Benara excluded because its series ends11Sep, not18Sep;
+  SNL is73.45% owned by NRB Bearings; SKF India is not a verified combined shareholder-return series across
+  its October2025 demerger; SKF Industrial has195 bars. Austin and Menon BSE histories were spliced to NSE.
+  Galaxy/Vishal historic gaps remain disclosed, with sensitivities. Every selected endpoint is18Sep2026.
+- Three family tests applied at specification/replacement position (078), processing depth (080), and input
+  reset lag (081). A component supplier can have qualification value without owning the aftermarket;
+  reliable product performance is not itself evidence of attractive returns on invested capital.
+- Price basket +29.7%YTD; excluding Menon +18.5%. April13/15,+5.6points; without Galaxy/Vishal12/15,+5.7;
+  without Menon11/15,+5.4. Monthly clipping and changing constituents are explicit. No record claim.
+- SKF: use continuing automotive figures, not predecessor consolidated prior year. Industrial successor
+  FY26 exceptional expenses196.10 and tax adjustments distort annualisation. Same-looking June PAT61.92
+  in each group's statement does not mean the entities are interchangeable.
+- Galaxy: OFAC removed designation30Jun2026, confirmed official action. June Other Income2.9303 versus
+  PBT3.9751; legal expense0.969. FY26 PAT3.3099, not ScanX headline33.1: EPS10.41 x0.318 confirms.
+- Vishal: June PAT loss0.8123 plus OCIgain0.3286 equals comprehensive loss0.4837. Printed EPS−0.45
+  matches comprehensive loss; PAT/share≈−0.753. Annual EPS has the same OCI problem. Disclosed unresolved.
+- SKP: qualified June group review; France management-certified/unreviewed. Quarterly PAT summary sum
+  differs from annual by0.0543; annual closing cashflow/components also disagree. No clean-audit claim.
+- Menon: primary FY26 operating sales293.8086, not summary299; other income6.4349, not summary1.
+  Headline EBITDA differs0.2603 from PBT+interest+depreciation bridge. Group includes castings and brakes.
+- Timken: GGB acquired Dec2025 for128.8; common-control comparatives restated fromApr2024, with prior
+  subsidiary information management-compiled. June PAT119.659 matches EPS15.91 x7.5219; tax reversal3.373.
+- Schaeffler: H1CFO389.35 versus711.90 despite profit growth; inventory489.21 and receivables161.58 cash
+  absorption. NRB ownerPAT36.84 differs from group37.76 byminority0.92; insurancegain2.65 separate.
+- Draft bearing QCO has blank notification number/date; not proof of enacted blanket protection.
+- Page dependencies: .gl class is required by glossary JS; SVG viewBox is required before charts, table
+  and glossary can initialise. Both now guarded in verify.py; 081 remains exit0. No older page changed.

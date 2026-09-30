@@ -1,0 +1,232 @@
+[
+  {
+    "key": "AUSTENG_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f03555c4-90af-4e8e-bcaf-38a8f7180e92.pdf",
+    "chars": 22188
+  },
+  {
+    "key": "AUSTENG_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9cd582ed-c170-4213-a6e7-6364413c5ae0.pdf",
+    "chars": 27826
+  },
+  {
+    "key": "BENARA_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c8b6a965-7670-4b6a-bc07-0ab44318049e.pdf",
+    "chars": 46957
+  },
+  {
+    "key": "GALXBRG_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce84acb4-34f3-462e-9b1c-9b7d9bf55bdd.pdf",
+    "chars": 9680
+  },
+  {
+    "key": "GALXBRG_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/414bef75-551c-4e2a-b6fc-4fc338bbf3db.pdf",
+    "chars": 35814
+  },
+  {
+    "key": "HARSHA_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1dacb46a-69c3-4ade-9372-9892fe132e3f.pdf",
+    "chars": 21745
+  },
+  {
+    "key": "HARSHA_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d187777b-8084-412b-81a4-f0ff4cda4258.pdf",
+    "chars": 69626
+  },
+  {
+    "key": "MENONBE_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eaf6cc16-058b-4f33-aa0c-b9ca5a291e42.pdf",
+    "chars": 2364
+  },
+  {
+    "key": "MENONBE_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c3cc28e0-4724-4311-a02e-d41c1bd4c997.pdf",
+    "chars": 7980
+  },
+  {
+    "key": "NRBBEARING_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/118877da-01cb-44b9-b060-b2a6684e4d54.pdf",
+    "chars": 36607
+  },
+  {
+    "key": "NRBBEARING_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7db1da48-0f24-4500-a2a9-5a0555231ad2.pdf",
+    "chars": 75092
+  },
+  {
+    "key": "NIBL_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fad5db35-e3dc-4c1d-b58c-f4f7da7e24ea.pdf",
+    "chars": 25888
+  },
+  {
+    "key": "NIBL_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/33882aa6-d258-42f0-bd6b-04ccda681482.pdf",
+    "chars": 68242
+  },
+  {
+    "key": "ROLEXRINGS_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f5474bd5-9e2b-419f-b953-8ae35057b241.pdf",
+    "chars": 12589
+  },
+  {
+    "key": "ROLEXRINGS_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6d81d251-fbef-4745-95e7-4997c7f5282e.pdf",
+    "chars": 8868
+  },
+  {
+    "key": "SCHAEFFLER_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/57d4ef07-e9e4-4b35-802a-43d57a8a167a.pdf",
+    "chars": 36836
+  },
+  {
+    "key": "SCHAEFFLER_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d63e54ea-9368-49d8-b6e5-7fcd850121a6.pdf",
+    "chars": 25891
+  },
+  {
+    "key": "SKFINDUS_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/12de8686-8051-44fc-9d78-df827ff1e639.pdf",
+    "chars": 25272
+  },
+  {
+    "key": "SKFINDUS_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b8833e7f-2f6b-41e3-82a3-f10de34083fc.pdf",
+    "chars": 30750
+  },
+  {
+    "key": "SKFINDIA_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9a639f96-a1a1-473e-8ca3-df63af6a6cfb.pdf",
+    "chars": 34166
+  },
+  {
+    "key": "SKFINDIA_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/2840e334-4a05-45bf-bc22-8d8ce6435ecb.pdf",
+    "chars": 87236
+  },
+  {
+    "key": "SKP_latest",
+    "url": "https://nsearchives.nseindia.com/corporate/SKPBEARING_14082026181433_Financials_Q1.pdf",
+    "chars": 3012
+  },
+  {
+    "key": "SKP_annual",
+    "url": "https://nsearchives.nseindia.com/corporate/SKPBEARING_28052026183026_Financials_2025-26.pdf",
+    "chars": 44534
+  },
+  {
+    "key": "SNL_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/97d51c71-93f8-4152-a451-3683873b3bbb.pdf",
+    "chars": 11143
+  },
+  {
+    "key": "SNL_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a3ccedf3-13a1-4c6e-ab74-41ec4edb7cf2.pdf",
+    "chars": 29525
+  },
+  {
+    "key": "TIMKEN_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/477531c6-220d-4775-96c4-2f796199aadc.pdf",
+    "chars": 21422
+  },
+  {
+    "key": "TIMKEN_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6d5b5e20-4c80-42f1-887c-fff895ff2135.pdf",
+    "chars": 59230
+  },
+  {
+    "key": "VISHALBL_latest",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8951c74a-57c5-4e4d-a37d-f004a371cb50.pdf",
+    "chars": 8577
+  },
+  {
+    "key": "VISHALBL_annual",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dea404b3-dec7-4868-801b-0d1acfcf7214.pdf",
+    "chars": 13834
+  },
+  {
+    "key": "harsha_deck",
+    "url": "https://harshaengineers.com/InvestorRelations/pdffiles/Earning%20Presentation%20Q1FY2027.pdf",
+    "chars": 17352
+  },
+  {
+    "key": "harsha_call",
+    "url": "https://harshaengineers.com/InvestorRelations/pdffiles/Transcript%20of%20Earning%20Call%20Q1FY2027.pdf",
+    "chars": 48732
+  },
+  {
+    "key": "timkencall_call",
+    "url": "https://www.timken.com/wp-content/uploads/2026/08/SE-Intimation_Investor-Call-Transcript_5-August-2026.pdf",
+    "chars": 170
+  },
+  {
+    "key": "AUSTENG_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/843ae196-5722-4c7f-8564-6865b13ccbad.pdf",
+    "chars": 495543
+  },
+  {
+    "key": "BENARA_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/944adaac-dc44-447c-9c59-bb1cb8da3854.pdf",
+    "chars": 411114
+  },
+  {
+    "key": "GALXBRG_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/32978dbe-ea03-45f8-9de4-58bc9ed26340.pdf",
+    "chars": 367447
+  },
+  {
+    "key": "HARSHA_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b2e8f4b1-eb96-4108-aec0-395d353fc447.pdf",
+    "chars": 1035719
+  },
+  {
+    "key": "MENONBE_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/de806def-20b9-434f-85af-a00cb0667a00.pdf",
+    "chars": 425504
+  },
+  {
+    "key": "NRBBEARING_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d11be1af-5e6e-4b73-92b5-f5b8cfb8dc4c.pdf",
+    "chars": 861403
+  },
+  {
+    "key": "NIBL_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/27e1c65d-9d52-4cd8-acae-25f42c152a34.pdf",
+    "chars": 714292
+  },
+  {
+    "key": "ROLEXRINGS_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/76a279b5-7b54-4a69-9fbf-1f7ec1ab0247.pdf",
+    "chars": 481533
+  },
+  {
+    "key": "SKFINDUS_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/14a18ae7-50d9-407c-b1f9-3fe2268b987e.pdf",
+    "chars": 818740
+  },
+  {
+    "key": "SKFINDIA_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eea31abf-a99b-40f8-94e3-19ff8f2e06d2.pdf",
+    "chars": 1087581
+  },
+  {
+    "key": "SKP_AR",
+    "url": "https://archives.nseindia.com/annual_reports/SME_AR_30684_SKP_2025_2026_A_37306000_26082026194338.pdf",
+    "chars": 291595
+  },
+  {
+    "key": "SNL_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0815fe03-39db-4201-bd1f-fc57b4646ee0.pdf",
+    "chars": 406961
+  },
+  {
+    "key": "TIMKEN_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/36200b5d-34b3-4f62-82de-27573814400e.pdf",
+    "chars": 565518
+  },
+  {
+    "key": "VISHALBL_AR",
+    "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1ee0ec61-bc2f-49d4-9af9-47888189303c.pdf",
+    "chars": 330096
+  }
+]

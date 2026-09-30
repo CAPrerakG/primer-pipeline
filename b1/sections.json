@@ -893,8 +893,8 @@
   "section": "BEARINGS",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 15,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "084",
   "family": "Engineering & Capital Goods",
   "order": 8,
   "note": ""
