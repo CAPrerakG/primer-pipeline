@@ -42,8 +42,15 @@ The series no longer depends on Claude to publish.
 `https://caprerakg.github.io/primer-pipeline/NNN.html`. The pages are fully self-contained — inline CSS
 and JS, no build step, no external dependency except Google Fonts, which degrade gracefully.
 
-**One manual step, and only Prerak can do it:** GitHub → repo **Settings → Pages → Source: `main`,
-folder `/docs`**. Until that is switched on the site builds correctly but is not served.
+**Status: Pages is not enabled, and cannot be on the current plan.** The repository is private and the
+account is free; GitHub serves Pages only from public repos. Checked 30 Sep 2026 — the Pages settings
+screen shows "Upgrade or make this repository public to enable Pages" with no source selector.
+
+**So the primers are read locally**, which needs nothing: pull the repo and open `docs/index.html` in a
+browser. Everything works over `file://` — relative links, the seasonality and calendar-year charts, the
+glossary search. Publishing to the web is optional and only matters if a shareable link is wanted; the
+options are making the repo public (free, exposes everything), GitHub Pro (~$4/mo, repo stays private
+but the site is public), or a host like Netlify or Cloudflare Pages that deploys from a private repo.
 
 **The old artifacts.** Primers 001–081 also exist as claude.ai artifacts; their URLs are in
 `b1/urls.json`. Those are owned by the original Claude account, are **private**, and cannot be updated

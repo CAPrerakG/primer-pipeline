@@ -50,14 +50,19 @@ actually made at least once. **Do not publish on a FAIL.**
 Primers 001–081 were published as claude.ai artifacts and `b1/urls.json` still holds those URLs. They
 are owned by the original Claude account and **cannot be updated from anywhere else** — leave them alone.
 
-From 082 onward the canonical output is the static site:
+From 082 onward the canonical output is the static site in `docs/`:
 
 - `python publish_static.py` writes every primer to `docs/NNN.html` plus a relinked `docs/index.html`.
-- GitHub Pages serves `/docs` on `main` → `https://caprerakg.github.io/primer-pipeline/NNN.html`
-- Record that URL in `b1/urls.json` for the new primer, in the same full-URL form.
+- The pages are fully self-contained and are **read locally**: clone or pull the repo and open
+  `docs/index.html` in a browser. Relative links and the inline charts all work over `file://`.
+- Record the primer's path in `b1/urls.json` as `docs/NNN.html` (or, if GitHub Pages is ever switched
+  on, the full `https://…` URL — `mkchecklist.py` only rejects bare artifact ids).
 
-Pages must be switched on once, by Prerak, at **Settings → Pages → Source: `main`, folder `/docs`**.
-Until he does, the site builds correctly but is not served.
+**GitHub Pages is NOT enabled and cannot currently be enabled:** the repository is private and the
+account is on the free plan, which serves Pages only from public repositories. Do not assume a
+`caprerakg.github.io` URL exists. If Prerak later makes the repo public or upgrades, switching Pages on
+at Settings → Pages → Source `main`, folder `/docs` is the only extra step — `publish_static.py`
+already produces exactly what Pages needs, including `.nojekyll`.
 
 ---
 
