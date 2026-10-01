@@ -1,0 +1,576 @@
+{
+  "fixed_date": "2026-09-18",
+  "series": {
+    "BSE:ABCINDQ": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 4991,
+      "first_date": "2005-09-09",
+      "end_date": "2026-09-18",
+      "last_close": 63.6,
+      "gaps_over_10_calendar_days": [
+        {
+          "date": "2013-08-30",
+          "calendar_days": 16.0
+        }
+      ],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 1,
+      "gaps_last_date": "2013-08-30",
+      "endpoint_check": "pass",
+      "repair_needed": "None for excluded basket purpose;16calendar-day2013gap remains disclosed."
+    },
+    "NSE:CROWN": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 1365,
+      "first_date": "2016-09-27",
+      "end_date": "2026-09-18",
+      "last_close": 108.48,
+      "gaps_over_10_calendar_days": [
+        {
+          "date": "2016-12-09",
+          "calendar_days": 17.0
+        },
+        {
+          "date": "2017-01-09",
+          "calendar_days": 12.0
+        },
+        {
+          "date": "2017-02-16",
+          "calendar_days": 20.0
+        },
+        {
+          "date": "2017-02-27",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2017-04-12",
+          "calendar_days": 12.0
+        },
+        {
+          "date": "2017-06-28",
+          "calendar_days": 15.0
+        },
+        {
+          "date": "2017-08-31",
+          "calendar_days": 29.0
+        },
+        {
+          "date": "2017-09-18",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2017-12-05",
+          "calendar_days": 18.0
+        },
+        {
+          "date": "2018-01-29",
+          "calendar_days": 17.0
+        },
+        {
+          "date": "2018-03-05",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2018-04-23",
+          "calendar_days": 18.0
+        },
+        {
+          "date": "2018-05-04",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2018-07-13",
+          "calendar_days": 24.0
+        },
+        {
+          "date": "2018-07-26",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2018-08-17",
+          "calendar_days": 22.0
+        },
+        {
+          "date": "2018-09-10",
+          "calendar_days": 24.0
+        },
+        {
+          "date": "2018-09-26",
+          "calendar_days": 12.0
+        },
+        {
+          "date": "2018-10-15",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2018-12-06",
+          "calendar_days": 16.0
+        },
+        {
+          "date": "2018-12-20",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2019-01-28",
+          "calendar_days": 39.0
+        },
+        {
+          "date": "2019-03-15",
+          "calendar_days": 45.0
+        },
+        {
+          "date": "2019-04-10",
+          "calendar_days": 19.0
+        },
+        {
+          "date": "2019-04-26",
+          "calendar_days": 16.0
+        },
+        {
+          "date": "2019-07-02",
+          "calendar_days": 67.0
+        },
+        {
+          "date": "2019-08-01",
+          "calendar_days": 29.0
+        },
+        {
+          "date": "2019-09-05",
+          "calendar_days": 30.0
+        },
+        {
+          "date": "2019-09-18",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2019-12-11",
+          "calendar_days": 77.0
+        },
+        {
+          "date": "2020-03-18",
+          "calendar_days": 83.0
+        },
+        {
+          "date": "2020-06-25",
+          "calendar_days": 86.0
+        },
+        {
+          "date": "2020-10-06",
+          "calendar_days": 103.0
+        },
+        {
+          "date": "2021-03-05",
+          "calendar_days": 144.0
+        },
+        {
+          "date": "2021-03-24",
+          "calendar_days": 19.0
+        },
+        {
+          "date": "2022-02-08",
+          "calendar_days": 277.0
+        }
+      ],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [
+        {
+          "date": "2022-02-08",
+          "change_pct": -34.3311506080449,
+          "before": 53.45,
+          "after": 35.1
+        }
+      ],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 36,
+      "gaps_last_date": "2022-02-08",
+      "endpoint_check": "pass",
+      "repair_needed": "277daygap before8Feb2022includes-34.33%close change; not proven one-day crash. Sparse earlier history; exclude manufacturing basket."
+    },
+    "NSE:BAJAJINDEF": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 388,
+      "first_date": "2025-02-21",
+      "end_date": "2026-09-18",
+      "last_close": 214.94,
+      "gaps_over_10_calendar_days": [],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": true,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 0,
+      "gaps_last_date": null,
+      "endpoint_check": "pass",
+      "repair_needed": "Recent demerged listing; do not splice parent unadjusted prices."
+    },
+    "NSE:INTLCONV": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 1243,
+      "first_date": "2021-09-16",
+      "end_date": "2026-09-18",
+      "last_close": 76.6,
+      "gaps_over_10_calendar_days": [],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 0,
+      "gaps_last_date": null,
+      "endpoint_check": "pass",
+      "repair_needed": "Investigate earlier same-ISIN BSE history; NSE beginsSep2021. Do not infer company inception from first NSE bar."
+    },
+    "BSE:LTELEVATOR": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 247,
+      "first_date": "2025-09-19",
+      "end_date": "2026-09-18",
+      "last_close": 341.0,
+      "gaps_over_10_calendar_days": [],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": true,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 0,
+      "gaps_last_date": null,
+      "endpoint_check": "pass",
+      "repair_needed": "Recent IPO19Sep2025; do not invent back-history."
+    },
+    "NSE:SIKA": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 106,
+      "first_date": "2026-04-20",
+      "end_date": "2026-09-18",
+      "last_close": 1021.5,
+      "gaps_over_10_calendar_days": [],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": true,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 0,
+      "gaps_last_date": null,
+      "endpoint_check": "pass",
+      "repair_needed": "NSE begins20Apr2026; inspect BSE same-ISIN prehistory if needed despite business exclusion."
+    },
+    "BSE:SKYLMILAR": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 4666,
+      "first_date": "2003-12-30",
+      "end_date": "2026-09-18",
+      "last_close": 9.89,
+      "gaps_over_10_calendar_days": [
+        {
+          "date": "2004-10-29",
+          "calendar_days": 289.0
+        },
+        {
+          "date": "2013-06-12",
+          "calendar_days": 28.0
+        },
+        {
+          "date": "2013-06-26",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2013-08-23",
+          "calendar_days": 21.0
+        },
+        {
+          "date": "2013-11-20",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2016-02-08",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2016-04-13",
+          "calendar_days": 23.0
+        },
+        {
+          "date": "2016-05-09",
+          "calendar_days": 17.0
+        },
+        {
+          "date": "2016-11-21",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2017-03-21",
+          "calendar_days": 15.0
+        },
+        {
+          "date": "2018-01-02",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2018-05-08",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2018-05-21",
+          "calendar_days": 12.0
+        },
+        {
+          "date": "2018-07-09",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2018-08-20",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2018-10-01",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2019-03-12",
+          "calendar_days": 18.0
+        },
+        {
+          "date": "2019-07-16",
+          "calendar_days": 22.0
+        },
+        {
+          "date": "2020-06-02",
+          "calendar_days": 12.0
+        }
+      ],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 19,
+      "gaps_last_date": "2020-06-02",
+      "endpoint_check": "pass",
+      "repair_needed": "Excluded property company;19gaps retained in diagnostic."
+    },
+    "NSE:SOMICONVEY": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 2500,
+      "first_date": "2016-07-18",
+      "end_date": "2026-09-18",
+      "last_close": 94.25,
+      "gaps_over_10_calendar_days": [],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 0,
+      "gaps_last_date": null,
+      "endpoint_check": "pass",
+      "repair_needed": "Series begins18Jul2016and returns2500bars despite5000requested; inspect BSE/earlier exchange coverage before claiming full fifteen-year history."
+    },
+    "NSE:THEJO": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 2024,
+      "first_date": "2014-05-15",
+      "end_date": "2026-09-18",
+      "last_close": 2199.7,
+      "gaps_over_10_calendar_days": [
+        {
+          "date": "2014-06-23",
+          "calendar_days": 32.0
+        },
+        {
+          "date": "2014-08-26",
+          "calendar_days": 64.0
+        },
+        {
+          "date": "2014-09-09",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2014-09-30",
+          "calendar_days": 21.0
+        },
+        {
+          "date": "2014-11-12",
+          "calendar_days": 43.0
+        },
+        {
+          "date": "2015-01-22",
+          "calendar_days": 49.0
+        },
+        {
+          "date": "2015-02-27",
+          "calendar_days": 23.0
+        },
+        {
+          "date": "2015-04-09",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2015-04-30",
+          "calendar_days": 15.0
+        },
+        {
+          "date": "2015-05-20",
+          "calendar_days": 20.0
+        },
+        {
+          "date": "2015-06-03",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2015-06-15",
+          "calendar_days": 12.0
+        },
+        {
+          "date": "2015-07-15",
+          "calendar_days": 12.0
+        },
+        {
+          "date": "2015-08-19",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2015-09-11",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2015-09-30",
+          "calendar_days": 19.0
+        },
+        {
+          "date": "2015-10-15",
+          "calendar_days": 15.0
+        },
+        {
+          "date": "2016-01-18",
+          "calendar_days": 38.0
+        },
+        {
+          "date": "2016-03-11",
+          "calendar_days": 44.0
+        },
+        {
+          "date": "2016-04-25",
+          "calendar_days": 38.0
+        },
+        {
+          "date": "2016-06-03",
+          "calendar_days": 25.0
+        },
+        {
+          "date": "2016-06-27",
+          "calendar_days": 20.0
+        },
+        {
+          "date": "2016-09-09",
+          "calendar_days": 29.0
+        },
+        {
+          "date": "2016-10-17",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2016-11-03",
+          "calendar_days": 17.0
+        },
+        {
+          "date": "2017-01-31",
+          "calendar_days": 82.0
+        },
+        {
+          "date": "2017-02-27",
+          "calendar_days": 17.0
+        },
+        {
+          "date": "2017-03-29",
+          "calendar_days": 15.0
+        },
+        {
+          "date": "2017-07-10",
+          "calendar_days": 18.0
+        },
+        {
+          "date": "2017-10-10",
+          "calendar_days": 13.0
+        },
+        {
+          "date": "2018-04-11",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2018-04-25",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2018-05-15",
+          "calendar_days": 20.0
+        },
+        {
+          "date": "2018-06-06",
+          "calendar_days": 22.0
+        },
+        {
+          "date": "2018-07-09",
+          "calendar_days": 20.0
+        },
+        {
+          "date": "2018-07-25",
+          "calendar_days": 16.0
+        },
+        {
+          "date": "2018-10-10",
+          "calendar_days": 14.0
+        },
+        {
+          "date": "2018-11-14",
+          "calendar_days": 15.0
+        },
+        {
+          "date": "2019-07-05",
+          "calendar_days": 11.0
+        },
+        {
+          "date": "2019-08-14",
+          "calendar_days": 19.0
+        },
+        {
+          "date": "2019-10-29",
+          "calendar_days": 33.0
+        },
+        {
+          "date": "2019-11-15",
+          "calendar_days": 11.0
+        }
+      ],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 42,
+      "gaps_last_date": "2019-11-15",
+      "endpoint_check": "pass",
+      "repair_needed": "42gaps; last15Nov2019. Either verified alternative history or disclosed later basket start/sensitivity needed."
+    },
+    "NSE:TRF": {
+      "source": "TradingView daily split-adjusted fetch",
+      "error": null,
+      "bars": 4095,
+      "first_date": "2010-01-08",
+      "end_date": "2026-09-18",
+      "last_close": 215.25,
+      "gaps_over_10_calendar_days": [],
+      "daily_moves_le_minus30_or_ge_plus50_pct": [],
+      "short_history_under_500_bars": false,
+      "repair_status": "No backfill or shared-cache changes performed; flags require review.",
+      "gap_count": 0,
+      "gaps_last_date": null,
+      "endpoint_check": "pass",
+      "repair_needed": "No detected gap/big-move repairs; endpoints clean; first bar8Jan2010."
+    }
+  },
+  "basket_decision": "Coordinator approval required; no global compute_stats run",
+  "method": {
+    "daily_series": "TradingView split-adjusted daily close; raw pilot series saved separately",
+    "date_filter": "UTC dates <=2026-09-18",
+    "gap_threshold": "more than10calendar days between consecutive printed bars",
+    "large_move_threshold": "consecutive printed close return <=-30% or >=+50%; not necessarily a one-session move if gap intervenes",
+    "short_history_flag": "less than500observations; diagnostic, not automatic listing-date proof"
+  }
+}

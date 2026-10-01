@@ -1,0 +1,379 @@
+{
+  "start_utc": "2026-10-01T16:12:57.822595+00:00",
+  "end_utc": "2026-10-01T16:15:24.229732+00:00",
+  "cutoff": "2026-09-18",
+  "source": "TradingView split-adjusted daily websocket; shared cache lacked all 14 symbols",
+  "no_shared_writes": true,
+  "audit": [
+    {
+      "symbol": "NSE:AFFORDABLE",
+      "observations": 473,
+      "first": [
+        "2024-10-23",
+        731.2
+      ],
+      "last": [
+        "2026-09-18",
+        172.31
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.188000000009197,
+      "business_recommendation": "include conditionally after same-ISIN BSE prehistory repair",
+      "ISIN": "INE692Z01013",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [
+        "Validate same-ISIN BSE prehistory before23Oct2024NSEmigration; examine overlap adjustment and corporate actions. No splice performed."
+      ],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": true
+    },
+    {
+      "symbol": "BSE:APLAB",
+      "observations": 4983,
+      "first": [
+        "2003-10-29",
+        12.69560697
+      ],
+      "last": [
+        "2026-09-18",
+        75.99
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.202999999994063,
+      "business_recommendation": "include with mixed-product disclosure",
+      "ISIN": "INE273A01015",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "BSE:AXISOL",
+      "observations": 113,
+      "first": [
+        "2025-07-30",
+        15.75
+      ],
+      "last": [
+        "2026-09-18",
+        580.35
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.171000000002095,
+      "business_recommendation": "exclude from historical basket; retain full company coverage",
+      "ISIN": "INE520G01024",
+      "history_assessment": "Exclude113sparseobservations and legacy Asya business; do not splice premerger prices.",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": true
+    },
+    {
+      "symbol": "NSE:CANARYS",
+      "observations": 727,
+      "first": [
+        "2023-10-11",
+        41.299999
+      ],
+      "last": [
+        "2026-09-18",
+        24.9
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.203000000008615,
+      "business_recommendation": "exclude core industrial basket, retain adjacency",
+      "ISIN": "INE0QG301017",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "BSE:CONTICON",
+      "observations": 4438,
+      "first": [
+        "2003-10-28",
+        2.1
+      ],
+      "last": [
+        "2026-09-18",
+        15.4
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [
+        {
+          "from": "2009-06-24",
+          "to": "2009-10-22",
+          "days": 120
+        },
+        {
+          "from": "2020-02-06",
+          "to": "2020-04-17",
+          "days": 71
+        }
+      ],
+      "fetch_seconds": 11.953999999997905,
+      "business_recommendation": "exclude",
+      "ISIN": "INE545B01022",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [
+        "Investigate stated gaps if ever included; excluded here without filling."
+      ],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "NSE:HONAUT",
+      "observations": 5309,
+      "first": [
+        "2005-03-24",
+        601.95001
+      ],
+      "last": [
+        "2026-09-18",
+        35445.0
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.235000000000582,
+      "business_recommendation": "include",
+      "ISIN": "INE671A01010",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [],
+      "zero_volume_observations": 2,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "BSE:ROBU",
+      "observations": 877,
+      "first": [
+        "2023-03-01",
+        158.90909107
+      ],
+      "last": [
+        "2026-09-18",
+        1030.0
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.218000000008033,
+      "business_recommendation": "exclude core manufacturer/integrator basket; show separate proxy",
+      "ISIN": "INE0OLH01013",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "NSE:MARINE",
+      "observations": 1915,
+      "first": [
+        "2018-10-26",
+        13.7199996
+      ],
+      "last": [
+        "2026-09-18",
+        379.2
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.187000000005355,
+      "business_recommendation": "include only with electrical-panel sensitivity; alternative exclude pure automation basket",
+      "ISIN": "INE01JE01028",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "NSE:PATILAUTOM",
+      "observations": 310,
+      "first": [
+        "2025-06-20",
+        120.0
+      ],
+      "last": [
+        "2026-09-18",
+        325.9
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.187000000005355,
+      "business_recommendation": "exclude initial historical basket for short history; retain full research",
+      "ISIN": "INE17GV01016",
+      "history_assessment": "310bars: recent listing excluded initialhistory",
+      "necessary_repairs": [
+        "Resolve20Jun2025firstTVbar vs23Jun2025listingdate in primary financial-result note. Do not invent prelisting closes."
+      ],
+      "zero_volume_observations": 1,
+      "short_history_under_500_observations": true
+    },
+    {
+      "symbol": "NSE:PIGL",
+      "observations": 1293,
+      "first": [
+        "2018-05-08",
+        29.799999
+      ],
+      "last": [
+        "2026-09-18",
+        99.49
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [
+        {
+          "from": "2019-03-27",
+          "to": "2019-05-20",
+          "days": 54
+        },
+        {
+          "from": "2019-10-09",
+          "to": "2020-01-13",
+          "days": 96
+        }
+      ],
+      "fetch_seconds": 10.187000000005355,
+      "business_recommendation": "exclude core automation basket",
+      "ISIN": "INE557Z01018",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [
+        "Investigate stated gaps if ever included; excluded here without filling."
+      ],
+      "zero_volume_observations": 1,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "BSE:REXNORD",
+      "observations": 5149,
+      "first": [
+        "2003-10-30",
+        1.2
+      ],
+      "last": [
+        "2026-09-18",
+        93.95
+      ],
+      "endpoint_pass": true,
+      "large_moves": [
+        {
+          "from": [
+            "2004-01-14",
+            2.97
+          ],
+          "to": [
+            "2004-02-25",
+            1.24
+          ],
+          "change_pct": -58.24915824915825
+        }
+      ],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.21799999999348,
+      "business_recommendation": "exclude core automation basket; disclose cooling-components proxy",
+      "ISIN": "INE687C01012",
+      "history_assessment": "2004large step predates standard2011window; excluded primarily by business scope.",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "NSE:RISHABH",
+      "observations": 750,
+      "first": [
+        "2023-09-11",
+        443.14999
+      ],
+      "last": [
+        "2026-09-18",
+        764.7
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.187999999994645,
+      "business_recommendation": "include with instrumentation-only/mixed-business sensitivity",
+      "ISIN": "INE0N2P01017",
+      "history_assessment": "750bars from11Sep2023; changing-membership or short-window sensitivity required.",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    },
+    {
+      "symbol": "NSE:TEMPSENS",
+      "observations": 15,
+      "first": [
+        "2026-08-28",
+        586.65
+      ],
+      "last": [
+        "2026-09-18",
+        531.6
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [],
+      "fetch_seconds": 10.672000000005937,
+      "business_recommendation": "exclude from historical basket; retain full current financial coverage",
+      "ISIN": "INE1KZI01025",
+      "history_assessment": "15bars: listed28Aug2026confirmedprimary latestp6; exclude seasonal history.",
+      "necessary_repairs": [],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": true
+    },
+    {
+      "symbol": "BSE:UNIOFFICE",
+      "observations": 4503,
+      "first": [
+        "2003-10-29",
+        2.25
+      ],
+      "last": [
+        "2026-09-18",
+        6.7
+      ],
+      "endpoint_pass": true,
+      "large_moves": [],
+      "gaps_over_45_days": [
+        {
+          "from": "2026-05-19",
+          "to": "2026-07-15",
+          "days": 57
+        }
+      ],
+      "fetch_seconds": 10.672000000005937,
+      "business_recommendation": "exclude",
+      "ISIN": "INE951C01012",
+      "history_assessment": "Candidate history; final basket decision remains coordinator responsibility",
+      "necessary_repairs": [
+        "Investigate stated gaps if ever included; excluded here without filling."
+      ],
+      "zero_volume_observations": 0,
+      "short_history_under_500_observations": false
+    }
+  ],
+  "provisional_basket_candidates": [
+    "NSE:HONAUT",
+    "BSE:APLAB",
+    "NSE:AFFORDABLE"
+  ],
+  "mixed_business_sensitivities": [
+    "NSE:MARINE",
+    "NSE:RISHABH"
+  ],
+  "final_basket_selected": false,
+  "stats_computed": false,
+  "synthetic_closes_created": false
+}

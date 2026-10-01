@@ -1,0 +1,110 @@
+[
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Action Construction Equipment Limited",
+    "sym": "NSE:ACE",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Action Construction Equipment Limited",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 136987354541.99998,
+    "isin": "INE731H01025",
+    "bse_code": "532762"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Ajax Engineering Ltd.",
+    "sym": "NSE:AJAXENGG",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Ajax Engineering Ltd.",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 64777131170,
+    "isin": "INE274Y01021",
+    "bse_code": "544356"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Cranex Limited",
+    "sym": "BSE:CRANEX",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Cranex Limited",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 633339400,
+    "isin": "INE608B01010",
+    "bse_code": "522001"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Eimco Elecon (India) Ltd.",
+    "sym": "NSE:EIMCOELECO",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Eimco Elecon (India) Ltd.",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 13103175077,
+    "isin": "INE158B01016",
+    "bse_code": "523708"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Gujarat Apollo Industries Limited",
+    "sym": "NSE:GUJAPOLLO",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Gujarat Apollo Industries Limited",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 4358568431,
+    "isin": "INE826C01016",
+    "bse_code": "522217"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Sanghvi Movers Limited",
+    "sym": "NSE:SANGHVIMOV",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Sanghvi Movers Limited",
+    "tv_sector": "Finance",
+    "tv_ind": "Finance/Rental/Leasing",
+    "mcap": 35405254784,
+    "isin": "INE989A01032",
+    "bse_code": "530073"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Tega Industries Ltd.",
+    "sym": "NSE:TEGA",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Tega Industries Ltd.",
+    "tv_sector": "Distribution Services",
+    "tv_ind": "Wholesale Distributors",
+    "mcap": 129024302095,
+    "isin": "INE011K01018",
+    "bse_code": "543413"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "TIL Ltd.",
+    "sym": "NSE:TIL",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "TIL Ltd.",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 22630967377,
+    "isin": "INE806C01018",
+    "bse_code": "505196"
+  },
+  {
+    "ind": "CONSTRUCTION & MINING EQUIPMENT",
+    "co": "Virat Crane Industries Limited",
+    "sym": "BSE:VIRATCRA",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Virat Crane Industries Limited",
+    "tv_sector": "Consumer Non-Durables",
+    "tv_ind": "Tobacco",
+    "mcap": 671532919,
+    "isin": "INE295C01014",
+    "bse_code": "519457"
+  }
+]

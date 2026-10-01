@@ -1,6 +1,43 @@
 # Handoff — industry primer series
 
-## Acceleration preparation (1 October 2026)
+## Parallel feasibility pilot complete: awaiting Prerak's decision (1 October 2026)
+
+Read `b1/PARALLEL_PILOT_REVIEW.md`. Three explicitly authorized workers reviewed
+091 Material Handling (10 names), 092 Construction/Mining Equipment (9), and
+093 Industrial Automation/Instrumentation (14). Five requested deliverables per
+pilot are saved, plus private compressed prices. Raw sources/scripts remain local
+under each pilot's sources/ directory; Git stores manifests and source URLs.
+
+These are research packages with unresolved and unperformed checks, not completed
+primers. No 091-093 fragments, stats, published pages or completed queue entries
+were created. State remains 90 primers covering 100 sections. No earlier published
+primer was corrected in this pilot. Shared prices and b1/prices.json.gz unchanged.
+
+Pilot start16:08:13UTC. At16:40:20UTC account usage had moved71% to88% used:
+17percentage points for33 initial company reviews and coordination, with writing/final audits still
+to do. Account-wide rounded measurement; concurrent activity may contribute.
+One authorized manual reset plus12%remaining gives112points at measurement.
+The target223 requires123additional sections and1,996company entries. Same-rate
+research-only extrapolation is far beyond that allowance; do not promise223by4Oct.
+Current automatic reset displayed4Oct15:06:59IST; manual-reset schedule effects
+are unknown. No reset was applied. Do not assume more than one manual reset.
+
+Root independently checked all33 raw price endpoints18Sep2026 and selected
+financial evidence at International Conveyors, ACE, Affordable, Universal and PIGL.
+Unfinished share weights, source discrepancies, history repairs and industry work
+are explicit. Universal's false annual-report download was replaced. PIGL's
+supposed current quarter source proved to be an annual-result filing; current June
+primary evidence remains unresolved. Do not promote these packages to fully audited.
+
+Recommended next step for Prerak to decide: finish091 end-to-end from saved evidence,
+measure incremental publication cost, then reforecast. STOP before more production
+or research until he responds to the feasibility observations.
+
+Prerak permits a fresh chat if context burden or quality warrants it. Carry this
+handoff, source ledger and unresolved checks; recheck/redo any affected primer.
+No fresh chat was created. A fresh chat itself does not fix facts or renew allowance.
+
+## Acceleration preparation (historical; authorization superseded above)
 
 Prerak offered the remaining usage plus one manual reset and wants at least80%
 completion before next week, with quality unchanged. The old30%-remaining stop

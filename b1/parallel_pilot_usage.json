@@ -1,0 +1,27 @@
+{
+  "measured_at_utc": "2026-10-01T16:40:20+00:00",
+  "weekly_used_percent_before": 71,
+  "weekly_used_percent_after": 88,
+  "observed_account_percentage_point_increase": 17,
+  "remaining_at_measurement_percent": 12,
+  "authorized_manual_resets": 1,
+  "remaining_plus_one_reset_percentage_points": 112,
+  "current_scheduled_reset_IST": "2026-10-04T15:06:59+05:30",
+  "scheduled_reset_note": "Account currently reports this time; manual reset effects not established. No extra reset assumed in base budget.",
+  "pilot_company_entries": 33,
+  "company_entries_still_unreviewed_to_target": 1963,
+  "illustrative_research_percentage_points_for_1963_more": 1011.2424242424242,
+  "illustrative_initial_reviews_affordable_at_same_rate": 217.41176470588235,
+  "caveats": [
+    "Account-wide integer percentage indicator, not per-agent token accounting; other activity may contribute.",
+    "Pilot uses adjacent engineering industries and is not a random sample.",
+    "All three review packages contain unresolved or unperformed work.",
+    "No manuscript-writing or publication throughput was measured.",
+    "Existing scheduled reset close to deadline does not solve the order-of-magnitude budget shortfall."
+  ],
+  "intermediate_observation": {
+    "utc": "2026-10-01T16:34:01+00:00",
+    "used_percent": 86
+  },
+  "scope": "Account usage during three research reviews, coordinating review and report preparation; publication throughput not measured."
+}

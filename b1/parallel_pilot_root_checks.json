@@ -1,0 +1,117 @@
+{
+  "reviewed_utc": "2026-10-01T16:20:03.379934+00:00",
+  "scope": "Five selected independent source reviews, NOT a full audit of all33companies.",
+  "checks": [
+    {
+      "primer": "091",
+      "company": "International Conveyors",
+      "document": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1dbf5006-71ee-4f33-aef3-7c2740dd491d.pdf",
+      "pdf_page": 4,
+      "method": "Original table enlarged and visually inspected; OCR unreliable.",
+      "scope": "June2026 consolidated",
+      "revenue_crore": 35.32,
+      "ordinary_other_income_crore": 147.05,
+      "pbt_crore": 151.85,
+      "pat_crore": 119.82,
+      "owners_pat_crore": 119.82,
+      "basic_eps": 18.79,
+      "status": "Other-income distinction confirmed. Exact weighted-share reconciliation remains a separate worker check."
+    },
+    {
+      "primer": "092",
+      "company": "Action Construction Equipment",
+      "document": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7ae31eeb-6b66-4661-bc7d-b1b9cb3ef45f.pdf",
+      "pdf_page": 2,
+      "method": "Aligned original table read; closing-capital shortcut challenged and sent to worker.",
+      "scope": "June2026 consolidated",
+      "revenue_crore": 785.68,
+      "ordinary_other_income_crore": 54.61,
+      "pat_crore": 119.49,
+      "owners_pat_crore": 119.49,
+      "basic_eps": 10.04,
+      "closing_shares_crore_from_rounded_capital": 11.91,
+      "eps_times_closing_shares": 119.57639999999999,
+      "status": "Closing-share shortcut not exact. Worker found treasury-share adjustment; full weighted-note check is a separate worker responsibility."
+    },
+    {
+      "primer": "093",
+      "company": "Affordable Robotic & Automation",
+      "document": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cdf737e8-74d7-43af-9c2d-a67d75cfeef0.pdf",
+      "pdf_page": 8,
+      "method": "Original consolidated table visually inspected; distinguished from standalone p4 OCR.",
+      "scope": "June2026 consolidated",
+      "revenue_crore": 11.029,
+      "reported_other_operating_income_crore": 0.0593,
+      "pat_crore": -4.8014,
+      "basic_eps": -4.05,
+      "closing_shares_crore": 1.18511,
+      "eps_times_closing_shares": -4.7996955,
+      "status": "Compatible within EPS rounding. Owner attribution absent on this table; not certified as an owner-profit reconciliation."
+    },
+    {
+      "primer": "093",
+      "company": "Universal Office Automation",
+      "method": "Visual reading of latest p3 and BSE annual PDF p65,p73,p75. Independently recovered replacement after NotFound pseudo-report.",
+      "latest_document": "https://uniofficeautomation.com/images/2026/results-June-2026.pdf",
+      "annual_document": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fd4e7041-dc14-4cd8-88e3-6abb8dc55d41.pdf",
+      "annual_publication_date": "2026-08-27",
+      "unit": "INR lakh except EPS/shares",
+      "latest": {
+        "revenue": 0,
+        "other_income": 3.11,
+        "pat": -0.88,
+        "EPS": -0.01
+      },
+      "annual": {
+        "revenue": 0,
+        "other_income": 11.06,
+        "pat": -1.16,
+        "EPS": -0.01,
+        "weighted_shares": 14652686,
+        "EPS_times_shares_lakh": -1.4652686,
+        "rounding_allowance_lakh": 0.7326343,
+        "operating_cashflow": -11.82,
+        "investing_cashflow": 8.55,
+        "financing_cashflow": 0,
+        "net_cash_change": -3.27
+      },
+      "quarter_bridge": {
+        "revenue": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "other_income": [
+          3.11,
+          2.18,
+          2.3,
+          3.58
+        ],
+        "PAT": [
+          -2.02,
+          0.51,
+          -0.4,
+          0.76
+        ],
+        "other_income_sum": 11.17,
+        "other_income_annual_difference": 0.11,
+        "PAT_sum": -1.15,
+        "status": "OI difference exceeds printed rounding tolerance; retain discrepancy. PAT bridge within rounding. Q4 from June comparative, not original full March filing."
+      },
+      "status": "Latest, annualEPS and annual cash numerics checked. Not a full publication sign-off; small other-income contradiction and copied-note defect preserved."
+    },
+    {
+      "primer": "093",
+      "company": "Power & Instrumentation (Gujarat)",
+      "document": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6c61d7c2-1765-4131-8a98-c8e821e96fd1.pdf",
+      "pages": [
+        1,
+        14
+      ],
+      "method": "Root independently read original cover and numeric table after worker flagged period correction.",
+      "confirmed_period": "Quarter/year ended31March2026; coverdated30May2026",
+      "status": "Initial worker June classification invalidated. Do not use5852.73lakhrevenue/42.45lakhOI asJunequarter; current June primary gap remains."
+    }
+  ]
+}

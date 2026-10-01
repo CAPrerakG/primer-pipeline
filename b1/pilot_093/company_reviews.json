@@ -1,0 +1,2411 @@
+{
+  "status": "Research feasibility pilot complete; financial checks partly resolved, partly explicitly unresolved; no publication certification",
+  "updated_utc": "2026-10-01T16:39:11.864895+00:00",
+  "companies": [
+    {
+      "company": "Affordable Robotic & Automation Ltd.",
+      "symbol": "NSE:AFFORDABLE",
+      "isin": "INE692Z01013",
+      "information_cutoff": "2026-09-18",
+      "business": "Robot welding/production automation and robotic parking; subsidiaries extend into mobile robotics/RaaS. Not a global industrial robot OEM.",
+      "classification": "core system integrator",
+      "recommendation": "include conditionally after same-ISIN BSE prehistory repair",
+      "reason": "Genuine automation business; NSE history starts at migration, not original listing. Do not exclude simply for current losses.",
+      "business_source": {
+        "document": "AFFORDABLE_latest",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cdf737e8-74d7-43af-9c2d-a67d75cfeef0.pdf",
+        "pdf_page": 9
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 1102.9,
+        "ordinary_other_income": 5.93,
+        "PAT_group_or_standalone": -480.14,
+        "PAT_owners": null,
+        "basic_EPS_INR": -4.05,
+        "source": {
+          "document": "AFFORDABLE_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cdf737e8-74d7-43af-9c2d-a67d75cfeef0.pdf",
+          "pdf_page": 8
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 1876.75,
+        "ordinary_other_income": 9.81,
+        "PAT_group_or_standalone": -368.85,
+        "PAT_owners": null,
+        "basic_EPS_INR": -3.28,
+        "source": {
+          "document": "AFFORDABLE_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cdf737e8-74d7-43af-9c2d-a67d75cfeef0.pdf",
+          "pdf_page": 8
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 11767.01,
+        "other_income": 328.88,
+        "PAT_group": 697.11,
+        "basic_EPS": 6.2,
+        "units": "INR lakh",
+        "source": {
+          "document": "AFFORDABLE_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cdf737e8-74d7-43af-9c2d-a67d75cfeef0.pdf",
+          "pdf_page": 8
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 7.1825,
+        "FY25_CFO_cr": -5.7778,
+        "source": {
+          "document": "AFFORDABLE_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dfd70c01-8d90-4970-85f6-98e1ed697d9b.pdf",
+          "pdf_page": 154
+        }
+      },
+      "eps": {
+        "status": "quarter magnitude consistent with closing capital; weighted denominator/owner numerator unresolved",
+        "closing_shares": 11851100,
+        "EPS_times_closing_shares_cr": -4.7996955,
+        "reported_group_PAT_cr": -4.8014,
+        "warning": "Closing capital rose from1124.63lakh to1185.11lakh; no independently disclosed quarterly weighted denominator. Group statement omits owner/minority split. Do not claim complete EPS verification."
+      },
+      "caveats": [
+        "Other operating income label includes deposit interest; FY26 includes150.69lakh GST/provision reversal and129.57lakh interest accrued on ODI loan (latest p9).",
+        "Parent CFO42.8898cr differs greatly from group7.1825cr (AR116/154).",
+        "Standalone OCR values must not be substituted for consolidated p8."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "quarter magnitude consistent with closing capital; weighted denominator/owner numerator unresolved",
+        "annual_quarter_reconciliation": "PASS revenue/OI/PAT within rounding; owner attribution unavailable",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/541402/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/541402/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "quarter_annual_bridge": {
+        "units": "INR lakh",
+        "quarters": [
+          [
+            1876.75,
+            9.81,
+            -368.85,
+            null
+          ],
+          [
+            2804.21,
+            152.39,
+            456.71,
+            null
+          ],
+          [
+            1992.8,
+            1.99,
+            130.81,
+            null
+          ],
+          [
+            5093.24,
+            164.7,
+            478.43,
+            null
+          ]
+        ],
+        "annual": [
+          11767.01,
+          328.88,
+          697.11,
+          null
+        ],
+        "columns": [
+          "revenue",
+          "other_income",
+          "group_or_standalone_PAT",
+          "owner_PAT"
+        ],
+        "quarter_order": [
+          "Jun2025",
+          "Sep2025",
+          "Dec2025",
+          "Mar2026"
+        ],
+        "sum": [
+          11767.0,
+          328.89,
+          697.0999999999999,
+          null
+        ],
+        "difference": [
+          -0.01,
+          0.01,
+          -0.01,
+          null
+        ],
+        "sources": [
+          {
+            "document": "AFFORDABLE_q6_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b4160bc2-338f-47e6-ab4f-035368a2131d.pdf",
+            "pdf_page": 8
+          },
+          {
+            "document": "AFFORDABLE_q9_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4d3f85bc-8b55-4eed-bf2d-78b23d75ed62.pdf",
+            "pdf_page": 10
+          },
+          {
+            "document": "AFFORDABLE_q12_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/61fd5d51-4319-4ad1-a2be-e39dbd3f7bca.pdf",
+            "pdf_page": 8
+          },
+          {
+            "document": "AFFORDABLE_latest",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cdf737e8-74d7-43af-9c2d-a67d75cfeef0.pdf",
+            "pdf_page": 8
+          }
+        ],
+        "status": "PASS within reported rounding; owner attribution not presented for Affordable",
+        "method": "Original June, September and December FY26 filings, plus March quarter/full-year column carried in June2026 primary filing. Last quarter is a balancing quarter; this is not independent audit of underlying books."
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Aplab Limited",
+      "symbol": "BSE:APLAB",
+      "isin": "INE273A01015",
+      "information_cutoff": "2026-09-18",
+      "business": "Professional electronic test and measurement, power conversion and related equipment/service.",
+      "classification": "instrumentation/electronics mixed",
+      "recommendation": "include with mixed-product disclosure",
+      "reason": "Relevant instrumentation manufacturer with long prices; current loss is not an exclusion criterion.",
+      "business_source": {
+        "document": "APLAB_latest",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce4807cc-8ef5-43fd-bdd1-ccca33ff112d.pdf",
+        "pdf_page": 2
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "standalone",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 961.2,
+        "ordinary_other_income": 8.69,
+        "PAT_group_or_standalone": -251.62,
+        "PAT_owners": -251.62,
+        "basic_EPS_INR": -1.6,
+        "source": {
+          "document": "APLAB_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce4807cc-8ef5-43fd-bdd1-ccca33ff112d.pdf",
+          "pdf_page": 2
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "standalone",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 1544.7,
+        "ordinary_other_income": 19.48,
+        "PAT_group_or_standalone": 85.14,
+        "PAT_owners": 85.14,
+        "basic_EPS_INR": 0.68,
+        "source": {
+          "document": "APLAB_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce4807cc-8ef5-43fd-bdd1-ccca33ff112d.pdf",
+          "pdf_page": 2
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 5843.53,
+        "other_income": 333.83,
+        "PAT": 251.67,
+        "basic_EPS": 1.69,
+        "units": "INR lakh",
+        "source": {
+          "document": "APLAB_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce4807cc-8ef5-43fd-bdd1-ccca33ff112d.pdf",
+          "pdf_page": 2
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 13.5642,
+        "source": {
+          "document": "APLAB_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8fc76c74-ca20-406e-a0f9-ba9e471436b7.pdf",
+          "pdf_page": 53
+        },
+        "caveat": "Cashflow includes631.26lakh income taxes paid net of refund as positive item; inspect refund/working-capital bridge before calling recurring conversion."
+      },
+      "eps": {
+        "status": "annual weighted-share reconciliation passes rounding; quarter denominator incomplete",
+        "FY26_weighted_shares": 14877370,
+        "FY26_EPS": 1.69,
+        "FY26_EPS_times_shares_cr": 2.51427553,
+        "FY26_PAT_cr": 2.5167,
+        "source": {
+          "document": "APLAB_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8fc76c74-ca20-406e-a0f9-ba9e471436b7.pdf",
+          "pdf_page": 82
+        }
+      },
+      "caveats": [
+        "Consolidated locator is stale FY2016; use current standalone.",
+        "FY26 other income3.3383cr exceeds PAT2.5167cr; classify components before describing operating recovery.",
+        "Quarter tax credit54.44lakh reduces loss; rights/partly paid share basis needs quarterly EPS review.",
+        "December2025 primaryp2 note7:121.80lakh profit on factory premises sale included in ordinary Other Income; original quarter sums visually reviewed."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual weighted-share reconciliation passes rounding; quarter denominator incomplete",
+        "annual_quarter_reconciliation": "PASS revenue/OI/PAT within rounding",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/517096/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            ""
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2006",
+            "Mar 2007",
+            "Mar 2008",
+            "Mar 2009",
+            "Mar 2010",
+            "Mar 2011",
+            "Mar 2012",
+            "Mar 2013",
+            "Mar 2014",
+            "Mar 2015",
+            "Mar 2016"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/517096/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "quarter_annual_bridge": {
+        "units": "INR lakh",
+        "quarters": [
+          [
+            1544.7,
+            19.48,
+            85.14,
+            85.14
+          ],
+          [
+            1734.93,
+            7.64,
+            161.2,
+            161.2
+          ],
+          [
+            1129.2,
+            145.87,
+            77.8,
+            77.8
+          ],
+          [
+            1434.71,
+            160.84,
+            -72.47,
+            -72.47
+          ]
+        ],
+        "annual": [
+          5843.53,
+          333.83,
+          251.67,
+          251.67
+        ],
+        "columns": [
+          "revenue",
+          "other_income",
+          "group_or_standalone_PAT",
+          "owner_PAT"
+        ],
+        "quarter_order": [
+          "Jun2025",
+          "Sep2025",
+          "Dec2025",
+          "Mar2026"
+        ],
+        "sum": [
+          5843.54,
+          333.83,
+          251.67,
+          251.67
+        ],
+        "difference": [
+          0.01,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sources": [
+          {
+            "document": "APLAB_q6_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e518afbf-6f9c-4d1a-868e-8c85d16fbb71.pdf",
+            "pdf_page": 2
+          },
+          {
+            "document": "APLAB_q9_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dc6f3b7a-c076-47b3-8e47-01f6b014cfdb.pdf",
+            "pdf_page": 2
+          },
+          {
+            "document": "APLAB_q12_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e1783ae2-7a07-4fba-ab52-7c9efb7f68bb.pdf",
+            "pdf_page": 2
+          },
+          {
+            "document": "APLAB_latest",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce4807cc-8ef5-43fd-bdd1-ccca33ff112d.pdf",
+            "pdf_page": 2
+          }
+        ],
+        "status": "PASS within reported rounding; owner attribution not presented for Affordable",
+        "method": "Original June, September and December FY26 filings, plus March quarter/full-year column carried in June2026 primary filing. Last quarter is a balancing quarter; this is not independent audit of underlying books."
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Axis Solution Ltd",
+      "symbol": "BSE:AXISOL",
+      "isin": "INE520G01024",
+      "information_cutoff": "2026-09-18",
+      "business": "Process analyser, automation/digitalisation, water and industrial engineered systems after Axis private-company merger into Asya Infosoft.",
+      "classification": "relevant current automation business; legacy listed history invalid",
+      "recommendation": "exclude from historical basket; retain full company coverage",
+      "reason": "Merger changes business perimeter and price history is113 observations; pre-merger Asya must not proxy current Axis.",
+      "business_source": {
+        "document": "AXISOL_annual_report",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f08c7d5b-c206-41b5-9606-37d2e42cf5c9.pdf",
+        "pdf_page": 175
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 4898.83,
+        "ordinary_other_income": 7.22,
+        "PAT_group_or_standalone": 309.7,
+        "PAT_owners": 370.56,
+        "basic_EPS_INR": 0.66,
+        "source": {
+          "document": "AXISOL_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/676df386-638c-42d5-95f6-c5b0d44a9643.pdf",
+          "pdf_page": 14
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 2748.73,
+        "ordinary_other_income": 7.97,
+        "PAT_group_or_standalone": 174.89,
+        "PAT_owners": 203.25,
+        "basic_EPS_INR": 0.37,
+        "source": {
+          "document": "AXISOL_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/676df386-638c-42d5-95f6-c5b0d44a9643.pdf",
+          "pdf_page": 14
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 24066.95,
+        "other_income": 43.18,
+        "PAT_group": 2884.1,
+        "PAT_owners": 2941.66,
+        "total_comprehensive_group": 2893.48,
+        "basic_EPS": 6.12,
+        "units": "INR lakh",
+        "source": {
+          "document": "AXISOL_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/676df386-638c-42d5-95f6-c5b0d44a9643.pdf",
+          "pdf_page": 14
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": -21.995,
+        "FY25_CFO_cr": -19.8955,
+        "source": {
+          "document": "AXISOL_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f08c7d5b-c206-41b5-9606-37d2e42cf5c9.pdf",
+          "pdf_page": 201
+        },
+        "caveat": "Receivables40.2546cr and other current assets30.7872cr absorb cash; borrowings43.9696cr fund financing."
+      },
+      "eps": {
+        "status": "FAIL: annual EPS numerator is comprehensive group income; quarter follows group rather than owners",
+        "FY26_weighted_shares": 47260280,
+        "FY26_EPS": 6.12,
+        "FY26_EPS_times_shares_cr": 28.923291360000004,
+        "FY26_group_PAT_cr": 28.841,
+        "FY26_owner_PAT_cr": 29.4166,
+        "FY26_group_comprehensive_cr": 28.9348,
+        "quarter_owner_basis_EPS": 0.78408337826183,
+        "quarter_printed_EPS": 0.66,
+        "source": {
+          "document": "AXISOL_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f08c7d5b-c206-41b5-9606-37d2e42cf5c9.pdf",
+          "pdf_page": 227
+        }
+      },
+      "caveats": [
+        "AR EPS note labels shares Nos in Lacs but prints47,260,280 absolute shares.",
+        "June minority loss60.86lakh makes owner profit exceed group. March profit attribution rows also need issuer reconciliation.",
+        "Do not silently correct filed EPS; disclose mismatch."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "FAIL: annual EPS numerator is comprehensive group income; quarter follows group rather than owners",
+        "annual_quarter_reconciliation": "INCOMPLETE: independent all-quarter primary bridge required",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/511144/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/511144/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist",
+        "Independent four-quarter-to-annual primary reconciliation"
+      ]
+    },
+    {
+      "company": "Canarys Automations Ltd.",
+      "symbol": "NSE:CANARYS",
+      "isin": "INE0QG301017",
+      "information_cutoff": "2026-09-18",
+      "business": "Technology services/DevOps/cloud and water-resource management automation; FY26 group dominated by acquired IT services.",
+      "classification": "IT services majority; water automation minority",
+      "recommendation": "exclude core industrial basket, retain adjacency",
+      "reason": "FY26 deck shows93%IT and7%water resource management; company name overstates industrial automation exposure.",
+      "business_source": {
+        "document": "CANARYS_deck",
+        "url": "https://nsearchives.nseindia.com/corporate/CANARYS_21072026191319_InvestorpresentationH2FY26dt21072026.pdf",
+        "pdf_page": 8
+      },
+      "latest": {
+        "period": "H2 FY26 ended 2026-03-31",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 9694.14,
+        "ordinary_other_income": 108.66,
+        "PAT_group_or_standalone": 574.3,
+        "PAT_owners": 574.3,
+        "basic_EPS_INR": 0.91,
+        "source": {
+          "document": "CANARYS_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/CANARYS_29052026153911_BoardMeetingoutcomedt29052026.pdf",
+          "pdf_page": 23
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "H2 FY25 ended 2025-03-31",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 5149.85,
+        "ordinary_other_income": 79.61,
+        "PAT_group_or_standalone": 408.39,
+        "PAT_owners": 408.39,
+        "basic_EPS_INR": 0.7,
+        "source": {
+          "document": "CANARYS_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/CANARYS_29052026153911_BoardMeetingoutcomedt29052026.pdf",
+          "pdf_page": 23
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 19814.6,
+        "other_income": 159.63,
+        "PAT_group": 1483.37,
+        "PAT_owners": 1232.14,
+        "preference_dividend": 13,
+        "equity_earnings": 1219.14,
+        "EPS": 2.11,
+        "units": "INR lakh",
+        "source": {
+          "document": "CANARYS_annual_report",
+          "url": "https://archives.nseindia.com/annual_reports/SME_AR_31871_CANARYS_2025_2026_A_10770852_08092026162304.pdf",
+          "pdf_page": 77
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 5.6381,
+        "FY25_CFO_cr": 3.8459,
+        "source": {
+          "document": "CANARYS_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/CANARYS_29052026153911_BoardMeetingoutcomedt29052026.pdf",
+          "pdf_page": 24
+        }
+      },
+      "eps": {
+        "status": "annual passes after preference dividend; half-year attribution/EPS unresolved",
+        "FY26_weighted_shares": 57756220,
+        "FY26_EPS": 2.11,
+        "FY26_EPS_times_shares_cr": 12.18656242,
+        "FY26_equity_earnings_cr": 12.1914,
+        "source": {
+          "document": "CANARYS_annual_report",
+          "url": "https://archives.nseindia.com/annual_reports/SME_AR_31871_CANARYS_2025_2026_A_10770852_08092026162304.pdf",
+          "pdf_page": 77
+        }
+      },
+      "caveats": [
+        "Primary H2/H1 owner rows574.30+909.08=1483.38lakh do not equal annual owner1232.14; minority rows26.88+224.35=251.23lakh are separately printed. Cannot use displayed half-year owner rows as verified.",
+        "H1+H2 revenue19814.60 and OI159.62 vs annual159.63 reconcile rounding; group PAT574.30+909.08=1483.38 vs1483.37, but attribution does not.",
+        "Comparative EPS in annual note1.42 differs latest results1.45; preference dividend and prior denominator must be reconciled.",
+        "Acquisition-driven group growth is not organic water automation demand."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual passes after preference dividend; half-year attribution/EPS unresolved",
+        "annual_quarter_reconciliation": "PARTIAL primary H1/H2 bridge; full source set not verified",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/CANARYS/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Mar 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/CANARYS/",
+          "status": 200,
+          "rightmost_header": [
+            "Mar 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026"
+          ]
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Continental Controls Limited",
+      "symbol": "BSE:CONTICON",
+      "isin": "INE545B01022",
+      "information_cutoff": "2026-09-18",
+      "business": "Advisory services; legacy controls manufacturing classification is obsolete.",
+      "classification": "misclassified advisory company",
+      "recommendation": "exclude",
+      "reason": "Primary June note and FY26 annual report explicitly identify sole segment Advisory Services.",
+      "business_source": {
+        "document": "CONTICON_annual_report",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/38a82947-6e5c-45f6-9a76-80e8f6270e31.pdf",
+        "pdf_page": 78
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "standalone",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 55,
+        "ordinary_other_income": 3.89,
+        "PAT_group_or_standalone": 52.4,
+        "PAT_owners": 52.4,
+        "basic_EPS_INR": 0.85,
+        "source": {
+          "document": "CONTICON_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/73443be1-fa51-4cc1-9781-2b0979d194e0.pdf",
+          "pdf_page": 12
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "standalone",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 0,
+        "ordinary_other_income": 4.64,
+        "PAT_group_or_standalone": 0.77,
+        "PAT_owners": 0.77,
+        "basic_EPS_INR": 0.01,
+        "source": {
+          "document": "CONTICON_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/73443be1-fa51-4cc1-9781-2b0979d194e0.pdf",
+          "pdf_page": 12
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 0,
+        "other_income": 23.02,
+        "PAT": -12.7,
+        "EPS_in_result": -0.21,
+        "units": "INR lakh",
+        "source": {
+          "document": "CONTICON_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/73443be1-fa51-4cc1-9781-2b0979d194e0.pdf",
+          "pdf_page": 12
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 2.0403,
+        "source": {
+          "document": "CONTICON_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/38a82947-6e5c-45f6-9a76-80e8f6270e31.pdf",
+          "pdf_page": 61
+        },
+        "caveat": "Loan repayment from related party drives cash; not controls sales."
+      },
+      "eps": {
+        "status": "quarter/result annual consistent with capital; AR note fails unit/sharecount sanity",
+        "closing_shares": 6146300,
+        "quarter_EPS_times_shares_cr": 0.5224355,
+        "quarter_PAT_cr": 0.524,
+        "AR_note_weighted_shares_label_lakh": 614.63,
+        "AR_printed_EPS": -0.02,
+        "latest_result_annual_EPS": -0.21,
+        "source": {
+          "document": "CONTICON_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/38a82947-6e5c-45f6-9a76-80e8f6270e31.pdf",
+          "pdf_page": 78
+        }
+      },
+      "caveats": [
+        "AR EPS note gives614.63lakh shares and−.02 EPS while capital614.63lakh at face10 implies61.463lakh shares and approximately−.21; do not reconcile by inventing a share count.",
+        "Annual interest18.73lakh from Sarsan Securities and related loan207lakh recovery (AR78).",
+        "July proposed rights issue is not completed share issuance."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "quarter/result annual consistent with capital; AR note fails unit/sharecount sanity",
+        "annual_quarter_reconciliation": "INCOMPLETE: independent all-quarter primary bridge required",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/531460/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            ""
+          ],
+          "annual_headers": [
+            ""
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/531460/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist",
+        "Independent four-quarter-to-annual primary reconciliation"
+      ]
+    },
+    {
+      "company": "Honeywell Automation India Limited",
+      "symbol": "NSE:HONAUT",
+      "isin": "INE671A01010",
+      "information_cutoff": "2026-09-18",
+      "business": "Process and building systems integration, selected sensing/building products, engineering exports and support. Global Honeywell portfolios are broader than the Indian listed company.",
+      "classification": "core automation anchor",
+      "recommendation": "include",
+      "reason": "Relevant control-system economics and long uninterrupted prices; disclose multinational/licensing perimeter.",
+      "business_source": {
+        "document": "HONAUT_deck",
+        "url": "https://www.honeywell.com/content/dam/honeywellbt/en/documents/downloads/india-hail/investor-presentations/hon-corp-41st-annual-general-meeting.pdf",
+        "pdf_page": 16
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "standalone",
+        "original_units": "INR million",
+        "revenue_from_operations": 12044,
+        "ordinary_other_income": 464,
+        "PAT_group_or_standalone": 1507,
+        "PAT_owners": 1507,
+        "basic_EPS_INR": 170.45,
+        "source": {
+          "document": "HONAUT_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/599d467f-ba4b-4ade-9cd3-df391ada751e.pdf",
+          "pdf_page": 2
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "standalone",
+        "original_units": "INR million",
+        "revenue_from_operations": 11831,
+        "ordinary_other_income": 418,
+        "PAT_group_or_standalone": 1246,
+        "PAT_owners": 1246,
+        "basic_EPS_INR": 140.95,
+        "source": {
+          "document": "HONAUT_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/599d467f-ba4b-4ade-9cd3-df391ada751e.pdf",
+          "pdf_page": 2
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 46819,
+        "other_income": 1790,
+        "PAT": 5250,
+        "basic_EPS": 593.81,
+        "units": "INR million",
+        "source": {
+          "document": "HONAUT_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/599d467f-ba4b-4ade-9cd3-df391ada751e.pdf",
+          "pdf_page": 2
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 492.6,
+        "FY25_CFO_cr": 426.3,
+        "source": {
+          "document": "HONAUT_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1922c03a-e863-42a0-94af-9ac27aad33a8.pdf",
+          "pdf_page": 114
+        }
+      },
+      "eps": {
+        "status": "annual weighted-share passes; quarter same unchanged share base passes rounding",
+        "weighted_shares": 8841523,
+        "FY26_EPS": 593.81,
+        "FY26_EPS_times_shares_cr": 525.0184772629999,
+        "FY26_PAT_cr": 525,
+        "quarter_EPS_times_shares_cr": 150.703759535,
+        "quarter_PAT_cr": 150.7,
+        "source": {
+          "document": "HONAUT_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1922c03a-e863-42a0-94af-9ac27aad33a8.pdf",
+          "pdf_page": 147
+        }
+      },
+      "caveats": [
+        "Primary statements are millions, divide by10 for crore.",
+        "Quarter OI46.4cr must be removed before common operating margin comparison.",
+        "Global parent aerospace/energy IP and future parent restructuring do not automatically belong to HAIL. Latest downloaded AGM deck is FY25 vintage; use for perimeter, not current guidance."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual weighted-share passes; quarter same unchanged share base passes rounding",
+        "annual_quarter_reconciliation": "PASS revenue/OI/PAT within rounding",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/517174/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            ""
+          ],
+          "annual_headers": [
+            ""
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/517174/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015 15m",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "quarter_annual_bridge": {
+        "units": "INR million",
+        "quarters": [
+          [
+            11831,
+            418,
+            1246,
+            1246
+          ],
+          [
+            11494,
+            442,
+            1195,
+            1195
+          ],
+          [
+            11687,
+            455,
+            1212,
+            1212
+          ],
+          [
+            11807,
+            475,
+            1597,
+            1597
+          ]
+        ],
+        "annual": [
+          46819,
+          1790,
+          5250,
+          5250
+        ],
+        "columns": [
+          "revenue",
+          "other_income",
+          "group_or_standalone_PAT",
+          "owner_PAT"
+        ],
+        "quarter_order": [
+          "Jun2025",
+          "Sep2025",
+          "Dec2025",
+          "Mar2026"
+        ],
+        "sum": [
+          46819,
+          1790,
+          5250,
+          5250
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sources": [
+          {
+            "document": "HONAUT_q6_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/bc0e74a2-17fc-4187-ba5c-aa429a805c5c.pdf",
+            "pdf_page": 4
+          },
+          {
+            "document": "HONAUT_q9_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e6c08dbd-6b84-4d01-bd83-591a5327e8cc.pdf",
+            "pdf_page": 4
+          },
+          {
+            "document": "HONAUT_q12_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e9f1aa81-9360-4bf4-80b8-b0b7cd920d74.pdf",
+            "pdf_page": 4
+          },
+          {
+            "document": "HONAUT_latest",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/599d467f-ba4b-4ade-9cd3-df391ada751e.pdf",
+            "pdf_page": 2
+          }
+        ],
+        "status": "PASS within reported rounding; owner attribution not presented for Affordable",
+        "method": "Original June, September and December FY26 filings, plus March quarter/full-year column carried in June2026 primary filing. Last quarter is a balancing quarter; this is not independent audit of underlying books."
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Macfos Ltd.",
+      "symbol": "BSE:ROBU",
+      "isin": "INE0OLH01013",
+      "information_cutoff": "2026-09-18",
+      "business": "Robu electronics e-commerce/distribution of robotics/drone/electronics components, with emerging proprietary product initiative.",
+      "classification": "distribution-led adjacency",
+      "recommendation": "exclude core manufacturer/integrator basket; show separate proxy",
+      "reason": "Distribution gross margin, inventory and channel economics differ from automation project commissioning.",
+      "business_source": {
+        "document": "ROBU_deck",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f09fa9c7-77a9-4b31-ae10-97c51b933b80.pdf",
+        "pdf_page": 6
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 8134.01,
+        "ordinary_other_income": 112.04,
+        "PAT_group_or_standalone": 581.16,
+        "PAT_owners": 581.16,
+        "basic_EPS_INR": 5.61,
+        "source": {
+          "document": "ROBU_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/116ddc35-6178-4f1a-b219-f2bc91ff43c9.pdf",
+          "pdf_page": 9
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 5926.8,
+        "ordinary_other_income": 60.49,
+        "PAT_group_or_standalone": 496.15,
+        "PAT_owners": 496.15,
+        "basic_EPS_INR": 4.79,
+        "source": {
+          "document": "ROBU_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/116ddc35-6178-4f1a-b219-f2bc91ff43c9.pdf",
+          "pdf_page": 9
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26 restated Ind AS comparative in June filing",
+        "revenue": 30877.33,
+        "other_income": 305.28,
+        "PAT": 2560.06,
+        "EPS": 24.71,
+        "units": "INR lakh",
+        "source": {
+          "document": "ROBU_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/116ddc35-6178-4f1a-b219-f2bc91ff43c9.pdf",
+          "pdf_page": 9
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": -7.9985,
+        "FY25_CFO_cr": -22.7628,
+        "source": {
+          "document": "ROBU_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/033e62f8-cbb0-49fd-a84f-77e103bffe2e.pdf",
+          "pdf_page": 132
+        },
+        "caveat": "Annual report accounting basis differs from June Ind AS comparatives; cashflow bridge needs transition audit."
+      },
+      "eps": {
+        "status": "quarter explicitly disclosed denominator passes; annual source-basis bridge incomplete",
+        "quarter_weighted_shares": 10358504,
+        "quarter_EPS_times_shares_cr": 5.811120744,
+        "quarter_PAT_cr": 5.8116,
+        "FY26_AR_weighted_shares": 10358503,
+        "FY26_AR_EPS": 24.75,
+        "FY26_AR_PAT_cr": 25.6396,
+        "source": {
+          "document": "ROBU_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/116ddc35-6178-4f1a-b219-f2bc91ff43c9.pdf",
+          "pdf_page": 9
+        }
+      },
+      "caveats": [
+        "AR FY26 PAT2563.96lakh/EPS24.75 differs June comparative2560.06/24.71; June notes/reconciliation to Ind AS must be carried into all-quarter bridge.",
+        "Purchase of stock-in-trade7953lakh vs materials28.71lakh confirms distribution economics."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "quarter explicitly disclosed denominator passes; annual source-basis bridge incomplete",
+        "annual_quarter_reconciliation": "INCOMPLETE: independent all-quarter primary bridge required",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/543787/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/543787/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist",
+        "Independent four-quarter-to-annual primary reconciliation"
+      ]
+    },
+    {
+      "company": "Marine Electricals (India) Limited",
+      "symbol": "NSE:MARINE",
+      "isin": "INE01JE01028",
+      "information_cutoff": "2026-09-18",
+      "business": "Marine electrical/automation systems and industrial LV/MV power distribution panels, with data-centre and infrastructure exposure.",
+      "classification": "mixed electrical systems integrator",
+      "recommendation": "include only with electrical-panel sensitivity; alternative exclude pure automation basket",
+      "reason": "Relevant integration, but order growth can come from electrical distribution rather than factory automation.",
+      "business_source": {
+        "document": "MARINE_deck",
+        "url": "https://nsearchives.nseindia.com/corporate/MARINE_11102025111048_Regulation_30_Investor_Presentation_uploaded_stock_exchange_Signed.pdf",
+        "pdf_page": 4
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 25916.28,
+        "ordinary_other_income": 429.89,
+        "PAT_group_or_standalone": 1751.13,
+        "PAT_owners": 1726.79,
+        "basic_EPS_INR": 1.23,
+        "source": {
+          "document": "MARINE_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/MARINE_14082026190441_Signed_Regulation_30_outcome_of_board_meeting.pdf",
+          "pdf_page": 9
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 16697.81,
+        "ordinary_other_income": 518.6,
+        "PAT_group_or_standalone": 1159.7,
+        "PAT_owners": 1161.25,
+        "basic_EPS_INR": 0.84,
+        "source": {
+          "document": "MARINE_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/MARINE_14082026190441_Signed_Regulation_30_outcome_of_board_meeting.pdf",
+          "pdf_page": 9
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 87693.51,
+        "other_income": 1628.42,
+        "PAT_group": 5861.91,
+        "PAT_owners": 5836.92,
+        "EPS": 4.22,
+        "units": "INR lakh",
+        "source": {
+          "document": "MARINE_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/MARINE_14082026190441_Signed_Regulation_30_outcome_of_board_meeting.pdf",
+          "pdf_page": 9
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": -16.0641,
+        "FY25_CFO_cr": 55.4405,
+        "source": {
+          "document": "MARINE_annual_report",
+          "url": "https://archives.nseindia.com/annual_reports/AR_31621_MARINE_2025_2026_A_6301876_05092026211745.pdf",
+          "pdf_page": 248
+        }
+      },
+      "eps": {
+        "status": "annual owner weighted-share check passes; quarter closing capital proxy only",
+        "FY26_weighted_shares": 138197561,
+        "FY26_EPS_times_shares_cr": 58.319370742,
+        "FY26_owner_PAT_cr": 58.3692,
+        "quarter_closing_shares": 139944410,
+        "quarter_EPS_times_closing_cr": 17.21316243,
+        "quarter_owner_PAT_cr": 17.2679,
+        "source": {
+          "document": "MARINE_annual_report",
+          "url": "https://archives.nseindia.com/annual_reports/AR_31621_MARINE_2025_2026_A_6301876_05092026211745.pdf",
+          "pdf_page": 286
+        }
+      },
+      "caveats": [
+        "Group PAT exceeds owner PAT by24.34lakh this quarter; year-ago minority loss reverses direction.",
+        "Annual exceptional expense120.63lakh and material foreign-currency OCI separate from PAT.",
+        "FY26 group cash outflow despite profit requires receivable/inventory/advance analysis."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual owner weighted-share check passes; quarter closing capital proxy only",
+        "annual_quarter_reconciliation": "PASS revenue/OI/PAT within rounding",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/MARINE/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/MARINE/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2013",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "quarter_annual_bridge": {
+        "units": "INR lakh",
+        "quarters": [
+          [
+            16697.81,
+            518.6,
+            1159.7,
+            1161.25
+          ],
+          [
+            22224.53,
+            392.44,
+            1661.7,
+            1649.19
+          ],
+          [
+            21023,
+            369.47,
+            1183.14,
+            1178.24
+          ],
+          [
+            27748.17,
+            347.91,
+            1857.37,
+            1848.24
+          ]
+        ],
+        "annual": [
+          87693.51,
+          1628.42,
+          5861.91,
+          5836.92
+        ],
+        "columns": [
+          "revenue",
+          "other_income",
+          "group_or_standalone_PAT",
+          "owner_PAT"
+        ],
+        "quarter_order": [
+          "Jun2025",
+          "Sep2025",
+          "Dec2025",
+          "Mar2026"
+        ],
+        "sum": [
+          87693.51,
+          1628.42,
+          5861.91,
+          5836.92
+        ],
+        "difference": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sources": [
+          {
+            "document": "MARINE_q6_2025",
+            "url": "https://nsearchives.nseindia.com/corporate/MARINE_12082025190901_Meeting_outcome_Signed_12082025_final_upload_Signed.pdf",
+            "pdf_page": 11
+          },
+          {
+            "document": "MARINE_q9_2025",
+            "url": "https://nsearchives.nseindia.com/corporate/MARINE_03112025174314_Regulation_30_Outcome_of_BM_Signed.pdf",
+            "pdf_page": 13
+          },
+          {
+            "document": "MARINE_q12_2025",
+            "url": "https://nsearchives.nseindia.com/corporate/MARINE_11022026193942_Signed_Regulation_30_outcome.pdf",
+            "pdf_page": 10
+          },
+          {
+            "document": "MARINE_latest",
+            "url": "https://nsearchives.nseindia.com/corporate/MARINE_14082026190441_Signed_Regulation_30_outcome_of_board_meeting.pdf",
+            "pdf_page": 9
+          }
+        ],
+        "status": "PASS within reported rounding; owner attribution not presented for Affordable",
+        "method": "Original June, September and December FY26 filings, plus March quarter/full-year column carried in June2026 primary filing. Last quarter is a balancing quarter; this is not independent audit of underlying books."
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Patil Automation Ltd.",
+      "symbol": "NSE:PATILAUTOM",
+      "isin": "INE17GV01016",
+      "information_cutoff": "2026-09-18",
+      "business": "Custom turnkey welding/assembly automation, testing and material handling lines; integration/commissioning capability.",
+      "classification": "core robot/line integrator, recent SME listing",
+      "recommendation": "exclude initial historical basket for short history; retain full research",
+      "reason": "310 observed price points; acquisitions mean first consolidated FY26 has no FY25 comparable group.",
+      "business_source": {
+        "document": "PATILAUTOM_deck",
+        "url": "https://nsearchives.nseindia.com/corporate/PAL_12052026122247_Investor_Presentation.pdf",
+        "pdf_page": 12
+      },
+      "latest": {
+        "period": "H2 FY26 ended 2026-03-31",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 9530.86,
+        "ordinary_other_income": 372.92,
+        "PAT_group_or_standalone": 1153.7,
+        "PAT_owners": 1024.97,
+        "basic_EPS_INR": 4.7,
+        "source": {
+          "document": "PATILAUTOM_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/PAL_07052026191344_Result_2025-26_complete_set_PAL.pdf",
+          "pdf_page": 7
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "H2 FY25 ended 2025-03-31",
+        "scope": "consolidated",
+        "status": "not presented: first consolidation after19Sep2025 acquisitions; do not substitute standalone",
+        "source": {
+          "document": "PATILAUTOM_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/PAL_07052026191344_Result_2025-26_complete_set_PAL.pdf",
+          "pdf_page": 7
+        }
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 16656.69,
+        "other_income": 621.97,
+        "PAT_group": 1907.43,
+        "PAT_owners": 1778.29,
+        "EPS": 8.65,
+        "units": "INR lakh",
+        "source": {
+          "document": "PATILAUTOM_latest",
+          "url": "https://nsearchives.nseindia.com/corporate/PAL_07052026191344_Result_2025-26_complete_set_PAL.pdf",
+          "pdf_page": 7
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": -0.6241,
+        "source": {
+          "document": "PATILAUTOM_annual_report",
+          "url": "https://archives.nseindia.com/annual_reports/SME_AR_30995_PATILAUTOM_2025_2026_A_7303941_01092026163426.pdf",
+          "pdf_page": 48
+        }
+      },
+      "eps": {
+        "status": "annual owner weighted-share check passes; half-year weighted denominator not independently established",
+        "FY26_weighted_shares": 20565284.38,
+        "FY26_EPS_times_shares_cr": 17.7889709887,
+        "FY26_owner_PAT_cr": 17.7829,
+        "source": {
+          "document": "PATILAUTOM_annual_report",
+          "url": "https://archives.nseindia.com/annual_reports/SME_AR_30995_PATILAUTOM_2025_2026_A_7303941_01092026163426.pdf",
+          "pdf_page": 68
+        }
+      },
+      "caveats": [
+        "H1+H2 primary revenue7125.83+9530.86=16656.69; OI249.05+372.92=621.97; groupPAT753.73+1153.70=1907.43. Owner sum753.32+1024.97=1778.29 passes.",
+        "Annual EPS8.65 is weighted after IPO; half-year EPS must not be added or checked against current capitalization.",
+        "TV first bar20June differs filing note listing23June2025; exchange listing date validation needed."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "NOT_AVAILABLE",
+        "EPS": "annual owner weighted-share check passes; half-year weighted denominator not independently established",
+        "annual_quarter_reconciliation": "PARTIAL primary H1/H2 bridge; full source set not verified",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/PATILAUTOM/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Mar 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2026"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/PATILAUTOM/",
+          "status": 200,
+          "rightmost_header": [
+            "Mar 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026"
+          ]
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Power & Instrumentation (Gujarat) Ltd.",
+      "symbol": "NSE:PIGL",
+      "isin": "INE557Z01018",
+      "information_cutoff": "2026-09-18",
+      "business": "Electrical EPC/design/installation/commissioning for power distribution; growing manufactured electrical-product exposure.",
+      "classification": "electrical contractor adjacency",
+      "recommendation": "exclude core automation basket",
+      "reason": "Instrumentation in name is insufficient; project execution and contract working capital dominate.",
+      "business_source": {
+        "document": "PIGL_deck",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a77859ba-9c4a-4ead-be12-789b1a5ec8ed.pdf",
+        "pdf_page": 12
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "revenue_from_operations": null,
+        "ordinary_other_income": null,
+        "PAT_group_or_standalone": null,
+        "PAT_owners": null,
+        "basic_EPS_INR": null,
+        "status": "UNRESOLVED: June locator returned May 30 FY26 annual-result PDF; current June primary not established"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "revenue_from_operations": null,
+        "ordinary_other_income": null,
+        "PAT_group_or_standalone": null,
+        "PAT_owners": null,
+        "basic_EPS_INR": null,
+        "status": "UNRESOLVED: June locator returned May 30 FY26 annual-result PDF; current June primary not established"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 21875.96,
+        "other_income": 154.33,
+        "PAT_group": 1483.52,
+        "PAT_owners": 1441.96,
+        "units": "INR lakh",
+        "source": {
+          "document": "PIGL_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6c61d7c2-1765-4131-8a98-c8e821e96fd1.pdf",
+          "pdf_page": 14
+        },
+        "EPS_annual_result": 4.54
+      },
+      "cash": {
+        "FY26_CFO_cr": -5.0203,
+        "source": {
+          "document": "PIGL_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f73eb7e8-a860-4ba8-bd43-0f5de0abb1dd.pdf",
+          "pdf_page": 183
+        }
+      },
+      "eps": {
+        "status": "FAIL/unresolved multiple primary discrepancies",
+        "FY26_weighted_shares": 18248065,
+        "FY26_AR_EPS": 8.13,
+        "FY26_EPS_times_shares_cr": 14.835676845000002,
+        "FY26_group_PAT_cr": 14.8352,
+        "FY26_owner_PAT_cr": 14.4196,
+        "source": {
+          "document": "PIGL_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f73eb7e8-a860-4ba8-bd43-0f5de0abb1dd.pdf",
+          "pdf_page": 204
+        }
+      },
+      "caveats": [
+        "Annual-report EPS 8.13 uses rounded group PAT 1484 lakh; May 30 annual result prints FY26 EPS 4.54. Neither source is silently repaired.",
+        "March 2026 quarter printed EPS 2.10 does not reconcile with owner PAT 3.6262 crore and visible capital; weighted denominator absent.",
+        "June locator returned the FY26 annual-result PDF dated May 30, identical to the March locator bytes at a different BSE URL. Latest June 2026 and June 2025 comparative primary financials remain unresolved.",
+        "March 2025 quarter diluted EPS 1.76 exceeds basic 1.49; denominator/anti-dilution treatment unresolved."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "INCOMPLETE: wrong-period June locator; annual primary examined only",
+        "revenue_and_other_income_before_profit": "PASS for March/annual primary only; June unresolved",
+        "year_ago_same_period": "INCOMPLETE for latest June; March primary comparative retained separately",
+        "EPS": "FAIL/unresolved multiple primary discrepancies",
+        "annual_quarter_reconciliation": "INCOMPLETE: independent all-quarter primary bridge required",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/543912/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/543912/",
+          "status": 429,
+          "rightmost_header": [],
+          "annual_headers": []
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist",
+        "Independent four-quarter-to-annual primary reconciliation",
+        "Retrieve genuine June 2026 result and June 2025 comparative after wrong-period locator failure"
+      ],
+      "latest_primary_available": {
+        "period": "Q4 FY26 ended 2026-03-31",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 5852.73,
+        "ordinary_other_income": 42.45,
+        "PAT_group_or_standalone": 392.96,
+        "PAT_owners": 362.62,
+        "basic_EPS_INR": 2.1,
+        "source": {
+          "document": "PIGL_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6c61d7c2-1765-4131-8a98-c8e821e96fd1.pdf",
+          "pdf_page": 14
+        },
+        "status": "Primary annual-result statement examined; quarter is annual-minus-nine-month balancing figure, not June"
+      },
+      "year_ago_for_latest_primary_available": {
+        "period": "Q4 FY25 ended 2025-03-31",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 5508.56,
+        "ordinary_other_income": 30.18,
+        "PAT_group_or_standalone": 281.25,
+        "PAT_owners": 281.25,
+        "basic_EPS_INR": 1.49,
+        "source": {
+          "document": "PIGL_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6c61d7c2-1765-4131-8a98-c8e821e96fd1.pdf",
+          "pdf_page": 14
+        },
+        "status": "Primary annual-result statement examined; quarter is annual-minus-nine-month balancing figure, not June"
+      }
+    },
+    {
+      "company": "Rexnord Electronics & Controls Ltd.",
+      "symbol": "BSE:REXNORD",
+      "isin": "INE687C01012",
+      "information_cutoff": "2026-09-18",
+      "business": "Cooling fans, motors and accessories; not the unrelated global Regal Rexnord group.",
+      "classification": "component OEM adjacency",
+      "recommendation": "exclude core automation basket; disclose cooling-components proxy",
+      "reason": "Components support machines but do not represent control software/system integration.",
+      "latest": {
+        "period": "Q1 FY27 ended2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 3411.68,
+        "ordinary_other_income": 29.31,
+        "PAT_group_or_standalone": 246.28,
+        "PAT_owners": 246.28,
+        "basic_EPS_INR": 1.86,
+        "source": {
+          "document": "REXNORD_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce009934-4672-4c1d-b9c8-215e03327214.pdf",
+          "pdf_page": 6
+        },
+        "status": "primary visually examined"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 3154.65,
+        "ordinary_other_income": 36.58,
+        "PAT_group_or_standalone": 153.54,
+        "PAT_owners": 153.54,
+        "basic_EPS_INR": 1.16,
+        "source": {
+          "document": "REXNORD_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce009934-4672-4c1d-b9c8-215e03327214.pdf",
+          "pdf_page": 6
+        },
+        "status": "primary visually examined"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 12155.87,
+        "other_income": 88.96,
+        "PAT_group_and_owners": 491.81,
+        "EPS": 3.71,
+        "units": "INR lakh",
+        "source": {
+          "document": "REXNORD_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce009934-4672-4c1d-b9c8-215e03327214.pdf",
+          "pdf_page": 6
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 16.2058,
+        "FY25_CFO_cr": 4.0808,
+        "source": {
+          "document": "REXNORD_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b15d792d-bf1f-487b-a2d1-69536e351c7b.pdf",
+          "pdf_page": 80
+        },
+        "caveat": "Payables release supports CFO; inventories/other receivables absorb cash."
+      },
+      "eps": {
+        "status": "annual weighted-share check passes rounding; quarter unchanged capital consistent",
+        "FY26_weighted_shares": 13260000,
+        "FY26_EPS_times_shares_cr": 4.91946,
+        "FY26_PAT_cr": 4.9181,
+        "source": {
+          "document": "REXNORD_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b15d792d-bf1f-487b-a2d1-69536e351c7b.pdf",
+          "pdf_page": 97
+        }
+      },
+      "caveats": [
+        "Announcements dated19Sep and later about subsidiary divestment are outside cutoff.",
+        "Operating revenue includes37.93lakh industrial promotion subsidy (latestp7); distinguish it from ordinary other income.",
+        "FY26 exceptional labour code charge71.36lakh disclosed separately.",
+        "Indian issuer is not global Regal Rexnord; no transposition of global orders or guidance."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual weighted-share check passes rounding; quarter unchanged capital consistent",
+        "annual_quarter_reconciliation": "INCOMPLETE: independent all-quarter primary bridge required",
+        "cashflow": "PRIMARY annual cashflow examined"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/REXNORD/consolidated/",
+          "status": 404,
+          "rightmost_header": [],
+          "annual_headers": []
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/531888/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2015",
+            "Mar 2016",
+            "Mar 2017",
+            "Mar 2018",
+            "Mar 2019",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        }
+      },
+      "business_source": {
+        "document": "REXNORD_latest",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ce009934-4672-4c1d-b9c8-215e03327214.pdf",
+        "pdf_page": 7
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist",
+        "Independent four-quarter-to-annual primary reconciliation"
+      ]
+    },
+    {
+      "company": "Rishabh Instruments Limited",
+      "symbol": "NSE:RISHABH",
+      "isin": "INE0N2P01017",
+      "information_cutoff": "2026-09-18",
+      "business": "Electrical measurement/test instruments and industrial automation products, plus aluminium die casting through overseas subsidiaries.",
+      "classification": "mixed instrumentation and die casting",
+      "recommendation": "include with instrumentation-only/mixed-business sensitivity",
+      "reason": "Genuine instrumentation but group economics cannot be attributed entirely to automation; only three years of price history.",
+      "business_source": {
+        "document": "RISHABH_annual_report",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/beeb0e2f-bf76-4534-b284-a2854427cc2a.pdf",
+        "pdf_page": 4
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR million",
+        "revenue_from_operations": 1982.81,
+        "ordinary_other_income": 36.44,
+        "PAT_group_or_standalone": 193.64,
+        "PAT_owners": 190.26,
+        "basic_EPS_INR": 4.93,
+        "source": {
+          "document": "RISHABH_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c37cea47-fb1f-4b67-a28d-d4088750e7b6.pdf",
+          "pdf_page": 8
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR million",
+        "revenue_from_operations": 1903.29,
+        "ordinary_other_income": 42.5,
+        "PAT_group_or_standalone": 196.22,
+        "PAT_owners": 196.96,
+        "basic_EPS_INR": 5.13,
+        "source": {
+          "document": "RISHABH_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c37cea47-fb1f-4b67-a28d-d4088750e7b6.pdf",
+          "pdf_page": 8
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 7751.46,
+        "other_income": 206.97,
+        "PAT_group": 822.59,
+        "PAT_owners": 815.33,
+        "EPS": 21.21,
+        "units": "INR million",
+        "source": {
+          "document": "RISHABH_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c37cea47-fb1f-4b67-a28d-d4088750e7b6.pdf",
+          "pdf_page": 8
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 108.482,
+        "FY25_CFO_cr": 64.955,
+        "source": {
+          "document": "RISHABH_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/beeb0e2f-bf76-4534-b284-a2854427cc2a.pdf",
+          "pdf_page": 109
+        }
+      },
+      "eps": {
+        "status": "annual denominator located; quarter weighted-share confirmation incomplete",
+        "FY26_weighted_shares": 38437388,
+        "FY26_diluted_shares": 38698339,
+        "FY26_EPS_times_shares_cr": 81.525699948,
+        "FY26_owner_PAT_cr": 81.533,
+        "source": {
+          "document": "RISHABH_annual_report",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/beeb0e2f-bf76-4534-b284-a2854427cc2a.pdf",
+          "pdf_page": 127
+        }
+      },
+      "caveats": [
+        "Millions to crore requires division by10. Group PAT19.364cr is not owner19.026cr.",
+        "ESOP allotments make quarter closing shares different from weighted denominator; do not infer denominator from PAT/EPS as independent proof.",
+        "Currency translation OCI large in prior year; separate from core operating performance."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual denominator located; quarter weighted-share confirmation incomplete",
+        "annual_quarter_reconciliation": "PASS revenue/OI/PAT within rounding",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/RISHABH/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2020",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026",
+            "TTM"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/543977/",
+          "status": 429,
+          "rightmost_header": [],
+          "annual_headers": []
+        }
+      },
+      "quarter_annual_bridge": {
+        "units": "INR million",
+        "quarters": [
+          [
+            1903.29,
+            42.5,
+            196.22,
+            196.96
+          ],
+          [
+            1963.34,
+            49.2,
+            220.9,
+            221.54
+          ],
+          [
+            1836.2,
+            56.08,
+            205.13,
+            199.8
+          ],
+          [
+            2048.63,
+            59.19,
+            200.34,
+            197.03
+          ]
+        ],
+        "annual": [
+          7751.46,
+          206.97,
+          822.59,
+          815.33
+        ],
+        "columns": [
+          "revenue",
+          "other_income",
+          "group_or_standalone_PAT",
+          "owner_PAT"
+        ],
+        "quarter_order": [
+          "Jun2025",
+          "Sep2025",
+          "Dec2025",
+          "Mar2026"
+        ],
+        "sum": [
+          7751.46,
+          206.97,
+          822.59,
+          815.33
+        ],
+        "difference": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sources": [
+          {
+            "document": "RISHABH_q6_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d8a8c4e1-2ef1-486a-a373-a97029141954.pdf",
+            "pdf_page": 8
+          },
+          {
+            "document": "RISHABH_q9_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/87ce54b7-aebf-4970-bcac-29d14d868197.pdf",
+            "pdf_page": 10
+          },
+          {
+            "document": "RISHABH_q12_2025",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cb06fd9f-1689-4c9f-afb4-75d3c8220d7e.pdf",
+            "pdf_page": 8
+          },
+          {
+            "document": "RISHABH_latest",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c37cea47-fb1f-4b67-a28d-d4088750e7b6.pdf",
+            "pdf_page": 8
+          }
+        ],
+        "status": "PASS within reported rounding; owner attribution not presented for Affordable",
+        "method": "Original June, September and December FY26 filings, plus March quarter/full-year column carried in June2026 primary filing. Last quarter is a balancing quarter; this is not independent audit of underlying books."
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Tempsens Instruments (India) Limited",
+      "symbol": "NSE:TEMPSENS",
+      "isin": "INE1KZI01025",
+      "information_cutoff": "2026-09-18",
+      "business": "Temperature sensing, electrical heating and specialised cables; thermal engineering supplier.",
+      "classification": "core instrumentation, new listing",
+      "recommendation": "exclude from historical basket; retain full current financial coverage",
+      "reason": "Only15 observed daily bars from28Aug2026. Cannot manufacture historical seasonal evidence.",
+      "business_source": {
+        "document": "TEMPSENS_deck",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/045effe6-59ff-4ec6-bbbd-50896b72d868.pdf",
+        "pdf_page": 5
+      },
+      "latest": {
+        "period": "Q1 FY27 ended 2026-06-30",
+        "scope": "consolidated",
+        "original_units": "INR million",
+        "revenue_from_operations": 1187.07,
+        "ordinary_other_income": 21.63,
+        "PAT_group_or_standalone": 162.66,
+        "PAT_owners": 152.03,
+        "basic_EPS_INR": 1.88,
+        "source": {
+          "document": "TEMPSENS_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/253b1b75-467c-4f2b-96e9-d2454c52195e.pdf",
+          "pdf_page": 5
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended 2025-06-30",
+        "scope": "consolidated",
+        "original_units": "INR million",
+        "revenue_from_operations": 890.16,
+        "ordinary_other_income": 19.62,
+        "PAT_group_or_standalone": 140.76,
+        "PAT_owners": 133.11,
+        "basic_EPS_INR": 1.65,
+        "source": {
+          "document": "TEMPSENS_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/253b1b75-467c-4f2b-96e9-d2454c52195e.pdf",
+          "pdf_page": 5
+        },
+        "status": "primary statement examined; EPS denominator check separately recorded"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 4448.78,
+        "other_income": 109.77,
+        "PAT_group": 710.67,
+        "PAT_owners": 673.48,
+        "EPS": 8.35,
+        "units": "INR million",
+        "source": {
+          "document": "TEMPSENS_latest",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/253b1b75-467c-4f2b-96e9-d2454c52195e.pdf",
+          "pdf_page": 5
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": 42.022,
+        "FY25_CFO_cr": 54.15,
+        "source": {
+          "document": "TEMPSENS_prospectus",
+          "url": "https://www.bseindia.com/corporates/download/363130/IPO%20Open/RedHerringProspectus_20260818164505.pdf",
+          "pdf_page": 382
+        }
+      },
+      "eps": {
+        "status": "annual weighted/restated-share reconciliation passes; quarterly unchanged pre-IPO base consistent",
+        "FY26_weighted_shares": 80666025,
+        "FY26_diluted_shares": 80822786,
+        "FY26_EPS_times_shares_cr": 67.356130875,
+        "FY26_owner_PAT_cr": 67.348,
+        "quarter_EPS_times_preIPO_shares_cr": 15.1652127,
+        "quarter_owner_PAT_cr": 15.203,
+        "source": {
+          "document": "TEMPSENS_prospectus",
+          "url": "https://www.bseindia.com/corporates/download/363130/IPO%20Open/RedHerringProspectus_20260818164505.pdf",
+          "pdf_page": 427
+        }
+      },
+      "caveats": [
+        "June2025 and March2026 quarter comparisons are management approved but not audited/reviewed (latest p6).",
+        "IPO fresh issue occurred after June quarter. Do not multiply June EPS by post-IPO shares.",
+        "JV share0.676cr is separate from ordinary OI2.163cr; ownerPAT15.203cr differs group16.266cr.",
+        "Prospectus restates historical shares for1:25split and10:1bonus."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; unresolved checks disclosed; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "annual weighted/restated-share reconciliation passes; quarterly unchanged pre-IPO base consistent",
+        "annual_quarter_reconciliation": "INCOMPLETE: independent all-quarter primary bridge required",
+        "cashflow": "PRIMARY FIGURE REVIEWED; detailed bridge partial"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/544886/consolidated/",
+          "status": 200,
+          "rightmost_header": [
+            "Jun 2026"
+          ],
+          "annual_headers": [
+            "",
+            "Mar 2021",
+            "Mar 2022",
+            "Mar 2023",
+            "Mar 2024",
+            "Mar 2025",
+            "Mar 2026"
+          ]
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/544886/",
+          "status": 429,
+          "rightmost_header": [],
+          "annual_headers": []
+        }
+      },
+      "work_not_yet_performed": [
+        "Detailed annual working-capital/capex bridge beyond stated observations",
+        "All material other-income component notes and management guidance extraction",
+        "Full independent reviewer sign-off and final publication checklist"
+      ]
+    },
+    {
+      "company": "Universal Office Automation Limited",
+      "symbol": "BSE:UNIOFFICE",
+      "isin": "INE951C01012",
+      "information_cutoff": "2026-09-18",
+      "business": "Legacy office automation entity with no new business in FY26 owing to working-capital/business constraints; nil operating revenue.",
+      "classification": "inactive operating business/misclassified",
+      "recommendation": "exclude",
+      "reason": "Nil operating revenue, funding constraints and long price gap; not industrial automation exposure.",
+      "latest": {
+        "period": "Q1 FY27 ended2026-06-30",
+        "scope": "standalone",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 0,
+        "ordinary_other_income": 3.11,
+        "PAT_group_or_standalone": -0.88,
+        "PAT_owners": -0.88,
+        "basic_EPS_INR": -0.01,
+        "source": {
+          "document": "UNIOFFICE_latest",
+          "url": "https://uniofficeautomation.com/images/2026/results-June-2026.pdf",
+          "pdf_page": 3
+        },
+        "reviewer": "Root independent visual review"
+      },
+      "prior": {
+        "period": "Q1 FY26 ended2025-06-30",
+        "scope": "standalone",
+        "original_units": "INR lakh",
+        "revenue_from_operations": 0,
+        "ordinary_other_income": 3.11,
+        "PAT_group_or_standalone": -2.01,
+        "PAT_owners": -2.01,
+        "basic_EPS_INR": -0.01,
+        "source": {
+          "document": "UNIOFFICE_latest",
+          "url": "https://uniofficeautomation.com/images/2026/results-June-2026.pdf",
+          "pdf_page": 3
+        },
+        "reviewer": "Root independent visual review"
+      },
+      "annual": {
+        "period": "FY26",
+        "revenue": 0,
+        "other_income": 11.06,
+        "PAT": -1.16,
+        "EPS": -0.01,
+        "units": "INR lakh",
+        "source": {
+          "document": "UNIOFFICE_latest",
+          "url": "https://uniofficeautomation.com/images/2026/results-June-2026.pdf",
+          "pdf_page": 3
+        }
+      },
+      "cash": {
+        "FY26_CFO_cr": -0.1182,
+        "FY25_CFO_cr": -0.1507,
+        "FY26_investing_cash_cr": 0.0855,
+        "FY26_financing_cash_cr": 0,
+        "FY26_net_cash_change_cr": -0.0327,
+        "source": {
+          "document": "UNIOFFICE_annual_report_recovered",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fd4e7041-dc14-4cd8-88e3-6abb8dc55d41.pdf",
+          "pdf_page": 65
+        },
+        "reviewer": "Root independent visual review"
+      },
+      "eps": {
+        "status": "PASS within coarse EPS rounding; annual exact weighted denominator independently reviewed by root",
+        "weighted_shares_FY26_and_FY25": 14652686,
+        "FY26_EPS": -0.01,
+        "FY25_EPS": -0.06,
+        "FY26_EPS_times_shares_lakh": -1.4652686000000001,
+        "FY26_PAT_lakh": -1.16,
+        "FY25_EPS_times_shares_lakh": -8.7916116,
+        "FY25_PAT_lakh": -8.59,
+        "rounding_tolerance_lakh": 0.7326343000000001,
+        "source": {
+          "document": "UNIOFFICE_annual_report_recovered",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fd4e7041-dc14-4cd8-88e3-6abb8dc55d41.pdf",
+          "pdf_page": 75
+        }
+      },
+      "caveats": [
+        "Original company annual-report URL returned a one-page Not Found PDF despite PDF filetype; excluded from evidence counts. Real79page BSE report recovered and cover27Aug2026 verified.",
+        "Latest p3 note4 incorrectly describes Junequarters as annual-minus-nine-month balancing figures; copied-note error retained.",
+        "FY26 four-quarter OI sum11.17lakh differs annual11.06 by.11lakh, beyond displayed rounding; no smoothing.",
+        "Quarter PAT sum−1.15lakh vs annual−1.16 is within rounding. Earlier JunePAT−2.02 in Sep filing vs−2.01 latest comparator is retained as a source-vintage difference."
+      ],
+      "financial_review_status": "RESEARCH PILOT REVIEWED; OI contradiction explicit; not publication-certified",
+      "checks": {
+        "roster_retained": "PASS",
+        "primary_latest_examined": "PASS root visual review",
+        "revenue_and_other_income_before_profit": "PASS",
+        "year_ago_same_period": "PASS",
+        "EPS": "PASS within coarse EPS rounding; annual exact weighted denominator independently reviewed by root",
+        "annual_quarter_reconciliation": "FAIL OI11.17 vs11.06lakh; PAT passes rounding",
+        "cashflow": "PASS cashflow arithmetic; primary figures root-reviewed"
+      },
+      "raw_locator_headers": {
+        "consolidated/": {
+          "url": "https://www.screener.in/company/523519/consolidated/",
+          "status": 429,
+          "rightmost_header": [],
+          "annual_headers": []
+        },
+        "standalone": {
+          "url": "https://www.screener.in/company/UNIOFFICE/",
+          "status": 404,
+          "rightmost_header": [],
+          "annual_headers": []
+        }
+      },
+      "work_not_yet_performed": [
+        "Resolve quarterly OI conflict or keep explicit in full primer",
+        "Full working-capital and going-concern analysis",
+        "Final independent publication sign-off"
+      ],
+      "business_source": {
+        "document": "UNIOFFICE_annual_report_recovered",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fd4e7041-dc14-4cd8-88e3-6abb8dc55d41.pdf",
+        "pdf_page": 14
+      },
+      "quarter_annual_bridge": {
+        "reviewer": "Root independent visual review",
+        "units": "INR lakh",
+        "quarter_order": [
+          "Jun2025",
+          "Sep2025",
+          "Dec2025",
+          "Mar2026"
+        ],
+        "revenue": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "other_income": [
+          3.11,
+          2.18,
+          2.3,
+          3.58
+        ],
+        "PAT": [
+          -2.02,
+          0.51,
+          -0.4,
+          0.76
+        ],
+        "sum_other_income": 11.17,
+        "annual_other_income": 11.06,
+        "sum_PAT": -1.15,
+        "annual_PAT": -1.16,
+        "status": "FAIL other-income reconciliation; PAT rounding-consistent",
+        "sources": [
+          {
+            "url": "https://uniofficeautomation.com/images/2025/Results_September_2025.pdf",
+            "pdf_page": 3,
+            "document": "UNIOFFICE_q9_2025"
+          },
+          {
+            "url": "https://uniofficeautomation.com/images/2025/Outcome-of-Board-Meeting-11th-Feb-2026.pdf",
+            "pdf_page": 3,
+            "document": "UNIOFFICE_q12_2025"
+          },
+          {
+            "document": "UNIOFFICE_latest",
+            "url": "https://uniofficeautomation.com/images/2026/results-June-2026.pdf",
+            "pdf_page": 3
+          }
+        ],
+        "limitation": "March company link is newspaper summary, not complete financial statement; use June comparative explicitly."
+      }
+    }
+  ]
+}

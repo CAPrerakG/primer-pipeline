@@ -1,0 +1,2366 @@
+{
+  "pilot": "092",
+  "status": "research_pilot_not_publication_ready",
+  "numeric_array_order": [
+    "latest",
+    "same_quarter_prior_year"
+  ],
+  "companies": [
+    {
+      "company": "Action Construction Equipment Limited",
+      "symbol": "NSE:ACE",
+      "isin": "INE731H01025",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Mobile/tower crane and construction-equipment OEM, with material handling and agricultural equipment diversification.",
+      "basket_recommendation": "include",
+      "basket_reason": "Relevant mobile construction equipment manufacturer with long endpoint-clean price history.",
+      "latest_actual": {
+        "scope": "consolidated",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          785.68,
+          652.08
+        ],
+        "ordinary_other_income_cr": [
+          54.61,
+          51.14
+        ],
+        "reported_pat_line_cr": [
+          119.49,
+          97.72
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          119.49,
+          97.72
+        ],
+        "eps_rs": [
+          10.04,
+          8.21
+        ],
+        "source": {
+          "document_id": "ACE_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7ae31eeb-6b66-4661-bc7d-b1b9cb3ef45f.pdf",
+          "pdf_page": 2
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 415.0905,
+        "reported_eps_rs": 34.88,
+        "shares_number": 119011646,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 415.1126212,
+        "difference_cr": 0.0221212,
+        "rounding_tolerance_cr": 0.0596058,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "ACE_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4292123c-7a4c-4823-abb8-a7edd4c0f398.pdf",
+          "pdf_page": 320
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "consolidated",
+        "net_operating_cash_cr": 417.2541,
+        "source": {
+          "document_id": "ACE_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4292123c-7a4c-4823-abb8-a7edd4c0f398.pdf",
+          "pdf_page": 234
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-08-24",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "ACE_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4292123c-7a4c-4823-abb8-a7edd4c0f398.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Quarter reported basic EPS is 10.04, not rounded locator 10.03. ESOP trust treasury shares must be deducted; quarterly exact weighted denominator not established independently.",
+        "Annual group profit 415.10 differs from owner profit 415.0905. Quarterly non-controlling profit is present below lakh rounding.",
+        "Other income is substantial; recurring treasury income and investment fair-value gains need disaggregation before core profit comparisons.",
+        "ACE KATO is intended as joint venture but June result note7 says 99% held by ACE pending KATO contribution; do not assume 50:50 current consolidation."
+      ],
+      "quarterly_eps_audit": {
+        "status": "unresolved",
+        "reason": "Exact current weighted denominator not independently established; do not use implied shares as independent verification."
+      },
+      "quarter_annual_reconciliation": {
+        "status": "pass_primary_with_rounding_and_scope_caveats",
+        "scope": "group PAT at integer-lakh precision; annual owner415.0905 differs fromgroup415.10",
+        "quarters": [
+          {
+            "period": "2025_6",
+            "revenue_cr": 652.08,
+            "ordinary_other_income_cr": 51.14,
+            "reported_pat_line_cr": 97.72,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 8.21,
+            "source": {
+              "document_id": "ACE_Q_2025_6",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/405a12da-8a3b-4c85-aa2e-ff0e56d0e47e.pdf",
+              "pdf_page": 3
+            }
+          },
+          {
+            "period": "2025_9",
+            "revenue_cr": 744.24,
+            "ordinary_other_income_cr": 29.31,
+            "reported_pat_line_cr": 90.06,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 7.57,
+            "source": {
+              "document_id": "ACE_Q_2025_9",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3acfd91d-eaed-4416-97b5-e448ed36e69f.pdf",
+              "pdf_page": 2
+            }
+          },
+          {
+            "period": "2025_12",
+            "revenue_cr": 854.63,
+            "ordinary_other_income_cr": 35.73,
+            "reported_pat_line_cr": 116.41,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 9.78,
+            "source": {
+              "document_id": "ACE_Q_2025_12",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/72a4fbeb-8406-4b8e-a41b-db19d136eb57.pdf",
+              "pdf_page": 2
+            }
+          },
+          {
+            "period": "2026_3",
+            "revenue_cr": 1029.49,
+            "ordinary_other_income_cr": -6.12,
+            "reported_pat_line_cr": 110.91,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 9.32,
+            "source": {
+              "document_id": "ACE_Q_2026_3",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/26e3b228-ac3f-4030-b088-1bf5300b53c4.pdf",
+              "pdf_page": 2
+            }
+          }
+        ],
+        "annual_revenue_cr": 3280.44,
+        "annual_other_income_cr": 110.06,
+        "annual_reported_pat_line_cr": 415.1,
+        "quarter_sums": {
+          "revenue_cr": 3280.44,
+          "ordinary_other_income_cr": 110.06,
+          "reported_pat_line_cr": 415.1
+        },
+        "differences_to_annual_cr": {
+          "revenue": 0.0,
+          "other_income": 0.0,
+          "reported_pat_line": 0.0
+        },
+        "annual_source": {
+          "document_id": "ACE_Q_2026_3",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/26e3b228-ac3f-4030-b088-1bf5300b53c4.pdf",
+          "pdf_page": 2
+        },
+        "EPS_audit_boundary": "Quarter arithmetic bridge is separate from EPS audit. Exact per-quarter weighted denominator still unresolved unless explicitly tested below."
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "incomplete",
+        "primary_four_quarter_annual": "complete_primary",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "ACE_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4292123c-7a4c-4823-abb8-a7edd4c0f398.pdf",
+        "pdf_page": 11
+      },
+      "caveat_sources": [
+        {
+          "document_id": "ACE_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7ae31eeb-6b66-4661-bc7d-b1b9cb3ef45f.pdf",
+          "pdf_page": 2
+        },
+        {
+          "document_id": "ACE_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4292123c-7a4c-4823-abb8-a7edd4c0f398.pdf",
+          "pdf_page": 320
+        },
+        {
+          "document_id": "ACE_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4292123c-7a4c-4823-abb8-a7edd4c0f398.pdf",
+          "pdf_page": 234
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/ACE/consolidated/",
+          "requested_scope": "consolidated/",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                652.0,
+                744.0,
+                855.0,
+                1029.0
+              ],
+              "sum": 3280.0,
+              "annual": 3280.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                51.0,
+                29.0,
+                36.0,
+                -6.0
+              ],
+              "sum": 110.0,
+              "annual": 110.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                98.0,
+                90.0,
+                116.0,
+                111.0
+              ],
+              "sum": 415.0,
+              "annual": 415.0,
+              "difference": 0.0
+            }
+          ]
+        },
+        {
+          "url": "https://www.screener.in/company/ACE/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                652.0,
+                741.0,
+                853.0,
+                1028.0
+              ],
+              "sum": 3274.0,
+              "annual": 3274.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                51.0,
+                41.0,
+                36.0,
+                -6.0
+              ],
+              "sum": 122.0,
+              "annual": 121.0,
+              "difference": 1.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                97.0,
+                104.0,
+                116.0,
+                109.0
+              ],
+              "sum": 426.0,
+              "annual": 425.0,
+              "difference": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Ajax Engineering Ltd.",
+      "symbol": "NSE:AJAXENGG",
+      "isin": "INE274Y01021",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Concrete equipment OEM: self-loading concrete mixers, batching plants, pumps and related equipment.",
+      "basket_recommendation": "exclude_short_history",
+      "basket_reason": "392 daily observations from 17 February 2025; retain full industry/roster discussion but exclude base seasonal basket.",
+      "latest_actual": {
+        "scope": "standalone",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          474.597,
+          466.515
+        ],
+        "ordinary_other_income_cr": [
+          18.195,
+          12.597
+        ],
+        "reported_pat_line_cr": [
+          55.602,
+          52.875
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          55.602,
+          52.875
+        ],
+        "eps_rs": [
+          4.86,
+          4.62
+        ],
+        "source": {
+          "document_id": "AJAXENGG_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/31c6bfcb-6823-4b1a-9ffd-d2ff7cdb9bad.pdf",
+          "pdf_page": 4
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 225.145,
+        "reported_eps_rs": 19.68,
+        "shares_number": 114406800,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 225.1525824,
+        "difference_cr": 0.0075824,
+        "rounding_tolerance_cr": 0.0573034,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "AJAXENGG_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/650cf0c3-fa4f-4109-91e4-f0af09bd69e0.pdf",
+          "pdf_page": 88
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "standalone",
+        "net_operating_cash_cr": 377.287,
+        "source": {
+          "document_id": "AJAXENGG_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/650cf0c3-fa4f-4109-91e4-f0af09bd69e0.pdf",
+          "pdf_page": 68
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-09-04",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "AJAXENGG_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/650cf0c3-fa4f-4109-91e4-f0af09bd69e0.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Consolidated locator page contains no financial table. Current primary standalone is authoritative.",
+        "Amounts are million rupees, divide by10 for crore; not lakh.",
+        "Diluted EPS4.83 differs from basic4.86; exact quarterly diluted denominator pending.",
+        "Other income and release of working capital matter to profit-to-cash comparison."
+      ],
+      "quarterly_eps_audit": {
+        "latest": {
+          "reported_pat_cr": 55.602,
+          "reported_eps_rs": 4.86,
+          "shares_number": 114406800,
+          "share_basis": "unchanged issuedshares supported byannualnote/currentcapital; exactquarterweighted disclosure notseparate",
+          "eps_times_shares_cr": 55.6017048,
+          "difference_cr": -0.0002952,
+          "rounding_tolerance_cr": 0.0573034,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "AJAXENGG_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/31c6bfcb-6823-4b1a-9ffd-d2ff7cdb9bad.pdf",
+            "pdf_page": 4
+          }
+        },
+        "prior_year": {
+          "reported_pat_cr": 52.875,
+          "reported_eps_rs": 4.62,
+          "shares_number": 114406800,
+          "share_basis": "same unchanged sharebase",
+          "eps_times_shares_cr": 52.8559416,
+          "difference_cr": -0.0190584,
+          "rounding_tolerance_cr": 0.0573034,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "AJAXENGG_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/31c6bfcb-6823-4b1a-9ffd-d2ff7cdb9bad.pdf",
+            "pdf_page": 4
+          }
+        },
+        "status": "pass_using_unchanged_sharebase"
+      },
+      "quarter_annual_reconciliation": {
+        "status": "incomplete",
+        "reason": "AllfourFY26quarterPDFs acquired; independent full primary transcriptions/reconciliation pending. Raw-header locator diagnostic is separate."
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "complete_unchanged_sharebase",
+        "primary_four_quarter_annual": "incomplete",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "AJAXENGG_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/650cf0c3-fa4f-4109-91e4-f0af09bd69e0.pdf",
+        "pdf_page": 5
+      },
+      "caveat_sources": [
+        {
+          "document_id": "AJAXENGG_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/31c6bfcb-6823-4b1a-9ffd-d2ff7cdb9bad.pdf",
+          "pdf_page": 4
+        },
+        {
+          "document_id": "AJAXENGG_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/650cf0c3-fa4f-4109-91e4-f0af09bd69e0.pdf",
+          "pdf_page": 88
+        },
+        {
+          "document_id": "AJAXENGG_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/650cf0c3-fa4f-4109-91e4-f0af09bd69e0.pdf",
+          "pdf_page": 68
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/AJAXENGG/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 11,
+          "prior_year_column_index": 7,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                467.0,
+                445.0,
+                434.0,
+                758.0
+              ],
+              "sum": 2104.0,
+              "annual": 2103.0,
+              "difference": 1.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                13.0,
+                10.0,
+                10.0,
+                13.0
+              ],
+              "sum": 46.0,
+              "annual": 46.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                53.0,
+                39.0,
+                38.0,
+                95.0
+              ],
+              "sum": 225.0,
+              "annual": 225.0,
+              "difference": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Cranex Limited",
+      "symbol": "BSE:CRANEX",
+      "isin": "INE608B01010",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Industrial EOT/gantry crane and material-handling equipment manufacturer; not a mobile earthmoving/mining OEM.",
+      "basket_recommendation": "exclude_scope",
+      "basket_reason": "Cross-reference material handling091; avoid industrial overhead-crane economics defining construction/mining OEM seasonality.",
+      "latest_actual": {
+        "scope": "consolidated",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          9.8944,
+          8.9831
+        ],
+        "ordinary_other_income_cr": [
+          0.0898,
+          0.1232
+        ],
+        "reported_pat_line_cr": [
+          0.3237,
+          0.242
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          0.3237,
+          0.242
+        ],
+        "eps_rs": [
+          0.42,
+          0.37
+        ],
+        "source": {
+          "document_id": "CRANEX_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b00c7965-a284-4cec-9251-e61677695824.pdf",
+          "pdf_page": 8
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 2.4114,
+        "reported_eps_rs": 3.67,
+        "shares_number": 6570000,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 2.41119,
+        "difference_cr": -0.00021,
+        "rounding_tolerance_cr": 0.003385,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "CRANEX_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c97ee521-a4d0-4771-bd9b-46b7661debde.pdf",
+          "pdf_page": 178
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "consolidated",
+        "net_operating_cash_cr": -1.23,
+        "source": {
+          "document_id": "CRANEX_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c97ee521-a4d0-4771-bd9b-46b7661debde.pdf",
+          "pdf_page": 138
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-09-05",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "CRANEX_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c97ee521-a4d0-4771-bd9b-46b7661debde.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "June limited review is qualified: JV equity method not followed, balances not confirmed, associate financial instruments not fairly measured and inventory register not produced (PDF6\u20137).",
+        "Quarter share capital rises657 to802lakh; current EPS requires weighted shares, not closing8.02million. Exact current weighted denominator unresolved.",
+        "Annual diluted EPS note179 uses8.02million versus6.57million basic yet says no instruments have dilution effect: internal disclosure contradiction.",
+        "Annual negative operating cash is not corrected by the positive accounting profit."
+      ],
+      "quarterly_eps_audit": {
+        "status": "unresolved",
+        "reason": "Exact current weighted denominator not independently established; do not use implied shares as independent verification."
+      },
+      "quarter_annual_reconciliation": {
+        "status": "incomplete",
+        "reason": "AllfourFY26quarterPDFs acquired; independent full primary transcriptions/reconciliation pending. Raw-header locator diagnostic is separate."
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "incomplete",
+        "primary_four_quarter_annual": "incomplete",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "CRANEX_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c97ee521-a4d0-4771-bd9b-46b7661debde.pdf",
+        "pdf_page": 173
+      },
+      "caveat_sources": [
+        {
+          "document_id": "CRANEX_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b00c7965-a284-4cec-9251-e61677695824.pdf",
+          "pdf_page": 8
+        },
+        {
+          "document_id": "CRANEX_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c97ee521-a4d0-4771-bd9b-46b7661debde.pdf",
+          "pdf_page": 178
+        },
+        {
+          "document_id": "CRANEX_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c97ee521-a4d0-4771-bd9b-46b7661debde.pdf",
+          "pdf_page": 138
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/522001/consolidated/",
+          "requested_scope": "consolidated/",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                8.98,
+                13.37,
+                11.12,
+                21.91
+              ],
+              "sum": 55.379999999999995,
+              "annual": 55.37,
+              "difference": 0.01
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                0.12,
+                0.12,
+                0.14,
+                0.17
+              ],
+              "sum": 0.55,
+              "annual": 0.55,
+              "difference": 0.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                0.24,
+                0.66,
+                0.32,
+                1.18
+              ],
+              "sum": 2.4,
+              "annual": 2.41,
+              "difference": -0.01
+            }
+          ]
+        },
+        {
+          "url": "https://www.screener.in/company/522001/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                8.98,
+                13.37,
+                11.12,
+                21.91
+              ],
+              "sum": 55.379999999999995,
+              "annual": 55.37,
+              "difference": 0.01
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                0.12,
+                0.12,
+                0.14,
+                0.16
+              ],
+              "sum": 0.54,
+              "annual": 0.55,
+              "difference": -0.01
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                0.24,
+                0.66,
+                0.32,
+                1.18
+              ],
+              "sum": 2.4,
+              "annual": 2.41,
+              "difference": -0.01
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Eimco Elecon (India) Ltd.",
+      "symbol": "NSE:EIMCOELECO",
+      "isin": "INE158B01016",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Underground mining machinery and spares; construction-equipment diversification.",
+      "basket_recommendation": "include",
+      "basket_reason": "Direct mining-machinery exposure; only91-day price gap is2006 before intended backtest.",
+      "latest_actual": {
+        "scope": "standalone",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          77.5231,
+          67.5699
+        ],
+        "ordinary_other_income_cr": [
+          7.7594,
+          8.0917
+        ],
+        "reported_pat_line_cr": [
+          15.3785,
+          14.4826
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          15.3785,
+          14.4826
+        ],
+        "eps_rs": [
+          26.66,
+          25.11
+        ],
+        "source": {
+          "document_id": "EIMCOELECO_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b75333de-c2f0-4a76-8e49-2c66ffaa3a2b.pdf",
+          "pdf_page": 3
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 38.7133,
+        "reported_eps_rs": 67.11,
+        "shares_number": 5768385,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 38.7116317,
+        "difference_cr": -0.0016683,
+        "rounding_tolerance_cr": 0.0029842,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "EIMCOELECO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf9d4da-f5ec-4a75-a5c0-9015e4c0e417.pdf",
+          "pdf_page": 65
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "standalone",
+        "net_operating_cash_cr": 22.1089,
+        "source": {
+          "document_id": "EIMCOELECO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf9d4da-f5ec-4a75-a5c0-9015e4c0e417.pdf",
+          "pdf_page": 42
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-06-02",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "EIMCOELECO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf9d4da-f5ec-4a75-a5c0-9015e4c0e417.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Consolidated locator endsMarch2024. Current standalone note4 explicitly says no subsidiary/associate/JV asJune2026.",
+        "Distributor compensation is a separately material operating cost; installed-base potential must be tested net of distributor economics.",
+        "Other income is substantial and can obscure machinery margin movements."
+      ],
+      "quarterly_eps_audit": {
+        "latest": {
+          "reported_pat_cr": 15.3785,
+          "reported_eps_rs": 26.66,
+          "shares_number": 5768385,
+          "share_basis": "unchanged issuedshares supported byannualnote/currentcapital; exactquarterweighted disclosure notseparate",
+          "eps_times_shares_cr": 15.3785144,
+          "difference_cr": 1.44e-05,
+          "rounding_tolerance_cr": 0.0029842,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "EIMCOELECO_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b75333de-c2f0-4a76-8e49-2c66ffaa3a2b.pdf",
+            "pdf_page": 3
+          }
+        },
+        "prior_year": {
+          "reported_pat_cr": 14.4826,
+          "reported_eps_rs": 25.11,
+          "shares_number": 5768385,
+          "share_basis": "same unchanged sharebase",
+          "eps_times_shares_cr": 14.4844147,
+          "difference_cr": 0.0018147,
+          "rounding_tolerance_cr": 0.0029842,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "EIMCOELECO_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b75333de-c2f0-4a76-8e49-2c66ffaa3a2b.pdf",
+            "pdf_page": 3
+          }
+        },
+        "status": "pass_using_unchanged_sharebase"
+      },
+      "quarter_annual_reconciliation": {
+        "status": "pass_primary_with_rounding_and_scope_caveats",
+        "scope": "standalone",
+        "quarters": [
+          {
+            "period": "2025_6",
+            "revenue_cr": 67.5699,
+            "ordinary_other_income_cr": 8.0917,
+            "reported_pat_line_cr": 14.4826,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 25.11,
+            "source": {
+              "document_id": "EIMCOELECO_Q_2025_6",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcfb75db-e8d7-4a97-a4bf-a822eeea8a23.pdf",
+              "pdf_page": 3
+            }
+          },
+          {
+            "period": "2025_9",
+            "revenue_cr": 33.2364,
+            "ordinary_other_income_cr": 4.2722,
+            "reported_pat_line_cr": 5.3512,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 9.28,
+            "source": {
+              "document_id": "EIMCOELECO_Q_2025_9",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6de5ecc0-476f-4de8-8f33-70a62a8f2b40.pdf",
+              "pdf_page": 5
+            }
+          },
+          {
+            "period": "2025_12",
+            "revenue_cr": 63.0574,
+            "ordinary_other_income_cr": 5.9537,
+            "reported_pat_line_cr": 12.5153,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 21.7,
+            "source": {
+              "document_id": "EIMCOELECO_Q_2025_12",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6d28380b-cfe0-499f-97b0-6384a6294def.pdf",
+              "pdf_page": 3
+            }
+          },
+          {
+            "period": "2026_3",
+            "revenue_cr": 66.8828,
+            "ordinary_other_income_cr": -1.3129,
+            "reported_pat_line_cr": 6.3642,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 11.03,
+            "source": {
+              "document_id": "EIMCOELECO_Q_2026_3",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/72336799-7e3c-4ad9-8e26-4fbd4ce6b704.pdf",
+              "pdf_page": 6
+            }
+          }
+        ],
+        "annual_revenue_cr": 230.7465,
+        "annual_other_income_cr": 17.0047,
+        "annual_reported_pat_line_cr": 38.7133,
+        "quarter_sums": {
+          "revenue_cr": 230.7465,
+          "ordinary_other_income_cr": 17.0047,
+          "reported_pat_line_cr": 38.7133
+        },
+        "differences_to_annual_cr": {
+          "revenue": 0.0,
+          "other_income": 0.0,
+          "reported_pat_line": 0.0
+        },
+        "annual_source": {
+          "document_id": "EIMCOELECO_Q_2026_3",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/72336799-7e3c-4ad9-8e26-4fbd4ce6b704.pdf",
+          "pdf_page": 6
+        },
+        "EPS_audit_boundary": "Quarter arithmetic bridge is separate from EPS audit. Exact per-quarter weighted denominator still unresolved unless explicitly tested below.",
+        "quarter_EPS_checks": [
+          {
+            "period": "2025_6",
+            "weighted_shares": 5768385,
+            "reported_eps": 25.11,
+            "eps_times_shares_cr": 14.484415,
+            "reported_pat_cr": 14.4826,
+            "within_EPS_rounding": true
+          },
+          {
+            "period": "2025_9",
+            "weighted_shares": 5768385,
+            "reported_eps": 9.28,
+            "eps_times_shares_cr": 5.353061,
+            "reported_pat_cr": 5.3512,
+            "within_EPS_rounding": true
+          },
+          {
+            "period": "2025_12",
+            "weighted_shares": 5768385,
+            "reported_eps": 21.7,
+            "eps_times_shares_cr": 12.517395,
+            "reported_pat_cr": 12.5153,
+            "within_EPS_rounding": true
+          },
+          {
+            "period": "2026_3",
+            "weighted_shares": 5768385,
+            "reported_eps": 11.03,
+            "eps_times_shares_cr": 6.362529,
+            "reported_pat_cr": 6.3642,
+            "within_EPS_rounding": true
+          }
+        ]
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "complete_unchanged_sharebase",
+        "primary_four_quarter_annual": "complete_primary",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "EIMCOELECO_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf9d4da-f5ec-4a75-a5c0-9015e4c0e417.pdf",
+        "pdf_page": 4
+      },
+      "caveat_sources": [
+        {
+          "document_id": "EIMCOELECO_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b75333de-c2f0-4a76-8e49-2c66ffaa3a2b.pdf",
+          "pdf_page": 3
+        },
+        {
+          "document_id": "EIMCOELECO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf9d4da-f5ec-4a75-a5c0-9015e4c0e417.pdf",
+          "pdf_page": 65
+        },
+        {
+          "document_id": "EIMCOELECO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf9d4da-f5ec-4a75-a5c0-9015e4c0e417.pdf",
+          "pdf_page": 42
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/EIMCOELECO/consolidated/",
+          "requested_scope": "consolidated/",
+          "rightmost_header": "Mar 2024",
+          "prior_year_header": "Mar 2023",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": false,
+          "financial_values_status": "rounded locator only"
+        },
+        {
+          "url": "https://www.screener.in/company/EIMCOELECO/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                68.0,
+                33.0,
+                63.0,
+                67.0
+              ],
+              "sum": 231.0,
+              "annual": 231.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                8.0,
+                4.0,
+                6.0,
+                -1.0
+              ],
+              "sum": 17.0,
+              "annual": 17.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                14.0,
+                5.0,
+                13.0,
+                6.0
+              ],
+              "sum": 38.0,
+              "annual": 39.0,
+              "difference": -1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Gujarat Apollo Industries Limited",
+      "symbol": "NSE:GUJAPOLLO",
+      "isin": "INE826C01016",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Crushing/screening and construction/mining equipment with material investment/associate interests.",
+      "basket_recommendation": "include_with_sensitivity",
+      "basket_reason": "Relevant operations but investment-heavy earnings; report equipment-focused basket excluding it as sensitivity.",
+      "latest_actual": {
+        "scope": "consolidated",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          9.9756,
+          11.0806
+        ],
+        "ordinary_other_income_cr": [
+          7.4973,
+          6.5368
+        ],
+        "reported_pat_line_cr": [
+          0.9749,
+          1.285
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          0.8068,
+          1.1501
+        ],
+        "eps_rs": [
+          0.62,
+          0.98
+        ],
+        "source": {
+          "document_id": "GUJAPOLLO_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9db7cef3-79ea-4c4d-88b0-4cb5ebd13da8.pdf",
+          "pdf_page": 5
+        },
+        "owner_attribution_caveat": "June statement places share of associate profit after OCI. PAT line0.9749 excludes associate loss0.1681; EPS numerator is economically0.8068, not total comprehensive income1.3480. No explicit NCI/owner split in current filing."
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 5.9508,
+        "reported_eps_rs": 4.8,
+        "shares_number": 12385000,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 5.9448,
+        "difference_cr": -0.006,
+        "rounding_tolerance_cr": 0.0062925,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "GUJAPOLLO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5f6c8672-e439-42aa-a35b-267ca4f5286a.pdf",
+          "pdf_page": 132
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "consolidated",
+        "net_operating_cash_cr": -38.7783,
+        "source": {
+          "document_id": "GUJAPOLLO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5f6c8672-e439-42aa-a35b-267ca4f5286a.pdf",
+          "pdf_page": 107
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-09-05",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "GUJAPOLLO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5f6c8672-e439-42aa-a35b-267ca4f5286a.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "June statement places share of associate profit after OCI. PAT line0.9749 excludes associate loss0.1681; EPS numerator is economically0.8068, not total comprehensive income1.3480. No explicit NCI/owner split in current filing.",
+        "Prior quarter-year comparator requires1.2850 minus0.1349 associate loss=1.1501.",
+        "Annual EPS numerator5.9508 includes associate profit0.7943; annual reported PAT line5.1565 alone is incomplete.",
+        "Ordinary other income7.4973 exceeds PBT1.6460; consolidated annualCFO is negative38.7783.",
+        "Share count changed duringFY26; annual weighted12,385,000 differs from closing12,970,000."
+      ],
+      "quarterly_eps_audit": {
+        "status": "latest_pass_prior_small_discrepancy",
+        "latest": {
+          "shares": 12970000,
+          "reported_eps": 0.62,
+          "PAT_including_associate_cr": 0.8068,
+          "eps_times_shares_cr": 0.80414,
+          "within_EPS_rounding": true
+        },
+        "prior": {
+          "shares": 11800000,
+          "reported_eps": 0.98,
+          "PAT_including_associate_cr": 1.1501,
+          "eps_times_shares_cr": 1.1564,
+          "difference_cr": 0.0063,
+          "EPS_rounding_plus_PAT_tolerance_cr": 0.006,
+          "within_EPS_rounding": false
+        },
+        "basis": "capital unchanged duringeachdisplayedquarter, annualshare movement examined; exact weightednote notseparatelypublished",
+        "source": {
+          "document_id": "GUJAPOLLO_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9db7cef3-79ea-4c4d-88b0-4cb5ebd13da8.pdf",
+          "pdf_page": 5
+        }
+      },
+      "quarter_annual_reconciliation": {
+        "status": "pass_primary_with_rounding_and_scope_caveats",
+        "scope": "consolidated reported PAT line BEFORE associate; associate added separately",
+        "quarters": [
+          {
+            "period": "2025_6",
+            "revenue_cr": 11.0806,
+            "ordinary_other_income_cr": 6.5368,
+            "reported_pat_line_cr": 1.285,
+            "associate_profit_after_tax_cr": -0.1349,
+            "reported_basic_eps_rs": 0.98,
+            "source": {
+              "document_id": "GUJAPOLLO_Q_2025_6",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/85aec568-bb70-4764-bb52-522851e43459.pdf",
+              "pdf_page": 5
+            }
+          },
+          {
+            "period": "2025_9",
+            "revenue_cr": 12.8887,
+            "ordinary_other_income_cr": 7.7432,
+            "reported_pat_line_cr": 1.8949,
+            "associate_profit_after_tax_cr": 0.4497,
+            "reported_basic_eps_rs": 1.98,
+            "source": {
+              "document_id": "GUJAPOLLO_Q_2025_9",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/50a03c72-945b-4cf6-82c0-a72390751b9d.pdf",
+              "pdf_page": 10
+            }
+          },
+          {
+            "period": "2025_12",
+            "revenue_cr": 16.1716,
+            "ordinary_other_income_cr": 6.6968,
+            "reported_pat_line_cr": 0.2204,
+            "associate_profit_after_tax_cr": 0.4074,
+            "reported_basic_eps_rs": 0.51,
+            "source": {
+              "document_id": "GUJAPOLLO_Q_2025_12",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcf989eb-3781-47d7-8969-a24137e3a2cb.pdf",
+              "pdf_page": 7
+            }
+          },
+          {
+            "period": "2026_3",
+            "revenue_cr": 12.8423,
+            "ordinary_other_income_cr": 5.2848,
+            "reported_pat_line_cr": 1.7561,
+            "associate_profit_after_tax_cr": 0.0721,
+            "reported_basic_eps_rs": 1.4,
+            "source": {
+              "document_id": "GUJAPOLLO_Q_2026_3",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5813a274-4ac8-4549-9799-e8f7b3ddee1a.pdf",
+              "pdf_page": 10
+            }
+          }
+        ],
+        "annual_revenue_cr": 52.9832,
+        "annual_other_income_cr": 26.2616,
+        "annual_reported_pat_line_cr": 5.1564,
+        "quarter_sums": {
+          "revenue_cr": 52.9832,
+          "ordinary_other_income_cr": 26.2616,
+          "reported_pat_line_cr": 5.1564
+        },
+        "differences_to_annual_cr": {
+          "revenue": 0.0,
+          "other_income": 0.0,
+          "reported_pat_line": 0.0
+        },
+        "annual_source": {
+          "document_id": "GUJAPOLLO_Q_2026_3",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5813a274-4ac8-4549-9799-e8f7b3ddee1a.pdf",
+          "pdf_page": 10
+        },
+        "EPS_audit_boundary": "Quarter arithmetic bridge is separate from EPS audit. Exact per-quarter weighted denominator still unresolved unless explicitly tested below.",
+        "associate_bridge": {
+          "sum_associate_cr": 0.7943,
+          "sum_PAT_including_associate_cr": 5.9507,
+          "annual_EPS_numerator_cr": 5.9508,
+          "rounding_difference_cr": -0.0001,
+          "note": "OriginalMarchstatementPAT515.64lakh vsJunecomparative515.65lakh; annualEPSnote595.08lakh. Difference1,000rupees retained."
+        }
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete_with_exceptions",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "incomplete",
+        "primary_four_quarter_annual": "complete_primary",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "GUJAPOLLO_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5f6c8672-e439-42aa-a35b-267ca4f5286a.pdf",
+        "pdf_page": 20
+      },
+      "caveat_sources": [
+        {
+          "document_id": "GUJAPOLLO_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9db7cef3-79ea-4c4d-88b0-4cb5ebd13da8.pdf",
+          "pdf_page": 5
+        },
+        {
+          "document_id": "GUJAPOLLO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5f6c8672-e439-42aa-a35b-267ca4f5286a.pdf",
+          "pdf_page": 132
+        },
+        {
+          "document_id": "GUJAPOLLO_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5f6c8672-e439-42aa-a35b-267ca4f5286a.pdf",
+          "pdf_page": 107
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/GUJAPOLLO/consolidated/",
+          "requested_scope": "consolidated/",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                11.08,
+                12.89,
+                16.17,
+                12.84
+              ],
+              "sum": 52.980000000000004,
+              "annual": 52.93,
+              "difference": 0.05
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                6.54,
+                7.74,
+                6.7,
+                5.28
+              ],
+              "sum": 26.26,
+              "annual": 26.26,
+              "difference": 0.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                1.15,
+                2.34,
+                0.63,
+                1.83
+              ],
+              "sum": 5.95,
+              "annual": 5.16,
+              "difference": 0.79
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Sanghvi Movers Limited",
+      "symbol": "NSE:SANGHVIMOV",
+      "isin": "INE989A01032",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Crane rental fleet owner and project/renewable execution services; buys equipment to earn hiring income.",
+      "basket_recommendation": "exclude_scope",
+      "basket_reason": "Fleet utilisation, rental yield and funding economics differ from equipment manufacture; retain operator comparator.",
+      "latest_actual": {
+        "scope": "consolidated",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          379.6686,
+          273.355
+        ],
+        "ordinary_other_income_cr": [
+          13.4428,
+          7.3987
+        ],
+        "reported_pat_line_cr": [
+          65.2537,
+          50.2573
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          65.2537,
+          50.2573
+        ],
+        "eps_rs": [
+          7.54,
+          5.8
+        ],
+        "source": {
+          "document_id": "SANGHVIMOV_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3b378aa4-9f57-4f1c-a1e3-d9d43e90128c.pdf",
+          "pdf_page": 5
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 184.286,
+        "reported_eps_rs": 21.29,
+        "shares_number": 86576000,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 184.320304,
+        "difference_cr": 0.034304,
+        "rounding_tolerance_cr": 0.043388,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "SANGHVIMOV_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/264b88a7-026e-40e8-a3f8-8831b63dc22b.pdf",
+          "pdf_page": 150
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "consolidated",
+        "net_operating_cash_cr": 278.0137,
+        "source": {
+          "document_id": "SANGHVIMOV_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/264b88a7-026e-40e8-a3f8-8831b63dc22b.pdf",
+          "pdf_page": 133
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-08-03",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "SANGHVIMOV_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/264b88a7-026e-40e8-a3f8-8831b63dc22b.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Recovered locator using BSEcode was standalone, but primary PDF includes consolidated; use groupP&L p5.",
+        "Standalone renewable transfer/restatement must not be mistaken for consolidated organic growth.",
+        "Other income includes used-crane sale effects; large depreciation/capex needed for fleet-return analysis.",
+        "Basic and diluted shares unchanged annual86,576,000; September2024 face-value split already reflected in price feed; no large daily step observed."
+      ],
+      "quarterly_eps_audit": {
+        "latest": {
+          "reported_pat_cr": 65.2537,
+          "reported_eps_rs": 7.54,
+          "shares_number": 86576000,
+          "share_basis": "unchanged issuedshares supported byannualnote/currentcapital; exactquarterweighted disclosure notseparate",
+          "eps_times_shares_cr": 65.278304,
+          "difference_cr": 0.024604,
+          "rounding_tolerance_cr": 0.043388,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "SANGHVIMOV_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3b378aa4-9f57-4f1c-a1e3-d9d43e90128c.pdf",
+            "pdf_page": 5
+          }
+        },
+        "prior_year": {
+          "reported_pat_cr": 50.2573,
+          "reported_eps_rs": 5.8,
+          "shares_number": 86576000,
+          "share_basis": "same unchanged sharebase",
+          "eps_times_shares_cr": 50.21408,
+          "difference_cr": -0.04322,
+          "rounding_tolerance_cr": 0.043388,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "SANGHVIMOV_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3b378aa4-9f57-4f1c-a1e3-d9d43e90128c.pdf",
+            "pdf_page": 5
+          }
+        },
+        "status": "pass_using_unchanged_sharebase"
+      },
+      "quarter_annual_reconciliation": {
+        "status": "incomplete",
+        "reason": "AllfourFY26quarterPDFs acquired; independent full primary transcriptions/reconciliation pending. Raw-header locator diagnostic is separate."
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "complete_unchanged_sharebase",
+        "primary_four_quarter_annual": "incomplete",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "SANGHVIMOV_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/264b88a7-026e-40e8-a3f8-8831b63dc22b.pdf",
+        "pdf_page": 5
+      },
+      "caveat_sources": [
+        {
+          "document_id": "SANGHVIMOV_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3b378aa4-9f57-4f1c-a1e3-d9d43e90128c.pdf",
+          "pdf_page": 5
+        },
+        {
+          "document_id": "SANGHVIMOV_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/264b88a7-026e-40e8-a3f8-8831b63dc22b.pdf",
+          "pdf_page": 150
+        },
+        {
+          "document_id": "SANGHVIMOV_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/264b88a7-026e-40e8-a3f8-8831b63dc22b.pdf",
+          "pdf_page": 133
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/530073/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                159.0,
+                136.0,
+                173.0,
+                205.0
+              ],
+              "sum": 673.0,
+              "annual": 674.0,
+              "difference": -1.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                11.0,
+                11.0,
+                1.0,
+                24.0
+              ],
+              "sum": 47.0,
+              "annual": 46.0,
+              "difference": 1.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                42.0,
+                23.0,
+                33.0,
+                61.0
+              ],
+              "sum": 159.0,
+              "annual": 159.0,
+              "difference": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Tega Industries Ltd.",
+      "symbol": "NSE:TEGA",
+      "isin": "INE011K01018",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Mining consumables (mill liners and grinding media after Molycop) plus mineral-processing equipment.",
+      "basket_recommendation": "include_with_sensitivity",
+      "basket_reason": "Mining supply-chain exposure but predominantly wear/replacement demand, unlike project-driven construction OEMs; joins onlyDecember2021.",
+      "latest_actual": {
+        "scope": "consolidated",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          1723.442,
+          356.092
+        ],
+        "ordinary_other_income_cr": [
+          17.413,
+          15.531
+        ],
+        "reported_pat_line_cr": [
+          -108.252,
+          35.335
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          -86.189,
+          35.335
+        ],
+        "eps_rs": [
+          -11.47,
+          5.31
+        ],
+        "source": {
+          "document_id": "TEGA_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3be795c7-e626-4ed3-8b88-40943dc8fb0b.pdf",
+          "pdf_page": 10
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": 142.653,
+        "reported_eps_rs": 20.54,
+        "shares_number": 69454488,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": 142.6595184,
+        "difference_cr": 0.0065184,
+        "rounding_tolerance_cr": 0.0348272,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "TEGA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/044b03ab-584b-4944-8346-d1c5e012972c.pdf",
+          "pdf_page": 265
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "consolidated",
+        "net_operating_cash_cr": 350.339,
+        "source": {
+          "document_id": "TEGA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/044b03ab-584b-4944-8346-d1c5e012972c.pdf",
+          "pdf_page": 207
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-09-01",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "TEGA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/044b03ab-584b-4944-8346-d1c5e012972c.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Molycop control obtained1June2026: one month acquisition revenue1291.640cr is included in1723.442cr quarter. This is not like-for-like growth.",
+        "One-time acquisition expenses190.955cr are in Other Expenses, not ordinaryOtherIncome; priorFY acquisition expenses77.577cr.",
+        "Current group loss108.252cr versus owners86.189cr and NCI loss22.063cr. EPS uses owner loss.",
+        "June EPS uses75,127,698 issuedshares after November2025 issue; annual weighted69,454,488.",
+        "Provisional goodwill4995.687cr and intangibles3429.532cr need purchase-price allocation and financing audit. Source latestPDF12.",
+        "Post18September announcements including23September trade-remedy outcome excluded."
+      ],
+      "quarterly_eps_audit": {
+        "latest": {
+          "reported_pat_cr": -86.189,
+          "reported_eps_rs": -11.47,
+          "shares_number": 75127698,
+          "share_basis": "exact issuedshares fromnote6; noJunechange disclosed",
+          "eps_times_shares_cr": -86.1714696,
+          "difference_cr": 0.0175304,
+          "rounding_tolerance_cr": 0.0376638,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "TEGA_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3be795c7-e626-4ed3-8b88-40943dc8fb0b.pdf",
+            "pdf_page": 12
+          }
+        },
+        "prior_year": {
+          "reported_pat_cr": 35.335,
+          "reported_eps_rs": 5.31,
+          "shares_number": 66535492,
+          "share_basis": "exact priorissuedshares fromnote6",
+          "eps_times_shares_cr": 35.3303463,
+          "difference_cr": -0.0046537,
+          "rounding_tolerance_cr": 0.0333677,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "TEGA_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3be795c7-e626-4ed3-8b88-40943dc8fb0b.pdf",
+            "pdf_page": 12
+          }
+        },
+        "group_vs_owner": "NCI loss22.063cr explains difference; EPS is ownerbasis",
+        "status": "pass_using_unchanged_sharebase"
+      },
+      "quarter_annual_reconciliation": {
+        "status": "pass_primary_with_rounding_and_scope_caveats",
+        "scope": "group/owner equal to displayed precision; pre-Molycop perimeter",
+        "quarters": [
+          {
+            "period": "2025_6",
+            "revenue_cr": 356.092,
+            "ordinary_other_income_cr": 15.531,
+            "reported_pat_line_cr": 35.335,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 5.31,
+            "source": {
+              "document_id": "TEGA_Q_2025_6",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7f26a204-54c0-4633-8bc8-5b38ad2214b8.pdf",
+              "pdf_page": 9
+            }
+          },
+          {
+            "period": "2025_9",
+            "revenue_cr": 405.354,
+            "ordinary_other_income_cr": 15.732,
+            "reported_pat_line_cr": 44.939,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 6.75,
+            "source": {
+              "document_id": "TEGA_Q_2025_9",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0da1f202-e7dc-451f-94c8-41d85155bd5f.pdf",
+              "pdf_page": 11
+            }
+          },
+          {
+            "period": "2025_12",
+            "revenue_cr": 403.706,
+            "ordinary_other_income_cr": 13.839,
+            "reported_pat_line_cr": 19.708,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 2.83,
+            "source": {
+              "document_id": "TEGA_Q_2025_12",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/698c12f0-925b-4e10-8227-3e09a8f36514.pdf",
+              "pdf_page": 9
+            }
+          },
+          {
+            "period": "2026_3",
+            "revenue_cr": 526.784,
+            "ordinary_other_income_cr": 36.515,
+            "reported_pat_line_cr": 42.671,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": 5.68,
+            "source": {
+              "document_id": "TEGA_Q_2026_3",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ddbfaf03-1a5e-4b13-9d2e-c38fbe3147da.pdf",
+              "pdf_page": 7
+            }
+          }
+        ],
+        "annual_revenue_cr": 1691.936,
+        "annual_other_income_cr": 81.617,
+        "annual_reported_pat_line_cr": 142.653,
+        "quarter_sums": {
+          "revenue_cr": 1691.936,
+          "ordinary_other_income_cr": 81.617,
+          "reported_pat_line_cr": 142.653
+        },
+        "differences_to_annual_cr": {
+          "revenue": 0.0,
+          "other_income": 0.0,
+          "reported_pat_line": 0.0
+        },
+        "annual_source": {
+          "document_id": "TEGA_Q_2026_3",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ddbfaf03-1a5e-4b13-9d2e-c38fbe3147da.pdf",
+          "pdf_page": 7
+        },
+        "EPS_audit_boundary": "Quarter arithmetic bridge is separate from EPS audit. Exact per-quarter weighted denominator still unresolved unless explicitly tested below.",
+        "quarter_EPS_checks": [
+          {
+            "period": "2025_6",
+            "weighted_shares": 66535492,
+            "basis": "unchanged issuedshares",
+            "reported_eps": 5.31,
+            "eps_times_shares_cr": 35.330346,
+            "reported_pat_cr": 35.335,
+            "within_EPS_rounding": true
+          },
+          {
+            "period": "2025_9",
+            "weighted_shares": 66535492,
+            "basis": "unchanged issuedshares",
+            "reported_eps": 6.75,
+            "eps_times_shares_cr": 44.911457,
+            "reported_pat_cr": 44.939,
+            "within_EPS_rounding": true
+          },
+          {
+            "period": "2025_12",
+            "weighted_shares": 69710872.47826087,
+            "basis": "date-weighted:8,592,206issued28Nov2025,34of92daysinQ3; independently given issuance date in latestPDF12",
+            "reported_eps": 2.83,
+            "eps_times_shares_cr": 19.728177,
+            "reported_pat_cr": 19.708,
+            "within_EPS_rounding": true
+          },
+          {
+            "period": "2026_3",
+            "weighted_shares": 75127698,
+            "basis": "unchanged issuedshares",
+            "reported_eps": 5.68,
+            "eps_times_shares_cr": 42.672532,
+            "reported_pat_cr": 42.671,
+            "within_EPS_rounding": true
+          }
+        ]
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "complete_unchanged_sharebase",
+        "primary_four_quarter_annual": "complete_primary",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "TEGA_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/044b03ab-584b-4944-8346-d1c5e012972c.pdf",
+        "pdf_page": 11
+      },
+      "caveat_sources": [
+        {
+          "document_id": "TEGA_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3be795c7-e626-4ed3-8b88-40943dc8fb0b.pdf",
+          "pdf_page": 10
+        },
+        {
+          "document_id": "TEGA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/044b03ab-584b-4944-8346-d1c5e012972c.pdf",
+          "pdf_page": 265
+        },
+        {
+          "document_id": "TEGA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/044b03ab-584b-4944-8346-d1c5e012972c.pdf",
+          "pdf_page": 207
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/TEGA/consolidated/",
+          "requested_scope": "consolidated/",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                356.0,
+                405.0,
+                404.0,
+                527.0
+              ],
+              "sum": 1692.0,
+              "annual": 1692.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                17.0,
+                18.0,
+                15.0,
+                37.0
+              ],
+              "sum": 87.0,
+              "annual": 88.0,
+              "difference": -1.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                35.0,
+                45.0,
+                20.0,
+                43.0
+              ],
+              "sum": 143.0,
+              "annual": 143.0,
+              "difference": 0.0
+            }
+          ]
+        },
+        {
+          "url": "https://www.screener.in/company/TEGA/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                168.0,
+                233.0,
+                187.0,
+                202.0
+              ],
+              "sum": 790.0,
+              "annual": 789.0,
+              "difference": 1.0
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                21.0,
+                10.0,
+                19.0,
+                20.0
+              ],
+              "sum": 70.0,
+              "annual": 70.0,
+              "difference": 0.0
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                38.0,
+                48.0,
+                28.0,
+                41.0
+              ],
+              "sum": 155.0,
+              "annual": 155.0,
+              "difference": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "TIL Ltd.",
+      "symbol": "NSE:TIL",
+      "isin": "INE806C01018",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Mobile cranes/material-handling machinery; acquired60% Tulip gas-compressor packaging/service business inMay2026.",
+      "basket_recommendation": "include_with_sensitivity",
+      "basket_reason": "Retain real but troubled OEM rather than exclude on poor performance; separate acquisition and capital-restructuring sensitivity.",
+      "latest_actual": {
+        "scope": "consolidated",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          117.13,
+          62.91
+        ],
+        "ordinary_other_income_cr": [
+          0.32,
+          7.8
+        ],
+        "reported_pat_line_cr": [
+          -5.45,
+          -6.22
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          -6.15,
+          -6.22
+        ],
+        "eps_rs": [
+          -0.69,
+          -0.92
+        ],
+        "source": {
+          "document_id": "TIL_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/bedf77e7-229c-4577-af9d-38f1da1f26f0.pdf",
+          "pdf_page": 10
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": -30.77,
+        "reported_eps_rs": -4.58,
+        "shares_number": 67239042,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": -30.7954812,
+        "difference_cr": -0.0254812,
+        "rounding_tolerance_cr": 0.0337195,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "TIL_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3cd1d10b-fd32-491c-962c-85fb4110bece.pdf",
+          "pdf_page": 220
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "consolidated",
+        "net_operating_cash_cr": -88.44,
+        "source": {
+          "document_id": "TIL_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3cd1d10b-fd32-491c-962c-85fb4110bece.pdf",
+          "pdf_page": 168
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-07-03",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "TIL_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3cd1d10b-fd32-491c-962c-85fb4110bece.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Latest owner loss6.15cr differs from group loss5.45cr; printedEPS\u2212.69 appears closer to group numerator/closing shares. Exact weighted/rights-adjusted denominator unresolved.",
+        "Annual originalAR EPS\u22124.58 with67,239,042weighted shares reconciles. June filing annual comparative\u22124.53 is rights-adjusted and must not silently replace original basis.",
+        "Rights capital difference is RESOLVED:12,091,760shares were75%paid atfaceRs7.50, giving906.882lakh paid capital; no misprint can be inferred from dividing paid capital byfaceRs10. Registrar applicationPDFp1 confirms.",
+        "Deferred tax asset109.19cr depends on projected taxable profits; current auditor emphasis and prior annual qualification retained.",
+        "Tulip acquired8May2026 for119.0138cr; current group revenue includes38.52cr compression scope.",
+        "Annual operating cash\u221288.44cr; equity fundraising is not operating cash."
+      ],
+      "quarterly_eps_audit": {
+        "status": "unresolved",
+        "reason": "Exact current weighted denominator not independently established; do not use implied shares as independent verification."
+      },
+      "quarter_annual_reconciliation": {
+        "status": "pass_primary_with_rounding_and_scope_caveats",
+        "scope": "consolidated FY26original basis; June2026annualcomparative rights-adjusted separately",
+        "quarters": [
+          {
+            "period": "2025_6",
+            "revenue_cr": 62.91,
+            "ordinary_other_income_cr": 7.8,
+            "reported_pat_line_cr": -6.22,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": -0.93,
+            "source": {
+              "document_id": "TIL_Q_2025_6",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d7b3c98a-44eb-4c96-ac0a-472d1315034a.pdf",
+              "pdf_page": 8
+            }
+          },
+          {
+            "period": "2025_9",
+            "revenue_cr": 78.27,
+            "ordinary_other_income_cr": 3.18,
+            "reported_pat_line_cr": -7.73,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": -1.16,
+            "source": {
+              "document_id": "TIL_Q_2025_12",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/87388de0-a78d-439f-ab57-0e9e03782926.pdf",
+              "pdf_page": 7
+            }
+          },
+          {
+            "period": "2025_12",
+            "revenue_cr": 73.23,
+            "ordinary_other_income_cr": 2.53,
+            "reported_pat_line_cr": -6.85,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": -1.03,
+            "source": {
+              "document_id": "TIL_Q_2025_12",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/87388de0-a78d-439f-ab57-0e9e03782926.pdf",
+              "pdf_page": 7
+            }
+          },
+          {
+            "period": "2026_3",
+            "revenue_cr": 108.84,
+            "ordinary_other_income_cr": 0.6,
+            "reported_pat_line_cr": -9.97,
+            "associate_profit_after_tax_cr": 0,
+            "reported_basic_eps_rs": -1.46,
+            "source": {
+              "document_id": "TIL_Q_2026_3",
+              "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0e4d8c95-d9c3-4ade-b275-81ee55da1577.pdf",
+              "pdf_page": 15
+            }
+          }
+        ],
+        "annual_revenue_cr": 323.25,
+        "annual_other_income_cr": 14.11,
+        "annual_reported_pat_line_cr": -30.77,
+        "quarter_sums": {
+          "revenue_cr": 323.25,
+          "ordinary_other_income_cr": 14.11,
+          "reported_pat_line_cr": -30.77
+        },
+        "differences_to_annual_cr": {
+          "revenue": 0.0,
+          "other_income": 0.0,
+          "reported_pat_line": 0.0
+        },
+        "annual_source": {
+          "document_id": "TIL_Q_2026_3",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0e4d8c95-d9c3-4ade-b275-81ee55da1577.pdf",
+          "pdf_page": 15
+        },
+        "EPS_audit_boundary": "Quarter arithmetic bridge is separate from EPS audit. Exact per-quarter weighted denominator still unresolved unless explicitly tested below.",
+        "note": "September2025 locatorRawPDF is a one-page explanatory statement, not results. Q2numbers are independently present as the comparative quarter inDecember2025primaryPDF7."
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete_with_exceptions",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "incomplete",
+        "primary_four_quarter_annual": "complete_primary",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "TIL_AR2026",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3cd1d10b-fd32-491c-962c-85fb4110bece.pdf",
+        "pdf_page": 11
+      },
+      "caveat_sources": [
+        {
+          "document_id": "TIL_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/bedf77e7-229c-4577-af9d-38f1da1f26f0.pdf",
+          "pdf_page": 10
+        },
+        {
+          "document_id": "TIL_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3cd1d10b-fd32-491c-962c-85fb4110bece.pdf",
+          "pdf_page": 220
+        },
+        {
+          "document_id": "TIL_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3cd1d10b-fd32-491c-962c-85fb4110bece.pdf",
+          "pdf_page": 168
+        }
+      ],
+      "rights_resolution": {
+        "status": "resolved",
+        "shares": 12091760,
+        "paid_face_rs": 7.5,
+        "capital_increase_lakh": 906.882,
+        "source": {
+          "url": "https://web.in.mpms.mufg.com/RightsOffers/PDF/TIL%20Limited%20-%20Rights%20Issue%202026_Application_Form.pdf",
+          "pdf_page": 1
+        },
+        "EPS_remaining_issue": "Exact weighted participating-rights denominator and owner numerator not established."
+      },
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/505196/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                62.91,
+                78.27,
+                73.23,
+                108.84
+              ],
+              "sum": 323.25,
+              "annual": 323.0,
+              "difference": 0.25
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                7.8,
+                3.18,
+                2.54,
+                -4.99
+              ],
+              "sum": 8.53,
+              "annual": 8.0,
+              "difference": 0.53
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                -6.22,
+                -7.72,
+                -6.84,
+                -10.08
+              ],
+              "sum": -30.86,
+              "annual": -31.0,
+              "difference": 0.14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Virat Crane Industries Limited",
+      "symbol": "BSE:VIRATCRA",
+      "isin": "INE295C01014",
+      "review_status": "primary_review_complete_with_explicit_unresolved_checks",
+      "information_cutoff": "2026-09-18",
+      "business_classification": "Dairy products; current filing explicitly identifies sole dairy segment. Neither cranes nor tobacco.",
+      "basket_recommendation": "exclude_misclassification",
+      "basket_reason": "Name-based roster error: Crane is the group/brand name; business is dairy.",
+      "latest_actual": {
+        "scope": "standalone",
+        "period": "quarter ended2026-06-30",
+        "prior_year_period": "quarter ended2025-06-30",
+        "unit": "INR crore except EPS",
+        "revenue_cr": [
+          44.6764,
+          40.4986
+        ],
+        "ordinary_other_income_cr": [
+          0.0037,
+          0.0443
+        ],
+        "reported_pat_line_cr": [
+          -0.9701,
+          -1.0791
+        ],
+        "owner_pat_or_eps_numerator_cr": [
+          -0.9701,
+          -1.0791
+        ],
+        "eps_rs": [
+          -0.47,
+          -0.53
+        ],
+        "source": {
+          "document_id": "VIRATCRA_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d3839b49-cdcc-4e85-884e-77c8f93e4bf9.pdf",
+          "pdf_page": 2
+        },
+        "owner_attribution_caveat": null
+      },
+      "annual_eps_audit": {
+        "reported_pat_cr": -7.7119,
+        "reported_eps_rs": -3.78,
+        "shares_number": 20423750,
+        "share_basis": "independently disclosedFY26 weighted shares",
+        "eps_times_shares_cr": -7.7201775,
+        "difference_cr": -0.0082775,
+        "rounding_tolerance_cr": 0.0103119,
+        "arithmetic_within_rounding": true,
+        "status": "pass",
+        "source": {
+          "document_id": "VIRATCRA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ef398f2-7766-4391-a420-a2af413ce5a8.pdf",
+          "pdf_page": 143
+        }
+      },
+      "annual_cash": {
+        "period": "FYended2026-03-31",
+        "scope": "standalone",
+        "net_operating_cash_cr": -5.2365,
+        "source": {
+          "document_id": "VIRATCRA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ef398f2-7766-4391-a420-a2af413ce5a8.pdf",
+          "pdf_page": 113
+        }
+      },
+      "annual_source_cutoff": {
+        "cover_letter_date": "2026-09-08",
+        "within_cutoff": true,
+        "source": {
+          "document_id": "VIRATCRA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ef398f2-7766-4391-a420-a2af413ce5a8.pdf",
+          "pdf_page": 1
+        }
+      },
+      "material_caveats": [
+        "Primary June result note3 p3 identifiesDairy Products; vendorTobacco tag is also wrong.",
+        "Annual and quarter losses relate to dairy plant ramp-up, not construction activity.",
+        "2010price step\u221250.42% predates intended backtest, but exclusion is business-based; no repair required for OEM basket."
+      ],
+      "quarterly_eps_audit": {
+        "latest": {
+          "reported_pat_cr": -0.9701,
+          "reported_eps_rs": -0.47,
+          "shares_number": 20423750,
+          "share_basis": "unchanged issuedshares supported byannualnote/currentcapital; exactquarterweighted disclosure notseparate",
+          "eps_times_shares_cr": -0.9599163,
+          "difference_cr": 0.0101837,
+          "rounding_tolerance_cr": 0.0103119,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "VIRATCRA_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d3839b49-cdcc-4e85-884e-77c8f93e4bf9.pdf",
+            "pdf_page": 2
+          }
+        },
+        "prior_year": {
+          "reported_pat_cr": -1.0791,
+          "reported_eps_rs": -0.53,
+          "shares_number": 20423750,
+          "share_basis": "same unchanged sharebase",
+          "eps_times_shares_cr": -1.0824588,
+          "difference_cr": -0.0033588,
+          "rounding_tolerance_cr": 0.0103119,
+          "arithmetic_within_rounding": true,
+          "status": "pass",
+          "source": {
+            "document_id": "VIRATCRA_Q_2026_6",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d3839b49-cdcc-4e85-884e-77c8f93e4bf9.pdf",
+            "pdf_page": 2
+          }
+        },
+        "status": "pass_using_unchanged_sharebase"
+      },
+      "quarter_annual_reconciliation": {
+        "status": "incomplete",
+        "reason": "AllfourFY26quarterPDFs acquired; independent full primary transcriptions/reconciliation pending. Raw-header locator diagnostic is separate."
+      },
+      "checks": {
+        "entity_and_latest_period": "complete",
+        "same_period_prior_year": "complete",
+        "revenue_before_other_income_before_PAT": "complete",
+        "owner_group_attribution": "complete",
+        "annual_cash": "complete",
+        "annual_eps_weighted": "complete",
+        "quarterly_eps_weighted": "complete_unchanged_sharebase",
+        "primary_four_quarter_annual": "incomplete",
+        "annual_source_cutoff": "complete"
+      },
+      "business_source": {
+        "document_id": "VIRATCRA_Q_2026_6",
+        "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d3839b49-cdcc-4e85-884e-77c8f93e4bf9.pdf",
+        "pdf_page": 3
+      },
+      "caveat_sources": [
+        {
+          "document_id": "VIRATCRA_Q_2026_6",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d3839b49-cdcc-4e85-884e-77c8f93e4bf9.pdf",
+          "pdf_page": 2
+        },
+        {
+          "document_id": "VIRATCRA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ef398f2-7766-4391-a420-a2af413ce5a8.pdf",
+          "pdf_page": 143
+        },
+        {
+          "document_id": "VIRATCRA_AR2026",
+          "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ef398f2-7766-4391-a420-a2af413ce5a8.pdf",
+          "pdf_page": 113
+        }
+      ],
+      "screener_locator_audit": [
+        {
+          "url": "https://www.screener.in/company/519457/",
+          "requested_scope": "standalone",
+          "rightmost_header": "Jun 2026",
+          "prior_year_header": "Jun 2025",
+          "latest_column_index": 13,
+          "prior_year_column_index": 9,
+          "accepted_as_current": true,
+          "financial_values_status": "rounded locator only",
+          "rounded_locator_bridge": [
+            {
+              "row": "Sales",
+              "quarter_values": [
+                40.5,
+                38.17,
+                48.36,
+                50.46
+              ],
+              "sum": 177.49,
+              "annual": 177.0,
+              "difference": 0.49
+            },
+            {
+              "row": "Other Income",
+              "quarter_values": [
+                0.04,
+                -0.0,
+                -0.0,
+                0.01
+              ],
+              "sum": 0.05,
+              "annual": 0.0,
+              "difference": 0.05
+            },
+            {
+              "row": "Net Profit",
+              "quarter_values": [
+                -1.08,
+                -3.68,
+                -1.66,
+                -0.78
+              ],
+              "sum": -7.2,
+              "annual": -8.0,
+              "difference": 0.8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

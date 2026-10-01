@@ -1,0 +1,66 @@
+{
+  "primer": "091",
+  "industry": "MATERIAL HANDLING EQUIPMENT",
+  "status": "research-only pilot complete as documented; publication audit incomplete",
+  "start_utc": "2026-10-01T16:11:14.313562+00:00",
+  "start_basis": "Recorded source-acquisition start; instruction reading before this timestamp excluded. First separate clock observation16:10:42UTC.",
+  "end_utc": "2026-10-01T16:32:22.984079+00:00",
+  "elapsed_seconds": 1268.671,
+  "companies_in_roster": 10,
+  "companies_reviewed": 10,
+  "fully_audited_companies": 0,
+  "primary_documents_downloaded": 65,
+  "primary_documents_examined_selected_pages": 26,
+  "primary_documents_wholly_audited": 0,
+  "download_errors": 0,
+  "http_429_observed": 0,
+  "max_concurrent_HTTP_document_downloads": 2,
+  "material_checks": {
+    "classification_completed": 10,
+    "latest_quarter_numeric_evidence": 9,
+    "latest_half_year_comparison_unresolved": 1,
+    "annual_basic_EPS_arithmetic_passes_with_documented_denominator": 9,
+    "annual_EPS_disclosure_exception": 1,
+    "regular_reporter_current_and_prior_quarter_EPS_stable_count_passes": 6,
+    "quarter_weighted_share_checks_unresolved": 4,
+    "primary_four_quarter_revenue_other_income_owner_PAT_bridges_passed": 4,
+    "primary_group_PAT_bridge_additional_pass": 1,
+    "primary_four_quarter_or_half_year_bridges_not_completed": 6,
+    "annual_diluted_EPS_checks_passed": 3,
+    "price_endpoints_passed": 10,
+    "cash_statements_selected_pages_examined": 10
+  },
+  "material_checks_counting_note": "Categories overlap; no total pass count is claimed. Six stable-count quarterly passes rely on unchanged inspected capital; they are not separate issuer-published quarterly weighted-share notes.",
+  "source_contradictions": [
+    "L.T.Elevator directors-summary EPS versus actual annual statements; annual-vs-exchange CFO and share-capital cash classification; quarterly/half-year attribution and weights.",
+    "International Conveyors investment-gain note units and comprehensive-income annual comparator.",
+    "Indef cash-flow opening profit differs from statutory PBT by minority loss."
+  ],
+  "work_not_completed": [
+    "Primary annual bridges for five excluded regular reporters and LT half-year comparison",
+    "Quarter weighted-share denominator evidence at Crown, International, Thejo and LT",
+    "All-table visual verification",
+    "Qualitative operating/order/customer/management work and independent industry policy/global sources",
+    "Price-history repairs, basket approval, stats, drafting, rendering, browser checks, gate/verify and publication"
+  ],
+  "phase_observations": {
+    "first_primary_pdf_saved_utc": "2026-10-01T16:12:49.991651+00:00",
+    "last_primary_pdf_saved_utc": "2026-10-01T16:14:59.689154+00:00",
+    "primary_pdf_save_window_seconds": 129.698,
+    "source_and_audit_overlap": true,
+    "phase_time_note": "Downloads and audit reading overlapped; no invented exclusive phase allocation or additive phase-duration sum. File modification times supply only the observed save window."
+  },
+  "token_usage": null,
+  "token_usage_reason": "No agent-specific token meter available; coordinating agent measures account usage.",
+  "publication_throughput_measured": false,
+  "shared_mutations": "No shared roster/prices/stats/sections/docs/Git changes performed.",
+  "validation": {
+    "all10roster_entries_preserved": true,
+    "all65PDFandtext_paths_exist": true,
+    "all10price_endpoints_confirmed": true,
+    "four_primary_annual_bridges_present": true,
+    "all_cited_documents_dated_before_cutoff": true,
+    "review_links_space_free": true,
+    "publication_ready_claims": false
+  }
+}

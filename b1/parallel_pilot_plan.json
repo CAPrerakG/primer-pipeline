@@ -1,0 +1,151 @@
+{
+  "started_utc": "2026-10-01T16:08:13+00:00",
+  "workers_dispatched_by_utc": "2026-10-01T16:11:28.227321+00:00",
+  "weekly_used_percent_at_start": 71,
+  "available_manual_resets_authorized": 1,
+  "target_sections_done": 223,
+  "current_sections_done": 100,
+  "additional_sections": 123,
+  "target_deadline_local": "2026-10-04T23:59:59+05:30",
+  "pilot_primers": [
+    "091",
+    "092",
+    "093"
+  ],
+  "pilot_company_counts": [
+    10,
+    9,
+    14
+  ],
+  "pilot_scope": "Research and financial/price audit only. No publication; report observations before scaling.",
+  "company_entries_to_target": 1996,
+  "unique_symbols_to_target": 1996,
+  "already_cached_price_symbols": 10,
+  "already_recommended_merge_groups": [
+    [
+      "HEAT EXCHANGERS & PROCESS EQUIPMENT",
+      "CRYOGENIC EQUIPMENT",
+      "BIOENERGY & DISTILLERY EQUIPMENT",
+      "INDUSTRIAL FURNACES & HEATING"
+    ],
+    [
+      "POLLUTION CONTROL EQUIPMENT",
+      "INDUSTRIAL FILTERS & SEPARATION"
+    ],
+    [
+      "INDUSTRIAL HVAC & REFRIGERATION",
+      "CLEANROOM & HVAC ENGINEERING"
+    ],
+    [
+      "TEXTILE MACHINERY",
+      "PLASTIC & PACKAGING MACHINERY",
+      "FOOD & AGRICULTURAL MACHINERY"
+    ],
+    [
+      "ENGINEERING R&D SERVICES",
+      "ENGINEERING CONSULTANCY"
+    ],
+    [
+      "ELECTRICAL EQUIPMENT",
+      "ELECTRICAL EQUIPMENT REPAIR"
+    ],
+    [
+      "ELECTRICAL INSULATORS & BUSHINGS",
+      "TRANSFORMER COMPONENTS"
+    ],
+    [
+      "WIND TURBINES & EQUIPMENT",
+      "RENEWABLE O&M SERVICES"
+    ],
+    [
+      "STONE & OTHER BUILDING MATERIALS",
+      "BUILDING HARDWARE"
+    ]
+  ],
+  "provisional_primers_before_other_merges_or_splits": 111,
+  "large_sections": [
+    {
+      "section": "CEMENT",
+      "members": 35
+    },
+    {
+      "section": "CONSTRUCTION & INFRASTRUCTURE EPC",
+      "members": 98
+    },
+    {
+      "section": "FREIGHT FORWARDING & LOGISTICS",
+      "members": 63
+    },
+    {
+      "section": "INDUSTRIAL PLASTICS & COMPOSITES",
+      "members": 32
+    },
+    {
+      "section": "PAPER & PAPERBOARD",
+      "members": 42
+    },
+    {
+      "section": "COTTON & BLENDED YARN",
+      "members": 75
+    },
+    {
+      "section": "SYNTHETIC FIBRES & YARNS",
+      "members": 37
+    },
+    {
+      "section": "FABRICS & TEXTILE PROCESSING",
+      "members": 43
+    },
+    {
+      "section": "INTEGRATED TEXTILES",
+      "members": 42
+    },
+    {
+      "section": "APPAREL MANUFACTURING",
+      "members": 38
+    },
+    {
+      "section": "IT SERVICES & CONSULTING",
+      "members": 128
+    },
+    {
+      "section": "CONSUMER APPLIANCES & ELECTRONICS",
+      "members": 35
+    },
+    {
+      "section": "JEWELLERY RETAIL & MANUFACTURING",
+      "members": 70
+    },
+    {
+      "section": "AGRICULTURE & COMMODITY TRADING",
+      "members": 55
+    },
+    {
+      "section": "SUGAR & INTEGRATED ETHANOL",
+      "members": 37
+    },
+    {
+      "section": "EDIBLE OILS",
+      "members": 31
+    },
+    {
+      "section": "TEA & COFFEE",
+      "members": 33
+    },
+    {
+      "section": "PACKAGED FOODS & FOOD PROCESSING",
+      "members": 88
+    },
+    {
+      "section": "FILM MUSIC & CONTENT",
+      "members": 51
+    }
+  ],
+  "target_draft_word_range_before_splits": [
+    1221000,
+    1554000
+  ],
+  "hours_at_pilot_start": 74.36,
+  "required_sections_per_day_from_start": 39.7,
+  "required_company_reviews_per_hour_from_start": 26.84
+}

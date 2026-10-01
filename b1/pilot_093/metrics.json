@@ -1,0 +1,61 @@
+{
+  "start_utc": "2026-10-01T16:11:17+00:00",
+  "end_utc": "2026-10-01T16:39:44.181535+00:00",
+  "observed_elapsed_seconds": 1707.181535,
+  "timing_scope": "First explicit UTC timestamp after initial repo instruction reads through pilot finalization; initial reads predate this timer. Includes overlapping collection and price fetch; do not sum phase times.",
+  "companies_retained": 14,
+  "companies_current_primary_examined": 13,
+  "companies_reviewed": 14,
+  "five_proposed_basket_primary_bridges_pass": 5,
+  "additional_primary_halfyear_bridge_pass": [
+    "PATILAUTOM"
+  ],
+  "failed_or_partly_failed_bridges": [
+    "CANARYS ownership attribution",
+    "UNIOFFICE ordinary other income"
+  ],
+  "all_checks_complete_company_count": 0,
+  "download_manifest_records": 68,
+  "valid_distinct_primary_pdfs_downloaded": 63,
+  "distinct_primary_docs_actually_examined": 52,
+  "examined_means": "Substantive listed pages inspected in extracted primary text and/or rendered visual; does not imply every page read. Source manifest records pages.",
+  "price_endpoints_pass": 14,
+  "price_series_repaired": 0,
+  "network_friction": [
+    "Initial 28 Screener requests returned 7 HTTP 429 responses; once-per-company fallback used for 4 missing preferred scopes. Some remained blocked.",
+    "Rexnord recovered from alreadydownloadedstandalone locator; Universal recovered via company no-www and root BSEprimary after HTTPSwwwcertificate mismatch.",
+    "Universal companyannualreport was a1pageNotFoundPDF; excluded and replaced.",
+    "PIGL June locator returned the same May 30 FY26 annual-result PDF as March locator; current June primary remains unresolved. Tempsens annual-result locator returned non-PDF."
+  ],
+  "phase_times": {
+    "locator_collection": {
+      "start_utc": "2026-10-01T16:11:49.365896+00:00",
+      "end_utc": "2026-10-01T16:11:58.875602+00:00"
+    },
+    "primary_initial_download_and_extraction": {
+      "start_utc": "2026-10-01T16:13:56.153550+00:00",
+      "end_utc": "2026-10-01T16:16:44.022853+00:00"
+    },
+    "price_fetch": {
+      "start_utc": "2026-10-01T16:12:57.822595+00:00",
+      "end_utc": "2026-10-01T16:15:24.229732+00:00",
+      "per_symbol_seconds_available": "price_audit.json"
+    }
+  },
+  "unmeasured": [
+    "Tokencounts; API does not expose perworker tokens",
+    "Complete manuscript drafting",
+    "Finalbuild/gate/verify/regression/browser andpublication throughput"
+  ],
+  "publication_ready": false,
+  "shared_files_modified": false,
+  "root_independent_review": [
+    "Affordable latestp8 spotcheck",
+    "Universal latestp3, annualp14/65/73/75 andFY26quarterbridge"
+  ],
+  "initial_429_saved_pages": 7,
+  "current_primary_unresolved": [
+    "PIGL: June locator resolves to May 30 FY26 annual result"
+  ],
+  "final_artifact_validation": "PASS: JSON loads; 14 unique companies retained; cited primary files and page ranges exist; examined PDF/text paths exist; Universal placeholder excluded; PIGL March data separated from unresolved June current period"
+}

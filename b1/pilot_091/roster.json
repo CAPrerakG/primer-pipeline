@@ -1,0 +1,122 @@
+[
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "ABC India Limited",
+    "sym": "BSE:ABCINDQ",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "ABC India Limited",
+    "tv_sector": "Transportation",
+    "tv_ind": "Air Freight/Couriers",
+    "mcap": 332293014,
+    "isin": "INE125D01011",
+    "bse_code": "520123"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "Crown Lifters Ltd.",
+    "sym": "NSE:CROWN",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Crown Lifters Ltd.",
+    "tv_sector": "Finance",
+    "tv_ind": "Finance/Rental/Leasing",
+    "mcap": 1206958408,
+    "isin": "INE491V01019",
+    "bse_code": null
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "Indef Manufacturing Limited",
+    "sym": "NSE:BAJAJINDEF",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Indef Manufacturing Limited",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 6902399902,
+    "isin": "INE0O9T01021",
+    "bse_code": "544364"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "International Conveyors Ltd.",
+    "sym": "NSE:INTLCONV",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "International Conveyors Ltd.",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Miscellaneous Manufacturing",
+    "mcap": 4804622713,
+    "isin": "INE575C01027",
+    "bse_code": "509709"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "L. T. Elevator Limited",
+    "sym": "BSE:LTELEVATOR",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "L. T. Elevator Limited",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Building Products",
+    "mcap": 7473990898,
+    "isin": "INE0TJ801010",
+    "bse_code": "544518"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "Sika Interplant Systems Limited",
+    "sym": "NSE:SIKA",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Sika Interplant Systems Limited",
+    "tv_sector": "Electronic Technology",
+    "tv_ind": "Aerospace & Defense",
+    "mcap": 22192015203,
+    "isin": "INE438E01032",
+    "bse_code": "523606"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "Skyline Millars Limited",
+    "sym": "BSE:SKYLMILAR",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Skyline Millars Limited",
+    "tv_sector": "Finance",
+    "tv_ind": "Real Estate Development",
+    "mcap": 396208848,
+    "isin": "INE178E01026",
+    "bse_code": "505650"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "Somi Conveyor Beltings Limited",
+    "sym": "NSE:SOMICONVEY",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Somi Conveyor Beltings Limited",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Miscellaneous Manufacturing",
+    "mcap": 1120009753,
+    "isin": "INE323J01019",
+    "bse_code": "533001"
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "Thejo Engineering Ltd.",
+    "sym": "NSE:THEJO",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "Thejo Engineering Ltd.",
+    "tv_sector": "Distribution Services",
+    "tv_ind": "Wholesale Distributors",
+    "mcap": 23397126445,
+    "isin": "INE121N01019",
+    "bse_code": null
+  },
+  {
+    "ind": "MATERIAL HANDLING EQUIPMENT",
+    "co": "TRF Limited.",
+    "sym": "NSE:TRF",
+    "wl": "Industry - Industrials, Metals, Defence",
+    "tv_name": "TRF Limited.",
+    "tv_sector": "Producer Manufacturing",
+    "tv_ind": "Trucks/Construction/Farm Machinery",
+    "mcap": 2339671404,
+    "isin": "INE391D01019",
+    "bse_code": "505854"
+  }
+]

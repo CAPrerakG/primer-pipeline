@@ -1,0 +1,269 @@
+{
+  "scope": "Root independently confirms raw series endpoints and basic validity; does not certify historical continuity or corporate actions. Later bars excluded before endpoint test.",
+  "series": [
+    {
+      "primer": "091",
+      "symbol": "BSE:ABCINDQ",
+      "observations": 4991,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:CROWN",
+      "observations": 1365,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:BAJAJINDEF",
+      "observations": 388,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:INTLCONV",
+      "observations": 1243,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "BSE:LTELEVATOR",
+      "observations": 247,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:SIKA",
+      "observations": 106,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "BSE:SKYLMILAR",
+      "observations": 4666,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:SOMICONVEY",
+      "observations": 2500,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:THEJO",
+      "observations": 2024,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "091",
+      "symbol": "NSE:TRF",
+      "observations": 4095,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:ACE",
+      "observations": 4935,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:AJAXENGG",
+      "observations": 392,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "BSE:CRANEX",
+      "observations": 4991,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:EIMCOELECO",
+      "observations": 4991,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:GUJAPOLLO",
+      "observations": 4743,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:SANGHVIMOV",
+      "observations": 4855,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:TEGA",
+      "observations": 1184,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "NSE:TIL",
+      "observations": 4991,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "092",
+      "symbol": "BSE:VIRATCRA",
+      "observations": 4991,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:AFFORDABLE",
+      "observations": 473,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "BSE:APLAB",
+      "observations": 4983,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "BSE:AXISOL",
+      "observations": 113,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:CANARYS",
+      "observations": 727,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "BSE:CONTICON",
+      "observations": 4438,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:HONAUT",
+      "observations": 5309,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "BSE:ROBU",
+      "observations": 877,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:MARINE",
+      "observations": 1915,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:PATILAUTOM",
+      "observations": 310,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:PIGL",
+      "observations": 1293,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "BSE:REXNORD",
+      "observations": 5149,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:RISHABH",
+      "observations": 750,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "NSE:TEMPSENS",
+      "observations": 15,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    },
+    {
+      "primer": "093",
+      "symbol": "BSE:UNIOFFICE",
+      "observations": 4503,
+      "last": "2026-09-18",
+      "positive_finite_prices": true,
+      "strictly_increasing_timestamps": true
+    }
+  ]
+}

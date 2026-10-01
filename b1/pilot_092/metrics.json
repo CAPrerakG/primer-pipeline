@@ -1,0 +1,116 @@
+{
+  "pilot": "092",
+  "start_utc": "2026-10-01T16:11:28.304833+00:00",
+  "end_utc": "2026-10-01T16:31:36.366959+00:00",
+  "elapsed_seconds": 1208.06,
+  "reviewed_company_count": 9,
+  "roster_count": 9,
+  "primary_documents_downloaded_manifest_count": 73,
+  "primary_documents_substantively_examined": 39,
+  "primary_documents_substantively_examined_ids": [
+    "ACE_AR2026",
+    "ACE_Q_2025_12",
+    "ACE_Q_2025_6",
+    "ACE_Q_2025_9",
+    "ACE_Q_2026_3",
+    "ACE_Q_2026_6",
+    "AJAXENGG_AR2026",
+    "AJAXENGG_Q_2026_6",
+    "CRANEX_AR2026",
+    "CRANEX_Q_2026_6",
+    "EIMCOELECO_AR2026",
+    "EIMCOELECO_Q_2025_12",
+    "EIMCOELECO_Q_2025_6",
+    "EIMCOELECO_Q_2025_9",
+    "EIMCOELECO_Q_2026_3",
+    "EIMCOELECO_Q_2026_6",
+    "GUJAPOLLO_AR2026",
+    "GUJAPOLLO_Q_2025_12",
+    "GUJAPOLLO_Q_2025_6",
+    "GUJAPOLLO_Q_2025_9",
+    "GUJAPOLLO_Q_2026_3",
+    "GUJAPOLLO_Q_2026_6",
+    "ICEMA_FY25",
+    "SANGHVIMOV_AR2026",
+    "SANGHVIMOV_Q_2026_6",
+    "TEGA_AR2026",
+    "TEGA_Q_2025_12",
+    "TEGA_Q_2025_6",
+    "TEGA_Q_2025_9",
+    "TEGA_Q_2026_3",
+    "TEGA_Q_2026_6",
+    "TIL_AR2026",
+    "TIL_Q_2025_12",
+    "TIL_Q_2025_6",
+    "TIL_Q_2026_3",
+    "TIL_Q_2026_6",
+    "TIL_RIGHTS_APPLICATION",
+    "VIRATCRA_AR2026",
+    "VIRATCRA_Q_2026_6"
+  ],
+  "downloaded_is_not_examined": true,
+  "material_checks": {
+    "latest_primary_financial_blocks": 9,
+    "same_quarter_prior_year_blocks": 9,
+    "annual_weighted_basic_EPS_pass": 9,
+    "annual_operating_cash_sourced": 9,
+    "annual_report_date_before_cutoff_pass": 9,
+    "primary_four_quarter_revenue_otherincome_PAT_bridges_pass": 5,
+    "primary_four_quarter_bridges_not_yet_performed": 4,
+    "latest_and_prior_quarter_EPS_pass_unchanged_sharebase": 5,
+    "quarter_EPS_exceptions": {
+      "ACE": "exact treasury-adjustedquarterweights notdisclosed/established",
+      "CRANEX": "weightedsharechange anddilutioncontradiction",
+      "GUJAPOLLO": "latestarithmeticpasses; priorEPSsmallroundingdiscrepancy",
+      "TIL": "owner/groupnumerator,partlypaidparticipationandrightsweightsunresolved"
+    },
+    "historical_fourquarter_EPS_arithmetic_pass_companies": [
+      "EIMCOELECO",
+      "TEGA"
+    ],
+    "all_price_endpoints_exact": 9,
+    "price_daily_move_flags": 1,
+    "price_gap_flags": 2,
+    "short_under750bars": 1
+  },
+  "remaining_work_unperformed": [
+    "Primaryfourquarterbridge:AJAXENGG,CRANEX,SANGHVIMOV,VIRATCRA",
+    "Detailedotherincomecomponentsandworkingcapitalbridges",
+    "Substantivereviewofallcurrentdecksandcalltranscripts",
+    "TILrights-pricereturntreatment",
+    "IndustryFY26volumes/policy/currentcompetitionandhistoricaleventresearch",
+    "Fullprimerdraft/build/gate/verify/browser/publish"
+  ],
+  "phase_timings_observed": {
+    "download_retrieval_timestamp_window_seconds": 763.27,
+    "price_audit_file_initial_completion_utc": null,
+    "notes": "Downloads,readingandpricecollectionoverlapped; windowsarenotadditive.429durationwasnotinstrumentedandisnotestimated."
+  },
+  "access_issues": {
+    "screener_429_initial": [
+      "SANGHVIMOVconsolidated",
+      "SANGHVIMOVstandalone",
+      "TILconsolidated",
+      "TILstandalone",
+      "VIRATCRAconsolidated",
+      "VIRATCRAstandalone",
+      "GUJAPOLLOstandalone"
+    ],
+    "recovery": "OneBSE-codeURLretryrestoredSanghvi,TIL,Virat; Gujaratconsolidatedalreadyavailable. No repeated429loop.",
+    "stale_or_empty_locator": [
+      "EimcoconsolidatedstopsMarch2024",
+      "Ajaxconsolidatedempty"
+    ],
+    "extraction_issues": [
+      "Cranexcurrenttablesarescanned",
+      "GujaratApollonumericOCRrequiredvisualchecks",
+      "TILrotatedtablesandrightsdisclosure",
+      "TegaMarchOCRmisreadsannualnumerator;visuallyverified1426.53million"
+    ]
+  },
+  "token_usage": null,
+  "token_usage_note": "Not available at agent level; no token usage fabricated. Root measures accountusage separately.",
+  "publication_throughput_measured": false,
+  "shared_files_modified": false,
+  "start_clock_basis": "Firstinstrumentedcollectionscript afterinstructions/rosterreading; initialreadingtime notinstrumented."
+}

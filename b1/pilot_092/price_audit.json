@@ -1,0 +1,154 @@
+{
+  "cutoff": "2026-09-18",
+  "shared_cache_modified": false,
+  "companies": [
+    {
+      "symbol": "NSE:ACE",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4935,
+      "first": "2006-09-26",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [],
+      "cutoff_close": 1229.2,
+      "repairs_applied": false,
+      "repair_recommendation": "No price splice indicated by endpoint/jump/gap scan; full corporate-action review remains required."
+    },
+    {
+      "symbol": "NSE:AJAXENGG",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 392,
+      "first": "2025-02-17",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": true,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [],
+      "cutoff_close": 559.75,
+      "repairs_applied": false,
+      "repair_recommendation": "Genuinely young listing; no synthetic prelisting repair. Exclude base seasonal basket."
+    },
+    {
+      "symbol": "BSE:CRANEX",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4991,
+      "first": "2004-05-03",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [],
+      "cutoff_close": 77.5,
+      "repairs_applied": false,
+      "repair_recommendation": "No price splice indicated by endpoint/jump/gap scan; full corporate-action review remains required."
+    },
+    {
+      "symbol": "NSE:EIMCOELECO",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4991,
+      "first": "2005-05-18",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [
+        {
+          "from": "2006-08-25",
+          "to": "2006-11-24",
+          "days": 91
+        }
+      ],
+      "big_daily_moves": [],
+      "cutoff_close": 2248.4,
+      "repairs_applied": false,
+      "repair_recommendation": "No price splice indicated by endpoint/jump/gap scan; full corporate-action review remains required."
+    },
+    {
+      "symbol": "NSE:GUJAPOLLO",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4743,
+      "first": "2007-07-06",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [],
+      "cutoff_close": 350.1,
+      "repairs_applied": false,
+      "repair_recommendation": "No price splice indicated by endpoint/jump/gap scan; full corporate-action review remains required."
+    },
+    {
+      "symbol": "NSE:SANGHVIMOV",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4855,
+      "first": "2007-01-24",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [],
+      "cutoff_close": 430.7,
+      "repairs_applied": false,
+      "repair_recommendation": "No price splice indicated by endpoint/jump/gap scan; full corporate-action review remains required."
+    },
+    {
+      "symbol": "NSE:TEGA",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 1184,
+      "first": "2021-12-13",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [],
+      "cutoff_close": 1943.0,
+      "repairs_applied": false,
+      "repair_recommendation": "No price splice indicated by endpoint/jump/gap scan; full corporate-action review remains required."
+    },
+    {
+      "symbol": "NSE:TIL",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4991,
+      "first": "2006-03-23",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [
+        {
+          "from": "2007-11-30",
+          "to": "2008-02-29",
+          "days": 91
+        }
+      ],
+      "big_daily_moves": [],
+      "cutoff_close": 257.51,
+      "repairs_applied": false,
+      "repair_recommendation": "Review rights-entitlement return treatment and distinct partly-paidISIN before statistics. Daily jump scan alone cannot certify adjustment."
+    },
+    {
+      "symbol": "BSE:VIRATCRA",
+      "origin": "fresh TradingView pilot only",
+      "bars_at_cutoff": 4991,
+      "first": "2004-11-05",
+      "last": "2026-09-18",
+      "exact_endpoint": true,
+      "short_under_3_years": false,
+      "gaps_over_45_days": [],
+      "big_daily_moves": [
+        {
+          "date": "2010-06-03",
+          "change_pct": -50.42016806722689
+        }
+      ],
+      "cutoff_close": 31.97,
+      "repairs_applied": false,
+      "repair_recommendation": "Excluded as dairy;2010step not repaired. No need for a construction/mining basket."
+    }
+  ],
+  "limitations": [
+    "Not a total-return certificate; split-adjusted close series only.",
+    "All prices fetched into thispilot because sharedcache lackedthe9symbols.",
+    "Short-history cutoff750observations is auditflag, not a mechanical inclusionrule."
+  ]
+}

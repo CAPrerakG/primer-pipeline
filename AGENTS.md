@@ -2,11 +2,14 @@
 
 This repo builds Prerak's industry primer series: one self-contained HTML primer per industry
 section in his TradingView watchlists (278 sections, Indian listed universe). **090 is published;
-the next queued primer is 091, Material Handling Equipment (10 names). Prerak has offered the
-remaining allowance plus one manual reset toward an 80% completion target before next week.
-The previous stop at 30% remaining is superseded. Exact target scope/date and permission for
-parallel workers have been asked; do not assume parallel-agent authorization before his reply.
-All research, length, source and verification standards remain unchanged.**
+the next queued primer is 091, Material Handling Equipment (10 names). Prerak confirmed the target
+of 223 completed sections by 4 October 2026, using remaining allowance plus one manual reset.
+He explicitly authorized three parallel research reviews and wants their feasibility observations
+BEFORE deciding how to proceed with the larger run. Pilot091/092/093 research reviews are saved;
+read b1/PARALLEL_PILOT_REVIEW.md and return the findings before further production. None is
+published or counted complete. Await Prerak's next decision. Quality standards remain unchanged.
+He also permits a fresh chat with a saved handoff if context or quality deteriorates; redo any
+affected primer before resuming. A new chat is not evidence that an unresolved fact is corrected.**
 
 Read in this order before doing anything: this file → `HANDOFF.md` →
 `.claude/skills/industry-primer/SKILL.md` (the full pipeline spec) → `CHECKLIST.md` (what is done
