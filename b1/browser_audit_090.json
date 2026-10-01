@@ -1,0 +1,36 @@
+{
+  "charts": [
+    {
+      "kind": "month",
+      "children": 68,
+      "bars": 12
+    },
+    {
+      "kind": "win",
+      "children": 59,
+      "bars": 15
+    },
+    {
+      "kind": "win",
+      "children": 57,
+      "bars": 15
+    },
+    {
+      "kind": "year",
+      "children": 67,
+      "bars": 15
+    }
+  ],
+  "annualRows": 15,
+  "drawdownRows": 9,
+  "glossary": 72,
+  "glossaryCount": "72 terms",
+  "tables": 19,
+  "toc": 23,
+  "searchCount": "5 of 72 terms",
+  "searchVisible": 5,
+  "noMatch": true,
+  "resetVisible": 72,
+  "mobileOverflow": false,
+  "errors": []
+}

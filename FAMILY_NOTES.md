@@ -400,3 +400,55 @@ The new question is whether the promised machine performance survives acceptance
 to cash after funding inventory. No earlier primer research or numbers were rewritten.
 
 Prerak instructed stop after089; do not start090 without renewed instruction.
+
+## 090 Industrial Machinery & Foundry Equipment — 1 October 2026
+
+Explicit merge28+1;29 roster names, nine basket members. All included series end
+18Sep2026, no included daily-move/gap flags. Twenty exclusions are documented by
+business scope, short history or stale quote. Tipco is a relevant OEM excluded
+for117 observations; retain weak operators Manugraph/Walchandnagar to avoid
+performance selection. Hardcastle has no manufacturing; GTT technology services,
+Goblin consumer luggage, Devson chemicals and rental/contractor/component names
+must not be silently treated as complete machinery manufacturers.
+
+DISA and Cockerill April2026 NSE starts are exchange-history issues. Same-ISIN
+BSE prehistory spliced at first-overlap scales0.9963057851239668 and1.0003844231730288.
+No previously cached series changed. Stale Alphalogic15Sep, Rex21Aug, Rolcon7Sep
+excluded without filling. Generic drawdown display caps the largest18 roster
+names; audit_090.py explicitly recomputes all nine basket rows. Keep window-high
+labels clear:2020–2025 reference, not all-time or maximum drawdown.
+
+Other-income-first: Manugraph property gain9.7825cr makes reportedPAT7.4644cr
+positive despite negative operating bridge; ordinaryOI0.0247cr is separate.
+WalchandnagarOI6.97cr includes asset gain3.34cr. Lloyds companyEBITDA79.23cr includes
+OI13.08cr; common operating proxy66.15cr. Lloyds FY26CFO−252.90cr vs groupPAT197.57cr,
+rights financing857.23cr is not operating cash. DISA CFO13.21cr vsPAT53.62cr.
+Cockerill positiveH1cash82.3761cr relies on project liabilities/payables, not profit.
+
+Shareholder audit: Lloyds annualEPS1.52 uses group197.57cr vs owner189.88cr with
+129.9831156crore weighted shares; owner basis≈1.46, unresolved. QuarterEPS0.47
+weighted owner basis not independently established. Walchandnagar annual weighted
+5.8388207crore ×EPS−2.17 fails reportedloss14.68cr; dilutedcountalsofails. Disclose,
+do not repair with closing shares. Primary EMMILEPS4.87/10.54, TIGLOB3.62 and
+Cockerill−63.52 replace rounded/recomputed locator values. Sona resultPDF confirms
+tax credit and PAT−346.29lakh; annual report tax signs are inconsistent.
+
+Current Manugraph standalone supersedes staleMarch2023 consolidated locator.
+EMMIL/Sona half-years explicitly labelled. Cockerill restated group history lacks
+a complete independent quarterly bridge; do not mix old parent quarters. Systematic
+locator repeats quarterly columns; annual classification only. Books require dates
+and ownership: Cockerill parent2262cr is inside group4598.9cr; Lloyds associate
+4830.23cr separate from consolidated2817.42cr; Walchandnagar871.77cr is March.
+Volteron parent IP and pilots are not listed-company commercial ownership/orders.
+The January2026 omnibus withdrawal remains the applicable policy finding.
+
+Price: April13/15,+7.6pts; AprJul9/15,median12.7pts; FebMar2/15,median−11.5pts.
+YTD−2.5% vs Nifty−10.7%; excluding Lloyds/Cockerill−15.6%; excluding2024SME entrants+7.7%.
+Carry078/080/081 tests by cross-reference and089 accepted-output/collection test.
+Build/gate/verify090+081 pass; browser fourcharts,15annualrows,ninedrawdownrows,
+72 searchable glossary terms and mobile layout pass. No earlier pages rewritten.
+Next091 Material Handling Equipment(10). Prerak resumed on1Oct;30%weeklyremaining
+continuous-run threshold retained. Check usage after publication before continuing.
+
+090 completion usage:70%weekly used /30%remaining. Stop at Prerak’s retained
+threshold;091 remains unstarted until he resumes.

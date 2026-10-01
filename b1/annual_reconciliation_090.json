@@ -1,0 +1,1305 @@
+{
+  "NSE:DISAQ": {
+    "scope": "consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          102.0,
+          104.0,
+          129.0,
+          91.0
+        ],
+        "sum": 426.0,
+        "annual": 425.0,
+        "difference": 1.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          4.0,
+          3.0,
+          -0.0,
+          3.0
+        ],
+        "sum": 10.0,
+        "annual": 11.0,
+        "difference": -1.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          13.0,
+          12.0,
+          15.0,
+          13.0
+        ],
+        "sum": 53.0,
+        "annual": 54.0,
+        "difference": -1.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:ALPHAIND": {
+    "scope": "standalone",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          24.91,
+          20.17
+        ],
+        "sum": 45.08,
+        "annual": 45.08,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.92,
+          1.14
+        ],
+        "sum": 2.06,
+        "annual": 2.06,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          2.57,
+          2.81
+        ],
+        "sum": 5.38,
+        "annual": 5.39,
+        "difference": -0.01
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:ATVPR": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          15.26,
+          13.95,
+          18.35,
+          20.1
+        ],
+        "sum": 67.66,
+        "annual": 67.65,
+        "difference": 0.01
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.05,
+          0.01,
+          0.02,
+          0.03
+        ],
+        "sum": 0.11,
+        "annual": 0.11,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          2.01,
+          1.47,
+          1.61,
+          2.06
+        ],
+        "sum": 7.15,
+        "annual": 7.16,
+        "difference": -0.01
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:BHARATGEAR": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          179.8,
+          204.74,
+          189.35,
+          210.29
+        ],
+        "sum": 784.18,
+        "annual": 784.0,
+        "difference": 0.18
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.78,
+          1.9,
+          0.52,
+          2.14
+        ],
+        "sum": 6.34,
+        "annual": 6.0,
+        "difference": 0.34
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.65,
+          7.22,
+          2.57,
+          5.07
+        ],
+        "sum": 16.51,
+        "annual": 16.0,
+        "difference": 0.51
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:CHANDNIMACH": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          25.9,
+          0.0,
+          0.0,
+          0.08
+        ],
+        "sum": 25.98,
+        "annual": 25.97,
+        "difference": 0.01
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.12,
+          -0.12,
+          2.41,
+          -0.63
+        ],
+        "sum": 2.78,
+        "annual": 2.78,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.75,
+          -1.06,
+          1.85,
+          -1.15
+        ],
+        "sum": 0.39,
+        "annual": 0.73,
+        "difference": -0.34
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:DEVSON": {
+    "scope": "consolidated/",
+    "rightmost_header": "",
+    "year_ago_header": null,
+    "annual_comparisons": {},
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:EMMIL": {
+    "scope": "consolidated/",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          76.0,
+          85.0
+        ],
+        "sum": 161.0,
+        "annual": 161.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.0,
+          0.0
+        ],
+        "sum": 0.0,
+        "annual": 1.0,
+        "difference": -1.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          6.0,
+          6.0
+        ],
+        "sum": 12.0,
+        "annual": 12.0,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:GOBLIN": {
+    "scope": "consolidated/",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          24.92,
+          30.46
+        ],
+        "sum": 55.38,
+        "annual": 55.38,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.82,
+          0.75
+        ],
+        "sum": 1.57,
+        "annual": 1.57,
+        "difference": -0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.54,
+          0.77
+        ],
+        "sum": 2.31,
+        "annual": 2.31,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:GTTDATA": {
+    "scope": "consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          25.44,
+          36.77,
+          42.15,
+          28.97
+        ],
+        "sum": 133.33,
+        "annual": 133.0,
+        "difference": 0.33
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.21,
+          0.17,
+          0.3,
+          1.21
+        ],
+        "sum": 1.89,
+        "annual": 2.0,
+        "difference": -0.11
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          -4.11,
+          -1.09,
+          -1.82,
+          -9.44
+        ],
+        "sum": -16.46,
+        "annual": -16.0,
+        "difference": -0.46
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:HARDCAS": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.94,
+          2.38,
+          2.93,
+          3.36
+        ],
+        "sum": 10.61,
+        "annual": 10.64,
+        "difference": -0.03
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.12,
+          0.12,
+          0.13,
+          0.13
+        ],
+        "sum": 0.5,
+        "annual": 0.45,
+        "difference": 0.05
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.77,
+          0.7,
+          1.41,
+          2.05
+        ],
+        "sum": 4.93,
+        "annual": 4.93,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:COCKERILL": {
+    "scope": "consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {},
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:LIPPISYS": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sum": 0.0,
+        "annual": 0.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.13,
+          0.11,
+          7.44,
+          0.31
+        ],
+        "sum": 7.99,
+        "annual": 7.98,
+        "difference": 0.01
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          -0.22,
+          -0.46,
+          4.97,
+          -0.52
+        ],
+        "sum": 3.77,
+        "annual": 3.77,
+        "difference": -0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:LLOYDSENGG": {
+    "scope": "consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          217.0,
+          317.0,
+          272.0,
+          495.0
+        ],
+        "sum": 1301.0,
+        "annual": 1301.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          9.0,
+          8.0,
+          24.0,
+          9.0
+        ],
+        "sum": 50.0,
+        "annual": 49.0,
+        "difference": 1.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          30.0,
+          54.0,
+          67.0,
+          46.0
+        ],
+        "sum": 197.0,
+        "annual": 198.0,
+        "difference": -1.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:MANUGRAPH": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          31.66,
+          14.2,
+          17.69,
+          25.09
+        ],
+        "sum": 88.64,
+        "annual": 88.64,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.98,
+          -0.34,
+          -0.09,
+          -0.22
+        ],
+        "sum": 1.33,
+        "annual": 1.28,
+        "difference": 0.05
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          6.83,
+          -1.08,
+          0.44,
+          -1.23
+        ],
+        "sum": 4.96,
+        "annual": 4.95,
+        "difference": 0.01
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:MILLWORKS": {
+    "scope": "consolidated/",
+    "rightmost_header": "",
+    "year_ago_header": null,
+    "annual_comparisons": {},
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:PALUCK": {
+    "scope": "consolidated/",
+    "rightmost_header": "",
+    "year_ago_header": null,
+    "annual_comparisons": {},
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:RATHIST": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          155.29,
+          156.3,
+          160.02,
+          244.44
+        ],
+        "sum": 716.05,
+        "annual": 716.0,
+        "difference": 0.05
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.11,
+          0.14,
+          0.07,
+          0.12
+        ],
+        "sum": 0.44,
+        "annual": 0.0,
+        "difference": 0.44
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          1.89,
+          1.63,
+          1.91,
+          7.45
+        ],
+        "sum": 12.88,
+        "annual": 13.0,
+        "difference": -0.12
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:RBMINFRA": {
+    "scope": "consolidated/",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          284.0,
+          208.0
+        ],
+        "sum": 492.0,
+        "annual": 492.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.0,
+          0.0
+        ],
+        "sum": 0.0,
+        "annual": 1.0,
+        "difference": -1.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          27.0,
+          18.0
+        ],
+        "sum": 45.0,
+        "annual": 45.0,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:REXSEAL": {
+    "scope": "standalone",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          17.28,
+          20.91
+        ],
+        "sum": 38.19,
+        "annual": 38.19,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.09,
+          0.01
+        ],
+        "sum": 0.1,
+        "annual": 0.1,
+        "difference": -0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.7,
+          1.1
+        ],
+        "sum": 1.8,
+        "annual": 1.8,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:ROLCOEN": {
+    "scope": "consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          12.45,
+          13.62,
+          12.89,
+          12.03
+        ],
+        "sum": 50.99,
+        "annual": 50.99,
+        "difference": -0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.24,
+          0.37,
+          0.29,
+          0.34
+        ],
+        "sum": 1.24,
+        "annual": 1.17,
+        "difference": 0.07
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.96,
+          1.2,
+          0.32,
+          0.79
+        ],
+        "sum": 3.27,
+        "annual": 3.27,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:SEALMATIC": {
+    "scope": "consolidated/",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          54.0,
+          49.0
+        ],
+        "sum": 103.0,
+        "annual": 103.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          2.0,
+          1.0
+        ],
+        "sum": 3.0,
+        "annual": 3.0,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          6.0,
+          4.0
+        ],
+        "sum": 10.0,
+        "annual": 10.0,
+        "difference": 0.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:SONAMAC": {
+    "scope": "standalone",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          43.41,
+          41.11
+        ],
+        "sum": 84.52,
+        "annual": 84.51,
+        "difference": 0.01
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.97,
+          0.24
+        ],
+        "sum": 1.21,
+        "annual": 1.21,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.9,
+          -4.37
+        ],
+        "sum": -3.47,
+        "annual": -3.46,
+        "difference": -0.01
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:SONUINFRA": {
+    "scope": "consolidated/",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          38.77,
+          33.17,
+          31.88,
+          90.06
+        ],
+        "sum": 193.88,
+        "annual": 194.0,
+        "difference": -0.12
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.07,
+          0.01,
+          0.08,
+          0.39
+        ],
+        "sum": 0.55,
+        "annual": 1.0,
+        "difference": -0.45
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          2.75,
+          2.71,
+          2.97,
+          4.59
+        ],
+        "sum": 13.02,
+        "annual": 13.0,
+        "difference": 0.02
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:SUMAX": {
+    "scope": "consolidated/",
+    "rightmost_header": "",
+    "year_ago_header": null,
+    "annual_comparisons": {},
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:SYSTEMATIC": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {},
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:TIGLOB": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          34.52,
+          25.0,
+          25.01,
+          41.72
+        ],
+        "sum": 126.25,
+        "annual": 126.0,
+        "difference": 0.25
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.12,
+          0.36,
+          0.79,
+          4.15
+        ],
+        "sum": 5.42,
+        "annual": 5.0,
+        "difference": 0.42
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          2.58,
+          1.77,
+          2.56,
+          0.05
+        ],
+        "sum": 6.96,
+        "annual": 7.0,
+        "difference": -0.04
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:TIPCO": {
+    "scope": "standalone",
+    "rightmost_header": "Mar 2026",
+    "year_ago_header": "Mar 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          50.0,
+          95.0
+        ],
+        "sum": 145.0,
+        "annual": 145.0,
+        "difference": 0.0
+      },
+      "Other Income +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          -0.0,
+          1.0
+        ],
+        "sum": 1.0,
+        "annual": 1.0,
+        "difference": 0.0
+      },
+      "Net Profit +": {
+        "periods": [
+          "Sep 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          9.0,
+          17.0
+        ],
+        "sum": 26.0,
+        "annual": 25.0,
+        "difference": 1.0
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "BSE:TRISHAKT": {
+    "scope": "consolidated/",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          4.08,
+          6.65,
+          8.0,
+          9.11
+        ],
+        "sum": 27.84,
+        "annual": 28.0,
+        "difference": -0.16
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.02,
+          0.04,
+          -0.04,
+          4.59
+        ],
+        "sum": 4.61,
+        "annual": 4.0,
+        "difference": 0.61
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          0.89,
+          1.59,
+          2.41,
+          2.56
+        ],
+        "sum": 7.45,
+        "annual": 7.0,
+        "difference": 0.45
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  },
+  "NSE:WALCHANNAG": {
+    "scope": "standalone",
+    "rightmost_header": "Jun 2026",
+    "year_ago_header": "Jun 2025",
+    "annual_comparisons": {
+      "Sales +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          49.43,
+          51.78,
+          80.95,
+          93.02
+        ],
+        "sum": 275.18,
+        "annual": 275.0,
+        "difference": 0.18
+      },
+      "Other Income +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          4.53,
+          3.64,
+          1.7,
+          10.87
+        ],
+        "sum": 20.74,
+        "annual": 22.0,
+        "difference": -1.26
+      },
+      "Net Profit +": {
+        "periods": [
+          "Jun 2025",
+          "Sep 2025",
+          "Dec 2025",
+          "Mar 2026"
+        ],
+        "values": [
+          -10.39,
+          -11.9,
+          4.66,
+          2.94
+        ],
+        "sum": -14.69,
+        "annual": -15.0,
+        "difference": 0.31
+      }
+    },
+    "note": "Summary screening bridge only; primary-source corrections and basis caveats are recorded separately."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "NSE:DISAQ": {
+    "bse_symbol": "BSE:DISAQ",
+    "isin": "INE131C01011",
+    "first_NSE_date": "2026-04-20",
+    "first_overlap_scale": 0.9963057851239668,
+    "method": "BSE closes before first NSE day, scaled to first overlapping NSE/BSE close; NSE thereafter",
+    "combined_first": "2006-02-21",
+    "combined_last": "2026-09-18",
+    "preexisting_cache_changed": false
+  },
+  "NSE:COCKERILL": {
+    "bse_symbol": "BSE:COCKERILL",
+    "isin": "INE515A01019",
+    "first_NSE_date": "2026-04-20",
+    "first_overlap_scale": 1.0003844231730288,
+    "method": "BSE closes before first NSE day, scaled to first overlapping NSE/BSE close; NSE thereafter",
+    "combined_first": "2008-12-12",
+    "combined_last": "2026-09-18",
+    "preexisting_cache_changed": false
+  }
+}

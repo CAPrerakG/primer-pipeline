@@ -983,8 +983,8 @@
   "section": "INDUSTRIAL MACHINERY",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 28,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "090",
   "family": "Engineering & Capital Goods",
   "order": 17,
   "note": "Suggest absorbing Foundry & Metal Processing Equipment."
@@ -993,8 +993,8 @@
   "section": "FOUNDRY & METAL PROCESSING EQUIPMENT",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 1,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "090",
   "family": "Engineering & Capital Goods",
   "order": 18,
   "note": "Suggest merging into Industrial Machinery."

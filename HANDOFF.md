@@ -1,5 +1,40 @@
 # Handoff — industry primer series
 
+## Latest state: after 090 (1 October 2026)
+
+090 Industrial Machinery & Foundry Equipment is published at
+https://caprerakg.github.io/primer-pipeline/090.html.
+Explicit merge28+1 source names;29 researched/roster rows, nine price-basket members.
+13,662words,23sections,19tables,54distinctexternaldocuments,72terms/fourgroups,
+six PM boxes, four charts,15annualrows,nine drawdownrows. All endpoints18Sep2026.
+GatePASS; verify090 exit0(45 excluded-name historical warnings), verify081 exit0
+(21 existing warnings). Desktop/mobile charts, glossary search/no-match/reset,
+390px layout and JavaScript checked. No earlier primer page or cached series changed.
+
+Main findings: Manugraph property gain drives reported profit; Walchandnagar
+other income and printed annual EPS/share-count discrepancy; Lloyds group-vs-owner
+annual EPS numerator discrepancy, negative operating cash despite rights financing;
+Cockerill acquired/restated group, advance-funded cash, parent/global IP boundaries;
+DISA cash absorption; Sona cash release despite operating loss and annual tax-sign
+presentation inconsistency. Source primary EPS replaces shifted/recomputed locators.
+All caveats are on the page, not silently repaired.
+
+DISA/Cockerill short NSE series repaired with same-ISIN BSE prehistory. Three stale
+quotes and all short/misclassified/gappy exclusions disclosed. audit_090.py must run
+after compute_stats.py090 to reproduce sensitivities AND all nine drawdown rows:
+the generic top18-roster display had omitted smaller basket companies.
+
+Audit files: audit_090.md, price_audit_090.json, price_repairs_090.json,
+eps_reconciliation_090.json, annual_reconciliation_090.json (locator diagnostic,
+not certified primary reconciliation), source_manifest_090.json, sensitivity_090.json,
+browser_audit_090.json, verify_090.log and verify_081_090.log.
+
+Prerak resumed with “continue primers” on1Oct, lifting the earlier stop-after089.
+Completion check:70%weekly used /30%remaining. Stop after090 at his retained
+threshold; do not start091 until Prerak resumes. Next091 is Material Handling
+Equipment(10 names). No091 work started. Windows has Python3.12.10 under `python`;
+that executable successfully ran mkindex.py (the python3.12 alias is absent).
+
 ## Latest state: after 089 (30 Sep 2026)
 
 089 Machine Tools is published at https://caprerakg.github.io/primer-pipeline/089.html.
