@@ -1,5 +1,24 @@
 # Handoff — industry primer series
 
+## Acceleration preparation (1 October 2026)
+
+Prerak offered the remaining usage plus one manual reset and wants at least80%
+completion before next week, with quality unchanged. The old30%-remaining stop
+is superseded. Clarification requested:223of278originalsections bySunday4Oct,
+or80%of the remaining non-deferred queue; also explicit permission for three
+parallel research/review workers. No workers or091research started pending that
+workflow choice. Baseline:100sections covered by90primers,139queued,39deferred.
+Treat80% as a target, not a demonstrated capacity forecast. Benchmark the first
+three accelerated primers using elapsed time, usage and audit corrections.
+
+Built reusable check_primer.py (build, gate, verify, baseline081, browser) with
+stop-on-failure behaviour; generic browser_check.py tests rendered data and search.
+Fixed gate.py: it previously printed FAIL but exited0. Thresholds unchanged.
+Three regression tests confirm truncated-page failure, missing-year-note failure
+and stopping before a later command. End-to-end090 check and081 regression pass.
+No existing primer output/research changed. Reports inb1/.pipeline-cache/checks/090.
+The user must apply the reset; no reset was activated by the assistant.
+
 ## Latest state: after 090 (1 October 2026)
 
 090 Industrial Machinery & Foundry Equipment is published at

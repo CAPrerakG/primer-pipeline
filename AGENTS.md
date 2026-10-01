@@ -2,9 +2,11 @@
 
 This repo builds Prerak's industry primer series: one self-contained HTML primer per industry
 section in his TradingView watchlists (278 sections, Indian listed universe). **090 is published;
-the next queued primer is 091, Material Handling Equipment (10 names). Prerak resumed on
-1 October 2026. The completion usage check reached 70% used / 30% remaining.
-The run stops after 090 at his threshold; do not start 091 until Prerak resumes.**
+the next queued primer is 091, Material Handling Equipment (10 names). Prerak has offered the
+remaining allowance plus one manual reset toward an 80% completion target before next week.
+The previous stop at 30% remaining is superseded. Exact target scope/date and permission for
+parallel workers have been asked; do not assume parallel-agent authorization before his reply.
+All research, length, source and verification standards remain unchanged.**
 
 Read in this order before doing anything: this file → `HANDOFF.md` →
 `.claude/skills/industry-primer/SKILL.md` (the full pipeline spec) → `CHECKLIST.md` (what is done
@@ -125,6 +127,21 @@ consumable that wears out and is often specified by its maker. Birla Precision (
 holders, so it overlaps Industrial Tools — cross-reference 081, do not repeat it.
 
 ---
+
+## Accelerated validation
+
+`python b1/check_primer.py NNN` works from any directory and runs build, gate,
+verify NNN, regression verify081 and real-browser checks in order. It stops on the
+first nonzero exit code. `gate.py` now returns exit1 on FAIL; its content thresholds
+are unchanged. Browser checks validate populated chart bars and data-table rows,
+glossary match/no-match/reset and mobile overflow. Reports and screenshots live in
+`b1/.pipeline-cache/checks/NNN/` (ignored by git).
+
+This command does not publish or certify source accuracy. Complete financial and
+source review, inspect the screenshots, then follow the publishing sequence above.
+Run `python b1/test_pipeline_guards.py` when modifying this validation path.
+Parallel workers, if authorized, must have separate assigned output files; only
+the coordinating agent edits shared prices, roster, queue, URLs or Git state.
 
 ## Scripts
 

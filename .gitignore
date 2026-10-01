@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 *.log
 b1/prices.json
+b1/.pipeline-cache/
