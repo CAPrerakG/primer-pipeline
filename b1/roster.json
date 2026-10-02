@@ -10021,5 +10021,81 @@
   "start": {
    "NSE:THEJO": "2019-11-15"
   }
+ },
+ "092": {
+  "ind": "Construction & Mining Equipment",
+  "members": [
+   {
+    "sym": "NSE:ACE",
+    "co": "Action Construction Equipment Limited",
+    "mcap": 136987354541.99998,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:TEGA",
+    "co": "Tega Industries Ltd.",
+    "mcap": 129024302095,
+    "basic": "Wholesale Distributors",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:AJAXENGG",
+    "co": "Ajax Engineering Ltd.",
+    "mcap": 64777131170,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:SANGHVIMOV",
+    "co": "Sanghvi Movers Limited",
+    "mcap": 35405254784,
+    "basic": "Finance/Rental/Leasing",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:TIL",
+    "co": "TIL Ltd.",
+    "mcap": 22630967377,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:EIMCOELECO",
+    "co": "Eimco Elecon (India) Ltd.",
+    "mcap": 13103175077,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:GUJAPOLLO",
+    "co": "Gujarat Apollo Industries Limited",
+    "mcap": 4358568431,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:VIRATCRA",
+    "co": "Virat Crane Industries Limited",
+    "mcap": 671532919,
+    "basic": "Tobacco",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:CRANEX",
+    "co": "Cranex Limited",
+    "mcap": 633339400,
+    "basic": "Trucks/Construction/Farm Machinery",
+    "status": "in"
+   }
+  ],
+  "moved_out": [],
+  "basket_syms": [
+   "NSE:ACE",
+   "NSE:EIMCOELECO",
+   "NSE:GUJAPOLLO",
+   "NSE:TEGA",
+   "NSE:TIL"
+  ]
  }
 }

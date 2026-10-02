@@ -470,3 +470,18 @@ asset-sale gain. Somi June revenue -40.5%; FY26 CFO from receivable release. The
 FMC: PIB Aug 2025 says 102 projects / Rs31,367.66cr; MoC Jan 2026 review says 139 / ~Rs45,000cr.
 Report both. Price: April 14/15 +13.9 (tied rank 1 of 76 with 008/081/078 - no record claim);
 AprJul 8/15; FebMar 2/15; YTD -9.9 vs -10.7. Sensitivities in sensitivity_091.json via audit_091.py.
+
+
+## 092 Construction & Mining Equipment (2 Oct 2026)
+
+Basket ACE, EIMCOELECO, GUJAPOLLO, TEGA (from 2022), TIL. Excluded Ajax (Feb 2025 listing), Sanghvi
+(rental; kept as buyer comparator), Cranex (EOT cranes, qualified June review; see 091), Virat Crane
+(dairy; vendor tobacco tag wrong). Units: Ajax and Tega file in Rs million; others lakh.
+Traps: Tega June quarter = one month Molycop (Rs1,291.64cr) + Rs190.955cr acquisition expense;
+op proxy before one-time costs equals filed segment result 2,465.28m. Group debt ~Rs112bn incl
+~Rs26bn RPS; owner loss 86.19 vs group 108.25. Gujarat Apollo associate share sits after OCI, EPS
+numerator 0.8068 not PAT line. TIL June EPS -0.69 vs owner loss unresolved; rights partly paid at
+Rs7.50; FY26 -4.58 original vs -4.53 rights-adjusted comparative. Sanghvi yield 2.29% cross-checks
+as monthly on gross block (60% of Q1 rev x4 / Rs3,300cr = 27.6%). ICEMA FY26 136,995 units (-2%),
+domestic ~-7%, exports ~+32% (via NBM&CW). April 13/15 +5.7; AprJul 10/15 median +19.9.
+YTD +11.7 vs -10.7; without ACE +7.1, without GUJAPOLLO +18.7.

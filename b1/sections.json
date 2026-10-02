@@ -1013,8 +1013,8 @@
   "section": "CONSTRUCTION & MINING EQUIPMENT",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 9,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "092",
   "family": "Engineering & Capital Goods",
   "order": 20,
   "note": ""
