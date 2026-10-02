@@ -10097,5 +10097,116 @@
    "NSE:TEGA",
    "NSE:TIL"
   ]
+ },
+ "093": {
+  "ind": "Industrial Automation & Instrumentation",
+  "members": [
+   {
+    "sym": "NSE:HONAUT",
+    "co": "Honeywell Automation India Limited",
+    "mcap": 298224576540,
+    "basic": "Electronic Equipment/Instruments",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:MARINE",
+    "co": "Marine Electricals (India) Limited",
+    "mcap": 51494495200,
+    "basic": "Wholesale Distributors",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:TEMPSENS",
+    "co": "Tempsens Instruments (India) Limited",
+    "mcap": 45298990578,
+    "basic": "Electronic Equipment/Instruments",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:RISHABH",
+    "co": "Rishabh Instruments Limited",
+    "mcap": 29359393048,
+    "basic": "Electrical Products",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:AXISOL",
+    "co": "Axis Solution Ltd",
+    "mcap": 28554662121,
+    "basic": "Information Technology Services",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:ROBU",
+    "co": "Macfos Ltd.",
+    "mcap": 10686867392,
+    "basic": "Electronics/Appliance Stores",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:PATILAUTOM",
+    "co": "Patil Automation Ltd.",
+    "mcap": 6705531840,
+    "basic": "Auto Parts: OEM",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:PIGL",
+    "co": "Power & Instrumentation (Gujarat) Ltd.",
+    "mcap": 2134393333.9999998,
+    "basic": "Engineering & Construction",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:AFFORDABLE",
+    "co": "Affordable Robotic & Automation Ltd.",
+    "mcap": 1915138752,
+    "basic": "Industrial Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:APLAB",
+    "co": "Aplab Limited",
+    "mcap": 1780666203,
+    "basic": "Electronic Equipment/Instruments",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:CANARYS",
+    "co": "Canarys Automations Ltd.",
+    "mcap": 1324090015.95,
+    "basic": "Information Technology Services",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:REXNORD",
+    "co": "Rexnord Electronics & Controls Ltd.",
+    "mcap": 1243920589,
+    "basic": "Industrial Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:UNIOFFICE",
+    "co": "Universal Office Automation Limited",
+    "mcap": 105645861,
+    "basic": "Computer Peripherals",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:CONTICON",
+    "co": "Continental Controls Limited",
+    "mcap": 89120712,
+    "basic": "Auto Parts: OEM",
+    "status": "in"
+   }
+  ],
+  "moved_out": [],
+  "basket_syms": [
+   "NSE:HONAUT",
+   "BSE:APLAB",
+   "NSE:AFFORDABLE",
+   "NSE:MARINE",
+   "NSE:RISHABH"
+  ]
  }
 }

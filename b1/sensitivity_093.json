@@ -1,0 +1,145 @@
+{
+  "data_date": "2026-09-18",
+  "method": "same monthly clipping and equal weighting as compute_stats; at least two available names",
+  "cases": {
+    "published basket": {
+      "symbols": [
+        "NSE:HONAUT",
+        "BSE:APLAB",
+        "NSE:AFFORDABLE",
+        "NSE:MARINE",
+        "NSE:RISHABH"
+      ],
+      "first_month": "2011-07-31",
+      "april_hit": 10,
+      "april_n": 15,
+      "april_mean_relative": 4.6,
+      "ytd": 31.8
+    },
+    "core three (Honeywell, Aplab, Affordable)": {
+      "symbols": [
+        "NSE:HONAUT",
+        "BSE:APLAB",
+        "NSE:AFFORDABLE"
+      ],
+      "first_month": "2011-07-31",
+      "april_hit": 8,
+      "april_n": 15,
+      "april_mean_relative": 3.9,
+      "ytd": 2.3
+    },
+    "without Marine (electrical panels)": {
+      "symbols": [
+        "NSE:HONAUT",
+        "BSE:APLAB",
+        "NSE:AFFORDABLE",
+        "NSE:RISHABH"
+      ],
+      "first_month": "2011-07-31",
+      "april_hit": 9,
+      "april_n": 15,
+      "april_mean_relative": 3.9,
+      "ytd": 20.6
+    },
+    "without Rishabh (die casting mix)": {
+      "symbols": [
+        "NSE:HONAUT",
+        "BSE:APLAB",
+        "NSE:AFFORDABLE",
+        "NSE:MARINE"
+      ],
+      "first_month": "2011-07-31",
+      "april_hit": 10,
+      "april_n": 15,
+      "april_mean_relative": 4.7,
+      "ytd": 19.5
+    },
+    "without Honeywell": {
+      "symbols": [
+        "BSE:APLAB",
+        "NSE:AFFORDABLE",
+        "NSE:MARINE",
+        "NSE:RISHABH"
+      ],
+      "first_month": "2018-07-31",
+      "april_hit": 7,
+      "april_n": 8,
+      "april_mean_relative": 8.5,
+      "ytd": 36.3
+    },
+    "without Aplab": {
+      "symbols": [
+        "NSE:HONAUT",
+        "NSE:AFFORDABLE",
+        "NSE:MARINE",
+        "NSE:RISHABH"
+      ],
+      "first_month": "2018-07-31",
+      "april_hit": 7,
+      "april_n": 8,
+      "april_mean_relative": 7.6,
+      "ytd": 38.1
+    }
+  },
+  "member_calendar_returns": {
+    "NSE:HONAUT": {
+      "2012": 60.9,
+      "2013": -1.0,
+      "2014": 153.8,
+      "2015": 31.0,
+      "2016": -1.7,
+      "2017": 116.6,
+      "2018": 13.2,
+      "2019": 24.2,
+      "2020": 35.8,
+      "2021": 13.7,
+      "2022": -1.1,
+      "2023": -11.6,
+      "2024": 13.9,
+      "2025": -21.8,
+      "2026": 8.0
+    },
+    "BSE:APLAB": {
+      "2012": 4.8,
+      "2013": -8.2,
+      "2014": 38.5,
+      "2015": -12.5,
+      "2016": -3.2,
+      "2017": -25.6,
+      "2018": -22.3,
+      "2019": -63.5,
+      "2020": 266.0,
+      "2021": 51.2,
+      "2022": -3.4,
+      "2023": 300.7,
+      "2024": -2.6,
+      "2025": 47.8,
+      "2026": 1.0
+    },
+    "NSE:AFFORDABLE": {
+      "2019": -31.3,
+      "2020": 9.5,
+      "2021": 52.1,
+      "2022": 107.8,
+      "2023": 109.8,
+      "2024": 30.8,
+      "2025": -68.9,
+      "2026": -14.6
+    },
+    "NSE:MARINE": {
+      "2019": 25.7,
+      "2020": 125.3,
+      "2021": -11.6,
+      "2022": -19.0,
+      "2023": 215.0,
+      "2024": 153.9,
+      "2025": -16.2,
+      "2026": 75.3
+    },
+    "NSE:RISHABH": {
+      "2024": -42.2,
+      "2025": 18.5,
+      "2026": 91.5
+    }
+  }
+}

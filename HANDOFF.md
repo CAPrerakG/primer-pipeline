@@ -12,7 +12,10 @@ Conveyors (BSE-spliced); six exclusions disclosed. See FAMILY_NOTES 091 for trap
 compute_stats.py gained an optional per-member "start" entry date (no earlier primer affected).
 092 Construction & Mining Equipment published 2 Oct 2026 at
 https://caprerakg.github.io/primer-pipeline/092.html (11.4k words, 25 sections, checks pass).
-Next: 093 Industrial Automation & Instrumentation (pilot_093 package exists).
+093 Industrial Automation & Instrumentation published 2 Oct 2026 at
+https://caprerakg.github.io/primer-pipeline/093.html (10.9k words, checks pass).
+Next: 094 Heat Exchangers & Process Equipment (14), suggested merge with Cryogenic (2),
+Bioenergy & Distillery (1) and Industrial Furnaces (1). No pilot package exists for it.
 
 ## Parallel feasibility pilot complete: awaiting Prerak's decision (1 October 2026)
 

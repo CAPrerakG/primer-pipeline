@@ -485,3 +485,16 @@ Rs7.50; FY26 -4.58 original vs -4.53 rights-adjusted comparative. Sanghvi yield 
 as monthly on gross block (60% of Q1 rev x4 / Rs3,300cr = 27.6%). ICEMA FY26 136,995 units (-2%),
 domestic ~-7%, exports ~+32% (via NBM&CW). April 13/15 +5.7; AprJul 10/15 median +19.9.
 YTD +11.7 vs -10.7; without ACE +7.1, without GUJAPOLLO +18.7.
+
+
+## 093 Industrial Automation & Instrumentation (2 Oct 2026)
+
+Basket HONAUT, APLAB, AFFORDABLE (BSE SME spliced from Jun 2018, factor 0.981), MARINE, RISHABH.
+Excluded: Tempsens (Aug 2026 IPO), Patil (Jun 2025 SME; TV first bar 20 Jun vs filing 23 Jun),
+Axis (merged into shell), Macfos (distribution), Canarys (93% IT), PIGL (electrical EPC), Rexnord
+(fans), Continental Controls (advisory), Universal Office (inactive). Units: HONAUT/RISHABH/TEMPSENS
+in Rs million. EPS failures kept: Axis EPS = group comprehensive income; PIGL 8.13 vs 4.54;
+Continental AR note share count x10; Canarys H-year owner rows do not sum. HAIL EPS flat FY25-26
+(592.2 -> 593.8); FY27 RPT ceilings Rs9,500m HII + Rs7,700m second group co (~41% of FY25 turnover).
+Verify trap: "(113)" in prose is parsed as a cross-reference - avoid bare 3-digit parentheses.
+2026 YTD +31.8 vs -10.7, core three +2.3; seasonality weak (June 12/15 best).
