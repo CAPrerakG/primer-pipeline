@@ -10374,5 +10374,74 @@
   "start": {
    "BSE:LOYAL": "2016-02-12"
   }
+ },
+ "095": {
+  "ind": "Gas Cylinders & Containers",
+  "members": [
+   {
+    "sym": "NSE:EKC",
+    "co": "Everest Kanto Cylinder Limited",
+    "mcap": 11063677052,
+    "basic": "Industrial Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "NSE:CFEL",
+    "co": "Confidence Futuristic Energetech Ltd.",
+    "mcap": 1148167806,
+    "basic": "Textiles",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:GUJCONT",
+    "co": "Gujarat Containers Ltd.",
+    "mcap": 1059052552.0000001,
+    "basic": "Containers/Packaging",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:MUL",
+    "co": "Mauria Udyog Limited",
+    "mcap": 997667947,
+    "basic": "Metal Fabrication",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:JSLINDL",
+    "co": "JSL Industries Limited",
+    "mcap": 939094448,
+    "basic": "Electrical Products",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:SARTHAKIND",
+    "co": "Sarthak Industries Limited",
+    "mcap": 241586788,
+    "basic": "Industrial Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:KABSON",
+    "co": "Kabsons Industries Ltd.",
+    "mcap": null,
+    "basic": "Industrial Machinery",
+    "status": "in"
+   },
+   {
+    "sym": "BSE:RCCL",
+    "co": "Rajasthan Cylinders & Containers Ltd",
+    "mcap": null,
+    "basic": "Gas Distributors",
+    "status": "in"
+   }
+  ],
+  "moved_out": [],
+  "basket_syms": [
+   "NSE:EKC",
+   "BSE:MUL"
+  ],
+  "start": {
+   "BSE:MUL": "2020-10-01"
+  }
  }
 }

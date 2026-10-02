@@ -16,7 +16,12 @@ https://caprerakg.github.io/primer-pipeline/092.html (11.4k words, 25 sections, 
 https://caprerakg.github.io/primer-pipeline/093.html (10.9k words, checks pass).
 094 Process Equipment, Cryogenics, Bioenergy & Furnaces (4-section merge, 18 names) published
 2 Oct 2026 at https://caprerakg.github.io/primer-pipeline/094.html (10.6k words, checks pass).
-Next: Gas Cylinders & Containers (8 names), then Pollution Control (merge with Industrial Filters).
+095 Gas Cylinders & Containers published 2 Oct 2026 at
+https://caprerakg.github.io/primer-pipeline/095.html (9.0k words, 28 sources, checks pass).
+Session stopped at ~85% of the 5-hour window (Prerak: run until the limit).
+Next: 096 Pollution Control Equipment (3) merged with Industrial Filters & Separation (2).
+Research tooling for a fresh section: copy b1/research094_tmp.py, pdfs094_tmp.py, quarters094_tmp.py
+(set ThreadPoolExecutor(1) in quarters to avoid screener 429s), then render statement pages.
 
 ## Parallel feasibility pilot complete: awaiting Prerak's decision (1 October 2026)
 

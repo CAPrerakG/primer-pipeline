@@ -1073,8 +1073,8 @@
   "section": "GAS CYLINDERS & CONTAINERS",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 8,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "095",
   "family": "Engineering & Capital Goods",
   "order": 26,
   "note": ""

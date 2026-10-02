@@ -515,3 +515,16 @@ Traps: GMM and JNK owner PAT > group PAT (loss-making minority subs). BEW CFO in
 borrowings in operating activities. HLE June tax > PBT. Praj OI includes Rs8.90cr insurance claim.
 Ethanol: PIB 10 Jul 2026 - ESY blending 8.1/10.0/12.1/14.6/19.2/20%; capacity ~1,200 cr litres.
 Price: OctDec 12/14 median +8.0; Feb 3/15. YTD +5.8 vs -10.7; pharma-chem makers -6.5.
+
+
+## 095 Gas Cylinders & Containers (2 Oct 2026)
+
+Basket EKC (only member Jul 2011-Sep 2020) + Mauria Udyog (start 2020-10-01 after 97% slide
+Nov 2019-Sep 2020 with no -30% day: daily-band collapse = price-discovery failure). Excluded with
+evidence: Sarthak (+1,221% in 2021, -83% from high, mostly trading), Confidence Futuristic (+709%
+in 2022, -91%; BSE spliced 2018, 1.028, for sensitivity only), Kabsons (LPG trading/bottling),
+Rajasthan Cylinders (closed Dec 2022), Gujarat Containers (barrels; stale 11 Sep), JSL (motors).
+audit_095.py handles <4-name basket (count>=1) and adds Sarthak/CFEL sensitivity (2026 -11.1%).
+Data: EKC Q1 rev -10.5%, op proxy 13.7% vs 15.8%; prior-year Rs12.63cr ERC exceptional; FY26
+deferred-tax credit Rs24.70cr. Peers: Luxfer gas cylinders 2025 adj EBITDA 8.6%; Hexagon 2025
+revenue NOK 2,955m vs 4,877m. Do not cite CARE Sep-2026 reaffirmation (post-cutoff).

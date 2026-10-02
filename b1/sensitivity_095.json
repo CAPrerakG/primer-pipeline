@@ -1,0 +1,70 @@
+{
+  "data_date": "2026-09-18",
+  "method": "same monthly clipping and equal weighting as compute_stats; at least two available names",
+  "cases": {
+    "published basket": {
+      "symbols": [
+        "NSE:EKC",
+        "BSE:MUL"
+      ],
+      "first_month": "2011-07-31",
+      "april_hit": 9,
+      "april_n": 15,
+      "april_mean_relative": 8.0,
+      "ytd": -24.1
+    },
+    "EKC only": {
+      "symbols": [
+        "NSE:EKC"
+      ],
+      "first_month": "2011-07-31",
+      "april_hit": 9,
+      "april_n": 15,
+      "april_mean_relative": 8.1,
+      "ytd": -13.1
+    },
+    "with Sarthak and CFEL added (price-discovery sensitivity)": {
+      "symbols": [
+        "NSE:EKC",
+        "BSE:MUL",
+        "BSE:SARTHAKIND",
+        "NSE:CFEL"
+      ],
+      "first_month": "2020-11-30",
+      "april_hit": 4,
+      "april_n": 6,
+      "april_mean_relative": 12.8,
+      "ytd": -11.1
+    }
+  },
+  "member_calendar_returns": {
+    "NSE:EKC": {
+      "2012": 10.7,
+      "2013": -47.1,
+      "2014": -27.0,
+      "2015": 56.5,
+      "2016": 97.0,
+      "2017": 109.9,
+      "2018": -54.8,
+      "2019": -7.4,
+      "2020": 77.8,
+      "2021": 361.1,
+      "2022": -57.9,
+      "2023": 25.7,
+      "2024": 45.6,
+      "2025": -37.1,
+      "2026": -13.1
+    },
+    "BSE:MUL": {
+      "2018": 66.8,
+      "2019": 3.9,
+      "2020": -92.8,
+      "2021": 68.2,
+      "2022": 35.7,
+      "2023": 192.3,
+      "2024": 17.0,
+      "2025": -0.3,
+      "2026": -35.1
+    }
+  }
+}
