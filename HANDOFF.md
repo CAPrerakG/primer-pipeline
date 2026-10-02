@@ -14,8 +14,9 @@ compute_stats.py gained an optional per-member "start" entry date (no earlier pr
 https://caprerakg.github.io/primer-pipeline/092.html (11.4k words, 25 sections, checks pass).
 093 Industrial Automation & Instrumentation published 2 Oct 2026 at
 https://caprerakg.github.io/primer-pipeline/093.html (10.9k words, checks pass).
-Next: 094 Heat Exchangers & Process Equipment (14), suggested merge with Cryogenic (2),
-Bioenergy & Distillery (1) and Industrial Furnaces (1). No pilot package exists for it.
+094 Process Equipment, Cryogenics, Bioenergy & Furnaces (4-section merge, 18 names) published
+2 Oct 2026 at https://caprerakg.github.io/primer-pipeline/094.html (10.6k words, checks pass).
+Next: Gas Cylinders & Containers (8 names), then Pollution Control (merge with Industrial Filters).
 
 ## Parallel feasibility pilot complete: awaiting Prerak's decision (1 October 2026)
 

@@ -1033,8 +1033,8 @@
   "section": "HEAT EXCHANGERS & PROCESS EQUIPMENT",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 14,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "094",
   "family": "Engineering & Capital Goods",
   "order": 22,
   "note": "Suggest absorbing Cryogenic, Bioenergy & Distillery and Industrial Furnaces."
@@ -1043,8 +1043,8 @@
   "section": "CRYOGENIC EQUIPMENT",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 2,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "094",
   "family": "Engineering & Capital Goods",
   "order": 23,
   "note": "Suggest merging into Heat Exchangers."
@@ -1053,8 +1053,8 @@
   "section": "BIOENERGY & DISTILLERY EQUIPMENT",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 1,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "094",
   "family": "Engineering & Capital Goods",
   "order": 24,
   "note": "Suggest merging into Heat Exchangers."
@@ -1063,8 +1063,8 @@
   "section": "INDUSTRIAL FURNACES & HEATING",
   "watchlist": "Industry - Industrials, Metals, Defence",
   "members": 1,
-  "status": "queued",
-  "primer": null,
+  "status": "done",
+  "primer": "094",
   "family": "Engineering & Capital Goods",
   "order": 25,
   "note": "Suggest merging into Heat Exchangers."

@@ -10208,5 +10208,171 @@
    "NSE:MARINE",
    "NSE:RISHABH"
   ]
+ },
+ "094": {
+  "ind": "Process Equipment: Heat Exchangers, Cryogenics, Bioenergy & Furnaces",
+  "members": [
+   {
+    "sym": "NSE:INOXINDIA",
+    "co": "INOX India Limited",
+    "mcap": 179702648736,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Cryogenic Equipment"
+   },
+   {
+    "sym": "NSE:KRN",
+    "co": "Krn Heat Exchanger and Refrigeration Limited",
+    "mcap": 94273300902,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:SETL",
+    "co": "Standard Engineering Technology Ltd",
+    "mcap": 84285223579,
+    "basic": "Medical Specialties",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:GMMPFAUDLR",
+    "co": "GMM Pfaudler Limited",
+    "mcap": 59759387323,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:PRAJIND",
+    "co": "PRAJ Industries Limited",
+    "mcap": 57652976154,
+    "basic": "Engineering & Construction",
+    "status": "in",
+    "source_section": "Bioenergy & Distillery Equipment"
+   },
+   {
+    "sym": "NSE:ANUP",
+    "co": "Anup Engineering Ltd.",
+    "mcap": 32789509538,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:HLEGLAS",
+    "co": "HLE Glascoat Ltd",
+    "mcap": 28969573492,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:KLBRENG_B",
+    "co": "Kilburn Engineering Ltd",
+    "mcap": 25900165844,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:JNKINDIA",
+    "co": "Jnk India Limited",
+    "mcap": 22804017229,
+    "basic": "Building Products",
+    "status": "in",
+    "source_section": "Industrial Furnaces & Heating"
+   },
+   {
+    "sym": "BSE:INTEGRAEN",
+    "co": "Integra Engineering India Limited",
+    "mcap": 5816136385,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "BSE:CRYOGENIC",
+    "co": "Cryogenic Ogs Limited",
+    "mcap": 5414976000,
+    "basic": "Oilfield Services/Equipment",
+    "status": "in",
+    "source_section": "Cryogenic Equipment"
+   },
+   {
+    "sym": "NSE:MAZDA",
+    "co": "Mazda Limited",
+    "mcap": 5042294965,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "BSE:PATELSAI",
+    "co": "Patels Airtemp India Ltd.",
+    "mcap": 1820222399,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "BSE:LOYAL",
+    "co": "Loyal Equipments Ltd",
+    "mcap": 1440464995,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:WINSOL",
+    "co": "Winsol Engineers Limited",
+    "mcap": 1205428400,
+    "basic": "Engineering & Construction",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "NSE:BEWLTD",
+    "co": "BEW Engineering Ltd.",
+    "mcap": 628826874,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "BSE:INCON",
+    "co": "Incon Engineers Ltd",
+    "mcap": null,
+    "basic": "Industrial Machinery",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   },
+   {
+    "sym": "BSE:UNISON",
+    "co": "Unison Metals Ltd",
+    "mcap": null,
+    "basic": "Steel",
+    "status": "in",
+    "source_section": "Heat Exchangers & Process Equipment"
+   }
+  ],
+  "moved_out": [],
+  "basket_syms": [
+   "NSE:GMMPFAUDLR",
+   "NSE:HLEGLAS",
+   "NSE:PRAJIND",
+   "NSE:KLBRENG_B",
+   "BSE:PATELSAI",
+   "BSE:LOYAL",
+   "NSE:MAZDA",
+   "NSE:ANUP",
+   "NSE:BEWLTD",
+   "NSE:INOXINDIA",
+   "NSE:JNKINDIA"
+  ],
+  "start": {
+   "BSE:LOYAL": "2016-02-12"
+  }
  }
 }

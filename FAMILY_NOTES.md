@@ -498,3 +498,20 @@ Continental AR note share count x10; Canarys H-year owner rows do not sum. HAIL 
 (592.2 -> 593.8); FY27 RPT ceilings Rs9,500m HII + Rs7,700m second group co (~41% of FY25 turnover).
 Verify trap: "(113)" in prose is parsed as a cross-reference - avoid bare 3-digit parentheses.
 2026 YTD +31.8 vs -10.7, core three +2.3; seasonality weak (June 12/15 best).
+
+
+## 094 Process Equipment, Cryogenics, Bioenergy & Furnaces (2 Oct 2026)
+
+Merge of Heat Exchangers & Process Equipment (14) + Cryogenic (2) + Bioenergy & Distillery (1) +
+Industrial Furnaces (1). Basket 11: GMM (BSE spliced 2001, 0.996), HLE (BSE 2006), Praj, Kilburn
+(NSE line only Apr 2026; BSE:KLBRENG_B spliced from 2008), Patels, Loyal (start 2016-02-12 after
+46-day gap), Mazda (NSE Nov 2016; food mix), Anup, BEW (half-yearly SME), INOX India, JNK.
+Excluded: KRN (487 sessions), SETL (418), Cryogenic OGS (gas skids, 296), Winsol (renewable EPC),
+Integra (rail components), Incon (dormant), Unison (stainless steel).
+Research tooling: research094/pdfs094/quarters094 scripts (screener locators -> BSE PDFs); screener
+429s on rapid requests - rerun single-threaded. Raw PDFs excluded via .git/info/exclude; manifest
+copied to b1/source_manifest_094.json. All basket statements read from rendered pages.
+Traps: GMM and JNK owner PAT > group PAT (loss-making minority subs). BEW CFO includes short-term
+borrowings in operating activities. HLE June tax > PBT. Praj OI includes Rs8.90cr insurance claim.
+Ethanol: PIB 10 Jul 2026 - ESY blending 8.1/10.0/12.1/14.6/19.2/20%; capacity ~1,200 cr litres.
+Price: OctDec 12/14 median +8.0; Feb 3/15. YTD +5.8 vs -10.7; pharma-chem makers -6.5.
