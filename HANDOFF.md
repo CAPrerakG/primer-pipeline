@@ -1,5 +1,17 @@
 # Handoff — industry primer series
 
+## Latest state: after 091 (2 October 2026, Claude local session)
+
+Prerak replied to the pilot handoff with "continue with primers from where ChatGPT left; continue
+till you exhaust the 5 hour limit". 091 Material Handling Equipment was finished end-to-end from the
+pilot_091 evidence plus fresh visual checks and external sources, and published at
+https://caprerakg.github.io/primer-pipeline/091.html. 12,498 words, 23 sections, 19 tables,
+35 distinct sources, 66 glossary terms, 17 question blocks. check_primer.py 091 passes
+(build/gate/verify/baseline 081/browser). Basket Thejo (from Dec 2019), Somi, TRF, International
+Conveyors (BSE-spliced); six exclusions disclosed. See FAMILY_NOTES 091 for traps.
+compute_stats.py gained an optional per-member "start" entry date (no earlier primer affected).
+Next: 092 Construction & Mining Equipment (pilot_092 package exists), then 093 Automation.
+
 ## Parallel feasibility pilot complete: awaiting Prerak's decision (1 October 2026)
 
 Read `b1/PARALLEL_PILOT_REVIEW.md`. Three explicitly authorized workers reviewed

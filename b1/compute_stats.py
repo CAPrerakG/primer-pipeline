@@ -18,6 +18,7 @@ for no,v in R.items():
     for m in mem:
         s=ser(m['sym']); 
         if s is None or len(s)<250: continue
+        if v.get('start',{}).get(m['sym']): s=s[s.index>=v['start'][m['sym']]]  # documented per-member entry date (e.g. after illiquid SME gaps)
         cand.append((m,s))
     big=[(m,s) for m,s in cand if (m['mcap'] or 0)>=3e9]
     use=big if len(big)>=3 else sorted(cand,key=lambda x:-(x[0]['mcap'] or 0))[:6]

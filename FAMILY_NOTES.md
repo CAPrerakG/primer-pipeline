@@ -452,3 +452,21 @@ continuous-run threshold retained. Check usage after publication before continui
 
 090 completion usage:70%weekly used /30%remaining. Stop at Prerak’s retained
 threshold;091 remains unstarted until he resumes.
+
+
+## 091 Material Handling Equipment (2 Oct 2026)
+
+Basket THEJO, SOMICONVEY, TRF, INTLCONV (4 of 10). Excluded: ABC India (freight), Skyline Millars
+(real estate), Sika (aerospace/defence), Crown (crane hire; 277-day gap), Indef (Feb 2025 demerger
+listing), L.T. Elevator (Sep 2025 SME IPO; EPS 4.72 vs 8.88 and CFO conflicts unresolved).
+New pipeline option: roster["NNN"]["start"]={sym: date} in compute_stats.py sets a documented entry
+date. Used for Thejo from 2019-11-15 (thin SME-platform gaps before; migrated to main board 2023).
+verify.py still warns on pre-entry Thejo gaps; expected. INTLCONV BSE spliced from 2005 (factor 0.999).
+Data traps: INTLCONV June note prints investment profit "142.80 Lakhs" vs Rs143.39cr segment result
+(unit conflict kept); March-quarter other income negative (MTM). TRF finance cost (Tata Steel
+redeemable preference shares) exceeds operating proxy; June PAT depends on other income incl.
+asset-sale gain. Somi June revenue -40.5%; FY26 CFO from receivable release. Thejo 9M FY26 mix
+57% services / 43% products (verified visually); order book Rs380cr at 30 Jun 2026.
+FMC: PIB Aug 2025 says 102 projects / Rs31,367.66cr; MoC Jan 2026 review says 139 / ~Rs45,000cr.
+Report both. Price: April 14/15 +13.9 (tied rank 1 of 76 with 008/081/078 - no record claim);
+AprJul 8/15; FebMar 2/15; YTD -9.9 vs -10.7. Sensitivities in sensitivity_091.json via audit_091.py.
